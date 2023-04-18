@@ -1,0 +1,2182 @@
+"'Diversion - Add' As screen":
+    Fill: =Color.LightGray
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |
+        =// Versioning Check
+        Set(
+            LatestVer,
+            First(
+                Filter(
+                    'TG14 App Versions',
+                    Title = "Digital Diary"
+                )
+            )
+        );
+        If(
+            CurrentVer <> LatestVer.'Vers Num',
+            'Wrong Version'
+        );
+        NewForm('DivForm (EDIT)');
+
+    Label3 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =84
+        Size: =25
+        Text: ="Diversion Details"
+        Width: =546
+        X: =657
+        Y: =115
+        ZIndex: =2
+
+    Label5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =47
+        Size: =13
+        Text: ="Enter the details of your diversion below to add it to the calendar"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =641
+        X: =610
+        Y: =186
+        ZIndex: =3
+
+    Rectangle6 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(128, 128, 128, 1)
+        FocusedBorderThickness: =4
+        Height: =2
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =500
+        X: =680
+        Y: =224
+        ZIndex: =4
+
+    "'DivForm (EDIT)' As form":
+        AcceptsFocus: =false
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DataSource: ='TG14 Task Information'
+        Height: =539
+        NumberOfColumns: =6
+        OnSuccess: =Navigate('Diversion Success', ScreenTransition.Fade)
+        SnapToColumns: =false
+        Width: =1120
+        X: =370
+        Y: =245
+        ZIndex: =5
+
+        "'Project Category_DataCard3' As typedDataCard.comboBoxEditCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TaskType"
+            Default: =ThisItem.'Project Category'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"TaskType")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue16.Selected
+            Width: =191
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey16 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =33
+                PaddingLeft: =0
+                Size: =13
+                Text: =Parent.DisplayName
+                Underline: =true
+                Width: =166
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue16 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                ChevronFill: =RGBA(33, 33, 33, 1)
+                ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                Color: =RGBA(51, 51, 51, 1)
+                DefaultSelectedItems: =LookUp(Choices('TG14 Task Information'.'Project Category'),Value="Diversion")
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Font: =Font.'Segoe UI'
+                Height: =32
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(212, 212, 212, 1)
+                Items: =Choices([@'TG14 Task Information'].'Project Category')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('TG14 Task Information'.'Project Category',DataCardValue16.SearchText)
+                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectMultiple: =false
+                Size: =13
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey16.Y + DataCardKey16.Height + 5
+                ZIndex: =2
+
+            ErrorMessage16 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue16.Y + DataCardValue16.Height
+                ZIndex: =3
+
+            StarVisible16 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey16.Height
+                PaddingLeft: =0
+                Size: =13
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey16.Y
+                ZIndex: =4
+
+        "'Start Time_DataCard1' As typedDataCard.textualEditCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="StartTime"
+            Default: =ThisItem.'Start Time'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"StartTime")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'TG14 Task Information'], DataSourceInfo.MaxLength, "StartTime")
+            Required: =false
+            Update: =DataCardValue21.Text
+            Width: =186
+            X: =2
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey21 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =34
+                PaddingLeft: =0
+                Size: =13
+                Text: =Parent.DisplayName
+                Underline: =true
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue21 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                Default: =Text(cmp_TimePicker_2.value,DateTimeFormat.ShortTime24,"en-GB")
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =32
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedColor: =RGBA(51, 51, 51, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey21.Y + DataCardKey21.Height + 5
+                ZIndex: =2
+
+            ErrorMessage21 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue21.Y + DataCardValue21.Height
+                ZIndex: =3
+
+            StarVisible21 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey21.Height
+                PaddingLeft: =0
+                Size: =13
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey21.Y
+                ZIndex: =4
+
+            Icon3_3 As icon.Clock:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 120, 212, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =31
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Clock
+                OnSelect: =Set(varShowTimePicker, true)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =18
+                X: =133
+                Y: =48
+                ZIndex: =5
+
+        DataCard2 As typedDataCard.blankCard:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =141
+            Width: =186
+            X: =1
+            Y: =192
+            ZIndex: =1
+
+            DataCardKey16_1 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =33
+                PaddingLeft: =0
+                Size: =13
+                Text: ="Recurring?"
+                Underline: =true
+                Width: =166
+                Wrap: =false
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+            Toggle1 As toggleSwitch:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                FalseFill: =RGBA(102, 102, 102, 1)
+                FalseHoverFill: =RGBA(33, 33, 33, 1)
+                FalseText: ="No"
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                HandleFill: =RGBA(255, 255, 255, 1)
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                Size: =13
+                TrueFill: =RGBA(0, 120, 212, 1)
+                TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                TrueText: ="Yes"
+                X: =40
+                Y: =91
+                ZIndex: =2
+
+        DataCard3 As typedDataCard.blankCard:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =141
+            Visible: =If(Toggle1.Value = true, true, false)
+            Width: =372
+            X: =2
+            Y: =192
+            ZIndex: =1
+
+            DataCardKey16_2 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =33
+                PaddingLeft: =0
+                Size: =13
+                Text: ="Reccurance Length"
+                Underline: =true
+                Width: =166
+                Wrap: =false
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+            Dropdown4 As dropdown:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                ChevronFill: =RGBA(33, 33, 33, 1)
+                ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Font: =Font.'Segoe UI'
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(212, 212, 212, 1)
+                Items: =[Blank(),"2 Weeks","3 Weeks","4 Weeks","5 Weeks","6 Weeks","7 weeks","8 Weeks","9 Weeks","10 Weeks"]
+                PaddingBottom: =5
+                PaddingLeft: =12
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 120, 212, 1)
+                Size: =13
+                X: =40
+                Y: =86
+                ZIndex: =2
+
+        "'Task Date_DataCard1' As typedDataCard.dateEditCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TaskDate"
+            Default: =ThisItem.'Task Date'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"TaskDate")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue27.SelectedDate
+            Width: =200
+            X: =1
+            Y: =0
+            ZIndex: =34
+
+            DataCardKey27 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =34
+                PaddingLeft: =0
+                Size: =13
+                Text: =Text("Date")
+                Underline: =true
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =32
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue27 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                Font: =Font.'Segoe UI'
+                Height: =32
+                HoverDateFill: =RGBA(200, 200, 200, 1)
+                IconBackground: =RGBA(0, 120, 212, 1)
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SelectedDateFill: =RGBA(0, 120, 212, 1)
+                Size: =13
+                StartYear: =2012
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =32
+                Y: =DataCardKey27.Y + DataCardKey27.Height + 5
+                ZIndex: =2
+
+            ErrorMessage27 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =32
+                Y: =DataCardValue27.Y + DataCardValue27.Height
+                ZIndex: =3
+
+            StarVisible27 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey27.Height
+                PaddingLeft: =0
+                Size: =13
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                X: =2
+                Y: =DataCardKey27.Y
+                ZIndex: =4
+
+        "'Task Location_DataCard2' As typedDataCard.textualEditCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TaskLocation"
+            Default: =ThisItem.'Task Location'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"TaskLocation")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'TG14 Task Information'], DataSourceInfo.MaxLength, "TaskLocation")
+            Required: =false
+            Update: =DataCardValue30.Text
+            Width: =176
+            X: =3
+            Y: =0
+            ZIndex: =34
+
+            DataCardKey30 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =34
+                PaddingLeft: =0
+                Size: =13
+                Text: =Text("Location")
+                Underline: =true
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =32
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue30 As text:
+                Align: =Align.Center
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =32
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedColor: =RGBA(51, 51, 51, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =32
+                Y: =DataCardKey30.Y + DataCardKey30.Height + 5
+                ZIndex: =2
+
+            ErrorMessage30 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =32
+                Y: =DataCardValue30.Y + DataCardValue30.Height
+                ZIndex: =3
+
+            StarVisible30 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey30.Height
+                PaddingLeft: =0
+                Size: =13
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                X: =2
+                Y: =DataCardKey30.Y
+                ZIndex: =4
+
+        "'Photog #1_DataCard2' As typedDataCard.comboBoxEditCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Photog_x0020__x0023_1"
+            Default: |-
+                ={Value: ThisItem.'Photog #1'}
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"Photog_x0020__x0023_1")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue72.Selected
+            Width: =279
+            X: =4
+            Y: =0
+            ZIndex: =34
+
+            DataCardKey72 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =34
+                PaddingLeft: =0
+                Size: =13
+                Text: =Text("Photog")
+                Underline: =true
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =32
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue72 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                ChevronFill: =RGBA(33, 33, 33, 1)
+                ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                Color: =RGBA(51, 51, 51, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Font: =Font.'Segoe UI'
+                Height: =32
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(212, 212, 212, 1)
+                IsSearchable: =false
+                Items: |-
+                    =If(
+                        And(
+                            IsBlank(Phot1.Text),
+                            IsBlank(Phot2.Text),
+                            IsBlank(Phot3.Text),
+                            IsBlank(Phot4.Text),
+                            IsBlank(Phot5.Text),
+                            IsBlank(Phot6.Text),
+                            IsBlank(Phot7.Text),
+                            IsBlank(Phot8.Text),
+                            IsBlank(Phot9.Text),
+                            IsBlank(Phot10.Text),
+                            IsBlank(Phot11.Text),
+                            IsBlank(Phot12.Text)
+                        ) = true,
+                        ["Section"],
+                        And(
+                            IsBlank(Phot2.Text),
+                            IsBlank(Phot3.Text),
+                            IsBlank(Phot4.Text),
+                            IsBlank(Phot5.Text),
+                            IsBlank(Phot6.Text),
+                            IsBlank(Phot7.Text),
+                            IsBlank(Phot8.Text),
+                            IsBlank(Phot9.Text),
+                            IsBlank(Phot10.Text),
+                            IsBlank(Phot11.Text),
+                            IsBlank(Phot12.Text)
+                        ) = true,
+                        [Phot1.Text],
+                        And(
+                            IsBlank(Phot3.Text),
+                            IsBlank(Phot4.Text),
+                            IsBlank(Phot5.Text),
+                            IsBlank(Phot6.Text),
+                            IsBlank(Phot7.Text),
+                            IsBlank(Phot8.Text),
+                            IsBlank(Phot9.Text),
+                            IsBlank(Phot10.Text),
+                            IsBlank(Phot11.Text),
+                            IsBlank(Phot12.Text)
+                        ) = true,
+                        [
+                            Phot1.Text,
+                            Phot2.Text
+                        ],
+                        And(
+                            IsBlank(Phot4.Text),
+                            IsBlank(Phot5.Text),
+                            IsBlank(Phot6.Text),
+                            IsBlank(Phot7.Text),
+                            IsBlank(Phot8.Text),
+                            IsBlank(Phot9.Text),
+                            IsBlank(Phot10.Text),
+                            IsBlank(Phot11.Text),
+                            IsBlank(Phot12.Text)
+                        ) = true,
+                        [
+                            Phot1.Text,
+                            Phot2.Text,
+                            Phot3.Text
+                        ],
+                        And(
+                            IsBlank(Phot5.Text),
+                            IsBlank(Phot6.Text),
+                            IsBlank(Phot7.Text),
+                            IsBlank(Phot8.Text),
+                            IsBlank(Phot9.Text),
+                            IsBlank(Phot10.Text),
+                            IsBlank(Phot11.Text),
+                            IsBlank(Phot12.Text)
+                        ) = true,
+                        [
+                            Phot1.Text,
+                            Phot2.Text,
+                            Phot3.Text,
+                            Phot4.Text
+                        ],
+                        And(
+                            IsBlank(Phot6.Text),
+                            IsBlank(Phot7.Text),
+                            IsBlank(Phot8.Text),
+                            IsBlank(Phot9.Text),
+                            IsBlank(Phot10.Text),
+                            IsBlank(Phot11.Text),
+                            IsBlank(Phot12.Text)
+                        ) = true,
+                        [
+                            Phot1.Text,
+                            Phot2.Text,
+                            Phot3.Text,
+                            Phot4.Text,
+                            Phot5.Text
+                        ],
+                        And(
+                            IsBlank(Phot7.Text),
+                            IsBlank(Phot8.Text),
+                            IsBlank(Phot9.Text),
+                            IsBlank(Phot10.Text),
+                            IsBlank(Phot11.Text),
+                            IsBlank(Phot12.Text)
+                        ) = true,
+                        [
+                            Phot1.Text,
+                            Phot2.Text,
+                            Phot3.Text,
+                            Phot4.Text,
+                            Phot5.Text,
+                            Phot6.Text
+                        ],
+                        And(
+                            IsBlank(Phot8.Text),
+                            IsBlank(Phot9.Text),
+                            IsBlank(Phot10.Text),
+                            IsBlank(Phot11.Text),
+                            IsBlank(Phot12.Text)
+                        ) = true,
+                        [
+                            Phot1.Text,
+                            Phot2.Text,
+                            Phot3.Text,
+                            Phot4.Text,
+                            Phot5.Text,
+                            Phot6.Text,
+                            Phot7.Text
+                        ],
+                        And(
+                            IsBlank(Phot9.Text),
+                            IsBlank(Phot10.Text),
+                            IsBlank(Phot11.Text),
+                            IsBlank(Phot12.Text)
+                        ) = true,
+                        [
+                            Phot1.Text,
+                            Phot2.Text,
+                            Phot3.Text,
+                            Phot4.Text,
+                            Phot5.Text,
+                            Phot6.Text,
+                            Phot7.Text,
+                            Phot8.Text
+                        ],
+                        And(
+                            IsBlank(Phot10.Text),
+                            IsBlank(Phot11.Text),
+                            (IsBlank(Phot12.Text))
+                        ) = true,
+                        [
+                            Phot1.Text,
+                            Phot2.Text,
+                            Phot3.Text,
+                            Phot4.Text,
+                            Phot5.Text,
+                            Phot6.Text,
+                            Phot7.Text,
+                            Phot8.Text,
+                            Phot9.Text
+                        ],
+                        And(
+                            IsBlank(Phot11.Text),
+                            IsBlank(Phot12.Text)
+                        ) = true,
+                        [
+                            Phot1.Text,
+                            Phot2.Text,
+                            Phot3.Text,
+                            Phot4.Text,
+                            Phot5.Text,
+                            Phot6.Text,
+                            Phot7.Text,
+                            Phot8.Text,
+                            Phot9.Text,
+                            Phot10.Text
+                        ],
+                        IsBlank(Phot12.Text) = true,
+                        [
+                            Phot1.Text,
+                            Phot2.Text,
+                            Phot3.Text,
+                            Phot4.Text,
+                            Phot5.Text,
+                            Phot6.Text,
+                            Phot7.Text,
+                            Phot8.Text,
+                            Phot9.Text,
+                            Phot10.Text,
+                            Phot11.Text
+                        ],
+                        [
+                            Phot1.Text,
+                            Phot2.Text,
+                            Phot3.Text,
+                            Phot4.Text,
+                            Phot5.Text,
+                            Phot6.Text,
+                            Phot7.Text,
+                            Phot8.Text,
+                            Phot9.Text,
+                            Phot10.Text,
+                            Phot11.Text,
+                            Phot12.Text
+                        ]
+                    )
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectMultiple: =false
+                Size: =13
+                Tooltip: =Parent.DisplayName
+                Width: =224
+                X: =27
+                Y: =48
+                ZIndex: =2
+
+            ErrorMessage75 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =32
+                Y: =DataCardValue72.Y + DataCardValue72.Height
+                ZIndex: =3
+
+            StarVisible75 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey72.Height
+                PaddingLeft: =0
+                Size: =13
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                X: =2
+                Y: =DataCardKey72.Y
+                ZIndex: =4
+
+        Notes_DataCard2 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Notes"
+            Default: =ThisItem.Notes
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"Notes")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =192
+            MaxLength: =DataSourceInfo([@'TG14 Task Information'], DataSourceInfo.MaxLength, "Notes")
+            Required: =false
+            Update: =DataCardValue83.Text
+            Width: =1116
+            X: =0
+            Y: =193
+            ZIndex: =34
+
+            DataCardKey83 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =34
+                PaddingLeft: =0
+                Size: =13
+                Text: =Parent.DisplayName
+                Underline: =true
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =45
+                Y: =20
+                ZIndex: =1
+
+            DataCardValue83 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                EnableSpellCheck: =true
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =110
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedColor: =RGBA(51, 51, 51, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Tooltip: =Parent.DisplayName
+                Width: =969
+                X: =32
+                Y: =57
+                ZIndex: =2
+
+            ErrorMessage88 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =32
+                Y: =DataCardValue83.Y + DataCardValue83.Height
+                ZIndex: =3
+
+            StarVisible88 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey83.Height
+                PaddingLeft: =0
+                Size: =13
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                X: =2
+                Y: =DataCardKey83.Y
+                ZIndex: =4
+
+    Button4 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =If(IsBlank(DataCardValue83.Text), DisplayMode.Disabled, DisplayMode.Edit)
+        Fill: =RGBA(0, 84, 148, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =37
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =If(
+                Toggle1.Value = false,
+                Patch(
+                    'TG14 Task Information',
+                    Defaults('TG14 Task Information'),
+                    {
+                        'Project Category': {Value: "Diversion"},
+                        'Task Date': DataCardValue27.SelectedDate,
+                        'Start Time': DataCardValue21.Text,
+                        'Task Location': DataCardValue30.Text,
+                        'Photog #1': DataCardValue72.Selected.Value,
+                        Unit: {Value: gblUserLocPerm},
+                        Notes: DataCardValue83.Text,
+                        'Approval Status': {Value: "Approved"}
+                    }
+                ),
+                Switch(
+                    Dropdown4.Selected.Value,
+                    "1 Week",
+                    Patch(
+                        'TG14 Task Information',
+                        Defaults('TG14 Task Information'),
+                        {
+                            'Project Category': {Value: "Diversion"},
+                            'Task Date': DataCardValue27.SelectedDate,
+                            'Start Time': DataCardValue21.Text,
+                            'Task Location': DataCardValue30.Text,
+                            'Photog #1': DataCardValue72.Selected.Value,
+                            Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                        }
+                    ),
+                    "2 Weeks",
+                    Concurrent(
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DataCardValue27.SelectedDate,
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    7,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        )
+                    ),
+                    "3 Weeks",
+                    Concurrent(
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DataCardValue27.SelectedDate,
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    7,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    14,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        )
+                    ),
+                    "4 Weeks",
+                    Concurrent(
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DataCardValue27.SelectedDate,
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    7,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    14,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    21,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        )
+                    ),
+                    "5 Weeks",
+                    Concurrent(
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DataCardValue27.SelectedDate,
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    7,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    14,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    21,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    28,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        )
+                    ),
+                    "6 Weeks",
+                    Concurrent(
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DataCardValue27.SelectedDate,
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    7,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    14,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    21,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    28,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    35,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        )
+                    ),
+                    "7 Weeks",
+                    Concurrent(
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DataCardValue27.SelectedDate,
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    7,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    14,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    21,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    28,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    35,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    42,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        )
+                    ),
+                    "8 Weeks",
+                    Concurrent(
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DataCardValue27.SelectedDate,
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    7,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    14,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    21,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    28,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    35,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    42,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    49,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        )
+                    ),
+                    "9 Weeks",
+                    Concurrent(
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DataCardValue27.SelectedDate,
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    7,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    14,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    21,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    28,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    35,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    42,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    49,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    56,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        )
+                    ),
+                    "10 Weeks",
+                    Concurrent(
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DataCardValue27.SelectedDate,
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    7,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    14,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    21,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    28,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    35,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    42,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    49,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    56,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        ),
+                        Patch(
+                            'TG14 Task Information',
+                            Defaults('TG14 Task Information'),
+                            {
+                                'Project Category': {Value: "Diversion"},
+                                'Task Date': DateAdd(
+                                    DataCardValue27.SelectedDate,
+                                    63,
+                                    TimeUnit.Days
+                                ),
+                                'Start Time': DataCardValue21.Text,
+                                'Task Location': DataCardValue30.Text,
+                                'Photog #1': DataCardValue72.Selected.Value,
+                                Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                            }
+                        )
+                    ),
+                    Patch(
+                        'TG14 Task Information',
+                        Defaults('TG14 Task Information'),
+                        {
+                            'Project Category': {Value: "Diversion"},
+                            'Task Date': DataCardValue27.SelectedDate,
+                            'Start Time': DataCardValue21.Text,
+                            'Task Location': DataCardValue30.Text,
+                            'Photog #1': DataCardValue72.Selected.Value,
+                            Unit: {Value: gblUserLocPerm},
+                        'Approval Status': {Value: "Approved"}
+                        }
+                    )
+                )
+            );
+            NewForm('DivForm (EDIT)');
+            Reset(cmp_TimePicker_2);
+            Back();
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =Button4.Height
+        RadiusBottomRight: =Button4.Height
+        RadiusTopLeft: =Button4.Height
+        RadiusTopRight: =Button4.Height
+        Size: =15
+        Text: ="Submit Diversion"
+        Width: =217
+        X: =822
+        Y: =747
+        ZIndex: =6
+
+    Button3_2 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =Icon.BackArrow
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 0, 0, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(255,0,0,1), -20%)
+        OnSelect: |-
+            =Navigate('Calendar - Day', ScreenTransition.Fade);
+            Reset(cmp_TimePicker_2);
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusTopLeft: =
+        RadiusTopRight: =
+        Size: =15
+        Text: ="Close"
+        Width: =128
+        X: =1722
+        ZIndex: =7
+
+    Label14_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(204, 204, 204, 0.6)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =930
+        OnSelect: =Set(varShowTimePicker, false)
+        Size: =13
+        Text: =
+        Visible: =varShowTimePicker
+        Width: =1850
+        ZIndex: =11
+
+    cmp_TimePicker_2 As cmp_TimePicker:
+        Visible: =varShowTimePicker
+        X: =920
+        Y: =275
+        ZIndex: =12
+

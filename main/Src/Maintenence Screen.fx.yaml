@@ -1,0 +1,108 @@
+"'Maintenence Screen' As screen.'tabletLayout_Success_ver3.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    iconCircle3_13 As circle.Circle:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(0, 120, 212, 1)
+        Fill: =ColorFade(iconCircle3_12.Fill, 75%)
+        Height: =157
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =157
+        X: =846
+        Y: =262
+        ZIndex: =1
+
+    iconCircle3_14 As circle.Circle:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(0, 120, 212, 1)
+        Fill: =ColorFade(iconCircle3_12.Fill, 50%)
+        Height: =143
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =143
+        X: =853
+        Y: =269
+        ZIndex: =2
+
+    iconCircle3_15 As circle.Circle:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(0, 120, 212, 1)
+        Fill: =ColorFade(iconCircle3_12.Fill, 25%)
+        Height: =119
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =119
+        X: =865
+        Y: =281
+        ZIndex: =3
+
+    iconCircle3_12 As circle.Circle:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(246, 88, 16, 1)
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =4
+
+    iconCheck3_3 As icon.Check:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        Height: =iconCircle3_12.Height
+        Icon: =Icon.Tools
+        PaddingBottom: =Self.PaddingTop
+        PaddingLeft: =Self.PaddingTop
+        PaddingRight: =Self.PaddingTop
+        PaddingTop: =24
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =iconCircle3_12.Width
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =5
+
+    LblSuccessMsg3_3 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        Height: =iconCircle3_12.Height
+        Size: =20
+        Text: |-
+            ="The TG14 Digital Diary Application is currently under maintenence.
+            
+            This is as a result of the routine bi-weekly patch schedule in order for new changes and improvements to be populated to all users. This should be completed shortly.
+            
+            Please refresh your browser after 08:30L, at which point the patches should be complete and you will be able to continue.
+            "
+        Width: =Parent.Width * 0.75
+        X: =231
+        Y: =iconCheck3_3.Y + iconCheck3_3.Height + 100
+        ZIndex: =6
+
+    Label12_2 As label:
+        BorderColor: =RGBA(246, 88, 16, 1)
+        BorderThickness: =10
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =930
+        Size: =13
+        Text: =""
+        Width: =1850
+        ZIndex: =7
+

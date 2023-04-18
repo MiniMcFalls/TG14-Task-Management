@@ -1,0 +1,109 @@
+"'Wrong Version' As screen.'tabletLayout_Success_ver3.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    iconCircle3_5 As circle.Circle:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(220, 153, 153, 1)
+        Height: =157
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =157
+        X: =846
+        Y: =262
+        ZIndex: =1
+
+    iconCircle3_6 As circle.Circle:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(203, 102, 102, 1)
+        Height: =143
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =143
+        X: =853
+        Y: =269
+        ZIndex: =2
+
+    iconCircle3_7 As circle.Circle:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(151, 0, 0, 1)
+        Height: =119
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =119
+        X: =865
+        Y: =281
+        ZIndex: =3
+
+    iconCircle3_4 As circle.Circle:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(118, 0, 0, 1)
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =4
+
+    iconCheck3_1 As icon.Check:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        Height: =iconCircle3_4.Height
+        Icon: =Icon.Lock
+        PaddingBottom: =Self.PaddingTop
+        PaddingLeft: =Self.PaddingTop
+        PaddingRight: =Self.PaddingTop
+        PaddingTop: =24
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =iconCircle3_4.Width
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        ZIndex: =5
+
+    LblSuccessMsg3_1 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        Height: =iconCircle3_4.Height
+        Size: =20
+        Text: |-
+            ="You are not using the current version for this application.
+            
+            This may be because the application has timed out or changes have been made. This is to maintain data integrity and prevent duplications of effort.
+            
+            Please refresh this app using the button in the top right corner until this message no longer appears.
+            
+            The Current Version is v" & First(Filter('TG14 App Versions', Title = "Digital Diary")).'Vers Num'
+        Width: =Parent.Width * 0.75
+        X: =231
+        Y: =iconCheck3_1.Y + iconCheck3_1.Height + 100
+        ZIndex: =6
+
+    Label12_1 As label:
+        BorderColor: =RGBA(168, 0, 0, 1)
+        BorderThickness: =10
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =930
+        Size: =13
+        Text: =""
+        Width: =1850
+        ZIndex: =7
+

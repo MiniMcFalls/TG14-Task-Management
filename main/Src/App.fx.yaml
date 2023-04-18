@@ -1,0 +1,209 @@
+App As appinfo:
+    BackEnabled: =true
+    ConfirmExit: =true
+    ConfirmExitMessage: ="You have unsaved data, are you sure you want to exit?"
+    OnStart: |
+        =// Set Current Version
+        ClearCollect(
+            Version,
+            {
+                'Current Version': First(
+                    Filter(
+                        'TG14 App Versions',
+                        Title = "Digital Diary"
+                    )
+                ).'Vers Num'
+            }
+        );
+        Set(
+            CurrentVer,
+            Concat(
+                Filter(
+                    Version,
+                    'Current Version'
+                ),
+                'Current Version'
+            )
+        );
+        Set(
+            LatestVer,
+            First(
+                Filter(
+                    'TG14 App Versions',
+                    Title = "Digital Diary"
+                )
+            )
+        );
+        // Set Colour Variables
+        Set(
+            varButtonFill,
+            RGBA(
+                40,
+                75,
+                99,
+                1
+            )
+        );
+        Set(
+            varButtonHover,
+            ColorFade(
+                varButtonFill,
+                -10%
+            )
+        );
+        Set(
+            varButtonPressedFill,
+            ColorFade(
+                varButtonFill,
+                -30%
+            )
+        );
+        Set(
+            varButtonBorderFill,
+            ColorFade(
+                varButtonFill,
+                -50%
+            )
+        );
+        Set(
+            varButtonSeperatorFill,
+            RGBA(
+                79,
+                109,
+                122,
+                1
+            )
+        );
+        Set(
+            varBackgroundFill,
+            RGBA(
+                192,
+                214,
+                223,
+                1
+            )
+        );
+        Set(
+            varHeaderFill,
+            RGBA(
+                79,
+                109,
+                122,
+                1
+            )
+        );
+        Set(
+            varPillBackground,
+            RGBA(
+                234,
+                234,
+                234,
+                1
+            )
+        );
+        //Set Workload Variables
+        Set(
+            varMLoad,
+            Count(Filter(
+                'TG14 Task Information',
+                'Task Date' >= _firstDayOfMonth && 'Task Date' <= _lastDayOfMonth,
+                Unit.Value = gblUserLocPerm
+            ).ID)
+        );
+        Set(
+            varWLoad,
+            Count(Filter(
+                'TG14 Task Information',
+                'Task Date' >= Today() + (2 - Weekday(Today())) && 'Task Date' <= Today() + (9 - Weekday(Today())),
+                Unit.Value = gblUserLocPerm
+            ).ID)
+        );
+        // Set Calendar Variables
+        Set(
+            _dateSelected,
+            Today()
+        );
+        Set(
+            _firstDayOfMonth,
+            DateAdd(
+                Today(),
+                1 - Day(Today()),
+                TimeUnit.Days
+            )
+        );
+        Set(
+            _firstDayInView,
+            DateAdd(
+                _firstDayOfMonth,
+                -(Weekday(_firstDayOfMonth) - 2 + 1),
+                TimeUnit.Days
+            )
+        );
+        Set(
+            _lastDayOfMonth,
+            DateAdd(
+                DateAdd(
+                    _firstDayOfMonth,
+                    1,
+                    TimeUnit.Months
+                ),
+                -1,
+                TimeUnit.Days
+            )
+        );
+        Set(
+            _minDate,
+            DateAdd(
+                _firstDayOfMonth,
+                -(Weekday(_firstDayOfMonth) - 2 + 1),
+                TimeUnit.Days
+            )
+        );
+        Set(
+            _maxDate,
+            DateAdd(
+                DateAdd(
+                    _firstDayOfMonth,
+                    -(Weekday(_firstDayOfMonth) - 2 + 1),
+                    TimeUnit.Days
+                ),
+                40,
+                TimeUnit.Days
+            )
+        );
+        // get the current app users details
+        Set(
+            gblCurrentUser,
+            Office365Users.UserProfileV2(User().Email)
+        );
+        // is the user a member of the admin group?
+        Set(
+            gblAdminO365GroupID,
+            "4597c298-6aed-436a-b930-c805e9e0e150"
+        );
+        // this is the object ID of the Microsoft Team / Group - you can find this on portal.azure.com
+        Set(
+            gblAdminO365GroupMembers,
+            Office365Groups.ListGroupMembers(
+                gblAdminO365GroupID,
+                {'$top': 999}
+            ).value
+        );
+        // // this checks whether the current user is contained within the group members
+        Set(
+            boolCurrentUserIsAllowed,
+            !IsEmpty(
+                Filter(
+                    gblAdminO365GroupMembers,
+                    id = gblCurrentUser.id
+                )
+            )
+        );
+        // if user is allowed to use app, then go to home screen, else go to not allowed screen
+        If(
+            boolCurrentUserIsAllowed,
+            Home,
+            Denied
+        );
+    StartScreen: ='Perms Check Screen'
+

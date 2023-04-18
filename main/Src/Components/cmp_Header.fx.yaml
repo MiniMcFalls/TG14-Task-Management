@@ -1,0 +1,108 @@
+cmp_Header As CanvasComponent:
+    Fill: =RGBA(0,0,0,0)
+    Height: =63
+    Width: =1850
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    RectQuickActionBar1_29 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
+        Fill: =varHeaderFill
+        Height: =53
+        Width: =1850
+        ZIndex: =1
+
+    LblAppName1_8 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =44
+        PaddingLeft: =20
+        PaddingTop: =2
+        Size: =16
+        Text: ="Digital Diary & Tasks"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =395
+        Wrap: =false
+        X: =96
+        ZIndex: =2
+
+    Label9_14 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 0.5)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =20
+        PaddingBottom: =0
+        PaddingLeft: =20
+        Size: =13
+        Text: =CurrentVer
+        VerticalAlign: =VerticalAlign.Bottom
+        X: =97
+        Y: =32
+        ZIndex: =3
+
+    Triangle1_9 As triangle.rightAngled:
+        BorderColor: =RGBA(0, 120, 212, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(220, 220, 220, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =varBackgroundFill
+        FocusedBorderThickness: =4
+        Height: =63
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =73
+        ZIndex: =4
+
+    Rectangle2_23 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =varBackgroundFill
+        FocusedBorderThickness: =4
+        Height: =53
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =5
+        X: =73
+        ZIndex: =5
+
+    Rectangle2_24 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =varBackgroundFill
+        FocusedBorderThickness: =4
+        Height: =53
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =5
+        X: =82
+        ZIndex: =6
+
+    Rectangle2_25 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =varBackgroundFill
+        FocusedBorderThickness: =4
+        Height: =53
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =5
+        X: =91
+        ZIndex: =7
+

@@ -1,0 +1,1657 @@
+"'Calendar - Day' As screen.'tabletLayout_Calendar_ver3.0'":
+    Fill: =varBackgroundFill
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =Set(
+            varApprovalNumber,
+            Count(
+                Filter(
+                    'TG14 Task Information',
+                    'Approval Status'.Value = "Awaiting Approval",
+                    Unit.Value = gblUserLocPerm,
+                    !IsBlank(Title)
+                ).ID
+            )
+        );
+        // Versioning Check
+        Set(
+            LatestVer,
+            First(
+                Filter(
+                    'TG14 App Versions',
+                    Title = "Digital Diary"
+                )
+            )
+        );
+        If(
+            CurrentVer <> LatestVer.'Vers Num',
+            'Wrong Version'
+        );
+
+    Placeholder_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =31
+
+        Label8_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(81, 98, 111, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =Color.White
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =147
+            Size: =20
+            Text: ="No tasks have been booked for " & Text(_dateSelected,DateTimeFormat.LongDate)
+            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems), true,false)
+            Width: =1025
+            X: =816
+            Y: =484
+            ZIndex: =23
+
+        Icon1_6 As icon.CameraApertureFocus:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(81, 98, 111, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Height: =96
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =Color.White
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CameraAperture
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems), true,false)
+            Width: =104
+            X: =1276
+            Y: =405
+            ZIndex: =24
+
+        Rectangle2_5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(81, 98, 111, 1)
+            FocusedBorderThickness: =4
+            Height: =2
+            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems), true,false)
+            Width: =768
+            X: =947
+            Y: =510
+            ZIndex: =25
+
+        Rectangle2_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(81, 98, 111, 1)
+            FocusedBorderThickness: =4
+            Height: =2
+            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems), true,false)
+            Width: =768
+            X: =947
+            Y: =615
+            ZIndex: =26
+
+    "'Day - RAF Logo' As image":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =212
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =varUnitCrest
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =338
+        X: =14
+        Y: =64
+        ZIndex: =38
+
+    Button33 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 120, 212, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Navigate('Print View', ScreenTransition.Fade)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Print View"
+        Visible: =false
+        X: =1341
+        Y: =79
+        ZIndex: =45
+
+    "'Day - Pills' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =45
+
+        "'Day - Date Picker Pill' As button":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =varPillBackground
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =465
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =15
+            Text: =""
+            Width: =440
+            X: =363
+            Y: =64
+            ZIndex: =4
+
+        "'Day - Task List Pill' As button":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =varPillBackground
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =858
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =15
+            Text: =""
+            Width: =1025
+            X: =816
+            Y: =64
+            ZIndex: =5
+
+        "'Day - Nav Pill' As button":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =varPillBackground
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =243
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =15
+            Text: =""
+            Width: =338
+            X: =14
+            Y: =286
+            ZIndex: =6
+
+        "'Day - Logo Pill' As button":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =varPillBackground
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =212
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =15
+            Text: =""
+            Width: =338
+            X: =14
+            Y: =64
+            ZIndex: =7
+
+        "'Day - Lower Left Pill' As button":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =varPillBackground
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =380
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =15
+            Text: =""
+            Width: =789
+            X: =14
+            Y: =540
+            ZIndex: =8
+
+    "'Day - Nav List' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =45
+
+        Button5 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =varButtonFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =varButtonHover
+            OnSelect: =Navigate('Diversion - Add'); NewForm('DivForm (EDIT)');
+            PressedBorderColor: =varButtonBorderFill
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =varButtonPressedFill
+            RadiusBottomLeft: =
+            RadiusBottomRight: =
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Size: =15
+            Text: ="Add Diversion"
+            Width: =315
+            X: =26
+            Y: =366
+            ZIndex: =33
+
+        Button5_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =varButtonFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =varButtonHover
+            OnSelect: =Navigate('Task - Add'); NewForm('DivForm (EDIT)');
+            PressedBorderColor: =varButtonBorderFill
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =varButtonPressedFill
+            RadiusBottomLeft: =
+            RadiusBottomRight: =
+            RadiusTopLeft: =10 
+            Size: =15
+            Text: ="Add Task"
+            Width: =315
+            X: =26
+            Y: =323
+            ZIndex: =34
+
+        Button5_6 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =varButtonFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =varButtonHover
+            OnSelect: =Navigate('Calendar - Outstanding', ScreenTransition.Fade)
+            PressedBorderColor: =varButtonBorderFill
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =varButtonPressedFill
+            RadiusBottomLeft: =
+            RadiusBottomRight: =
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Size: =15
+            Text: ="View Outstanding Tasks"
+            Width: =315
+            X: =26
+            Y: =409
+            ZIndex: =35
+
+        Button5_13 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =varButtonFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =varButtonHover
+            OnSelect: =Navigate('Approvals Dashboard', ScreenTransition.Fade)
+            PressedBorderColor: =varButtonBorderFill
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =varButtonPressedFill
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Size: =15
+            Text: ="Approvals"
+            Width: =315
+            X: =26
+            Y: =452
+            ZIndex: =36
+
+        Button10_4 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =If(Self.Text <> "0", Color.Red, Color.Green)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PaddingBottom: =
+            PaddingLeft: =
+            PaddingRight: =
+            PaddingTop: =
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =Self.Height
+            RadiusTopLeft: =Self.Height
+            RadiusTopRight: =0
+            Size: =11
+            Text: =varApprovalNumber
+            Width: =45
+            X: =296
+            Y: =452
+            ZIndex: =37
+
+    "'Day - Date Picker' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =45
+
+        LblMonthSelected1 As label:
+            Align: =Align.Center
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(217, 217, 217, 1)
+            Font: =Font.'Segoe UI'
+            Height: =39
+            Size: =18
+            Text: =Text(_firstDayOfMonth, "mmmm yyyy")
+            Width: =420
+            Wrap: =false
+            X: =374
+            Y: =75
+            ZIndex: =12
+
+        iconPrevMonth1 As icon.ChevronLeft:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronLeft
+            OnSelect: |-
+                =/*changes month view to previous month*/
+                Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, TimeUnit.Months));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                /*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/
+                If(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth))
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
+            Tooltip: ="View previous month"
+            Width: =59
+            X: =373
+            Y: =75
+            ZIndex: =13
+
+        iconNextMonth1 As icon.ChevronRight:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =/*changes month view to next month*/
+                Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, 1, TimeUnit.Months));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                /*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                If(_lastDayOfMonth > _maxDate, Set(_maxDate, _lastDayOfMonth))
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
+            Tooltip: ="View next month"
+            Width: =59
+            X: =733
+            Y: =75
+            ZIndex: =14
+
+        WeekdayGallery1 As gallery.WeekdayGallery:
+            AccessibleLabel: ="Days of the week"
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(217, 217, 217, 1)
+            Height: =52
+            Items: =Calendar.WeekdaysShort()
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =60
+            Width: =420
+            X: =374
+            Y: =114
+            ZIndex: =15
+
+            Title1 As label:
+                Align: =Align.Center
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                Height: =WeekdayGallery1.TemplateHeight
+                OnSelect: =Select(Parent)
+                Size: =17 * WeekdayGallery1.TemplateWidth / 77
+                Text: =ThisItem.Value
+                Width: =WeekdayGallery1.TemplateWidth
+                Wrap: =false
+                X: =WeekdayGallery1.TemplateWidth / 2 - Self.Width / 2
+                Y: =WeekdayGallery1.TemplateHeight / 2 - Self.Height / 2
+                ZIndex: =1
+
+        MonthDayGallery1 As gallery.MonthDayGallery:
+            AccessibleLabel: ="Days of selected month"
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =361
+            Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
+            Layout: =Layout.Vertical
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =60
+            Width: =420
+            WrapCount: =7
+            X: =374
+            Y: =158
+            ZIndex: =16
+
+            Subcircle1 As circle:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(0, 120, 212, 1)
+                Fill: =RGBA(60, 110, 113, 1)
+                Height: =3 * Title2.Size
+                HoverFill: =RGBA(0, 120, 212, 1)
+                OnSelect: =Select(Parent)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title2.Visible)
+                Width: =Self.Height
+                X: =MonthDayGallery1.TemplateWidth/2 - Self.Width/2
+                Y: =MonthDayGallery1.TemplateHeight / 2 - Self.Height / 2
+                ZIndex: =1
+
+            Title2 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(217, 217, 217, 1)
+                BorderThickness: =2
+                Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1.Color)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: |-
+                    =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
+                    If(
+                        /*Date selected is today*/
+                        DateAdd(_firstDayInView, ThisItem.Value) = Today() && DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(0,0,0,0),
+                        /*Today when it is not selected*/
+                        DateAdd(_firstDayInView, ThisItem.Value) = Today(), ColorFade(Subcircle1.Fill, 0.6), 
+                        /*The day is outside the range of the currently selected month*/
+                        Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
+                FocusedBorderColor: =Self.Color
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                Height: =MonthDayGallery1.TemplateHeight
+                OnSelect: |-
+                    =UpdateContext({locShowSpinner: true});
+                    Set(
+                        _dateSelected,
+                        DateAdd(
+                            _firstDayInView,
+                            ThisItem.Value,
+                            TimeUnit.Days
+                        )
+                    );
+                    ClearCollect(
+                        TaskPieChartData,
+                        ForAll(
+                            CalendarEventsGallery1.AllItems,
+                            {
+                                Engineering: CountRows(
+                                    Filter(
+                                        CalendarEventsGallery1.AllItems,
+                                        'Project Category'.Value = "Engineering"
+                                    )
+                                ),
+                                'Photog #1': 'Photog #1'
+                            }
+                        )
+                    );
+                    UpdateContext({locShowSpinner: false});
+                Size: =17 * MonthDayGallery1.TemplateWidth / 91
+                TabIndex: =0
+                Text: =Day(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days))
+                Visible: |-
+                    =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
+                     !(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days)) + 1 > _lastDayOfMonth)
+                Width: =MonthDayGallery1.TemplateWidth
+                Wrap: =false
+                ZIndex: =2
+
+            Circle1 As circle:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(246, 88, 16, 1)
+                Height: =6
+                OnSelect: =Select(Parent)
+                Visible: |-
+                    =/*Visible if calendar events are found on this day*/               
+                    Count(Filter('TG14 Task Information', DateValue(Text('Task Date')) = DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days), 'Project Category'.Value <> "Diversion", Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved").ID) > 0 && !Subcircle1.Visible && Title2.Visible
+                Width: =6
+                X: =MonthDayGallery1.TemplateWidth / 2 - Self.Width / 2
+                Y: =MonthDayGallery1.TemplateHeight * (0.75)
+                ZIndex: =3
+
+            Circle1_1 As circle:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(0, 120, 212, 1)
+                Height: =6
+                OnSelect: =Select(Parent)
+                Visible: |-
+                    =/*Visible if calendar events are found on this day*/               
+                    Count(Filter('TG14 Task Information', DateValue(Text('Task Date')) = DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days),'Project Category'.Value = "Diversion", Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved").ID) > 0 && !Subcircle1.Visible && Title2.Visible
+                Width: =6
+                X: =MonthDayGallery1.TemplateWidth / 2 - Self.Width / 2
+                Y: =52
+                ZIndex: =4
+
+        Rectangle4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(79, 109, 122, 1)
+            FocusedBorderThickness: =4
+            Height: =1
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =420
+            X: =374
+            Y: =114
+            ZIndex: =32
+
+    "'Day - Task List' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =45
+
+        iconCalendar1 As icon.CalendarBlank:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =29
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CalendarBlank
+            OnSelect: |-
+                =/*resets calendar view and date selection to today*/
+                Set(_dateSelected, Today());
+                Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
+            Tooltip: ="Reset selected date to today"
+            Width: =40
+            X: =1516
+            Y: =86
+            ZIndex: =11
+
+        "'Day - Task List Border' As button":
+            BorderColor: =RGBA(79, 109, 122, 1)
+            DisabledBorderColor: =RGBA(79, 109, 122, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =789
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =Self.Fill
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: =""
+            Width: =1003
+            X: =827
+            Y: =124
+            ZIndex: =17
+
+        CalendarEventsGallery1 As gallery.CalendarEventsGallery:
+            AccessibleLabel: ="Calendar events for selected day"
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DelayItemLoading: =true
+            Height: =789
+            Items: |-
+                =/*Shows events only on selected date*/
+                SortByColumns(Filter('TG14 Task Information', 'Task Date' = _dateSelected, Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved"), "StartTime")
+            Layout: =Layout.Vertical
+            LoadingSpinnerColor: =RGBA(0,0,0,1)
+            OnSelect: =
+            TemplatePadding: =4
+            TemplateSize: =55
+            Width: =1004
+            X: =827
+            Y: =124
+            ZIndex: =18
+
+            Button3 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(242, 242, 242, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =55
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                RadiusBottomLeft: =
+                RadiusBottomRight: =
+                RadiusTopLeft: =
+                RadiusTopRight: =
+                Size: =15
+                Text: =""
+                Width: =932
+                X: =32
+                ZIndex: =2
+
+            Rectangle1 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(0,0,0,0)
+                FocusedBorderThickness: =0
+                Height: =54
+                HoverFill: =RGBA(0,0,0,0)
+                OnSelect: =Select(Title3)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                TabIndex: =0
+                Width: =932
+                X: =32
+                Y: =1
+                ZIndex: =5
+
+            iconLocation1 As icon.Waypoint:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(79, 109, 122, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                DisplayMode: =DisplayMode.View
+                Height: =Subtitle1.Height -5
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Waypoint
+                OnSelect: =Select(Title3)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =0
+                Width: =Subtitle1.Height -5
+                X: =82
+                Y: =30
+                ZIndex: =6
+
+            Title3 As label:
+                BorderColor: =Self.Color
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =If(ThisItem.'Project Category'.Value = "Diversion", Color.DarkOrange,RGBA(0, 0, 0, 1))
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =27
+                OnSelect: =Set(_selectedCalendarEvent, ThisItem)
+                Size: =19 * CalendarEventsGallery1.TemplateHeight / 105
+                TabIndex: =0
+                Text: |-
+                    =If(
+                        ThisItem.'Project Category'.Value = "Diversion",
+                        Text("DIVERSION") & Text(" - ") & ThisItem.'Photog #1' & Text(" - ") & ThisItem.'Task Location',
+                        Text("Task: ") & Text(Value(ThisItem.Title), "0000", "en-GB") & Text(" - ") & ThisItem.Rank & Text(" ") & ThisItem.'Customer Name' & Text(" - ") & Text("Tel: ") & ThisItem.'Customer Contact Number'
+                    )
+                Tooltip: =ThisItem.Title & Text("- ") & ThisItem.Rank & Text(" ") & ThisItem.'Customer Name'
+                Width: =771
+                Wrap: =false
+                X: =76
+                ZIndex: =7
+
+            Subtitle1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Lighter
+                Height: =27
+                OnSelect: =Select(Title3)
+                PaddingBottom: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =19 * CalendarEventsGallery1.TemplateHeight / 105
+                Text: =ThisItem.'Task Location'
+                Tooltip: =ThisItem.'Task Location'
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                Wrap: =false
+                X: =iconLocation1.X + iconLocation1.Width + 5
+                Y: =iconLocation1.Y -1
+                ZIndex: =8
+
+            Body1 As label:
+                Color: =RGBA(221, 110, 66, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =Title3.Height
+                OnSelect: =Select(Title3)
+                Size: =17 * CalendarEventsGallery1.TemplateHeight / 105
+                Text: =Text(ThisItem.'Start Time', DateTimeFormat.ShortTime)
+                Width: =67
+                Wrap: =false
+                X: =32
+                ZIndex: =9
+
+            Separator1 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                Height: =1
+                OnSelect: =
+                Width: =932
+                X: =32
+                Y: =54
+                ZIndex: =10
+
+            Subtitle1_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Lighter
+                Height: =24
+                OnSelect: =Select(Title3)
+                PaddingBottom: =0
+                PaddingTop: =0
+                Size: =19 * CalendarEventsGallery1.TemplateHeight / 105
+                Text: =ThisItem.'Project Category'.Value
+                Tooltip: =ThisItem.'Task Location'
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                Wrap: =false
+                X: =Icon2.X + Icon2.Width + 5
+                Y: =iconLocation1.Y -1
+                ZIndex: =11
+
+            Icon2 As icon.Tag:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(79, 109, 122, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                Height: =Subtitle1.Height -5
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Tag
+                OnSelect: =
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =Subtitle1.Height -5
+                X: =Subtitle1.X + Subtitle1.Width + 20
+                Y: =iconLocation1.Y
+                ZIndex: =12
+
+            Rectangle7 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(0, 120, 212, 1)
+                FocusedBorderThickness: =4
+                Height: =1
+                HoverFill: =RGBA(0, 120, 212, 1)
+                OnSelect: =
+                PressedFill: =RGBA(0, 120, 212, 1)
+                Width: =800
+                X: =82
+                Y: =27
+                ZIndex: =13
+
+            Separator1_1 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =932
+                X: =32
+                ZIndex: =14
+
+            Icon1 As icon.NextArrow:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 120, 212, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.NextArrow
+                OnSelect: |-
+                    =Switch(
+                        ThisItem.'Project Category'.Value,
+                        "Diversion",
+                        Navigate(
+                            DiversionDetails,
+                            ScreenTransition.Fade
+                        ),
+                        "Print/Reprint",
+                        Navigate(
+                            'EditScreen - Prints/Reprints',
+                            ScreenTransition.Fade
+                        ),
+                        Navigate(
+                            EditScreen,
+                            ScreenTransition.Fade
+                        )
+                    );
+                    Set(varNotifyWindow, false);
+                    Set(var1177Check, false);
+                    Set(varCurrentTasksCheck, false);
+                    Set(varCustEmailSent, false);
+                    Select(Parent);
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =25
+                X: =923
+                Y: =15
+                ZIndex: =15
+
+            Icon1_5 As icon.NextArrow:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 120, 212, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Trash
+                OnSelect: =Remove('TG14 Task Information',ThisItem)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Visible: =If(ThisItem.'Project Category'.Value = "Diversion", true,false)
+                Width: =25
+                X: =890
+                Y: =15
+                ZIndex: =16
+
+            Subtitle1_6 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Lighter
+                Height: =27
+                OnSelect: =
+                PaddingBottom: =0
+                PaddingTop: =0
+                Size: =19 * CalendarEventsGallery1.TemplateHeight / 105
+                Text: |-
+                    =If(IsBlank(ThisItem.'Photog #1'), "Not Assigned", ThisItem.'Photog #1')
+                Tooltip: =Text(ThisItem.'Task Date', "mmmm")
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                Wrap: =false
+                X: =Icon2_8.X + Icon2_8.Width + 5
+                Y: =iconLocation1.Y -1
+                ZIndex: =17
+
+            Icon2_8 As icon.Tag:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(79, 109, 122, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                Height: =Subtitle1.Height -5
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Person
+                OnSelect: =
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =Subtitle1.Height -5
+                X: =Subtitle1_1.X + Subtitle1_1.Width + 20
+                Y: =iconLocation1.Y
+                ZIndex: =18
+
+            Button17 As button:
+                BorderColor: =If(Self.Fill = Color.White, Color.Black, RGBA(0,0,0,0))
+                Color: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: |-
+                    =If(
+                        ThisItem.'Status Value' = "PLANNED",
+                        Color.White,
+                        If(
+                            ThisItem.'Status Value' = "PROCESSING",
+                            Color.Orange,
+                            If(
+                                ThisItem.'Status Value' = "COMPLETED",
+                                Color.Green,
+                                If(
+                                    ThisItem.'Status Value' = "ON HOLD",
+                                    Color.Yellow,
+                                    If(
+                                        ThisItem.'Status Value' = "CANCELLED",
+                                        Color.Red,
+                                        If(
+                                            ThisItem.'Status Value' = "PPC",
+                                            Color.LightBlue,
+                                            Color.Gray
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =55
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =0
+                RadiusTopLeft: =20
+                RadiusTopRight: =0
+                Size: =15
+                Text: =""
+                Width: =32
+                ZIndex: =19
+
+            Button17_1 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: |-
+                    =If(
+                        ThisItem.'Status Value' = "PLANNED",
+                        Color.White,
+                        If(
+                            ThisItem.'Status Value' = "PROCESSING",
+                            Color.Orange,
+                            If(
+                                ThisItem.'Status Value' = "COMPLETED",
+                                Color.Green,
+                                If(
+                                    ThisItem.'Status Value' = "ON HOLD",
+                                    Color.Yellow,
+                                    If(
+                                        ThisItem.'Status Value' = "CANCELLED",
+                                        Color.Red,
+                                        If(
+                                            ThisItem.'Status Value' = "PPC",
+                                            Color.LightBlue,
+                                            Color.Gray
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =55
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =20
+                RadiusTopLeft: =0
+                RadiusTopRight: =20
+                Size: =15
+                Text: =""
+                Width: =32
+                X: =964
+                ZIndex: =20
+
+        Button19 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =varHeaderFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =49
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: |
+                =10
+            Size: =15
+            Text: =""
+            Width: =1005
+            X: =826
+            Y: =75
+            ZIndex: =19
+
+        LblDateSelected1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =49
+            PaddingLeft: =35
+            Size: =13
+            Text: |-
+                =Text(
+                    _dateSelected,
+                    DateTimeFormat.LongDate
+                )
+            Width: =273
+            Wrap: =false
+            X: =827
+            Y: =75
+            ZIndex: =20
+
+        Button12 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =varButtonFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =varButtonHover
+            OnSelect: =Navigate('Calendar - Month', ScreenTransition.Fade)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =varButtonBorderFill
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =varButtonPressedFill
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =
+            RadiusTopLeft: =0
+            Size: =15
+            Text: ="Month"
+            Width: =88
+            X: =1743
+            Y: =75
+            ZIndex: =27
+
+        Button12_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =varButtonFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =varButtonHover
+            OnSelect: =Navigate('Calendar - Week', ScreenTransition.Fade)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =varButtonBorderFill
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =varButtonPressedFill
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Week"
+            Width: =88
+            X: =1655
+            Y: =75
+            ZIndex: =28
+
+        Button12_2 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =varButtonFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =varButtonHover
+            OnSelect: =Navigate('Calendar - Day', ScreenTransition.Fade)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =varButtonBorderFill
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =varButtonPressedFill
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Day"
+            Width: =88
+            X: =1567
+            Y: =75
+            ZIndex: =29
+
+        Rectangle11_3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =varButtonSeperatorFill
+            FocusedBorderThickness: =4
+            Height: =42
+            Width: =2
+            X: =1655
+            Y: =75
+            ZIndex: =30
+
+        Rectangle11_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =varButtonSeperatorFill
+            FocusedBorderThickness: =4
+            Height: =42
+            Width: =2
+            X: =1741
+            Y: =75
+            ZIndex: =31
+
+        LblResetToday1 As label:
+            Align: =Align.Center
+            Color: =iconCalendar1.Color
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =iconCalendar1.Height
+            PaddingLeft: =4
+            Size: =11
+            Text: =DateDiff(Date(Year(Today()), Month(Today()), 1), Today(), TimeUnit.Days) + 1
+            Width: =39
+            X: =1516
+            Y: =88
+            ZIndex: =43
+
+        Icon10 As icon.CalendarBlank:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =38
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CalendarBlank
+            OnSelect: |-
+                =/*resets calendar view and date selection to today*/
+                Set(_dateSelected, Today());
+                Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =40
+            X: =1516
+            Y: =81
+            ZIndex: =44
+
+    "'Day - Header Bar' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =45
+
+        RectQuickActionBar1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            Fill: =varHeaderFill
+            Height: =53
+            Width: =1850
+            ZIndex: =9
+
+        LblAppName1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            PaddingLeft: =20
+            PaddingTop: =2
+            Size: =18
+            Text: ="Digital Diary & Tasks"
+            VerticalAlign: =VerticalAlign.Top
+            Width: |-
+                =Sum(AddColumns(ForAll(Split(Self.Text, ""), {Result: ThisRecord.Value}), "Size", LookUp(colCharsWidth, CharFont=Self.Font && CharWeight=Self.FontWeight && Char = Result).Size), Size) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            Wrap: =false
+            X: =96
+            ZIndex: =10
+
+        Label9 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 0.5)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =20
+            PaddingBottom: =0
+            PaddingLeft: =20
+            Size: =13
+            Text: =CurrentVer
+            VerticalAlign: =VerticalAlign.Bottom
+            X: =96
+            Y: =32
+            ZIndex: =21
+
+        Button6 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(151, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =53
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -10%)
+            OnSelect: =Navigate(Home, ScreenTransition.Fade)
+            PressedBorderColor: =Color.Transparent
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomRight: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="HOME"
+            Width: =164
+            X: =1686
+            ZIndex: =22
+
+        Triangle1 As triangle.rightAngled:
+            BorderColor: =RGBA(0, 120, 212, 1)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(220, 220, 220, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =varBackgroundFill
+            FocusedBorderThickness: =4
+            Height: =63
+            HoverFill: =varBackgroundFill
+            PressedFill: =varBackgroundFill
+            Width: =73
+            ZIndex: =39
+
+        Rectangle2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =varBackgroundFill
+            FocusedBorderThickness: =4
+            Height: =53
+            HoverFill: =varBackgroundFill
+            PressedFill: =varBackgroundFill
+            Width: =5
+            X: =73
+            ZIndex: =40
+
+        Rectangle2_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =varBackgroundFill
+            FocusedBorderThickness: =4
+            Height: =53
+            HoverFill: =varBackgroundFill
+            PressedFill: =varBackgroundFill
+            Width: =5
+            X: =82
+            ZIndex: =41
+
+        Rectangle2_8 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =varBackgroundFill
+            FocusedBorderThickness: =4
+            Height: =53
+            HoverFill: =varBackgroundFill
+            PressedFill: =varBackgroundFill
+            Width: =5
+            X: =91
+            ZIndex: =42
+
+    "'Day - Timers' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =45
+
+        "'Data Update Timer' As timer":
+            AutoStart: =true
+            BorderColor: =RGBA(0, 120, 212, 1)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(0, 120, 212, 1)
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnTimerEnd: =Refresh('TG14 Task Information');
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Repeat: =true
+            X: =846
+            Y: =6
+            ZIndex: =1
+
+        "'Calendar Day  - Approval Refresh Timer' As timer":
+            AutoStart: =true
+            BorderColor: =RGBA(0, 120, 212, 1)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Duration: =30000
+            Fill: =RGBA(0, 120, 212, 1)
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnTimerEnd: |-
+                =Set(
+                    varApprovalNumber,
+                    Count(
+                        Filter(
+                            'TG14 Task Information',
+                            'Approval Status'.Value = "Awiting Approval",
+                            Unit.Value = gblUserLocPerm,
+                            !IsBlank(Title)
+                        ).ID
+                    )
+                );
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Repeat: =true
+            X: =507
+            Y: =4
+            ZIndex: =3
+
