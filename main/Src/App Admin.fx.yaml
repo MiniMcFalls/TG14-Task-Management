@@ -4894,7 +4894,7 @@
         Appearance: ='PowerApps.CoreControls.ButtonCanvas.Appearance'.Primary
         DisplayMode: =DisplayMode.Edit
         Height: =36
-        OnSelect: =
+        OnSelect: =clearcollect
         Text: ="Populate Monthly Returns"
         Width: =226
         X: =1569
