@@ -1,6 +1,6 @@
 "'1177 View' As screen.'tabletAutoLayout_Sidebar_ver1.0'":
     Fill: =varBackgroundFill
-    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnHidden: =Concurrent(Set(var11772022vis, false), Set(var11772023vis, false), Set(var11772024vis, false))
     OnVisible: |
         =// Versioning Check
@@ -74,10 +74,10 @@
         Height: =797
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30
@@ -120,20 +120,20 @@
 
     "'Section Admin - Approvals Refresh Timer_1' As timer":
         AutoStart: =true
-        BorderColor: =RGBA(0, 120, 212, 1)
+        BorderColor: =RGBA(105, 121, 126, 1)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Duration: =300000
-        Fill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(105, 121, 126, 1)
         Font: =Font.'Segoe UI'
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Repeat: =true
         Visible: =false
         X: =508
@@ -156,16 +156,16 @@
         HeadingSize: =13
         Height: =766
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(0, 120, 212, 1)
+        HoverFill: =RGBA(105, 121, 126, 1)
         InputFill: =RGBA(255, 255, 255, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
         Items: =Sort(Filter('1177 Task Register 2022', Unit.Value = gblUserLocPerm),Job, SortOrder.Descending)
         LinkColor: =RGBA(0, 134, 208, 1)
-        PrimaryColor1: =RGBA(0, 120, 212, 1)
-        PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PrimaryColor3: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PrimaryColor1: =RGBA(105, 121, 126, 1)
+        PrimaryColor2: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PrimaryColor3: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         SelectedColor: =RGBA(51, 51, 51, 1)
-        SelectedFill: =RGBA(0, 120, 212, .2)
+        SelectedFill: =RGBA(105, 121, 126, .2)
         Size: =13
         Visible: =If(var11772022vis, true, false)
         Width: =1758
@@ -613,16 +613,16 @@
         HeadingSize: =13
         Height: =766
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(0, 120, 212, 1)
+        HoverFill: =RGBA(105, 121, 126, 1)
         InputFill: =RGBA(255, 255, 255, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
         Items: =Sort(Filter('1177 Task Register 2023', Unit.Value = gblUserLocPerm),Job, SortOrder.Descending)
         LinkColor: =RGBA(0, 134, 208, 1)
-        PrimaryColor1: =RGBA(0, 120, 212, 1)
-        PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PrimaryColor3: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PrimaryColor1: =RGBA(105, 121, 126, 1)
+        PrimaryColor2: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PrimaryColor3: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         SelectedColor: =RGBA(51, 51, 51, 1)
-        SelectedFill: =RGBA(0, 120, 212, .2)
+        SelectedFill: =RGBA(105, 121, 126, .2)
         Size: =13
         Visible: =If(var11772023vis, true, false)
         Width: =1758
@@ -1075,9 +1075,9 @@
         InvertedColor: =RGBA(255, 255, 255, 1)
         Items: =Filter('1177 Task Register 2024', Unit.Value = gblUserLocPerm)
         LinkColor: =RGBA(0, 134, 208, 1)
-        PrimaryColor1: =RGBA(0, 120, 212, 1)
-        PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PrimaryColor3: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PrimaryColor1: =RGBA(105, 121, 126, 1)
+        PrimaryColor2: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PrimaryColor3: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         SelectedColor: =RGBA(51, 51, 51, 1)
         SelectedFill: =RGBA(0, 120, 212, .2)
         Size: =13

@@ -1,6 +1,6 @@
 Feedback As screen:
     Fill: =varBackgroundFill
-    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |-
         =// Versioning Check
         Set(
@@ -25,17 +25,17 @@ Feedback As screen:
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =varPillBackground
         DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(105, 121, 126, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =124
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30
@@ -63,9 +63,9 @@ Feedback As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(255,0,0,1), -20%)
         OnSelect: =Back()
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusTopLeft: =
         RadiusTopRight: =
         Size: =15
@@ -137,17 +137,17 @@ Feedback As screen:
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =varPillBackground
         DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(105, 121, 126, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =611
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30
@@ -411,7 +411,7 @@ Feedback As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         Font: =Font.'Segoe UI'
         Height: =42
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =[Blank(),"Fault", "Feedback", "Feature Request"]
@@ -419,10 +419,10 @@ Feedback As screen:
         PaddingLeft: =12
         PaddingRight: =5
         PaddingTop: =5
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(105, 121, 126, 1)
+        SelectionFill: =RGBA(105, 121, 126, 1)
         Size: =13
         X: =1329
         Y: =198
@@ -459,11 +459,11 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =503
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Mode: =TextMode.MultiLine
-        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedBorderColor: =RGBA(105, 121, 126, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
         RadiusBottomLeft: =0

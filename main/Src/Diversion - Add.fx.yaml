@@ -1,6 +1,6 @@
 "'Diversion - Add' As screen":
     Fill: =Color.LightGray
-    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |
         =// Versioning Check
         Set(
@@ -64,8 +64,8 @@
         Fill: =RGBA(128, 128, 128, 1)
         FocusedBorderThickness: =4
         Height: =2
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
+        HoverFill: =RGBA(105, 121, 126, 1)
+        PressedFill: =RGBA(105, 121, 126, 1)
         Width: =500
         X: =680
         Y: =224
@@ -139,17 +139,17 @@
                 DisplayMode: =Parent.DisplayMode
                 Font: =Font.'Segoe UI'
                 Height: =32
-                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
                 Items: =Choices([@'TG14 Task Information'].'Project Category')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('TG14 Task Information'.'Project Category',DataCardValue16.SearchText)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(105, 121, 126, 1)
                 SelectMultiple: =false
                 Size: =13
                 Tooltip: =Parent.DisplayName
@@ -257,12 +257,12 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =32
-                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(105, 121, 126, 1)
                 PressedColor: =RGBA(51, 51, 51, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -324,19 +324,19 @@
 
             Icon3_3 As icon.Clock:
                 BorderColor: =RGBA(166, 166, 166, 1)
-                Color: =RGBA(0, 120, 212, 1)
+                Color: =RGBA(105, 121, 126, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
                 Height: =31
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Clock
                 OnSelect: =Set(varShowTimePicker, true)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =18
                 X: =133
@@ -390,8 +390,8 @@
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 Size: =13
-                TrueFill: =RGBA(0, 120, 212, 1)
-                TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                TrueFill: =RGBA(105, 121, 126, 1)
+                TrueHoverFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 TrueText: ="Yes"
                 X: =40
                 Y: =91
@@ -444,7 +444,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Font: =Font.'Segoe UI'
-                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
                 Items: =[Blank(),"2 Weeks","3 Weeks","4 Weeks","5 Weeks","6 Weeks","7 weeks","8 Weeks","9 Weeks","10 Weeks"]
@@ -452,10 +452,10 @@
                 PaddingLeft: =12
                 PaddingRight: =5
                 PaddingTop: =5
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                SelectionFill: =RGBA(105, 121, 126, 1)
                 Size: =13
                 X: =40
                 Y: =86
@@ -502,7 +502,7 @@
 
             DataCardValue27 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 Color: =RGBA(51, 51, 51, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -512,11 +512,11 @@
                 Font: =Font.'Segoe UI'
                 Height: =32
                 HoverDateFill: =RGBA(200, 200, 200, 1)
-                IconBackground: =RGBA(0, 120, 212, 1)
+                IconBackground: =RGBA(105, 121, 126, 1)
                 IsEditable: =true
                 PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SelectedDateFill: =RGBA(0, 120, 212, 1)
+                SelectedDateFill: =RGBA(105, 121, 126, 1)
                 Size: =13
                 StartYear: =2012
                 Tooltip: =Parent.DisplayName
@@ -626,12 +626,12 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =32
-                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(105, 121, 126, 1)
                 PressedColor: =RGBA(51, 51, 51, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -749,7 +749,7 @@
                 DisplayMode: =Parent.DisplayMode
                 Font: =Font.'Segoe UI'
                 Height: =32
-                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
                 IsSearchable: =false
@@ -958,12 +958,12 @@
                         ]
                     )
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
                 SearchFields: =["Value"]
                 SearchItems: =[]
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(105, 121, 126, 1)
                 SelectMultiple: =false
                 Size: =13
                 Tooltip: =Parent.DisplayName
@@ -1072,13 +1072,13 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =110
-                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
                 Mode: =TextMode.MultiLine
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(105, 121, 126, 1)
                 PressedColor: =RGBA(51, 51, 51, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -1152,7 +1152,7 @@
         Height: =37
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         OnSelect: |-
             =If(
                 Toggle1.Value = false,
@@ -2113,9 +2113,9 @@
             NewForm('DivForm (EDIT)');
             Reset(cmp_TimePicker_2);
             Back();
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =Button4.Height
         RadiusBottomRight: =Button4.Height
         RadiusTopLeft: =Button4.Height
@@ -2145,9 +2145,9 @@
         OnSelect: |-
             =Navigate('Calendar - Day', ScreenTransition.Fade);
             Reset(cmp_TimePicker_2);
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusTopLeft: =
         RadiusTopRight: =
         Size: =15

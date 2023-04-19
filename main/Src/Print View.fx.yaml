@@ -1,5 +1,5 @@
 "'Print View' As screen":
-    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: =Print()
 
     cmp_Header_11 As cmp_Header:
@@ -36,19 +36,19 @@
             Height: =Parent.TemplateHeight
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            RadiusBottomLeft: =
-            RadiusBottomRight: =
-            RadiusTopLeft: =
-            RadiusTopRight: =
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
             Size: =15
             Text: =""
             Width: =Parent.TemplateWidth
@@ -63,7 +63,7 @@
             Height: =Parent.TemplateHeight
             HoverFill: =RGBA(0,0,0,0)
             OnSelect: =Select(Title3_2)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
             TabIndex: =0
             Width: =Parent.TemplateWidth
             ZIndex: =5
@@ -77,12 +77,12 @@
             DisplayMode: =DisplayMode.View
             Height: =Subtitle1_7.Height -5
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Waypoint
             OnSelect: =Select(Title3_2)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             TabIndex: =0
             Width: =Subtitle1_7.Height -5
@@ -172,7 +172,7 @@
 
         Separator1_7 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Height: =1
             OnSelect: =
             Width: =Parent.TemplateWidth
@@ -226,12 +226,12 @@
             FocusedBorderThickness: =4
             Height: =Subtitle1_7.Height -5
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Tag
             OnSelect: =
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =Subtitle1_7.Height -5
             X: =245
@@ -242,12 +242,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(105, 121, 126, 1)
             FocusedBorderThickness: =4
             Height: =1
-            HoverFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =
-            PressedFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
             Width: =700
             X: =82
             Y: =37
@@ -255,7 +255,7 @@
 
         Separator1_6 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
@@ -309,12 +309,12 @@
             FocusedBorderThickness: =4
             Height: =Subtitle1_7.Height -5
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Person
             OnSelect: =
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =Subtitle1_7.Height -5
             X: =392
@@ -326,12 +326,12 @@
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(105, 121, 126, 1)
             FocusedBorderThickness: =4
             Height: =75
-            HoverFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
             Width: =1
             X: =782
             ZIndex: =19

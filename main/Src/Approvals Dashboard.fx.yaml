@@ -1,6 +1,6 @@
 "'Approvals Dashboard' As screen.'tabletLayout_Calendar_ver3.0'":
     Fill: =varBackgroundFill
-    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |-
         =// Versioning Check
         Set(
@@ -106,14 +106,14 @@
         Height: =858
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
         PaddingTop: =0
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Size: =15
         Text: =""
         Width: =1478
@@ -128,17 +128,17 @@
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(0, 0, 0, 0)
         DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(105, 121, 126, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =754
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =24
@@ -155,17 +155,17 @@
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =varHeaderFill
         DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(105, 121, 126, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =57
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         Size: =24
@@ -218,7 +218,7 @@
 
         Separator2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
@@ -517,9 +517,9 @@
             Fill: =RGBA(79, 109, 122, 1)
             FocusedBorderThickness: =4
             Height: =1
-            HoverFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
             Width: =1428
             ZIndex: =19
 
@@ -531,9 +531,9 @@
             Fill: =RGBA(79, 109, 122, 1)
             FocusedBorderThickness: =4
             Height: =160
-            HoverFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
             Width: =1
             X: =651
             Y: =12
@@ -541,22 +541,22 @@
 
     Timer2_4 As timer:
         AutoStart: =true
-        BorderColor: =RGBA(0, 120, 212, 1)
+        BorderColor: =RGBA(105, 121, 126, 1)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.View
         Duration: =15000
-        Fill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(105, 121, 126, 1)
         Font: =Font.'Segoe UI'
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         OnTimerEnd: =Refresh('TG14 Task Information');
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Repeat: =true
         Visible: =false
         X: =846
@@ -583,29 +583,29 @@
         Text: ="Refresh"
         X: =1641
         Y: =92
-        ZIndex: =12
+        ZIndex: =11
 
     "'Approvals Dashboard - Refresh Timer' As timer":
         AutoStart: =true
-        BorderColor: =RGBA(0, 120, 212, 1)
+        BorderColor: =RGBA(105, 121, 126, 1)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Duration: =300000
-        Fill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(105, 121, 126, 1)
         Font: =Font.'Segoe UI'
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Repeat: =true
         Visible: =false
         X: =1081
         Y: =148
-        ZIndex: =13
+        ZIndex: =12
 
     "'Reject HTML Text' As htmlViewer":
         DisplayMode: =DisplayMode.Disabled
@@ -724,7 +724,7 @@
             </table>"
         Visible: =false
         Width: =36
-        ZIndex: =14
+        ZIndex: =13
 
     "'Approve HTML Text' As htmlViewer":
         DisplayMode: =DisplayMode.Disabled
@@ -842,7 +842,7 @@
         Visible: =false
         Width: =21
         X: =36
-        ZIndex: =15
+        ZIndex: =14
 
     Button18_12 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -858,16 +858,16 @@
         Height: =212
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Size: =15
         Text: =""
         Width: =338
         X: =14
         Y: =64
-        ZIndex: =16
+        ZIndex: =15
 
     Image8_3 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -886,7 +886,7 @@
         Width: =338
         X: =14
         Y: =64
-        ZIndex: =17
+        ZIndex: =16
 
     Button6_4 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -912,7 +912,7 @@
         Text: ="HOME"
         Width: =164
         X: =1686
-        ZIndex: =18
+        ZIndex: =17
 
     Rectangle2_15 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -926,7 +926,7 @@
         PressedFill: =varBackgroundFill
         Width: =5
         X: =73
-        ZIndex: =19
+        ZIndex: =18
 
     Rectangle2_16 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -940,7 +940,7 @@
         PressedFill: =varBackgroundFill
         Width: =5
         X: =82
-        ZIndex: =20
+        ZIndex: =19
 
     Rectangle2_17 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -954,7 +954,7 @@
         PressedFill: =varBackgroundFill
         Width: =5
         X: =91
-        ZIndex: =21
+        ZIndex: =20
 
     Button18_13 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -970,16 +970,16 @@
         Height: =154
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Size: =15
         Text: =""
         Width: =338
         X: =14
         Y: =286
-        ZIndex: =22
+        ZIndex: =21
 
     Button5_11 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1007,7 +1007,7 @@
         Width: =315
         X: =26
         Y: =Button5_12.Y + Self.Height + 3
-        ZIndex: =23
+        ZIndex: =22
 
     Button5_12 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1029,12 +1029,13 @@
         RadiusBottomLeft: =
         RadiusBottomRight: =
         RadiusTopLeft: =10 
+        RadiusTopRight: =0
         Size: =15
         Text: ="Add Task"
         Width: =315
         X: =26
         Y: =300
-        ZIndex: =24
+        ZIndex: =23
 
     Button5_16 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1053,6 +1054,8 @@
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
         RadiusTopLeft: =
         RadiusTopRight: =
         Size: =15
@@ -1060,7 +1063,7 @@
         Width: =315
         X: =26
         Y: =Button5_11.Y + Self.Height + 3
-        ZIndex: =25
+        ZIndex: =24
 
     Button18_14 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1076,16 +1079,16 @@
         Height: =64
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Size: =15
         Text: =""
         Width: =338
         X: =14
         Y: =454
-        ZIndex: =26
+        ZIndex: =25
 
     Button18_15 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1101,16 +1104,16 @@
         Height: =393
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Size: =15
         Text: =""
         Width: =338
         X: =14
         Y: =529
-        ZIndex: =32
+        ZIndex: =31
 
     "'Reject Popup' As group":
         Height: =5
@@ -1130,7 +1133,7 @@
             Height: =930
             Visible: =If(RejectPopupVis, true,false)
             Width: =1850
-            ZIndex: =49
+            ZIndex: =66
 
         Rectangle21 As rectangle:
             BorderColor: =RGBA(255, 0, 0, 1)
@@ -1144,7 +1147,7 @@
             Width: =957
             X: =438
             Y: =214
-            ZIndex: =50
+            ZIndex: =67
 
         Label16 As label:
             Align: =Align.Center
@@ -1164,7 +1167,7 @@
             Width: =450
             X: =692
             Y: =229
-            ZIndex: =51
+            ZIndex: =68
 
         Label18 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1182,7 +1185,7 @@
             Width: =349
             X: =717
             Y: =280
-            ZIndex: =52
+            ZIndex: =69
 
         Label20 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1200,7 +1203,7 @@
             Width: =49
             X: =1068
             Y: =280
-            ZIndex: =53
+            ZIndex: =70
 
         Label21 As label:
             Align: =Align.Center
@@ -1219,7 +1222,7 @@
             Width: =690
             X: =572
             Y: =316
-            ZIndex: =54
+            ZIndex: =72
 
         "'Reject Comments' As text":
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -1235,11 +1238,11 @@
             Font: =Font.'Segoe UI'
             Height: =155
             HintText: ="Comments"
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
             Mode: =TextMode.MultiLine
-            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedBorderColor: =RGBA(105, 121, 126, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
             RadiusBottomLeft: =0
@@ -1251,7 +1254,7 @@
             Width: =838
             X: =498
             Y: =379
-            ZIndex: =55
+            ZIndex: =73
 
         Button16 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1360,7 +1363,7 @@
             Visible: =If(RejectPopupVis, true,false)
             X: =836
             Y: =585
-            ZIndex: =56
+            ZIndex: =74
 
         Icon8_1 As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -1370,19 +1373,19 @@
             FocusedBorderThickness: =4
             Height: =33
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CancelBadge
             OnSelect: =Set(RejectPopupVis, false)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Tooltip: ="Close"
             Visible: =If(RejectPopupVis, true, false)
             Width: =33
             X: =1357
             Y: =219
-            ZIndex: =57
+            ZIndex: =75
 
     Group2_2 As group:
         Height: =5
@@ -1415,7 +1418,7 @@
             Width: =100
             X: =241
             Y: =466
-            ZIndex: =27
+            ZIndex: =26
 
         Button12_10 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1443,7 +1446,7 @@
             Width: =111
             X: =128
             Y: =466
-            ZIndex: =28
+            ZIndex: =27
 
         Button12_11 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1469,7 +1472,7 @@
             Width: =100
             X: =26
             Y: =466
-            ZIndex: =29
+            ZIndex: =28
 
         Rectangle11_10 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1481,7 +1484,7 @@
             Width: =2
             X: =126
             Y: =466
-            ZIndex: =30
+            ZIndex: =29
 
         Rectangle11_9 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1493,83 +1496,7 @@
             Width: =2
             X: =239
             Y: =466
-            ZIndex: =31
-
-    Placeholder_4 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =62
-
-        Label8_4 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(81, 98, 111, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =Color.White
-            DisplayMode: =DisplayMode.View
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =147
-            Size: =20
-            Text: ="No tasks are currently awaiting approval."
-            Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
-            Width: =1025
-            X: =590
-            Y: =459
-            ZIndex: =3
-
-        Icon1_10 As icon.CameraApertureFocus:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(81, 98, 111, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            DisplayMode: =DisplayMode.View
-            FocusedBorderThickness: =4
-            Height: =96
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =Color.White
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.CameraAperture
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
-            Width: =104
-            X: =1050
-            Y: =380
-            ZIndex: =4
-
-        Rectangle2_22 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(81, 98, 111, 1)
-            FocusedBorderThickness: =4
-            Height: =2
-            Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
-            Width: =768
-            X: =721
-            Y: =488
-            ZIndex: =7
-
-        Rectangle2_21 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(81, 98, 111, 1)
-            FocusedBorderThickness: =4
-            Height: =2
-            Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
-            Width: =768
-            X: =721
-            Y: =590
-            ZIndex: =9
+            ZIndex: =30
 
     HtmlText3 As htmlViewer:
         Height: =6
@@ -1646,19 +1573,19 @@
             <b>Task Requirements: </b>" & 'Approvals Gallery'.Selected.'Task Requirements'
         Visible: =false
         Width: =590
-        ZIndex: =70
+        ZIndex: =61
 
     Button18 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(105, 121, 126, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         OnSelect: |-
             =Office365Groups.CreateCalendarEvent(
                     "4597c298-6aed-436a-b930-c805e9e0e150",
@@ -1712,9 +1639,9 @@
                         responseRequested: false
                     }
                 )
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -1723,6 +1650,123 @@
         Text: ="Button"
         Visible: =false
         Y: =890
+        ZIndex: =62
+
+    Placeholder_4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =62
+
+        Label8_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(81, 98, 111, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =Color.White
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =147
+            Size: =20
+            Text: ="No tasks are currently awaiting approval."
+            Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
+            Width: =1025
+            X: =590
+            Y: =459
+            ZIndex: =3
+
+        Icon1_10 As icon.CameraApertureFocus:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(81, 98, 111, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Height: =96
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =Color.White
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CameraAperture
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
+            Width: =104
+            X: =1050
+            Y: =380
+            ZIndex: =4
+
+        Rectangle2_22 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(81, 98, 111, 1)
+            FocusedBorderThickness: =4
+            Height: =2
+            Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
+            Width: =768
+            X: =721
+            Y: =488
+            ZIndex: =7
+
+        Rectangle2_21 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(81, 98, 111, 1)
+            FocusedBorderThickness: =4
+            Height: =2
+            Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
+            Width: =768
+            X: =721
+            Y: =590
+            ZIndex: =9
+
+    "'Edit Screen - Time Picker Blocker_4' As label":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(204, 204, 204, 0.6)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =930
+        OnSelect: =Set(varShowTimePicker, false)
+        Size: =13
+        Text: =
+        Visible: =varShowTimePicker
+        Width: =1850
+        ZIndex: =64
+
+    cmp_TimePicker_3 As cmp_TimePicker:
+        Visible: =varShowTimePicker
+        X: =704
+        Y: =296
+        ZIndex: =65
+
+    Image9 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: |-
+            =Office365Users.UserPhotoV2(First(Office365Users.SearchUser({searchTerm:"", top:1})).Id)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        X: =142
+        Y: =129
         ZIndex: =71
 
     "'Edit Screen - Notify Window_1' As group":
@@ -1740,11 +1784,11 @@
             Fill: =RGBA(230, 230, 230, 1)
             FocusedBorderThickness: =4
             Height: =930
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =varNotifyWindow
             Width: =1850
-            ZIndex: =58
+            ZIndex: =49
 
         "'Cust Det - Background Pill_3' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1753,17 +1797,17 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(179, 179, 179, 1)
             DisplayMode: =DisplayMode.Disabled
-            Fill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(105, 121, 126, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =511
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =20
@@ -1774,7 +1818,7 @@
             Width: =1301
             X: =275
             Y: =215
-            ZIndex: =59
+            ZIndex: =50
 
         "'Cust Det - Pill 3_3' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1789,10 +1833,10 @@
             Height: =488
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             RadiusBottomLeft: =30
             RadiusBottomRight: =30
             RadiusTopLeft: =30
@@ -1803,7 +1847,7 @@
             Width: =1274
             X: =288
             Y: =227
-            ZIndex: =60
+            ZIndex: =51
 
         Image1_1 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1820,7 +1864,7 @@
             Visible: =varNotifyWindow
             X: =875
             Y: =350
-            ZIndex: =61
+            ZIndex: =52
 
         Label6_2 As label:
             Align: =Align.Center
@@ -1840,14 +1884,14 @@
             Width: =479
             X: =686
             Y: =278
-            ZIndex: =62
+            ZIndex: =53
 
         Checkbox1_3 As checkbox:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             CheckboxBorderColor: =RGBA(102, 102, 102, 1)
-            CheckmarkFill: =RGBA(0, 120, 212, 1)
+            CheckmarkFill: =RGBA(105, 121, 126, 1)
             Color: =RGBA(51, 51, 51, 1)
             Default: =varCurrentTasksCheck
             DisabledBorderColor: =RGBA(0, 0, 0, 1)
@@ -1867,14 +1911,14 @@
             Width: =224
             X: =655
             Y: =501
-            ZIndex: =63
+            ZIndex: =54
 
         Checkbox1_5 As checkbox:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             CheckboxBorderColor: =RGBA(102, 102, 102, 1)
-            CheckmarkFill: =RGBA(0, 120, 212, 1)
+            CheckmarkFill: =RGBA(105, 121, 126, 1)
             Color: =RGBA(51, 51, 51, 1)
             Default: =var1177Check
             DisabledBorderColor: =RGBA(0, 0, 0, 1)
@@ -1894,7 +1938,7 @@
             Width: =224
             X: =655
             Y: =551
-            ZIndex: =64
+            ZIndex: =55
 
         Label7_3 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1912,7 +1956,7 @@
             Width: =241
             X: =651
             Y: =461
-            ZIndex: =65
+            ZIndex: =56
 
         Icon12_3 As icon.CheckBadge:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -1923,24 +1967,24 @@
             FocusedBorderThickness: =4
             Height: =37
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CheckBadge
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =varNotifyWindow
             Width: =33
             X: =614
             Y: =461
-            ZIndex: =66
+            ZIndex: =57
 
         Checkbox1_6 As checkbox:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             CheckboxBorderColor: =RGBA(102, 102, 102, 1)
-            CheckmarkFill: =RGBA(0, 120, 212, 1)
+            CheckmarkFill: =RGBA(105, 121, 126, 1)
             Color: =RGBA(51, 51, 51, 1)
             Default: =varCustEmailSent
             DisabledBorderColor: =RGBA(0, 0, 0, 1)
@@ -1960,7 +2004,7 @@
             Width: =224
             X: =990
             Y: =501
-            ZIndex: =67
+            ZIndex: =58
 
         Label7_4 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1978,7 +2022,7 @@
             Width: =272
             X: =989
             Y: =464
-            ZIndex: =68
+            ZIndex: =59
 
         Icon12_2 As icon.CheckBadge:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -1989,58 +2033,17 @@
             FocusedBorderThickness: =4
             Height: =37
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CheckBadge
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =varNotifyWindow
             Width: =33
             X: =952
             Y: =464
-            ZIndex: =69
-
-    "'Edit Screen - Time Picker Blocker_4' As label":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(204, 204, 204, 0.6)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =930
-        OnSelect: =Set(varShowTimePicker, false)
-        Size: =13
-        Text: =
-        Visible: =varShowTimePicker
-        Width: =1850
-        ZIndex: =74
-
-    cmp_TimePicker_3 As cmp_TimePicker:
-        Visible: =varShowTimePicker
-        X: =704
-        Y: =296
-        ZIndex: =75
-
-    Image9 As image:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: |-
-            =Office365Users.UserPhotoV2(First(Office365Users.SearchUser({searchTerm:"", top:1})).Id)
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        X: =142
-        Y: =129
-        ZIndex: =76
+            ZIndex: =60
 
     "'Approval Popup' As group":
         Height: =5
@@ -2059,7 +2062,7 @@
             Height: =930
             Visible: =If(PopupVis, true,false)
             Width: =1850
-            ZIndex: =33
+            ZIndex: =32
 
         Rectangle18 As rectangle:
             BorderColor: =RGBA(255, 255, 255, 1)
@@ -2072,7 +2075,7 @@
             Width: =1590
             X: =147
             Y: =100
-            ZIndex: =34
+            ZIndex: =33
 
         Form1 As form:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2085,7 +2088,7 @@
             Width: =1384
             X: =147
             Y: =150
-            ZIndex: =35
+            ZIndex: =34
 
             DataCard5 As typedDataCard.blankCard:
                 BorderColor: =RGBA(166, 166, 166, 1)
@@ -2150,12 +2153,12 @@
                     DisplayMode: =Parent.DisplayMode
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
-                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedBorderColor: =RGBA(105, 121, 126, 1)
                     PressedColor: =RGBA(51, 51, 51, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     RadiusBottomLeft: =0
@@ -2269,18 +2272,18 @@
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
                     Font: =Font.'Segoe UI'
-                    HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(212, 212, 212, 1)
                     IsSearchable: =false
                     Items: =Choices([@'TG14 Task Information'].'Project Category')
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                    PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =RGBA(0, 120, 212, 1)
+                    PressedFill: =RGBA(105, 121, 126, 1)
                     SearchFields: =["Value"]
                     SearchItems: =[]
-                    SelectionFill: =RGBA(0, 120, 212, 1)
+                    SelectionFill: =RGBA(105, 121, 126, 1)
                     SelectMultiple: =false
                     Size: =13
                     Tooltip: =Parent.DisplayName
@@ -2387,12 +2390,12 @@
                     DisplayMode: =Parent.DisplayMode
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
-                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedBorderColor: =RGBA(105, 121, 126, 1)
                     PressedColor: =RGBA(51, 51, 51, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     RadiusBottomLeft: =0
@@ -2504,12 +2507,12 @@
                     DisplayMode: =Parent.DisplayMode
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
-                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedBorderColor: =RGBA(105, 121, 126, 1)
                     PressedColor: =RGBA(51, 51, 51, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     RadiusBottomLeft: =0
@@ -2588,7 +2591,7 @@
             Width: =1386
             X: =147
             Y: =100
-            ZIndex: =36
+            ZIndex: =35
 
         Label2_2 As label:
             Align: =Align.Center
@@ -2607,7 +2610,7 @@
             Width: =405
             X: =637
             Y: =101
-            ZIndex: =37
+            ZIndex: =36
 
         Icon8 As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2617,7 +2620,7 @@
             FocusedBorderThickness: =4
             Height: =33
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CancelBadge
             OnSelect: |
@@ -2627,14 +2630,14 @@
                 );
                 Reset(cmp_TimePicker_3);
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Tooltip: ="Close"
             Visible: =If(PopupVis, true, false)
             Width: =33
             X: =1485
             Y: =108
-            ZIndex: =38
+            ZIndex: =37
 
         Rectangle20 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2642,14 +2645,14 @@
             BorderThickness: =2
             DisabledFill: =RGBA(166, 166, 166, 1)
             DisplayMode: =DisplayMode.View
-            Fill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(105, 121, 126, 1)
             FocusedBorderThickness: =4
             Height: =1
             Visible: =If(PopupVis, true, false)
             Width: =260
             X: =157
             Y: =239
-            ZIndex: =39
+            ZIndex: =38
 
         Rectangle20_1 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2657,14 +2660,14 @@
             BorderThickness: =2
             DisabledFill: =RGBA(166, 166, 166, 1)
             DisplayMode: =DisplayMode.View
-            Fill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(105, 121, 126, 1)
             FocusedBorderThickness: =4
             Height: =1
             Visible: =If(PopupVis, true, false)
             Width: =260
             X: =1258
             Y: =239
-            ZIndex: =40
+            ZIndex: =39
 
         Button14 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2854,7 +2857,7 @@
             Visible: =If(PopupVis, true,false)
             X: =1308
             Y: =186
-            ZIndex: =41
+            ZIndex: =40
 
         Button14_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2881,7 +2884,7 @@
             Visible: =If(PopupVis, true,false)
             X: =207
             Y: =186
-            ZIndex: =42
+            ZIndex: =41
 
         Gallery3_1 As gallery.galleryVertical:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2894,7 +2897,7 @@
             Width: =209
             X: =1533
             Y: =99
-            ZIndex: =43
+            ZIndex: =42
 
             Rectangle12_1 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
@@ -3015,7 +3018,7 @@
 
                 Icon6_1 As icon.Waypoint:
                     BorderColor: =RGBA(166, 166, 166, 1)
-                    Color: =RGBA(0, 120, 212, 1)
+                    Color: =RGBA(105, 121, 126, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -3023,12 +3026,12 @@
                     FocusedBorderThickness: =4
                     Height: =26
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Waypoint
                     OnSelect: =Select(Parent)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =35
                     X: =17
@@ -3056,7 +3059,7 @@
 
                 Icon7_1 As icon.Tag:
                     BorderColor: =RGBA(166, 166, 166, 1)
-                    Color: =RGBA(0, 120, 212, 1)
+                    Color: =RGBA(105, 121, 126, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(220, 220, 220, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -3064,12 +3067,12 @@
                     FocusedBorderThickness: =4
                     Height: =28
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Tag
                     OnSelect: =Select(Parent)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =35
                     X: =17
@@ -3087,7 +3090,7 @@
             Width: =1386
             X: =147
             Y: =262
-            ZIndex: =44
+            ZIndex: =43
 
             "'Task Details_1' As group":
                 Height: =5
@@ -3111,14 +3114,14 @@
                     Height: =33
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                    HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                    PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
                     PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =15
@@ -3424,17 +3427,17 @@
                     Height: =33
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                    HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                    PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
                     PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
-                    RadiusTopLeft: =
+                    RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =15
                     Text: ="Customer Details"
@@ -3882,7 +3885,7 @@
 
             DatePicker1 As datepicker:
                 BorderColor: =RGBA(166, 166, 166, 1)
-                CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 Color: =RGBA(51, 51, 51, 1)
                 DefaultDate: ='Approvals Gallery'.Selected.'Task Date'
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -3891,10 +3894,10 @@
                 Font: =Font.'Segoe UI'
                 Height: =28
                 HoverDateFill: =RGBA(200, 200, 200, 1)
-                IconBackground: =RGBA(0, 120, 212, 1)
+                IconBackground: =RGBA(105, 121, 126, 1)
                 OnSelect: =Select(Parent)
                 PaddingTop: =5
-                SelectedDateFill: =RGBA(0, 120, 212, 1)
+                SelectedDateFill: =RGBA(105, 121, 126, 1)
                 Size: =13
                 Width: =167
                 X: =105
@@ -3937,19 +3940,19 @@
                     Height: =33
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                    HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
                     OnSelect: |-
                         =UpdateContext({ApprovalTaskDesVis:!ApprovalTaskDesVis})
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                    PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
                     PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
-                    RadiusTopLeft: =
+                    RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =15
                     Text: ="Task Description"
@@ -3966,13 +3969,13 @@
                     FocusedBorderThickness: =4
                     Height: =33
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =If(Rectangle19_5.Visible = true, Icon.ChevronUp, Icon.ChevronDown)
                     OnSelect: |-
                         =UpdateContext({ApprovalTaskDesVis:!ApprovalTaskDesVis})
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =53
                     X: =1294
@@ -4016,13 +4019,13 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     Height: =187
-                    HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     Mode: =TextMode.MultiLine
                     OnChange: =
                     PaddingLeft: =5
-                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedBorderColor: =RGBA(105, 121, 126, 1)
                     PressedColor: =RGBA(51, 51, 51, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     RadiusBottomLeft: =0
@@ -4076,14 +4079,14 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     Height: =187
-                    HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     Mode: =TextMode.MultiLine
                     OnChange: |-
                         =UpdateContext({SubmitDM: DisplayMode.Edit})
                     PaddingLeft: =5
-                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedBorderColor: =RGBA(105, 121, 126, 1)
                     PressedColor: =RGBA(51, 51, 51, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     RadiusBottomLeft: =0
@@ -4105,13 +4108,13 @@
             Fill: =RGBA(0, 0, 0, 1)
             FocusedBorderThickness: =4
             Height: =700
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(PopupVis, true,false)
             Width: =2
             X: =1532
             Y: =150
-            ZIndex: =45
+            ZIndex: =44
 
         Rectangle22_1 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4120,13 +4123,13 @@
             Fill: =RGBA(0, 0, 0, 1)
             FocusedBorderThickness: =4
             Height: =700
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(PopupVis, true,false)
             Width: =2
             X: =1740
             Y: =150
-            ZIndex: =46
+            ZIndex: =45
 
         Rectangle22_2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4135,13 +4138,13 @@
             Fill: =RGBA(0, 0, 0, 1)
             FocusedBorderThickness: =4
             Height: =2
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(PopupVis, true,false)
             Width: =1595
             X: =147
             Y: =848
-            ZIndex: =47
+            ZIndex: =46
 
         Rectangle22_3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4150,13 +4153,13 @@
             Fill: =RGBA(0, 0, 0, 1)
             FocusedBorderThickness: =4
             Height: =700
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(PopupVis, true,false)
             Width: =2
             X: =146
             Y: =150
-            ZIndex: =48
+            ZIndex: =47
 
         "'Task Time_1' As text":
             Align: =Align.Center
@@ -4171,10 +4174,10 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =28
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
-            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedBorderColor: =RGBA(105, 121, 126, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
             RadiusBottomLeft: =0
@@ -4186,27 +4189,27 @@
             Width: =164
             X: =532
             Y: =300
-            ZIndex: =72
+            ZIndex: =48
 
         Icon3_2 As icon.Clock:
             BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(0, 120, 212, 1)
+            Color: =RGBA(105, 121, 126, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
             Height: =28
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Clock
             OnSelect: =Set(varShowTimePicker, true)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(PopupVis, true, false)
             Width: =18
             X: =675
             Y: =300
-            ZIndex: =73
+            ZIndex: =63
 

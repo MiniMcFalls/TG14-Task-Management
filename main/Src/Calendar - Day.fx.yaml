@@ -1,6 +1,6 @@
 "'Calendar - Day' As screen.'tabletLayout_Calendar_ver3.0'":
     Fill: =varBackgroundFill
-    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |-
         =Set(
             varApprovalNumber,
@@ -70,7 +70,7 @@
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CameraAperture
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems), true,false)
             Width: =104
@@ -127,17 +127,17 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(105, 121, 126, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         OnSelect: =Navigate('Print View', ScreenTransition.Fade)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -170,10 +170,10 @@
             Height: =465
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Size: =15
             Text: =""
             Width: =440
@@ -195,14 +195,14 @@
             Height: =858
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Size: =15
             Text: =""
             Width: =1025
@@ -224,10 +224,10 @@
             Height: =243
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Size: =15
             Text: =""
             Width: =338
@@ -249,10 +249,10 @@
             Height: =212
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Size: =15
             Text: =""
             Width: =338
@@ -274,10 +274,10 @@
             Height: =380
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Size: =15
             Text: =""
             Width: =789
@@ -340,6 +340,7 @@
             RadiusBottomLeft: =
             RadiusBottomRight: =
             RadiusTopLeft: =10 
+            RadiusTopRight: =0
             Size: =15
             Text: ="Add Task"
             Width: =315
@@ -392,6 +393,8 @@
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
             RadiusTopLeft: =
             RadiusTopRight: =
             Size: =15
@@ -415,14 +418,14 @@
             FontWeight: =FontWeight.Semibold
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
             PaddingBottom: =
             PaddingLeft: =
             PaddingRight: =
             PaddingTop: =
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             RadiusBottomLeft: =Self.Height
             RadiusTopLeft: =Self.Height
             RadiusTopRight: =0
@@ -457,14 +460,14 @@
 
         iconPrevMonth1 As icon.ChevronLeft:
             BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(0, 120, 212, 1)
+            Color: =RGBA(105, 121, 126, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
             Height: =39
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronLeft
             OnSelect: |-
@@ -479,7 +482,7 @@
             PaddingRight: =7
             PaddingTop: =7
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             TabIndex: =0
             Tooltip: ="View previous month"
@@ -490,14 +493,14 @@
 
         iconNextMonth1 As icon.ChevronRight:
             BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(0, 120, 212, 1)
+            Color: =RGBA(105, 121, 126, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
             Height: =39
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronRight
             OnSelect: |-
@@ -512,7 +515,7 @@
             PaddingRight: =7
             PaddingTop: =7
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             TabIndex: =0
             Tooltip: ="View next month"
@@ -568,12 +571,12 @@
 
             Subcircle1 As circle:
                 BorderColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(0, 120, 212, 1)
+                DisabledFill: =RGBA(105, 121, 126, 1)
                 Fill: =RGBA(60, 110, 113, 1)
                 Height: =3 * Title2.Size
-                HoverFill: =RGBA(0, 120, 212, 1)
+                HoverFill: =RGBA(105, 121, 126, 1)
                 OnSelect: =Select(Parent)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
                 Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title2.Visible)
                 Width: =Self.Height
                 X: =MonthDayGallery1.TemplateWidth/2 - Self.Width/2
@@ -669,8 +672,8 @@
             Fill: =RGBA(79, 109, 122, 1)
             FocusedBorderThickness: =4
             Height: =1
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
             Width: =420
             X: =374
             Y: =114
@@ -692,7 +695,7 @@
             FocusedBorderThickness: =4
             Height: =29
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CalendarBlank
             OnSelect: |-
@@ -702,7 +705,7 @@
                 Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
                 Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             TabIndex: =0
             Tooltip: ="Reset selected date to today"
@@ -724,14 +727,14 @@
             Height: =789
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =Self.Fill
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =15
@@ -774,19 +777,19 @@
                 Height: =55
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                RadiusBottomLeft: =
-                RadiusBottomRight: =
-                RadiusTopLeft: =
-                RadiusTopRight: =
+                PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
                 Size: =15
                 Text: =""
                 Width: =932
@@ -802,7 +805,7 @@
                 Height: =54
                 HoverFill: =RGBA(0,0,0,0)
                 OnSelect: =Select(Title3)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
                 TabIndex: =0
                 Width: =932
                 X: =32
@@ -818,12 +821,12 @@
                 DisplayMode: =DisplayMode.View
                 Height: =Subtitle1.Height -5
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Waypoint
                 OnSelect: =Select(Title3)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 TabIndex: =0
                 Width: =Subtitle1.Height -5
@@ -911,7 +914,7 @@
 
             Separator1 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 0)
-                Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 Height: =1
                 OnSelect: =
                 Width: =932
@@ -966,12 +969,12 @@
                 FocusedBorderThickness: =4
                 Height: =Subtitle1.Height -5
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Tag
                 OnSelect: =
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =Subtitle1.Height -5
                 X: =Subtitle1.X + Subtitle1.Width + 20
@@ -982,12 +985,12 @@
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 DisabledFill: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(0, 120, 212, 1)
+                Fill: =RGBA(105, 121, 126, 1)
                 FocusedBorderThickness: =4
                 Height: =1
-                HoverFill: =RGBA(0, 120, 212, 1)
+                HoverFill: =RGBA(105, 121, 126, 1)
                 OnSelect: =
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
                 Width: =800
                 X: =82
                 Y: =27
@@ -995,7 +998,7 @@
 
             Separator1_1 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 0)
-                Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 Height: =1
                 OnSelect: =Select(Parent)
                 Width: =932
@@ -1004,14 +1007,14 @@
 
             Icon1 As icon.NextArrow:
                 BorderColor: =RGBA(166, 166, 166, 1)
-                Color: =RGBA(0, 120, 212, 1)
+                Color: =RGBA(105, 121, 126, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
                 Height: =25
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.NextArrow
                 OnSelect: |-
@@ -1038,7 +1041,7 @@
                     Set(varCustEmailSent, false);
                     Select(Parent);
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =25
                 X: =923
@@ -1047,19 +1050,19 @@
 
             Icon1_5 As icon.NextArrow:
                 BorderColor: =RGBA(166, 166, 166, 1)
-                Color: =RGBA(0, 120, 212, 1)
+                Color: =RGBA(105, 121, 126, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
                 Height: =25
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Trash
                 OnSelect: =Remove('TG14 Task Information',ThisItem)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Visible: =If(ThisItem.'Project Category'.Value = "Diversion", true,false)
                 Width: =25
@@ -1115,12 +1118,12 @@
                 FocusedBorderThickness: =4
                 Height: =Subtitle1.Height -5
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Person
                 OnSelect: =
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =Subtitle1.Height -5
                 X: =Subtitle1_1.X + Subtitle1_1.Width + 20
@@ -1166,15 +1169,15 @@
                 Height: =55
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 RadiusBottomLeft: =20
                 RadiusBottomRight: =0
                 RadiusTopLeft: =20
@@ -1223,15 +1226,15 @@
                 Height: =55
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =20
                 RadiusTopLeft: =0
@@ -1256,14 +1259,14 @@
             Height: =49
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: |
@@ -1442,7 +1445,7 @@
             FocusedBorderThickness: =4
             Height: =38
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CalendarBlank
             OnSelect: |-
@@ -1452,7 +1455,7 @@
                 Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
                 Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =40
             X: =1516
@@ -1503,7 +1506,6 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =20
-            PaddingBottom: =0
             PaddingLeft: =20
             Size: =13
             Text: =CurrentVer
@@ -1539,7 +1541,7 @@
             ZIndex: =22
 
         Triangle1 As triangle.rightAngled:
-            BorderColor: =RGBA(0, 120, 212, 1)
+            BorderColor: =RGBA(105, 121, 126, 1)
             BorderStyle: =BorderStyle.None
             DisabledFill: =RGBA(220, 220, 220, 1)
             DisplayMode: =DisplayMode.View
@@ -1602,21 +1604,21 @@
 
         "'Data Update Timer' As timer":
             AutoStart: =true
-            BorderColor: =RGBA(0, 120, 212, 1)
+            BorderColor: =RGBA(105, 121, 126, 1)
             BorderStyle: =BorderStyle.None
             DisabledBorderColor: =RGBA(244, 244, 244, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayMode: =DisplayMode.View
-            Fill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(105, 121, 126, 1)
             Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
             OnTimerEnd: =Refresh('TG14 Task Information');
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Repeat: =true
             X: =846
             Y: =6
@@ -1624,17 +1626,17 @@
 
         "'Calendar Day  - Approval Refresh Timer' As timer":
             AutoStart: =true
-            BorderColor: =RGBA(0, 120, 212, 1)
+            BorderColor: =RGBA(105, 121, 126, 1)
             BorderStyle: =BorderStyle.None
             DisabledBorderColor: =RGBA(244, 244, 244, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Duration: =30000
-            Fill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(105, 121, 126, 1)
             Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
             OnTimerEnd: |-
                 =Set(
                     varApprovalNumber,
@@ -1647,9 +1649,9 @@
                         ).ID
                     )
                 );
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Repeat: =true
             X: =507
             Y: =4
