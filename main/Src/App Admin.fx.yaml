@@ -4894,10 +4894,51 @@
         Appearance: ='PowerApps.CoreControls.ButtonCanvas.Appearance'.Primary
         DisplayMode: =DisplayMode.Edit
         Height: =36
-        OnSelect: =clearcollect
+        OnSelect: |-
+            =Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "March" && Title = "Assurance Task Totals"
+                    )
+                ),
+                {Lossiemouth: Sum(Filter('TG14 Task Information', Unit.Value = "Lossiemouth", "2023" in 'Task Date', "Jan" in Text('Task Date', "mm", "en-GB")), 'Total Hours' + 'Out Of Hours') +0}
+            );
+            Sum(Filter('1177 Task Register 2022', 'Cat.' = "A", 'Month Task Generated' = "January", Label8.Text in 'Task Date', Unit.Value = gblUserLocPerm), 'Total Hours' + 'Out of Hours') +0
         Text: ="Populate Monthly Returns"
         Width: =226
         X: =1569
         Y: =163
         ZIndex: =67
+
+    Label36 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =Sum(Filter('TG14 Task Information', Unit.Value = "Lossiemouth", "2023" in 'Task Date', "Jan" in Text('Task Date', "mmmm", "en-GB")), 'Total Hours' + 'Out Of Hours') +0
+        X: =1607
+        Y: =242
+        ZIndex: =68
+
+    Label37 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =CountRows(Filter('TG14 Task Information', "Jan" in DateTimeValue(Text('Task Date', "yyyy/mm/dd", "en-GB"))))
+        X: =1622
+        Y: =302
+        ZIndex: =69
 
