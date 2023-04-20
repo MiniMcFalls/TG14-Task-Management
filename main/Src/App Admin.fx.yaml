@@ -4895,7 +4895,935 @@
         DisplayMode: =DisplayMode.Edit
         Height: =36
         OnSelect: |-
-            =Patch(
+            =//
+            //
+            //
+            //---------------------------------------------------------------------- Assurance hours Jan
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "January" && Title = "Assurance Hours"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "01",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "01",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "01",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "01",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Benson
+                    Benson: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "01",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance Task Totals Jan
+            //
+            //
+            //
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "January" && Title = "Assurance Task Totals"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "01",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "01",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "01",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "01",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Benson: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "01",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance hours Feb
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "February" && Title = "Assurance Hours"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "02",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "02",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "02",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "02",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Benson
+                    Benson: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "02",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance Task Totals Feb
+            //
+            //
+            //
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "January" && Title = "Assurance Task Totals"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "02",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "02",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "02",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "02",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Benson: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "02",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance hours Mar
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "February" && Title = "Assurance Hours"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "03",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "03",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "03",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "03",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Benson: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "03",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance Task Totals March
+            //
+            //
+            //
+            Patch(
                 'TG14 Combined Monthly Returns',
                 First(
                     Filter(
@@ -4903,9 +5831,2014 @@
                         Month = "March" && Title = "Assurance Task Totals"
                     )
                 ),
-                {Lossiemouth: Sum(Filter('TG14 Task Information', Unit.Value = "Lossiemouth", "2023" in 'Task Date', "Jan" in Text('Task Date', "mm", "en-GB")), 'Total Hours' + 'Out Of Hours') +0}
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "03",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "03",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "03",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "03",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Benson: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "03",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    )
+                }
             );
-            Sum(Filter('1177 Task Register 2022', 'Cat.' = "A", 'Month Task Generated' = "January", Label8.Text in 'Task Date', Unit.Value = gblUserLocPerm), 'Total Hours' + 'Out of Hours') +0
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance hours Apr
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "April" && Title = "Assurance Hours"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "04",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "04",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "04",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "04",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Benson
+                    Benson: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "04",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance Task Totals April
+            //
+            //
+            //
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "April" && Title = "Assurance Task Totals"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "04",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "04",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "04",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "04",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Benson
+                    Benson: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "04",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance hours May
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "May" && Title = "Assurance Hours"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "05",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "05",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "05",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "05",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Benson
+                    Benson: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "05",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance Task Totals May
+            //
+            //
+            //
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "May" && Title = "Assurance Task Totals"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "05",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "05",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "05",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "05",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Benson: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "05",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance hours June
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "June" && Title = "Assurance Hours"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "06",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "06",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "06",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "06",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Benson
+                    Benson: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "06",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance Task Totals Jun
+            //
+            //
+            //
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "June" && Title = "Assurance Task Totals"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "06",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "06",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "06",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "06",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Benson
+                    Benson: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "06",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance hours July
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "July" && Title = "Assurance Hours"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "07",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "07",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "07",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "07",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Benson
+                    Benson: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "07",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance Task Totals July
+            //
+            //
+            //
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "July" && Title = "Assurance Task Totals"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "07",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "07",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "07",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "07",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Benson
+                    Benson: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "07",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance hours August
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "August" && Title = "Assurance Hours"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "08",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "08",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "08",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "08",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Benson
+                    Benson: Sum(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "08",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        ),
+                        'Total Hours' + 'Out Of Hours'
+                    )
+                }
+            );
+            //
+            //
+            //
+            //---------------------------------------------------------------------- Assurance Task Totals August
+            //
+            //
+            //
+            Patch(
+                'TG14 Combined Monthly Returns',
+                First(
+                    Filter(
+                        'TG14 Combined Monthly Returns',
+                        Month = "August" && Title = "Assurance Task Totals"
+                    )
+                ),
+            //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
+                {
+                    Lossiemouth: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Lossiemouth",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "08",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
+                    'Brize Norton': CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Brize Photo",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "08",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Leeming
+                    Leeming: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Leeming",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "08",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Waddington
+                    Waddington: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Waddington",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "08",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    ),
+                    //--------------------------------------------------------------------------------------------------------------------------------------- Benson
+                    Benson: CountRows(
+                        Filter(
+                            'TG14 Task Information',
+                            Unit.Value = "Benson",
+                            Right(
+                                'Task Date',
+                                4
+                            ) = Text(
+                                Today(),
+                                "yyyy",
+                                "en-GB"
+                            ),
+                            Mid(
+                                'Task Date',
+                                4,
+                                2
+                            ) = "08",
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical Dental",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Other (Specify)"
+                            )
+                        )
+                    )
+                }
+            );
         Text: ="Populate Monthly Returns"
         Width: =226
         X: =1569
@@ -4922,23 +7855,40 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =13
-        Text: =Sum(Filter('TG14 Task Information', Unit.Value = "Lossiemouth", "2023" in 'Task Date', "Jan" in Text('Task Date', "mmmm", "en-GB")), 'Total Hours' + 'Out Of Hours') +0
+        Text: |-
+            =CountRows(
+                Filter(
+                    'TG14 Task Information',
+                    Unit.Value = "Lossiemouth",
+                    Right(
+                        'Task Date',
+                        4
+                    ) = Text(
+                        Today(),
+                        "yyyy",
+                        "en-GB"
+                    ),
+                    Mid(
+                        'Task Date',
+                        4,
+                        2
+                    ) = "02",
+                    Or(
+                        'Project Category'.Value = "Admin",
+                        'Project Category'.Value = "Air Safety",
+                        'Project Category'.Value = "Digital Manipulation",
+                        'Project Category'.Value = "Engineering",
+                        'Project Category'.Value = "ID Photo",
+                        'Project Category'.Value = "Medical Dental",
+                        'Project Category'.Value = "Portrait",
+                        'Project Category'.Value = "Print/Reprint",
+                        'Project Category'.Value = "Scanning",
+                        'Project Category'.Value = "Trials",
+                        'Project Category'.Value = "Other (Specify)"
+                    )
+                )
+            )
         X: =1607
         Y: =242
         ZIndex: =68
-
-    Label37 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =13
-        Text: =CountRows(Filter('TG14 Task Information', "Jan" in DateTimeValue(Text('Task Date', "yyyy/mm/dd", "en-GB"))))
-        X: =1622
-        Y: =302
-        ZIndex: =69
 
