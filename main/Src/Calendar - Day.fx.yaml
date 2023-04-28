@@ -122,7 +122,7 @@
         Y: =64
         ZIndex: =38
 
-    Button33 As button:
+    "'Print Button' As button":
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -340,7 +340,6 @@
             RadiusBottomLeft: =
             RadiusBottomRight: =
             RadiusTopLeft: =10 
-            RadiusTopRight: =0
             Size: =15
             Text: ="Add Task"
             Width: =315
@@ -393,8 +392,6 @@
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
             RadiusTopLeft: =
             RadiusTopRight: =
             Size: =15
@@ -573,7 +570,7 @@
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(105, 121, 126, 1)
                 Fill: =RGBA(60, 110, 113, 1)
-                Height: =3 * Title2.Size
+                Height: =4 * Title2.Size
                 HoverFill: =RGBA(105, 121, 126, 1)
                 OnSelect: =Select(Parent)
                 PressedFill: =RGBA(105, 121, 126, 1)
@@ -643,10 +640,47 @@
                 BorderColor: =RGBA(166, 166, 166, 1)
                 Fill: =RGBA(246, 88, 16, 1)
                 Height: =6
-                OnSelect: =Select(Parent)
+                OnSelect: =
                 Visible: |-
-                    =/*Visible if calendar events are found on this day*/               
-                    Count(Filter('TG14 Task Information', DateValue(Text('Task Date')) = DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days), 'Project Category'.Value <> "Diversion", Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved").ID) > 0 && !Subcircle1.Visible && Title2.Visible
+                    =//*Visible if calendar events are found on this day*/               
+                    Count(
+                        Filter(
+                            'TG14 Task Information',
+                            'Task Date' = DateAdd(
+                                _firstDayInView,
+                                ThisItem.Value,
+                                TimeUnit.Days
+                            ),
+                            Or(
+                                'Project Category'.Value = "Admin",
+                                'Project Category'.Value = "Air Safety",
+                                'Project Category'.Value = "Air Processing",
+                                'Project Category'.Value = "Digital Manipulation",
+                                'Project Category'.Value = "Engineering",
+                                'Project Category'.Value = "Exercise",
+                                'Project Category'.Value = "Honours & Awards",
+                                'Project Category'.Value = "ID Photo",
+                                'Project Category'.Value = "Medical/Dental",
+                                'Project Category'.Value = "Official Group",
+                                'Project Category'.Value = "Operations",
+                                'Project Category'.Value = "Parade/Ceremonial",
+                                'Project Category'.Value = "Portrait",
+                                'Project Category'.Value = "PR/Media",
+                                'Project Category'.Value = "Print/Reprint",
+                                'Project Category'.Value = "QRA",
+                                'Project Category'.Value = "RAF Police",
+                                'Project Category'.Value = "Scanning",
+                                'Project Category'.Value = "Sports",
+                                'Project Category'.Value = "Trade Training",
+                                'Project Category'.Value = "Training Support",
+                                'Project Category'.Value = "Trials",
+                                'Project Category'.Value = "Visit",
+                                'Project Category'.Value = "Other (Specify)"
+                            ),
+                            Unit.Value = gblUserLocPerm,
+                            'Approval Status'.Value = "Approved"
+                        ).ID
+                    ) > 0 && !Subcircle1.Visible && Title2.Visible
                 Width: =6
                 X: =MonthDayGallery1.TemplateWidth / 2 - Self.Width / 2
                 Y: =MonthDayGallery1.TemplateHeight * (0.75)
@@ -656,10 +690,22 @@
                 BorderColor: =RGBA(166, 166, 166, 1)
                 Fill: =RGBA(0, 120, 212, 1)
                 Height: =6
-                OnSelect: =Select(Parent)
+                OnSelect: =
                 Visible: |-
                     =/*Visible if calendar events are found on this day*/               
-                    Count(Filter('TG14 Task Information', DateValue(Text('Task Date')) = DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days),'Project Category'.Value = "Diversion", Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved").ID) > 0 && !Subcircle1.Visible && Title2.Visible
+                    Count(
+                        Filter(
+                            'TG14 Task Information',
+                            'Task Date' = DateAdd(
+                                _firstDayInView,
+                                ThisItem.Value,
+                                TimeUnit.Days
+                            ),
+                            'Project Category'.Value = "Diversion",
+                            Unit.Value = gblUserLocPerm,
+                            'Approval Status'.Value = "Approved"
+                        ).ID
+                    ) > 0 && !Subcircle1.Visible && Title2.Visible
                 Width: =6
                 X: =MonthDayGallery1.TemplateWidth / 2 - Self.Width / 2
                 Y: =52
@@ -1462,139 +1508,6 @@
             Y: =81
             ZIndex: =44
 
-    "'Day - Header Bar' As group":
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =45
-
-        RectQuickActionBar1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            DisplayMode: =DisplayMode.View
-            Fill: =varHeaderFill
-            Height: =53
-            Width: =1850
-            ZIndex: =9
-
-        LblAppName1 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =44
-            PaddingLeft: =20
-            PaddingTop: =2
-            Size: =18
-            Text: ="Digital Diary & Tasks"
-            VerticalAlign: =VerticalAlign.Top
-            Width: |-
-                =Sum(AddColumns(ForAll(Split(Self.Text, ""), {Result: ThisRecord.Value}), "Size", LookUp(colCharsWidth, CharFont=Self.Font && CharWeight=Self.FontWeight && Char = Result).Size), Size) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-            Wrap: =false
-            X: =96
-            ZIndex: =10
-
-        Label9 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 0.5)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =20
-            PaddingLeft: =20
-            Size: =13
-            Text: =CurrentVer
-            VerticalAlign: =VerticalAlign.Bottom
-            X: =96
-            Y: =32
-            ZIndex: =21
-
-        Button6 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderThickness: =0
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(151, 0, 0, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =53
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(Self.Fill, -10%)
-            OnSelect: =Navigate(Home, ScreenTransition.Fade)
-            PressedBorderColor: =Color.Transparent
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(Self.Fill, -30%)
-            RadiusBottomRight: =0
-            RadiusTopRight: =0
-            Size: =15
-            Text: ="HOME"
-            Width: =164
-            X: =1686
-            ZIndex: =22
-
-        Triangle1 As triangle.rightAngled:
-            BorderColor: =RGBA(105, 121, 126, 1)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(220, 220, 220, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =varBackgroundFill
-            FocusedBorderThickness: =4
-            Height: =63
-            HoverFill: =varBackgroundFill
-            PressedFill: =varBackgroundFill
-            Width: =73
-            ZIndex: =39
-
-        Rectangle2 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =varBackgroundFill
-            FocusedBorderThickness: =4
-            Height: =53
-            HoverFill: =varBackgroundFill
-            PressedFill: =varBackgroundFill
-            Width: =5
-            X: =73
-            ZIndex: =40
-
-        Rectangle2_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =varBackgroundFill
-            FocusedBorderThickness: =4
-            Height: =53
-            HoverFill: =varBackgroundFill
-            PressedFill: =varBackgroundFill
-            Width: =5
-            X: =82
-            ZIndex: =41
-
-        Rectangle2_8 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =varBackgroundFill
-            FocusedBorderThickness: =4
-            Height: =53
-            HoverFill: =varBackgroundFill
-            PressedFill: =varBackgroundFill
-            Width: =5
-            X: =91
-            ZIndex: =42
-
     "'Day - Timers' As group":
         Height: =5
         Width: =5
@@ -1656,4 +1569,33 @@
             X: =507
             Y: =4
             ZIndex: =3
+
+    cmp_Header_12 As cmp_Header:
+        ZIndex: =46
+
+    Button6_10 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(151, 0, 0, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =53
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(Self.Fill, -10%)
+        OnSelect: =Navigate(Home, ScreenTransition.Fade)
+        PressedBorderColor: =Color.Transparent
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(Self.Fill, -30%)
+        RadiusBottomRight: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="HOME"
+        Width: =164
+        X: =1686
+        ZIndex: =47
 

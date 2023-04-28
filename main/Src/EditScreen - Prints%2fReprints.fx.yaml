@@ -396,8 +396,6 @@
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
         Size: =15
         Text: ="CLOSE"
         Width: =273

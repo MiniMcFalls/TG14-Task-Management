@@ -103,6 +103,35 @@
         Y: =64
         ZIndex: =19
 
+    cmp_Header_13 As cmp_Header:
+        ZIndex: =25
+
+    Button6_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(151, 0, 0, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =53
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(Self.Fill, -10%)
+        OnSelect: =Navigate(Home, ScreenTransition.Fade)
+        PressedBorderColor: =Color.Transparent
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(Self.Fill, -30%)
+        RadiusBottomRight: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="HOME"
+        Width: =164
+        X: =1686
+        ZIndex: =26
+
     "'Week - Pills' As group":
         Height: =5
         Width: =5
@@ -413,139 +442,6 @@
             Y: =509
             ZIndex: =17
 
-    "'Week - Header Bar' As group":
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =41
-
-        RectQuickActionBar1_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            DisplayMode: =DisplayMode.View
-            Fill: =varHeaderFill
-            Height: =53
-            Width: =1850
-            ZIndex: =25
-
-        LblAppName1_1 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =44
-            PaddingLeft: =20
-            PaddingTop: =2
-            Size: =18
-            Text: ="Digital Diary & Tasks"
-            VerticalAlign: =VerticalAlign.Top
-            Width: |-
-                =Sum(AddColumns(ForAll(Split(Self.Text, ""), {Result: ThisRecord.Value}), "Size", LookUp(colCharsWidth, CharFont=Self.Font && CharWeight=Self.FontWeight && Char = Result).Size), Size) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-            Wrap: =false
-            X: =96
-            ZIndex: =26
-
-        Label9_1 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 0.5)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =20
-            PaddingLeft: =20
-            Size: =13
-            Text: =CurrentVer
-            VerticalAlign: =VerticalAlign.Bottom
-            X: =96
-            Y: =32
-            ZIndex: =27
-
-        Button6_1 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderThickness: =0
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(151, 0, 0, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =53
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(Self.Fill, -10%)
-            OnSelect: =Navigate(Home, ScreenTransition.Fade)
-            PressedBorderColor: =Color.Transparent
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(Self.Fill, -30%)
-            RadiusBottomRight: =0
-            RadiusTopRight: =0
-            Size: =15
-            Text: ="HOME"
-            Width: =164
-            X: =1686
-            ZIndex: =28
-
-        Triangle1_1 As triangle.rightAngled:
-            BorderColor: =RGBA(105, 121, 126, 1)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(220, 220, 220, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =varBackgroundFill
-            FocusedBorderThickness: =4
-            Height: =63
-            HoverFill: =RGBA(105, 121, 126, 1)
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =73
-            ZIndex: =29
-
-        Rectangle2_9 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =varBackgroundFill
-            FocusedBorderThickness: =4
-            Height: =53
-            HoverFill: =RGBA(105, 121, 126, 1)
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =5
-            X: =73
-            ZIndex: =30
-
-        Rectangle2_10 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =varBackgroundFill
-            FocusedBorderThickness: =4
-            Height: =53
-            HoverFill: =RGBA(105, 121, 126, 1)
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =5
-            X: =82
-            ZIndex: =31
-
-        Rectangle2_11 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =varBackgroundFill
-            FocusedBorderThickness: =4
-            Height: =53
-            HoverFill: =RGBA(105, 121, 126, 1)
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =5
-            X: =91
-            ZIndex: =32
-
     "'Week - Nav List' As group":
         Height: =5
         Width: =5
@@ -601,7 +497,6 @@
             RadiusBottomLeft: =
             RadiusBottomRight: =
             RadiusTopLeft: =10 
-            RadiusTopRight: =0
             Size: =15
             Text: ="Add Task"
             Width: =315
@@ -654,8 +549,6 @@
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
             RadiusTopLeft: =
             RadiusTopRight: =
             Size: =15

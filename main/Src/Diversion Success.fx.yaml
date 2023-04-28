@@ -1,4 +1,5 @@
 "'Diversion Success' As screen.'tabletLayout_Success_ver3.0'":
+    Fill: =varBackgroundFill
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: =
 
@@ -110,45 +111,6 @@
         Y: =14
         ZIndex: =8
 
-    Triangle1_12 As triangle.rightAngled:
-        BorderColor: =RGBA(105, 121, 126, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(220, 220, 220, 1)
-        DisplayMode: =DisplayMode.View
-        Fill: =RGBA(198, 12, 48, 1)
-        FocusedBorderThickness: =4
-        Height: =95
-        PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =101
-        Y: =835
-        ZIndex: =9
-
-    Triangle1_13 As triangle.rightAngled:
-        BorderColor: =RGBA(105, 121, 126, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(220, 220, 220, 1)
-        DisplayMode: =DisplayMode.View
-        Fill: =RGBA(0, 47, 95, 1)
-        FocusedBorderThickness: =4
-        Height: =82
-        PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =87
-        Y: =848
-        ZIndex: =10
-
-    Label9_6 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =13
-        Text: =CurrentVer
-        Y: =890
-        ZIndex: =11
+    cmp_Header_18 As cmp_Header:
+        ZIndex: =12
 

@@ -4,11 +4,363 @@
 
     cmp_Header_11 As cmp_Header:
 
+    Gallery4 As gallery.variableTemplateHeightGallery:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =336
+        Items: |-
+            =/*Shows events only on selected date*/
+            SortByColumns(Filter('TG14 Task Information', 'Task Date' = _dateSelected, Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved"), "StartTime")
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =4
+        TemplateSize: =170
+        Width: =1850
+        Y: =594
+        ZIndex: =1
+
+        Button3_9 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(242, 242, 242, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.TemplateHeight
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: =""
+            Width: =Parent.TemplateWidth
+            ZIndex: =1
+
+        Rectangle1_6 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =0
+            Height: =Parent.TemplateHeight
+            HoverFill: =RGBA(0,0,0,0)
+            OnSelect: =Select(Title3_3)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            TabIndex: =0
+            Width: =Parent.TemplateWidth
+            ZIndex: =2
+
+        iconLocation1_3 As icon.Waypoint:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(79, 109, 122, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            Height: =Subtitle1_10.Height -5
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Waypoint
+            OnSelect: =Select(Title3_3)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
+            Width: =Subtitle1_10.Height -5
+            X: =82
+            Y: =80
+            ZIndex: =3
+
+        Title3_3 As label:
+            BorderColor: =Self.Color
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =If(ThisItem.'Project Category'.Value = "Diversion", Color.DarkOrange,RGBA(0, 0, 0, 1))
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Set(_selectedCalendarEvent, ThisItem)
+            Size: =19 * CalendarEventsGallery1_2.TemplateHeight / 105
+            TabIndex: =0
+            Text: |-
+                =If(
+                    ThisItem.'Project Category'.Value = "Diversion",
+                    Text("DIVERSION") & Text(" - ") & ThisItem.'Photog #1' & Text(" - ") & ThisItem.'Task Location',
+                    Text("Task: ") & Text(Value(ThisItem.Title), "0000", "en-GB") & Text(" - ") & ThisItem.Rank & Text(" ") & ThisItem.'Customer Name' & Text(" - ") & Text("Tel: ") & ThisItem.'Customer Contact Number'
+                )
+            Tooltip: =ThisItem.Title & Text("- ") & ThisItem.Rank & Text(" ") & ThisItem.'Customer Name'
+            Width: =700
+            Wrap: =false
+            X: =76
+            Y: =46
+            ZIndex: =4
+
+        Subtitle1_10 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =27
+            OnSelect: =Select(Title3_3)
+            PaddingBottom: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =19 * CalendarEventsGallery1_2.TemplateHeight / 105
+            Text: =ThisItem.'Task Location'
+            Tooltip: =ThisItem.'Task Location'
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            Wrap: =false
+            X: =iconLocation1_3.X + iconLocation1_3.Width + 5
+            Y: =78
+            ZIndex: =5
+
+        Body1_7 As label:
+            Align: =Align.Center
+            Color: =RGBA(221, 110, 66, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Title3_3.Height
+            OnSelect: =Select(Title3_3)
+            Size: =17 * CalendarEventsGallery1_2.TemplateHeight / 105
+            Text: =Text(ThisItem.'Start Time', DateTimeFormat.ShortTime)
+            Width: =67
+            Wrap: =false
+            Y: =64
+            ZIndex: =6
+
+        Separator1_8 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            Height: =1
+            OnSelect: =
+            Width: =Parent.TemplateWidth
+            Y: =114
+            ZIndex: =7
+
+        Subtitle1_11 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =24
+            OnSelect: =Select(Title3_3)
+            PaddingBottom: =0
+            PaddingTop: =0
+            Size: =19 * CalendarEventsGallery1_2.TemplateHeight / 105
+            Text: =ThisItem.'Project Category'.Value
+            Tooltip: =ThisItem.'Task Location'
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            Wrap: =false
+            X: =Icon2_2.X + Icon2_2.Width + 5
+            Y: =81
+            ZIndex: =8
+
+        Icon2_2 As icon.Tag:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(79, 109, 122, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Height: =Subtitle1_10.Height -5
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Tag
+            OnSelect: =
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =Subtitle1_10.Height -5
+            X: =Subtitle1_10.X + Subtitle1_10.Width + 20
+            Y: =80
+            ZIndex: =9
+
+        Rectangle7_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderThickness: =4
+            Height: =1
+            HoverFill: =RGBA(105, 121, 126, 1)
+            OnSelect: =
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Width: =700
+            X: =82
+            Y: =77
+            ZIndex: =10
+
+        Separator1_9 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =40
+            ZIndex: =11
+
+        Subtitle1_12 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =27
+            OnSelect: =
+            PaddingBottom: =0
+            PaddingTop: =0
+            Size: =19 * CalendarEventsGallery1_2.TemplateHeight / 105
+            Text: |-
+                =If(IsBlank(ThisItem.'Photog #1'), "Not Assigned", ThisItem.'Photog #1')
+            Tooltip: =Text(ThisItem.'Task Date', "mmmm")
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            Wrap: =false
+            X: =Icon2_10.X + Icon2_10.Width + 5
+            Y: =78
+            ZIndex: =12
+
+        Icon2_10 As icon.Tag:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(79, 109, 122, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Height: =Subtitle1_10.Height -5
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Person
+            OnSelect: =
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =Subtitle1_10.Height -5
+            X: =Subtitle1_11.X + Subtitle1_11.Width + 20
+            Y: =80
+            ZIndex: =13
+
+        Rectangle24_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderThickness: =4
+            Height: =75
+            HoverFill: =RGBA(105, 121, 126, 1)
+            OnSelect: =Select(Parent)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Width: =1
+            X: =782
+            Y: =40
+            ZIndex: =14
+
+        Label33_1 As label:
+            AutoHeight: =true
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =75
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Task Requirements'
+            Width: =1068
+            X: =774
+            Y: =40
+            ZIndex: =15
+
     CalendarEventsGallery1_2 As gallery.CalendarEventsGallery:
         AccessibleLabel: ="Calendar events for selected day"
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =878
+        Height: =599
         Items: |-
             =/*Shows events only on selected date*/
             SortByColumns(Filter('TG14 Task Information', 'Task Date' = _dateSelected, Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved"), "StartTime")
@@ -234,7 +586,7 @@
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =Subtitle1_7.Height -5
-            X: =245
+            X: =Subtitle1_7.X + Subtitle1_7.Width + 20
             Y: =40
             ZIndex: =12
 
@@ -295,7 +647,7 @@
                     Size
                 ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
             Wrap: =false
-            X: =419
+            X: =Icon2_9.X + Icon2_9.Width + 5
             Y: =38
             ZIndex: =17
 
@@ -317,7 +669,7 @@
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =Subtitle1_7.Height -5
-            X: =392
+            X: =Subtitle1_8.X + Subtitle1_8.Width + 20
             Y: =40
             ZIndex: =18
 
@@ -337,6 +689,7 @@
             ZIndex: =19
 
         Label33 As label:
+            AutoHeight: =true
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2

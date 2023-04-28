@@ -1029,7 +1029,6 @@
         RadiusBottomLeft: =
         RadiusBottomRight: =
         RadiusTopLeft: =10 
-        RadiusTopRight: =0
         Size: =15
         Text: ="Add Task"
         Width: =315
@@ -1054,8 +1053,6 @@
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
         RadiusTopLeft: =
         RadiusTopRight: =
         Size: =15

@@ -1,5 +1,5 @@
 "'Diversion - Add' As screen":
-    Fill: =Color.LightGray
+    Fill: =varBackgroundFill
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |
         =// Versioning Check
@@ -17,6 +17,8 @@
             'Wrong Version'
         );
         NewForm('DivForm (EDIT)');
+
+    cmp_Header_16 As cmp_Header:
 
     Label3 As label:
         Align: =Align.Center
@@ -2172,11 +2174,11 @@
         Text: =
         Visible: =varShowTimePicker
         Width: =1850
-        ZIndex: =11
+        ZIndex: =8
 
     cmp_TimePicker_2 As cmp_TimePicker:
         Visible: =varShowTimePicker
         X: =920
         Y: =275
-        ZIndex: =12
+        ZIndex: =9
 

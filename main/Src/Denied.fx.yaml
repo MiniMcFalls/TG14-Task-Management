@@ -1,4 +1,5 @@
 "Denied As screen.'tabletLayout_Success_ver3.0'":
+    Fill: =varBackgroundFill
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
 
     iconCircle3_3 As circle.Circle:
@@ -13,7 +14,7 @@
         Width: =157
         X: =846
         Y: =262
-        ZIndex: =1
+        ZIndex: =2
 
     iconCircle3_2 As circle.Circle:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -27,7 +28,7 @@
         Width: =143
         X: =853
         Y: =269
-        ZIndex: =2
+        ZIndex: =3
 
     iconCircle3_1 As circle.Circle:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -41,7 +42,7 @@
         Width: =119
         X: =865
         Y: =281
-        ZIndex: =3
+        ZIndex: =4
 
     iconCircle3 As circle.Circle:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -53,7 +54,7 @@
         PressedFill: =RGBA(105, 121, 126, 1)
         X: =Parent.Width/2 - Self.Width/2
         Y: =(Parent.Height/2 - Self.Height/2) * .7
-        ZIndex: =4
+        ZIndex: =5
 
     iconCheck3 As icon.Check:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -70,7 +71,7 @@
         Width: =iconCircle3.Width
         X: =Parent.Width/2 - Self.Width/2
         Y: =(Parent.Height/2 - Self.Height/2) * .7
-        ZIndex: =5
+        ZIndex: =6
 
     LblSuccessMsg3 As label:
         Align: =Align.Center
@@ -81,13 +82,13 @@
         Height: =iconCircle3.Height
         Size: =20
         Text: |-
-            ="You do not have the required permissions to access this application. You are required to be a member of RAF Lossiemouth Photographic Section before access is granted.
+            ="You do not have the required permissions to access this application. You are required to be a member of TG14 Photographic Personnel before access is granted.
             
             If you believe this to be a mistake then please contact your relevant C4I representative about your permissions."
         Width: =Parent.Width * 0.75
         X: =Parent.Width/2 - Self.Width/2
         Y: =iconCheck3.Y + iconCheck3.Height + 100
-        ZIndex: =6
+        ZIndex: =7
 
     Label12 As label:
         BorderColor: =RGBA(168, 0, 0, 1)
@@ -100,6 +101,7 @@
         Height: =930
         Size: =13
         Text: =""
+        VerticalAlign: =VerticalAlign.Bottom
         Width: =1850
-        ZIndex: =7
+        ZIndex: =8
 

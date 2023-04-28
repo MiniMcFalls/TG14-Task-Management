@@ -1,4 +1,5 @@
 "'Wrong Version' As screen.'tabletLayout_Success_ver3.0'":
+    Fill: =varBackgroundFill
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
 
     iconCircle3_5 As circle.Circle:
