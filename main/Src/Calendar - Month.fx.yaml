@@ -8,8 +8,7 @@
                 Filter(
                     'TG14 Task Information',
                     'Approval Status'.Value = "Awaiting Approval",
-                    Unit.Value = gblUserLocPerm,
-                    !IsBlank(Title)
+                    Unit.Value = gblUserLocPerm
                 ).ID
             )
         );
@@ -80,6 +79,37 @@
             )
         );
 
+    Timer7 As timer:
+        AutoStart: =true
+        BorderColor: =RGBA(105, 121, 126, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(105, 121, 126, 1)
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        OnTimerEnd: |-
+            =Set(
+                varApprovalNumber,
+                Count(
+                    Filter(
+                        'TG14 Task Information',
+                        'Approval Status'.Value = "Awaiting Approval",
+                        Unit.Value = gblUserLocPerm
+                    ).ID
+                )
+            );
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Repeat: =true
+        X: =1477
+        Y: =11
+        ZIndex: =1
+
     Button20_2 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderThickness: =0
@@ -107,7 +137,7 @@
         Width: =1478
         X: =363
         Y: =64
-        ZIndex: =1
+        ZIndex: =2
 
     Button23 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -134,7 +164,7 @@
         Width: =1442
         X: =383
         Y: =84
-        ZIndex: =2
+        ZIndex: =3
 
     Timer2_3 As timer:
         AutoStart: =true
@@ -157,7 +187,7 @@
         Repeat: =true
         X: =846
         Y: =6
-        ZIndex: =3
+        ZIndex: =4
 
     Icon4_3 As icon.NextArrow:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -182,7 +212,7 @@
         Width: =50
         X: =1756
         Y: =87
-        ZIndex: =4
+        ZIndex: =5
 
     Icon5_1 As icon.BackArrow:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -207,7 +237,7 @@
         Width: =50
         X: =398
         Y: =87
-        ZIndex: =5
+        ZIndex: =6
 
     Gallery7_1 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -220,7 +250,7 @@
         WrapCount: =7
         X: =383
         Y: =140
-        ZIndex: =6
+        ZIndex: =7
 
         Label22_1 As label:
             Align: =Align.Center
@@ -252,7 +282,7 @@
         WrapCount: =7
         X: =383
         Y: =172
-        ZIndex: =7
+        ZIndex: =8
 
         Rectangle15 As rectangle:
             BorderColor: =RGBA(128, 128, 128, 1)
@@ -452,7 +482,7 @@
         Width: =338
         X: =14
         Y: =64
-        ZIndex: =18
+        ZIndex: =10
 
     Image8_2 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -470,7 +500,7 @@
         Width: =338
         X: =14
         Y: =64
-        ZIndex: =19
+        ZIndex: =11
 
     Button18_9 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -495,7 +525,7 @@
         Width: =338
         X: =14
         Y: =497
-        ZIndex: =20
+        ZIndex: =12
 
     Button18_10 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -520,7 +550,7 @@
         Width: =338
         X: =14
         Y: =286
-        ZIndex: =26
+        ZIndex: =18
 
     Button5_7 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -548,7 +578,7 @@
         Width: =315
         X: =26
         Y: =Button5_8.Y + Self.Height + 3
-        ZIndex: =27
+        ZIndex: =19
 
     Button5_8 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -575,7 +605,7 @@
         Width: =315
         X: =26
         Y: =300
-        ZIndex: =28
+        ZIndex: =20
 
     Button5_10 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -603,7 +633,7 @@
         Width: =315
         X: =26
         Y: =Button5_7.Y + Self.Height + 3
-        ZIndex: =29
+        ZIndex: =21
 
     Button5_15 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -629,7 +659,7 @@
         Width: =315
         X: =26
         Y: =Button5_10.Y + Self.Height + 3
-        ZIndex: =30
+        ZIndex: =22
 
     Button10_10 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -661,7 +691,7 @@
         Width: =45
         X: =Button5_15.X + Button5_15.Width -Self.Width
         Y: =Button5_15.Y
-        ZIndex: =31
+        ZIndex: =23
 
     Button18_11 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -686,10 +716,10 @@
         Width: =338
         X: =14
         Y: =572
-        ZIndex: =32
+        ZIndex: =24
 
     cmp_Header_15 As cmp_Header:
-        ZIndex: =33
+        ZIndex: =25
 
     Button6_3 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -715,7 +745,7 @@
         Text: ="HOME"
         Width: =164
         X: =1686
-        ZIndex: =34
+        ZIndex: =26
 
     Group2_1 As group:
         Height: =5
@@ -748,7 +778,7 @@
             Width: =88
             X: =229
             Y: =509
-            ZIndex: =21
+            ZIndex: =13
 
         Button12_7 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -776,7 +806,7 @@
             Width: =88
             X: =139
             Y: =509
-            ZIndex: =22
+            ZIndex: =14
 
         Button12_8 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -802,7 +832,7 @@
             Width: =88
             X: =49
             Y: =509
-            ZIndex: =23
+            ZIndex: =15
 
         Rectangle11_8 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -814,7 +844,7 @@
             Width: =2
             X: =137
             Y: =509
-            ZIndex: =24
+            ZIndex: =16
 
         Rectangle11_7 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -826,5 +856,5 @@
             Width: =2
             X: =227
             Y: =509
-            ZIndex: =25
+            ZIndex: =17
 

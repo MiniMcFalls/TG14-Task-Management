@@ -269,13 +269,19 @@
         Height: =698
         Items: |-
             =SortByColumns(
-            Filter(
-                'TG14 Task Information',
-                Month1_2.SelectedText.Value = Blank() Or Text('Date Submitted', "mmmm") = Month1_2.SelectedText.Value,
-                Status1_2.SelectedText.Value = Blank() Or 'Approval Status'.Value = Status1_2.SelectedText.Value,
-                !IsBlank(Title),
-                Unit.Value = gblUserLocPerm
-            ),"Title",SortOrder.Descending)
+                Filter(
+                    'TG14 Task Information',
+                    Month1_2.SelectedText.Value = Blank() Or Text(
+                        'Date Submitted',
+                        "mmmm"
+                    ) = Month1_2.SelectedText.Value,
+                    Status1_2.SelectedText.Value = Blank() Or 'Approval Status'.Value = Status1_2.SelectedText.Value,
+                    Unit.Value = gblUserLocPerm,
+                    !IsBlank(Title)
+                ),
+                "Title",
+                SortOrder.Descending
+            )
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =185

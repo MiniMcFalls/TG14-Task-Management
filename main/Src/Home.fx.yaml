@@ -22,8 +22,7 @@
                 Filter(
                     'TG14 Task Information',
                     'Approval Status'.Value = "Awaiting Approval",
-                    Unit.Value = gblUserLocPerm,
-                    !IsBlank(Title)
+                    Unit.Value = gblUserLocPerm
                 ).ID
             )
         );
@@ -35,6 +34,37 @@
             )
         );
         Refresh('1177 Task Register 2022');
+
+    Timer2 As timer:
+        AutoStart: =true
+        BorderColor: =RGBA(105, 121, 126, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(105, 121, 126, 1)
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        OnTimerEnd: |-
+            =Set(
+                varApprovalNumber,
+                Count(
+                    Filter(
+                        'TG14 Task Information',
+                        'Approval Status'.Value = "Awaiting Approval",
+                        Unit.Value = gblUserLocPerm
+                    ).ID
+                )
+            );
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Repeat: =true
+        X: =1501
+        Y: =11
+        ZIndex: =1
 
     HtmlText1_1 As htmlViewer:
         AutoHeight: =true
@@ -1018,7 +1048,7 @@
         Width: =160
         X: =1634
         Y: =108
-        ZIndex: =44
+        ZIndex: =43
 
     Group3 As group:
         Height: =5

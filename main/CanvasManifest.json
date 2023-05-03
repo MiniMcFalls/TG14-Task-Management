@@ -94,6 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -111,7 +112,8 @@
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
     "Name": "TG14 Task Management",
-    "OriginatingVersion": "1.321"
+    "OriginatingVersion": "1.321",
+    "ParserErrorCount": 0
   },
   "PublishInfo": {
     "AppName": "TG14 Task Management",

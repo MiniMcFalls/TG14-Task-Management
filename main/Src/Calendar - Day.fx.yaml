@@ -8,8 +8,7 @@
                 Filter(
                     'TG14 Task Information',
                     'Approval Status'.Value = "Awaiting Approval",
-                    Unit.Value = gblUserLocPerm,
-                    !IsBlank(Title)
+                    Unit.Value = gblUserLocPerm
                 ).ID
             )
         );
@@ -27,6 +26,37 @@
             CurrentVer <> LatestVer.'Vers Num',
             'Wrong Version'
         );
+
+    Timer5 As timer:
+        AutoStart: =true
+        BorderColor: =RGBA(105, 121, 126, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(105, 121, 126, 1)
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        OnTimerEnd: |-
+            =Set(
+                varApprovalNumber,
+                Count(
+                    Filter(
+                        'TG14 Task Information',
+                        'Approval Status'.Value = "Awaiting Approval",
+                        Unit.Value = gblUserLocPerm
+                    ).ID
+                )
+            );
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Repeat: =true
+        X: =1480
+        Y: =5
+        ZIndex: =1
 
     Placeholder_2 As group:
         Height: =5
@@ -54,7 +84,7 @@
             Width: =1025
             X: =816
             Y: =484
-            ZIndex: =23
+            ZIndex: =19
 
         Icon1_6 As icon.CameraApertureFocus:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -76,7 +106,7 @@
             Width: =104
             X: =1276
             Y: =405
-            ZIndex: =24
+            ZIndex: =20
 
         Rectangle2_5 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -89,7 +119,7 @@
             Width: =768
             X: =947
             Y: =510
-            ZIndex: =25
+            ZIndex: =21
 
         Rectangle2_4 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -102,7 +132,7 @@
             Width: =768
             X: =947
             Y: =615
-            ZIndex: =26
+            ZIndex: =22
 
     "'Day - RAF Logo' As image":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -120,7 +150,7 @@
         Width: =338
         X: =14
         Y: =64
-        ZIndex: =38
+        ZIndex: =34
 
     "'Print Button' As button":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -147,7 +177,36 @@
         Visible: =false
         X: =1341
         Y: =79
-        ZIndex: =45
+        ZIndex: =37
+
+    cmp_Header_12 As cmp_Header:
+        ZIndex: =38
+
+    Button6_10 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(151, 0, 0, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =53
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(Self.Fill, -10%)
+        OnSelect: =Navigate(Home, ScreenTransition.Fade)
+        PressedBorderColor: =Color.Transparent
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(Self.Fill, -30%)
+        RadiusBottomRight: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="HOME"
+        Width: =164
+        X: =1686
+        ZIndex: =39
 
     "'Day - Pills' As group":
         Height: =5
@@ -318,7 +377,7 @@
             Width: =315
             X: =26
             Y: =366
-            ZIndex: =33
+            ZIndex: =29
 
         Button5_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -345,7 +404,7 @@
             Width: =315
             X: =26
             Y: =323
-            ZIndex: =34
+            ZIndex: =30
 
         Button5_6 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -373,7 +432,7 @@
             Width: =315
             X: =26
             Y: =409
-            ZIndex: =35
+            ZIndex: =31
 
         Button5_13 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -399,7 +458,7 @@
             Width: =315
             X: =26
             Y: =452
-            ZIndex: =36
+            ZIndex: =32
 
         Button10_4 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -431,7 +490,7 @@
             Width: =45
             X: =296
             Y: =452
-            ZIndex: =37
+            ZIndex: =33
 
     "'Day - Date Picker' As group":
         Height: =5
@@ -453,7 +512,7 @@
             Wrap: =false
             X: =374
             Y: =75
-            ZIndex: =12
+            ZIndex: =10
 
         iconPrevMonth1 As icon.ChevronLeft:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -486,7 +545,7 @@
             Width: =59
             X: =373
             Y: =75
-            ZIndex: =13
+            ZIndex: =11
 
         iconNextMonth1 As icon.ChevronRight:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -519,7 +578,7 @@
             Width: =59
             X: =733
             Y: =75
-            ZIndex: =14
+            ZIndex: =12
 
         WeekdayGallery1 As gallery.WeekdayGallery:
             AccessibleLabel: ="Days of the week"
@@ -533,7 +592,7 @@
             Width: =420
             X: =374
             Y: =114
-            ZIndex: =15
+            ZIndex: =13
 
             Title1 As label:
                 Align: =Align.Center
@@ -564,7 +623,7 @@
             WrapCount: =7
             X: =374
             Y: =158
-            ZIndex: =16
+            ZIndex: =14
 
             Subcircle1 As circle:
                 BorderColor: =RGBA(166, 166, 166, 1)
@@ -723,7 +782,7 @@
             Width: =420
             X: =374
             Y: =114
-            ZIndex: =32
+            ZIndex: =28
 
     "'Day - Task List' As group":
         Height: =5
@@ -758,7 +817,7 @@
             Width: =40
             X: =1516
             Y: =86
-            ZIndex: =11
+            ZIndex: =9
 
         "'Day - Task List Border' As button":
             BorderColor: =RGBA(79, 109, 122, 1)
@@ -788,7 +847,7 @@
             Width: =1003
             X: =827
             Y: =124
-            ZIndex: =17
+            ZIndex: =15
 
         CalendarEventsGallery1 As gallery.CalendarEventsGallery:
             AccessibleLabel: ="Calendar events for selected day"
@@ -806,7 +865,7 @@
             Width: =1004
             X: =827
             Y: =124
-            ZIndex: =18
+            ZIndex: =16
 
             Button3 As button:
                 BorderColor: =RGBA(0, 0, 0, 0)
@@ -1322,7 +1381,7 @@
             Width: =1005
             X: =826
             Y: =75
-            ZIndex: =19
+            ZIndex: =17
 
         LblDateSelected1 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -1341,7 +1400,7 @@
             Wrap: =false
             X: =827
             Y: =75
-            ZIndex: =20
+            ZIndex: =18
 
         Button12 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1374,7 +1433,7 @@
             Width: =88
             X: =1743
             Y: =75
-            ZIndex: =27
+            ZIndex: =23
 
         Button12_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1408,7 +1467,7 @@
             Width: =88
             X: =1655
             Y: =75
-            ZIndex: =28
+            ZIndex: =24
 
         Button12_2 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1441,7 +1500,7 @@
             Width: =88
             X: =1567
             Y: =75
-            ZIndex: =29
+            ZIndex: =25
 
         Rectangle11_3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1453,7 +1512,7 @@
             Width: =2
             X: =1655
             Y: =75
-            ZIndex: =30
+            ZIndex: =26
 
         Rectangle11_4 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1465,7 +1524,7 @@
             Width: =2
             X: =1741
             Y: =75
-            ZIndex: =31
+            ZIndex: =27
 
         LblResetToday1 As label:
             Align: =Align.Center
@@ -1480,7 +1539,7 @@
             Width: =39
             X: =1516
             Y: =88
-            ZIndex: =43
+            ZIndex: =35
 
         Icon10 As icon.CalendarBlank:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -1506,7 +1565,7 @@
             Width: =40
             X: =1516
             Y: =81
-            ZIndex: =44
+            ZIndex: =36
 
     "'Day - Timers' As group":
         Height: =5
@@ -1535,7 +1594,7 @@
             Repeat: =true
             X: =846
             Y: =6
-            ZIndex: =1
+            ZIndex: =2
 
         "'Calendar Day  - Approval Refresh Timer' As timer":
             AutoStart: =true
@@ -1569,33 +1628,4 @@
             X: =507
             Y: =4
             ZIndex: =3
-
-    cmp_Header_12 As cmp_Header:
-        ZIndex: =46
-
-    Button6_10 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(151, 0, 0, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =53
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(Self.Fill, -10%)
-        OnSelect: =Navigate(Home, ScreenTransition.Fade)
-        PressedBorderColor: =Color.Transparent
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(Self.Fill, -30%)
-        RadiusBottomRight: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="HOME"
-        Width: =164
-        X: =1686
-        ZIndex: =47
 
