@@ -107,7 +107,7 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "4898e49c-859c-42ce-8cc6-38398c961004",
-    "Id": "e51eb0aa-a0c5-4b24-b740-913e12244f44",
+    "Id": "856296a4-3105-4e36-a816-9bb4f196b1d9",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
@@ -151,6 +151,7 @@
     "Denied",
     "Wrong Version",
     "Maintenence Screen",
-    "Print View"
+    "Print Info",
+    "Print Screen"
   ]
 }

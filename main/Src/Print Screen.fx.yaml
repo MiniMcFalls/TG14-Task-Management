@@ -1,0 +1,11 @@
+"'Print Screen' As screen":
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+    OnVisible: |-
+        =Set(locPDFView, PDF('Print Info', {DPI: 72, Margin: "25mm", Orientation: "Landscape", ExpandContainers: true}))
+
+    PdfViewer2 As pdfViewer:
+        Document: =locPDFView
+        Height: =930
+        Width: =1850
+        ZIndex: =1
+

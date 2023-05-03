@@ -22554,6 +22554,78 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 11
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 11
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 11
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 11
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 11
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 11
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -23118,46 +23190,6 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Approvals Dashboard'.'Approvals Gallery'.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Approvals Dashboard'.'Approvals Gallery'.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 95,
-                  "snippet": {
-                    "text": "!"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Approvals Dashboard",
-                "type": "'Approvals Dashboard'.'Approvals Gallery'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Not"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 0
         },
         {
           "locations": [
@@ -53244,19 +53276,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.TabIndex"
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.TabIndex",
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Print View",
-                "type": "'Print View'.CalendarEventsGallery1_2"
+                "module": "Print Info",
+                "type": "'Print Info'.CalendarEventsGallery1_2"
               }
             }
           ],
@@ -53274,19 +53306,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Rectangle1_2.AccessibleLabel"
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Rectangle1_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Rectangle1_2.AccessibleLabel",
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Rectangle1_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Print View",
-                "type": "'Print View'.CalendarEventsGallery1_2.Rectangle1_2"
+                "module": "Print Info",
+                "type": "'Print Info'.CalendarEventsGallery1_2.Rectangle1_2"
               }
             }
           ],
@@ -53304,19 +53336,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Rectangle1_2.FocusedBorderThickness"
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Rectangle1_2.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Rectangle1_2.FocusedBorderThickness",
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Rectangle1_2.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Print View",
-                "type": "'Print View'.CalendarEventsGallery1_2.Rectangle1_2"
+                "module": "Print Info",
+                "type": "'Print Info'.CalendarEventsGallery1_2.Rectangle1_2"
               }
             }
           ],
@@ -53334,19 +53366,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Title3_2.FocusedBorderThickness"
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Title3_2.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Title3_2.FocusedBorderThickness",
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Title3_2.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Print View",
-                "type": "'Print View'.CalendarEventsGallery1_2.Title3_2"
+                "module": "Print Info",
+                "type": "'Print Info'.CalendarEventsGallery1_2.Title3_2"
               }
             }
           ],
@@ -53364,19 +53396,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Body1_6.TabIndex"
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Body1_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Body1_6.TabIndex",
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Body1_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Print View",
-                "type": "'Print View'.CalendarEventsGallery1_2.Body1_6"
+                "module": "Print Info",
+                "type": "'Print Info'.CalendarEventsGallery1_2.Body1_6"
               }
             }
           ],
@@ -53394,19 +53426,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Subtitle1_7.TabIndex"
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Subtitle1_7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Subtitle1_7.TabIndex",
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Subtitle1_7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Print View",
-                "type": "'Print View'.CalendarEventsGallery1_2.Subtitle1_7"
+                "module": "Print Info",
+                "type": "'Print Info'.CalendarEventsGallery1_2.Subtitle1_7"
               }
             }
           ],
@@ -53424,19 +53456,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.iconLocation1_2.AccessibleLabel"
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.iconLocation1_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.iconLocation1_2.AccessibleLabel",
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.iconLocation1_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Print View",
-                "type": "'Print View'.CalendarEventsGallery1_2.iconLocation1_2"
+                "module": "Print Info",
+                "type": "'Print Info'.CalendarEventsGallery1_2.iconLocation1_2"
               }
             }
           ],
@@ -53454,19 +53486,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Subtitle1_8.TabIndex"
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Subtitle1_8.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.CalendarEventsGallery1_2.Subtitle1_8.TabIndex",
+                  "fullyQualifiedName": "'Print Info'.CalendarEventsGallery1_2.Subtitle1_8.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Print View",
-                "type": "'Print View'.CalendarEventsGallery1_2.Subtitle1_8"
+                "module": "Print Info",
+                "type": "'Print Info'.CalendarEventsGallery1_2.Subtitle1_8"
               }
             }
           ],
@@ -53484,19 +53516,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.Gallery4.AccessibleLabel"
+                  "fullyQualifiedName": "'Print Info'.Gallery4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.Gallery4.AccessibleLabel",
+                  "fullyQualifiedName": "'Print Info'.Gallery4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Print View",
-                "type": "'Print View'.Gallery4"
+                "module": "Print Info",
+                "type": "'Print Info'.Gallery4"
               }
             }
           ],
@@ -53514,19 +53546,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.Gallery4.TabIndex"
+                  "fullyQualifiedName": "'Print Info'.Gallery4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.Gallery4.TabIndex",
+                  "fullyQualifiedName": "'Print Info'.Gallery4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Print View",
-                "type": "'Print View'.Gallery4"
+                "module": "Print Info",
+                "type": "'Print Info'.Gallery4"
               }
             }
           ],
@@ -53544,19 +53576,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Rectangle1_6.AccessibleLabel"
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Rectangle1_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Rectangle1_6.AccessibleLabel",
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Rectangle1_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Print View",
-                "type": "'Print View'.Gallery4.Rectangle1_6"
+                "module": "Print Info",
+                "type": "'Print Info'.Gallery4.Rectangle1_6"
               }
             }
           ],
@@ -53574,19 +53606,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Rectangle1_6.FocusedBorderThickness"
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Rectangle1_6.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Rectangle1_6.FocusedBorderThickness",
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Rectangle1_6.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Print View",
-                "type": "'Print View'.Gallery4.Rectangle1_6"
+                "module": "Print Info",
+                "type": "'Print Info'.Gallery4.Rectangle1_6"
               }
             }
           ],
@@ -53604,19 +53636,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Title3_3.FocusedBorderThickness"
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Title3_3.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Title3_3.FocusedBorderThickness",
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Title3_3.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Print View",
-                "type": "'Print View'.Gallery4.Title3_3"
+                "module": "Print Info",
+                "type": "'Print Info'.Gallery4.Title3_3"
               }
             }
           ],
@@ -53634,19 +53666,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Body1_7.TabIndex"
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Body1_7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Body1_7.TabIndex",
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Body1_7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Print View",
-                "type": "'Print View'.Gallery4.Body1_7"
+                "module": "Print Info",
+                "type": "'Print Info'.Gallery4.Body1_7"
               }
             }
           ],
@@ -53664,19 +53696,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Subtitle1_10.TabIndex"
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Subtitle1_10.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Subtitle1_10.TabIndex",
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Subtitle1_10.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Print View",
-                "type": "'Print View'.Gallery4.Subtitle1_10"
+                "module": "Print Info",
+                "type": "'Print Info'.Gallery4.Subtitle1_10"
               }
             }
           ],
@@ -53694,19 +53726,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.Gallery4.iconLocation1_3.AccessibleLabel"
+                  "fullyQualifiedName": "'Print Info'.Gallery4.iconLocation1_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.Gallery4.iconLocation1_3.AccessibleLabel",
+                  "fullyQualifiedName": "'Print Info'.Gallery4.iconLocation1_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Print View",
-                "type": "'Print View'.Gallery4.iconLocation1_3"
+                "module": "Print Info",
+                "type": "'Print Info'.Gallery4.iconLocation1_3"
               }
             }
           ],
@@ -53724,19 +53756,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Subtitle1_11.TabIndex"
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Subtitle1_11.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Print View'.Gallery4.Subtitle1_11.TabIndex",
+                  "fullyQualifiedName": "'Print Info'.Gallery4.Subtitle1_11.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Print View",
-                "type": "'Print View'.Gallery4.Subtitle1_11"
+                "module": "Print Info",
+                "type": "'Print Info'.Gallery4.Subtitle1_11"
               }
             }
           ],

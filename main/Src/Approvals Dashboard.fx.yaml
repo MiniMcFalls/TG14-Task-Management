@@ -182,7 +182,6 @@
             =Filter(
                 'TG14 Task Information',
                 'Approval Status'.Value = "Awaiting Approval",
-                !IsBlank(Title),
                 Unit.Value = gblUserLocPerm
             )
         Layout: =Layout.Vertical

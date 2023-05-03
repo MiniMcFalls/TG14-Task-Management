@@ -157,26 +157,24 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(105, 121, 126, 1)
+        Fill: =varButtonFill
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        OnSelect: =Navigate('Print View', ScreenTransition.Fade)
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+        HoverFill: =varButtonHover
+        OnSelect: =Navigate('Print Screen', ScreenTransition.Fade);
+        PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
+        PressedFill: =varButtonPressedFill
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =15
-        Text: ="Print View"
+        Text: ="Print Info"
         Visible: =false
-        X: =1341
-        Y: =79
+        X: =1149
+        Y: =76
         ZIndex: =37
 
     cmp_Header_12 As cmp_Header:
@@ -1538,7 +1536,7 @@
             Text: =DateDiff(Date(Year(Today()), Month(Today()), 1), Today(), TimeUnit.Days) + 1
             Width: =39
             X: =1516
-            Y: =88
+            Y: =86
             ZIndex: =35
 
         Icon10 As icon.CalendarBlank:
@@ -1564,7 +1562,7 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =40
             X: =1516
-            Y: =81
+            Y: =79
             ZIndex: =36
 
     "'Day - Timers' As group":

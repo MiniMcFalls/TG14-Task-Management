@@ -1,6 +1,6 @@
-"'Print View' As screen":
+"'Print Info' As screen":
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: =Print()
+    OnVisible: =
 
     cmp_Header_11 As cmp_Header:
 
@@ -15,6 +15,7 @@
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =4
         TemplateSize: =170
+        Visible: =false
         Width: =1850
         Y: =594
         ZIndex: =1
@@ -360,7 +361,7 @@
         AccessibleLabel: ="Calendar events for selected day"
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =599
+        Height: =878
         Items: |-
             =/*Shows events only on selected date*/
             SortByColumns(Filter('TG14 Task Information', 'Task Date' = _dateSelected, Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved"), "StartTime")
@@ -706,4 +707,78 @@
             Width: =1068
             X: =782
             ZIndex: =20
+
+    Button24 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(105, 121, 126, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        OnSelect: |-
+            =Set(locPDFView, PDF('CalendarEventsGallery1_2', {Size: PaperSize.A4, DPI: 72, Margin: "5mm", Orientation: "Landscape", ExpandContainers: true}))
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Button"
+        X: =875
+        ZIndex: =5
+
+    Rectangle2 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =4
+        Height: =878
+        HoverFill: =RGBA(105, 121, 126, 1)
+        PressedFill: =RGBA(105, 121, 126, 1)
+        Width: =1850
+        Y: =52
+        ZIndex: =6
+
+    PdfViewer4 As pdfViewer:
+        DisplayMode: =DisplayMode.View
+        Document: =locPDFView
+        Height: =878
+        Width: =1850
+        Y: =52
+        ZIndex: =7
+        Zoom: =Zoom.FitBoth
+
+    Button29 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(105, 121, 126, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        OnSelect: =Print()
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Button"
+        X: =1077
+        ZIndex: =8
 
