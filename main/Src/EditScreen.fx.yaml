@@ -122,8 +122,8 @@ EditScreen As screen:
         PressedFill: =varButtonPressedFill
         Size: =12
         Text: ="Audit History"
-        Width: =333
-        X: =1486
+        Width: =305
+        X: =1500
         Y: =326
         ZIndex: =2
 
@@ -319,7 +319,8 @@ EditScreen As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(Self.Fill, -10%)
         OnSelect: |
-            =Set(
+            =Set(varPendingChangesVis, true);
+            Set(
                 varNotifyWindow,
                 true
             );
@@ -379,7 +380,7 @@ EditScreen As screen:
                             ID = CalendarEventsGallery1.Selected.ID
                         )
                     ),
-                    {'Media/PR Request Cont.': 'Main Form - Additional Details'.Text}
+                    {'Media/PR Request Cont.': 'Main Form - Additional Details'.Value}
                 ),
                 "Official Group",
                 Patch(
@@ -390,7 +391,7 @@ EditScreen As screen:
                             ID = CalendarEventsGallery1.Selected.ID
                         )
                     ),
-                    {'Official Groups': 'Main Form - Additional Details'.Text}
+                    {'Official Groups': 'Main Form - Additional Details'.Value}
                 ),
                 "Portrait",
                 Patch(
@@ -401,7 +402,7 @@ EditScreen As screen:
                             ID = CalendarEventsGallery1.Selected.ID
                         )
                     ),
-                    {'Portrait Request': 'Main Form - Additional Details'.Text}
+                    {'Portrait Request': 'Main Form - Additional Details'.Value}
                 ),
                 "Visit",
                 Patch(
@@ -412,7 +413,7 @@ EditScreen As screen:
                             ID = CalendarEventsGallery1.Selected.ID
                         )
                     ),
-                    {'Visit Details': 'Main Form - Additional Details'.Text}
+                    {'Visit Details': 'Main Form - Additional Details'.Value}
                 )
             );
             Set(
@@ -585,6 +586,7 @@ EditScreen As screen:
                 )
             );
             UpdateContext({varCloseTimer: true});
+            Set(varPendingChangesVis, false);
             Back();
         PressedBorderColor: =ColorFade(Self.Fill, -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -1744,9 +1746,9 @@ EditScreen As screen:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledFill: =RGBA(230, 230, 230, 1)
         DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(230, 230, 230, 1)
+        Fill: =RGBA(195, 201, 203, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
@@ -1769,6 +1771,18 @@ EditScreen As screen:
         Y: =567
         ZIndex: =45
 
+    "'Main Form - Additional Details' As 'Text input'":
+        DelayOutput: =true
+        DisplayMode: =DisplayMode.Edit
+        Height: =If(Self.Visible = true, 300, 112)
+        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Value: =Switch(CalendarEventsGallery1.Selected.'Project Category'.Value, "PR/Media", CalendarEventsGallery1.Selected.'Media/PR Request Cont.', "Visit", CalendarEventsGallery1.Selected.'Visit Details', "Official Group", CalendarEventsGallery1.Selected.'Official Groups', "Portrait", CalendarEventsGallery1.Selected.'Portrait Request', "N/A")
+        Visible: =If(Self.Value = "N/A", false, true)
+        Width: =1753
+        X: =43
+        Y: =597
+        ZIndex: =46
+
     "'Main Form - Additional Details Title' As label":
         AutoHeight: =true
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1789,37 +1803,6 @@ EditScreen As screen:
         Wrap: =false
         X: =43
         Y: =564
-        ZIndex: =46
-
-    "'Main Form - Additional Details' As text":
-        BorderColor: =RGBA(179,179,179,1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Switch(CalendarEventsGallery1.Selected.'Project Category'.Value, "PR/Media", CalendarEventsGallery1.Selected.'Media/PR Request Cont.', "Visit", CalendarEventsGallery1.Selected.'Visit Details', "Official Group", CalendarEventsGallery1.Selected.'Official Groups', "Portrait", CalendarEventsGallery1.Selected.'Portrait Request', "N/A")
-        DelayOutput: =true
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =
-        EnableSpellCheck: =true
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =If(Self.Visible = true, 300, 112)
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Mode: =TextMode.MultiLine
-        OnChange: |-
-            =UpdateContext({SubmitDM: DisplayMode.Edit})
-        PaddingLeft: =5
-        PressedBorderColor: =RGBA(105, 121, 126, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        Size: =13
-        Tooltip: =
-        Visible: =If(Self.Text = "N/A", false, true)
-        Width: =1757
-        X: =43
-        Y: =597
         ZIndex: =47
 
     Rectangle25 As rectangle:
@@ -1896,6 +1879,7 @@ EditScreen As screen:
         ZIndex: =53
 
     "'Main Form - Task Requirements' As 'Text input'":
+        DelayOutput: =true
         DisplayMode: =DisplayMode.Edit
         Height: =If('Main Form - Additional Details'.Visible = false, 440, 112)
         Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
@@ -2055,7 +2039,7 @@ EditScreen As screen:
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(HODetVis, true, false)
             Width: =1850
-            ZIndex: =89
+            ZIndex: =84
 
         "'HO Popup - Background Pill' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2085,7 +2069,7 @@ EditScreen As screen:
             Width: =1301
             X: =275
             Y: =215
-            ZIndex: =90
+            ZIndex: =85
 
         "'HO Popup - Pill 1' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2114,7 +2098,7 @@ EditScreen As screen:
             Width: =436
             X: =288
             Y: =226
-            ZIndex: =92
+            ZIndex: =87
 
         "'HO Popup - Total Hours Title' As label":
             Align: =Align.Center
@@ -2137,7 +2121,7 @@ EditScreen As screen:
             Wrap: =false
             X: =311
             Y: =279
-            ZIndex: =93
+            ZIndex: =88
 
         "'HO Popup - Pill 4' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2166,7 +2150,7 @@ EditScreen As screen:
             Width: =1274
             X: =288
             Y: =427
-            ZIndex: =94
+            ZIndex: =89
 
         "'HO Popup - Task Output Title' As label":
             Align: =Align.Center
@@ -2187,7 +2171,7 @@ EditScreen As screen:
             Width: =1237
             X: =303
             Y: =434
-            ZIndex: =95
+            ZIndex: =90
 
         "'HO Popup - Close' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2214,7 +2198,7 @@ EditScreen As screen:
             Visible: =If(HODetVis, true, false)
             X: =1380
             Y: =190
-            ZIndex: =96
+            ZIndex: =91
 
         "'HO Popup - Task Hours Title' As label":
             Align: =Align.Center
@@ -2236,7 +2220,7 @@ EditScreen As screen:
             Wrap: =false
             X: =408
             Y: =238
-            ZIndex: =97
+            ZIndex: =92
 
         "'HO Popup - Out Of Hours Title' As label":
             Align: =Align.Center
@@ -2259,7 +2243,7 @@ EditScreen As screen:
             Wrap: =false
             X: =513
             Y: =279
-            ZIndex: =98
+            ZIndex: =93
 
         "'HO Popup - Out Of Hours' As text":
             Align: =Align.Center
@@ -2294,7 +2278,7 @@ EditScreen As screen:
             Width: =198
             X: =513
             Y: =315
-            ZIndex: =99
+            ZIndex: =94
 
         "'HO Popup - Pill 2' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2323,7 +2307,7 @@ EditScreen As screen:
             Width: =369
             X: =735
             Y: =226
-            ZIndex: =100
+            ZIndex: =95
 
         "'HO Popup - Task Status Subtitle' As label":
             Align: =Align.Center
@@ -2345,7 +2329,7 @@ EditScreen As screen:
             Wrap: =false
             X: =760
             Y: =281
-            ZIndex: =101
+            ZIndex: =96
 
         "'HO Popup - Task Status Title' As label":
             Align: =Align.Center
@@ -2367,7 +2351,7 @@ EditScreen As screen:
             Wrap: =false
             X: =821
             Y: =243
-            ZIndex: =102
+            ZIndex: =97
 
         "'HO Popup - Pill 3' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2396,7 +2380,7 @@ EditScreen As screen:
             Width: =445
             X: =1117
             Y: =227
-            ZIndex: =103
+            ZIndex: =98
 
         "'HO Popup - SharePoint Title' As label":
             Align: =Align.Center
@@ -2418,7 +2402,7 @@ EditScreen As screen:
             Wrap: =false
             X: =1221
             Y: =244
-            ZIndex: =104
+            ZIndex: =99
 
         "'HO Popup - SharePoint Subtitle' As label":
             Align: =Align.Center
@@ -2441,7 +2425,7 @@ EditScreen As screen:
             Wrap: =false
             X: =1139
             Y: =279
-            ZIndex: =105
+            ZIndex: =100
 
         "'HO Popup - Soft Copy Title' As label":
             Align: =Align.Center
@@ -2464,7 +2448,7 @@ EditScreen As screen:
             Wrap: =false
             X: =316
             Y: =497
-            ZIndex: =106
+            ZIndex: =101
 
         "'HO Popup - Soft Copy' As text":
             Align: =Align.Center
@@ -2499,7 +2483,7 @@ EditScreen As screen:
             Width: =198
             X: =316
             Y: =533
-            ZIndex: =107
+            ZIndex: =102
 
         "'HO Popup - Prints Title' As label":
             Align: =Align.Center
@@ -2522,7 +2506,7 @@ EditScreen As screen:
             Wrap: =false
             X: =520
             Y: =497
-            ZIndex: =108
+            ZIndex: =103
 
         "'HO Popup - Prints' As text":
             Align: =Align.Center
@@ -2557,7 +2541,7 @@ EditScreen As screen:
             Width: =198
             X: =520
             Y: =533
-            ZIndex: =109
+            ZIndex: =104
 
         "'HO Popup - PPC Prints Title' As label":
             Align: =Align.Center
@@ -2580,7 +2564,7 @@ EditScreen As screen:
             Wrap: =false
             X: =724
             Y: =497
-            ZIndex: =110
+            ZIndex: =105
 
         "'HO Popup - PPC Prints' As text":
             Align: =Align.Center
@@ -2615,7 +2599,7 @@ EditScreen As screen:
             Width: =198
             X: =724
             Y: =533
-            ZIndex: =111
+            ZIndex: =106
 
         "'HO Popup - Video Title' As label":
             Align: =Align.Center
@@ -2638,7 +2622,7 @@ EditScreen As screen:
             Wrap: =false
             X: =928
             Y: =497
-            ZIndex: =112
+            ZIndex: =107
 
         "'HO Popup - Video' As text":
             Align: =Align.Center
@@ -2673,7 +2657,7 @@ EditScreen As screen:
             Width: =198
             X: =928
             Y: =533
-            ZIndex: =113
+            ZIndex: =108
 
         "'HO Popup -  CD - Title' As label":
             Align: =Align.Center
@@ -2696,7 +2680,7 @@ EditScreen As screen:
             Wrap: =false
             X: =1132
             Y: =497
-            ZIndex: =114
+            ZIndex: =109
 
         "'HO Popup - CD' As text":
             Align: =Align.Center
@@ -2731,7 +2715,7 @@ EditScreen As screen:
             Width: =198
             X: =1132
             Y: =533
-            ZIndex: =115
+            ZIndex: =110
 
         "'HO Popup - DVD Title' As label":
             Align: =Align.Center
@@ -2754,7 +2738,7 @@ EditScreen As screen:
             Wrap: =false
             X: =1337
             Y: =497
-            ZIndex: =116
+            ZIndex: =111
 
         "'HO Popup - DVD' As text":
             Align: =Align.Center
@@ -2789,7 +2773,7 @@ EditScreen As screen:
             Width: =198
             X: =1337
             Y: =533
-            ZIndex: =117
+            ZIndex: =112
 
     "'HO Popup - Status' As Dropdown.pcfdataset":
         DefaultSelectedItems: =CalendarEventsGallery1.Selected.Status
@@ -2800,7 +2784,7 @@ EditScreen As screen:
         Width: =320
         X: =759
         Y: =316
-        ZIndex: =133
+        ZIndex: =128
 
         Value6 As pcfDataField.textualColumn:
             FieldDisplayName: ="Value"
@@ -2843,7 +2827,7 @@ EditScreen As screen:
         Width: =198
         X: =310
         Y: =315
-        ZIndex: =134
+        ZIndex: =129
 
     "'HO Popup - SharePoint Link' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
@@ -2854,7 +2838,28 @@ EditScreen As screen:
         Width: =400
         X: =1141
         Y: =316
-        ZIndex: =137
+        ZIndex: =132
+
+    Icon15 As icon.LogJournal:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(105, 121, 126, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =122
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.LogJournal
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =If(CustDetVis, true, false)
+        Width: =122
+        X: =339
+        Y: =259
+        ZIndex: =134
 
     Group5 As group:
         Height: =5
@@ -2907,7 +2912,7 @@ EditScreen As screen:
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(AuditLogVis, true,false)
             Width: =1850
-            ZIndex: =130
+            ZIndex: =125
 
         "'Cust Det -  Close_2' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2935,7 +2940,7 @@ EditScreen As screen:
             Visible: =If(AuditLogVis, true,false)
             X: =990
             Y: =190
-            ZIndex: =131
+            ZIndex: =126
 
         "'Cust Det - Background Pill_1' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2965,7 +2970,7 @@ EditScreen As screen:
             Width: =842
             X: =504
             Y: =216
-            ZIndex: =132
+            ZIndex: =127
 
         "'Cust Det - Pill 3_1' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2994,7 +2999,7 @@ EditScreen As screen:
             Width: =824
             X: =513
             Y: =227
-            ZIndex: =135
+            ZIndex: =130
 
         "'Cust Det -  Close_1' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3028,7 +3033,7 @@ EditScreen As screen:
             Visible: =If(AuditLogVis, true,false)
             X: =1150
             Y: =190
-            ZIndex: =136
+            ZIndex: =131
 
         "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -3041,7 +3046,7 @@ EditScreen As screen:
             Width: =817
             X: =513
             Y: =242
-            ZIndex: =138
+            ZIndex: =133
 
             Title5 As label:
                 Color: =RGBA(51, 51, 51, 1)
@@ -3326,14 +3331,14 @@ EditScreen As screen:
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            IsSearchable: =false
+            Items: =Choices([@'TG14 Task Information'].'O365 Data')
             OnChange: |-
                 =UpdateContext({SubmitDM: DisplayMode.Edit})
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             SearchFields: =["DisplayName"]
-            SearchItems: =[]
+            SearchItems: =Choices('TG14 Task Information'.'O365 Data','Cust Det - Cust O365'.SearchText)
             SelectionFill: =RGBA(105, 121, 126, 1)
             SelectMultiple: =false
             Size: =13
@@ -3374,89 +3379,6 @@ EditScreen As screen:
             Y: =226
             ZIndex: =69
 
-        "'Cust Det - Image Ring 4' As circle":
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(105, 121, 126, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(204, 221, 234, 1)
-            Height: =185
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Visible: =If(CustDetVis, true, false)
-            Width: =185
-            X: =303
-            Y: =228
-            ZIndex: =70
-
-        "'Cust Det - Image Ring 3' As circle":
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(105, 121, 126, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(153, 187, 212, 1)
-            Height: =175
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Visible: =If(CustDetVis, true, false)
-            Width: =175
-            X: =308
-            Y: =233
-            ZIndex: =71
-
-        "'Cust Det - Image Ring 2' As circle":
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(105, 121, 126, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(102, 152, 191, 1)
-            Height: =165
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Visible: =If(CustDetVis, true, false)
-            Width: =165
-            X: =313
-            Y: =238
-            ZIndex: =72
-
-        "'Cust Det - Image Ring 1' As circle":
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(105, 121, 126, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(0, 76, 133, 1)
-            Height: =155
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Visible: =If(CustDetVis, true, false)
-            Width: =155
-            X: =318
-            Y: =243
-            ZIndex: =73
-
-        "'Cust Det - Customer Image' As image":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =150
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =If(IsBlank(CalendarEventsGallery1.Selected.'Customer Email') Or (Office365Users.UserPhotoMetadata(CalendarEventsGallery1.Selected.'Customer Email').HasPhoto = false), SampleHead, Office365Users.UserPhotoV2(CalendarEventsGallery1.Selected.'Customer Email'))
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            RadiusBottomLeft: =Self.Height
-            RadiusBottomRight: =Self.Height
-            RadiusTopLeft: =Self.Height
-            RadiusTopRight: =Self.Height
-            Visible: =If(CustDetVis, true, false)
-            Width: =150
-            X: =321
-            Y: =245
-            ZIndex: =74
-
         "'Cust Det - Pill 3' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -3484,7 +3406,7 @@ EditScreen As screen:
             Width: =1274
             X: =288
             Y: =427
-            ZIndex: =75
+            ZIndex: =70
 
         "'Cust Det - Line Managers Details Header' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3504,7 +3426,7 @@ EditScreen As screen:
             Width: =572
             X: =303
             Y: =434
-            ZIndex: =76
+            ZIndex: =71
 
         "'Cust Det - LM Rank & Name Title' As label":
             Align: =Align.Center
@@ -3527,7 +3449,7 @@ EditScreen As screen:
             Wrap: =false
             X: =302
             Y: =506
-            ZIndex: =77
+            ZIndex: =72
 
         "'Cust Det - LM Section Title' As label":
             Align: =Align.Center
@@ -3550,7 +3472,7 @@ EditScreen As screen:
             Wrap: =false
             X: =937
             Y: =506
-            ZIndex: =78
+            ZIndex: =73
 
         "'Cust Det - LM Contact Number Title' As label":
             Align: =Align.Center
@@ -3573,7 +3495,7 @@ EditScreen As screen:
             Wrap: =false
             X: =303
             Y: =592
-            ZIndex: =79
+            ZIndex: =74
 
         "'Cust Det - POC If Different Title' As label":
             Align: =Align.Center
@@ -3596,7 +3518,7 @@ EditScreen As screen:
             Wrap: =false
             X: =937
             Y: =592
-            ZIndex: =80
+            ZIndex: =75
 
         "'Cust Det -  Close' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3623,7 +3545,7 @@ EditScreen As screen:
             Visible: =If(CustDetVis, true, false)
             X: =1380
             Y: =190
-            ZIndex: =81
+            ZIndex: =76
 
         "'Cust Det - Rank' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
@@ -3634,7 +3556,7 @@ EditScreen As screen:
             Width: =201
             X: =571
             Y: =279
-            ZIndex: =82
+            ZIndex: =77
 
         "'Cust Det - Name' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
@@ -3645,7 +3567,7 @@ EditScreen As screen:
             Width: =229
             X: =789
             Y: =279
-            ZIndex: =83
+            ZIndex: =78
 
         "'Cust Det - Section' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
@@ -3656,7 +3578,7 @@ EditScreen As screen:
             Width: =240
             X: =1024
             Y: =279
-            ZIndex: =84
+            ZIndex: =79
 
         "'Cust Det - Contact Number' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
@@ -3667,7 +3589,7 @@ EditScreen As screen:
             Width: =232
             X: =1277
             Y: =279
-            ZIndex: =85
+            ZIndex: =80
 
         "'Cust Det - LM Rank & Name' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
@@ -3678,7 +3600,7 @@ EditScreen As screen:
             Width: =603
             X: =299
             Y: =542
-            ZIndex: =86
+            ZIndex: =81
 
         "'Cust Det - LM Section' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
@@ -3689,7 +3611,7 @@ EditScreen As screen:
             Width: =603
             X: =935
             Y: =542
-            ZIndex: =87
+            ZIndex: =82
 
         "'Cust Det - LM Contact Number' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
@@ -3700,7 +3622,7 @@ EditScreen As screen:
             Width: =603
             X: =299
             Y: =628
-            ZIndex: =88
+            ZIndex: =83
 
         "'Cust Det - POC If Different' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
@@ -3711,7 +3633,7 @@ EditScreen As screen:
             Width: =603
             X: =935
             Y: =628
-            ZIndex: =91
+            ZIndex: =86
 
     "'Edit Screen - Notify Window' As group":
         Height: =5
@@ -3732,7 +3654,7 @@ EditScreen As screen:
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(varNotifyWindow, true, false)
             Width: =1850
-            ZIndex: =118
+            ZIndex: =113
 
         "'Cust Det - Background Pill_2' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3762,7 +3684,7 @@ EditScreen As screen:
             Width: =1301
             X: =275
             Y: =215
-            ZIndex: =119
+            ZIndex: =114
 
         "'Cust Det - Pill 3_2' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3791,7 +3713,7 @@ EditScreen As screen:
             Width: =1274
             X: =288
             Y: =227
-            ZIndex: =120
+            ZIndex: =115
 
         Image1 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3808,7 +3730,7 @@ EditScreen As screen:
             Visible: =If(varNotifyWindow, true, false)
             X: =875
             Y: =350
-            ZIndex: =121
+            ZIndex: =116
 
         Label6 As label:
             Align: =Align.Center
@@ -3828,7 +3750,7 @@ EditScreen As screen:
             Width: =479
             X: =686
             Y: =278
-            ZIndex: =122
+            ZIndex: =117
 
         Checkbox1_1 As checkbox:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3855,7 +3777,7 @@ EditScreen As screen:
             Width: =224
             X: =655
             Y: =501
-            ZIndex: =123
+            ZIndex: =118
 
         Checkbox1_2 As checkbox:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3882,7 +3804,7 @@ EditScreen As screen:
             Width: =224
             X: =655
             Y: =551
-            ZIndex: =124
+            ZIndex: =119
 
         Label7 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3900,7 +3822,7 @@ EditScreen As screen:
             Width: =241
             X: =651
             Y: =461
-            ZIndex: =125
+            ZIndex: =120
 
         Icon12 As icon.CheckBadge:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -3921,7 +3843,7 @@ EditScreen As screen:
             Width: =33
             X: =614
             Y: =461
-            ZIndex: =126
+            ZIndex: =121
 
         Checkbox1_4 As checkbox:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3948,7 +3870,7 @@ EditScreen As screen:
             Width: =224
             X: =990
             Y: =501
-            ZIndex: =127
+            ZIndex: =122
 
         Label7_2 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3966,7 +3888,7 @@ EditScreen As screen:
             Width: =272
             X: =989
             Y: =464
-            ZIndex: =128
+            ZIndex: =123
 
         Icon12_1 As icon.CheckBadge:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -3987,5 +3909,5 @@ EditScreen As screen:
             Width: =33
             X: =952
             Y: =464
-            ZIndex: =129
+            ZIndex: =124
 

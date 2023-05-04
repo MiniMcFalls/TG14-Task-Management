@@ -127,19 +127,23 @@ App As appinfo:
         //Set Workload Variables
         Set(
             varMLoad,
-            Count(Filter(
-                'TG14 Task Information',
-                'Task Date' >= _firstDayOfMonth && 'Task Date' <= _lastDayOfMonth,
-                Unit.Value = gblUserLocPerm
-            ).ID)
+            Count(
+                Filter(
+                    'TG14 Task Information',
+                    'Task Date' >= _firstDayOfMonth && 'Task Date' <= _lastDayOfMonth,
+                    Unit.Value = gblUserLocPerm
+                ).ID
+            )
         );
         Set(
             varWLoad,
-            Count(Filter(
-                'TG14 Task Information',
-                'Task Date' >= Today() + (2 - Weekday(Today())) && 'Task Date' <= Today() + (9 - Weekday(Today())),
-                Unit.Value = gblUserLocPerm
-            ).ID)
+            Count(
+                Filter(
+                    'TG14 Task Information',
+                    'Task Date' >= Today() + (2 - Weekday(Today())) && 'Task Date' <= Today() + (9 - Weekday(Today())),
+                    Unit.Value = gblUserLocPerm
+                ).ID
+            )
         );
         // Set Calendar Variables
         Set(

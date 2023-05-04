@@ -48,7 +48,8 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         OnTimerEnd: |-
-            =Set(
+            =Set(varInfoRefresh, true);
+            Set(
                 varApprovalNumber,
                 Count(
                     Filter(
@@ -58,6 +59,7 @@
                     ).ID
                 )
             );
+            Set(varInfoRefresh, false);
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)

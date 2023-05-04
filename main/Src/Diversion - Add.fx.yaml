@@ -2129,35 +2129,6 @@
         Y: =747
         ZIndex: =6
 
-    Button3_2 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =Icon.BackArrow
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 0, 0, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =47
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(255,0,0,1), -20%)
-        OnSelect: |-
-            =Navigate('Calendar - Day', ScreenTransition.Fade);
-            Reset(cmp_TimePicker_2);
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        RadiusTopLeft: =
-        RadiusTopRight: =
-        Size: =15
-        Text: ="Close"
-        Width: =128
-        X: =1722
-        ZIndex: =7
-
     Label14_1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None

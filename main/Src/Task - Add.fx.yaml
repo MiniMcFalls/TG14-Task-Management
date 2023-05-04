@@ -97,33 +97,6 @@
         Y: =196
         ZIndex: =4
 
-    Button3_4 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =Icon.BackArrow
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 0, 0, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =47
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(255,0,0,1), -20%)
-        OnSelect: =Navigate('Calendar - Day', ScreenTransition.Fade); Reset(cmp_TimePicker_1); Set(vartime, true); Set(varIsLoading, true);
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        RadiusTopLeft: =
-        RadiusTopRight: =
-        Size: =15
-        Text: ="Close"
-        Width: =128
-        X: =1722
-        ZIndex: =5
-
     Button2 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -155,15 +128,16 @@
         OnSelect: |-
             =Set(
                 varResponseID,
-                 Patch(
-                'TG14 Task Information',
-                Defaults('TG14 Task Information'),
-                {
-                    'Approval Status': {Value: "Pinned"},
-                    'Date Submitted': Now(),
-                    Unit: {Value: Unit.Text}
-                }
-            ).ID);
+                Patch(
+                    'TG14 Task Information',
+                    Defaults('TG14 Task Information'),
+                    {
+                        'Approval Status': {Value: "Pinned"},
+                        'Date Submitted': Now(),
+                        Unit: {Value: Unit.Text}
+                    }
+                ).ID
+            );
             Switch(
                 gblUserLocPerm,
             //------------------------------------------------------------------------------RAF Lossiemouth
@@ -469,7 +443,12 @@
             );
             Patch(
                 'TG14 Task Information',
-                First(Filter('TG14 Task Information', ID = varResponseID)),
+                First(
+                    Filter(
+                        'TG14 Task Information',
+                        ID = varResponseID
+                    )
+                ),
                 {
                     Title: varJobNumber,
                     'Project Category': 'Project Cat'.Selected,
@@ -506,8 +485,19 @@
                 NotificationType.Success,
                 40
             );
-            Select(Button3_4);
+            Navigate(
+                'Calendar - Day',
+                ScreenTransition.Fade
+            );
             Reset(cmp_TimePicker_1);
+            Set(
+                vartime,
+                true
+            );
+            Set(
+                varIsLoading,
+                true
+            );
             Back();
             Set(
                 varIsLoading,
@@ -543,7 +533,8 @@
         RadiusTopRight: =0
         Size: =15
         Text: ="Submit Task"
-        X: =1562
+        X: =1682
+        Y: =53
         ZIndex: =6
 
     Label11_1 As label:

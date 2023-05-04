@@ -1,10 +1,36 @@
 cmp_Header As CanvasComponent:
     Fill: =RGBA(0,0,0,0)
-    Height: =63
+    GlobePendingChanges: =RGBA(200,200,0,1)
+    Height: =53
+    PendingChangesVis: =varPendingChangesVis
+    RefreshInfoVis: =varInfoRefresh
     Width: =1850
     X: =0
     Y: =0
     ZIndex: =1
+
+    Timer8 As timer:
+        AutoStart: =true
+        BorderColor: =RGBA(105, 121, 126, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        Duration: =10000
+        Fill: =RGBA(105, 121, 126, 1)
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        OnTimerEnd: =If(Connection.Connected = true, Set(GblConnectionTest, true), Set(GblConnectionTest, false));
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Repeat: =true
+        X: =1335
+        Y: =4
+        ZIndex: =1
 
     RectQuickActionBar1_29 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -12,7 +38,7 @@ cmp_Header As CanvasComponent:
         Fill: =varHeaderFill
         Height: =53
         Width: =1850
-        ZIndex: =1
+        ZIndex: =2
 
     LblAppName1_8 As label:
         Color: =RGBA(255, 255, 255, 1)
@@ -24,12 +50,12 @@ cmp_Header As CanvasComponent:
         PaddingLeft: =20
         PaddingTop: =2
         Size: =16
-        Text: ="Digital Diary & Tasks"
+        Text: ="TG14 Task Manager"
         VerticalAlign: =VerticalAlign.Top
         Width: =395
         Wrap: =false
         X: =96
-        ZIndex: =2
+        ZIndex: =3
 
     Label9_14 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -49,26 +75,23 @@ cmp_Header As CanvasComponent:
         VerticalAlign: =VerticalAlign.Bottom
         X: =97
         Y: =32
-        ZIndex: =3
+        ZIndex: =4
 
     Triangle1_9 As triangle.rightAngled:
         BorderColor: =RGBA(0, 120, 212, 1)
         BorderStyle: =BorderStyle.None
-        DisabledFill: =RGBA(220, 220, 220, 1)
-        DisplayMode: =DisplayMode.View
+        DisplayMode: =DisplayMode.Disabled
         Fill: =varBackgroundFill
         FocusedBorderThickness: =4
-        Height: =63
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =73
-        ZIndex: =4
+        Height: =53
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =52
+        ZIndex: =5
 
     Rectangle2_23 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.View
+        DisplayMode: =DisplayMode.Disabled
         Fill: =varBackgroundFill
         FocusedBorderThickness: =4
         Height: =53
@@ -76,13 +99,12 @@ cmp_Header As CanvasComponent:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =5
         X: =73
-        ZIndex: =5
+        ZIndex: =6
 
     Rectangle2_24 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.View
+        DisplayMode: =DisplayMode.Disabled
         Fill: =varBackgroundFill
         FocusedBorderThickness: =4
         Height: =53
@@ -90,13 +112,12 @@ cmp_Header As CanvasComponent:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =5
         X: =82
-        ZIndex: =6
+        ZIndex: =7
 
     Rectangle2_25 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.View
+        DisplayMode: =DisplayMode.Disabled
         Fill: =varBackgroundFill
         FocusedBorderThickness: =4
         Height: =53
@@ -104,5 +125,140 @@ cmp_Header As CanvasComponent:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =5
         X: =91
-        ZIndex: =7
+        ZIndex: =8
+
+    Button6 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(230, 230, 230, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(230, 230, 230, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =44
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: =""
+        Width: =If(varInfoRefresh = true, 163, 75)
+        X: =If(varInfoRefresh = true, 1508, 1596)
+        ZIndex: =9
+
+    Icon16 As icon.GlobeNotConnected:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =If(Connection.Connected = true, RGBA(0,150,0,1), RGBA(255,0,0,1))
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
+        FocusedBorderThickness: =4
+        Height: =22
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =If(GblConnectionTest, Icon.Globe, Icon.GlobeNotConnected)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =45
+        X: =1611
+        Y: =4
+        ZIndex: =10
+
+    Label9 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =If(Connection.Connected = true, RGBA(0,150,0,1), RGBA(255,0,0,1))
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =19
+        Size: =13
+        Text: =If(GblConnectionTest, "Live", "OFFLINE")
+        Width: =81
+        X: =1593
+        Y: =25
+        ZIndex: =11
+
+    Button34 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =varButtonFill
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =44
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =varButtonHover
+        OnSelect: =Navigate(Home, ScreenTransition.Fade)
+        PressedBorderColor: =varButtonBorderFill
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =varButtonPressedFill
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Home"
+        X: =1681
+        ZIndex: =12
+
+    Icon16_2 As icon.GlobeNotConnected:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 94, 146, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
+        FocusedBorderThickness: =4
+        Height: =22
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.GlobeRefresh
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =cmp_Header.RefreshInfoVis
+        Width: =45
+        X: =1534
+        Y: =4
+        ZIndex: =13
+
+    Label9_2 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 94, 146, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =19
+        Size: =13
+        Text: ="Refresh"
+        Visible: =cmp_Header.RefreshInfoVis
+        Width: =72
+        X: =1521
+        Y: =25
+        ZIndex: =14
 

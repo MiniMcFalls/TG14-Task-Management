@@ -121,32 +121,6 @@
     cmp_Header_2 As cmp_Header:
         ZIndex: =6
 
-    Button6_5 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(151, 0, 0, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =53
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(Self.Fill, -10%)
-        OnSelect: =Navigate(Home, ScreenTransition.Fade)
-        PressedBorderColor: =Color.Transparent
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(Self.Fill, -30%)
-        RadiusBottomRight: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="HOME"
-        Width: =164
-        X: =1686
-        ZIndex: =7
-
     "'Section Admin - Approvals Refresh Timer' As timer":
         AutoStart: =true
         BorderColor: =RGBA(105, 121, 126, 1)
@@ -2226,8 +2200,8 @@
         Height: =34
         HoverFill: =RGBA(105, 121, 126, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =259
-        X: =286
+        Width: =61
+        X: =484
         Y: =324
         ZIndex: =339
 
@@ -3476,6 +3450,30 @@
         X: =770
         Y: =285
         ZIndex: =341
+
+    Button40 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(255, 191, 0, 1)
+        DisabledFill: =RGBA(105, 121, 126, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(105, 121, 126, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Size: =15
+        Text: ="Currently WIP"
+        Width: =346
+        X: =752
+        Y: =61
+        ZIndex: =342
 
     "'2023 Monthly Returns - Hours' As group":
         Height: =5

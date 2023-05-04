@@ -92,32 +92,6 @@
     cmp_Header_8 As cmp_Header:
         ZIndex: =3
 
-    Button6_8 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(151, 0, 0, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =53
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(Self.Fill, -10%)
-        OnSelect: =Navigate(Home, ScreenTransition.Fade)
-        PressedBorderColor: =Color.Transparent
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(Self.Fill, -30%)
-        RadiusBottomRight: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="HOME"
-        Width: =164
-        X: =1686
-        ZIndex: =4
-
     "'Section Admin - Approvals Refresh Timer_1' As timer":
         AutoStart: =true
         BorderColor: =RGBA(105, 121, 126, 1)

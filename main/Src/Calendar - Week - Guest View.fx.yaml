@@ -1,8 +1,11 @@
 "'Calendar - Week - Guest View' As screen.'tabletLayout_Calendar_ver3.0'":
     Fill: =varBackgroundFill
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
-    OnVisible: |
-        =// Versioning Check
+    OnVisible: |-
+        =Set(varInfoRefresh, true);
+        Refresh('TG14 Task Information');
+        
+        // Versioning Check
         Set(
             LatestVer,
             First(
@@ -73,6 +76,7 @@
                 DateValue("01/01/2020")
             )
         );
+        Set(varInfoRefresh, false);
 
     "'Week - RAF Logo_1' As image":
         BorderColor: =RGBA(0, 0, 0, 0)

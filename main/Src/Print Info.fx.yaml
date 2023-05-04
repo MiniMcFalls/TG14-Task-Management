@@ -721,7 +721,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         OnSelect: |-
-            =Set(locPDFView, PDF('CalendarEventsGallery1_2', {Size: PaperSize.A4, DPI: 72, Margin: "5mm", Orientation: "Landscape", ExpandContainers: true}))
+            =Set(locPDFView, PDF(CalendarEventsGallery1_2, {Size: PaperSize.A4, DPI: 72, Margin: "5mm", Orientation: "Landscape", ExpandContainers: true}))
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)

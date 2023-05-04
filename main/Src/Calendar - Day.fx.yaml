@@ -2,7 +2,9 @@
     Fill: =varBackgroundFill
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |-
-        =Set(
+        =Set(varInfoRefresh, true);
+        Refresh('TG14 Task Information');
+        Set(
             varApprovalNumber,
             Count(
                 Filter(
@@ -26,6 +28,7 @@
             CurrentVer <> LatestVer.'Vers Num',
             'Wrong Version'
         );
+        Set(varInfoRefresh, false);
 
     Timer5 As timer:
         AutoStart: =true
@@ -57,6 +60,31 @@
         X: =1480
         Y: =5
         ZIndex: =1
+
+    "'Data Update Timer' As timer":
+        AutoStart: =true
+        BorderColor: =RGBA(105, 121, 126, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(105, 121, 126, 1)
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        OnTimerEnd: |-
+            =Set(varInfoRefresh, true);
+            Refresh('TG14 Task Information');
+            Set(varInfoRefresh, false);
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Repeat: =true
+        X: =846
+        Y: =6
+        ZIndex: =2
 
     Placeholder_2 As group:
         Height: =5
@@ -179,32 +207,6 @@
 
     cmp_Header_12 As cmp_Header:
         ZIndex: =38
-
-    Button6_10 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(151, 0, 0, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =53
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(Self.Fill, -10%)
-        OnSelect: =Navigate(Home, ScreenTransition.Fade)
-        PressedBorderColor: =Color.Transparent
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(Self.Fill, -30%)
-        RadiusBottomRight: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="HOME"
-        Width: =164
-        X: =1686
-        ZIndex: =39
 
     "'Day - Pills' As group":
         Height: =5
@@ -1564,66 +1566,4 @@
             X: =1516
             Y: =79
             ZIndex: =36
-
-    "'Day - Timers' As group":
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =45
-
-        "'Data Update Timer' As timer":
-            AutoStart: =true
-            BorderColor: =RGBA(105, 121, 126, 1)
-            BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =RGBA(244, 244, 244, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(105, 121, 126, 1)
-            Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            OnTimerEnd: =Refresh('TG14 Task Information');
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Repeat: =true
-            X: =846
-            Y: =6
-            ZIndex: =2
-
-        "'Calendar Day  - Approval Refresh Timer' As timer":
-            AutoStart: =true
-            BorderColor: =RGBA(105, 121, 126, 1)
-            BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =RGBA(244, 244, 244, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Duration: =30000
-            Fill: =RGBA(105, 121, 126, 1)
-            Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            OnTimerEnd: |-
-                =Set(
-                    varApprovalNumber,
-                    Count(
-                        Filter(
-                            'TG14 Task Information',
-                            'Approval Status'.Value = "Awiting Approval",
-                            Unit.Value = gblUserLocPerm,
-                            !IsBlank(Title)
-                        ).ID
-                    )
-                );
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Repeat: =true
-            X: =507
-            Y: =4
-            ZIndex: =3
 

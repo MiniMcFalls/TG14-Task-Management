@@ -192,29 +192,6 @@
         Y: =141
         ZIndex: =8
 
-        Image11 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =160
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =If(IsBlank(ThisItem.'Customer Email') Or (Office365Users.UserPhotoMetadata(ThisItem.'Customer Email').HasPhoto = false), SampleHead, Office365Users.UserPhotoV2(ThisItem.'Customer Email'))
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            RadiusBottomLeft: =15
-            RadiusBottomRight: =15
-            RadiusTopLeft: =15
-            RadiusTopRight: =15
-            Width: =160
-            X: =25
-            Y: =12
-            ZIndex: =3
-
         Separator2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -537,6 +514,34 @@
             X: =651
             Y: =12
             ZIndex: =20
+
+        BadgeCanvas4_1 As Badge:
+            Appearance: ='PowerApps.CoreControls.BadgeCanvas.Appearance'.Tint
+            DisplayMode: =DisplayMode.Edit
+            Height: =149
+            Width: =90
+            X: =44
+            Y: =18
+            ZIndex: =21
+
+        Icon14_1 As icon.Person:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(105, 121, 126, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Person
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            X: =57
+            Y: =57
+            ZIndex: =22
 
     Timer2_4 As timer:
         AutoStart: =true
@@ -886,32 +891,6 @@
         X: =14
         Y: =64
         ZIndex: =16
-
-    Button6_4 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(151, 0, 0, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =53
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(Self.Fill, -10%)
-        OnSelect: =Navigate(Home, ScreenTransition.Fade)
-        PressedBorderColor: =Color.Transparent
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(Self.Fill, -30%)
-        RadiusBottomRight: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="HOME"
-        Width: =164
-        X: =1686
-        ZIndex: =17
 
     Rectangle2_15 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
