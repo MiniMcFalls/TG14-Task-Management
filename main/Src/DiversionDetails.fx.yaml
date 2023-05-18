@@ -1022,7 +1022,7 @@ DiversionDetails As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(255, 0, 0, 1), -10%)
-        OnSelect: =Remove([@'TG14 Task Information'], CalendarEventsGallery1.Selected); If (IsEmpty(Errors([@'TG14 Task Information'], CalendarEventsGallery1.Selected)), Select(Button3_3))
+        OnSelect: =Remove([@'TG14 Task Information'], CalendarEventsGallery1.Selected); If (IsEmpty(Errors([@'TG14 Task Information'], CalendarEventsGallery1.Selected)), Back())
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(255, 0, 0, 1), -30%)
