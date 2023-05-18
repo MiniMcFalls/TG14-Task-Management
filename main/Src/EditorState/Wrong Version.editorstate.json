@@ -46,7 +46,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneIconCheck.ID%",
       "Name": "iconCheck3_1",
-      "ParentIndex": 5,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -213,7 +213,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneIconCircle.ID%",
       "Name": "iconCircle3_4",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -325,7 +325,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle3_5",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -437,7 +437,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle3_6",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -549,7 +549,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle3_7",
-      "ParentIndex": 3,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -707,7 +707,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label12_1",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -962,7 +962,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneSuccessMsg.ID%",
       "Name": "LblSuccessMsg3_1",
-      "ParentIndex": 6,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

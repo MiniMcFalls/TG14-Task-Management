@@ -92,7 +92,7 @@
     cmp_Header_10 As cmp_Header:
         ZIndex: =3
 
-    CalendarEventsGallery1_1 As gallery.CalendarEventsGallery:
+    "'Asset_R&D_Gallery' As gallery.CalendarEventsGallery":
         AccessibleLabel: ="Calendar events for selected day"
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
@@ -168,7 +168,7 @@
             FontWeight: =FontWeight.Semibold
             Height: =27
             OnSelect: =
-            Size: =17 * CalendarEventsGallery1_1.TemplateHeight / 105
+            Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
             Text: =ThisItem.Title
             Width: |-
                 =Sum(AddColumns(ForAll(Split(Self.Text, ""), {Result: ThisRecord.Value}), "Size", LookUp(colCharsWidth, CharFont=Self.Font && CharWeight=Self.FontWeight && Char = Result).Size), Size) * Self.Size + Self.PaddingLeft + Self.PaddingRight
@@ -305,7 +305,7 @@
             FontWeight: =FontWeight.Semibold
             Height: =27
             OnSelect: =
-            Size: =17 * CalendarEventsGallery1_1.TemplateHeight / 105
+            Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
             Text: =ThisItem.Status.Value
             Width: |-
                 =Sum(
@@ -335,7 +335,7 @@
             FontWeight: =FontWeight.Semibold
             Height: =27
             OnSelect: =
-            Size: =17 * CalendarEventsGallery1_1.TemplateHeight / 105
+            Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
             Text: =If(IsBlank(ThisItem.Location.Value), "N/A", ThisItem.Location.Value)
             Width: |-
                 =Sum(
@@ -365,7 +365,7 @@
             FontWeight: =FontWeight.Semibold
             Height: =27
             OnSelect: =
-            Size: =17 * CalendarEventsGallery1_1.TemplateHeight / 105
+            Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
             Text: =ThisItem.Manufacturer.Value
             Width: |-
                 =Sum(
@@ -396,7 +396,7 @@
             Height: =27
             OnSelect: =
             PaddingLeft: =0
-            Size: =17 * CalendarEventsGallery1_1.TemplateHeight / 105
+            Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
             Text: =ThisItem.Model
             Width: |-
                 =Sum(

@@ -78,6 +78,7 @@
       "projectionmapping": true,
       "reactformulabar": true,
       "reliableconcurrent": true,
+      "reservedkeywords": false,
       "reverttooldpowerautomate": false,
       "rtlinstudiopreview": false,
       "rtlsupport": false,
