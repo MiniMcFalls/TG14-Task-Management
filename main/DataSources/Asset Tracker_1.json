@@ -23,6 +23,8 @@
       "{TriggerWindowEndToken}": "Trigger Window End Token",
       "{TriggerWindowStartToken}": "Trigger Window Start Token",
       "{VersionNumber}": "Version number",
+      "AssetLocation": "Asset Location",
+      "AssetLocation#Id": "Asset Location Id",
       "AssetType": "Asset type",
       "AssetType#Id": "Asset type Id",
       "Author": "Created By",

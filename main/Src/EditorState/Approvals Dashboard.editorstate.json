@@ -9188,7 +9188,7 @@
         {
           "Category": "Data",
           "PropertyName": "SelectedFill",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Data",

@@ -7,7 +7,13 @@ cmp_TimePicker As CanvasComponent:
         Reset(gal_TimePicker_Minutes);
         Set(varTimeValue, Blank())
     SelectedColor: =Color.White
-    SelectedFill: =Color.DodgerBlue
+    SelectedFill: |-
+        =RGBA(
+                40,
+                75,
+                99,
+                1
+            )
     value: =varTimeValue
     Width: =100
     X: =0
@@ -15,6 +21,7 @@ cmp_TimePicker As CanvasComponent:
     ZIndex: =1
 
     lbl_TickerPicker_Border As label:
+        BorderColor: =RGBA(128, 128, 128, 1)
         BorderThickness: =4
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -29,6 +36,7 @@ cmp_TimePicker As CanvasComponent:
 
     gal_TimePicker_Hours As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
         Default: |-
             =If(
                 cmp_TimePicker.Default=Blank()
@@ -93,6 +101,7 @@ cmp_TimePicker As CanvasComponent:
 
     gal_TimePicker_Minutes As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
         Default: |-
             =With(
                 {
@@ -110,7 +119,7 @@ cmp_TimePicker As CanvasComponent:
                 )
             )
         Height: =Parent.Height
-        Items: =ForAll(Sequence(60), Text(Value-1,"[$-en-GB]00"))
+        Items: =["00","05","10","15","20","25","30","35","40","45","50","55"]
         Layout: =Layout.Vertical
         OnSelect: |-
             =Set(
