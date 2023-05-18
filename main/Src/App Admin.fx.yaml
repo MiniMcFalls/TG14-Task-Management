@@ -4866,7 +4866,7 @@
         ZIndex: =65
 
     ButtonCanvas1 As Button:
-        Appearance: ='PowerApps.CoreControls.ButtonCanvas.Appearance'.Primary
+        Appearance: ='ButtonCanvas.Appearance'.Primary
         DisplayMode: =DisplayMode.Edit
         Height: =36
         OnSelect: |-

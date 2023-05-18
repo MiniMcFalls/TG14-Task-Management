@@ -1775,7 +1775,7 @@ EditScreen As screen:
         DelayOutput: =true
         DisplayMode: =DisplayMode.Edit
         Height: =If(Self.Visible = true, 300, 112)
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Value: =Switch(CalendarEventsGallery1.Selected.'Project Category'.Value, "PR/Media", CalendarEventsGallery1.Selected.'Media/PR Request Cont.', "Visit", CalendarEventsGallery1.Selected.'Visit Details', "Official Group", CalendarEventsGallery1.Selected.'Official Groups', "Portrait", CalendarEventsGallery1.Selected.'Portrait Request', "N/A")
         Visible: =If(Self.Value = "N/A", false, true)
         Width: =1753
@@ -1842,7 +1842,7 @@ EditScreen As screen:
     "'Main Form - Working Hazards' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =60
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Value: =If(IsBlank(CalendarEventsGallery1.Selected.Hazards), "*No Hazards Indicated By Requester*", CalendarEventsGallery1.Selected.Hazards)
         Width: =849
         X: =43
@@ -1852,7 +1852,7 @@ EditScreen As screen:
     "'Main Form - Notes' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =60
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Value: =If(IsBlank(CalendarEventsGallery1.Selected.Notes), "*No Notes*", CalendarEventsGallery1.Selected.Hazards)
         Width: =488
         X: =954
@@ -1862,7 +1862,7 @@ EditScreen As screen:
     "'Main Form - Task Location' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =60
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Value: =CalendarEventsGallery1.Selected.'Task Location'
         Width: =559
         X: =1244
@@ -1882,7 +1882,7 @@ EditScreen As screen:
         DelayOutput: =true
         DisplayMode: =DisplayMode.Edit
         Height: =If('Main Form - Additional Details'.Visible = false, 440, 112)
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Value: =CalendarEventsGallery1.Selected.'Task Requirements'
         Width: =1757
         X: =39
@@ -2832,7 +2832,7 @@ EditScreen As screen:
     "'HO Popup - SharePoint Link' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =82
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Value: =CalendarEventsGallery1.Selected.'Link to Photos'
         Visible: =If(HODetVis, true, false)
         Width: =400
@@ -3550,7 +3550,7 @@ EditScreen As screen:
         "'Cust Det - Rank' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
-            Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.SingleLine
+            Mode: ='TextInputCanvas.Mode'.SingleLine
             Value: =CalendarEventsGallery1.Selected.Rank
             Visible: =If(CustDetVis, true, false)
             Width: =201
@@ -3561,7 +3561,7 @@ EditScreen As screen:
         "'Cust Det - Name' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
-            Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.SingleLine
+            Mode: ='TextInputCanvas.Mode'.SingleLine
             Value: =CalendarEventsGallery1.Selected.'Customer Name'
             Visible: =If(CustDetVis, true, false)
             Width: =229
@@ -3572,7 +3572,7 @@ EditScreen As screen:
         "'Cust Det - Section' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
-            Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.SingleLine
+            Mode: ='TextInputCanvas.Mode'.SingleLine
             Value: =CalendarEventsGallery1.Selected.'Customer Section'
             Visible: =If(CustDetVis, true, false)
             Width: =240
@@ -3583,7 +3583,7 @@ EditScreen As screen:
         "'Cust Det - Contact Number' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
-            Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.SingleLine
+            Mode: ='TextInputCanvas.Mode'.SingleLine
             Value: =CalendarEventsGallery1.Selected.'Customer Contact Number'
             Visible: =If(CustDetVis, true, false)
             Width: =232
@@ -3594,7 +3594,7 @@ EditScreen As screen:
         "'Cust Det - LM Rank & Name' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =34
-            Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.SingleLine
+            Mode: ='TextInputCanvas.Mode'.SingleLine
             Value: =If(IsBlank(CalendarEventsGallery1.Selected.'LM Rank Name'), "-", CalendarEventsGallery1.Selected.'LM Rank Name')
             Visible: =If(CustDetVis, true, false)
             Width: =603
@@ -3605,7 +3605,7 @@ EditScreen As screen:
         "'Cust Det - LM Section' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =34
-            Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.SingleLine
+            Mode: ='TextInputCanvas.Mode'.SingleLine
             Value: =If(IsBlank(CalendarEventsGallery1.Selected.'LM Section'), "-", CalendarEventsGallery1.Selected.'LM Section')
             Visible: =If(CustDetVis, true, false)
             Width: =603
@@ -3616,7 +3616,7 @@ EditScreen As screen:
         "'Cust Det - LM Contact Number' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =34
-            Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.SingleLine
+            Mode: ='TextInputCanvas.Mode'.SingleLine
             Value: =If(IsBlank(CalendarEventsGallery1.Selected.'LM Contact Number'), "-", CalendarEventsGallery1.Selected.'LM Contact Number')
             Visible: =If(CustDetVis, true, false)
             Width: =603
@@ -3627,7 +3627,7 @@ EditScreen As screen:
         "'Cust Det - POC If Different' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =34
-            Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.SingleLine
+            Mode: ='TextInputCanvas.Mode'.SingleLine
             Value: =CalendarEventsGallery1.Selected.'POC if Different'
             Visible: =If(CustDetVis, true, false)
             Width: =603

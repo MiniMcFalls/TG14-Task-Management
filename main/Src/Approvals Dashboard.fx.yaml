@@ -516,9 +516,11 @@
             ZIndex: =20
 
         BadgeCanvas4_1 As Badge:
-            Appearance: ='PowerApps.CoreControls.BadgeCanvas.Appearance'.Tint
+            Appearance: ='BadgeCanvas.Appearance'.Tint
             DisplayMode: =DisplayMode.Edit
             Height: =149
+            Shape: ="Circular"
+            ThemeColor: ="Brand"
             Width: =90
             X: =44
             Y: =18
@@ -2912,9 +2914,15 @@
                 BorderStyle: =BorderStyle.None
                 Height: =700
                 Items: |-
-                    =SortByColumns(Filter('TG14 Task Information',
-                    'Task Date' = 'Approvals Gallery'.Selected.'Task Date', Status.Value <> "CANCELLED", Unit.Value = gblUserLocPerm)
-                    ,"StartTime")
+                    =SortByColumns(
+                        Filter(
+                            'TG14 Task Information',
+                            'Task Date' = 'Approvals Gallery'.Selected.'Task Date',
+                            'Approval Status'.Value = "Approved" ,
+                            Unit.Value = gblUserLocPerm
+                        ),
+                        "StartTime"
+                    )
                 Layout: =Layout.Vertical
                 ShowScrollbar: =false
                 TemplatePadding: =0
@@ -3067,319 +3075,6 @@
             Y: =262
             ZIndex: =43
 
-            "'Task Details_1' As group":
-                Height: =5
-                Width: =5
-                X: =40
-                Y: =40
-                ZIndex: =28
-
-                Button14_3 As button:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =0
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    DisplayMode: =DisplayMode.View
-                    Fill: =RGBA(84, 130, 171, 1)
-                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =33
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-                    PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =15
-                    RadiusTopRight: =15
-                    Size: =15
-                    Text: ="Task Details"
-                    Width: =1387
-                    ZIndex: =1
-
-                Rectangle19_3 As rectangle:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledFill: =RGBA(166, 166, 166, 1)
-                    DisplayMode: =DisplayMode.View
-                    Fill: =RGBA(230, 230, 230, 1)
-                    FocusedBorderThickness: =4
-                    Height: =117
-                    OnSelect: =
-                    Width: =1387
-                    Y: =33
-                    ZIndex: =2
-
-                Label1_17 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    Size: =13
-                    Text: |-
-                        ="Task Date: "
-                    Width: =105
-                    Y: =33
-                    ZIndex: =10
-
-                Label1_19 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    Size: =13
-                    Text: |-
-                        ="Task Time: "
-                    Width: =102
-                    X: =287
-                    Y: =33
-                    ZIndex: =12
-
-                Label1_21 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    Size: =13
-                    Text: |-
-                        ="Task Location: "
-                    Width: =126
-                    X: =564
-                    Y: =33
-                    ZIndex: =14
-
-                Label1_22 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(102, 138, 166, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    PaddingTop: =7
-                    Size: =13
-                    Text: =ThisItem.'Task Location'
-                    Width: =695
-                    X: =687
-                    Y: =33
-                    ZIndex: =15
-
-                Label1_23 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    Size: =13
-                    Text: |-
-                        ="Service Required: "
-                    Width: =164
-                    Y: =66
-                    ZIndex: =16
-
-                Label1_24 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(102, 138, 166, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    PaddingTop: =7
-                    Size: =13
-                    Text: =ThisItem.'Service they Require'
-                    Width: =202
-                    X: =164
-                    Y: =66
-                    ZIndex: =17
-
-                Label1_25 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    Size: =13
-                    Text: |-
-                        ="Tail Number: "
-                    Width: =128
-                    X: =366
-                    Y: =66
-                    ZIndex: =18
-
-                Label1_26 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(102, 138, 166, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    PaddingTop: =7
-                    Size: =13
-                    Text: =ThisItem.'Tail Number'
-                    Width: =112
-                    X: =535
-                    Y: =60
-                    ZIndex: =19
-
-                Label1_27 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(102, 138, 166, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    PaddingTop: =7
-                    Size: =13
-                    Text: =If(IsBlankOrError(ThisItem.'Tail Number'), "N/A", ThisItem.'Tail Number')
-                    Width: =206
-                    X: =481
-                    Y: =66
-                    ZIndex: =20
-
-                Label1_28 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    Size: =13
-                    Text: |-
-                        ="Task Deadline: "
-                    Width: =132
-                    X: =688
-                    Y: =66
-                    ZIndex: =21
-
-                Label1_29 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(102, 138, 166, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    PaddingTop: =7
-                    Size: =13
-                    Text: =ThisItem.Deadline
-                    Width: =234
-                    X: =820
-                    Y: =66
-                    ZIndex: =22
-
-                Label1_30 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    OnSelect: =Select(Parent)
-                    PaddingLeft: =10
-                    Size: =13
-                    Text: |-
-                        ="Working Hazards: "
-                    Width: =164
-                    Y: =100
-                    ZIndex: =25
-
-                Label1_31 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(102, 138, 166, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =45
-                    OnSelect: =Select(Parent)
-                    Overflow: =Overflow.Scroll
-                    PaddingLeft: =10
-                    PaddingTop: =7
-                    Size: =13
-                    Text: =ThisItem.Hazards
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =1178
-                    X: =150
-                    Y: =105
-                    ZIndex: =45
-
             "'Customer Details_1' As group":
                 Height: =5
                 Width: =5
@@ -3473,27 +3168,6 @@
                     X: =281
                     Y: =204
                     ZIndex: =24
-
-                Image6 As image:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderThickness: =4
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    Image: =If(IsBlank(ThisItem.'Customer Email') Or (Office365Users.UserPhotoMetadata(ThisItem.'Customer Email').HasPhoto = false), SampleHead, Office365Users.UserPhotoV2(ThisItem.'Customer Email'))
-                    OnSelect: =Select(Parent)
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    RadiusBottomLeft: =15
-                    RadiusBottomRight: =15
-                    RadiusTopLeft: =15
-                    RadiusTopRight: =15
-                    X: =17
-                    Y: =217
-                    ZIndex: =26
 
                 Label1_34 As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -4076,6 +3750,392 @@
                     Y: =Button14_5.Y + 300
                     ZIndex: =49
 
+            Icon17 As icon.LogJournal:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(105, 121, 126, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =110
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.LogJournal
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =119
+                X: =17
+                Y: =217
+                ZIndex: =53
+
+            "'Task Details_1' As group":
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =53
+
+                Button14_3 As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =0
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(84, 130, 171, 1)
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =33
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =15
+                    RadiusTopRight: =15
+                    Size: =15
+                    Text: ="Task Details"
+                    Width: =1387
+                    ZIndex: =1
+
+                Rectangle19_3 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledFill: =RGBA(166, 166, 166, 1)
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(230, 230, 230, 1)
+                    FocusedBorderThickness: =4
+                    Height: =117
+                    OnSelect: =
+                    Width: =1387
+                    Y: =33
+                    ZIndex: =2
+
+                Label1_17 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    Size: =13
+                    Text: |-
+                        ="Task Date: "
+                    Width: =105
+                    Y: =33
+                    ZIndex: =10
+
+                Label1_19 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    Size: =13
+                    Text: |-
+                        ="Task Time: "
+                    Width: =102
+                    X: =287
+                    Y: =33
+                    ZIndex: =12
+
+                Label1_21 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    Size: =13
+                    Text: |-
+                        ="Task Location: "
+                    Width: =126
+                    X: =564
+                    Y: =33
+                    ZIndex: =14
+
+                Label1_22 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(102, 138, 166, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    PaddingTop: =7
+                    Size: =13
+                    Text: =ThisItem.'Task Location'
+                    Width: =695
+                    X: =687
+                    Y: =33
+                    ZIndex: =15
+
+                Label1_23 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    Size: =13
+                    Text: |-
+                        ="Service Required: "
+                    Width: =164
+                    Y: =66
+                    ZIndex: =16
+
+                Label1_24 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(102, 138, 166, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    PaddingTop: =7
+                    Size: =13
+                    Text: =ThisItem.'Service they Require'
+                    Width: =202
+                    X: =164
+                    Y: =66
+                    ZIndex: =17
+
+                Label1_25 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    Size: =13
+                    Text: |-
+                        ="Tail Number: "
+                    Width: =128
+                    X: =366
+                    Y: =66
+                    ZIndex: =18
+
+                Label1_26 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(102, 138, 166, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    PaddingTop: =7
+                    Size: =13
+                    Text: =ThisItem.'Tail Number'
+                    Width: =112
+                    X: =535
+                    Y: =60
+                    ZIndex: =19
+
+                Label1_27 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(102, 138, 166, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    PaddingTop: =7
+                    Size: =13
+                    Text: =If(IsBlankOrError(ThisItem.'Tail Number'), "N/A", ThisItem.'Tail Number')
+                    Width: =206
+                    X: =481
+                    Y: =66
+                    ZIndex: =20
+
+                Label1_28 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    Size: =13
+                    Text: |-
+                        ="Task Deadline: "
+                    Width: =132
+                    X: =688
+                    Y: =66
+                    ZIndex: =21
+
+                Label1_29 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(102, 138, 166, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    PaddingTop: =7
+                    Size: =13
+                    Text: =ThisItem.Deadline
+                    Width: =234
+                    X: =820
+                    Y: =66
+                    ZIndex: =22
+
+                Label1_30 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    Size: =13
+                    Text: |-
+                        ="Working Hazards: "
+                    Width: =164
+                    Y: =100
+                    ZIndex: =25
+
+                Label1_31 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(102, 138, 166, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =45
+                    OnSelect: =Select(Parent)
+                    Overflow: =Overflow.Scroll
+                    PaddingLeft: =10
+                    PaddingTop: =7
+                    Size: =13
+                    Text: =ThisItem.Hazards
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =1178
+                    X: =150
+                    Y: =105
+                    ZIndex: =45
+
+                "'Task Time_1' As text":
+                    Align: =Align.Center
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    Default: =If(IsBlank(Text(cmp_TimePicker_3.value,DateTimeFormat.ShortTime24,"en-GB")),'Approvals Gallery'.Selected.'Start Time',Text(cmp_TimePicker_3.value,DateTimeFormat.ShortTime24,"en-GB"))
+                    DisabledBorderColor: =RGBA(128, 128, 128, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =28
+                    HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverColor: =RGBA(51, 51, 51, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    PressedBorderColor: =RGBA(105, 121, 126, 1)
+                    PressedColor: =RGBA(51, 51, 51, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Visible: =If(PopupVis, true, false)
+                    Width: =164
+                    X: =386
+                    Y: =38
+                    ZIndex: =51
+
+                Icon3_2 As icon.Clock:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(105, 121, 126, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =28
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Clock
+                    OnSelect: =Set(varShowTimePicker, true)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =If(PopupVis, true, false)
+                    Width: =18
+                    X: =527
+                    Y: =38
+                    ZIndex: =52
+
         Rectangle22 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -4135,56 +4195,4 @@
             X: =146
             Y: =150
             ZIndex: =47
-
-        "'Task Time_1' As text":
-            Align: =Align.Center
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            Default: =If(IsBlank(Text(cmp_TimePicker_3.value,DateTimeFormat.ShortTime24,"en-GB")),'Approvals Gallery'.Selected.'Start Time',Text(cmp_TimePicker_3.value,DateTimeFormat.ShortTime24,"en-GB"))
-            DisabledBorderColor: =RGBA(128, 128, 128, 1)
-            DisabledColor: =RGBA(0, 0, 0, 1)
-            DisabledFill: =RGBA(255, 255, 255, 1)
-            DisplayMode: =DisplayMode.Disabled
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =28
-            HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            PressedBorderColor: =RGBA(105, 121, 126, 1)
-            PressedColor: =RGBA(51, 51, 51, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =13
-            Visible: =If(PopupVis, true, false)
-            Width: =164
-            X: =532
-            Y: =300
-            ZIndex: =48
-
-        Icon3_2 As icon.Clock:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(105, 121, 126, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =28
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Clock
-            OnSelect: =Set(varShowTimePicker, true)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(PopupVis, true, false)
-            Width: =18
-            X: =675
-            Y: =300
-            ZIndex: =63
 

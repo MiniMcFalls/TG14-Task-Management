@@ -616,9 +616,11 @@
             ZIndex: =20
 
         BadgeCanvas4 As Badge:
-            Appearance: ='PowerApps.CoreControls.BadgeCanvas.Appearance'.Tint
+            Appearance: ='BadgeCanvas.Appearance'.Tint
             DisplayMode: =DisplayMode.Edit
             Height: =149
+            Shape: ="Circular"
+            ThemeColor: ="Brand"
             Width: =90
             X: =30
             Y: =19
