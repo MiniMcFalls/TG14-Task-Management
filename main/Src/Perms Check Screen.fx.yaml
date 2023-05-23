@@ -1,4 +1,5 @@
 "'Perms Check Screen' As screen.'tabletLayout_Success_ver3.0'":
+    BackgroundImage: ='Phot Open Screen 01-01-01'
     Fill: =varBackgroundFill
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: =
@@ -12665,23 +12666,6 @@
         Y: =615
         ZIndex: =1
 
-    Image2 As image:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =930
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: ='Phot Open Screen-01-01-01'
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Tooltip: =
-        Width: =1786
-        X: =32
-        ZIndex: =2
-
     LblSuccessMsg3_2 As label:
         Align: =Align.Center
         Color: =RGBA(51, 51, 51, 1)
@@ -12696,7 +12680,7 @@
             
             This shouldn't take long"
         Width: =765
-        X: =993
+        X: =1009
         Y: =380
         ZIndex: =3
 
@@ -12721,7 +12705,7 @@
         Height: =149
         SpinnerSize: ='Spinner.SpinnerSize'.Huge
         Width: =200
-        X: =1275
+        X: =1291
         Y: =560
         ZIndex: =10
 
@@ -12742,7 +12726,7 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Width: =130
-            X: =1311
+            X: =1327
             Y: =250
             ZIndex: =4
 
@@ -12756,7 +12740,7 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Width: =120
-            X: =1316
+            X: =1332
             Y: =255
             ZIndex: =5
 
@@ -12770,7 +12754,7 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Width: =110
-            X: =1321
+            X: =1337
             Y: =260
             ZIndex: =6
 
@@ -12782,7 +12766,7 @@
             Fill: =RGBA(60, 110, 113, 80%)
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            X: =1326
+            X: =1342
             Y: =265
             ZIndex: =7
 
@@ -12799,7 +12783,7 @@
             PaddingTop: =24
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =iconCircle3_11.Width
-            X: =1326
+            X: =1342
             Y: =265
             ZIndex: =8
 
