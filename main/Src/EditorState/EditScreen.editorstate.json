@@ -11262,7 +11262,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
@@ -23851,7 +23851,7 @@
         {
           "Category": "Data",
           "PropertyName": "Value",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -30326,7 +30326,7 @@
         {
           "Category": "Data",
           "PropertyName": "Value",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",

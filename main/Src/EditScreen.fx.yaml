@@ -366,7 +366,8 @@ EditScreen As screen:
                     'Photog #1': 'Main Form - Photog #1'.Selected.Value,
                     'Photog #2': 'Main Form - Photog #2'.Selected.Value,
                     Deadline: 'Main Form - Deadline'.Value,
-                    Unit: {Value: gblUserLocPerm}
+                    Unit: {Value: gblUserLocPerm},
+                    'Link to Photos': 'HO Popup - SharePoint Link'.Value
                 }
             );
             Switch(
@@ -560,7 +561,7 @@ EditScreen As screen:
                 IsBlank(CalendarEventsGallery1.Selected.'Customer Email'),
                 "",
                 If(
-                    !IsBlank('HO Popup - SharePoint Link'.Value) && 'HO Popup - Status'.Selected.Value = "COMPLETED",
+                    And(!IsBlank('HO Popup - SharePoint Link'.Value), 'HO Popup - Status'.Selected.Value = "COMPLETED"),
                     Office365Outlook.SendEmail(
                         CalendarEventsGallery1.Selected.'Customer Email',
                         Concatenate(
@@ -1872,7 +1873,7 @@ EditScreen As screen:
     "'Main Form - Deadline' As 'Date picker'":
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        Value: =CalendarEventsGallery1.Selected.Deadline
+        Value: =DateValue(CalendarEventsGallery1.Selected.Deadline, "en-GB")
         Width: =150
         X: =325
         Y: =200
@@ -1990,7 +1991,7 @@ EditScreen As screen:
     "'Main Form - Task Date' As 'Date picker'":
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        Value: =CalendarEventsGallery1.Selected.'Task Date'
+        Value: =DateValue(CalendarEventsGallery1.Selected.'Task Date',"en-GB")
         Width: =135
         X: =43
         Y: =200
