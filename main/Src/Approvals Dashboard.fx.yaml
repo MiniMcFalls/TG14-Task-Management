@@ -3858,7 +3858,20 @@
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
-                    Default: =Switch(ThisItem.'Project Category'.Value, "Engineering", "No Further Requirements", "PR/Media", ThisItem.'Media/PR Request Cont.', "Visit", ThisItem.'Visit Details', "Official Group", ThisItem.'Official Groups', "Portrait", ThisItem.'Portrait Request')
+                    Default: |-
+                        =Switch(
+                            ThisItem.'Project Category'.Value,
+                            "Engineering",
+                            "No Further Requirements",
+                            "PR/Media",
+                            ThisItem.'Media/PR Request Cont.',
+                            "Visit",
+                            ThisItem.'Visit Details',
+                            "Official Group",
+                            ThisItem.'Official Groups',
+                            "Portrait",
+                            ThisItem.'Portrait Request'
+                        )
                     DelayOutput: =true
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
