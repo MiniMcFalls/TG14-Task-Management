@@ -568,11 +568,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                     ),
                     {
                         Title: cmp_ApprovalsPopup.SelectedJob.Title,
-                        Status: cmp_ApprovalsPopup.SelectedJob.Status,
-                        'Task Date': cmp_ApprovalsPopup.SelectedJob.'Task Date',
-                        'Start Time': cmp_ApprovalsPopup.SelectedJob.'Start Time', 
-                        'Project Category': cmp_ApprovalsPopup.SelectedJob.'Project Category',
-                        'Service they Require':cmp_ApprovalsPopup.SelectedJob.'Service Required'
+                        'Response ID': cmp_ApprovalsPopup.SelectedJob.ResponseID,
+                        Status:""
                     }
                 );
                 Set(

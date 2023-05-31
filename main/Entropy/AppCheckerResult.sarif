@@ -45841,10 +45841,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 582,
+                  "charLength": 318,
                   "charOffset": 120,
                   "snippet": {
-                    "text": "Patch(\n    'TG14 Task Information',\n    First(\n        Filter(\n            'TG14 Task Information',\n            ID = cmp_ApprovalsPopup.SelectedJob.ID\n        )\n    ),\n    {\n        Title: cmp_ApprovalsPopup.SelectedJob.Title,\n        Status: cmp_ApprovalsPopup.SelectedJob.Status,\n        'Task Date': cmp_ApprovalsPopup.SelectedJob.'Task Date',\n        'Start Time': cmp_ApprovalsPopup.SelectedJob.'Start Time', \n        'Project Category': cmp_ApprovalsPopup.SelectedJob.'Project Category',\n        'Service they Require':cmp_ApprovalsPopup.SelectedJob.'Service Required'\n    }\n)"
+                    "text": "Patch(\n    'TG14 Task Information',\n    First(\n        Filter(\n            'TG14 Task Information',\n            ID = cmp_ApprovalsPopup.SelectedJob.ID\n        )\n    ),\n    {\n        Title: cmp_ApprovalsPopup.SelectedJob.Title,\n        'Response ID': cmp_ApprovalsPopup.SelectedJob.ResponseID,\n        Status:\"\"\n    }\n)"
                   }
                 }
               },
@@ -45881,10 +45881,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 408,
+                  "charLength": 144,
                   "charOffset": 292,
                   "snippet": {
-                    "text": "{\n        Title: cmp_ApprovalsPopup.SelectedJob.Title,\n        Status: cmp_ApprovalsPopup.SelectedJob.Status,\n        'Task Date': cmp_ApprovalsPopup.SelectedJob.'Task Date',\n        'Start Time': cmp_ApprovalsPopup.SelectedJob.'Start Time', \n        'Project Category': cmp_ApprovalsPopup.SelectedJob.'Project Category',\n        'Service they Require':cmp_ApprovalsPopup.SelectedJob.'Service Required'\n    }"
+                    "text": "{\n        Title: cmp_ApprovalsPopup.SelectedJob.Title,\n        'Response ID': cmp_ApprovalsPopup.SelectedJob.ResponseID,\n        Status:\"\"\n    }"
                   }
                 }
               },
