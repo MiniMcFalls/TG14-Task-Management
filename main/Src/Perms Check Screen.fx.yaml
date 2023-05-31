@@ -199,6 +199,11 @@
                 Set(
                     gblUserLocPerm,
                     "Coningsby"
+                ),
+                gblCurrentUser.mail = "Peter.George289@mod.gov.uk",
+                Set(
+                    gblUserLocPerm,
+                    "Leeming"
                 )
             );
             If(

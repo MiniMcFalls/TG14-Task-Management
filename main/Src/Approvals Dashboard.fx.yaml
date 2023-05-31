@@ -659,15 +659,24 @@
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.NextArrow
             OnSelect: |-
-                =Select(Parent); Set(PopupVis, true);Set(gblSelectedJob, Parent.Selected);Set(gblConflictsCalendarTasks, SortByColumns(
-                    Filter(
-                        'TG14 Task Information',
-                        'Task Date' = 'Approvals Gallery'.Selected.'Task Date',
-                        'Approval Status'.Value = "Approved" ,
-                        Unit.Value = gblUserLocPerm
-                    ),
-                    "StartTime"
-                ))
+                =Select(Parent);
+                Set(
+                    PopupVis,
+                    true
+                );
+                Set(
+                    gblSelectedJob,
+                    Parent.Selected
+                );
+                Set(
+                    gblConflictsCalendarTasks,
+                        Filter(
+                            'TG14 Task Information',
+                            'Task Date' = 'Approvals Gallery'.Selected.'Task Date',
+                            'Approval Status'.Value = "Approved",
+                            Unit.Value = gblUserLocPerm
+                        )
+                )
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
