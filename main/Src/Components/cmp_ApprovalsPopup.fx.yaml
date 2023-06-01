@@ -63,7 +63,6 @@ cmp_ApprovalsPopup As CanvasComponent:
             'Date Submitted': gblSelectedJob.'Date Submitted',
             Comments: gblSelectedJob.Comments
         }
-    TimePickerInput: =cmp_TimePicker_3.value
     Width: =1850
     X: =0
     Y: =0
@@ -585,7 +584,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                         'Response ID': cmp_ApprovalsPopup.SelectedJob.ResponseID,
                         Status: cmp_ApprovalsPopup.SelectedJob.Status,
                         'Task Date': cmp_ApprovalsPopup.SelectedJob.'Task Date',
-                        'Start Time': cmp_ApprovalsPopup.SelectedJob.'Start Time',
+                        'Start Time': TextCanvas3.Text,
                         'Project Category': cmp_ApprovalsPopup.SelectedJob.'Project Category',
                         'Service they Require': cmp_ApprovalsPopup.SelectedJob.'Service Required',
                         InternalUpdates: {Value: "Yes"},
@@ -671,9 +670,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                     Set(
                         varCustEmailSent,
                         false
-                    ),
-                    Reset(cmp_TimePicker_3)
-                );
+                ));
                 If(
                     cmp_ApprovalsPopup.SelectedJob.Unit.Value = "Lossiemouth",
                     Office365Groups.CreateCalendarEvent(
@@ -790,7 +787,15 @@ cmp_ApprovalsPopup As CanvasComponent:
         HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.CancelBadge
-        OnSelect: =Set(PopupVis, false)
+        OnSelect: |
+            =Set(
+                PopupVis,
+                false
+            );
+            Set(
+                varTimeValue,
+                Blank()
+            );
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1222,6 +1227,19 @@ cmp_ApprovalsPopup As CanvasComponent:
             Y: =166
             ZIndex: =19
 
+        TextCanvas3 As Text:
+            Alignment: ='TextCanvas.Alignment'.Center
+            DisplayMode: =DisplayMode.Edit
+            Height: =22
+            Text: =If(IsBlank(varTimeValue),cmp_ApprovalsPopup.SelectedJob.'Start Time',Text(varTimeValue,DateTimeFormat.ShortTime24,"en-GB"))
+            Truncate: =false
+            Underline: =false
+            Width: =130
+            Wrap: =false
+            X: =192
+            Y: =165
+            ZIndex: =20
+
         Group7 As group:
             Height: =5
             Width: =5
@@ -1275,7 +1293,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 ZIndex: =7
 
             BadgeCanvas6 As Badge:
-                Content: =If(IsBlank(varTimeValue),cmp_ApprovalsPopup.SelectedJob.'Start Time',Text(varTimeValue,DateTimeFormat.ShortTime24,"en-GB"))
+                Content: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Shape: ='BadgeCanvas.Shape'.Rounded
@@ -2002,7 +2020,15 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =430
             Items: =ForAll(Sequence(23), Text(Value,"[$-en-GB]00"))
             Layout: =Layout.Vertical
-            OnSelect: =
+            OnSelect: |-
+                =Set(
+                    varTimeValue,
+                    Time(
+                        Value(gal_TimePicker_Hours_1.Selected.Value),
+                        Value(gal_TimePicker_Minutes_1.Selected.Value),
+                        0
+                    )
+                )
             ShowScrollbar: =false
             TemplatePadding: =2
             TemplateSize: =60
@@ -2088,8 +2114,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                 =Set(
                     varTimeValue,
                     Time(
-                        Value(gal_TimePicker_Hours.Selected.Value),
-                        Value(gal_TimePicker_Minutes.Selected.Value),
+                        Value(gal_TimePicker_Hours_1.Selected.Value),
+                        Value(gal_TimePicker_Minutes_1.Selected.Value),
                         0
                     )
                 )

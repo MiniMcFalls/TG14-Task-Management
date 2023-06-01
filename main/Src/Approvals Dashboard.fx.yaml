@@ -1407,30 +1407,6 @@
         Visible: =PopupVis
         ZIndex: =51
 
-    "'Edit Screen - Time Picker Blocker_4' As label":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(204, 204, 204, 0.6)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =930
-        OnSelect: =Set(varShowTimePicker, false)
-        Size: =13
-        Text: =
-        Visible: =varShowTimePicker
-        Width: =1850
-        ZIndex: =56
-
-    cmp_TimePicker_3 As cmp_TimePicker:
-        Visible: =varShowTimePicker
-        X: =866
-        Y: =320
-        ZIndex: =57
-
     "'Reject Popup' As group":
         Height: =5
         Width: =5
