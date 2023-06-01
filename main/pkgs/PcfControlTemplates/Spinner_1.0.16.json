@@ -1,7 +1,7 @@
 {
   "AuthConfigProperties": [
     {
-      "AccessibilityLabel": {
+      "AccessibleLabel": {
         "EnabledForFlyout": false,
         "HelperUI": null,
         "Hidden": false,
@@ -297,9 +297,9 @@
       "Category": "data",
       "DefaultValue": "",
       "Description": "Accessibility Label for Spinner component",
-      "DescriptionResourceString": "Spinner_AccessibilityLabel_Desc_Key",
+      "DescriptionResourceString": "Spinner_AccessibleLabel_Desc_Key",
       "DisplayName": "Accessibility Label",
-      "DisplayNameResourceString": "Spinner_AccessibilityLabel_Display_Key",
+      "DisplayNameResourceString": "Spinner_AccessibleLabel_Display_Key",
       "EnumValues": [],
       "HelperUI": null,
       "Hidden": false,
@@ -308,7 +308,7 @@
       "IsPrimaryInput": false,
       "IsPrimaryOutput": false,
       "IsResettable": false,
-      "Name": "AccessibilityLabel",
+      "Name": "AccessibleLabel",
       "ParentDataSetName": "",
       "PassThroughProperty": "",
       "PhoneDefaultValue": "",
@@ -610,28 +610,28 @@
       "IsControlSpecific": false,
       "LoadingOrder": 7,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.Spinner\",\"CustomControlId\":\"PowerApps.CoreControls.Spinner\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"Label\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"AccessibilityLabel\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Appearance\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Primary\"},\"LabelPosition\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"After\"},\"SpinnerSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Medium\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":null},\"Events\":null,\"CommonEvents\":null,\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
+      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.Spinner\",\"CustomControlId\":\"PowerApps.CoreControls.Spinner\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"Label\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"AccessibleLabel\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Appearance\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Primary\"},\"LabelPosition\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"After\"},\"SpinnerSize\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Medium\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":null},\"Events\":null,\"CommonEvents\":null,\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
       "Type": 3
     },
     {
       "IsControlSpecific": false,
       "LoadingOrder": 8,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"ManifestPropertyTypes\",\"Data\":{\"Properties\":[{\"Name\":\"Label\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"AccessibilityLabel\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Appearance\",\"Type\":\"Enum\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"LabelPosition\",\"Type\":\"Enum\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"SpinnerSize\",\"Type\":\"Enum\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"TabIndex\",\"Type\":\"Whole_None\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Tooltip\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"PCFTeamsTheme\",\"Type\":\"String\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"X\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Y\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Width\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Height\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Visible\",\"Type\":\"Boolean\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"DisplayMode\",\"Type\":\"DisplayMode\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true}]}}",
+      "Path": "{\"Id\":\"ManifestPropertyTypes\",\"Data\":{\"Properties\":[{\"Name\":\"Label\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"AccessibleLabel\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Appearance\",\"Type\":\"Enum\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"LabelPosition\",\"Type\":\"Enum\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"SpinnerSize\",\"Type\":\"Enum\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"TabIndex\",\"Type\":\"Whole_None\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Tooltip\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"PCFTeamsTheme\",\"Type\":\"String\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"X\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Y\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Width\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Height\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Visible\",\"Type\":\"Boolean\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"DisplayMode\",\"Type\":\"DisplayMode\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true}]}}",
       "Type": 3
     },
     {
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"1.0.9\",\"IsFirstParty\":true}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"1.0.16\",\"IsFirstParty\":true}}",
       "Type": 3
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_Spinner/Spinner.js",
+      "Path": "/PCFControls/PowerApps_CoreControls_Spinner/bundle.js",
       "Type": 0
     },
     {
@@ -967,7 +967,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Spinner_Display_Key\":\"Spinner\",\"Spinner_Desc_Key\":\"Let users visualise spinner/loading effect\",\"Spinner_Label_Display_Key\":\"Label\",\"Spinner_Label_Desc_Key\":\"Label for Spinner\",\"Spinner_AccessibilityLabel_Display_Key\":\"Accessibility Label\",\"Spinner_AccessibilityLabel_Desc_Key\":\"Accessibility Label for Spinner component\",\"Spinner_Appearance_Display_Key\":\"Appearance\",\"Spinner_Appearance_Desc_Key\":\"Appearance of Spinner\",\"Spinner_LabelPosition_Display_Key\":\"Label Position\",\"Spinner_LabelPosition_Desc_Key\":\"Define position for the label around the Spinner\",\"Spinner_SpinnerSize_Display_Key\":\"Spinner Size\",\"Spinner_SpinnerSize_Desc_Key\":\"Define size of Spinner\",\"Spinner_LabelPosition_Before\":\"Before\",\"Spinner_LabelPosition_After\":\"After\",\"Spinner_LabelPosition_Above\":\"Above\",\"Spinner_LabelPosition_Below\":\"Below\",\"Spinner_SpinnerSize_Tiny\":\"Tiny\",\"Spinner_SpinnerSize_ExtraSmall\":\"ExtraSmall\",\"Spinner_SpinnerSize_Small\":\"Small\",\"Spinner_SpinnerSize_Medium\":\"Medium\",\"Spinner_SpinnerSize_Large\":\"Large\",\"Spinner_SpinnerSize_ExtraLarge\":\"ExtraLarge\",\"Spinner_SpinnerSize_Huge\":\"Huge\",\"Spinner_Appearance_Primary\":\"Primary\",\"Spinner_Appearance_Inverted\":\"Inverted\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Spinner_Display_Key\":\"Spinner\",\"Spinner_Desc_Key\":\"Let users visualise spinner/loading effect\",\"Spinner_Label_Display_Key\":\"Label\",\"Spinner_Label_Desc_Key\":\"Label for Spinner\",\"Spinner_AccessibleLabel_Display_Key\":\"Accessibility Label\",\"Spinner_AccessibleLabel_Desc_Key\":\"Accessibility Label for Spinner component\",\"Spinner_Appearance_Display_Key\":\"Appearance\",\"Spinner_Appearance_Desc_Key\":\"Appearance of Spinner\",\"Spinner_LabelPosition_Display_Key\":\"Label Position\",\"Spinner_LabelPosition_Desc_Key\":\"Define position for the label around the Spinner\",\"Spinner_SpinnerSize_Display_Key\":\"Spinner Size\",\"Spinner_SpinnerSize_Desc_Key\":\"Define size of Spinner\",\"Spinner_LabelPosition_Before\":\"Before\",\"Spinner_LabelPosition_After\":\"After\",\"Spinner_LabelPosition_Above\":\"Above\",\"Spinner_LabelPosition_Below\":\"Below\",\"Spinner_SpinnerSize_Tiny\":\"Tiny\",\"Spinner_SpinnerSize_ExtraSmall\":\"ExtraSmall\",\"Spinner_SpinnerSize_Small\":\"Small\",\"Spinner_SpinnerSize_Medium\":\"Medium\",\"Spinner_SpinnerSize_Large\":\"Large\",\"Spinner_SpinnerSize_ExtraLarge\":\"ExtraLarge\",\"Spinner_SpinnerSize_Huge\":\"Huge\",\"Spinner_Appearance_Primary\":\"Primary\",\"Spinner_Appearance_Inverted\":\"Inverted\"}}}",
       "Type": 3
     },
     {
@@ -985,5 +985,5 @@
       "Type": 4
     }
   ],
-  "Version": "1.0.9"
+  "Version": "1.0.16"
 }

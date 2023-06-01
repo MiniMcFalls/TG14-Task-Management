@@ -12705,6 +12705,7 @@
         ZIndex: =9
 
     Spinner1 As Spinner:
+        AccessibleLabel: =""
         Appearance: ='Spinner.Appearance'.Primary
         DisplayMode: =DisplayMode.Edit
         Height: =149
