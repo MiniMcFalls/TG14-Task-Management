@@ -832,6 +832,46 @@ EditScreen As screen:
         Y: =200
         ZIndex: =25
 
+    "'Main Form - Task Date' As datepicker":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Color: =RGBA(51, 51, 51, 1)
+        DefaultDate: =DateValue(CalendarEventsGallery1.Selected.'Task Date', "en-GB")
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Font: =Font.'Segoe UI'
+        Height: =31
+        HoverDateFill: =RGBA(200, 200, 200, 1)
+        IconBackground: =RGBA(105, 121, 126, 1)
+        PaddingTop: =5
+        SelectedDateFill: =RGBA(105, 121, 126, 1)
+        Size: =11
+        Width: =135
+        X: =43
+        Y: =201
+        ZIndex: =26
+
+    "'Main Form - Deadline' As datepicker":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Color: =RGBA(51, 51, 51, 1)
+        DefaultDate: =DateValue(CalendarEventsGallery1.Selected.Deadline, "en-GB")
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Font: =Font.'Segoe UI'
+        Height: =32
+        HoverDateFill: =RGBA(200, 200, 200, 1)
+        IconBackground: =RGBA(105, 121, 126, 1)
+        PaddingTop: =5
+        SelectedDateFill: =RGBA(105, 121, 126, 1)
+        Size: =11
+        Width: =150
+        X: =325
+        Y: =200
+        ZIndex: =27
+
     "'Main Form - Task Date Title' As label":
         Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -852,7 +892,7 @@ EditScreen As screen:
         Wrap: =false
         X: =43
         Y: =156
-        ZIndex: =26
+        ZIndex: =28
 
     "'Main Form - Task Time Title' As label":
         Align: =Align.Center
@@ -874,7 +914,7 @@ EditScreen As screen:
         Wrap: =false
         X: =198
         Y: =156
-        ZIndex: =27
+        ZIndex: =29
 
     "'Main Form - Time Picker Icon' As icon.Clock":
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -895,7 +935,7 @@ EditScreen As screen:
         Width: =18
         X: =264
         Y: =201
-        ZIndex: =28
+        ZIndex: =30
 
     "'Main Form - Deadline Title' As label":
         Align: =Align.Center
@@ -917,7 +957,7 @@ EditScreen As screen:
         Wrap: =false
         X: =312
         Y: =156
-        ZIndex: =29
+        ZIndex: =31
 
     "'Main Form - Pill 3' As button":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -945,7 +985,7 @@ EditScreen As screen:
         Width: =677
         X: =520
         Y: =153
-        ZIndex: =30
+        ZIndex: =32
 
     "'Main Form - Photog #2' As Dropdown.pcfdataset":
         DefaultSelectedItems: |-
@@ -1159,7 +1199,7 @@ EditScreen As screen:
         Width: =295
         X: =657
         Y: =210
-        ZIndex: =31
+        ZIndex: =33
 
         Value4_1 As pcfDataField.textualColumn:
             FieldDisplayName: ="Value"
@@ -1381,7 +1421,7 @@ EditScreen As screen:
         Width: =295
         X: =657
         Y: =168
-        ZIndex: =32
+        ZIndex: =34
 
         Value4 As pcfDataField.textualColumn:
             FieldDisplayName: ="Value"
@@ -1411,7 +1451,7 @@ EditScreen As screen:
         Wrap: =false
         X: =1307
         Y: =61
-        ZIndex: =33
+        ZIndex: =35
 
     "'Main Form - Photog 1 Title' As label":
         Align: =Align.Center
@@ -1433,7 +1473,7 @@ EditScreen As screen:
         Wrap: =false
         X: =542
         Y: =161
-        ZIndex: =34
+        ZIndex: =36
 
     "'Main Form - Photog 2 Title' As label":
         Align: =Align.Center
@@ -1456,56 +1496,6 @@ EditScreen As screen:
         Wrap: =false
         X: =542
         Y: =201
-        ZIndex: =35
-
-    "'Main Form - QA Check Title' As label":
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =44
-        PaddingLeft: =0
-        Size: =13
-        Text: ="QA Check"
-        Underline: =true
-        Width: =202
-        Wrap: =false
-        X: =973
-        Y: =161
-        ZIndex: =36
-
-    "'Main Form - Pill 4' As button":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(230, 230, 230, 1)
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(195, 201, 203, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =107
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
-        Size: =15
-        Text: =""
-        Width: =615
-        X: =1216
-        Y: =153
         ZIndex: =37
 
     "'Edit Screen - Status Header' As group":
@@ -1572,6 +1562,56 @@ EditScreen As screen:
             Y: =1
             ZIndex: =16
 
+    "'Main Form - QA Check Title' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        PaddingLeft: =0
+        Size: =13
+        Text: ="QA Check"
+        Underline: =true
+        Width: =202
+        Wrap: =false
+        X: =973
+        Y: =161
+        ZIndex: =38
+
+    "'Main Form - Pill 4' As button":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(230, 230, 230, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(195, 201, 203, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =107
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =15
+        Text: =""
+        Width: =615
+        X: =1216
+        Y: =153
+        ZIndex: =39
+
     "'Main Form - Task Location Title' As label":
         Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1592,7 +1632,7 @@ EditScreen As screen:
         Wrap: =false
         X: =1229
         Y: =153
-        ZIndex: =38
+        ZIndex: =40
 
     "'Edit Screen - Pill 5' As button":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1620,7 +1660,7 @@ EditScreen As screen:
         Width: =902
         X: =19
         Y: =279
-        ZIndex: =39
+        ZIndex: =41
 
     "'Main Form - Pill 6' As button":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1648,7 +1688,7 @@ EditScreen As screen:
         Width: =519
         X: =939
         Y: =279
-        ZIndex: =40
+        ZIndex: =42
 
     "'Main Form - Working Hazards Title' As label":
         Align: =Align.Center
@@ -1670,7 +1710,7 @@ EditScreen As screen:
         Wrap: =false
         X: =43
         Y: =279
-        ZIndex: =41
+        ZIndex: =43
 
     "'Main Form - Notes Title' As label":
         Align: =Align.Center
@@ -1692,7 +1732,7 @@ EditScreen As screen:
         Wrap: =false
         X: =962
         Y: =279
-        ZIndex: =42
+        ZIndex: =44
 
     "'Main Form - Pill 7' As button":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1720,7 +1760,7 @@ EditScreen As screen:
         Width: =1816
         X: =15
         Y: =397
-        ZIndex: =43
+        ZIndex: =45
 
     "'Main Form - Task Requirements Title' As label":
         AutoHeight: =true
@@ -1741,7 +1781,7 @@ EditScreen As screen:
         Wrap: =false
         X: =43
         Y: =394
-        ZIndex: =44
+        ZIndex: =46
 
     "'Main Form - Pill 8' As button":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1770,7 +1810,7 @@ EditScreen As screen:
         Width: =1816
         X: =15
         Y: =567
-        ZIndex: =45
+        ZIndex: =47
 
     "'Main Form - Additional Details' As 'Text input'":
         DelayOutput: =true
@@ -1782,7 +1822,7 @@ EditScreen As screen:
         Width: =1753
         X: =43
         Y: =597
-        ZIndex: =46
+        ZIndex: =48
 
     "'Main Form - Additional Details Title' As label":
         AutoHeight: =true
@@ -1804,7 +1844,7 @@ EditScreen As screen:
         Wrap: =false
         X: =43
         Y: =564
-        ZIndex: =47
+        ZIndex: =49
 
     Rectangle25 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1820,7 +1860,7 @@ EditScreen As screen:
         Width: =149
         X: =1150
         Y: =101
-        ZIndex: =48
+        ZIndex: =50
 
     "'Main Form - QA Check' As Dropdown.pcfdataset":
         DefaultSelectedItems: =CalendarEventsGallery1.Selected.'QA Check'
@@ -1830,7 +1870,7 @@ EditScreen As screen:
         Width: =190
         X: =981
         Y: =210
-        ZIndex: =49
+        ZIndex: =51
 
         Value5 As pcfDataField.textualColumn:
             FieldDisplayName: ="Value"
@@ -1848,7 +1888,7 @@ EditScreen As screen:
         Width: =849
         X: =43
         Y: =316
-        ZIndex: =50
+        ZIndex: =52
 
     "'Main Form - Notes' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
@@ -1858,7 +1898,7 @@ EditScreen As screen:
         Width: =488
         X: =954
         Y: =316
-        ZIndex: =51
+        ZIndex: =53
 
     "'Main Form - Task Location' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
@@ -1868,7 +1908,7 @@ EditScreen As screen:
         Width: =559
         X: =1244
         Y: =189
-        ZIndex: =52
+        ZIndex: =54
 
     "'Main Form - Task Requirements' As 'Text input'":
         DelayOutput: =true
@@ -1879,7 +1919,7 @@ EditScreen As screen:
         Width: =1757
         X: =39
         Y: =433
-        ZIndex: =54
+        ZIndex: =55
 
     HtmlText2 As htmlViewer:
         Height: =33
@@ -1938,7 +1978,7 @@ EditScreen As screen:
         Width: =1245
         X: =605
         Y: =897
-        ZIndex: =55
+        ZIndex: =56
 
     Timer3 As timer:
         BorderColor: =RGBA(105, 121, 126, 1)
@@ -1977,7 +2017,7 @@ EditScreen As screen:
         Reset: =true
         Start: =If(varCloseTimer = true, true)
         Visible: =false
-        ZIndex: =56
+        ZIndex: =57
 
     "'Edit Screen - Time Picker Blocker' As label":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -2843,48 +2883,6 @@ EditScreen As screen:
         X: =339
         Y: =259
         ZIndex: =134
-
-    "'Main Form - Task Date' As datepicker":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Color: =RGBA(51, 51, 51, 1)
-        DateTimeZone: =DateTimeZone.UTC
-        DefaultDate: =DateValue(CalendarEventsGallery1.Selected.'Task Date', "en-GB")
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        Height: =31
-        HoverDateFill: =RGBA(200, 200, 200, 1)
-        IconBackground: =RGBA(105, 121, 126, 1)
-        PaddingTop: =5
-        SelectedDateFill: =RGBA(105, 121, 126, 1)
-        Size: =11
-        Width: =135
-        X: =43
-        Y: =201
-        ZIndex: =135
-
-    "'Main Form - Deadline' As datepicker":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Color: =RGBA(51, 51, 51, 1)
-        DateTimeZone: =DateTimeZone.UTC
-        DefaultDate: =DateValue(CalendarEventsGallery1.Selected.Deadline, "en-GB")
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        Height: =32
-        HoverDateFill: =RGBA(200, 200, 200, 1)
-        IconBackground: =RGBA(105, 121, 126, 1)
-        PaddingTop: =5
-        SelectedDateFill: =RGBA(105, 121, 126, 1)
-        Size: =11
-        Width: =150
-        X: =325
-        Y: =200
-        ZIndex: =136
 
     Group5 As group:
         Height: =5

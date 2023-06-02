@@ -1,0 +1,57 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": true,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": true,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "cmp_LoanCard",
+    "TemplateGuid": "b66d95eaf31a4b3fb9ab4bf9adc199d6"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Pill Background",
+      "Hidden": false,
+      "Name": "PillBackground",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.331\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Conflicts Calendar Tasks",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "ConflictsCalendarTasks",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.331\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"ApprovalStatus\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Author\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Claims\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Department\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"DisplayName\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Email\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"JobTitle\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Picture\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"CD\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Calendar_x0020_Title\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Comments\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"ComplianceAssetId\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"ContactNumber\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Created\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Customer\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"CustomerEmail\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"DVD\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"DateSubmitted\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Deadline\",\"Kind\":\"Date\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Editor\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Claims\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Department\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"DisplayName\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Email\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"JobTitle\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Picture\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Hazards\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"ID\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Image_x0020_Reference\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"InternalUpdates\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"LMContactNumber\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"LMRankName\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"LMSection\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"LM_x0020_O365_x0020_data\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"LinkAutoEmailed\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"LinktoPhotos\",\"Kind\":\"Hyperlink\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Modified\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"No1sPortrait\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"No_x0020_of_x0020_Copies\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Notes\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"O365_x0020_Data\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Claims\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Department\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"DisplayName\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Email\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"JobTitle\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Picture\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"OData__ColorTag\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"OData__dlc_ExpireDate\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"OfficialGroups\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"OtherFormResponses\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Out_x0020_Of_x0020_Hours\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"POCifDifferent\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"PPC_x0020_Prints\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Photog_x0020__x0023_1\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Photog_x0020__x0023_2\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"PortraitRequest\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Print_x0020_Finish\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Print_x0020_Size\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Prints\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"QA_x0020_Check\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Rank\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"ResponseID\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"ResponseIDNum\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Section\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"ServicetheyRequire\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Soft_x0020_Copy\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"StartTime\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Status_x0020_Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TLB\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TailNumber\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TaskDate\",\"Kind\":\"Date\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TaskLocation\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TaskRequirements\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TaskType\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Title\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Total_x0020_Hours\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Unit\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"UpdatedByFlow\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Video\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"VisitDetails\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{Attachments}\",\"Kind\":\"Attachment\",\"EnumString\":\"\",\"Attachment\":{\"Version\":\"1.331\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"AbsoluteUri\",\"Kind\":\"Hyperlink\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"DisplayName\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Id\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Value\",\"Kind\":\"Hyperlink\",\"EnumString\":\"\",\"Type\":[]}]}}},{\"Name\":\"{FilenameWithExtension}\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{FullPath}\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{HasAttachments}\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{Identifier}\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{IsFolder}\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{Link}\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{ModerationComment}\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{ModerationStatus}\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{Name}\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{Path}\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{Thumbnail}\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Large\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Medium\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Small\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"{TriggerWindowEndToken}\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{TriggerWindowStartToken}\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"{VersionNumber}\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Custom property 1",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "CustomProperty1",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.331\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"SampleBooleanField\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"SampleNumberField\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"SampleStringField\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "638213080890399785",
+  "Name": "b66d95eaf31a4b3fb9ab4bf9adc199d6",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "9e0ddfb4b3ee492fbea501ea288a07cd",
+  "Version": "638210497666468763"
+}

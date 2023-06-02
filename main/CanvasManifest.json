@@ -96,7 +96,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 1,
+    "BindingErrorCount": 36,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -109,13 +109,13 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "4898e49c-859c-42ce-8cc6-38398c961004",
-    "Id": "856296a4-3105-4e36-a816-9bb4f196b1d9",
+    "Id": "c2ce89b7-ab28-4935-8e65-e954c4f1fd2b",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
     "Name": "TG14 CRM Tool",
     "OriginatingVersion": "1.321",
-    "ParserErrorCount": 0
+    "ParserErrorCount": 3
   },
   "PublishInfo": {
     "AppName": "TG14 CRM Tool",
@@ -134,7 +134,7 @@
     "App Admin",
     "Section Admin",
     "1177 View",
-    "Asset Tracker",
+    "Asset R&D",
     "Approvals Dashboard",
     "Approvals History",
     "Calendar - Day",
