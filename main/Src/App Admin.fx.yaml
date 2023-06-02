@@ -853,7 +853,7 @@
         OnSelect: |-
             =Set(
                 CurrentVer,
-                "2.12.6"
+                "2.12.7"
             );
             Patch(
                 'TG14 App Versions',

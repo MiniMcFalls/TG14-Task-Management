@@ -338,7 +338,7 @@ EditScreen As screen:
                     'Service they Require': 'Main Form - Service Required'.Selected.Value,
                     'Response ID': Value('Main Form - Response ID'.Value),
                     'Tail Number': 'Main Form - Tail Number'.Value,
-                    'Task Date': 'Main Form - Task Date'.Value,
+                    'Task Date': 'Main Form - Task Date'.SelectedDate,
                     'Start Time': 'Main Form - Task Time'.Value,
                     'QA Check': 'Main Form - QA Check'.Selected,
                     'Task Location': 'Main Form - Task Location'.Value,
@@ -365,7 +365,7 @@ EditScreen As screen:
                     UpdatedByFlow: {Value: "No"},
                     'Photog #1': 'Main Form - Photog #1'.Selected.Value,
                     'Photog #2': 'Main Form - Photog #2'.Selected.Value,
-                    Deadline: 'Main Form - Deadline'.Value,
+                    Deadline: 'Main Form - Deadline'.SelectedDate,
                     Unit: {Value: gblUserLocPerm},
                     'Link to Photos': 'HO Popup - SharePoint Link'.Value
                 }
@@ -436,7 +436,7 @@ EditScreen As screen:
                         'Stills, Video or Both': 'Main Form - Service Required'.Selected.Value,
                         Status: 'Main Form - Status'.Value,
                         'Task Date': Text(
-                            'Main Form - Task Date'.Value,
+                            'Main Form - Task Date'.SelectedDate,
                             "yyyy-mm-dd",
                             "en-GB"
                         ),
@@ -479,7 +479,7 @@ EditScreen As screen:
                             'Stills, Video or Both': 'Main Form - Service Required'.Selected.Value,
                             Status: 'Main Form - Status'.Value,
                             'Task Date': Text(
-                                'Main Form - Task Date'.Value,
+                                'Main Form - Task Date'.SelectedDate,
                                 "yyyy-mm-dd",
                                 "en-GB"
                             ),
@@ -522,7 +522,7 @@ EditScreen As screen:
                                 'Stills, Video or Both': 'Main Form - Service Required'.Selected.Value,
                                 Status: 'Main Form - Status'.Value,
                                 'Task Date': Text(
-                                    'Main Form - Task Date'.Value,
+                                    'Main Form - Task Date'.SelectedDate,
                                     "yyyy-mm-dd",
                                     "en-GB"
                                 ),
@@ -1870,15 +1870,6 @@ EditScreen As screen:
         Y: =189
         ZIndex: =52
 
-    "'Main Form - Deadline' As 'Date picker'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        Value: =DateValue(CalendarEventsGallery1.Selected.Deadline, "en-GB")
-        Width: =150
-        X: =325
-        Y: =200
-        ZIndex: =53
-
     "'Main Form - Task Requirements' As 'Text input'":
         DelayOutput: =true
         DisplayMode: =DisplayMode.Edit
@@ -1987,15 +1978,6 @@ EditScreen As screen:
         Start: =If(varCloseTimer = true, true)
         Visible: =false
         ZIndex: =56
-
-    "'Main Form - Task Date' As 'Date picker'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        Value: =DateValue(CalendarEventsGallery1.Selected.'Task Date',"en-GB")
-        Width: =135
-        X: =43
-        Y: =200
-        ZIndex: =57
 
     "'Edit Screen - Time Picker Blocker' As label":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -2861,6 +2843,48 @@ EditScreen As screen:
         X: =339
         Y: =259
         ZIndex: =134
+
+    "'Main Form - Task Date' As datepicker":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Color: =RGBA(51, 51, 51, 1)
+        DateTimeZone: =DateTimeZone.UTC
+        DefaultDate: =DateValue(CalendarEventsGallery1.Selected.'Task Date', "en-GB")
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Font: =Font.'Segoe UI'
+        Height: =31
+        HoverDateFill: =RGBA(200, 200, 200, 1)
+        IconBackground: =RGBA(105, 121, 126, 1)
+        PaddingTop: =5
+        SelectedDateFill: =RGBA(105, 121, 126, 1)
+        Size: =11
+        Width: =135
+        X: =43
+        Y: =201
+        ZIndex: =135
+
+    "'Main Form - Deadline' As datepicker":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Color: =RGBA(51, 51, 51, 1)
+        DateTimeZone: =DateTimeZone.UTC
+        DefaultDate: =DateValue(CalendarEventsGallery1.Selected.Deadline, "en-GB")
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Font: =Font.'Segoe UI'
+        Height: =32
+        HoverDateFill: =RGBA(200, 200, 200, 1)
+        IconBackground: =RGBA(105, 121, 126, 1)
+        PaddingTop: =5
+        SelectedDateFill: =RGBA(105, 121, 126, 1)
+        Size: =11
+        Width: =150
+        X: =325
+        Y: =200
+        ZIndex: =136
 
     Group5 As group:
         Height: =5

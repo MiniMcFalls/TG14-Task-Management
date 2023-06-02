@@ -7355,7 +7355,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Group7": {
+    "Group8": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "X",
@@ -7373,7 +7373,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Group7",
+      "Name": "Group8",
       "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -19906,6 +19906,14 @@
           "InvariantPropertyName": "Wrap",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Weight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -19944,6 +19952,11 @@
         {
           "Category": "Data",
           "PropertyName": "Wrap",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Weight",
           "RuleProviderType": "Unknown"
         },
         {

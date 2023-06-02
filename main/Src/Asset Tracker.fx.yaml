@@ -90,379 +90,574 @@
         ZIndex: =2
 
     cmp_Header_10 As cmp_Header:
-        ZIndex: =3
+        ZIndex: =4
 
-    "'Asset_R&D_Gallery' As gallery.CalendarEventsGallery":
-        AccessibleLabel: ="Calendar events for selected day"
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        Height: =731
-        Items: |-
-            =/*Shows events only on selected date*/
-            SortByColumns('Asset Tracker_1',"Title")
-        Layout: =Layout.Vertical
-        LoadingSpinnerColor: =RGBA(0,0,0,1)
-        OnSelect: =
-        TemplatePadding: =4
-        TemplateSize: =55
-        Width: =1004
-        X: =60
-        Y: =156
-        ZIndex: =5
+    Container3 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =818
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =748
+        X: =1064
+        Y: =83
+        ZIndex: =6
 
-        Button3_1 As button:
+        Label41_15 As label:
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
-            BorderThickness: =0
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(242, 242, 242, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =55
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =15
-            Text: =""
-            Width: =932
-            X: =32
-            ZIndex: =2
+            Size: =11
+            Text: ="Task Time"
+            Width: =137
+            X: =34
+            Y: =97
+            ZIndex: =4
 
-        Rectangle1_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(0,0,0,0)
-            FocusedBorderThickness: =0
-            Height: =54
-            HoverFill: =RGBA(0,0,0,0)
-            OnSelect: =
-            PressedFill: =RGBA(105, 121, 126, 1)
-            TabIndex: =0
-            Width: =932
-            X: =32
-            Y: =1
+        Group7 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =4
+
+            Icon17 As icon.Journal:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(105, 121, 126, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =48
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Journal
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =48
+                X: =348
+                Y: =12
+                ZIndex: =1
+
+            TextCanvas4 As Text:
+                Alignment: ='TextCanvas.Alignment'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: ="Asset Details"
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =96
+                X: =324
+                Y: =70
+                ZIndex: =2
+
+            Rectangle18 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =1
+                HoverFill: =RGBA(105, 121, 126, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                X: =297
+                Y: =64
+                ZIndex: =3
+
+        BadgeCanvas6_4 As Badge:
+            Content: =
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Shape: ='BadgeCanvas.Shape'.Rounded
+            ThemeColor: ='BadgeCanvas.ThemeColor'.Subtle
+            Width: =130
+            X: =37
+            Y: =137
             ZIndex: =5
 
-        Body1_1 As label:
-            Color: =RGBA(221, 110, 66, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =27
-            OnSelect: =
-            Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
-            Text: =ThisItem.Title
-            Width: |-
-                =Sum(AddColumns(ForAll(Split(Self.Text, ""), {Result: ThisRecord.Value}), "Size", LookUp(colCharsWidth, CharFont=Self.Font && CharWeight=Self.FontWeight && Char = Result).Size), Size) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-            Wrap: =false
-            X: =32
-            ZIndex: =9
+    Container4 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =818
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1032
+        X: =32
+        Y: =83
+        ZIndex: =7
 
-        Separator1_5 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Height: =1
-            OnSelect: =
-            Width: =932
-            X: =32
-            Y: =54
-            ZIndex: =10
-
-        Rectangle7_2 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(105, 121, 126, 1)
-            FocusedBorderThickness: =4
-            Height: =1
-            HoverFill: =RGBA(105, 121, 126, 1)
-            OnSelect: =
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =850
-            X: =32
-            Y: =27
-            ZIndex: =13
-
-        Separator1_4 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =932
-            X: =32
-            ZIndex: =14
-
-        Icon1_1 As icon.NextArrow:
+        "'Asset_R&D_Gallery' As gallery.CalendarEventsGallery":
+            AccessibleLabel: ="Calendar events for selected day"
             BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(105, 121, 126, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =25
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.NextArrow
-            OnSelect: =Select(Parent);
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =25
-            X: =923
-            Y: =15
-            ZIndex: =15
-
-        Button17_2 As button:
-            BorderColor: =If(Self.Fill = Color.White, Color.Black, RGBA(0,0,0,0))
-            Color: =RGBA(0, 0, 0, 0)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =Switch(ThisItem.Status.Value, "Available", Color.Green, "In Use", Color.Yellow, "Loan", Color.LightBlue, "U/S", Color.DarkRed)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =55
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            RadiusBottomLeft: =20
-            RadiusBottomRight: =0
-            RadiusTopLeft: =20
-            RadiusTopRight: =0
-            Size: =15
-            Text: =""
-            Width: =32
-            ZIndex: =19
-
-        Button17_3 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderThickness: =0
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =Switch(ThisItem.Status.Value, "Available", Color.Green, "In Use", Color.Yellow, "Loan", Color.LightBlue, "U/S", Color.DarkRed)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =55
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =20
-            RadiusTopLeft: =0
-            RadiusTopRight: =20
-            Size: =15
-            Text: =""
-            Width: =32
-            X: =964
-            ZIndex: =20
-
-        Body1_2 As label:
-            Align: =Align.Right
-            Color: =RGBA(221, 110, 66, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =27
+            DelayItemLoading: =true
+            Height: =674
+            Items: |-
+                =/*Shows events only on selected date*/
+                SortByColumns('Asset Tracker_1',"Title")
+            Layout: =Layout.Vertical
+            LoadingSpinnerColor: =RGBA(0,0,0,1)
             OnSelect: =
-            Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
-            Text: =ThisItem.Status.Value
-            Width: |-
-                =Sum(
-                    AddColumns(
-                        ForAll(Split(
-                            Self.Text,
-                            ""
-                        ), {Result: ThisRecord.Value}),
-                        "Size",
-                        LookUp(
-                            colCharsWidth,
-                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                        ).Size
-                    ),
-                    Size
-                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-            Wrap: =false
-            X: =822
-            Y: =1
-            ZIndex: =21
+            TemplatePadding: =4
+            TemplateSize: =55
+            Width: =1001
+            X: =30
+            Y: =144
+            ZIndex: =1
 
-        Body1_3 As label:
-            Color: =RGBA(128, 128, 128, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =27
-            OnSelect: =
-            Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
-            Text: =If(IsBlank(ThisItem.Location.Value), "N/A", ThisItem.Location.Value)
-            Width: |-
-                =Sum(
-                    AddColumns(
-                        ForAll(Split(
-                            Self.Text,
-                            ""
-                        ), {Result: ThisRecord.Value}),
-                        "Size",
-                        LookUp(
-                            colCharsWidth,
-                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                        ).Size
-                    ),
-                    Size
-                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight + 1
-            Wrap: =false
-            X: =32
-            Y: =28
-            ZIndex: =22
+            Button3_2 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(242, 242, 242, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =55
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =15
+                Text: =""
+                Width: =932
+                X: =32
+                ZIndex: =2
 
-        Body1_4 As label:
-            Color: =RGBA(128, 128, 128, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =27
-            OnSelect: =
-            Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
-            Text: =ThisItem.Manufacturer.Value
-            Width: |-
-                =Sum(
-                    AddColumns(
-                        ForAll(Split(
-                            Self.Text,
-                            ""
-                        ), {Result: ThisRecord.Value}),
-                        "Size",
-                        LookUp(
-                            colCharsWidth,
-                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                        ).Size
-                    ),
-                    Size
-                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight + 1
-            Wrap: =false
-            X: =Body1_3.X + Body1_3.Width + 5
-            Y: =28
-            ZIndex: =23
+            Rectangle1_4 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(0,0,0,0)
+                FocusedBorderThickness: =0
+                Height: =54
+                HoverFill: =RGBA(0,0,0,0)
+                OnSelect: =
+                PressedFill: =RGBA(105, 121, 126, 1)
+                TabIndex: =0
+                Width: =932
+                X: =32
+                Y: =1
+                ZIndex: =5
 
-        Body1_5 As label:
-            Color: =RGBA(128, 128, 128, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =27
-            OnSelect: =
-            PaddingLeft: =0
-            Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
-            Text: =ThisItem.Model
-            Width: |-
-                =Sum(
-                    AddColumns(
-                        ForAll(Split(
-                            Self.Text,
-                            ""
-                        ), {Result: ThisRecord.Value}),
-                        "Size",
-                        LookUp(
-                            colCharsWidth,
-                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                        ).Size
-                    ),
-                    Size
-                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight + 1
-            Wrap: =false
-            X: =Body1_4.X + Body1_4.Width + 5
-            Y: =28
-            ZIndex: =24
+            Body1_8 As label:
+                Color: =RGBA(221, 110, 66, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =27
+                OnSelect: =
+                Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
+                Text: =ThisItem.Title
+                Width: |-
+                    =Sum(AddColumns(ForAll(Split(Self.Text, ""), {Result: ThisRecord.Value}), "Size", LookUp(colCharsWidth, CharFont=Self.Font && CharWeight=Self.FontWeight && Char = Result).Size), Size) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                Wrap: =false
+                X: =32
+                ZIndex: =9
 
-        Rectangle5 As rectangle:
+            Separator1_11 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                Height: =1
+                OnSelect: =
+                Width: =932
+                X: =32
+                Y: =54
+                ZIndex: =10
+
+            Rectangle7_5 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =1
+                HoverFill: =RGBA(105, 121, 126, 1)
+                OnSelect: =
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =850
+                X: =32
+                Y: =27
+                ZIndex: =13
+
+            Separator1_10 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =932
+                X: =32
+                ZIndex: =14
+
+            Icon1_2 As icon.NextArrow:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(105, 121, 126, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.NextArrow
+                OnSelect: =Select(Parent);
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =25
+                X: =923
+                Y: =15
+                ZIndex: =15
+
+            Button17_4 As button:
+                BorderColor: =If(Self.Fill = Color.White, Color.Black, RGBA(0,0,0,0))
+                Color: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =Switch(ThisItem.Status.Value, "Available", Color.Green, "In Use", Color.Yellow, "Loan", Color.LightBlue, "U/S", Color.DarkRed)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =55
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =0
+                RadiusTopLeft: =20
+                RadiusTopRight: =0
+                Size: =15
+                Text: =""
+                Width: =32
+                ZIndex: =19
+
+            Button17_5 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =Switch(ThisItem.Status.Value, "Available", Color.Green, "In Use", Color.Yellow, "Loan", Color.LightBlue, "U/S", Color.DarkRed)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =55
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =20
+                RadiusTopLeft: =0
+                RadiusTopRight: =20
+                Size: =15
+                Text: =""
+                Width: =32
+                X: =964
+                ZIndex: =20
+
+            Body1_9 As label:
+                Align: =Align.Right
+                Color: =RGBA(221, 110, 66, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =27
+                OnSelect: =
+                Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
+                Text: =ThisItem.Status.Value
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                Wrap: =false
+                X: =822
+                Y: =1
+                ZIndex: =21
+
+            Body1_10 As label:
+                Color: =RGBA(128, 128, 128, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =27
+                OnSelect: =
+                Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
+                Text: =If(IsBlank(ThisItem.Location.Value), "N/A", ThisItem.Location.Value)
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight + 1
+                Wrap: =false
+                X: =32
+                Y: =28
+                ZIndex: =22
+
+            Body1_11 As label:
+                Color: =RGBA(128, 128, 128, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =27
+                OnSelect: =
+                Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
+                Text: =ThisItem.Manufacturer.Value
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight + 1
+                Wrap: =false
+                X: =Body1_10.X + Body1_10.Width + 5
+                Y: =28
+                ZIndex: =23
+
+            Body1_12 As label:
+                Color: =RGBA(128, 128, 128, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =27
+                OnSelect: =
+                PaddingLeft: =0
+                Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
+                Text: =ThisItem.Model
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight + 1
+                Wrap: =false
+                X: =Body1_11.X + Body1_11.Width + 5
+                Y: =28
+                ZIndex: =24
+
+            Rectangle5_3 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =27
+                HoverFill: =RGBA(105, 121, 126, 1)
+                OnSelect: =Select(Parent)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =1
+                X: =Body1_10.X + Body1_10.Width + 2.5
+                Y: =28
+                ZIndex: =25
+
+            Rectangle5_4 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =27
+                HoverFill: =RGBA(105, 121, 126, 1)
+                OnSelect: =Select(Parent)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =1
+                X: =Body1_11.X + Body1_11.Width + 2.5
+                Y: =28
+                ZIndex: =26
+
+            Rectangle5_5 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =27
+                HoverFill: =RGBA(105, 121, 126, 1)
+                OnSelect: =Select(Parent)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =1
+                X: =Body1_12.X + Body1_12.Width + 2.5
+                Y: =28
+                ZIndex: =27
+
+        Label41_16 As label:
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(105, 121, 126, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
-            Height: =27
-            HoverFill: =RGBA(105, 121, 126, 1)
-            OnSelect: =Select(Parent)
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =1
-            X: =Body1_3.X + Body1_3.Width + 2.5
-            Y: =28
-            ZIndex: =25
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =11
+            Text: ="Task Time"
+            Width: =137
+            X: =65
+            Y: =72
+            ZIndex: =5
 
-        Rectangle5_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(105, 121, 126, 1)
-            FocusedBorderThickness: =4
-            Height: =27
-            HoverFill: =RGBA(105, 121, 126, 1)
-            OnSelect: =Select(Parent)
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =1
-            X: =Body1_4.X + Body1_4.Width + 2.5
+        Group7_1 As group:
+            Height: =5
+            Width: =5
+            X: =-257
             Y: =28
-            ZIndex: =26
+            ZIndex: =5
 
-        Rectangle5_2 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(105, 121, 126, 1)
-            FocusedBorderThickness: =4
-            Height: =27
-            HoverFill: =RGBA(105, 121, 126, 1)
-            OnSelect: =Select(Parent)
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =1
-            X: =Body1_5.X + Body1_5.Width + 2.5
-            Y: =28
-            ZIndex: =27
+            Icon17_4 As icon.Journal:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(105, 121, 126, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =48
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.CameraAperture
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =48
+                X: =492
+                Y: =8
+                ZIndex: =2
+
+            TextCanvas4_1 As Text:
+                Alignment: ='TextCanvas.Alignment'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: ="Assets"
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =96
+                X: =468
+                Y: =66
+                ZIndex: =3
+
+            Rectangle18_2 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =1
+                HoverFill: =RGBA(105, 121, 126, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                X: =441
+                Y: =60
+                ZIndex: =4
+
+        BadgeCanvas6_5 As Badge:
+            Content: =
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Shape: ='BadgeCanvas.Shape'.Rounded
+            ThemeColor: ='BadgeCanvas.ThemeColor'.Subtle
+            Width: =130
+            X: =68
+            Y: =112
+            ZIndex: =6
+
+        DropdownCanvas2 As Dropdown.pcfdataset:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Items: =Choices
+            Width: =320
+            X: =40
+            Y: =40
+            ZIndex: =7
 

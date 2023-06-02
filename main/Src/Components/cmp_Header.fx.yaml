@@ -165,7 +165,7 @@ cmp_Header As CanvasComponent:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =If(GblConnectionTest, Icon.Globe, Icon.GlobeNotConnected)
+        Icon: =If(Connection.Connected, Icon.Globe, Icon.GlobeNotConnected)
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -188,7 +188,7 @@ cmp_Header As CanvasComponent:
         FontWeight: =FontWeight.Bold
         Height: =19
         Size: =13
-        Text: =If(GblConnectionTest, "Live", "OFFLINE")
+        Text: =If(Connection.Connected, "Live", "OFFLINE")
         Width: =81
         X: =1593
         Y: =25

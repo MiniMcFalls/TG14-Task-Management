@@ -1141,7 +1141,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =137
             X: =52
             Y: =208
-            ZIndex: =15
+            ZIndex: =16
 
         "TextInputCanvas2 As 'Text input'":
             DisplayMode: =DisplayMode.Edit
@@ -1164,7 +1164,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =875
             X: =53
             Y: =453
-            ZIndex: =16
+            ZIndex: =17
 
         Label41_14 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1194,7 +1194,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =872
             X: =55
             Y: =413
-            ZIndex: =17
+            ZIndex: =18
 
         "TextInputCanvas1_1 As 'Text input'":
             DisplayMode: =DisplayMode.Edit
@@ -1204,48 +1204,14 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =874
             X: =53
             Y: =248
-            ZIndex: =18
-
-        Icon21 As icon.AddUser:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(105, 121, 126, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =22
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Clock
-            OnSelect: =Set(varShowTimePicker, true)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =38
-            X: =284
-            Y: =166
             ZIndex: =19
 
-        TextCanvas3 As Text:
-            Alignment: ='TextCanvas.Alignment'.Center
-            DisplayMode: =DisplayMode.Edit
-            Height: =22
-            Text: =If(IsBlank(varTimeValue),cmp_ApprovalsPopup.SelectedJob.'Start Time',Text(varTimeValue,DateTimeFormat.ShortTime24,"en-GB"))
-            Truncate: =false
-            Underline: =false
-            Width: =130
-            Wrap: =false
-            X: =192
-            Y: =165
-            ZIndex: =20
-
-        Group7 As group:
+        Group8 As group:
             Height: =5
             Width: =5
             X: =60
             Y: =60
-            ZIndex: =23
+            ZIndex: =21
 
             Label41_8 As label:
                 Align: =Align.Center
@@ -1361,6 +1327,20 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Y: =161
                 ZIndex: =12
 
+            TextCanvas3 As Text:
+                Alignment: ='TextCanvas.Alignment'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =If(IsBlank(varTimeValue),cmp_ApprovalsPopup.SelectedJob.'Start Time',Text(varTimeValue,DateTimeFormat.ShortTime24,"en-GB"))
+                Truncate: =false
+                Underline: =false
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =130
+                Wrap: =false
+                X: =192
+                Y: =166
+                ZIndex: =13
+
             Label41_12 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
@@ -1377,7 +1357,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Width: =137
                 X: =455
                 Y: =121
-                ZIndex: =13
+                ZIndex: =14
 
             BadgeCanvas6_3 As Badge:
                 Content: =If(IsBlankOrError(cmp_ApprovalsPopup.SelectedJob.'Tail Number'), "Not Provided", cmp_ApprovalsPopup.SelectedJob.'Tail Number')
@@ -1388,7 +1368,28 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Width: =130
                 X: =458
                 Y: =161
-                ZIndex: =14
+                ZIndex: =15
+
+            Icon21 As icon.AddUser:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(105, 121, 126, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =22
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Clock
+                OnSelect: =Set(varShowTimePicker, true)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =38
+                X: =284
+                Y: =166
+                ZIndex: =20
 
     "'Reject Popup_1' As group":
         Height: =5
