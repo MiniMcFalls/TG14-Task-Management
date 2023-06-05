@@ -360,8 +360,8 @@
             RadiusTopRight: =0
             Size: =12
             Text: =
-            Width: =37
-            X: =1391
+            Width: =50
+            X: =1378
             Y: =1
             ZIndex: =12
 
@@ -680,8 +680,8 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =29
-            X: =1395
+            Width: =39
+            X: =1384
             Y: =Button15.Y + (Button15.Height/2) - (Self.Height/2)
             ZIndex: =29
 

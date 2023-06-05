@@ -57316,36 +57316,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varViewLoanCard"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varViewLoanCard",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varViewLoanCard",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App._selectedCalendarEvent"
                 }
               ],

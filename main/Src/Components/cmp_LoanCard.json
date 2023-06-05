@@ -51,7 +51,7 @@
         "Name": "Rectangle27_2",
         "Parent": "cmp_LoanCard",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1870,
+        "PublishOrderIndex": 1871,
         "Rules": [
           {
             "Category": "Design",
@@ -269,7 +269,7 @@
         "Name": "Button27_1",
         "Parent": "cmp_LoanCard",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1871,
+        "PublishOrderIndex": 1872,
         "Rules": [
           {
             "Category": "Data",
@@ -517,7 +517,14 @@
           "BorderStyle",
           "FocusedBorderColor",
           "Color",
-          "DisabledColor",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "DisabledColor",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "PressedColor",
           "HoverColor",
           {
@@ -528,8 +535,22 @@
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           },
-          "Fill",
-          "DisabledFill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "Fill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "DisabledFill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "PressedFill",
           "HoverFill",
           "Font",
@@ -565,11 +586,11 @@
         "Name": "Button33_1",
         "Parent": "cmp_LoanCard",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1872,
+        "PublishOrderIndex": 1873,
         "Rules": [
           {
             "Category": "Data",
-            "InvariantScript": "\"\"",
+            "InvariantScript": "\"To Loan\"",
             "Property": "Text",
             "RuleProviderType": "Unknown"
           },
@@ -605,7 +626,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "",
+            "InvariantScript": "RGBA(95, 109, 113, 1)",
             "Property": "DisabledFill",
             "RuleProviderType": "Unknown"
           },
@@ -617,7 +638,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(166, 166, 166, 1)",
+            "InvariantScript": "RGBA(255, 255, 255, 1)",
             "Property": "DisabledColor",
             "RuleProviderType": "Unknown"
           },
@@ -641,7 +662,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(105, 121, 126, 1)",
+            "InvariantScript": "RGBA(153, 153, 153, 1)",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -799,7 +820,14 @@
         "Children": [],
         "ControlPropertyState": [
           "Icon",
-          "Color",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "Color",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "DisabledColor",
           "PressedColor",
           "HoverColor",
@@ -836,7 +864,7 @@
         "Name": "Icon20_1",
         "Parent": "cmp_LoanCard",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1873,
+        "PublishOrderIndex": 1874,
         "Rules": [
           {
             "Category": "Design",
@@ -846,7 +874,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(105, 121, 126, 1)",
+            "InvariantScript": "RGBA(204, 204, 204, 1)",
             "Property": "Color",
             "RuleProviderType": "Unknown"
           },
@@ -978,7 +1006,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Set(\r\n    PopupVis,\r\n    false\r\n);\r\nSet(\r\n    varTimeValue,\r\n    Blank()\r\n);\r\n",
+            "InvariantScript": "Set(\n    varViewLoanCard,\n    false\n);\nConcurrent(\n    Reset(TextInputCanvas4),\n    Reset(TextInputCanvas4_1),\n    Reset(TextInputCanvas4_2),\n    Reset(TextInputCanvas4_3),\n    Reset(TextInputCanvas4_4)\n);\n",
             "Property": "OnSelect",
             "RuleProviderType": "User"
           }
@@ -1057,7 +1085,7 @@
             "Name": "BadgeCanvas5_3",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1875,
+            "PublishOrderIndex": 1876,
             "Rules": [
               {
                 "Category": "Data",
@@ -1188,7 +1216,7 @@
             "Name": "Icon17_5",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1876,
+            "PublishOrderIndex": 1877,
             "Rules": [
               {
                 "Category": "Design",
@@ -1399,7 +1427,7 @@
             "Name": "TextCanvas1_3",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1877,
+            "PublishOrderIndex": 1878,
             "Rules": [
               {
                 "Category": "Data",
@@ -1514,7 +1542,7 @@
             "Name": "Rectangle31_4",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1878,
+            "PublishOrderIndex": 1879,
             "Rules": [
               {
                 "Category": "Design",
@@ -1708,7 +1736,7 @@
             "Name": "Label41_7",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1879,
+            "PublishOrderIndex": 1880,
             "Rules": [
               {
                 "Category": "Data",
@@ -2046,7 +2074,7 @@
             "Name": "Label41_28",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1880,
+            "PublishOrderIndex": 1881,
             "Rules": [
               {
                 "Category": "Data",
@@ -2348,7 +2376,7 @@
             "Name": "BadgeCanvas2_7",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1881,
+            "PublishOrderIndex": 1882,
             "Rules": [
               {
                 "Category": "Data",
@@ -2478,7 +2506,7 @@
             "Name": "BadgeCanvas2_8",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1882,
+            "PublishOrderIndex": 1883,
             "Rules": [
               {
                 "Category": "Data",
@@ -2614,7 +2642,7 @@
             "Name": "BadgeCanvas5_4",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1883,
+            "PublishOrderIndex": 1884,
             "Rules": [
               {
                 "Category": "Data",
@@ -2745,7 +2773,7 @@
             "Name": "Icon17_6",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1884,
+            "PublishOrderIndex": 1885,
             "Rules": [
               {
                 "Category": "Design",
@@ -2956,7 +2984,7 @@
             "Name": "TextCanvas1_4",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1885,
+            "PublishOrderIndex": 1886,
             "Rules": [
               {
                 "Category": "Data",
@@ -3071,7 +3099,7 @@
             "Name": "Rectangle31_5",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1886,
+            "PublishOrderIndex": 1887,
             "Rules": [
               {
                 "Category": "Design",
@@ -3265,7 +3293,7 @@
             "Name": "Label41_29",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1887,
+            "PublishOrderIndex": 1888,
             "Rules": [
               {
                 "Category": "Data",
@@ -3542,7 +3570,7 @@
             "Name": "TextInputCanvas4",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1888,
+            "PublishOrderIndex": 1889,
             "Rules": [
               {
                 "Category": "Design",
@@ -3684,7 +3712,7 @@
             "Name": "Label41_30",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1889,
+            "PublishOrderIndex": 1890,
             "Rules": [
               {
                 "Category": "Data",
@@ -3961,7 +3989,7 @@
             "Name": "TextInputCanvas4_1",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1890,
+            "PublishOrderIndex": 1891,
             "Rules": [
               {
                 "Category": "Design",
@@ -4103,7 +4131,7 @@
             "Name": "Label41_31",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1891,
+            "PublishOrderIndex": 1892,
             "Rules": [
               {
                 "Category": "Data",
@@ -4380,7 +4408,7 @@
             "Name": "TextInputCanvas4_2",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1892,
+            "PublishOrderIndex": 1893,
             "Rules": [
               {
                 "Category": "Design",
@@ -4522,7 +4550,7 @@
             "Name": "Label41_32",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1893,
+            "PublishOrderIndex": 1894,
             "Rules": [
               {
                 "Category": "Data",
@@ -4799,7 +4827,7 @@
             "Name": "TextInputCanvas4_3",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1894,
+            "PublishOrderIndex": 1895,
             "Rules": [
               {
                 "Category": "Design",
@@ -4896,7 +4924,7 @@
             "Name": "Rectangle31_6",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1895,
+            "PublishOrderIndex": 1896,
             "Rules": [
               {
                 "Category": "Design",
@@ -5090,7 +5118,7 @@
             "Name": "Label41_33",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1896,
+            "PublishOrderIndex": 1897,
             "Rules": [
               {
                 "Category": "Data",
@@ -5367,7 +5395,7 @@
             "Name": "TextInputCanvas4_4",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1897,
+            "PublishOrderIndex": 1898,
             "Rules": [
               {
                 "Category": "Design",
@@ -5563,7 +5591,7 @@
             "Name": "Button14_11",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1898,
+            "PublishOrderIndex": 1899,
             "Rules": [
               {
                 "Category": "Data",
@@ -5633,9 +5661,9 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "DisplayMode.Edit",
+                "InvariantScript": "If(Or(IsBlank(TextInputCanvas4.Value),IsBlank(TextInputCanvas4_1.Value),IsBlank(TextInputCanvas4_2.Value),IsBlank(TextInputCanvas4_3.Value)), DisplayMode.Disabled, DisplayMode.Edit)",
                 "Property": "DisplayMode",
-                "RuleProviderType": "Unknown"
+                "RuleProviderType": "User"
               },
               {
                 "Category": "Design",
@@ -5783,7 +5811,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "ForAll(\n    LoanCard,\n    UpdateIf(\n        'Asset Tracker_1',\n        'LC Serial Number' = 'Serial number',\n        {Status: {Value: \"Available\"}}\n    )\n);\nPatch(\n    'TG14 Loan Register',\n    Defaults('TG14 Loan Register'),\n    {\n        'Loan Date & Time': DateTimeValue(\n            Now(),\n            \"en-GB\"\n        ),\n        Recipient: TextInputCanvas4.Value,\n        'Section/Role': TextInputCanvas4_1.Value,\n        'Contact Email': TextInputCanvas4_2.Value,\n        'Contact Number': TextInputCanvas4_3.Value,\n        'Loaned Items': Concat(LoanCard,Title & Char(13) & Char(13))\n    }\n)",
+                "InvariantScript": "ForAll(\n    LoanCard,\n    UpdateIf(\n        'Asset Tracker_1',\n        'LC Serial Number' = 'Serial number',\n        {Status: {Value: \"Loan\"}}\n    )\n);\nPatch(\n    'TG14 Loan Register',\n    Defaults('TG14 Loan Register'),\n    {\n        'Loan Date & Time': DateTimeValue(\n            Now(),\n            \"en-GB\"\n        ),\n        Recipient: TextInputCanvas4.Value,\n        'Section/Role': TextInputCanvas4_1.Value,\n        'Contact Email': TextInputCanvas4_2.Value,\n        'Contact Number': TextInputCanvas4_3.Value,\n        'Loaned Items': Concat(\n            LoanCard,\n            Concatenate(\n                'LC Asset Tag',\n                \" / \",\n                'LC Asset type',\n                \" / \",\n                'LC Manufacturer'.Value,\n                \" / \",\n                'LC Model',\n                \" / \",\n                'LC Asset Tag',\n                \" / \",\n                'LC Serial Number'\n            ),\n            \"\n\n\"\n        )\n    }\n)",
                 "Property": "OnSelect",
                 "RuleProviderType": "User"
               }
@@ -5838,7 +5866,7 @@
         "Name": "Container1_1",
         "Parent": "cmp_LoanCard",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1874,
+        "PublishOrderIndex": 1875,
         "Rules": [
           {
             "Category": "Design",
@@ -6012,7 +6040,7 @@
         "Name": "Rectangle30_1",
         "Parent": "cmp_LoanCard",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1899,
+        "PublishOrderIndex": 1900,
         "Rules": [
           {
             "Category": "Design",
@@ -6224,7 +6252,7 @@
             "Name": "Label46_5",
             "Parent": "Container2_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1901,
+            "PublishOrderIndex": 1902,
             "Rules": [
               {
                 "Category": "Data",
@@ -6583,7 +6611,7 @@
             "Name": "Label46_6",
             "Parent": "Container2_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1902,
+            "PublishOrderIndex": 1903,
             "Rules": [
               {
                 "Category": "Data",
@@ -6942,7 +6970,7 @@
             "Name": "Label46_7",
             "Parent": "Container2_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1903,
+            "PublishOrderIndex": 1904,
             "Rules": [
               {
                 "Category": "Data",
@@ -7301,7 +7329,7 @@
             "Name": "Label46_8",
             "Parent": "Container2_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1904,
+            "PublishOrderIndex": 1905,
             "Rules": [
               {
                 "Category": "Data",
@@ -7660,7 +7688,7 @@
             "Name": "Label46_9",
             "Parent": "Container2_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1905,
+            "PublishOrderIndex": 1906,
             "Rules": [
               {
                 "Category": "Data",
@@ -7941,7 +7969,7 @@
                 "Name": "galleryTemplate4",
                 "Parent": "Gallery1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1907,
+                "PublishOrderIndex": 1908,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -8059,7 +8087,7 @@
                 "Name": "Label37",
                 "Parent": "Gallery1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1908,
+                "PublishOrderIndex": 1909,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -8397,7 +8425,7 @@
                 "Name": "Label38",
                 "Parent": "Gallery1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1909,
+                "PublishOrderIndex": 1910,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -8735,7 +8763,7 @@
                 "Name": "Label45",
                 "Parent": "Gallery1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1910,
+                "PublishOrderIndex": 1911,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -9073,7 +9101,7 @@
                 "Name": "Label39",
                 "Parent": "Gallery1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1911,
+                "PublishOrderIndex": 1912,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -9411,7 +9439,7 @@
                 "Name": "Label44",
                 "Parent": "Gallery1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1912,
+                "PublishOrderIndex": 1913,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -9718,7 +9746,7 @@
                 "Name": "Rectangle16",
                 "Parent": "Gallery1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1913,
+                "PublishOrderIndex": 1914,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -9881,7 +9909,7 @@
             "Name": "Gallery1",
             "Parent": "Container2_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1906,
+            "PublishOrderIndex": 1907,
             "Rules": [
               {
                 "Category": "Data",
@@ -10084,7 +10112,7 @@
         "Name": "Container2_1",
         "Parent": "cmp_LoanCard",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1900,
+        "PublishOrderIndex": 1901,
         "Rules": [
           {
             "Category": "Design",
@@ -10237,7 +10265,7 @@
       "PillBackground",
       "CustomProperty1"
     ],
-    "LastModifiedTimestamp": "638215662642822088",
+    "LastModifiedTimestamp": "638215750009551277",
     "Name": "cmp_LoanCard",
     "Rules": [
       {
@@ -10344,7 +10372,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638215662642822088",
+  "LastModifiedTimestamp": "638215750009551277",
   "Name": "b66d95eaf31a4b3fb9ab4bf9adc199d6",
   "OverridableProperties": {},
   "TemplateOriginalName": "9e0ddfb4b3ee492fbea501ea288a07cd",

@@ -1228,5 +1228,6 @@
                 ZIndex: =14
 
     cmp_LoanCard_1 As cmp_LoanCard:
+        Visible: =varViewLoanCard
         ZIndex: =8
 
