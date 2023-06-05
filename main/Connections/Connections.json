@@ -29,6 +29,9 @@
           "TG14 Combined Monthly Returns": {
             "tableName": "1c8b674a-91fe-40a8-9045-f99326de658b"
           },
+          "TG14 Loan Register": {
+            "tableName": "9b573e54-9c81-4cf9-a111-f851fb19c4ea"
+          },
           "TG14 Task Information": {
             "tableName": "f60eb741-46eb-47be-804b-6992baa2673a"
           }
@@ -54,7 +57,8 @@
       "TG14 Task Information",
       "TG14 App Feedback Submissions",
       "Asset Tracker_1",
-      "TG14 Combined Monthly Returns"
+      "TG14 Combined Monthly Returns",
+      "TG14 Loan Register"
     ],
     "dependencies": {},
     "dependents": [

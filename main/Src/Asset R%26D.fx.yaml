@@ -133,7 +133,7 @@
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                Icon: =Icon.Journal
+                Icon: =Icon.Tag
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -517,6 +517,7 @@
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(Or(IsBlank('Asset_R&D_Gallery'.Selected), CountRows(Search(LoanCard, 'Asset_R&D_Gallery'.Selected.'Serial number', "LC Serial Number")) = 1), DisplayMode.Disabled, DisplayMode.Edit)
             Fill: =RGBA(105, 121, 126, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
@@ -529,18 +530,18 @@
                 =Collect(
                     LoanCard,
                     {
-                        'Asset Tag': 'Asset_R&D_Gallery'.Selected.Title,
-                        Manufacturer: 'Asset_R&D_Gallery'.Selected.Manufacturer,
-                        Model: 'Asset_R&D_Gallery'.Selected.Model,
-                        'Asset type': 'Asset_R&D_Gallery'.Selected.'Asset type'.Value,
-                        'Serial Number': 'Asset_R&D_Gallery'.Selected.'Serial number'
+                        'LC Asset Tag': 'Asset_R&D_Gallery'.Selected.Title,
+                        'LC Manufacturer': 'Asset_R&D_Gallery'.Selected.Manufacturer,
+                        'LC Model': 'Asset_R&D_Gallery'.Selected.Model,
+                        'LC Asset type': 'Asset_R&D_Gallery'.Selected.'Asset type'.Value,
+                        'LC Serial Number': 'Asset_R&D_Gallery'.Selected.'Serial number'
                     }
                 )
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Size: =15
-            Text: ="Add to loan"
+            Text: =If(CountRows(Search(LoanCard, 'Asset_R&D_Gallery'.Selected.'Serial number', "LC Serial Number")) = 1,"IN CHECKOUT", "Add to Loan")
             Width: =303
             X: =372
             Y: =627
@@ -680,7 +681,7 @@
                 RadiusTopRight: =0
                 Size: =15
                 Text: =""
-                Width: =932
+                Width: =961
                 X: =32
                 ZIndex: =2
 
@@ -695,7 +696,7 @@
                 HoverFill: =RGBA(0,0,0,0)
                 OnSelect: =""
                 TabIndex: =0
-                Width: =932
+                Width: =961
                 X: =32
                 Y: =1
                 ZIndex: =5
@@ -721,7 +722,7 @@
                 Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 Height: =1
                 OnSelect: =""
-                Width: =932
+                Width: =961
                 X: =32
                 Y: =54
                 ZIndex: =10
@@ -736,7 +737,7 @@
                 HoverFill: =RGBA(105, 121, 126, 1)
                 OnSelect: =""
                 PressedFill: =RGBA(105, 121, 126, 1)
-                Width: =850
+                Width: =895
                 X: =32
                 Y: =27
                 ZIndex: =13
@@ -746,7 +747,7 @@
                 Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 Height: =1
                 OnSelect: =""
-                Width: =932
+                Width: =961
                 X: =32
                 ZIndex: =14
 
@@ -767,7 +768,7 @@
                 PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =25
-                X: =923
+                X: =944
                 Y: =15
                 ZIndex: =15
 
@@ -778,7 +779,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: =DisplayMode.View
-                Fill: =Switch(ThisItem.Status.Value, "Available", Color.Green, "In Use", Color.Yellow, "Loan", Color.LightBlue, "U/S", Color.DarkRed)
+                Fill: =If(CountRows(Search(LoanCard, ThisItem.'Serial number', "LC Serial Number")) = 1, Color.BlueViolet, Switch(ThisItem.Status.Value, "Available", Color.Green, "In Use", Color.Yellow, "Loan", Color.LightBlue, "U/S", Color.DarkRed))
                 FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
@@ -803,67 +804,24 @@
                 Width: =32
                 ZIndex: =19
 
-            Button17_5 As button:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderThickness: =0
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =DisplayMode.View
-                Fill: =Switch(ThisItem.Status.Value, "Available", Color.Green, "In Use", Color.Yellow, "Loan", Color.LightBlue, "U/S", Color.DarkRed)
-                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =55
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-                OnSelect: =""
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =20
-                RadiusTopLeft: =0
-                RadiusTopRight: =20
-                Size: =15
-                Text: =""
-                Width: =32
-                X: =964
-                ZIndex: =20
-
             Body1_9 As label:
                 Align: =Align.Right
-                Color: =RGBA(221, 110, 66, 1)
+                BorderStyle: =BorderStyle.None
+                Color: =If(Self.Text = "Available", Color.Green, Color.BlueViolet)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =2
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
                 Height: =27
                 OnSelect: =""
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
                 Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
-                Text: =ThisItem.Status.Value
-                Width: |-
-                    =Sum(
-                        AddColumns(
-                            ForAll(Split(
-                                Self.Text,
-                                ""
-                            ), {Result: ThisRecord.Value}),
-                            "Size",
-                            LookUp(
-                                colCharsWidth,
-                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                            ).Size
-                        ),
-                        Size
-                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                Text: =If(CountRows(Search(LoanCard, ThisItem.'Serial number', "LC Serial Number")) = 1, "IN CHECKOUT",ThisItem.Status.Value)
+                Width: =132
                 Wrap: =false
-                X: =822
+                X: =795
                 Y: =1
                 ZIndex: =21
 
@@ -1053,7 +1011,7 @@
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                Icon: =Icon.CameraAperture
+                Icon: =Icon.Devices
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -1268,4 +1226,7 @@
                 X: =135
                 Y: =460
                 ZIndex: =14
+
+    cmp_LoanCard_1 As cmp_LoanCard:
+        ZIndex: =8
 

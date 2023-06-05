@@ -346,7 +346,30 @@ cmp_LoanCard As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
-            OnSelect: =ForAll(LoanCard, First(Filter('Asset Tracker_1', 'Serial Number' = 'Serial number'
+            OnSelect: |-
+                =ForAll(
+                    LoanCard,
+                    UpdateIf(
+                        'Asset Tracker_1',
+                        'LC Serial Number' = 'Serial number',
+                        {Status: {Value: "Available"}}
+                    )
+                );
+                Patch(
+                    'TG14 Loan Register',
+                    Defaults('TG14 Loan Register'),
+                    {
+                        'Loan Date & Time': DateTimeValue(
+                            Now(),
+                            "en-GB"
+                        ),
+                        Recipient: TextInputCanvas4.Value,
+                        'Section/Role': TextInputCanvas4_1.Value,
+                        'Contact Email': TextInputCanvas4_2.Value,
+                        'Contact Number': TextInputCanvas4_3.Value,
+                        'Loaned Items': Concat(LoanCard,Title & Char(13) & Char(13))
+                    }
+                )
             PressedBorderColor: =ColorFade(Self.Fill, -50%)
             PressedColor: =Color.White
             PressedFill: =ColorFade(Self.Fill,-30%)
@@ -475,83 +498,6 @@ cmp_LoanCard As CanvasComponent:
         Y: =96
         ZIndex: =5
 
-    "'Approve Html_1' As htmlViewer":
-        Height: =0
-        HtmlText: |
-            ="
-            <b>Job Number: </b>" & cmp_LoanCard.SelectedJob.Title
-            & 
-            "
-            <br>
-            <b>Project Category: </b>" & cmp_LoanCard.SelectedJob.'Project Category'.Value
-            &
-            "
-            <br>
-            <b>Service Required: </b>" & cmp_LoanCard.SelectedJob.'Service Required'
-            &
-            "
-            <br>
-            <b>Response ID: </b>" & cmp_LoanCard.SelectedJob.ResponseID
-            &
-            "
-            <br>
-            <b>Task Date: </b>" & cmp_LoanCard.SelectedJob.'Task Date'
-            &
-            "
-            <br>
-            <b>Task Time: </b>" & cmp_LoanCard.SelectedJob.'Start Time'
-            &
-            "
-            <br>
-            <b>Task Location: </b>" & cmp_LoanCard.SelectedJob.'Task Location'
-            &
-            "
-            <br>
-            <b>Task Deadline: </b>" & cmp_LoanCard.SelectedJob.Deadline
-            &
-            "
-            <br>
-            <b>Tail Number: </b>" & cmp_LoanCard.SelectedJob.'Tail Number'
-            &
-            "
-            <br>
-            <b>Working Hazards: </b>" & cmp_LoanCard.SelectedJob.Hazards
-            &
-            "
-            <br>
-            "
-            &
-            "
-            <br>
-            <b>Customer Name: </b>" & Concatenate(cmp_LoanCard.SelectedJob.Rank, " ", cmp_LoanCard.SelectedJob.'Customer Name')
-            &
-            "
-            <br>
-            <b>Customer Section: </b>" & cmp_LoanCard.SelectedJob.'Customer Section'
-            &
-            "
-            <br>
-            <b>Customer Email: </b>" & cmp_LoanCard.SelectedJob.'Customer Email'
-            &
-            "
-            <br>
-            <b>Customer Contact Number: </b>" & cmp_LoanCard.SelectedJob.'Customer Contact Number'
-            &
-            "
-            <br>
-            <b>Alternate Contact: </b>" & cmp_LoanCard.SelectedJob.'POC if Different'
-            &
-            "
-            <br>
-            "
-            &
-            "
-            <br>
-            <b>Task Requirements: </b>" & cmp_LoanCard.SelectedJob.'Task Requirements'
-        Visible: =false
-        Width: =590
-        ZIndex: =10
-
     Rectangle30_1 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -581,7 +527,7 @@ cmp_LoanCard As CanvasComponent:
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
-            TemplateSize: =66
+            TemplateSize: =75
             Width: =1184
             Y: =40
             ZIndex: =1
@@ -595,13 +541,13 @@ cmp_LoanCard As CanvasComponent:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =64
+                Height: =75
                 OnSelect: =Select(Parent)
                 Overflow: =Overflow.Scroll
                 PaddingLeft: =10
                 PaddingRight: =10
                 Size: =13
-                Text: =ThisItem.'Asset Tag'
+                Text: =ThisItem.'LC Asset Tag'
                 VerticalAlign: =VerticalAlign.Top
                 Width: =352
                 ZIndex: =1
@@ -618,7 +564,7 @@ cmp_LoanCard As CanvasComponent:
                 OnSelect: =Select(Parent)
                 PressedFill: =RGBA(105, 121, 126, 1)
                 Width: =Gallery1.TemplateWidth
-                Y: =65
+                Y: =74
                 ZIndex: =2
 
             Label38 As label:
@@ -631,11 +577,11 @@ cmp_LoanCard As CanvasComponent:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =64
+                Height: =75
                 OnSelect: =Select(Parent)
                 Overflow: =Overflow.Scroll
                 Size: =13
-                Text: =ThisItem.'Asset type'
+                Text: =ThisItem.'LC Asset type'
                 VerticalAlign: =VerticalAlign.Top
                 X: =352
                 ZIndex: =3
@@ -649,11 +595,11 @@ cmp_LoanCard As CanvasComponent:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =64
+                Height: =75
                 OnSelect: =Select(Parent)
                 Overflow: =Overflow.Scroll
                 Size: =13
-                Text: =ThisItem.Model
+                Text: =ThisItem.'LC Model'
                 VerticalAlign: =VerticalAlign.Top
                 Width: =255
                 X: =652
@@ -669,11 +615,11 @@ cmp_LoanCard As CanvasComponent:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =64
+                Height: =75
                 OnSelect: =Select(Parent)
                 Overflow: =Overflow.Scroll
                 Size: =13
-                Text: =ThisItem.'Serial Number'
+                Text: =ThisItem.'LC Serial Number'
                 VerticalAlign: =VerticalAlign.Top
                 Width: =277
                 X: =907
@@ -689,11 +635,11 @@ cmp_LoanCard As CanvasComponent:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =64
+                Height: =74
                 OnSelect: =Select(Parent)
                 Overflow: =Overflow.Scroll
                 Size: =13
-                Text: =ThisItem.Manufacturer.Value
+                Text: =ThisItem.'LC Manufacturer'.Value
                 VerticalAlign: =VerticalAlign.Top
                 X: =502
                 ZIndex: =7

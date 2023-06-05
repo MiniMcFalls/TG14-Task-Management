@@ -1259,7 +1259,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 ZIndex: =7
 
             BadgeCanvas6 As Badge:
-                Content: =
+                Content: =Blank()
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Shape: ='BadgeCanvas.Shape'.Rounded
