@@ -517,7 +517,7 @@
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =If(Or(IsBlank('Asset_R&D_Gallery'.Selected), CountRows(Search(LoanCard, 'Asset_R&D_Gallery'.Selected.'Serial number', "LC Serial Number")) = 1), DisplayMode.Disabled, DisplayMode.Edit)
+            DisplayMode: =If(Or(IsBlank('Asset_R&D_Gallery'.Selected), CountRows(Search(LoanCard, 'Asset_R&D_Gallery'.Selected.'Serial number', "LC Serial Number")) = 1, 'Asset_R&D_Gallery'.Selected.Status.Value = "Loan"), DisplayMode.Disabled, DisplayMode.Edit)
             Fill: =RGBA(105, 121, 126, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
@@ -541,7 +541,7 @@
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Size: =15
-            Text: =If(CountRows(Search(LoanCard, 'Asset_R&D_Gallery'.Selected.'Serial number', "LC Serial Number")) = 1,"IN CHECKOUT", "Add to Loan")
+            Text: =If(CountRows(Search(LoanCard, 'Asset_R&D_Gallery'.Selected.'Serial number', "LC Serial Number")) = 1,"IN CHECKOUT", 'Asset_R&D_Gallery'.Selected.Status.Value = "Loan", "Already on Loan", "Add to Loan")
             Width: =303
             X: =372
             Y: =627
@@ -807,7 +807,7 @@
             Body1_9 As label:
                 Align: =Align.Right
                 BorderStyle: =BorderStyle.None
-                Color: =If(Self.Text = "Available", Color.Green, Color.BlueViolet)
+                Color: =If(CountRows(Search(LoanCard, ThisItem.'Serial number', "LC Serial Number")) = 1, Color.BlueViolet, Switch(ThisItem.Status.Value, "Available", Color.Green, "In Use", Color.Yellow, "Loan", Color.LightBlue, "U/S", Color.DarkRed))
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =2
                 Font: =Font.'Segoe UI'
@@ -992,6 +992,21 @@
                 X: =Body1_12.X + Body1_12.Width + 5
                 Y: =27
                 ZIndex: =28
+
+            Rectangle5 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                FocusedBorderThickness: =4
+                Height: =55
+                HoverFill: =RGBA(105, 121, 126, 1)
+                OnSelect: =Select(Parent)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =1
+                X: =992
+                ZIndex: =29
 
         Group7_1 As group:
             Height: =5
