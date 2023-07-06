@@ -16,6 +16,7 @@
         Fill: =RGBA(105, 121, 126, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Lighter
+        Height: =0
         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -178,7 +179,7 @@
                     gblUserLocPerm,
                     "Wyton"
                 ),
-                "LOS-C4I CyIX Photo" in gblCurrentUser.officeLocation,
+                "LOS-CET MPT" in gblCurrentUser.officeLocation,
                 Set(
                     gblUserLocPerm,
                     "Lossiemouth"
@@ -12667,8 +12668,6 @@
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Underline: =true
-        X: =1295
-        Y: =615
         ZIndex: =1
 
     LblSuccessMsg3_2 As label:

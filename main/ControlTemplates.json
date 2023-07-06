@@ -69,7 +69,7 @@
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Button",
-    "Version": "0.0.13"
+    "Version": "0.0.15"
   },
   "checkbox": {
     "CustomGroupControlTemplateName": "",
@@ -197,7 +197,7 @@
     "Name": "PowerApps_CoreControls_DropdownCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Dropdown",
-    "Version": "0.0.12"
+    "Version": "0.0.14"
   },
   "form": {
     "CustomGroupControlTemplateName": "",
@@ -283,7 +283,7 @@
     "OverridableProperties": {},
     "Version": "1.3.0"
   },
-  "hostControl": {
+  "Host": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
     "HostType": "Default",
@@ -423,7 +423,7 @@
     "Name": "PowerApps_CoreControls_Spinner",
     "OverridableProperties": {},
     "TemplateDisplayName": "Spinner",
-    "Version": "1.0.16"
+    "Version": "1.0.17"
   },
   "TestCase": {
     "CustomGroupControlTemplateName": "",
