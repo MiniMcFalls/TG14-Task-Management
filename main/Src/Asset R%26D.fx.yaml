@@ -537,7 +537,7 @@
                         'LC Asset type': 'Asset_R&D_Gallery'.Selected.'Asset type'.Value,
                         'LC Serial Number': 'Asset_R&D_Gallery'.Selected.'Serial number'
                     }
-                )
+                );
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -592,7 +592,9 @@
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            OnSelect: =Set(varViewLoanCard, true);
+            OnSelect: |-
+                =Set(varViewLoanCard, true);
+                Reset(cmp_LoanCard_1);
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1271,7 +1273,8 @@
                 ZIndex: =14
 
     cmp_LoanCard_1 As cmp_LoanCard:
-        CustomProperty1: =
+        ChildTabPriority: =false
+        EnableChildFocus: =false
         Visible: =varViewLoanCard
         ZIndex: =8
 
