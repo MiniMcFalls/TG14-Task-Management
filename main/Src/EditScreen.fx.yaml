@@ -1922,7 +1922,7 @@ EditScreen As screen:
         ZIndex: =55
 
     HtmlText2 As htmlViewer:
-        Height: =602
+        Height: =0
         HtmlText: |-
             ="<table border=""0"" cellspacing="""" cellpadding=""0"" align=""center"">
             <tbody>
@@ -1976,7 +1976,7 @@ EditScreen As screen:
             </table>"
         Width: =1245
         X: =605
-        Y: =328
+        Y: =930
         ZIndex: =56
 
     Timer3 As timer:
