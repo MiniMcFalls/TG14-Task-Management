@@ -592,7 +592,7 @@
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            OnSelect: =Set(varViewLoanCard, true)
+            OnSelect: =Set(varViewLoanCard, true);
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -602,6 +602,33 @@
             X: =64
             Y: =679
             ZIndex: =29
+
+        Button37_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(IsEmpty(LoanCard), DisplayMode.Disabled, DisplayMode.Edit)
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            OnSelect: =Clear(LoanCard)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            Size: =15
+            Text: ="Clear Loan Card"
+            Width: =610
+            X: =65
+            Y: =727
+            ZIndex: =30
 
     Container4 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -633,12 +660,11 @@
             DelayItemLoading: =true
             Height: =650
             Items: |-
-                =/*Shows events only on selected date*/
-                SortByColumns(
+                =SortByColumns(
                     Filter(
                         'Asset Tracker_1',
                         Status.Value = DropdownCanvas2.Selected.Value,
-                        Or(gblSearchTerm in Title, gblSearchTerm in Manufacturer.Value, gblSearchTerm in 'Serial number', gblSearchTerm in 'Current owner'.Email)
+                        If(!IsBlank(gblSearchTerm),Or(gblSearchTerm in Title, gblSearchTerm in Manufacturer.Value, gblSearchTerm in 'Serial number', gblSearchTerm in 'Current owner'.Email),Status.Value = DropdownCanvas2.Selected.Value)
                     ),
                     "Title"
                 )
@@ -1245,6 +1271,7 @@
                 ZIndex: =14
 
     cmp_LoanCard_1 As cmp_LoanCard:
+        CustomProperty1: =
         Visible: =varViewLoanCard
         ZIndex: =8
 

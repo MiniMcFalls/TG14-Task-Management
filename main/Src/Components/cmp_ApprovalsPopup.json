@@ -51,7 +51,7 @@
         "Name": "Rectangle27",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1766,
+        "PublishOrderIndex": 1767,
         "Rules": [
           {
             "Category": "Design",
@@ -209,7 +209,7 @@
         "Name": "Approve Html",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1767,
+        "PublishOrderIndex": 1768,
         "Rules": [
           {
             "Category": "Data",
@@ -399,7 +399,7 @@
         "Name": "Rectangle19_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1768,
+        "PublishOrderIndex": 1769,
         "Rules": [
           {
             "Category": "Design",
@@ -583,7 +583,7 @@
         "Name": "Cust Det - Blocker Pill_7",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1769,
+        "PublishOrderIndex": 1770,
         "Rules": [
           {
             "Category": "Design",
@@ -747,7 +747,7 @@
         "Name": "Rectangle27_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1770,
+        "PublishOrderIndex": 1772,
         "Rules": [
           {
             "Category": "Design",
@@ -9601,7 +9601,7 @@
             "Name": "TextCanvas1_2",
             "Parent": "Container2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1816,
+            "PublishOrderIndex": 1815,
             "Rules": [
               {
                 "Category": "Data",
@@ -9716,7 +9716,7 @@
             "Name": "Rectangle31_3",
             "Parent": "Container2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1817,
+            "PublishOrderIndex": 1816,
             "Rules": [
               {
                 "Category": "Design",
@@ -9917,7 +9917,7 @@
             "Name": "Label41_8",
             "Parent": "Container2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1818,
+            "PublishOrderIndex": 1817,
             "Rules": [
               {
                 "Category": "Data",
@@ -13480,7 +13480,7 @@
             "Name": "Group8",
             "Parent": "Container2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1815,
+            "PublishOrderIndex": 1818,
             "Rules": [
               {
                 "Category": "Design",
@@ -15546,7 +15546,7 @@
         "Name": "Icon19",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1841,
+        "PublishOrderIndex": 1842,
         "Rules": [
           {
             "Category": "Design",
@@ -15766,7 +15766,7 @@
         "Name": "BadgeCanvas7",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1842,
+        "PublishOrderIndex": 1843,
         "Rules": [
           {
             "Category": "Data",
@@ -15970,7 +15970,7 @@
         "Name": "Cust Det - Background Pill_7",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1843,
+        "PublishOrderIndex": 1844,
         "Rules": [
           {
             "Category": "Data",
@@ -16284,7 +16284,7 @@
         "Name": "Icon8_3",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1844,
+        "PublishOrderIndex": 1845,
         "Rules": [
           {
             "Category": "Data",
@@ -16569,7 +16569,7 @@
         "Name": "Cust Det - Pill 3_7",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1845,
+        "PublishOrderIndex": 1846,
         "Rules": [
           {
             "Category": "Data",
@@ -16904,7 +16904,7 @@
         "Name": "Label16_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1846,
+        "PublishOrderIndex": 1847,
         "Rules": [
           {
             "Category": "Data",
@@ -17211,7 +17211,7 @@
         "Name": "Rectangle29",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1847,
+        "PublishOrderIndex": 1848,
         "Rules": [
           {
             "Category": "Design",
@@ -17375,7 +17375,7 @@
         "Name": "TextCanvas2",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1848,
+        "PublishOrderIndex": 1849,
         "Rules": [
           {
             "Category": "Data",
@@ -17549,7 +17549,7 @@
         "Name": "Label6_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1849,
+        "PublishOrderIndex": 1850,
         "Rules": [
           {
             "Category": "Data",
@@ -17887,7 +17887,7 @@
         "Name": "Label18_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1850,
+        "PublishOrderIndex": 1851,
         "Rules": [
           {
             "Category": "Data",
@@ -18239,7 +18239,7 @@
         "Name": "Label20_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1851,
+        "PublishOrderIndex": 1852,
         "Rules": [
           {
             "Category": "Data",
@@ -18568,7 +18568,7 @@
         "Name": "BadgeCanvas1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1852,
+        "PublishOrderIndex": 1853,
         "Rules": [
           {
             "Category": "Data",
@@ -18679,7 +18679,7 @@
             "Name": "galleryTemplate5_2",
             "Parent": "gal_TimePicker_Hours_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1854,
+            "PublishOrderIndex": 1855,
             "Rules": [
               {
                 "Category": "Design",
@@ -18817,7 +18817,7 @@
             "Name": "Label17_2",
             "Parent": "gal_TimePicker_Hours_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1855,
+            "PublishOrderIndex": 1856,
             "Rules": [
               {
                 "Category": "Data",
@@ -19193,7 +19193,7 @@
             "Name": "Button39",
             "Parent": "gal_TimePicker_Hours_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1856,
+            "PublishOrderIndex": 1857,
             "Rules": [
               {
                 "Category": "Data",
@@ -19521,7 +19521,7 @@
         "Name": "gal_TimePicker_Hours_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1853,
+        "PublishOrderIndex": 1854,
         "Rules": [
           {
             "Category": "Data",
@@ -19738,7 +19738,7 @@
             "Name": "galleryTemplate5_3",
             "Parent": "gal_TimePicker_Minutes_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1858,
+            "PublishOrderIndex": 1859,
             "Rules": [
               {
                 "Category": "Design",
@@ -19876,7 +19876,7 @@
             "Name": "Label17_3",
             "Parent": "gal_TimePicker_Minutes_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1859,
+            "PublishOrderIndex": 1860,
             "Rules": [
               {
                 "Category": "Data",
@@ -20252,7 +20252,7 @@
             "Name": "Button39_1",
             "Parent": "gal_TimePicker_Minutes_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1860,
+            "PublishOrderIndex": 1861,
             "Rules": [
               {
                 "Category": "Data",
@@ -20580,7 +20580,7 @@
         "Name": "gal_TimePicker_Minutes_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1857,
+        "PublishOrderIndex": 1858,
         "Rules": [
           {
             "Category": "Data",
@@ -20846,7 +20846,7 @@
         "Name": "Label21_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1861,
+        "PublishOrderIndex": 1862,
         "Rules": [
           {
             "Category": "Data",
@@ -21167,7 +21167,7 @@
         "Name": "Image1_3",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1862,
+        "PublishOrderIndex": 1863,
         "Rules": [
           {
             "Category": "Data",
@@ -21407,7 +21407,7 @@
         "Name": "Reject Comments_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1863,
+        "PublishOrderIndex": 1864,
         "Rules": [
           {
             "Category": "Data",
@@ -21568,7 +21568,7 @@
         "Name": "Label7_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1864,
+        "PublishOrderIndex": 1865,
         "Rules": [
           {
             "Category": "Data",
@@ -21913,7 +21913,7 @@
         "Name": "Label7_7",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1865,
+        "PublishOrderIndex": 1866,
         "Rules": [
           {
             "Category": "Data",
@@ -22242,7 +22242,7 @@
         "Name": "Icon12_7",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1866,
+        "PublishOrderIndex": 1867,
         "Rules": [
           {
             "Category": "Design",
@@ -22475,7 +22475,7 @@
         "Name": "Icon12_6",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1867,
+        "PublishOrderIndex": 1868,
         "Rules": [
           {
             "Category": "Design",
@@ -22751,7 +22751,7 @@
         "Name": "Checkbox1_10",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1868,
+        "PublishOrderIndex": 1869,
         "Rules": [
           {
             "Category": "Data",
@@ -23110,7 +23110,7 @@
         "Name": "Checkbox1_12",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1869,
+        "PublishOrderIndex": 1870,
         "Rules": [
           {
             "Category": "Data",
@@ -23469,7 +23469,7 @@
         "Name": "Checkbox1_11",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1870,
+        "PublishOrderIndex": 1871,
         "Rules": [
           {
             "Category": "Data",
@@ -23854,7 +23854,7 @@
         "Name": "Button16_1",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1871,
+        "PublishOrderIndex": 1872,
         "Rules": [
           {
             "Category": "Data",
@@ -24123,7 +24123,7 @@
         "Name": "Group6",
         "Parent": "cmp_ApprovalsPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1772,
+        "PublishOrderIndex": 1841,
         "Rules": [
           {
             "Category": "Design",

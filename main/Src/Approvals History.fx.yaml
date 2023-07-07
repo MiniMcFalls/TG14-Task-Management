@@ -617,6 +617,7 @@
 
         BadgeCanvas4 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
+            Content: =""
             DisplayMode: =DisplayMode.Edit
             Height: =149
             Shape: ="Circular"
