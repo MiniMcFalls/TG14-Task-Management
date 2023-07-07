@@ -272,7 +272,7 @@
                     gblUserLocPerm,
                     "Wyton"
                 ),
-                "LOS-C4I CyIX Photo" in gblCurrentUser.officeLocation,
+                "LOS-CET MPT" in gblCurrentUser.officeLocation,
                 Set(
                     gblUserLocPerm,
                     "Lossiemouth"
