@@ -876,9 +876,9 @@
         Image: =varUnitCrest
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =377
-        X: =265
-        Y: =97
+        Width: =469
+        X: =219
+        Y: =100
         ZIndex: =39
 
     "'Vert Divider_4' As rectangle":

@@ -738,7 +738,6 @@ cmp_LoanCard As CanvasComponent:
             Height: =661
             Items: =cmp_LoanCard.LoanCardInput
             Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
             TemplateSize: =75
             Width: =1184

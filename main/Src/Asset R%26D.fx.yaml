@@ -592,9 +592,7 @@
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            OnSelect: |-
-                =Set(varViewLoanCard, true);
-                Reset(cmp_LoanCard_1);
+            OnSelect: =Set(varViewLoanCard, true);
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1272,9 +1270,1246 @@
                 Y: =460
                 ZIndex: =14
 
-    cmp_LoanCard_1 As cmp_LoanCard:
-        ChildTabPriority: =false
-        EnableChildFocus: =false
-        Visible: =varViewLoanCard
-        ZIndex: =8
+    "'LoanCard Popup' As group":
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =29
+
+        Rectangle27_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(179, 179, 179, 0.6)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(179, 179, 179, 0.6)
+            FocusedBorderThickness: =4
+            Height: =930
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Visible: =varViewLoanCard
+            Width: =1850
+            ZIndex: =10
+
+        Button27_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =varPillBackground
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =750
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =15
+            Text: =""
+            Visible: =varViewLoanCard
+            Width: =1595
+            X: =128
+            Y: =90
+            ZIndex: =11
+
+        Container1_3 As groupContainer.manualLayoutContainer:
+            Height: =701
+            Visible: =varViewLoanCard
+            Width: =409
+            X: =128
+            Y: =139
+            ZIndex: =12
+
+            "TextInputCanvas4_12 As 'Text input'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =31
+                Width: =263
+                X: =123
+                Y: =589
+                ZIndex: =1
+
+            "TextInputCanvas4_2 As 'Text input'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =31
+                Width: =263
+                X: =123
+                Y: =355
+                ZIndex: =2
+
+            BadgeCanvas5_7 As Badge:
+                Content: =""
+                DisplayMode: =DisplayMode.Edit
+                Height: =85
+                Shape: ='BadgeCanvas.Shape'.Rounded
+                ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
+                Width: =356
+                X: =30
+                Y: =25
+                ZIndex: =3
+
+            Label41_42 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =11
+                Text: ="Date"
+                Width: =99
+                X: =106
+                Y: =123
+                ZIndex: =4
+
+            Icon17_9 As icon.LogJournal:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(105, 121, 126, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                Height: =42
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Folder
+                OnSelect: =
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =68
+                X: =174
+                Y: =37
+                ZIndex: =5
+
+            BadgeCanvas2_11 As Badge:
+                Appearance: ='BadgeCanvas.Appearance'.Tint
+                Content: =Text(Today(), "dd/mm/yyy")
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Shape: ='BadgeCanvas.Shape'.Rounded
+                ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
+                Width: =99
+                X: =106
+                Y: =163
+                ZIndex: =6
+
+            TextCanvas1_7 As Text:
+                Alignment: ='TextCanvas.Alignment'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: ="Core Loan Info"
+                Weight: ='TextCanvas.Weight'.Bold
+                Width: =113
+                X: =152
+                Y: =79
+                ZIndex: =7
+
+            Rectangle31_10 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =1
+                HoverFill: =RGBA(105, 121, 126, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =250
+                X: =80
+                Y: =119
+                ZIndex: =8
+
+            BadgeCanvas5_8 As Badge:
+                Content: =""
+                DisplayMode: =DisplayMode.Edit
+                Height: =85
+                Shape: ='BadgeCanvas.Shape'.Rounded
+                ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
+                Width: =356
+                X: =30
+                Y: =227
+                ZIndex: =9
+
+            Icon17_10 As icon.LogJournal:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(105, 121, 126, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                Height: =42
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Person
+                OnSelect: =
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =68
+                X: =171
+                Y: =239
+                ZIndex: =10
+
+            TextCanvas1_8 As Text:
+                Alignment: ='TextCanvas.Alignment'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: ="Customer Details"
+                Weight: ='TextCanvas.Weight'.Bold
+                Width: =130
+                X: =140
+                Y: =281
+                ZIndex: =11
+
+            Rectangle31_11 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =1
+                HoverFill: =RGBA(105, 121, 126, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =250
+                X: =80
+                Y: =321
+                ZIndex: =12
+
+            Label41_44 As label:
+                Align: =Align.Right
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =11
+                Text: ="Name"
+                Width: =99
+                X: =24
+                Y: =350
+                ZIndex: =13
+
+            Label41_45 As label:
+                Align: =Align.Right
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =11
+                Text: ="Section/Role"
+                Width: =99
+                X: =24
+                Y: =385
+                ZIndex: =14
+
+            Label41_46 As label:
+                Align: =Align.Right
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =11
+                Text: ="Email"
+                Width: =99
+                X: =24
+                Y: =425
+                ZIndex: =15
+
+            Label41_47 As label:
+                Align: =Align.Right
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =11
+                Text: ="Contact Tel"
+                Width: =123
+                Y: =465
+                ZIndex: =16
+
+            Label41_49 As label:
+                Align: =Align.Right
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =11
+                Text: ="Alt Contact"
+                Width: =123
+                Y: =584
+                ZIndex: =17
+
+            Rectangle31_12 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =1
+                HoverFill: =RGBA(105, 121, 126, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =250
+                X: =80
+                Y: =559
+                ZIndex: =19
+
+            Button14_13 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =If(Or(IsBlank(TextInputCanvas4_2.Value),IsBlank(TextInputCanvas4_10.Value),IsEmpty('Customer Select_1'.SelectedItems),IsBlank(TextInputCanvas4_11.Value),IsBlank(DatePickerCanvas3_1.Value)), DisplayMode.Disabled, DisplayMode.Edit)
+                Fill: =RGBA(54, 176, 75, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =43
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(Self.Fill, -10%)
+                OnSelect: |
+                    =Set(
+                        varLoanNotifyWindow,
+                        true
+                    );
+                    ForAll(
+                        LoanCard,
+                        UpdateIf(
+                            'Asset Tracker_1',
+                            'LC Serial Number' = 'Serial number',
+                            {
+                                Status: {Value: "Loan"},
+                                Location: {Value: "In Use"},
+                                'Previous owner': First(
+                                    Filter(
+                                        'Asset Tracker_1',
+                                        'LC Serial Number' = 'Serial number'
+                                    )
+                                ).'Current owner',
+                                'Current owner': 'Customer Select_1'.Selected,
+                                'Due date': DatePickerCanvas3_1.Value
+                            }
+                        )
+                    );
+                    Patch(
+                        'TG14 Loan Register',
+                        Defaults('TG14 Loan Register'),
+                        {
+                            'Loan Date & Time': DateTimeValue(
+                                Now(),
+                                "en-GB"
+                            ),
+                            Recipient: TextInputCanvas4_2.Value,
+                            'Section/Role': TextInputCanvas4_10.Value,
+                            'Contact Email': 'Customer Select_1'.Selected.Email,
+                            'Contact Number': TextInputCanvas4_11.Value,
+                            'Loaned Items': Concat(
+                                LoanCard,
+                                Concatenate(
+                                    'LC Asset Tag',
+                                    " / ",
+                                    'LC Asset type',
+                                    " / ",
+                                    'LC Manufacturer'.Value,
+                                    " / ",
+                                    'LC Model',
+                                    " / ",
+                                    'LC Serial Number'
+                                ),
+                                "<br>"
+                            )
+                        }
+                    );
+                    Set(
+                        varLoanRegisterCheck,
+                        true
+                    );
+                    Office365Outlook.SendEmail(
+                        'Customer Select_1'.Selected.Email,
+                        Concatenate(
+                            Text(
+                                Now(),
+                                "yyyymmdd",
+                                "en-GB"
+                            ),
+                            "-Your TG14 Equipment Loan-O"
+                        ),
+                        'Loan Notify Email'.HtmlText,
+                        {
+                            Importance: "High",
+                            IsHtml: true
+                        }
+                    );
+                    Set(
+                        varLoanCustEmailSent,
+                        true
+                    );
+                    Concurrent(
+                        Set(
+                            varLoanNotifyWindow,
+                            false
+                        ),
+                        Set(
+                            varViewLoanCard,
+                            false
+                        ),
+                        Set(
+                            varLoanCustEmailSent,
+                            false
+                        ),
+                        Set(
+                            varLoanRegisterCheck,
+                            false
+                        ),
+                        Reset(DatePickerCanvas3_1),
+                        Reset('Customer Select_1'),
+                        Reset(TextInputCanvas4_2),
+                        Reset(TextInputCanvas4_10),
+                        Reset('Customer Select_1'),
+                        Reset(TextInputCanvas4_11),
+                        Reset(TextInputCanvas4_12),
+                        Reset(DatePickerCanvas3_1),
+                        Clear(LoanCard)
+                    );
+                PressedBorderColor: =ColorFade(Self.Fill, -50%)
+                PressedColor: =Color.White
+                PressedFill: =ColorFade(Self.Fill,-30%)
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Size: =15
+                Text: ="Submit Loan"
+                Width: =356
+                X: =30
+                Y: =640
+                ZIndex: =20
+
+            Label41_43 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =11
+                Text: ="Time"
+                Width: =99
+                X: =205
+                Y: =123
+                ZIndex: =21
+
+            BadgeCanvas2_12 As Badge:
+                Appearance: ='BadgeCanvas.Appearance'.Tint
+                Content: |-
+                    =Text(Now(), "hh:mm")
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Shape: ='BadgeCanvas.Shape'.Rounded
+                ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
+                Width: =99
+                X: =205
+                Y: =163
+                ZIndex: =22
+
+            "TextInputCanvas4_10 As 'Text input'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =31
+                Width: =263
+                X: =123
+                Y: =390
+                ZIndex: =23
+
+            "TextInputCanvas4_11 As 'Text input'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =31
+                Width: =263
+                X: =123
+                Y: =470
+                ZIndex: =25
+
+            "'Customer Select_1' As combobox":
+                BorderColor: =If(IsBlank(Self.SelectedItems), Color.Red, RGBA(166, 166, 166, 1))
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                ChevronFill: =RGBA(33, 33, 33, 1)
+                ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                Color: =RGBA(51, 51, 51, 1)
+                Default: =Blank()
+                DefaultSelectedItems: =Blank()
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["DisplayName","Email","Picture"]
+                Font: =Font.'Segoe UI'
+                Height: =31
+                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(212, 212, 212, 1)
+                Items: =Choices([@'TG14 Task Information'].'O365 Data')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                SearchFields: =["DisplayName"]
+                SearchItems: =Choices('TG14 Task Information'.'O365 Data','Customer Select_1'.SearchText)
+                SelectionFill: =RGBA(105, 121, 126, 1)
+                SelectMultiple: =false
+                Size: =10
+                Template: =ListItemTemplate.Person
+                Tooltip: =Blank()
+                Width: =263
+                X: =123
+                Y: =429
+                ZIndex: =26
+
+            Label41_48 As label:
+                Align: =Align.Right
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =11
+                Text: ="Return Date"
+                Width: =123
+                Y: =510
+                ZIndex: =27
+
+            "DatePickerCanvas3_1 As 'Date picker'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Width: =263
+                X: =123
+                Y: =514
+                ZIndex: =28
+
+        Button33_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(95, 109, 113, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderColor: =
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =49
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =15
+            Text: ="To Loan"
+            Visible: =varViewLoanCard
+            Width: =1595
+            X: =128
+            Y: =90
+            ZIndex: =13
+
+        Icon20_3 As icon.CancelBadge:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(204, 204, 204, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =37
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: |
+                =Set(
+                    varViewLoanCard,
+                    false
+                );
+                Concurrent(
+                    Reset(TextInputCanvas4_2),
+                    Reset(TextInputCanvas4_10),
+                    Reset('Customer Select_1'),
+                    Reset(TextInputCanvas4_11),
+                    Reset(TextInputCanvas4_12),
+                    Reset(DatePickerCanvas3_1)
+                );
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =varViewLoanCard
+            Width: =37
+            X: =143
+            Y: =96
+            ZIndex: =14
+
+        Rectangle30_3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderThickness: =4
+            Height: =701
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Visible: =varViewLoanCard
+            Width: =2
+            X: =537
+            Y: =139
+            ZIndex: =15
+
+        Container2_3 As groupContainer.manualLayoutContainer:
+            Height: =701
+            Visible: =varViewLoanCard
+            Width: =1184
+            X: =539
+            Y: =139
+            ZIndex: =16
+
+            Label46_15 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(116, 116, 116, 1)
+                BorderThickness: =1
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                OnSelect: =
+                Size: =13
+                Text: ="Asset Tag"
+                Width: =352
+                ZIndex: =1
+
+            Label46_16 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(116, 116, 116, 1)
+                BorderThickness: =1
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                OnSelect: =
+                Size: =13
+                Text: ="Type"
+                X: =352
+                ZIndex: =2
+
+            Label46_17 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(116, 116, 116, 1)
+                BorderThickness: =1
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                OnSelect: =
+                Size: =13
+                Text: ="Manufacturer"
+                X: =502
+                ZIndex: =3
+
+            Label46_18 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(116, 116, 116, 1)
+                BorderThickness: =1
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                OnSelect: =
+                Size: =13
+                Text: ="Model"
+                Width: =255
+                X: =652
+                ZIndex: =4
+
+            Label46_19 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(116, 116, 116, 1)
+                BorderThickness: =1
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                OnSelect: =
+                Size: =13
+                Text: ="Serial Number"
+                Width: =277
+                X: =907
+                ZIndex: =5
+
+            "Gallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Height: =661
+                Items: =LoanCard
+                Layout: =Layout.Vertical
+                TemplatePadding: =0
+                TemplateSize: =75
+                Width: =1184
+                Y: =40
+                ZIndex: =6
+
+                Label37_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =75
+                    OnSelect: =Select(Parent)
+                    Overflow: =Overflow.Scroll
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    Size: =13
+                    Text: =ThisItem.'LC Asset Tag'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =352
+                    ZIndex: =1
+
+                Rectangle16_4 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledFill: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(105, 121, 126, 1)
+                    FocusedBorderThickness: =4
+                    Height: =1
+                    HoverFill: =RGBA(105, 121, 126, 1)
+                    OnSelect: =Select(Parent)
+                    PressedFill: =RGBA(105, 121, 126, 1)
+                    Width: =Gallery1_2.TemplateWidth
+                    Y: =74
+                    ZIndex: =2
+
+                Label38_2 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =75
+                    OnSelect: =Select(Parent)
+                    Overflow: =Overflow.Scroll
+                    Size: =13
+                    Text: =ThisItem.'LC Asset type'
+                    VerticalAlign: =VerticalAlign.Top
+                    X: =352
+                    ZIndex: =3
+
+                Label39_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =75
+                    OnSelect: =Select(Parent)
+                    Overflow: =Overflow.Scroll
+                    Size: =13
+                    Text: =ThisItem.'LC Model'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =255
+                    X: =652
+                    ZIndex: =4
+
+                Label44_2 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =75
+                    OnSelect: =Select(Parent)
+                    Overflow: =Overflow.Scroll
+                    Size: =13
+                    Text: =ThisItem.'LC Serial Number'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =277
+                    X: =907
+                    ZIndex: =6
+
+                Label45_2 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =74
+                    OnSelect: =Select(Parent)
+                    Overflow: =Overflow.Scroll
+                    Size: =13
+                    Text: =ThisItem.'LC Manufacturer'.Value
+                    VerticalAlign: =VerticalAlign.Top
+                    X: =502
+                    ZIndex: =7
+
+    "'LoanCard Notify' As group":
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =29
+
+        "'Cust Det - Blocker Pill_9' As rectangle":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(230, 230, 230, 0.8)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderThickness: =4
+            Height: =930
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Visible: =If(varLoanNotifyWindow, true, false)
+            Width: =1850
+            ZIndex: =17
+
+        "'Cust Det - Background Pill_9' As button":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(179, 179, 179, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =511
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =15
+            Text: =""
+            Visible: =If(varLoanNotifyWindow, true, false)
+            Width: =1301
+            X: =275
+            Y: =215
+            ZIndex: =18
+
+        "'Cust Det - Pill 3_9' As button":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =488
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Size: =15
+            Text: =""
+            Visible: =If(varLoanNotifyWindow, true, false)
+            Width: =1274
+            X: =288
+            Y: =227
+            ZIndex: =19
+
+        Image1_5 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='Pulse-1.4s-284px'
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(varLoanNotifyWindow, true, false)
+            X: =875
+            Y: =350
+            ZIndex: =20
+
+        Label6_5 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =69
+            Size: =18
+            Text: ="Submiting, Please Wait..."
+            Visible: =If(varLoanNotifyWindow, true, false)
+            Width: =479
+            X: =686
+            Y: =278
+            ZIndex: =21
+
+        Checkbox1_14 As checkbox:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            CheckboxBorderColor: =RGBA(102, 102, 102, 1)
+            CheckmarkFill: =RGBA(105, 121, 126, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            Default: =varLoanRegisterCheck
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.Disabled
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =13
+            Text: ="Loan Register"
+            Visible: =If(varLoanNotifyWindow, true, false)
+            Width: =224
+            X: =655
+            Y: =501
+            ZIndex: =22
+
+        Label7_10 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =18
+            Text: ="Loan Submission"
+            Visible: =If(varLoanNotifyWindow, true, false)
+            Width: =241
+            X: =651
+            Y: =461
+            ZIndex: =23
+
+        Icon12_11 As icon.CheckBadge:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(99, 139, 44, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =37
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CheckBadge
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(Checkbox1_14.Value && varLoanNotifyWindow = true , true, false)
+            Width: =33
+            X: =614
+            Y: =461
+            ZIndex: =24
+
+        Checkbox1_16 As checkbox:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            CheckboxBorderColor: =RGBA(102, 102, 102, 1)
+            CheckmarkFill: =RGBA(105, 121, 126, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            Default: =varLoanCustEmailSent
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.Disabled
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =13
+            Text: ="Email Sent"
+            Visible: =If(varLoanNotifyWindow, true, false)
+            Width: =224
+            X: =990
+            Y: =501
+            ZIndex: =25
+
+        Label7_11 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =18
+            Text: ="Customer Notification"
+            Visible: =If(varLoanNotifyWindow, true, false)
+            Width: =272
+            X: =989
+            Y: =464
+            ZIndex: =26
+
+        Icon12_10 As icon.CheckBadge:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(99, 139, 44, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =37
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CheckBadge
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(Checkbox1_16.Value&& varLoanNotifyWindow = true, true, false)
+            Width: =33
+            X: =952
+            Y: =464
+            ZIndex: =27
+
+        "'Loan Notify Email' As htmlViewer":
+            Height: =16
+            HtmlText: |-
+                ="<table border=""0"" cellspacing="""" cellpadding=""0"" align=""center"">
+                <tbody>
+                <tr>
+                <td style=""width: 700px; max-width: 700px; font-family: Segoe UI,-apple-system,BlinkMacSystemFont,San Francisco,Roboto,Helvetica Neue,Arial; border: solid; border-width: 1px; border-color: #421631; border-radius: 1px; box-shadow: 0 0 50px rgba(0, 0 ,0 ,0.08);"">
+                <table style=""background-color: #ECECEC; border=""0""; width=""698"" cellspacing="""" cellpadding=""0"" align=""center"" >
+                <tbody>
+                <tr>
+                <td style=""padding-left: 0px; padding-top: 0px; width: 516px;"">
+                <table style=""height: 11px; width: 100%; color: #000000; background-color: #4f6d7a; padding: 0px;"" border=""0"" cellpadding=""5"">
+                <tbody>
+                <tr style=""height: 11px;"">
+                <td style=""font-size: 8px; color: #f2f2f2; width: 100%; text-align: center; height: 11px;"">AUTOMATED EMAIL - PLEASE DO NOT REPLY</td>
+                </tr>
+                </tbody>
+                </table>
+                </td>
+                </tr>
+                <tr>
+                <td style=""padding-left: 287px; padding-top: 10px; padding-bottom: 10px; width: 516px; height: 160px;"">&nbsp; &nbsp; <img id="""" src=" & Switch(
+                        gblUserLocPerm,
+                        "77X Brigade",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/3eb48e2a-e033-3942-6ff3-910361c748ce.png",
+                        "83EAG Det",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/d1041af0-71f6-ac1d-3096-6326ae74a2a4.png",
+                        "ACSSU",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b4d6f16e-26ce-5011-336e-053d9fc7c285.png",
+                        "ADW",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/a6476e43-c56d-8ca8-fd8e-a02abf360664.png",
+                        "Akrotiri",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/d6257442-0155-fdcb-dc95-9db662f16e55.png",
+                        "Aldergrove",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/8bc8c9d4-7b7c-a0a2-362f-b891cb349faf.png",
+                        "Benson",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/82ebbac7-2e52-f0e6-de9e-99e7b601968d.png",
+                        "Brize Photo",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/a6476e43-c56d-8ca8-fd8e-a02abf360664.png",
+                        "Chicksands",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/07f0f7f1-8a69-8843-9e2e-fed810a9da10.png",
+                        "Coningsby",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/cba0a6cc-ee54-3f80-c3b0-7be79e82d024.png",
+                        "Cosford",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/4e0e381e-2ce1-a6e3-eba8-22d0476cfb85.png",
+                        "Cranwell",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/ff03c588-3736-ca75-0905-bda2c92c5e7d.png",
+                        "MOD Main Building",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/07f0f7f1-8a69-8843-9e2e-fed810a9da10.png",
+                        "Halton",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b4d6f16e-26ce-5011-336e-053d9fc7c285.png",
+                        "Honington",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/85d6705a-e398-4f3d-9eb1-a6b18d9db453.png",
+                        "JADTEU",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e5410478-e303-758e-5a79-233c84f8f52b.png",
+                        "Leeming",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/414a7b80-608f-7318-f567-b5373afb3853.png",
+                        "Lossiemouth",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/acbd53cc-120f-b60b-e92b-9d1c6dcaf6bc.png",
+                        "Marham",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/7606e70e-d5a5-c5d5-b58f-dc64c9b32256.png",
+                        "Northolt",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/fa465b95-1637-734e-7c5c-09ac25b76a1e.png",
+                        "Odiham",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/8473c2d8-06d7-e4a4-a79c-8d453b2bd52b.png",
+                        "RAFAT",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e17eec2b-6b82-5464-6fb9-5ea4a478facb.png",
+                        "Shawbury",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/9d927268-b98f-e5f4-ec23-b56f168920a5.png",
+                        "St Athan",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e831dc62-fff4-f255-2bfc-125e2d6d4f1b.png",
+                        "St Mawgan",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/4081ed91-9ba0-05fa-aef5-0f7371b30b27.png",
+                        "Valley",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/15230b55-19cf-9935-3451-7785ee3d3b2f.png",
+                        "Waddington",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/aea761f4-981f-8520-af9e-b5540dfeed54.png",
+                        "Wittering",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/3d325ec1-316c-e3c5-6140-a55e0df1db1d.png",
+                        "Wyton",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/a9caefd9-8120-525c-b6c2-9ab54cb99b13.png"
+                    ) & " alt=""RAF Photographers at RAF Lossiemouth"" width=""391"" height=""125"" /></td>
+                </tr>
+                <tr id=""ribbon"" style=""background-color: #c0d6df;"">
+                <td style=""width: 100%;"">
+                <table id=""ribbonContent"" style=""height: 85px; width: 100%; color: #000000; background-color: #4f6d7a; padding: 0px 20px 0px 20px;"">
+                <tbody>
+                <tr style=""height: 85px;"">
+                <td id=""ribbonHeader"" style=""background-color: #4f6d7a; height: 85px;"">
+                <h2 style=""font-size: 20px; font-weight: normal; color: #f2f2f2; padding-left: 0px; padding-right: 0px; text-align: left;""><strong>Your TG14 Equipment Loan.</strong></h2>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </td>
+                </tr>
+                <tr>
+                <td style=""font-size: 12px; background-color: ##c0d6df; height: 40px; width: 100%; color: #60401f; padding: 30px 75px 30px 75px;"">
+                <p><strong>Below is a summary of the items you have taken receipt of. Should any discrepancies be noticed then you are to notify the issuing section without delay so your record can be corrected.</strong></p>
+                <h2 style=""text-align: center; color: #60401f; font-size: 12px;"">""" & Concat(
+                            LoanCard,
+                            Concatenate(
+                                'LC Asset Tag',
+                                " / ",
+                                'LC Asset type',
+                                " / ",
+                                'LC Manufacturer'.Value,
+                                " / ",
+                                'LC Model',
+                                " / ",
+                                'LC Serial Number'
+                            ),
+                            "<br>"
+                        ) & """</h2>
+                <p>The equipment that has been loaned to you remains the property of the MoD and Trade Group 14 RAF Visual Communicators and as such is to be available for re-call upon request without prior notice or warning.</p>
+                <p>As agreed you are to return the items listed by the proposed return date of : <b>""" & DatePickerCanvas3_1.Value & """</b></p>
+                <p>Should you be unable to return the items by the proposed date then you are to contact the issuing section to arrange a suitable date and time in the immediate future as to when the items can be returned. In addition, if any items are damaged or lost outside of the proposed use case then the cost for repair and/or replacement will be charged against yourself or to your Unit/Squadron's UIN.</p>
+                </td>
+                </tr>
+                <tr id=""footer"">
+                <td style=""font-size: 8px; background-color: #4f6d7a; height: 11px; padding-top: 10px; padding-left: 0 px; padding-bottom: 10px; width: 100%; color: #f2f2f2; text-align: center;"">AUTOMATED EMAIL - PLEASE DO NOT REPLY</td>
+                </tr>
+                </tbody>
+                </table>
+                </td>
+                </tr>
+                </tbody>
+                </table>"
+            Visible: =false
+            Width: =755
+            X: =459
+            ZIndex: =28
 
