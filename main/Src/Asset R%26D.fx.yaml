@@ -1270,6 +1270,68 @@
                 Y: =460
                 ZIndex: =14
 
+        Rectangle18_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderThickness: =4
+            Height: =65
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Width: =1
+            X: =866
+            Y: =29
+            ZIndex: =16
+
+        Icon22 As icon.ListScrollWatchlist:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(105, 121, 126, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =48
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ListScrollWatchlist
+            OnSelect: =Set(varExistingLoans, true)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =48
+            X: =903
+            Y: =27
+            ZIndex: =17
+
+        TextCanvas4_2 As Text:
+            Alignment: ='TextCanvas.Alignment'.Center
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: ="Existing Loans"
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =96
+            X: =879
+            Y: =81
+            ZIndex: =18
+
+        Rectangle18_3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderThickness: =4
+            Height: =1
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Width: =65
+            X: =894
+            Y: =75
+            ZIndex: =19
+
     "'LoanCard Popup' As group":
         Height: =5
         Width: =5
@@ -1616,25 +1678,7 @@
                         varLoanNotifyWindow,
                         true
                     );
-                    ForAll(
-                        LoanCard,
-                        UpdateIf(
-                            'Asset Tracker_1',
-                            'LC Serial Number' = 'Serial number',
-                            {
-                                Status: {Value: "Loan"},
-                                Location: {Value: "In Use"},
-                                'Previous owner': First(
-                                    Filter(
-                                        'Asset Tracker_1',
-                                        'LC Serial Number' = 'Serial number'
-                                    )
-                                ).'Current owner',
-                                'Current owner': 'Customer Select_1'.Selected,
-                                'Due date': DatePickerCanvas3_1.Value
-                            }
-                        )
-                    );
+                    Set(varLoanID,
                     Patch(
                         'TG14 Loan Register',
                         Defaults('TG14 Loan Register'),
@@ -1660,9 +1704,31 @@
                                     " / ",
                                     'LC Serial Number'
                                 ),
-                                "<br>"
-                            )
+                                "|||"
+                            ),
+                            'Alternate Contact': TextInputCanvas4_12.Value,
+                            'Proposed Return Date': DatePickerCanvas3_1.Value
                         }
+                    ).ID);
+                    ForAll(
+                        LoanCard,
+                        UpdateIf(
+                            'Asset Tracker_1',
+                            'LC Serial Number' = 'Serial number',
+                            {
+                                Status: {Value: "Loan"},
+                                Location: {Value: "In Use"},
+                                'Previous owner': First(
+                                    Filter(
+                                        'Asset Tracker_1',
+                                        'LC Serial Number' = 'Serial number'
+                                    )
+                                ).'Current owner',
+                                'Current owner': 'Customer Select_1'.Selected,
+                                'Due date': DatePickerCanvas3_1.Value,
+                                'Loan ID':  varLoanID
+                            }
+                        )
                     );
                     Set(
                         varLoanRegisterCheck,
@@ -2404,63 +2470,63 @@
                 <td style=""padding-left: 287px; padding-top: 10px; padding-bottom: 10px; width: 516px; height: 160px;"">&nbsp; &nbsp; <img id="""" src=" & Switch(
                         gblUserLocPerm,
                         "77X Brigade",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/3eb48e2a-e033-3942-6ff3-910361c748ce.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/ff5b4600-f087-c5dd-403f-6cde1163516a.png",
                         "83EAG Det",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/d1041af0-71f6-ac1d-3096-6326ae74a2a4.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/558d4ef0-c3e4-ffbe-1c10-4606980978d8.png",
                         "ACSSU",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b4d6f16e-26ce-5011-336e-053d9fc7c285.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b4e2dfc5-28d1-544f-3726-8ba80c44630e.png",
                         "ADW",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/a6476e43-c56d-8ca8-fd8e-a02abf360664.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/1ca9447c-71ac-08b6-61db-29a09d067a87.png",
                         "Akrotiri",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/d6257442-0155-fdcb-dc95-9db662f16e55.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/78a985e5-fbab-c809-ff8d-cfb8df05ff55.png",
                         "Aldergrove",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/8bc8c9d4-7b7c-a0a2-362f-b891cb349faf.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/cb34f7f8-f83e-b3db-5b65-353fbb649872.png",
                         "Benson",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/82ebbac7-2e52-f0e6-de9e-99e7b601968d.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/28fb4575-61ed-0c54-5b59-3127eddeed3e.png",
                         "Brize Photo",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/a6476e43-c56d-8ca8-fd8e-a02abf360664.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/1ca9447c-71ac-08b6-61db-29a09d067a87.png",
                         "Chicksands",
                         "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/07f0f7f1-8a69-8843-9e2e-fed810a9da10.png",
                         "Coningsby",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/cba0a6cc-ee54-3f80-c3b0-7be79e82d024.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/78a75c1f-13a4-0ebb-4f2e-b9976c1dce56.png",
                         "Cosford",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/4e0e381e-2ce1-a6e3-eba8-22d0476cfb85.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/c0f9698f-5543-cbc1-9817-de2f7176974b.png",
                         "Cranwell",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/ff03c588-3736-ca75-0905-bda2c92c5e7d.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/75e3b5ab-ba64-125a-2b2d-7a501332b15a.png",
                         "MOD Main Building",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/07f0f7f1-8a69-8843-9e2e-fed810a9da10.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/da61be41-40d6-38e9-ffe4-3a280733dbcc.png",
                         "Halton",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b4d6f16e-26ce-5011-336e-053d9fc7c285.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b4e2dfc5-28d1-544f-3726-8ba80c44630e.png",
                         "Honington",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/85d6705a-e398-4f3d-9eb1-a6b18d9db453.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/64c42426-d14b-195f-727c-ef70bebf5097.png",
                         "JADTEU",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e5410478-e303-758e-5a79-233c84f8f52b.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/c8765bc7-2b29-59b2-5204-d12d686bf501.png",
                         "Leeming",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/414a7b80-608f-7318-f567-b5373afb3853.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/57c5598b-4bbf-f0ab-8bc8-84bbc67e04d4.png",
                         "Lossiemouth",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/acbd53cc-120f-b60b-e92b-9d1c6dcaf6bc.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/c699d70a-44ef-7365-9e5b-021526566d83.png",
                         "Marham",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/7606e70e-d5a5-c5d5-b58f-dc64c9b32256.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e4c7e10d-e646-eedc-1576-48797e06ed3f.png",
                         "Northolt",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/fa465b95-1637-734e-7c5c-09ac25b76a1e.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/4d88f27b-67a3-0bcb-cdb5-5a89ddf22a59.png",
                         "Odiham",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/8473c2d8-06d7-e4a4-a79c-8d453b2bd52b.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/bc1e9faa-ce37-1ce4-fea2-0298d36ef2cc.png",
                         "RAFAT",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e17eec2b-6b82-5464-6fb9-5ea4a478facb.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/988b837b-13ae-4f26-de12-3ad70e17e30d.png",
                         "Shawbury",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/9d927268-b98f-e5f4-ec23-b56f168920a5.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/823d78b0-5fcd-bf09-904d-af9b6a15d58c.png",
                         "St Athan",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e831dc62-fff4-f255-2bfc-125e2d6d4f1b.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b6cc13e6-5385-8ad8-74f0-b362015922ef.png",
                         "St Mawgan",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/4081ed91-9ba0-05fa-aef5-0f7371b30b27.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/6b421dcb-dac2-dace-3d32-ec700843ab32.png",
                         "Valley",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/15230b55-19cf-9935-3451-7785ee3d3b2f.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/753f7339-032c-bea4-ef1b-be55a6f3b1bd.png",
                         "Waddington",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/aea761f4-981f-8520-af9e-b5540dfeed54.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/04e3ff56-0c58-2391-bb09-3a6bd3e78937.png",
                         "Wittering",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/3d325ec1-316c-e3c5-6140-a55e0df1db1d.png",
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/04bd972c-f29d-1d43-3e94-ad34232ee11d.png",
                         "Wyton",
-                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/a9caefd9-8120-525c-b6c2-9ab54cb99b13.png"
+                        "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e05e0853-96d1-319f-adab-ca0f3b06b2ee.png"
                     ) & " alt=""RAF Photographers at RAF Lossiemouth"" width=""391"" height=""125"" /></td>
                 </tr>
                 <tr id=""ribbon"" style=""background-color: #c0d6df;"">
@@ -2512,4 +2578,823 @@
             Width: =755
             X: =459
             ZIndex: =28
+
+    Gallery10 As gallery.variableTemplateHeightGallery:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =27 * Gallery6_1.AllItemsCount  
+        Items: ='TG14 Loan Register'
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =Min(870, Self.Height - 60)
+        Width: =1123
+        X: =364
+        Y: =140
+        ZIndex: =35
+
+        Title4_2 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =10
+            PaddingTop: =0
+            Size: =17
+            Text: |-
+                ="Loan ID: " & ThisItem.ID
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            X: =18
+            ZIndex: =1
+
+        Subtitle2_4 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =10
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                ="Name: " & ThisItem.Recipient
+            VerticalAlign: =VerticalAlign.Top
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            X: =18
+            Y: =30
+            ZIndex: =2
+
+        NextArrow1_1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator3_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =4
+
+        Rectangle16_3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            Height: =Parent.TemplateHeight - Separator3_1.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            Y: =8
+            ZIndex: =5
+
+        Subtitle2_5 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =10
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.'Loan Date & Time'
+            VerticalAlign: =VerticalAlign.Top
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            X: =183
+            Y: =30
+            ZIndex: =6
+
+        Subtitle2_6 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =10
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.Recipient
+            VerticalAlign: =VerticalAlign.Top
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            X: =311
+            Y: =30
+            ZIndex: =7
+
+        Subtitle2_7 As label:
+            Color: =If(ThisItem.'Proposed Return Date' > Today(), Color.Black, ThisItem.'Proposed Return Date' = Today(), Color.DarkOrange, Color.Red)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =10
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.'Section/Role'
+            VerticalAlign: =VerticalAlign.Top
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            X: =426
+            Y: =30
+            ZIndex: =8
+
+        Gallery6_1 As gallery.variableTemplateHeightGallery:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DelayItemLoading: =true
+            Height: =Gallery10.TemplateHeight - 59
+            Items: =Filter('Asset Tracker_1', 'Loan ID' = ThisItem.ID)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowScrollbar: =false
+            TemplateSize: =Min(200, Self.Height - 60)
+            Width: =1051
+            Y: =51
+            ZIndex: =10
+
+            Body1_16 As label:
+                AutoHeight: =true
+                Color: =RGBA(221, 110, 66, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =27
+                OnSelect: =""
+                Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
+                Text: =ThisItem.Title
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(
+                                Split(
+                                    Self.Text,
+                                    ""
+                                ),
+                                {Result: ThisRecord.Value}
+                            ),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                Wrap: =false
+                ZIndex: =1
+
+            Rectangle7_8 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =1
+                HoverFill: =RGBA(105, 121, 126, 1)
+                OnSelect: =""
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =895
+                Y: =27
+                ZIndex: =2
+
+            Rectangle7_9 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =1
+                HoverFill: =RGBA(105, 121, 126, 1)
+                OnSelect: =""
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =895
+                Y: =55
+                ZIndex: =10
+
+            Body1_17 As label:
+                AutoHeight: =true
+                Color: =RGBA(128, 128, 128, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =27
+                OnSelect: =""
+                Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
+                Text: =ThisItem.Manufacturer.Value & " | " & ThisItem.Model& " | " & ThisItem.'Serial number'
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight + 1
+                Wrap: =false
+                X: =2
+                Y: =27
+                ZIndex: =11
+
+        Title4_3 As label:
+            Color: =If(Self.Text = "Due Today", Color.Orange, Color.Red)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =10
+            PaddingTop: =0
+            Size: =17
+            Text: |-
+                =If(DateDiff(ThisItem.'Proposed Return Date', Today()) = 0,"Due Today", "Late: " &  DateDiff(ThisItem.'Proposed Return Date', Today()) & If(DateDiff(ThisItem.'Proposed Return Date', Today()) = 1, " Day", " Days"))
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =If(DateDiff(ThisItem.'Proposed Return Date', Today()) >= 0, true, false)
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            X: =Title4.X + Title4.Width
+            ZIndex: =11
+
+    "'Existing Loans Popup' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =35
+
+        Rectangle27_5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(179, 179, 179, 0.6)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(179, 179, 179, 0.6)
+            FocusedBorderThickness: =4
+            Height: =930
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Visible: =varExistingLoans
+            Width: =1850
+            ZIndex: =29
+
+        Button27_4 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =varPillBackground
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =750
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =15
+            Text: =""
+            Visible: =varExistingLoans
+            Width: =1123
+            X: =364
+            Y: =90
+            ZIndex: =30
+
+        Button33_4 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(95, 109, 113, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderColor: =
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =49
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =15
+            Text: ="Existing Loans"
+            Visible: =varExistingLoans
+            Width: =1123
+            X: =364
+            Y: =90
+            ZIndex: =32
+
+        Icon20_4 As icon.CancelBadge:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(204, 204, 204, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =37
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: |+
+                =Set(
+                    varExistingLoans,
+                    false
+                );
+                
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =varExistingLoans
+            Width: =37
+            X: =379
+            Y: =96
+            ZIndex: =33
+
+        "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DelayItemLoading: =true
+            Height: =682
+            Items: =SortByColumns('TG14 Loan Register', "ProposedReturnData",SortOrder.Ascending)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =154
+            Visible: =varExistingLoans
+            Width: =323
+            X: =12
+            ZIndex: =34
+
+            Title4 As label:
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =10
+                PaddingTop: =0
+                Size: =17
+                Text: |-
+                    ="Loan ID: " & ThisItem.ID
+                Underline: =true
+                VerticalAlign: =VerticalAlign.Top
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                X: =18
+                Y: =2
+                ZIndex: =2
+
+            Subtitle2 As label:
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =10
+                PaddingTop: =0
+                Size: =12
+                Text: |-
+                    ="Name: " & ThisItem.Recipient
+                VerticalAlign: =VerticalAlign.Top
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                X: =18
+                Y: =32
+                ZIndex: =3
+
+            NextArrow1 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                Color: =RGBA(166, 166, 166, 1)
+                Height: =50
+                Icon: =Icon.ChevronRight
+                OnSelect: =Select(Parent)
+                PaddingBottom: =16
+                PaddingLeft: =16
+                PaddingRight: =16
+                PaddingTop: =16
+                Tooltip: ="View item details"
+                Width: =50
+                X: =Parent.TemplateWidth - Self.Width - 12
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =4
+
+            Separator3 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =8
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            Rectangle16 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                Height: =Parent.TemplateHeight - Separator3.Height
+                OnSelect: =Select(Parent)
+                Visible: =ThisItem.IsSelected
+                Width: =4
+                ZIndex: =6
+
+            Subtitle2_1 As label:
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =10
+                PaddingTop: =0
+                Size: =12
+                Text: |-
+                    ="Role: " & ThisItem.'Section/Role'
+                VerticalAlign: =VerticalAlign.Top
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                X: =Subtitle2.X + Subtitle2.Width
+                Y: =32
+                ZIndex: =7
+
+            Subtitle2_2 As label:
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =21
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =10
+                PaddingTop: =0
+                Size: =12
+                Text: |-
+                    ="Contact Number: " & ThisItem.'Contact Number' & " "
+                VerticalAlign: =VerticalAlign.Top
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                X: =Subtitle2_1.X + Subtitle2_1.Width
+                Y: =32
+                ZIndex: =8
+
+            Subtitle2_3 As label:
+                Color: =If(ThisItem.'Proposed Return Date' > Today(), Color.Black, ThisItem.'Proposed Return Date' = Today(), Color.DarkOrange, Color.Red)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =21
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =10
+                PaddingTop: =0
+                Size: =12
+                Text: |-
+                    ="Return Date: " & ThisItem.'Proposed Return Date' 
+                VerticalAlign: =VerticalAlign.Top
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                X: =Subtitle2_2.X + Subtitle2_2.Width
+                Y: =32
+                ZIndex: =9
+
+            Title4_1 As label:
+                Color: =If(Self.Text = "Due Today", Color.Orange, Color.Red)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =10
+                PaddingTop: =0
+                Size: =17
+                Text: |-
+                    =If(DateDiff(ThisItem.'Proposed Return Date', Today()) = 0,"Due Today", "Late: " &  DateDiff(ThisItem.'Proposed Return Date', Today()) & If(DateDiff(ThisItem.'Proposed Return Date', Today()) = 1, " Day", " Days"))
+                VerticalAlign: =VerticalAlign.Top
+                Visible: =If(DateDiff(ThisItem.'Proposed Return Date', Today()) >= 0, true, false)
+                Width: |-
+                    =Sum(
+                        AddColumns(
+                            ForAll(Split(
+                                Self.Text,
+                                ""
+                            ), {Result: ThisRecord.Value}),
+                            "Size",
+                            LookUp(
+                                colCharsWidth,
+                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                            ).Size
+                        ),
+                        Size
+                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                X: =Title4.X + Title4.Width
+                Y: =2
+                ZIndex: =10
+
+            Gallery6 As gallery.variableTemplateHeightGallery:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DelayItemLoading: =true
+                Height: =93
+                Items: =Filter('Asset Tracker_1', 'Loan ID' = ThisItem.ID)
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =88
+                Width: =1048
+                X: =18
+                Y: =53
+                ZIndex: =11
+
+                Body1_14 As label:
+                    Color: =RGBA(221, 110, 66, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =27
+                    OnSelect: =""
+                    Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
+                    Text: =ThisItem.Title
+                    Width: |-
+                        =Sum(
+                            AddColumns(
+                                ForAll(
+                                    Split(
+                                        Self.Text,
+                                        ""
+                                    ),
+                                    {Result: ThisRecord.Value}
+                                ),
+                                "Size",
+                                LookUp(
+                                    colCharsWidth,
+                                    CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                                ).Size
+                            ),
+                            Size
+                        ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+                    Wrap: =false
+                    ZIndex: =1
+
+                Rectangle7_6 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    DisabledFill: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(105, 121, 126, 1)
+                    FocusedBorderThickness: =4
+                    Height: =1
+                    HoverFill: =RGBA(105, 121, 126, 1)
+                    OnSelect: =""
+                    PressedFill: =RGBA(105, 121, 126, 1)
+                    Width: =895
+                    Y: =27
+                    ZIndex: =2
+
+                Rectangle7_7 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    DisabledFill: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(105, 121, 126, 1)
+                    FocusedBorderThickness: =4
+                    Height: =1
+                    HoverFill: =RGBA(105, 121, 126, 1)
+                    OnSelect: =""
+                    PressedFill: =RGBA(105, 121, 126, 1)
+                    Width: =895
+                    Y: =55
+                    ZIndex: =10
+
+                Body1_15 As label:
+                    Color: =RGBA(128, 128, 128, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =27
+                    OnSelect: =""
+                    Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
+                    Text: =ThisItem.Manufacturer.Value & " | " & ThisItem.Model& " | " & ThisItem.'Serial number'
+                    Width: |-
+                        =Sum(
+                            AddColumns(
+                                ForAll(Split(
+                                    Self.Text,
+                                    ""
+                                ), {Result: ThisRecord.Value}),
+                                "Size",
+                                LookUp(
+                                    colCharsWidth,
+                                    CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                                ).Size
+                            ),
+                            Size
+                        ) * Self.Size + Self.PaddingLeft + Self.PaddingRight + 1
+                    Wrap: =false
+                    X: =2
+                    Y: =27
+                    ZIndex: =11
 
