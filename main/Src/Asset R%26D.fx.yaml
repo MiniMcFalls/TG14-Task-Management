@@ -2582,11 +2582,11 @@
     Gallery10 As gallery.variableTemplateHeightGallery:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =27 * Gallery6_1.AllItemsCount  
+        Height: =Gallery6_1.Height + 200
         Items: ='TG14 Loan Register'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =Min(870, Self.Height - 60)
+        TemplateSize: =Self.Height
         Width: =1123
         X: =364
         Y: =140
@@ -2797,7 +2797,7 @@
         Gallery6_1 As gallery.variableTemplateHeightGallery:
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =Gallery10.TemplateHeight - 59
+            Height: =27 * CountRows(Self.AllItems)
             Items: =Filter('Asset Tracker_1', 'Loan ID' = ThisItem.ID)
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
