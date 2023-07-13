@@ -2582,11 +2582,12 @@
     Gallery10 As gallery.variableTemplateHeightGallery:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =Gallery6_1.Height + 200
+        Height: =682
         Items: ='TG14 Loan Register'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =Self.Height
+        Selectable: =false   
+        TemplateSize: =249
         Width: =1123
         X: =364
         Y: =140
@@ -2596,7 +2597,7 @@
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =FontWeight.Semibold
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -2630,7 +2631,7 @@
             Color: =RGBA(51, 51, 51, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =FontWeight.Semibold
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -2685,21 +2686,11 @@
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =4
 
-        Rectangle16_3 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Height: =Parent.TemplateHeight - Separator3_1.Height
-            OnSelect: =Select(Parent)
-            Visible: =ThisItem.IsSelected
-            Width: =4
-            Y: =8
-            ZIndex: =5
-
         Subtitle2_5 As label:
             Color: =RGBA(51, 51, 51, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =FontWeight.Semibold
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -2732,7 +2723,7 @@
             Color: =RGBA(51, 51, 51, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =FontWeight.Semibold
             Height: =21
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -2765,7 +2756,7 @@
             Color: =If(ThisItem.'Proposed Return Date' > Today(), Color.Black, ThisItem.'Proposed Return Date' = Today(), Color.DarkOrange, Color.Red)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =FontWeight.Semibold
             Height: =21
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -2797,7 +2788,7 @@
         Gallery6_1 As gallery.variableTemplateHeightGallery:
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =27 * CountRows(Self.AllItems)
+            Height: =27 * Count(Filter('Asset Tracker_1', 'Loan ID' = ThisItem.ID).ID)
             Items: =Filter('Asset Tracker_1', 'Loan ID' = ThisItem.ID)
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
@@ -2902,7 +2893,7 @@
             Color: =If(Self.Text = "Due Today", Color.Orange, Color.Red)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =FontWeight.Semibold
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -2929,7 +2920,7 @@
                     ),
                     Size
                 ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-            X: =Title4.X + Title4.Width
+            X: =Title4_2.X + Title4_2.Width
             ZIndex: =11
 
     "'Existing Loans Popup' As group":
@@ -3041,360 +3032,4 @@
             X: =379
             Y: =96
             ZIndex: =33
-
-        "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-            BorderColor: =RGBA(166, 166, 166, 1)
-            DelayItemLoading: =true
-            Height: =682
-            Items: =SortByColumns('TG14 Loan Register', "ProposedReturnData",SortOrder.Ascending)
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            TemplatePadding: =0
-            TemplateSize: =154
-            Visible: =varExistingLoans
-            Width: =323
-            X: =12
-            ZIndex: =34
-
-            Title4 As label:
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =Self.Size * 1.8
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =10
-                PaddingTop: =0
-                Size: =17
-                Text: |-
-                    ="Loan ID: " & ThisItem.ID
-                Underline: =true
-                VerticalAlign: =VerticalAlign.Top
-                Width: |-
-                    =Sum(
-                        AddColumns(
-                            ForAll(Split(
-                                Self.Text,
-                                ""
-                            ), {Result: ThisRecord.Value}),
-                            "Size",
-                            LookUp(
-                                colCharsWidth,
-                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                            ).Size
-                        ),
-                        Size
-                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-                X: =18
-                Y: =2
-                ZIndex: =2
-
-            Subtitle2 As label:
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =Self.Size * 1.8
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =10
-                PaddingTop: =0
-                Size: =12
-                Text: |-
-                    ="Name: " & ThisItem.Recipient
-                VerticalAlign: =VerticalAlign.Top
-                Width: |-
-                    =Sum(
-                        AddColumns(
-                            ForAll(Split(
-                                Self.Text,
-                                ""
-                            ), {Result: ThisRecord.Value}),
-                            "Size",
-                            LookUp(
-                                colCharsWidth,
-                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                            ).Size
-                        ),
-                        Size
-                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-                X: =18
-                Y: =32
-                ZIndex: =3
-
-            NextArrow1 As icon.ChevronRight:
-                AccessibleLabel: =Self.Tooltip
-                Color: =RGBA(166, 166, 166, 1)
-                Height: =50
-                Icon: =Icon.ChevronRight
-                OnSelect: =Select(Parent)
-                PaddingBottom: =16
-                PaddingLeft: =16
-                PaddingRight: =16
-                PaddingTop: =16
-                Tooltip: ="View item details"
-                Width: =50
-                X: =Parent.TemplateWidth - Self.Width - 12
-                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                ZIndex: =4
-
-            Separator3 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                Fill: =RGBA(255, 255, 255, 1)
-                Height: =8
-                OnSelect: =Select(Parent)
-                Width: =Parent.TemplateWidth
-                Y: =Parent.TemplateHeight - Self.Height
-                ZIndex: =5
-
-            Rectangle16 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                Height: =Parent.TemplateHeight - Separator3.Height
-                OnSelect: =Select(Parent)
-                Visible: =ThisItem.IsSelected
-                Width: =4
-                ZIndex: =6
-
-            Subtitle2_1 As label:
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =Self.Size * 1.8
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =10
-                PaddingTop: =0
-                Size: =12
-                Text: |-
-                    ="Role: " & ThisItem.'Section/Role'
-                VerticalAlign: =VerticalAlign.Top
-                Width: |-
-                    =Sum(
-                        AddColumns(
-                            ForAll(Split(
-                                Self.Text,
-                                ""
-                            ), {Result: ThisRecord.Value}),
-                            "Size",
-                            LookUp(
-                                colCharsWidth,
-                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                            ).Size
-                        ),
-                        Size
-                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-                X: =Subtitle2.X + Subtitle2.Width
-                Y: =32
-                ZIndex: =7
-
-            Subtitle2_2 As label:
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =21
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =10
-                PaddingTop: =0
-                Size: =12
-                Text: |-
-                    ="Contact Number: " & ThisItem.'Contact Number' & " "
-                VerticalAlign: =VerticalAlign.Top
-                Width: |-
-                    =Sum(
-                        AddColumns(
-                            ForAll(Split(
-                                Self.Text,
-                                ""
-                            ), {Result: ThisRecord.Value}),
-                            "Size",
-                            LookUp(
-                                colCharsWidth,
-                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                            ).Size
-                        ),
-                        Size
-                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-                X: =Subtitle2_1.X + Subtitle2_1.Width
-                Y: =32
-                ZIndex: =8
-
-            Subtitle2_3 As label:
-                Color: =If(ThisItem.'Proposed Return Date' > Today(), Color.Black, ThisItem.'Proposed Return Date' = Today(), Color.DarkOrange, Color.Red)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =21
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =10
-                PaddingTop: =0
-                Size: =12
-                Text: |-
-                    ="Return Date: " & ThisItem.'Proposed Return Date' 
-                VerticalAlign: =VerticalAlign.Top
-                Width: |-
-                    =Sum(
-                        AddColumns(
-                            ForAll(Split(
-                                Self.Text,
-                                ""
-                            ), {Result: ThisRecord.Value}),
-                            "Size",
-                            LookUp(
-                                colCharsWidth,
-                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                            ).Size
-                        ),
-                        Size
-                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-                X: =Subtitle2_2.X + Subtitle2_2.Width
-                Y: =32
-                ZIndex: =9
-
-            Title4_1 As label:
-                Color: =If(Self.Text = "Due Today", Color.Orange, Color.Red)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =Self.Size * 1.8
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =10
-                PaddingTop: =0
-                Size: =17
-                Text: |-
-                    =If(DateDiff(ThisItem.'Proposed Return Date', Today()) = 0,"Due Today", "Late: " &  DateDiff(ThisItem.'Proposed Return Date', Today()) & If(DateDiff(ThisItem.'Proposed Return Date', Today()) = 1, " Day", " Days"))
-                VerticalAlign: =VerticalAlign.Top
-                Visible: =If(DateDiff(ThisItem.'Proposed Return Date', Today()) >= 0, true, false)
-                Width: |-
-                    =Sum(
-                        AddColumns(
-                            ForAll(Split(
-                                Self.Text,
-                                ""
-                            ), {Result: ThisRecord.Value}),
-                            "Size",
-                            LookUp(
-                                colCharsWidth,
-                                CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                            ).Size
-                        ),
-                        Size
-                    ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-                X: =Title4.X + Title4.Width
-                Y: =2
-                ZIndex: =10
-
-            Gallery6 As gallery.variableTemplateHeightGallery:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                DelayItemLoading: =true
-                Height: =93
-                Items: =Filter('Asset Tracker_1', 'Loan ID' = ThisItem.ID)
-                Layout: =Layout.Vertical
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplateSize: =88
-                Width: =1048
-                X: =18
-                Y: =53
-                ZIndex: =11
-
-                Body1_14 As label:
-                    Color: =RGBA(221, 110, 66, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =2
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =27
-                    OnSelect: =""
-                    Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
-                    Text: =ThisItem.Title
-                    Width: |-
-                        =Sum(
-                            AddColumns(
-                                ForAll(
-                                    Split(
-                                        Self.Text,
-                                        ""
-                                    ),
-                                    {Result: ThisRecord.Value}
-                                ),
-                                "Size",
-                                LookUp(
-                                    colCharsWidth,
-                                    CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                                ).Size
-                            ),
-                            Size
-                        ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-                    Wrap: =false
-                    ZIndex: =1
-
-                Rectangle7_6 As rectangle:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    DisabledFill: =RGBA(166, 166, 166, 1)
-                    Fill: =RGBA(105, 121, 126, 1)
-                    FocusedBorderThickness: =4
-                    Height: =1
-                    HoverFill: =RGBA(105, 121, 126, 1)
-                    OnSelect: =""
-                    PressedFill: =RGBA(105, 121, 126, 1)
-                    Width: =895
-                    Y: =27
-                    ZIndex: =2
-
-                Rectangle7_7 As rectangle:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    DisabledFill: =RGBA(166, 166, 166, 1)
-                    Fill: =RGBA(105, 121, 126, 1)
-                    FocusedBorderThickness: =4
-                    Height: =1
-                    HoverFill: =RGBA(105, 121, 126, 1)
-                    OnSelect: =""
-                    PressedFill: =RGBA(105, 121, 126, 1)
-                    Width: =895
-                    Y: =55
-                    ZIndex: =10
-
-                Body1_15 As label:
-                    Color: =RGBA(128, 128, 128, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =2
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =27
-                    OnSelect: =""
-                    Size: =17 * 'Asset_R&D_Gallery'.TemplateHeight / 105
-                    Text: =ThisItem.Manufacturer.Value & " | " & ThisItem.Model& " | " & ThisItem.'Serial number'
-                    Width: |-
-                        =Sum(
-                            AddColumns(
-                                ForAll(Split(
-                                    Self.Text,
-                                    ""
-                                ), {Result: ThisRecord.Value}),
-                                "Size",
-                                LookUp(
-                                    colCharsWidth,
-                                    CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
-                                ).Size
-                            ),
-                            Size
-                        ) * Self.Size + Self.PaddingLeft + Self.PaddingRight + 1
-                    Wrap: =false
-                    X: =2
-                    Y: =27
-                    ZIndex: =11
 

@@ -640,7 +640,7 @@
         FontWeight: =FontWeight.Bold
         Italic: =true
         Size: =13
-        Text: =Count(Filter('TG14 Task Information', 'Approval Status'.Value = "Awaiting Approval", Unit.Value = gblUserLocPerm, Title <> Blank()).ID)
+        Text: =Count(Filter('TG14 Task Information', 'Approval Status'.Value = "Awaiting Approval", Unit.Value = gblUserLocPerm).ID)
         X: =230
         Y: =688
         ZIndex: =53
