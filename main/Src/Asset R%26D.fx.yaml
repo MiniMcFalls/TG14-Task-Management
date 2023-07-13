@@ -2587,7 +2587,7 @@
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         Selectable: =false   
-        TemplateSize: =249
+        TemplateSize: =Gallery6_1.Height + 65
         Width: =1123
         X: =364
         Y: =140
@@ -2698,7 +2698,8 @@
             PaddingRight: =10
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.'Loan Date & Time'
+            Text: |-
+                ="Role: " & ThisItem.'Section/Role'
             VerticalAlign: =VerticalAlign.Top
             Width: |-
                 =Sum(
@@ -2715,7 +2716,7 @@
                     ),
                     Size
                 ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-            X: =183
+            X: =Subtitle2_4.X + Subtitle2_4.Width
             Y: =30
             ZIndex: =6
 
@@ -2731,7 +2732,8 @@
             PaddingRight: =10
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.Recipient
+            Text: |-
+                ="Contact No: " & ThisItem.'Contact Number' & " "
             VerticalAlign: =VerticalAlign.Top
             Width: |-
                 =Sum(
@@ -2748,7 +2750,7 @@
                     ),
                     Size
                 ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-            X: =311
+            X: =Subtitle2_5.X + Subtitle2_5.Width
             Y: =30
             ZIndex: =7
 
@@ -2764,7 +2766,8 @@
             PaddingRight: =10
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.'Section/Role'
+            Text: |-
+                ="Due: " & ThisItem.'Proposed Return Date'
             VerticalAlign: =VerticalAlign.Top
             Width: |-
                 =Sum(
@@ -2781,18 +2784,17 @@
                     ),
                     Size
                 ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
-            X: =426
+            X: =Subtitle2_6.X + Subtitle2_6.Width
             Y: =30
             ZIndex: =8
 
         Gallery6_1 As gallery.variableTemplateHeightGallery:
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =27 * Count(Filter('Asset Tracker_1', 'Loan ID' = ThisItem.ID).ID)
+            Height: =65 * Count(Filter('Asset Tracker_1', 'Loan ID' = ThisItem.ID).ID)
             Items: =Filter('Asset Tracker_1', 'Loan ID' = ThisItem.ID)
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
-            ShowScrollbar: =false
             TemplateSize: =Min(200, Self.Height - 60)
             Width: =1051
             Y: =51
