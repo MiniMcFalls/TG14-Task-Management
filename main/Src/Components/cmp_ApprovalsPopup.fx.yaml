@@ -583,7 +583,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                         Title: cmp_ApprovalsPopup.SelectedJob.Title,
                         'Response ID': cmp_ApprovalsPopup.SelectedJob.ResponseID,
                         Status: cmp_ApprovalsPopup.SelectedJob.Status,
-                        'Task Date': cmp_ApprovalsPopup.SelectedJob.'Task Date',
+                        'Task Date': DatePicker1.SelectedDate,
                         'Start Time': TextCanvas3.Text,
                         'Project Category': cmp_ApprovalsPopup.SelectedJob.'Project Category',
                         'Service they Require': cmp_ApprovalsPopup.SelectedJob.'Service Required',
@@ -1206,6 +1206,28 @@ cmp_ApprovalsPopup As CanvasComponent:
             Y: =248
             ZIndex: =19
 
+        DatePicker1 As datepicker:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            Color: =RGBA(51, 51, 51, 1)
+            DefaultDate: =DateValue(cmp_ApprovalsPopup.SelectedJob.'Task Date', "en-GB")
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            EndYear: =2030
+            Font: =Font.'Segoe UI'
+            Height: =32
+            HoverDateFill: =RGBA(200, 200, 200, 1)
+            IconBackground: =RGBA(105, 121, 126, 1)
+            PaddingTop: =5
+            SelectedDateFill: =RGBA(105, 121, 126, 1)
+            Size: =13
+            StartOfWeek: =StartOfWeek.Monday
+            Width: =137
+            X: =52
+            Y: =161
+            ZIndex: =21
+
         Group8 As group:
             Height: =5
             Width: =5
@@ -1230,15 +1252,6 @@ cmp_ApprovalsPopup As CanvasComponent:
                 X: =52
                 Y: =121
                 ZIndex: =5
-
-            "DatePickerCanvas1 As 'Date picker'":
-                DisplayMode: =DisplayMode.Edit
-                Height: =32
-                Value: =DateValue(cmp_ApprovalsPopup.SelectedJob.'Task Date', "en-GB")
-                Width: =137
-                X: =52
-                Y: =161
-                ZIndex: =6
 
             Label41_9 As label:
                 Align: =Align.Center
