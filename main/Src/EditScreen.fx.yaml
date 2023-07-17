@@ -3402,7 +3402,7 @@ EditScreen As screen:
             ChevronHoverFill: =RGBA(33, 33, 33, 1)
             Color: =RGBA(51, 51, 51, 1)
             DefaultSelectedItems: |-
-                =Office365Users.SearchUser({searchTerm: CalendarEventsGallery1.Selected.'Customer Email', top: 1})
+                =If(IsBlankOrError(Office365Users.SearchUser({searchTerm: CalendarEventsGallery1.Selected.'Customer Email', top: 1})), Blank(), Office365Users.SearchUser({searchTerm: CalendarEventsGallery1.Selected.'Customer Email', top: 1}))
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
