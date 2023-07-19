@@ -69,7 +69,7 @@
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Button",
-    "Version": "0.0.15"
+    "Version": "0.0.16"
   },
   "checkbox": {
     "CustomGroupControlTemplateName": "",
@@ -509,7 +509,7 @@
     "Name": "PowerApps_CoreControls_TextCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text",
-    "Version": "0.0.13"
+    "Version": "0.0.14"
   },
   "Text input": {
     "CustomGroupControlTemplateName": "",
@@ -580,6 +580,6 @@
     "LastModifiedTimestamp": "0",
     "Name": "typedDataCard",
     "OverridableProperties": {},
-    "Version": "1.0.5"
+    "Version": "1.0.6"
   }
 }

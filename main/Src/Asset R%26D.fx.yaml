@@ -144,10 +144,11 @@
                 ZIndex: =2
 
             TextCanvas4 As Text:
-                Alignment: ='TextCanvas.Alignment'.Center
+                AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Text: ="Asset Details"
+                VerticalAlign: ="Middle"
                 Weight: ='TextCanvas.Weight'.Semibold
                 Width: =96
                 X: =324
@@ -1064,10 +1065,11 @@
                 ZIndex: =3
 
             TextCanvas4_1 As Text:
-                Alignment: ='TextCanvas.Alignment'.Center
+                AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Text: ="Assets"
+                VerticalAlign: ="Middle"
                 Weight: ='TextCanvas.Weight'.Semibold
                 Width: =96
                 X: =468
@@ -1307,10 +1309,11 @@
             ZIndex: =17
 
         TextCanvas4_2 As Text:
-            Alignment: ='TextCanvas.Alignment'.Center
+            AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Text: ="Existing Loans"
+            VerticalAlign: ="Middle"
             Weight: ='TextCanvas.Weight'.Semibold
             Width: =96
             X: =879
@@ -1472,10 +1475,11 @@
                 ZIndex: =6
 
             TextCanvas1_7 As Text:
-                Alignment: ='TextCanvas.Alignment'.Center
+                AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Text: ="Core Loan Info"
+                VerticalAlign: ="Middle"
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: =113
                 X: =152
@@ -1531,10 +1535,11 @@
                 ZIndex: =10
 
             TextCanvas1_8 As Text:
-                Alignment: ='TextCanvas.Alignment'.Center
+                AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Text: ="Customer Details"
+                VerticalAlign: ="Middle"
                 Weight: ='TextCanvas.Weight'.Bold
                 Width: =130
                 X: =140
@@ -3183,10 +3188,11 @@
             ZIndex: =6
 
         TextCanvas1_9 As Text:
-            Alignment: ='TextCanvas.Alignment'.Center
+            AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Text: ="Core Loan Info"
+            VerticalAlign: ="Middle"
             Weight: ='TextCanvas.Weight'.Bold
             Width: =113
             X: =152
@@ -3242,10 +3248,11 @@
             ZIndex: =10
 
         TextCanvas1_10 As Text:
-            Alignment: ='TextCanvas.Alignment'.Center
+            AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Text: ="Customer Details"
+            VerticalAlign: ="Middle"
             Weight: ='TextCanvas.Weight'.Bold
             Width: =130
             X: =143

@@ -299,10 +299,11 @@ cmp_ApprovalsPopup As CanvasComponent:
             ZIndex: =12
 
         TextCanvas1 As Text:
-            Alignment: ='TextCanvas.Alignment'.Center
+            AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Text: ="Core Info"
+            VerticalAlign: ="Middle"
             Weight: ='TextCanvas.Weight'.Bold
             Width: =96
             X: =157
@@ -358,10 +359,11 @@ cmp_ApprovalsPopup As CanvasComponent:
             ZIndex: =24
 
         TextCanvas1_1 As Text:
-            Alignment: ='TextCanvas.Alignment'.Center
+            AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Text: ="Customer Details"
+            VerticalAlign: ="Middle"
             Weight: ='TextCanvas.Weight'.Bold
             Width: =130
             X: =140
@@ -1101,10 +1103,11 @@ cmp_ApprovalsPopup As CanvasComponent:
             ZIndex: =2
 
         TextCanvas1_2 As Text:
-            Alignment: ='TextCanvas.Alignment'.Center
+            AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Text: ="Detailed Info"
+            VerticalAlign: ="Middle"
             Weight: ='TextCanvas.Weight'.Bold
             Width: =239
             X: =364
@@ -1341,12 +1344,12 @@ cmp_ApprovalsPopup As CanvasComponent:
                 ZIndex: =12
 
             TextCanvas3 As Text:
-                Alignment: ='TextCanvas.Alignment'.Center
+                AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
                 Height: =22
                 Text: =If(IsBlank(varTimeValue),cmp_ApprovalsPopup.SelectedJob.'Start Time',Text(varTimeValue,DateTimeFormat.ShortTime24,"en-GB"))
-                Truncate: =false
                 Underline: =false
+                VerticalAlign: ="Middle"
                 Weight: ='TextCanvas.Weight'.Semibold
                 Width: =130
                 Wrap: =false
@@ -1667,10 +1670,11 @@ cmp_ApprovalsPopup As CanvasComponent:
         ZIndex: =34
 
         TextCanvas2 As Text:
-            Alignment: ='TextCanvas.Alignment'.Center
+            AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Text: ="No Conflicts Present"
+            VerticalAlign: ="Middle"
             Visible: =If(Gallery8_2.AllItemsCount = 0, true, false)
             Weight: ='TextCanvas.Weight'.Semibold
             Width: =133
