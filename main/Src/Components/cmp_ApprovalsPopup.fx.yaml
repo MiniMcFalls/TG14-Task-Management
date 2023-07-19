@@ -1216,7 +1216,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             DisabledFill: =RGBA(244, 244, 244, 1)
             EndYear: =2030
             Font: =Font.'Segoe UI'
-            Height: =32
+            Height: =30
             HoverDateFill: =RGBA(200, 200, 200, 1)
             IconBackground: =RGBA(105, 121, 126, 1)
             PaddingTop: =5
@@ -1225,7 +1225,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             StartOfWeek: =StartOfWeek.Monday
             Width: =137
             X: =52
-            Y: =161
+            Y: =162
             ZIndex: =21
 
         Group8 As group:

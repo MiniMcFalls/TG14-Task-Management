@@ -3909,7 +3909,7 @@
                 Height: =65
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                Items: =[],U/S
+                Items: =["Serviceable","U/S"]
                 OnSelect: =Select(Parent)
                 PaddingBottom: =5
                 PaddingTop: =5
@@ -3940,30 +3940,4 @@
             Width: =193
             X: =991
             ZIndex: =7
-
-    Button44 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(105, 121, 126, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        OnSelect: =Reset(DropdownCanvas3)
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="Button"
-        X: =40
-        Y: =40
-        ZIndex: =46
 
