@@ -3056,6 +3056,7 @@
                 ZIndex: =11
 
             ButtonCanvas2 As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Secondary
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 OnSelect: |-
@@ -3760,6 +3761,7 @@
 
         "Gallery1_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
+            Default: =Lookup(
             Height: =661
             Items: =Filter('Asset Tracker_1', 'Loan ID' = Gallery10.Selected.ID)
             Layout: =Layout.Vertical
@@ -3893,17 +3895,6 @@
                 Y: =4
                 ZIndex: =8
 
-            RadioGroupCanvas1 As Radio.pcfdataset:
-                DefaultSelectedItems: =
-                DisplayMode: =DisplayMode.Edit
-                Height: =65
-                Items: =["Serviceable","U/S"]
-                OnSelect: =
-                Width: =193
-                X: =991
-                Y: =38
-                ZIndex: =9
-
             Radio1 As radio:
                 BorderColor: =RGBA(51, 51, 51, 1)
                 BorderStyle: =BorderStyle.None
@@ -3926,7 +3917,7 @@
                 RadioSelectionFill: =RGBA(105, 121, 126, 1)
                 RadioSize: =20
                 Size: =13
-                Width: =193
+                Width: =192
                 X: =991
                 Y: =38
                 ZIndex: =10
