@@ -3059,9 +3059,20 @@
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
-                OnSelect: |-
-                    =Select(Parent);
-                    Set(varReturnsWindow, true)
+                OnSelect: |
+                    =Set(
+                        varSelectedLoanID,
+                        First(
+                            Filter(
+                                'TG14 Loan Register',
+                                ID = ThisItem.ID
+                            )
+                        ).ID
+                    );
+                    Set(
+                        varReturnsWindow,
+                        true
+                    );
                 Text: ="Return Items"
                 Width: =121
                 X: =985
@@ -3110,7 +3121,7 @@
         "TextInputCanvas4_15 As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =31
-            Value: =If(IsBlank(Gallery10.Selected.'Alternate Contact'), "None Provided", Gallery10.Selected.'Alternate Contact')
+            Value: =If(IsBlank(First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Alternate Contact'), "None Provided", First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Alternate Contact')
             Width: =263
             X: =123
             Y: =589
@@ -3119,7 +3130,7 @@
         "TextInputCanvas4_3 As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =31
-            Value: =Gallery10.Selected.Recipient
+            Value: =First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).Recipient
             Width: =263
             X: =123
             Y: =355
@@ -3178,7 +3189,7 @@
 
         BadgeCanvas2_13 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
-            Content: =Gallery10.Selected.ID
+            Content: =varSelectedLoanID
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
@@ -3383,7 +3394,7 @@
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =If(CountRows(Filter(Gallery1_3.AllItems, And(IsBlank(RadioGroupCanvas1.Selected), IsBlank(DropdownCanvas3.Selected)))) = 0, DisplayMode.Edit, DisplayMode.Disabled)
+            DisplayMode: =If(CountRows(Filter(Gallery1_3.AllItems, And(IsBlank(Radio1.Selected), IsBlank(DropdownCanvas3.Selected)))) = 0, DisplayMode.Edit, DisplayMode.Disabled)
             Fill: =RGBA(54, 176, 75, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
@@ -3412,8 +3423,8 @@
                             ),
                             'Current owner': ComboBox1.Selected,
                             'Due date': Blank(),
-                            'Loan ID': Blank()
-                            
+                            'Loan ID': Blank(),
+                            Returned: true
                         }
                     )
                 );
@@ -3429,9 +3440,9 @@
                             "yyyymmdd",
                             "en-GB"
                         ),
-                        "-Your TG14 Equipment Loan-O"
+                        "-Your TG14 Equipment Loan (RETURNED)-O"
                     ),
-                    'Loan Notify Email'.HtmlText,
+                    'Loan Notify Return Email'.HtmlText,
                     {
                         Importance: "High",
                         IsHtml: true
@@ -3480,7 +3491,7 @@
         "TextInputCanvas4_13 As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =31
-            Value: =Gallery10.Selected.'Section/Role'
+            Value: =First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Section/Role'
             Width: =263
             X: =123
             Y: =394
@@ -3489,7 +3500,7 @@
         "TextInputCanvas4_14 As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =31
-            Value: =Gallery10.Selected.'Contact Number'
+            Value: =First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Contact Email'
             Width: =263
             X: =123
             Y: =472
@@ -3515,7 +3526,7 @@
         "DatePickerCanvas3_2 As 'Date picker'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
-            Value: =Gallery10.Selected.'Proposed Return Date'
+            Value: =First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Proposed Return Date'
             Width: =263
             X: =123
             Y: =514
@@ -3524,7 +3535,7 @@
         "TextInputCanvas4_16 As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =31
-            Value: =Gallery10.Selected.'Contact Email'
+            Value: =First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Contact Email'
             Width: =263
             X: =123
             Y: =433
@@ -3542,7 +3553,7 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Width: =263
-            X: =123
+            X: =91
             Y: =358
             ZIndex: =30
 
@@ -3558,7 +3569,7 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Width: =263
-            X: =123
+            X: =91
             Y: =589
             ZIndex: =31
 
@@ -3596,6 +3607,22 @@
             Width: =409
             Y: =683
             ZIndex: =32
+
+        ButtonCanvas5 As Button:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnSelect: |-
+                =Patch(
+                        'Asset Tracker_1',
+                        ThisRecord,
+                        {
+                            Returned: true
+                        }
+                    )
+            Width: =96
+            X: =40
+            Y: =40
+            ZIndex: =33
 
     Button33_6 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -3763,7 +3790,7 @@
             BorderColor: =RGBA(166, 166, 166, 1)
             Default: =Blank()
             Height: =661
-            Items: =Filter('Asset Tracker_1', 'Loan ID' = Gallery10.Selected.ID)
+            Items: =Filter('Asset Tracker_1', 'Loan ID' = varSelectedLoanID)
             Layout: =Layout.Vertical
             Selectable: =false
             TemplatePadding: =0
@@ -3940,12 +3967,135 @@
             X: =991
             ZIndex: =7
 
-    ButtonCanvas4 As Button:
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        OnSelect: =
-        Width: =96
-        X: =40
-        Y: =40
-        ZIndex: =46
+    "'Loan Notify Return Email' As htmlViewer":
+        Height: =16
+        HtmlText: |-
+            ="<table border=""0"" cellspacing="""" cellpadding=""0"" align=""center"">
+            <tbody>
+            <tr>
+            <td style=""width: 700px; max-width: 700px; font-family: Segoe UI,-apple-system,BlinkMacSystemFont,San Francisco,Roboto,Helvetica Neue,Arial; border: solid; border-width: 1px; border-color: #421631; border-radius: 1px; box-shadow: 0 0 50px rgba(0, 0 ,0 ,0.08);"">
+            <table style=""background-color: #ECECEC; border=""0""; width=""698"" cellspacing="""" cellpadding=""0"" align=""center"" >
+            <tbody>
+            <tr>
+            <td style=""padding-left: 0px; padding-top: 0px; width: 516px;"">
+            <table style=""height: 11px; width: 100%; color: #000000; background-color: #4f6d7a; padding: 0px;"" border=""0"" cellpadding=""5"">
+            <tbody>
+            <tr style=""height: 11px;"">
+            <td style=""font-size: 8px; color: #f2f2f2; width: 100%; text-align: center; height: 11px;"">AUTOMATED EMAIL - PLEASE DO NOT REPLY</td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            <tr>
+            <td style=""padding-left: 287px; padding-top: 10px; padding-bottom: 10px; width: 516px; height: 160px;"">&nbsp; &nbsp; <img id="""" src=" & Switch(
+                    gblUserLocPerm,
+                    "77X Brigade",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/ff5b4600-f087-c5dd-403f-6cde1163516a.png",
+                    "83EAG Det",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/558d4ef0-c3e4-ffbe-1c10-4606980978d8.png",
+                    "ACSSU",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b4e2dfc5-28d1-544f-3726-8ba80c44630e.png",
+                    "ADW",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/1ca9447c-71ac-08b6-61db-29a09d067a87.png",
+                    "Akrotiri",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/78a985e5-fbab-c809-ff8d-cfb8df05ff55.png",
+                    "Aldergrove",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/cb34f7f8-f83e-b3db-5b65-353fbb649872.png",
+                    "Benson",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/28fb4575-61ed-0c54-5b59-3127eddeed3e.png",
+                    "Brize Photo",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/1ca9447c-71ac-08b6-61db-29a09d067a87.png",
+                    "Chicksands",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/07f0f7f1-8a69-8843-9e2e-fed810a9da10.png",
+                    "Coningsby",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/78a75c1f-13a4-0ebb-4f2e-b9976c1dce56.png",
+                    "Cosford",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/c0f9698f-5543-cbc1-9817-de2f7176974b.png",
+                    "Cranwell",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/75e3b5ab-ba64-125a-2b2d-7a501332b15a.png",
+                    "MOD Main Building",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/da61be41-40d6-38e9-ffe4-3a280733dbcc.png",
+                    "Halton",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b4e2dfc5-28d1-544f-3726-8ba80c44630e.png",
+                    "Honington",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/64c42426-d14b-195f-727c-ef70bebf5097.png",
+                    "JADTEU",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/c8765bc7-2b29-59b2-5204-d12d686bf501.png",
+                    "Leeming",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/57c5598b-4bbf-f0ab-8bc8-84bbc67e04d4.png",
+                    "Lossiemouth",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/c699d70a-44ef-7365-9e5b-021526566d83.png",
+                    "Marham",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e4c7e10d-e646-eedc-1576-48797e06ed3f.png",
+                    "Northolt",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/4d88f27b-67a3-0bcb-cdb5-5a89ddf22a59.png",
+                    "Odiham",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/bc1e9faa-ce37-1ce4-fea2-0298d36ef2cc.png",
+                    "RAFAT",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/988b837b-13ae-4f26-de12-3ad70e17e30d.png",
+                    "Shawbury",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/823d78b0-5fcd-bf09-904d-af9b6a15d58c.png",
+                    "St Athan",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b6cc13e6-5385-8ad8-74f0-b362015922ef.png",
+                    "St Mawgan",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/6b421dcb-dac2-dace-3d32-ec700843ab32.png",
+                    "Valley",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/753f7339-032c-bea4-ef1b-be55a6f3b1bd.png",
+                    "Waddington",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/04e3ff56-0c58-2391-bb09-3a6bd3e78937.png",
+                    "Wittering",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/04bd972c-f29d-1d43-3e94-ad34232ee11d.png",
+                    "Wyton",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e05e0853-96d1-319f-adab-ca0f3b06b2ee.png"
+                ) & " alt=""RAF Visual Communicators Lock-Up"" width=""391"" height=""125"" /></td>
+            </tr>
+            <tr id=""ribbon"" style=""background-color: #c0d6df;"">
+            <td style=""width: 100%;"">
+            <table id=""ribbonContent"" style=""height: 85px; width: 100%; color: #000000; background-color: #4f6d7a; padding: 0px 20px 0px 20px;"">
+            <tbody>
+            <tr style=""height: 85px;"">
+            <td id=""ribbonHeader"" style=""background-color: #4f6d7a; height: 85px;"">
+            <h2 style=""font-size: 20px; font-weight: normal; color: #f2f2f2; padding-left: 0px; padding-right: 0px; text-align: left;""><strong>Your TG14 Equipment Loan.</strong></h2>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            <tr>
+            <td style=""font-size: 12px; background-color: ##c0d6df; height: 40px; width: 100%; color: #60401f; padding: 30px 75px 30px 75px;"">
+            <p><strong>Below is a summary of the items you have returned to the issuing section. Please make any discrepancies known as soon as possible so they can be rectfied.</strong></p>
+            <h2 style=""text-align: center; color: #60401f; font-size: 12px;"">""" & Concat(
+                        Filter('Asset Tracker_1', 'Loan ID' = varSelectedLoanID),
+                        Concatenate(
+                            Title,
+                            " / ",
+                            'Asset type'.Value,
+                            " / ",
+                            Manufacturer.Value,
+                            " / ",
+                            Model,
+                            " / ",
+                            'Serial number'
+                        ),
+                        "<br>"
+                    ) & """</h2>
+            <p>Thank you for your return, We have cleared your loan card.</p>
+            </td>
+            </tr>
+            <tr id=""footer"">
+            <td style=""font-size: 8px; background-color: #4f6d7a; height: 11px; padding-top: 10px; padding-left: 0 px; padding-bottom: 10px; width: 100%; color: #f2f2f2; text-align: center;"">AUTOMATED EMAIL - PLEASE DO NOT REPLY</td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            </tbody>
+            </table>"
+        Visible: =false
+        Width: =755
+        X: =479
+        Y: =20
+        ZIndex: =47
 
