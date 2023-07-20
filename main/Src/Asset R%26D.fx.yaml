@@ -3406,7 +3406,7 @@
                             Location: DropdownCanvas3.Selected,
                             'Previous owner': ThisRecord.'Current owner',
                             Status: If(
-                                RadioGroupCanvas1.Selected.Value = "Serviceable",
+                                Radio1.Selected.Value = "Serviceable",
                                 {Value: "Available"},
                                 {Value: "U/S"}
                             ),
@@ -3761,10 +3761,11 @@
 
         "Gallery1_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
-            Default: =Lookup(
+            Default: =Blank()
             Height: =661
             Items: =Filter('Asset Tracker_1', 'Loan ID' = Gallery10.Selected.ID)
             Layout: =Layout.Vertical
+            Selectable: =false
             TemplatePadding: =0
             TemplateSize: =103
             Width: =1184
@@ -3938,4 +3939,13 @@
             Width: =193
             X: =991
             ZIndex: =7
+
+    ButtonCanvas4 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =
+        Width: =96
+        X: =40
+        Y: =40
+        ZIndex: =46
 
