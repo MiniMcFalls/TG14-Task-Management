@@ -709,10 +709,10 @@
             ZIndex: =31
 
         CheckboxCanvas1_1 As Checkbox:
-            Checked: =ThisItem.'Viewed?'
+            Checked: =If(ThisItem.'Viewed?'.Value = "Yes", true, false)
             DisplayMode: =DisplayMode.Edit
             Height: =32
-            Label: =If(ThisItem.'Viewed?' = false Or IsBlank(ThisItem.'Viewed?'), "Unread", ThisItem.'Viewed By?')
+            Label: =If(ThisItem.'Viewed?'.Value = "No", "Unread", ThisItem.'Viewed By?')
             OnSelect: =Select(Parent)
             Width: =207
             X: =1171
@@ -734,27 +734,6 @@
             X: =1171
             Y: =47
             ZIndex: =33
-
-        ButtonCanvas4 As Button:
-            DisplayMode: =DisplayMode.Edit
-            Height: =32
-            OnSelect: |-
-                =Patch(
-                    First(
-                        Filter(
-                            'TG14 Task Information',
-                            ID = ThisItem.ID
-                        )
-                    ),
-                    {
-                        'Viewed?': true,
-                        'Viewed By?': gblCurrentUser.displayName
-                    }
-                )
-            Width: =96
-            X: =947
-            Y: =15
-            ZIndex: =34
 
     Timer2_4 As timer:
         AutoStart: =true
@@ -1477,6 +1456,44 @@
     cmp_ApprovalsPopup_1 As cmp_ApprovalsPopup:
         Visible: =PopupVis
         ZIndex: =51
+
+    Button38 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(105, 121, 126, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        OnSelect: |-
+            =Patch(
+                First(
+                    Filter(
+                        'TG14 Task Information',
+                        ID = 7283
+                    )
+                ),
+                {
+                    'Viewed?': {Value: true},
+                    'Viewed By?': gblCurrentUser.displayName
+                }
+            );
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Button"
+        X: =40
+        Y: =40
+        ZIndex: =56
 
     "'Reject Popup' As group":
         Height: =5
