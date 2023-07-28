@@ -154,7 +154,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Size: =15
             Text: ="Reject"
             X: =30
-            Y: =640
+            Y: =603
             ZIndex: =3
 
         Label41 As label:
@@ -738,8 +738,37 @@ cmp_ApprovalsPopup As CanvasComponent:
             Text: ="Approve"
             Width: =178
             X: =208
-            Y: =640
+            Y: =603
             ZIndex: =38
+
+        Button14_16 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =Color.Orange
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -10%)
+            OnSelect: =
+            PressedBorderColor: =ColorFade(Self.Fill,-50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Size: =15
+            Text: ="Request Further Details"
+            Width: =356
+            X: =30
+            Y: =651
+            ZIndex: =39
 
     Button33 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -789,7 +818,7 @@ cmp_ApprovalsPopup As CanvasComponent:
         HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.CancelBadge
-        OnSelect: |
+        OnSelect: |-
             =Set(
                 PopupVis,
                 false
@@ -798,6 +827,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 varTimeValue,
                 Blank()
             );
+            Refresh('TG14 Task Information')
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1577,7 +1607,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                     varEmailContent
                 );
                 If(
-                    "2022" in 'Task Date',
+                    "2022" in 'Add Task Date',
                     Patch(
                         '1177 Task Register 2022',
                         First(
@@ -1589,7 +1619,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                         {Status: "CANCELLED"}
                     ),
                     If(
-                        "2023" in 'Task Date',
+                        "2023" in 'Add Task Date',
                         Patch(
                             '1177 Task Register 2023',
                             First(
@@ -1601,7 +1631,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                             {Status: "CANCELLED"}
                         ),
                         If(
-                            "2024" in 'Task Date',
+                            "2024" in 'Add Task Date',
                             Patch(
                                 '1177 Task Register 2024',
                                 First(
@@ -1662,7 +1692,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Y: =379
             ZIndex: =24
 
-    Group6 As group:
+    "'No Conflicts' As group":
         Height: =5
         Width: =5
         X: =40

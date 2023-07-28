@@ -17,7 +17,36 @@
             'Wrong Version'
         );
 
+    Button28_8 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =varPillBackground
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(105, 121, 126, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =217
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =15
+        Text: =""
+        Width: =870
+        X: =953
+        Y: =689
+        ZIndex: =1
+
     cmp_Header_6 As cmp_Header:
+        ZIndex: =2
 
     Button28 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -45,7 +74,7 @@
         Width: =1306
         X: =34
         Y: =144
-        ZIndex: =2
+        ZIndex: =3
 
     Label11 As label:
         Align: =Align.Center
@@ -63,7 +92,7 @@
         Underline: =true
         X: =100
         Y: =156
-        ZIndex: =3
+        ZIndex: =4
 
     "'Project Cat' As dropdown":
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -95,7 +124,7 @@
         Width: =214
         X: =68
         Y: =196
-        ZIndex: =4
+        ZIndex: =5
 
     Button2 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -145,7 +174,7 @@
                 Set(
                     varJobNumber,
                     If(
-                        "2022" in 'Task Date'.SelectedDate,
+                        "2022" in 'Add Task Date'.SelectedDate,
                         Last(
                             Filter(
                                 '1177 Task Register 2022',
@@ -153,7 +182,7 @@
                             )
                         ).Job + 1,
                         If(
-                            "2023" in 'Task Date'.SelectedDate,
+                            "2023" in 'Add Task Date'.SelectedDate,
                             Last(
                                 Filter(
                                     '1177 Task Register 2023',
@@ -161,7 +190,7 @@
                                 )
                             ).Job + 1,
                             If(
-                                "2024" in 'Task Date'.SelectedDate,
+                                "2024" in 'Add Task Date'.SelectedDate,
                                 Last(
                                     Filter(
                                         '1177 Task Register 2024',
@@ -177,7 +206,7 @@
                 Set(
                     varJobNumber,
                     If(
-                        "2022" in 'Task Date'.SelectedDate,
+                        "2022" in 'Add Task Date'.SelectedDate,
                         Last(
                             Filter(
                                 '1177 Task Register 2022',
@@ -185,7 +214,7 @@
                             )
                         ).Job + 1,
                         If(
-                            "2023" in 'Task Date'.SelectedDate,
+                            "2023" in 'Add Task Date'.SelectedDate,
                             Last(
                                 Filter(
                                     '1177 Task Register 2023',
@@ -193,7 +222,7 @@
                                 )
                             ).Job + 1,
                             If(
-                                "2024" in 'Task Date'.SelectedDate,
+                                "2024" in 'Add Task Date'.SelectedDate,
                                 Last(
                                     Filter(
                                         '1177 Task Register 2024',
@@ -209,7 +238,7 @@
                 Set(
                     varJobNumber,
                     If(
-                        "2022" in 'Task Date'.SelectedDate,
+                        "2022" in 'Add Task Date'.SelectedDate,
                         Last(
                             Filter(
                                 '1177 Task Register 2022',
@@ -217,7 +246,7 @@
                             )
                         ).Job + 1,
                         If(
-                            "2023" in 'Task Date'.SelectedDate,
+                            "2023" in 'Add Task Date'.SelectedDate,
                             Last(
                                 Filter(
                                     '1177 Task Register 2023',
@@ -225,7 +254,7 @@
                                 )
                             ).Job + 1,
                             If(
-                                "2024" in 'Task Date'.SelectedDate,
+                                "2024" in 'Add Task Date'.SelectedDate,
                                 Last(
                                     Filter(
                                         '1177 Task Register 2024',
@@ -241,7 +270,7 @@
                 Set(
                     varJobNumber,
                     If(
-                        "2022" in 'Task Date'.SelectedDate,
+                        "2022" in 'Add Task Date'.SelectedDate,
                         Last(
                             Filter(
                                 '1177 Task Register 2022',
@@ -249,7 +278,7 @@
                             )
                         ).Job + 1,
                         If(
-                            "2023" in 'Task Date'.SelectedDate,
+                            "2023" in 'Add Task Date'.SelectedDate,
                             Last(
                                 Filter(
                                     '1177 Task Register 2023',
@@ -257,7 +286,7 @@
                                 )
                             ).Job + 1,
                             If(
-                                "2024" in 'Task Date'.SelectedDate,
+                                "2024" in 'Add Task Date'.SelectedDate,
                                 Last(
                                     Filter(
                                         '1177 Task Register 2024',
@@ -273,7 +302,7 @@
                 Set(
                     varJobNumber,
                     If(
-                        "2022" in 'Task Date'.SelectedDate,
+                        "2022" in 'Add Task Date'.SelectedDate,
                         Last(
                             Filter(
                                 '1177 Task Register 2022',
@@ -281,7 +310,7 @@
                             )
                         ).Job + 1,
                         If(
-                            "2023" in 'Task Date'.SelectedDate,
+                            "2023" in 'Add Task Date'.SelectedDate,
                             Last(
                                 Filter(
                                     '1177 Task Register 2023',
@@ -289,7 +318,7 @@
                                 )
                             ).Job + 1,
                             If(
-                                "2024" in 'Task Date'.SelectedDate,
+                                "2024" in 'Add Task Date'.SelectedDate,
                                 Last(
                                     Filter(
                                         '1177 Task Register 2024',
@@ -305,7 +334,7 @@
                 Set(
                     varJobNumber,
                     If(
-                        "2022" in 'Task Date'.SelectedDate,
+                        "2022" in 'Add Task Date'.SelectedDate,
                         Last(
                             Filter(
                                 '1177 Task Register 2022',
@@ -313,7 +342,7 @@
                             )
                         ).Job + 1,
                         If(
-                            "2023" in 'Task Date'.SelectedDate,
+                            "2023" in 'Add Task Date'.SelectedDate,
                             Last(
                                 Filter(
                                     '1177 Task Register 2023',
@@ -321,7 +350,7 @@
                                 )
                             ).Job + 1,
                             If(
-                                "2024" in 'Task Date'.SelectedDate,
+                                "2024" in 'Add Task Date'.SelectedDate,
                                 Last(
                                     Filter(
                                         '1177 Task Register 2024',
@@ -334,21 +363,21 @@
                 )
             );
             If(
-                "2022" in 'Task Date'.SelectedDate,
+                "2022" in 'Add Task Date'.SelectedDate,
                 Patch(
                     '1177 Task Register 2022',
                     Defaults('1177 Task Register 2022'),
                     {
                         Job: varJobNumber,
                         'Month Task Generated': Text(
-                            'Task Date'.SelectedDate,
+                            'Add Task Date'.SelectedDate,
                             "mmmm",
                             "en-GB"
                         ),
                         'Task Type': 'Project Cat'.Selected.Value,
                         'Stills, Video or Both': 'Service Required'.Selected.Value,
                         Status: 'Status DD'.Selected.Value,
-                        'Task Date': 'Task Date'.SelectedDate,
+                        'Task Date': 'Add Task Date'.SelectedDate,
                         'Task Time': Text(
                             cmp_TimePicker_1.value,
                             DateTimeFormat.ShortTime24
@@ -369,21 +398,21 @@
                     }
                 ),
                 If(
-                    "2023" in 'Task Date'.SelectedDate,
+                    "2023" in 'Add Task Date'.SelectedDate,
                     Patch(
                         '1177 Task Register 2023',
                         Defaults('1177 Task Register 2023'),
                         {
                             Job: varJobNumber,
                             'Month Task Generated': Text(
-                                'Task Date'.SelectedDate,
+                                'Add Task Date'.SelectedDate,
                                 "mmmm",
                                 "en-GB"
                             ),
                             'Task Type': 'Project Cat'.Selected.Value,
                             'Stills, Video or Both': 'Service Required'.Selected.Value,
                             Status: 'Status DD'.Selected.Value,
-                            'Task Date': 'Task Date'.SelectedDate,
+                            'Task Date': 'Add Task Date'.SelectedDate,
                             'Task Time': Text(
                                 cmp_TimePicker_1.value,
                                 DateTimeFormat.ShortTime24
@@ -404,21 +433,21 @@
                         }
                     ),
                     If(
-                        "2024" in 'Task Date'.SelectedDate,
+                        "2024" in 'Add Task Date'.SelectedDate,
                         Patch(
                             '1177 Task Register 2024',
                             Defaults('1177 Task Register 2024'),
                             {
                                 Job: varJobNumber,
                                 'Month Task Generated': Text(
-                                    'Task Date'.SelectedDate,
+                                    'Add Task Date'.SelectedDate,
                                     "mmmm",
                                     "en-GB"
                                 ),
                                 'Task Type': 'Project Cat'.Selected.Value,
                                 'Stills, Video or Both': 'Service Required'.Selected.Value,
                                 Status: 'Status DD'.Selected.Value,
-                                'Task Date': 'Task Date'.SelectedDate,
+                                'Task Date': 'Add Task Date'.SelectedDate,
                                 'Task Time': Text(
                                     cmp_TimePicker_1.value,
                                     DateTimeFormat.ShortTime24
@@ -457,7 +486,7 @@
                     'Customer Section': 'Customer Section'.Text,
                     'Customer Contact Number': 'Customer Contact'.Text,
                     'Customer Email': 'Customer Email'.Selected.Email,
-                    'Task Date': 'Task Date'.SelectedDate,
+                    'Task Date': 'Add Task Date'.SelectedDate,
                     'Start Time': Text(
                         cmp_TimePicker_1.value,
                         DateTimeFormat.ShortTime24
@@ -514,7 +543,7 @@
                 Reset('Customer Section'),
                 Reset('Customer Contact'),
                 Reset('Customer Email'),
-                Reset('Task Date'),
+                Reset('Add Task Date'),
                 Reset(cmp_TimePicker_1),
                 Reset('Task Location'),
                 Reset('Task Requirements'),
@@ -831,10 +860,11 @@
         Y: =202
         ZIndex: =18
 
-    "'Task Date' As datepicker":
+    "'Add Task Date' As datepicker":
         BorderColor: =RGBA(166, 166, 166, 1)
         CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Color: =RGBA(51, 51, 51, 1)
+        DefaultDate: =If(IsBlank(_dateSelected), Today(), _dateSelected)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1394,7 +1424,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =223
+        Height: =350
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -1407,7 +1437,7 @@
         RadiusTopRight: =30
         Size: =15
         Text: =""
-        Width: =1789
+        Width: =886
         X: =38
         Y: =557
         ZIndex: =38
@@ -1422,7 +1452,7 @@
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =153
+        Height: =293
         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -1435,7 +1465,7 @@
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =13
-        Width: =1712
+        Width: =818
         X: =68
         Y: =599
         ZIndex: =39
@@ -1481,9 +1511,9 @@
         RadiusTopRight: =30
         Size: =15
         Text: =""
-        Width: =674
-        X: =38
-        Y: =799
+        Width: =870
+        X: =953
+        Y: =557
         ZIndex: =41
 
     Label11_15 As label:
@@ -1502,8 +1532,8 @@
             ="Photog #1"
         Underline: =true
         Width: =182
-        X: =68
-        Y: =814
+        X: =1050
+        Y: =572
         ZIndex: =42
 
     "'Photog #1 DD' As dropdown":
@@ -1755,8 +1785,8 @@
         SelectionFill: =RGBA(105, 121, 126, 1)
         Size: =13
         Width: =181
-        X: =69
-        Y: =854
+        X: =1050
+        Y: =612
         ZIndex: =43
 
     Label11_16 As label:
@@ -1775,8 +1805,8 @@
             ="Photog #2"
         Underline: =true
         Width: =182
-        X: =280
-        Y: =814
+        X: =1295
+        Y: =572
         ZIndex: =44
 
     "'Photog #2 DD' As dropdown":
@@ -2028,8 +2058,8 @@
         SelectionFill: =RGBA(105, 121, 126, 1)
         Size: =13
         Width: =181
-        X: =281
-        Y: =854
+        X: =1295
+        Y: =612
         ZIndex: =45
 
     Label11_17 As label:
@@ -2047,8 +2077,8 @@
         Text: ="QA Check"
         Underline: =true
         Width: =182
-        X: =499
-        Y: =814
+        X: =1543
+        Y: =572
         ZIndex: =46
 
     "'QA Check DD' As dropdown":
@@ -2080,8 +2110,8 @@
         SelectionFill: =RGBA(105, 121, 126, 1)
         Size: =13
         Width: =181
-        X: =500
-        Y: =854
+        X: =1543
+        Y: =612
         ZIndex: =47
 
     Label14 As label:
@@ -2224,4 +2254,401 @@
         X: =52
         Y: =437
         ZIndex: =54
+
+    CalendarEventsGallery1_1 As gallery.CalendarEventsGallery:
+        AccessibleLabel: ="Calendar events for selected day"
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =183
+        Items: |-
+            =/*Shows events only on selected date*/
+            SortByColumns(Filter('TG14 Task Information', 'Task Date' = 'Add Task Date'.SelectedDate, Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved"), "StartTime")
+        Layout: =Layout.Vertical
+        LoadingSpinnerColor: =RGBA(0,0,0,1)
+        OnSelect: =
+        TemplatePadding: =4
+        TemplateSize: =55
+        Width: =878
+        X: =949
+        Y: =723
+        ZIndex: =56
+
+        Button3_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(242, 242, 242, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =55
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: =""
+            Width: =806
+            X: =32
+            ZIndex: =2
+
+        Rectangle1_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =0
+            Height: =54
+            HoverFill: =RGBA(0,0,0,0)
+            OnSelect: =Select(Title3_4)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            TabIndex: =0
+            Width: =806
+            X: =32
+            Y: =1
+            ZIndex: =5
+
+        iconLocation1_4 As icon.Waypoint:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(79, 109, 122, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            Height: =Subtitle1_13.Height -5
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Waypoint
+            OnSelect: =Select(Title3_4)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
+            Width: =Subtitle1_13.Height -5
+            X: =82
+            Y: =30
+            ZIndex: =6
+
+        Title3_4 As label:
+            BorderColor: =Self.Color
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =If(ThisItem.'Project Category'.Value = "Diversion", Color.DarkOrange,RGBA(0, 0, 0, 1))
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Set(_selectedCalendarEvent, ThisItem)
+            Size: =19 * CalendarEventsGallery1_1.TemplateHeight / 105
+            TabIndex: =0
+            Text: |-
+                =If(
+                    ThisItem.'Project Category'.Value = "Diversion",
+                    Text("DIVERSION") & Text(" - ") & ThisItem.'Photog #1' & Text(" - ") & ThisItem.'Task Location',
+                    Text("Task: ") & Text(Value(ThisItem.Title), "0000", "en-GB") & Text(" - ") & ThisItem.Rank & Text(" ") & ThisItem.'Customer Name' & Text(" - ") & Text("Tel: ") & ThisItem.'Customer Contact Number'
+                )
+            Tooltip: =ThisItem.Title & Text("- ") & ThisItem.Rank & Text(" ") & ThisItem.'Customer Name'
+            Width: =762
+            Wrap: =false
+            X: =76
+            ZIndex: =7
+
+        Subtitle1_13 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =27
+            OnSelect: =Select(Title3_4)
+            PaddingBottom: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =19 * CalendarEventsGallery1_1.TemplateHeight / 105
+            Text: =ThisItem.'Task Location'
+            Tooltip: =ThisItem.'Task Location'
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            Wrap: =false
+            X: =iconLocation1_4.X + iconLocation1_4.Width + 5
+            Y: =28
+            ZIndex: =8
+
+        Body1_1 As label:
+            Color: =RGBA(221, 110, 66, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Title3_4.Height
+            OnSelect: =Select(Title3_4)
+            Size: =17 * CalendarEventsGallery1_1.TemplateHeight / 105
+            Text: =Text(ThisItem.'Start Time', DateTimeFormat.ShortTime)
+            Width: =67
+            Wrap: =false
+            X: =32
+            ZIndex: =9
+
+        Separator1_5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            Height: =1
+            OnSelect: =
+            Width: =806
+            X: =32
+            Y: =54
+            ZIndex: =10
+
+        Subtitle1_14 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =24
+            OnSelect: =Select(Title3_4)
+            PaddingBottom: =0
+            PaddingTop: =0
+            Size: =19 * CalendarEventsGallery1_1.TemplateHeight / 105
+            Text: =ThisItem.'Project Category'.Value
+            Tooltip: =ThisItem.'Task Location'
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            Wrap: =false
+            X: =Icon2_3.X + Icon2_3.Width + 5
+            Y: =iconLocation1_4.Y -1
+            ZIndex: =11
+
+        Icon2_3 As icon.Tag:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(79, 109, 122, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Height: =Subtitle1_13.Height -5
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Tag
+            OnSelect: =
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =Subtitle1_13.Height -5
+            X: =Subtitle1_13.X + Subtitle1_13.Width + 20
+            Y: =iconLocation1_4.Y
+            ZIndex: =12
+
+        Rectangle7_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderThickness: =4
+            Height: =2
+            HoverFill: =RGBA(105, 121, 126, 1)
+            OnSelect: =
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Width: =756
+            X: =82
+            Y: =27
+            ZIndex: =13
+
+        Separator1_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =806
+            X: =32
+            ZIndex: =14
+
+        Subtitle1_15 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =27
+            OnSelect: =
+            PaddingBottom: =0
+            PaddingTop: =0
+            Size: =19 * CalendarEventsGallery1_1.TemplateHeight / 105
+            Text: |-
+                =If(IsBlank(ThisItem.'Photog #1'), "Not Assigned", ThisItem.'Photog #1')
+            Tooltip: =Text(ThisItem.'Task Date', "mmmm")
+            Width: |-
+                =Sum(
+                    AddColumns(
+                        ForAll(Split(
+                            Self.Text,
+                            ""
+                        ), {Result: ThisRecord.Value}),
+                        "Size",
+                        LookUp(
+                            colCharsWidth,
+                            CharFont = Self.Font && CharWeight = Self.FontWeight && Char = Result
+                        ).Size
+                    ),
+                    Size
+                ) * Self.Size + Self.PaddingLeft + Self.PaddingRight
+            Wrap: =false
+            X: =Icon2_11.X + Icon2_11.Width + 5
+            Y: =28
+            ZIndex: =17
+
+        Icon2_11 As icon.Tag:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(79, 109, 122, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Height: =Subtitle1_13.Height -5
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Person
+            OnSelect: =
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =Subtitle1_13.Height -5
+            X: =Subtitle1_14.X + Subtitle1_14.Width + 20
+            Y: =iconLocation1_4.Y
+            ZIndex: =18
+
+    Label11_19 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Conflicts"
+        Underline: =true
+        Width: =182
+        X: =1297
+        Y: =683
+        ZIndex: =57
+
+    "'No Conflicts_1' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =61
+
+        TextCanvas2_1 As Text:
+            AutoHeight: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Text: ="No Conflicts Present"
+            VerticalAlign: ="Middle"
+            Visible: =If(CalendarEventsGallery1_2.AllItemsCount = 0, true, false)
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =133
+            X: =1321
+            Y: =808
+            ZIndex: =58
+
+        Icon19_1 As icon.CheckBadge:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(105, 121, 126, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =44
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CheckBadge
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(CalendarEventsGallery1_2.AllItemsCount = 0, true, false)
+            Width: =44
+            X: =1365
+            Y: =755
+            ZIndex: =59
+
+        Rectangle29_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderThickness: =4
+            Height: =1
+            HoverFill: =RGBA(105, 121, 126, 1)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Visible: =If(CalendarEventsGallery1_2.AllItemsCount = 0, true, false)
+            Width: =75
+            X: =1350
+            Y: =804
+            ZIndex: =60
 

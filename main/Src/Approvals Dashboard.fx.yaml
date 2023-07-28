@@ -660,6 +660,18 @@
             Icon: =Icon.NextArrow
             OnSelect: |-
                 =Select(Parent);
+                Patch(
+                    First(
+                        Filter(
+                            'TG14 Task Information',
+                            ID = ThisItem.ID
+                        )
+                    ),
+                    {
+                        'Viewed?': true,
+                        'Viewed By?': gblCurrentUser.displayName
+                    }
+                );
                 Set(
                     PopupVis,
                     true
@@ -670,12 +682,12 @@
                 );
                 Set(
                     gblConflictsCalendarTasks,
-                        Filter(
-                            'TG14 Task Information',
-                            'Task Date' = 'Approvals Gallery'.Selected.'Task Date',
-                            'Approval Status'.Value = "Approved",
-                            Unit.Value = gblUserLocPerm
-                        )
+                    Filter(
+                        'TG14 Task Information',
+                        'Task Date' = 'Approvals Gallery'.Selected.'Task Date',
+                        'Approval Status'.Value = "Approved",
+                        Unit.Value = gblUserLocPerm
+                    )
                 )
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -684,6 +696,65 @@
             X: =1384
             Y: =Button15.Y + (Button15.Height/2) - (Self.Height/2)
             ZIndex: =29
+
+        CheckboxCanvas1 As Checkbox:
+            Checked: =ThisItem.'Further Details Requested?'
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Further Details Requested"
+            OnSelect: =Select(Parent)
+            Width: =207
+            X: =1171
+            Y: =26
+            ZIndex: =31
+
+        CheckboxCanvas1_1 As Checkbox:
+            Checked: =ThisItem.'Viewed?'
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: =If(ThisItem.'Viewed?' = false Or IsBlank(ThisItem.'Viewed?'), "Unread", ThisItem.'Viewed By?')
+            OnSelect: =Select(Parent)
+            Width: =207
+            X: =1171
+            Y: =0
+            ZIndex: =32
+
+        Rectangle20 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 0)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(105, 121, 126, 0)
+            FocusedBorderThickness: =4
+            Height: =76
+            HoverFill: =RGBA(105, 121, 126, 1)
+            OnSelect: =Select(Parent)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Width: =207
+            X: =1171
+            Y: =47
+            ZIndex: =33
+
+        ButtonCanvas4 As Button:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnSelect: |-
+                =Patch(
+                    First(
+                        Filter(
+                            'TG14 Task Information',
+                            ID = ThisItem.ID
+                        )
+                    ),
+                    {
+                        'Viewed?': true,
+                        'Viewed By?': gblCurrentUser.displayName
+                    }
+                )
+            Width: =96
+            X: =947
+            Y: =15
+            ZIndex: =34
 
     Timer2_4 As timer:
         AutoStart: =true
@@ -749,8 +820,8 @@
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Repeat: =true
         Visible: =false
-        X: =1081
-        Y: =148
+        X: =1273
+        Y: =96
         ZIndex: =12
 
     "'Reject HTML Text' As htmlViewer":
@@ -1605,7 +1676,7 @@
                     varEmailContent
                 );
                 If(
-                    "2022" in 'Task Date',
+                    "2022" in 'Add Task Date',
                     Patch(
                         '1177 Task Register 2022',
                         First(
@@ -1617,7 +1688,7 @@
                         {Status: "CANCELLED"}
                     ),
                     If(
-                        "2023" in 'Task Date',
+                        "2023" in 'Add Task Date',
                         Patch(
                             '1177 Task Register 2023',
                             First(
@@ -1629,7 +1700,7 @@
                             {Status: "CANCELLED"}
                         ),
                         If(
-                            "2024" in 'Task Date',
+                            "2024" in 'Add Task Date',
                             Patch(
                                 '1177 Task Register 2024',
                                 First(
