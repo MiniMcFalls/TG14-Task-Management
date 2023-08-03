@@ -669,7 +669,7 @@
                     ),
                     {
                         'Viewed?': true,
-                        'Viewed By?': gblCurrentUser.displayName
+                        'Viewed By?': Concatenate(gblCurrentUser.GivenName, " ", gblCurrentUser.Surname)
                     }
                 );
                 Set(
@@ -709,10 +709,10 @@
             ZIndex: =31
 
         CheckboxCanvas1_1 As Checkbox:
-            Checked: =If(ThisItem.'Viewed?'.Value = "Yes", true, false)
+            Checked: =If(ThisItem.'Viewed?' = true, true, false)
             DisplayMode: =DisplayMode.Edit
             Height: =32
-            Label: =If(ThisItem.'Viewed?'.Value = "No" Or IsBlank(ThisItem.'Viewed?'.Value), "Unread", ThisItem.'Viewed By?')
+            Label: =If(ThisItem.'Viewed?' = false Or IsBlank(ThisItem.'Viewed?'), "Unread", ThisItem.'Viewed By?')
             OnSelect: =Select(Parent)
             Width: =207
             X: =1171

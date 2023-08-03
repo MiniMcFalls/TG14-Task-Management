@@ -755,7 +755,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
-            OnSelect: =
+            OnSelect: |-
+                =Patch('TG14 Task Information', First(Filter('TG14 Task Information', ID = cmp_ApprovalsPopup.SelectedJob.ID)), {'Further Details Requested?': true})
             PressedBorderColor: =ColorFade(Self.Fill,-50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(Self.Fill, -30%)
