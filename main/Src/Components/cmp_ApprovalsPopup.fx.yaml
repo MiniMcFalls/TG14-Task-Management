@@ -755,8 +755,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
-            OnSelect: |-
-                =Patch('TG14 Task Information', First(Filter('TG14 Task Information', ID = cmp_ApprovalsPopup.SelectedJob.ID)), {'Further Details Requested?': true})
+            OnSelect: =Set(varFurtherDetails, true)
             PressedBorderColor: =ColorFade(Self.Fill,-50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(Self.Fill, -30%)
@@ -1240,34 +1239,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             Y: =248
             ZIndex: =19
 
-        DatePicker1 As datepicker:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Color: =RGBA(51, 51, 51, 1)
-            DefaultDate: =DateValue(cmp_ApprovalsPopup.SelectedJob.'Task Date', "en-GB")
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            EndYear: =2030
-            Font: =Font.'Segoe UI'
-            Height: =30
-            HoverDateFill: =RGBA(200, 200, 200, 1)
-            IconBackground: =RGBA(105, 121, 126, 1)
-            PaddingTop: =5
-            SelectedDateFill: =RGBA(105, 121, 126, 1)
-            Size: =13
-            StartOfWeek: =StartOfWeek.Monday
-            Width: =137
-            X: =52
-            Y: =162
-            ZIndex: =21
-
         Group8 As group:
             Height: =5
             Width: =5
             X: =60
             Y: =60
-            ZIndex: =21
+            ZIndex: =23
 
             Label41_8 As label:
                 Align: =Align.Center
@@ -1303,7 +1280,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Width: =137
                 X: =189
                 Y: =121
-                ZIndex: =7
+                ZIndex: =6
 
             BadgeCanvas6 As Badge:
                 Content: =Blank()
@@ -1311,10 +1288,10 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Height: =32
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Subtle
-                Width: =130
-                X: =192
+                Width: =128
+                X: =194
                 Y: =161
-                ZIndex: =8
+                ZIndex: =7
 
             Label41_10 As label:
                 Align: =Align.Center
@@ -1332,7 +1309,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Width: =334
                 X: =593
                 Y: =121
-                ZIndex: =9
+                ZIndex: =8
 
             BadgeCanvas6_1 As Badge:
                 Content: =cmp_ApprovalsPopup.SelectedJob.'Task Location'
@@ -1343,7 +1320,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Width: =335
                 X: =592
                 Y: =161
-                ZIndex: =10
+                ZIndex: =9
 
             Label41_11 As label:
                 Align: =Align.Center
@@ -1361,7 +1338,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Width: =137
                 X: =322
                 Y: =121
-                ZIndex: =11
+                ZIndex: =10
 
             BadgeCanvas6_2 As Badge:
                 Content: =If(IsBlank(cmp_ApprovalsPopup.SelectedJob.Deadline), "Not Provided", cmp_ApprovalsPopup.SelectedJob.Deadline)
@@ -1372,9 +1349,26 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Width: =130
                 X: =325
                 Y: =161
+                ZIndex: =11
+
+            Rectangle16 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Fill: =RGBA(105, 121, 126, 1)
+                FocusedBorderThickness: =4
+                Height: =26
+                HoverFill: =RGBA(105, 121, 126, 1)
+                PressedFill: =RGBA(105, 121, 126, 1)
+                Width: =83
+                X: =214
+                Y: =164
                 ZIndex: =12
 
             TextCanvas3 As Text:
+                Align: ='TextCanvas.Align'.Center
                 AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
                 Height: =22
@@ -1382,9 +1376,9 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Underline: =false
                 VerticalAlign: ="Middle"
                 Weight: ='TextCanvas.Weight'.Semibold
-                Width: =130
+                Width: =100
                 Wrap: =false
-                X: =192
+                X: =207
                 Y: =166
                 ZIndex: =13
 
@@ -1437,6 +1431,28 @@ cmp_ApprovalsPopup As CanvasComponent:
                 X: =284
                 Y: =166
                 ZIndex: =20
+
+            DatePicker1 As datepicker:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+                Color: =RGBA(51, 51, 51, 1)
+                DefaultDate: =DateValue(cmp_ApprovalsPopup.SelectedJob.'Task Date', "en-GB")
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                EndYear: =2030
+                Font: =Font.'Segoe UI'
+                Height: =30
+                HoverDateFill: =RGBA(200, 200, 200, 1)
+                IconBackground: =RGBA(105, 121, 126, 1)
+                PaddingTop: =5
+                SelectedDateFill: =RGBA(105, 121, 126, 1)
+                Size: =13
+                StartOfWeek: =StartOfWeek.Monday
+                Width: =139
+                X: =52
+                Y: =162
+                ZIndex: =21
 
     "'Reject Popup_1' As group":
         Height: =5
@@ -2230,4 +2246,259 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Text: =ThisItem.Value
                 Width: =Parent.TemplateWidth
                 ZIndex: =2
+
+    "'Reject Popup_2' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =50
+
+        Rectangle19_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(179, 179, 179, 0.8)
+            FocusedBorderThickness: =4
+            Height: =930
+            Visible: =If(varFurtherDetails, true, false)
+            Width: =1850
+            ZIndex: =41
+
+        BadgeCanvas7_1 As Badge:
+            Appearance: ='BadgeCanvas.Appearance'.Filled
+            Content: =""
+            DisplayMode: =DisplayMode.Edit
+            Height: =470
+            Shape: ='BadgeCanvas.Shape'.Rounded
+            ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
+            Visible: =If(varFurtherDetails, true, false)
+            Width: =974
+            X: =438
+            Y: =201
+            ZIndex: =42
+
+        Label16_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =20
+            Text: ="CONFIRMATION"
+            Underline: =true
+            Visible: =If(varFurtherDetails, true, false)
+            Width: =450
+            X: =692
+            Y: =229
+            ZIndex: =43
+
+        Label20_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(184, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =13
+            Text: =Text(Value('Approvals Gallery'.Selected.Title), "0000")
+            Visible: =If(varFurtherDetails, true, false)
+            Width: =49
+            X: =1068
+            Y: =280
+            ZIndex: =44
+
+        Label18_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =13
+            Text: |-
+                ="You are about to reject the selected tasking: " 
+            Visible: =If(varFurtherDetails, true, false)
+            Width: =349
+            X: =717
+            Y: =280
+            ZIndex: =45
+
+        Label21_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =55
+            Size: =13
+            Text: ="You now have the ability to add any comments below which will be forwarded onto the original requester."
+            Visible: =If(varFurtherDetails, true, false)
+            Width: =690
+            X: =572
+            Y: =316
+            ZIndex: =46
+
+        Button16_2 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(184, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -10%)
+            OnSelect: |
+                =Patch(
+                    'TG14 Task Information',
+                    First(
+                        Filter(
+                            'TG14 Task Information',
+                            ID = cmp_ApprovalsPopup.SelectedJob.ID
+                        )
+                    ),
+                    {
+                        'Approval Status': {Value: "Rejected"},
+                        Comments: If(
+                            IsBlank('Reject Comments_2'),
+                            "Nil",
+                            'Reject Comments_2'.Value
+                        ),
+                        Status: {Value: "CANCELLED"}
+                    }
+                );
+                Set(
+                    PopupVis,
+                    false
+                );
+                Set(
+                    RejectPopupVis,
+                    false
+                );
+                Set(
+                    varEmailContent,
+                    'Reject HTML Text'.HtmlText
+                ) && Office365Outlook.SendEmailV2(
+                    'Approvals Gallery'.Selected.'Customer Email',
+                    Concatenate(
+                        Text(
+                            Today(),
+                            "yyyymmdd",
+                            "en-GB"
+                        ),
+                        "-",
+                        "Your Photographic Tasking ",
+                        Text(
+                            Value('Approvals Gallery'.Selected.Title),
+                            "0000",
+                            "en-GB"
+                        ),
+                        "-O"
+                    ),
+                    varEmailContent
+                );
+                If(
+                    "2022" in 'Add Task Date',
+                    Patch(
+                        '1177 Task Register 2022',
+                        First(
+                            Filter(
+                                '1177 Task Register 2022',
+                                'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
+                            )
+                        ),
+                        {Status: "CANCELLED"}
+                    ),
+                    If(
+                        "2023" in 'Add Task Date',
+                        Patch(
+                            '1177 Task Register 2023',
+                            First(
+                                Filter(
+                                    '1177 Task Register 2023',
+                                    'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
+                                )
+                            ),
+                            {Status: "CANCELLED"}
+                        ),
+                        If(
+                            "2024" in 'Add Task Date',
+                            Patch(
+                                '1177 Task Register 2024',
+                                First(
+                                    Filter(
+                                        '1177 Task Register 2024',
+                                        'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
+                                    )
+                                ),
+                                {Status: "CANCELLED"}
+                            )
+                        )
+                    )
+                );
+            PressedBorderColor: =ColorFade(Self.Fill, -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Size: =15
+            Text: ="CONFIRM"
+            Visible: =If(varFurtherDetails, true, false)
+            X: =837
+            Y: =585
+            ZIndex: =47
+
+        Icon8_4 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =33
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(RejectPopupVis, false)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Tooltip: ="Close"
+            Visible: =If(varFurtherDetails, true, false)
+            Width: =33
+            X: =1357
+            Y: =219
+            ZIndex: =48
+
+        "'Reject Comments_2' As 'Text input'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =155
+            Mode: ='TextInputCanvas.Mode'.Multiline
+            Value: =""
+            Visible: =If(varFurtherDetails, true, false)
+            Width: =838
+            X: =498
+            Y: =379
+            ZIndex: =49
 

@@ -212,7 +212,7 @@
     "Name": "PowerApps_CoreControls_DropdownCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Dropdown",
-    "Version": "0.0.14"
+    "Version": "0.0.15"
   },
   "form": {
     "CustomGroupControlTemplateName": "",
@@ -311,7 +311,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "hostControl",
     "OverridableProperties": {},
-    "Version": "1.5.4"
+    "Version": "1.6.0"
   },
   "htmlViewer": {
     "CustomGroupControlTemplateName": "",

@@ -233,6 +233,7 @@ App As appinfo:
             Denied
         );
     StartScreen: ='Perms Check Screen'
+    Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
         OnCancel: =false
