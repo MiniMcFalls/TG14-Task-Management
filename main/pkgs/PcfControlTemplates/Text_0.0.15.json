@@ -12,24 +12,13 @@
         "Type": 0,
         "WizardStep": null
       },
-      "DisplayMode": {
-        "EnabledForFlyout": false,
-        "HelperUI": null,
-        "Hidden": false,
-        "PropertyGroupName": "",
-        "PropertyKind": 1,
-        "SectionIndex": 2,
-        "SectionName": null,
-        "Type": 27,
-        "WizardStep": null
-      },
       "Height": {
         "EnabledForFlyout": false,
         "HelperUI": null,
         "Hidden": false,
         "PropertyGroupName": "Size",
         "PropertyKind": 2,
-        "SectionIndex": 3,
+        "SectionIndex": 2,
         "SectionName": null,
         "Type": 0,
         "WizardStep": null
@@ -117,7 +106,7 @@
         "Hidden": false,
         "PropertyGroupName": "Size",
         "PropertyKind": 2,
-        "SectionIndex": 3,
+        "SectionIndex": 2,
         "SectionName": null,
         "Type": 0,
         "WizardStep": null
@@ -139,7 +128,7 @@
         "Hidden": false,
         "PropertyGroupName": "Position",
         "PropertyKind": 2,
-        "SectionIndex": 3,
+        "SectionIndex": 2,
         "SectionName": null,
         "Type": 0,
         "WizardStep": null
@@ -150,20 +139,11 @@
         "Hidden": false,
         "PropertyGroupName": "Position",
         "PropertyKind": 2,
-        "SectionIndex": 3,
+        "SectionIndex": 2,
         "SectionName": null,
         "Type": 0,
         "WizardStep": null
       }
-    }
-  ],
-  "CommonEvents": [
-    {
-      "Description": "",
-      "DisplayName": "OnChange",
-      "Hidden": false,
-      "IsPrimaryInput": false,
-      "Name": "OnChange"
     }
   ],
   "ControlConstructor": "TextCanvas",
@@ -776,7 +756,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 7,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.TextCanvas\",\"CustomControlId\":\"PowerApps.CoreControls.TextCanvas\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"Text\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Text\"},\"Size\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"14\"},\"Weight\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Regular\"},\"Align\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Start\"},\"VerticalAlign\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Middle\"},\"AutoHeight\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"Height\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"32\"},\"Italic\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"Strikethrough\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"Underline\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"Wrap\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"true\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":null},\"Events\":null,\"CommonEvents\":null,\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
+      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.TextCanvas\",\"CustomControlId\":\"PowerApps.CoreControls.TextCanvas\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"Text\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Text\"},\"Size\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"14\"},\"Weight\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Regular\"},\"Align\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Start\"},\"VerticalAlign\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"Middle\"},\"AutoHeight\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"Height\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"32\"},\"Italic\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"Strikethrough\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"Underline\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"false\"},\"Wrap\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"true\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":[{\"IsRequired\":true,\"Name\":\"ExplicitCommonEvents\"}]},\"Events\":null,\"CommonEvents\":null,\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
       "Type": 3
     },
     {
@@ -790,7 +770,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.14\",\"IsFirstParty\":true}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.15\",\"IsFirstParty\":true}}",
       "Type": 3
     },
     {
@@ -1151,5 +1131,5 @@
       "Type": 4
     }
   ],
-  "Version": "0.0.14"
+  "Version": "0.0.15"
 }

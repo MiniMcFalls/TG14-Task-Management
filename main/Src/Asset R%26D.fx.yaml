@@ -208,8 +208,11 @@
         "TextInputCanvas3 As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
             OnChange: =Set(varSubmitChanges, true)
+            Placeholder: =""
+            Type: ="Text"
             Value: ='Asset_R&D_Gallery'.Selected.Title
             Width: =200
             X: =Label41_15.X
@@ -277,8 +280,11 @@
         "TextInputCanvas3_1 As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
             OnChange: =Set(varSubmitChanges, true)
+            Placeholder: =""
+            Type: ="Text"
             Value: ='Asset_R&D_Gallery'.Selected.Model
             Width: =610
             X: =64
@@ -1125,7 +1131,10 @@
             DelayOutput: =true
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            MaxLength: =-1
             OnChange: =Set(gblSearchTerm, Blank())
+            Placeholder: =""
+            Type: ="Text"
             Width: =320
             X: =271
             Y: =124
@@ -1402,6 +1411,9 @@
             "TextInputCanvas4_12 As 'Text input'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
+                MaxLength: =-1
+                Placeholder: =""
+                Type: ="Text"
                 Width: =263
                 X: =123
                 Y: =589
@@ -1410,6 +1422,9 @@
             "TextInputCanvas4_2 As 'Text input'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
+                MaxLength: =-1
+                Placeholder: =""
+                Type: ="Text"
                 Width: =263
                 X: =123
                 Y: =355
@@ -1839,6 +1854,9 @@
             "TextInputCanvas4_10 As 'Text input'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
+                MaxLength: =-1
+                Placeholder: =""
+                Type: ="Text"
                 Width: =263
                 X: =123
                 Y: =390
@@ -1847,6 +1865,9 @@
             "TextInputCanvas4_11 As 'Text input'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
+                MaxLength: =-1
+                Placeholder: =""
+                Type: ="Text"
                 Width: =263
                 X: =123
                 Y: =470
@@ -3117,6 +3138,9 @@
             "TextInputCanvas4_15 As 'Text input'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
+                MaxLength: =-1
+                Placeholder: =""
+                Type: ="Text"
                 Value: =If(IsBlank(First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Alternate Contact'), "None Provided", First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Alternate Contact')
                 Width: =263
                 X: =123
@@ -3126,6 +3150,9 @@
             "TextInputCanvas4_3 As 'Text input'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
+                MaxLength: =-1
+                Placeholder: =""
+                Type: ="Text"
                 Value: =First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).Recipient
                 Width: =263
                 X: =123
@@ -3509,6 +3536,9 @@
             "TextInputCanvas4_13 As 'Text input'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
+                MaxLength: =-1
+                Placeholder: =""
+                Type: ="Text"
                 Value: =First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Section/Role'
                 Width: =263
                 X: =123
@@ -3518,6 +3548,9 @@
             "TextInputCanvas4_14 As 'Text input'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
+                MaxLength: =-1
+                Placeholder: =""
+                Type: ="Text"
                 Value: =First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Contact Number'
                 Width: =263
                 X: =123
@@ -3553,6 +3586,9 @@
             "TextInputCanvas4_16 As 'Text input'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
+                MaxLength: =-1
+                Placeholder: =""
+                Type: ="Text"
                 Value: =First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Contact Email'
                 Width: =263
                 X: =123

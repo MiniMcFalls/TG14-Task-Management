@@ -12,6 +12,17 @@
         "Type": 0,
         "WizardStep": null
       },
+      "Appearance": {
+        "EnabledForFlyout": false,
+        "HelperUI": null,
+        "Hidden": false,
+        "PropertyGroupName": "",
+        "PropertyKind": 1,
+        "SectionIndex": 1,
+        "SectionName": null,
+        "Type": 0,
+        "WizardStep": null
+      },
       "DisplayMode": {
         "EnabledForFlyout": false,
         "HelperUI": null,
@@ -34,29 +45,7 @@
         "Type": 0,
         "WizardStep": null
       },
-      "Mode": {
-        "EnabledForFlyout": false,
-        "HelperUI": null,
-        "Hidden": false,
-        "PropertyGroupName": "",
-        "PropertyKind": 1,
-        "SectionIndex": 1,
-        "SectionName": null,
-        "Type": 0,
-        "WizardStep": null
-      },
-      "Required": {
-        "EnabledForFlyout": false,
-        "HelperUI": null,
-        "Hidden": false,
-        "PropertyGroupName": "",
-        "PropertyKind": 1,
-        "SectionIndex": 1,
-        "SectionName": null,
-        "Type": 0,
-        "WizardStep": null
-      },
-      "Value": {
+      "Text": {
         "EnabledForFlyout": false,
         "HelperUI": null,
         "Hidden": false,
@@ -105,15 +94,15 @@
   "CommonEvents": [
     {
       "Description": "",
-      "DisplayName": "OnChange",
+      "DisplayName": "OnSelect",
       "Hidden": false,
       "IsPrimaryInput": false,
-      "Name": "OnChange"
+      "Name": "OnSelect"
     }
   ],
-  "ControlConstructor": "TextInputCanvas",
+  "ControlConstructor": "ButtonCanvas",
   "ControlNamespace": "PowerApps.CoreControls",
-  "DisplayNameKey": "TextInputCanvas",
+  "DisplayNameKey": "ButtonCanvas",
   "IncludedProperties": [
     {
       "Category": "design",
@@ -167,7 +156,7 @@
     },
     {
       "Category": "design",
-      "DefaultValue": "320",
+      "DefaultValue": "96",
       "Description": "",
       "DescriptionResourceString": "",
       "DisplayName": "Width",
@@ -183,12 +172,12 @@
       "NullDefaultValue": "0",
       "ParentDataSetName": "",
       "PassThroughProperty": "",
-      "PhoneDefaultValue": "320",
+      "PhoneDefaultValue": "96",
       "Required": false,
       "ShouldAutoBind": false,
       "Type": 2,
       "Usage": 2,
-      "WebDefaultValue": "320"
+      "WebDefaultValue": "96"
     },
     {
       "Category": "design",
@@ -266,15 +255,40 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Text input",
+  "Name": "Button",
   "Properties": [
     {
       "Category": "data",
+      "DefaultValue": "true",
+      "Description": "Whether this field can be reached with Tab key.",
+      "DescriptionResourceString": "ButtonCanvas_AcceptsFocus_Desc",
+      "DisplayName": "Accepts focus",
+      "DisplayNameResourceString": "ButtonCanvas_AcceptsFocus",
+      "EnumValues": [],
+      "HelperUI": "",
+      "Hidden": false,
+      "IsDataSourceProperty": false,
+      "IsPrimaryBehavioral": false,
+      "IsPrimaryInput": false,
+      "IsPrimaryOutput": false,
+      "IsResettable": false,
+      "Name": "AcceptsFocus",
+      "ParentDataSetName": "",
+      "PassThroughProperty": "",
+      "PhoneDefaultValue": "",
+      "Required": false,
+      "ShouldAutoBind": false,
+      "Type": 20,
+      "Usage": 0,
+      "WebDefaultValue": ""
+    },
+    {
+      "Category": "data",
       "DefaultValue": "",
-      "Description": "Label for screen readers.",
-      "DescriptionResourceString": "TextInputCanvas_AccessibleLabel_Desc",
+      "Description": "Label read out by screen readers.",
+      "DescriptionResourceString": "ButtonCanvas_AccessibleLabel_Desc",
       "DisplayName": "Accessible label",
-      "DisplayNameResourceString": "TextInputCanvas_AccessibleLabel",
+      "DisplayNameResourceString": "ButtonCanvas_AccessibleLabel",
       "EnumValues": [],
       "HelperUI": null,
       "Hidden": false,
@@ -295,50 +309,46 @@
     },
     {
       "Category": "data",
-      "DefaultValue": "false",
-      "Description": "When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).",
-      "DescriptionResourceString": "TextInputCanvas_DelayOutput_Desc",
-      "DisplayName": "Delay output",
-      "DisplayNameResourceString": "TextInputCanvas_DelayOutput",
-      "EnumValues": [],
-      "HelperUI": "",
-      "Hidden": false,
-      "IsDataSourceProperty": false,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": false,
-      "Name": "DelayOutput",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PhoneDefaultValue": "",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 20,
-      "Usage": 0,
-      "WebDefaultValue": ""
-    },
-    {
-      "Category": "data",
-      "DefaultValue": "SingleLine",
-      "Description": "Type of text input: single line or multiline.",
-      "DescriptionResourceString": "TextInputCanvas_Mode_Desc",
-      "DisplayName": "Mode",
-      "DisplayNameResourceString": "TextInputCanvas_Mode",
+      "DefaultValue": "Primary",
+      "Description": "Display as one of button types.",
+      "DescriptionResourceString": "ButtonCanvas_Appearance_Desc",
+      "DisplayName": "Type",
+      "DisplayNameResourceString": "ButtonCanvas_Appearance",
       "EnumValues": [
         {
-          "Description": "Single line",
-          "DisplayName": "Single line",
+          "Description": "Primary",
+          "DisplayName": "Primary",
           "IsDefaultValue": true,
-          "Name": "SingleLine",
-          "Value": "SingleLine"
+          "Name": "Primary",
+          "Value": "Primary"
         },
         {
-          "Description": "Multiline",
-          "DisplayName": "Multiline",
+          "Description": "Secondary",
+          "DisplayName": "Secondary",
           "IsDefaultValue": false,
-          "Name": "Multiline",
-          "Value": "Multiline"
+          "Name": "Secondary",
+          "Value": "Secondary"
+        },
+        {
+          "Description": "Outline",
+          "DisplayName": "Outline",
+          "IsDefaultValue": false,
+          "Name": "Outline",
+          "Value": "Outline"
+        },
+        {
+          "Description": "Subtle",
+          "DisplayName": "Subtle",
+          "IsDefaultValue": false,
+          "Name": "Subtle",
+          "Value": "Subtle"
+        },
+        {
+          "Description": "Transparent",
+          "DisplayName": "Transparent",
+          "IsDefaultValue": false,
+          "Name": "Transparent",
+          "Value": "Transparent"
         }
       ],
       "HelperUI": null,
@@ -348,64 +358,39 @@
       "IsPrimaryInput": false,
       "IsPrimaryOutput": false,
       "IsResettable": false,
-      "Name": "Mode",
+      "Name": "Appearance",
       "ParentDataSetName": "",
       "PassThroughProperty": "",
-      "PhoneDefaultValue": "SingleLine",
+      "PhoneDefaultValue": "Primary",
       "Required": false,
       "ShouldAutoBind": false,
       "Type": 1,
       "Usage": 0,
-      "WebDefaultValue": "SingleLine"
+      "WebDefaultValue": "Primary"
     },
     {
       "Category": "data",
-      "DefaultValue": "false",
-      "Description": "Whether this control must contain text.",
-      "DescriptionResourceString": "TextInputCanvas_Required_Desc",
-      "DisplayName": "Required",
-      "DisplayNameResourceString": "TextInputCanvas_Required",
-      "EnumValues": [],
-      "HelperUI": null,
-      "Hidden": false,
-      "IsDataSourceProperty": false,
-      "IsPrimaryBehavioral": false,
-      "IsPrimaryInput": false,
-      "IsPrimaryOutput": false,
-      "IsResettable": false,
-      "Name": "Required",
-      "ParentDataSetName": "",
-      "PassThroughProperty": "",
-      "PhoneDefaultValue": "",
-      "Required": false,
-      "ShouldAutoBind": false,
-      "Type": 20,
-      "Usage": 0,
-      "WebDefaultValue": ""
-    },
-    {
-      "Category": "data",
-      "DefaultValue": "",
-      "Description": "Text that appears on a control or that the user types into a control.",
-      "DescriptionResourceString": "TextInputCanvas_Value_Desc",
-      "DisplayName": "Value",
-      "DisplayNameResourceString": "TextInputCanvas_Value",
+      "DefaultValue": "Button",
+      "Description": "Text to display in the button.",
+      "DescriptionResourceString": "ButtonCanvas_Text_Desc",
+      "DisplayName": "Text",
+      "DisplayNameResourceString": "ButtonCanvas_Text",
       "EnumValues": [],
       "HelperUI": null,
       "Hidden": false,
       "IsDataSourceProperty": false,
       "IsPrimaryBehavioral": false,
       "IsPrimaryInput": true,
-      "IsPrimaryOutput": true,
-      "IsResettable": true,
-      "Name": "Value",
+      "IsPrimaryOutput": false,
+      "IsResettable": false,
+      "Name": "Text",
       "ParentDataSetName": "",
       "PassThroughProperty": "",
       "PhoneDefaultValue": "",
       "Required": false,
       "ShouldAutoBind": false,
       "Type": 6,
-      "Usage": 2,
+      "Usage": 0,
       "WebDefaultValue": ""
     },
     {
@@ -531,35 +516,35 @@
       "IsControlSpecific": false,
       "LoadingOrder": 7,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.TextInputCanvas\",\"CustomControlId\":\"PowerApps.CoreControls.TextInputCanvas\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"AccessibleLabel\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"DelayOutput\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"Mode\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"SingleLine\"},\"Required\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"false\"},\"Value\":{\"Required\":true,\"Usage\":0,\"DefaultValue\":\"\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":null},\"Events\":null,\"CommonEvents\":{\"OnChange\":{\"EventName\":\"OnChange\"}},\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
+      "Path": "{\"Id\":\"ManifestTemplate\",\"Data\":{\"ConstructorName\":\"PowerApps.CoreControls.ButtonCanvas\",\"CustomControlId\":\"PowerApps.CoreControls.ButtonCanvas\",\"IsVirtual\":true,\"Properties\":{\"Resources\":[{\"Name\":\"/PCF/prop-types.js\",\"LoadOrder\":1,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/react-fela.js\",\"LoadOrder\":2,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela.js\",\"LoadOrder\":3,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/PCF/fela-dom.js\",\"LoadOrder\":4,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PCFControls/js/PCFControlWrapper.js\",\"LoadOrder\":6,\"Type\":0,\"LibraryName\":null},{\"Name\":\"/ctrllib/PcfControlProxy/js/PcfControlProxy.js\",\"LoadOrder\":7,\"Type\":0,\"LibraryName\":null}],\"GroupDefinitions\":null,\"DataSetDefinitions\":{},\"Properties\":{\"AcceptsFocus\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"true\"},\"AccessibleLabel\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Appearance\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Primary\"},\"Text\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"Button\"},\"TabIndex\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"},\"Tooltip\":{\"Required\":true,\"Usage\":1,\"DefaultValue\":\"\"}},\"FeatureUsage\":[{\"IsRequired\":true,\"Name\":\"ExplicitCommonEvents\"}]},\"Events\":null,\"CommonEvents\":{\"OnSelect\":{\"EventName\":\"OnSelect\"}},\"DesignMap\":null,\"PropertyDependencies\":[],\"Children\":null}}",
       "Type": 3
     },
     {
       "IsControlSpecific": false,
       "LoadingOrder": 8,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"ManifestPropertyTypes\",\"Data\":{\"Properties\":[{\"Name\":\"AccessibleLabel\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"DelayOutput\",\"Type\":\"TwoOptions\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Mode\",\"Type\":\"Enum\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Required\",\"Type\":\"TwoOptions\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Value\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":true,\"IsIncluded\":false},{\"Name\":\"TabIndex\",\"Type\":\"Whole_None\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Tooltip\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"PCFTeamsTheme\",\"Type\":\"String\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"X\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Y\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Width\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Height\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Visible\",\"Type\":\"Boolean\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"DisplayMode\",\"Type\":\"DisplayMode\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true}]}}",
+      "Path": "{\"Id\":\"ManifestPropertyTypes\",\"Data\":{\"Properties\":[{\"Name\":\"AcceptsFocus\",\"Type\":\"TwoOptions\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"AccessibleLabel\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Appearance\",\"Type\":\"Enum\",\"ComplexType\":\"None\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Text\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"None\",\"IsPrimary\":true,\"IsIncluded\":false},{\"Name\":\"TabIndex\",\"Type\":\"Whole_None\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"Tooltip\",\"Type\":\"SingleLine_Text\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":false},{\"Name\":\"PCFTeamsTheme\",\"Type\":\"String\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"X\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Y\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Width\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Height\",\"Type\":\"Number\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"Visible\",\"Type\":\"Boolean\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true},{\"Name\":\"DisplayMode\",\"Type\":\"DisplayMode\",\"ComplexType\":\"\",\"IsPrimary\":false,\"IsIncluded\":true}]}}",
       "Type": 3
     },
     {
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.13\",\"IsFirstParty\":true}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.17\",\"IsFirstParty\":true}}",
       "Type": 3
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/TextInputCanvas.js",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/ButtonCanvas.js",
       "Type": 0
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1033.resx",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1033.resx",
       "Type": 2
     },
     {
@@ -573,322 +558,322 @@
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1025.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1025.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1026.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1026.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1027.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1027.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1028.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1028.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1029.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1029.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1030.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1030.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1031.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1031.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1032.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1032.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1033.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1033.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1035.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1035.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1036.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1036.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1037.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1037.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1038.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1038.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1040.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1040.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1041.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1041.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1042.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1042.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1043.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1043.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1044.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1044.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1045.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1045.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1046.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1046.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1048.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1048.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1049.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1049.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1050.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1050.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1051.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1051.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1053.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1053.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1054.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1054.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1055.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1055.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1057.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1057.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1058.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1058.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1060.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1060.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1061.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1061.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1062.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1062.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1063.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1063.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1066.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1066.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1069.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1069.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1081.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1081.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1086.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1086.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1087.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1087.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.1110.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.1110.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.2052.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.2052.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.2070.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.2070.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.2074.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.2074.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.3076.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.3076.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.3082.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.3082.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "/PCFControls/PowerApps_CoreControls_TextInputCanvas/strings/TextInputCanvas.3098.json",
+      "Path": "/PCFControls/PowerApps_CoreControls_ButtonCanvas/strings/ButtonCanvas.3098.json",
       "Type": 5
     },
     {
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"TextInputCanvas\":\"Text input\",\"TextInputCanvas_AccessibleLabel\":\"Accessible label\",\"TextInputCanvas_AccessibleLabel_Desc\":\"Label for screen readers.\",\"TextInputCanvas_DelayOutput\":\"Delay output\",\"TextInputCanvas_DelayOutput_Desc\":\"When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas).\",\"TextInputCanvas_Mode\":\"Mode\",\"TextInputCanvas_Mode_Desc\":\"Type of text input: single line or multiline.\",\"TextInputCanvas_Mode_SingleLine\":\"Single line\",\"TextInputCanvas_Mode_Multiline\":\"Multiline\",\"TextInputCanvas_Required\":\"Required\",\"TextInputCanvas_Required_Desc\":\"Whether this control must contain text.\",\"TextInputCanvas_Value\":\"Value\",\"TextInputCanvas_Value_Desc\":\"Text that appears on a control or that the user types into a control.\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"ButtonCanvas\":\"Button\",\"ButtonCanvas_Desc\":\"Let users to click or tap to perform an action.\",\"ButtonCanvas_Appearance\":\"Type\",\"ButtonCanvas_Appearance_Desc\":\"Display as one of button types.\",\"ButtonCanvas_Appearance_Secondary\":\"Secondary\",\"ButtonCanvas_Appearance_Primary\":\"Primary\",\"ButtonCanvas_Appearance_Outline\":\"Outline\",\"ButtonCanvas_Appearance_Subtle\":\"Subtle\",\"ButtonCanvas_Appearance_Transparent\":\"Transparent\",\"ButtonCanvas_Text\":\"Text\",\"ButtonCanvas_Text_Desc\":\"Text to display in the button.\",\"ButtonCanvas_AcceptsFocus\":\"Accepts focus\",\"ButtonCanvas_AcceptsFocus_Desc\":\"Whether this field can be reached with Tab key.\",\"ButtonCanvas_AccessibleLabel\":\"Accessible label\",\"ButtonCanvas_AccessibleLabel_Desc\":\"Label read out by screen readers.\"}}}",
       "Type": 3
     },
     {
@@ -908,8 +893,7 @@
   ],
   "SubscribedFunctionalities": {
     "autoDisabledViewState": "true",
-    "supportResettableProperties": "true",
     "supportSetFocus": "true"
   },
-  "Version": "0.0.13"
+  "Version": "0.0.17"
 }

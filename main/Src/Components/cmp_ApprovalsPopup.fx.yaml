@@ -1179,7 +1179,10 @@ cmp_ApprovalsPopup As CanvasComponent:
         "TextInputCanvas2 As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =214
+            MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.Multiline
+            Placeholder: =""
+            Type: ="Text"
             Value: |-
                 =Switch(
                     cmp_ApprovalsPopup.SelectedJob.'Project Category'.Value,
@@ -1232,7 +1235,10 @@ cmp_ApprovalsPopup As CanvasComponent:
         "TextInputCanvas1_1 As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =144
+            MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.Multiline
+            Placeholder: =""
+            Type: ="Text"
             Value: =cmp_ApprovalsPopup.SelectedJob.'Task Requirements'
             Width: =874
             X: =53
@@ -1701,7 +1707,10 @@ cmp_ApprovalsPopup As CanvasComponent:
         "'Reject Comments_1' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =155
+            MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.Multiline
+            Placeholder: =""
+            Type: ="Text"
             Value: =""
             Visible: =If(RejectPopupVis, true, false)
             Width: =838
@@ -2494,7 +2503,10 @@ cmp_ApprovalsPopup As CanvasComponent:
         "'Reject Comments_2' As 'Text input'":
             DisplayMode: =DisplayMode.Edit
             Height: =155
+            MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.Multiline
+            Placeholder: =""
+            Type: ="Text"
             Value: =""
             Visible: =If(varFurtherDetails, true, false)
             Width: =838

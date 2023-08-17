@@ -133,7 +133,7 @@
         HoverFill: =RGBA(105, 121, 126, 1)
         InputFill: =RGBA(255, 255, 255, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =Sort(Filter('1177 Task Register 2022', Unit.Value = gblUserLocPerm),Job, SortOrder.Descending)
+        Items: =Sort(Filter('TG14 Task Information', Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Rejected" Or 'Approval Status'.Value = "Approved", Text('Task Date', "yyyy", "en-GB") = "2023", !(Title)),Title, SortOrder.Descending) 
         LinkColor: =RGBA(0, 134, 208, 1)
         PrimaryColor1: =RGBA(105, 121, 126, 1)
         PrimaryColor2: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -155,7 +155,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =1
-            Text: =ThisItem.Job
+            Text: =ThisItem.Title
             Width: =100
             X: =0
             Y: =0
@@ -169,7 +169,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =2
-            Text: =ThisItem.'Task Type'
+            Text: =ThisItem.'Project Category'.Value
             Width: =100
             X: =0
             Y: =0
@@ -1524,7 +1524,7 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
-        OnSelect: =Set(var11772023vis, true); Set(var11772022vis, false); Set(var11772024vis, false)
+        OnSelect: =Set(var11772022vis, false); Set(var11772023vis, true); Set(var11772024vis, false);
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
@@ -1551,7 +1551,7 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
-        OnSelect: =Set(var11772024vis, true); Set(var11772022vis, false); Set(var11772023vis, false);
+        OnSelect: =Set(var11772022vis, false); Set(var11772023vis, false); Set(var11772024vis, true)
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
