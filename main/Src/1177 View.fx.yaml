@@ -133,7 +133,7 @@
         HoverFill: =RGBA(105, 121, 126, 1)
         InputFill: =RGBA(255, 255, 255, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =Sort(Filter('TG14 Task Information', Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Rejected" Or 'Approval Status'.Value = "Approved", Text('Task Date', "yyyy", "en-GB") = "2023", !(Title)),Title, SortOrder.Descending) 
+        Items: =Sort(Filter('TG14 Task Information', Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Rejected" Or 'Approval Status'.Value = "Approved", Text('Task Date', "yyyy", "en-GB") = "2023", !(Title), 'Project Category'.Value <> "Diversion"),Title, SortOrder.Descending) 
         LinkColor: =RGBA(0, 134, 208, 1)
         PrimaryColor1: =RGBA(105, 121, 126, 1)
         PrimaryColor2: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -175,34 +175,6 @@
             Y: =0
             ZIndex: =2
 
-        "'Month Task Generated_Column1_2' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Month Task Generated"
-            FieldName: ="MonthsTaskGenerated"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.'Month Task Generated'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =3
-
-        "'Month Task Completed_Column1_2' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Month Task Completed"
-            FieldName: ="MonthTaskCompleted"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =ThisItem.'Month Task Completed'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =4
-
         "'Stills, Video or Both_Column1_2' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Stills, Video or Both"
@@ -211,25 +183,11 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =5
-            Text: =ThisItem.'Stills, Video or Both'
+            Text: =ThisItem.'Service they Require'
             Width: =100
             X: =0
             Y: =0
             ZIndex: =5
-
-        "'Cat._Column1_2' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Cat."
-            FieldName: ="Cat"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =6
-            Text: =ThisItem.'Cat.'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =6
 
         Status_Column1_2 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -239,7 +197,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =7
-            Text: =ThisItem.Status
+            Text: =ThisItem.Status.Value
             Width: =100
             X: =0
             Y: =0
@@ -267,7 +225,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =9
-            Text: =ThisItem.'Task Time'
+            Text: =ThisItem.'Start Time'
             Width: =100
             X: =0
             Y: =0
@@ -295,7 +253,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =11
-            Text: =ThisItem.'Aircraft Tail No. Course No. or Other local Reference'
+            Text: =ThisItem.'Tail Number'
             Width: =100
             X: =0
             Y: =0
@@ -309,7 +267,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =12
-            Text: =ThisItem.'Task Description'
+            Text: =ThisItem.'Task Requirements'
             Width: =100
             X: =0
             Y: =0
@@ -323,25 +281,11 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =13
-            Text: =ThisItem.'Distribution Notes'
+            Text: =ThisItem.Notes
             Width: =100
             X: =0
             Y: =0
             ZIndex: =13
-
-        AHB_Column1_2 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="AHB"
-            FieldName: ="AHB_x002e_"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =14
-            Text: =ThisItem.AHB
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =14
 
         Rank_Column1_2 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -365,7 +309,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =16
-            Text: =ThisItem.Name
+            Text: =ThisItem.'Customer Name'
             Width: =100
             X: =0
             Y: =0
@@ -379,7 +323,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =17
-            Text: =ThisItem.'Place of Work'
+            Text: =ThisItem.'Customer Section'
             Width: =100
             X: =0
             Y: =0
@@ -393,7 +337,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =18
-            Text: =ThisItem.Extension
+            Text: =ThisItem.'Customer Contact Number'
             Width: =100
             X: =0
             Y: =0
@@ -425,7 +369,7 @@
             LayoutHeight: =Parent.Height
             Order: =20
             Text: |-
-                =ThisItem.'Photog#2'
+                =ThisItem.'Photog #2'
             Width: =100
             X: =0
             Y: =0
@@ -439,7 +383,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =21
-            Text: =ThisItem.'QA Check'
+            Text: =ThisItem.'QA Check'.Value
             Width: =100
             X: =0
             Y: =0
@@ -467,7 +411,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =23
-            Text: =ThisItem.'Out of Hours'
+            Text: =ThisItem.'Out Of Hours'
             Width: =100
             X: =0
             Y: =0
@@ -565,7 +509,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =30
-            Text: =ThisItem.'Response ID'
+            Text: =ThisItem.ID
             Width: =100
             X: =0
             Y: =0
@@ -590,7 +534,7 @@
         HoverFill: =RGBA(105, 121, 126, 1)
         InputFill: =RGBA(255, 255, 255, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =Sort(Filter('1177 Task Register 2023', Unit.Value = gblUserLocPerm),Job, SortOrder.Descending)
+        Items: =Sort(Filter('TG14 Task Information', Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Rejected" Or 'Approval Status'.Value = "Approved", Text('Task Date', "yyyy", "en-GB") = "2023", !(Title)),ID, SortOrder.Descending) 
         LinkColor: =RGBA(0, 134, 208, 1)
         PrimaryColor1: =RGBA(105, 121, 126, 1)
         PrimaryColor2: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -612,7 +556,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =1
-            Text: =ThisItem.Job
+            Text: =ThisItem.Title
             Width: =100
             X: =0
             Y: =0
@@ -626,39 +570,11 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =2
-            Text: =ThisItem.'Task Type'
+            Text: =ThisItem.'Project Category'.Value
             Width: =100
             X: =0
             Y: =0
             ZIndex: =2
-
-        "'Month Task Generated_Column1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Month Task Generated"
-            FieldName: ="MonthsTaskGenerated"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.'Month Task Generated'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =3
-
-        "'Month Task Completed_Column1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Month Task Completed"
-            FieldName: ="MonthTaskCompleted"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =ThisItem.'Month Task Completed'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =4
 
         "'Stills, Video or Both_Column1' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
@@ -668,25 +584,11 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =5
-            Text: =ThisItem.'Stills, Video or Both'
+            Text: =ThisItem.'Service they Require'
             Width: =100
             X: =0
             Y: =0
             ZIndex: =5
-
-        "'Cat._Column1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Cat."
-            FieldName: ="Cat"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =6
-            Text: =ThisItem.'Cat.'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =6
 
         Status_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -696,7 +598,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =7
-            Text: =ThisItem.Status
+            Text: =ThisItem.Status.Value
             Width: =100
             X: =0
             Y: =0
@@ -724,7 +626,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =9
-            Text: =ThisItem.'Task Time'
+            Text: =ThisItem.'Start Time'
             Width: =100
             X: =0
             Y: =0
@@ -752,7 +654,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =11
-            Text: =ThisItem.'Aircraft Tail No. Course No. or Other local Reference'
+            Text: =ThisItem.'Tail Number'
             Width: =100
             X: =0
             Y: =0
@@ -766,7 +668,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =12
-            Text: =ThisItem.'Task Description'
+            Text: =ThisItem.'Task Requirements'
             Width: =100
             X: =0
             Y: =0
@@ -780,25 +682,11 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =13
-            Text: =ThisItem.'Distribution Notes'
+            Text: =ThisItem.Notes  
             Width: =100
             X: =0
             Y: =0
             ZIndex: =13
-
-        AHB_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="AHB"
-            FieldName: ="AHB_x002e_"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =14
-            Text: =ThisItem.AHB
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =14
 
         Rank_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -836,7 +724,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =17
-            Text: =ThisItem.'Place of Work'
+            Text: =ThisItem.'Customer Section'
             Width: =100
             X: =0
             Y: =0
