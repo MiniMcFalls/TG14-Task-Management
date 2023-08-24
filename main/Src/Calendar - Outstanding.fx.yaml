@@ -721,7 +721,7 @@
             SortByColumns(
                 Filter(
                     'TG14 Task Information',
-                    'Status Value' <> "COMPLETED" && 'Status Value' <> "CANCELLED",
+                    Status.Value = "PLANNED" Or Status.Value = "PROCESSING" Or Status.Value = "ON HOLD" Or Status.Value = "PPC",
                     Month1.SelectedText.Value = Blank() Or Text(
                         'Task Date',
                         "mmmm"
@@ -731,7 +731,10 @@
                     Unit.Value = gblUserLocPerm,
                     'Approval Status'.Value = "Approved",
                     'Project Category'.Value <> "Diversion"
-                ), "ID", SortOrder.Descending)
+                ),
+                "TaskDate",
+                SortOrder.Descending
+            )
         Layout: =Layout.Vertical
         OnSelect: =
         TemplatePadding: =0

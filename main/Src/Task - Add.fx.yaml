@@ -173,301 +173,97 @@
                 "Lossiemouth",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in 'Add Task Date'.SelectedDate,
-                        Last(
+                    First(
+                        SortByColumns(
                             Filter(
-                                '1177 Task Register 2022',
-                                Unit.Value = "Lossiemouth"
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in 'Add Task Date'.SelectedDate,
-                            Last(
-                                Filter(
-                                    '1177 Task Register 2023',
-                                    Unit.Value = "Lossiemouth"
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in 'Add Task Date'.SelectedDate,
-                                Last(
-                                    Filter(
-                                        '1177 Task Register 2024',
-                                        Unit.Value = "Lossiemouth"
-                                    )
-                                ).Job + 1
-                            )
+                                'TG14 Task Information',
+                                Unit.Value = "Lossiemouth",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
+                            ),
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
+                    ).Title + 1
                 ),
             //------------------------------------------------------------------------------RAF Waddington
                 "Waddington",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in 'Add Task Date'.SelectedDate,
-                        Last(
+                    First(
+                        SortByColumns(
                             Filter(
-                                '1177 Task Register 2022',
-                                Unit.Value = "Waddington"
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in 'Add Task Date'.SelectedDate,
-                            Last(
-                                Filter(
-                                    '1177 Task Register 2023',
-                                    Unit.Value = "Waddington"
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in 'Add Task Date'.SelectedDate,
-                                Last(
-                                    Filter(
-                                        '1177 Task Register 2024',
-                                        Unit.Value = "Waddington"
-                                    )
-                                ).Job + 1
-                            )
+                                'TG14 Task Information',
+                                Unit.Value = "Waddington",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
+                            ),
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
+                    ).Title + 1
                 ),
             //------------------------------------------------------------------------------RAF Coningsby
                 "Coningsby",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in 'Add Task Date'.SelectedDate,
-                        Last(
+                    First(
+                        SortByColumns(
                             Filter(
-                                '1177 Task Register 2022',
-                                Unit.Value = "Coningsby"
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in 'Add Task Date'.SelectedDate,
-                            Last(
-                                Filter(
-                                    '1177 Task Register 2023',
-                                    Unit.Value = "Coningsby"
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in 'Add Task Date'.SelectedDate,
-                                Last(
-                                    Filter(
-                                        '1177 Task Register 2024',
-                                        Unit.Value = "Coningsby"
-                                    )
-                                ).Job + 1
-                            )
+                                'TG14 Task Information',
+                                Unit.Value = "Coningsby",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
+                            ),
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
+                    ).Title + 1
                 ),
             //------------------------------------------------------------------------------RAF Leeming
                 "Leeming",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in 'Add Task Date'.SelectedDate,
-                        Last(
+                    First(
+                        SortByColumns(
                             Filter(
-                                '1177 Task Register 2022',
-                                Unit.Value = "Leeming"
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in 'Add Task Date'.SelectedDate,
-                            Last(
-                                Filter(
-                                    '1177 Task Register 2023',
-                                    Unit.Value = "Leeming"
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in 'Add Task Date'.SelectedDate,
-                                Last(
-                                    Filter(
-                                        '1177 Task Register 2024',
-                                        Unit.Value = "Leeming"
-                                    )
-                                ).Job + 1
-                            )
+                                'TG14 Task Information',
+                                Unit.Value = "Leeming",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
+                            ),
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
+                    ).Title + 1
                 ),
             //------------------------------------------------------------------------------RAF Brize Norton
                 "Brize Photo",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in 'Add Task Date'.SelectedDate,
-                        Last(
+                    First(
+                        SortByColumns(
                             Filter(
-                                '1177 Task Register 2022',
-                                Unit.Value = "Brize Photo"
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in 'Add Task Date'.SelectedDate,
-                            Last(
-                                Filter(
-                                    '1177 Task Register 2023',
-                                    Unit.Value = "Brize Photo"
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in 'Add Task Date'.SelectedDate,
-                                Last(
-                                    Filter(
-                                        '1177 Task Register 2024',
-                                        Unit.Value = "Brize Photo"
-                                    )
-                                ).Job + 1
-                            )
+                                'TG14 Task Information',
+                                Unit.Value = "Brize Photo",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
+                            ),
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
+                    ).Title + 1
                 ),
             //------------------------------------------------------------------------------RAF Benson
                 "Benson",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in 'Add Task Date'.SelectedDate,
-                        Last(
+                    First(
+                        SortByColumns(
                             Filter(
-                                '1177 Task Register 2022',
-                                Unit.Value = "Benson"
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in 'Add Task Date'.SelectedDate,
-                            Last(
-                                Filter(
-                                    '1177 Task Register 2023',
-                                    Unit.Value = "Benson"
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in 'Add Task Date'.SelectedDate,
-                                Last(
-                                    Filter(
-                                        '1177 Task Register 2024',
-                                        Unit.Value = "Benson"
-                                    )
-                                ).Job + 1
-                            )
-                        )
-                    )
-                )
-            );
-            If(
-                "2022" in 'Add Task Date'.SelectedDate,
-                Patch(
-                    '1177 Task Register 2022',
-                    Defaults('1177 Task Register 2022'),
-                    {
-                        Job: varJobNumber,
-                        'Month Task Generated': Text(
-                            'Add Task Date'.SelectedDate,
-                            "mmmm",
-                            "en-GB"
-                        ),
-                        'Task Type': 'Project Cat'.Selected.Value,
-                        'Stills, Video or Both': 'Service Required'.Selected.Value,
-                        Status: 'Status DD'.Selected.Value,
-                        'Task Date': 'Add Task Date'.SelectedDate,
-                        'Task Time': Text(
-                            cmp_TimePicker_1.value,
-                            DateTimeFormat.ShortTime24
-                        ),
-                        'Task Location': 'Task Location'.Text,
-                        'Task Description': 'Task Requirements'.Text,
-                        Rank: 'Rank DD'.Selected.Value,
-                        Name: 'Customer Name'.Text,
-                        'Place of Work': 'Customer Section'.Text,
-                        Extension: 'Customer Contact'.Text,
-                        'Photog #1': 'Photog #1 DD'.Selected.Value,
-                        'Photog#2': 'Photog #2 DD'.Selected.Value,
-                        'QA Check': 'QA Check DD'.Selected.Value,
-                        'Distribution Notes': Notes.Text,
-                        'Response ID': varResponseID,
-                        'Aircraft Tail No. Course No. or Other local Reference': 'Tail Number'.Text,
-                        Unit: {Value: Unit.Text}
-                    }
-                ),
-                If(
-                    "2023" in 'Add Task Date'.SelectedDate,
-                    Patch(
-                        '1177 Task Register 2023',
-                        Defaults('1177 Task Register 2023'),
-                        {
-                            Job: varJobNumber,
-                            'Month Task Generated': Text(
-                                'Add Task Date'.SelectedDate,
-                                "mmmm",
-                                "en-GB"
+                                'TG14 Task Information',
+                                Unit.Value = "Benson",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
                             ),
-                            'Task Type': 'Project Cat'.Selected.Value,
-                            'Stills, Video or Both': 'Service Required'.Selected.Value,
-                            Status: 'Status DD'.Selected.Value,
-                            'Task Date': 'Add Task Date'.SelectedDate,
-                            'Task Time': Text(
-                                cmp_TimePicker_1.value,
-                                DateTimeFormat.ShortTime24
-                            ),
-                            'Task Location': 'Task Location'.Text,
-                            'Task Description': 'Task Requirements'.Text,
-                            Rank: 'Rank DD'.Selected.Value,
-                            Name: 'Customer Name'.Text,
-                            'Place of Work': 'Customer Section'.Text,
-                            Extension: 'Customer Contact'.Text,
-                            'Photog #1': 'Photog #1 DD'.Selected.Value,
-                            'Photog#2': 'Photog #2 DD'.Selected.Value,
-                            'QA Check': 'QA Check DD'.Selected.Value,
-                            'Distribution Notes': Notes.Text,
-                            'Response ID': varResponseID,
-                            'Aircraft Tail No. Course No. or Other local Reference': 'Tail Number'.Text,
-                            Unit: {Value: Unit.Text}
-                        }
-                    ),
-                    If(
-                        "2024" in 'Add Task Date'.SelectedDate,
-                        Patch(
-                            '1177 Task Register 2024',
-                            Defaults('1177 Task Register 2024'),
-                            {
-                                Job: varJobNumber,
-                                'Month Task Generated': Text(
-                                    'Add Task Date'.SelectedDate,
-                                    "mmmm",
-                                    "en-GB"
-                                ),
-                                'Task Type': 'Project Cat'.Selected.Value,
-                                'Stills, Video or Both': 'Service Required'.Selected.Value,
-                                Status: 'Status DD'.Selected.Value,
-                                'Task Date': 'Add Task Date'.SelectedDate,
-                                'Task Time': Text(
-                                    cmp_TimePicker_1.value,
-                                    DateTimeFormat.ShortTime24
-                                ),
-                                'Task Location': 'Task Location'.Text,
-                                'Task Description': 'Task Requirements'.Text,
-                                Rank: 'Rank DD'.Selected.Value,
-                                Name: 'Customer Name'.Text,
-                                'Place of Work': 'Customer Section'.Text,
-                                Extension: 'Customer Contact'.Text,
-                                'Photog #1': 'Photog #1 DD'.Selected.Value,
-                                'Photog#2': 'Photog #2 DD'.Selected.Value,
-                                'QA Check': 'QA Check DD'.Selected.Value,
-                                'Distribution Notes': Notes.Text,
-                                'Response ID': varResponseID,
-                                'Aircraft Tail No. Course No. or Other local Reference': 'Tail Number'.Text,
-                                Unit: {Value: Unit.Text}
-                            }
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
+                    ).Title + 1
                 )
             );
             Patch(
