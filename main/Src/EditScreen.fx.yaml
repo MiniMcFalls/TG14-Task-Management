@@ -178,8 +178,10 @@ EditScreen As screen:
         ZIndex: =4
 
     "'Main Form - Project Category' As Dropdown.pcfdataset":
+        BaseColor: =""
         DefaultSelectedItems: =CalendarEventsGallery1.Selected.'Project Category'
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Items: =Choices([@'TG14 Task Information'].'Project Category')
         Width: =169
@@ -196,9 +198,11 @@ EditScreen As screen:
             ZIndex: =7
 
     "'Main Form - Service Required' As Dropdown.pcfdataset":
+        BaseColor: =""
         DefaultSelectedItems: |-
             ={Value: CalendarEventsGallery1.Selected.'Service they Require'}
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Items: =["Stills", "Video", "Both"]
         Width: =225
@@ -997,9 +1001,11 @@ EditScreen As screen:
         ZIndex: =32
 
     "'Main Form - Photog #2' As Dropdown.pcfdataset":
+        BaseColor: =""
         DefaultSelectedItems: |-
             ={Value: CalendarEventsGallery1.Selected.'Photog #2'}
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Items: |-
             =If(
@@ -1219,9 +1225,11 @@ EditScreen As screen:
             ZIndex: =9
 
     "'Main Form - Photog #1' As Dropdown.pcfdataset":
+        BaseColor: =""
         DefaultSelectedItems: |-
             ={Value: CalendarEventsGallery1.Selected.'Photog #1'}
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Items: |-
             =If(
@@ -1875,8 +1883,10 @@ EditScreen As screen:
         ZIndex: =50
 
     "'Main Form - QA Check' As Dropdown.pcfdataset":
+        BaseColor: =""
         DefaultSelectedItems: =CalendarEventsGallery1.Selected.'QA Check'
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Items: =Choices([@'TG14 Task Information'].'QA Check')
         Width: =190
@@ -2906,8 +2916,10 @@ EditScreen As screen:
             ZIndex: =112
 
     "'HO Popup - Status' As Dropdown.pcfdataset":
+        BaseColor: =""
         DefaultSelectedItems: =CalendarEventsGallery1.Selected.Status
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Items: =Choices([@'TG14 Task Information'].Status)
         Visible: =If(HODetVis, true, false)

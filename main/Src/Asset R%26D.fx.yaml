@@ -220,8 +220,10 @@
             ZIndex: =7
 
         DropdownCanvas1 As Dropdown.pcfdataset:
+            BaseColor: =""
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Status
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             Items: =If(IsBlank('Asset_R&D_Gallery'.Selected), [""], Choices('Asset Tracker_1'.Status))
             OnChange: =Set(varSubmitChanges, true)
@@ -249,8 +251,10 @@
             ZIndex: =9
 
         DropdownCanvas1_1 As Dropdown.pcfdataset:
+            BaseColor: =""
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Location
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             Items: =If(IsBlank('Asset_R&D_Gallery'.Selected), [""], Choices('Asset Tracker_1'.Location))
             OnChange: =Set(varSubmitChanges, true)
@@ -310,8 +314,10 @@
             ZIndex: =13
 
         DropdownCanvas1_2 As Dropdown.pcfdataset:
+            BaseColor: =""
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.'Asset type'
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             Items: =If(IsBlank('Asset_R&D_Gallery'.Selected), [""], Choices('Asset Tracker_1'.'Asset type'))
             OnChange: =Set(varSubmitChanges, true)
@@ -339,8 +345,10 @@
             ZIndex: =15
 
         DropdownCanvas1_3 As Dropdown.pcfdataset:
+            BaseColor: =""
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Color
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             Items: =If(IsBlank('Asset_R&D_Gallery'.Selected), [""], Choices('Asset Tracker_1'.Color))
             OnChange: =Set(varSubmitChanges, true)
@@ -371,7 +379,6 @@
             DisplayMode: =DisplayMode.Edit
             Height: =32
             OnChange: =Set(varSubmitChanges, true)
-            Value: ='Asset_R&D_Gallery'.Selected.'PAT Date'
             Width: =303
             X: =64
             Y: =573
@@ -462,7 +469,6 @@
             DisplayMode: =DisplayMode.Edit
             Height: =32
             OnChange: =Set(varSubmitChanges, true)
-            Value: ='Asset_R&D_Gallery'.Selected.'Due date'
             Width: =303
             X: =372
             Y: =573
@@ -574,8 +580,10 @@
             ZIndex: =27
 
         DropdownCanvas1_4 As Dropdown.pcfdataset:
+            BaseColor: =""
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Manufacturer
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             Items: =If(IsBlank('Asset_R&D_Gallery'.Selected), [""], Choices('Asset Tracker_1'.Manufacturer))
             OnChange: =Set(varSubmitChanges, true)
@@ -1117,9 +1125,11 @@
             ZIndex: =6
 
         DropdownCanvas2 As Dropdown.pcfdataset:
+            BaseColor: =""
             DefaultSelectedItems: |-
                 ={Value: "Available"}
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             Items: =Choices('Asset Tracker_1'.Status)
             Width: =197
@@ -3577,7 +3587,6 @@
             "DatePickerCanvas3_2 As 'Date picker'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
-                Value: =First(Filter('TG14 Loan Register', ID = varSelectedLoanID)).'Proposed Return Date'
                 Width: =263
                 X: =123
                 Y: =514
@@ -3952,8 +3961,10 @@
                     ZIndex: =7
 
                 DropdownCanvas3 As Dropdown.pcfdataset:
+                    BaseColor: =""
                     DefaultSelectedItems: =Blank()
                     DisplayMode: =DisplayMode.Edit
+                    FontSize: =0
                     Height: =34
                     Items: =Choices('Asset Tracker_1'.Location)
                     Width: =193

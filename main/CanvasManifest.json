@@ -1,6 +1,10 @@
 {
   "FormatVersion": "0.24",
   "Header": {
+    "AnalysisOptions": {
+      "DataflowAnalysisEnabled": false,
+      "DataflowAnalysisFlagStateToggledByUser": false
+    },
     "DocVersion": "1.334",
     "MinVersionToLoad": "1.331",
     "MSAppStructureVersion": "2.0"
@@ -14,13 +18,13 @@
       "appinsightserrortracing": true,
       "appinstrumentationcorrelationtracing": true,
       "autocreateenvironmentvariables": true,
-      "backfromhostaction": false,
       "behaviorpropertyui": true,
       "blockmovingcontrol": true,
       "cdsdataformatting": false,
       "classiccontrols": false,
       "consistentreturnschemafortabularfunctions": true,
       "copyandmerge": true,
+      "dataflowanalysisenabled": false,
       "datatablev2control": true,
       "dataverseactionsenabled": true,
       "delaycontrolrendering": true,
@@ -47,7 +51,6 @@
       "enableruntimepolicies": true,
       "enablesaveloadcleardataonweb": true,
       "enableupdateifdelegation": true,
-      "enhanceddelegation": true,
       "enhancedgalleryinitialization": true,
       "errorhandling": true,
       "expandedsavedatasupport": true,
@@ -95,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 4,
+    "BindingErrorCount": 28,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -112,13 +115,13 @@
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "TG14 CRM Tool",
+    "Name": "RAF Visual Communications CRM",
     "OriginatingVersion": "1.321",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "TG14 CRM Tool",
+    "AppName": "RAF Visual Communications CRM",
     "BackgroundColor": "rgba(230, 230, 230, 1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "",

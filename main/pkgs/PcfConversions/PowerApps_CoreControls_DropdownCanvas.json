@@ -10,7 +10,21 @@
       ],
       "From": "0.0.12",
       "To": "0.0.13"
+    },
+    {
+      "Action": [
+        {
+          "Name": "BaseColor",
+          "Type": "add"
+        },
+        {
+          "Name": "FontSize",
+          "Type": "add"
+        }
+      ],
+      "From": "0.0.16",
+      "To": "0.0.17"
     }
   ],
-  "Version": "0.0.15"
+  "Version": "0.0.18"
 }
