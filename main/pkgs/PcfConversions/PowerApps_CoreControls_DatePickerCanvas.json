@@ -42,7 +42,27 @@
       ],
       "From": "0.0.2",
       "To": "0.0.3"
+    },
+    {
+      "Action": [
+        {
+          "Name": "BasePaletteColor",
+          "Type": "add"
+        }
+      ],
+      "From": "0.0.6",
+      "To": "0.0.7"
+    },
+    {
+      "Action": [
+        {
+          "Name": "ValidationState",
+          "Type": "add"
+        }
+      ],
+      "From": "0.0.7",
+      "To": "0.0.8"
     }
   ],
-  "Version": "0.0.5"
+  "Version": "0.0.8"
 }

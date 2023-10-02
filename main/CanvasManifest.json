@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 28,
+    "BindingErrorCount": 15,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -111,7 +111,7 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "4898e49c-859c-42ce-8cc6-38398c961004",
-    "Id": "c2ce89b7-ab28-4935-8e65-e954c4f1fd2b",
+    "Id": "f603907e-062f-40e0-afcd-77389533cc7d",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",

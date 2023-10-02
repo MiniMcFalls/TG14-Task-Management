@@ -50,7 +50,7 @@ cmp_Header As CanvasComponent:
         PaddingLeft: =20
         PaddingTop: =2
         Size: =16
-        Text: ="TG14 Task Manager"
+        Text: ="RAF Visual Communications CRM"
         VerticalAlign: =VerticalAlign.Top
         Width: =395
         Wrap: =false

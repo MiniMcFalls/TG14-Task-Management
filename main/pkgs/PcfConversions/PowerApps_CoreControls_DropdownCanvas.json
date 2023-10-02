@@ -22,9 +22,33 @@
           "Type": "add"
         }
       ],
-      "From": "0.0.16",
-      "To": "0.0.17"
+      "From": "0.0.17",
+      "To": "0.0.18"
+    },
+    {
+      "Action": [
+        {
+          "Name": "BaseColor",
+          "Type": "remove"
+        },
+        {
+          "Name": "BasePaletteColor",
+          "Type": "add"
+        }
+      ],
+      "From": "0.0.18",
+      "To": "0.0.19"
+    },
+    {
+      "Action": [
+        {
+          "Name": "ValidationState",
+          "Type": "add"
+        }
+      ],
+      "From": "0.0.20",
+      "To": "0.0.21"
     }
   ],
-  "Version": "0.0.18"
+  "Version": "0.0.21"
 }

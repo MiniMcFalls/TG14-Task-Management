@@ -4867,6 +4867,7 @@
 
     ButtonCanvas1 As Button:
         Appearance: ='ButtonCanvas.Appearance'.Primary
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =36
         OnSelect: |-

@@ -10,7 +10,17 @@
       ],
       "From": "0.0.13",
       "To": "0.0.14"
+    },
+    {
+      "Action": [
+        {
+          "Name": "BasePaletteColor",
+          "Type": "add"
+        }
+      ],
+      "From": "0.0.17",
+      "To": "0.0.18"
     }
   ],
-  "Version": "0.0.17"
+  "Version": "0.0.19"
 }

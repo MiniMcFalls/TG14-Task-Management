@@ -27,20 +27,6 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
-  "attachments": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/attachments",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": false,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": true,
-    "LastModifiedTimestamp": "0",
-    "Name": "attachments",
-    "OverridableProperties": {},
-    "Version": "2.3.0"
-  },
   "Badge": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -54,7 +40,7 @@
     "Name": "PowerApps_CoreControls_BadgeCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Badge",
-    "Version": "0.0.7"
+    "Version": "0.0.8"
   },
   "button": {
     "CustomGroupControlTemplateName": "",
@@ -83,7 +69,7 @@
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Button",
-    "Version": "0.0.17"
+    "Version": "0.0.19"
   },
   "checkbox": {
     "CustomGroupControlTemplateName": "",
@@ -112,7 +98,7 @@
     "Name": "PowerApps_CoreControls_CheckboxCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Checkbox",
-    "Version": "0.0.13"
+    "Version": "0.0.14"
   },
   "circle": {
     "CustomGroupControlTemplateName": "",
@@ -183,7 +169,7 @@
     "Name": "PowerApps_CoreControls_DatePickerCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Date picker",
-    "Version": "0.0.5"
+    "Version": "0.0.8"
   },
   "datepicker": {
     "CustomGroupControlTemplateName": "",
@@ -226,7 +212,7 @@
     "Name": "PowerApps_CoreControls_DropdownCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Dropdown",
-    "Version": "0.0.18"
+    "Version": "0.0.21"
   },
   "form": {
     "CustomGroupControlTemplateName": "",
@@ -466,7 +452,7 @@
     "Name": "PowerApps_CoreControls_Spinner",
     "OverridableProperties": {},
     "TemplateDisplayName": "Spinner",
-    "Version": "1.0.18"
+    "Version": "1.0.19"
   },
   "TestCase": {
     "CustomGroupControlTemplateName": "",
@@ -538,7 +524,7 @@
     "Name": "PowerApps_CoreControls_TextInputCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text input",
-    "Version": "0.0.15"
+    "Version": "0.0.17"
   },
   "timer": {
     "CustomGroupControlTemplateName": "",

@@ -178,7 +178,7 @@
                             Filter(
                                 'TG14 Task Information',
                                 Unit.Value = "Lossiemouth",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
                             ),
                             "ID",
                             SortOrder.Descending
@@ -194,7 +194,7 @@
                             Filter(
                                 'TG14 Task Information',
                                 Unit.Value = "Waddington",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
                             ),
                             "ID",
                             SortOrder.Descending
@@ -210,7 +210,7 @@
                             Filter(
                                 'TG14 Task Information',
                                 Unit.Value = "Coningsby",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
                             ),
                             "ID",
                             SortOrder.Descending
@@ -226,7 +226,7 @@
                             Filter(
                                 'TG14 Task Information',
                                 Unit.Value = "Leeming",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
                             ),
                             "ID",
                             SortOrder.Descending
@@ -242,7 +242,7 @@
                             Filter(
                                 'TG14 Task Information',
                                 Unit.Value = "Brize Photo",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
                             ),
                             "ID",
                             SortOrder.Descending
@@ -258,7 +258,7 @@
                             Filter(
                                 'TG14 Task Information',
                                 Unit.Value = "Benson",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
                             ),
                             "ID",
                             SortOrder.Descending
@@ -301,7 +301,8 @@
                     'O365 Data': 'Customer Email'.Selected,
                     'Tail Number': 'Tail Number'.Text,
                     Unit: {Value: Unit.Text},
-                    'Approval Status': {Value: "Approved"}
+                    'Approval Status': {Value: "Approved"},
+                    'Diversion?': false
                 }
             );
             // Notify Element

@@ -14,7 +14,21 @@
       ],
       "From": "0.0.6",
       "To": "0.0.7"
+    },
+    {
+      "Action": [
+        {
+          "Name": "BasePaletteColor",
+          "Type": "add"
+        },
+        {
+          "Name": "FontSize",
+          "Type": "add"
+        }
+      ],
+      "From": "0.0.7",
+      "To": "0.0.8"
     }
   ],
-  "Version": "0.0.7"
+  "Version": "0.0.8"
 }

@@ -617,8 +617,10 @@
 
         BadgeCanvas4 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
+            BasePaletteColor: =""
             Content: =""
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =149
             Shape: ="Circular"
             ThemeColor: ="Brand"
