@@ -325,7 +325,7 @@
                 " & Count(
                     Filter(
                         'TG14 Task Information',
-                        'Task Date' >= Today() + (2 - Weekday(Today())) And 'Task Date' <= Today() + (8 - Weekday(Today())) And Unit.Value = gblUserLocPerm
+                        'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))) && Unit.Value = gblUserLocPerm
                     ).ID
                 ) & " Tasks"
             Width: =312
