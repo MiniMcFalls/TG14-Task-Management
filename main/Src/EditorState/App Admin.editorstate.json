@@ -1151,7 +1151,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button26",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1402,7 +1402,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button32",
-      "ParentIndex": 15,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1667,7 +1667,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button32_1",
-      "ParentIndex": 18,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1925,7 +1925,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button32_2",
-      "ParentIndex": 23,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2143,7 +2143,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas1",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2563,7 +2563,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ChangeUnit",
-      "ParentIndex": 17,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -34680,7 +34680,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Dropdown2",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -37608,7 +37608,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "FormViewer1",
-      "ParentIndex": 16,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38210,7 +38210,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image7",
-      "ParentIndex": 13,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38576,7 +38576,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "JobSearch",
-      "ParentIndex": 14,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -39162,7 +39162,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label28",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -39438,7 +39438,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label28_1",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -39714,7 +39714,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label28_2",
-      "ParentIndex": 19,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -39990,7 +39990,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label28_3",
-      "ParentIndex": 21,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -40266,7 +40266,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label29",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -40542,7 +40542,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label29_1",
-      "ParentIndex": 20,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -40847,7 +40847,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label29_2",
-      "ParentIndex": 22,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41128,7 +41128,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label30",
-      "ParentIndex": 24,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41404,7 +41404,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label30_1",
-      "ParentIndex": 26,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41680,7 +41680,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label31",
-      "ParentIndex": 25,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41956,7 +41956,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label31_1",
-      "ParentIndex": 27,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -42211,7 +42211,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label36",
-      "ParentIndex": 12,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -46081,6 +46081,69 @@
         }
       ],
       "StyleName": "defaultTypedDataCardStyle",
+      "Type": "ControlInfo"
+    },
+    "Spinner2": {
+      "AllowAccessToGlobals": true,
+      "ControlPropertyState": [
+        "X",
+        "Y",
+        "Width",
+        "Height",
+        "DisplayMode",
+        "ZIndex",
+        "Visible"
+      ],
+      "HasDynamicProperties": false,
+      "IsAutoGenerated": false,
+      "IsComponentDefinition": false,
+      "IsDataControl": false,
+      "IsFromScreenLayout": false,
+      "IsGroupControl": false,
+      "IsLocked": false,
+      "LayoutName": "",
+      "MetaDataIDKey": "",
+      "Name": "Spinner2",
+      "ParentIndex": 6,
+      "PersistMetaDataIDKey": false,
+      "Properties": [
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DisplayMode",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ZIndex",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Visible",
+          "RuleProviderType": "User"
+        }
+      ],
+      "StyleName": "",
       "Type": "ControlInfo"
     },
     "Start Time_DataCard2": {
