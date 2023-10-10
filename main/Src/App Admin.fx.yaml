@@ -4870,7 +4870,7 @@
         BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =36
-        OnSelect: |-
+        OnSelect: |
             =//
             //
             //
@@ -4885,39 +4885,7 @@
                 ),
             //--------------------------------------------------------------------------------------------------------------------------------------- Lossiemouth
                 {
-                    Lossiemouth: Sum(
-                        Filter(
-                            'TG14 Task Information',
-                            Unit.Value = "Lossiemouth",
-                            Right(
-                                'Task Date',
-                                4
-                            ) = Text(
-                                Today(),
-                                "yyyy",
-                                "en-GB"
-                            ),
-                            Mid(
-                                'Task Date',
-                                4,
-                                2
-                            ) = "01",
-                            Or(
-                                'Project Category'.Value = "Admin",
-                                'Project Category'.Value = "Air Safety",
-                                'Project Category'.Value = "Digital Manipulation",
-                                'Project Category'.Value = "Engineering",
-                                'Project Category'.Value = "ID Photo",
-                                'Project Category'.Value = "Medical Dental",
-                                'Project Category'.Value = "Portrait",
-                                'Project Category'.Value = "Print/Reprint",
-                                'Project Category'.Value = "Scanning",
-                                'Project Category'.Value = "Trials",
-                                'Project Category'.Value = "Other (Specify)"
-                            )
-                        ),
-                        'Total Hours' + 'Out Of Hours'
-                    ),
+                    Lossiemouth: If(gbluserlocperm= "Lossiemouth"  fx2023JanReturnsA,
                     //--------------------------------------------------------------------------------------------------------------------------------------- Brize Norton
                     'Brize Norton': Sum(
                         Filter(

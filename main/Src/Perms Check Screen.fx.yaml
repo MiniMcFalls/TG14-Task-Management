@@ -292,6 +292,7 @@
                     badge_wyton
                 )
             );
+            
             //Set Character Set for autowidth labels
             Set(
                 colCharsWidth,

@@ -2,6 +2,380 @@ App As appinfo:
     BackEnabled: =true
     ConfirmExit: =true
     ConfirmExitMessage: ="You have unsaved data, are you sure you want to exit?"
+    Formulas: |
+        =//Jan Assurances
+        fx2023JanReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
+        fx2023FebReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        02,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        02,
+                        28
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
+        fx2023MarReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        03,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        03,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
+        fx2023AprReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        04,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        04,
+                        30
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
+        fx2023MayReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        05,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        05,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
+        fx2023JunReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        06,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        06,
+                        30
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
+        fx2023JulReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        07,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        07,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
+        fx2023AugReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        08,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        08,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
+        fx2023SepReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        09,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        09,
+                        30
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
+        fx2023OctReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        10,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        10,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
+        fx2023NovReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        11,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        11,
+                        30
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
+        fx2023DecReturnsA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 'Project Category'.Value = "Air Safety" Or 'Project Category'.Value = "Digital Manipulation" Or 'Project Category'.Value = "Engineering" Or 'Project Category'.Value = "ID Photo" Or 'Project Category'.Value = "Medical Dental" Or 'Project Category'.Value = "Portrait" Or 'Project Category'.Value = "Print/Reprint" Or 'Project Category'.Value = "Scanning" Or 'Project Category'.Value = "Trials" Or 'Project Category'.Value = "Other (Specify)",
+                    Created > Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        12,
+                        01
+                    ),
+                    Created < Date(
+                        Text(
+                            Today(),
+                            "yyyy",
+                            "en-GB"
+                        ),
+                        12,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            Sum(
+                wData,
+                'Total Hours' + 'Out Of Hours'
+            ) + 0
+        );
     OnError: |-
         =Notify(
             Concatenate(

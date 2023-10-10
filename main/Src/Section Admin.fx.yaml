@@ -7652,41 +7652,7 @@
             Font: =Font.'Segoe UI'
             Height: =41
             Size: =13
-            Text: |-
-                =With(
-                    {
-                        wData: Filter(
-                            'TG14 Task Information',
-                            'Project Category'.Value = "Admin" Or 
-                            'Project Category'.Value = "Air Safety" Or 
-                            'Project Category'.Value = "Digital Manipulation" Or 
-                            'Project Category'.Value = "Engineering" Or 
-                            'Project Category'.Value = "ID Photo" Or 
-                            'Project Category'.Value = "Medical Dental" Or
-                            'Project Category'.Value = "Portrait" Or 
-                            'Project Category'.Value = "Print/Reprint" Or 
-                            'Project Category'.Value = "Scanning" Or 
-                            'Project Category'.Value = "Trials" Or 
-                            'Project Category'.Value = "Other (Specify)",
-                
-                            Created > Date(
-                                2023,
-                                01,
-                                01
-                            ),
-                            Created < Date(
-                                2023,
-                                01,
-                                31
-                            ),
-                            Unit.Value = gblUserLocPerm
-                        )
-                    },
-                    Sum(
-                        wData,
-                        'Total Hours' + 'Out Of Hours'
-                    ) + 0
-                )
+            Text: =fx2023JanReturnsA
             Visible: =var2023MonthlyReturnHours
             Width: =52
             X: =663

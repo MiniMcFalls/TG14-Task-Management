@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 4,
+    "BindingErrorCount": 11,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -117,7 +117,7 @@
     "ManualOfflineProfileId": "",
     "Name": "RAF Visual Communications CRM",
     "OriginatingVersion": "1.321",
-    "ParserErrorCount": 0,
+    "ParserErrorCount": 7,
     "ShowStatusBar": false
   },
   "PublishInfo": {
