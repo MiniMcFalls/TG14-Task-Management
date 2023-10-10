@@ -10629,12 +10629,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 01,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 01,
                                 31
                             ),
@@ -10678,12 +10678,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 02,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 02,
                                 28
                             ),
@@ -10727,12 +10727,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 04,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 04,
                                 30
                             ),
@@ -10776,12 +10776,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 03,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 03,
                                 31
                             ),
@@ -10825,12 +10825,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 05,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 05,
                                 31
                             ),
@@ -10874,12 +10874,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 06,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 06,
                                 30
                             ),
@@ -10923,12 +10923,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 07,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 07,
                                 31
                             ),
@@ -10972,12 +10972,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 08,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 08,
                                 31
                             ),
@@ -11021,12 +11021,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 09,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 09,
                                 30
                             ),
@@ -11070,12 +11070,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 10,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 10,
                                 31
                             ),
@@ -11119,12 +11119,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 11,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 11,
                                 30
                             ),
@@ -11168,12 +11168,12 @@
                             'Project Category'.Value = "Other (Specify)",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 12,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 12,
                                 31
                             ),
@@ -11231,12 +11231,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 01,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 01,
                                 31
                             ),
@@ -11275,12 +11275,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 02,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 02,
                                 28
                             ),
@@ -11319,12 +11319,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 03,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 03,
                                 31
                             ),
@@ -11363,12 +11363,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 04,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 04,
                                 30
                             ),
@@ -11407,12 +11407,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 05,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 05,
                                 31
                             ),
@@ -11451,12 +11451,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 06,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 06,
                                 30
                             ),
@@ -11495,12 +11495,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 07,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 07,
                                 31
                             ),
@@ -11539,12 +11539,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 08,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 08,
                                 31
                             ),
@@ -11583,12 +11583,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 09,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 09,
                                 30
                             ),
@@ -11627,12 +11627,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 10,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 10,
                                 31
                             ),
@@ -11671,12 +11671,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 11,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 11,
                                 30
                             ),
@@ -11715,12 +11715,12 @@
                             'Project Category'.Value = "Visit",
                 
                             Created > Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 12,
                                 01
                             ),
                             Created < Date(
-                                2023,
+                                Text(Now(), "yyyy", "en-GB"),
                                 12,
                                 31
                             ),

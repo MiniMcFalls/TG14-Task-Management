@@ -525,8 +525,8 @@
                         Model: TextInputCanvas3_1.Value,
                         'Asset type': DropdownCanvas1_2.Selected,
                         Color: DropdownCanvas1_3.Selected,
-                        'PAT Date': DatePickerCanvas2.Value,
-                        'Due date': DatePickerCanvas2_1.Value
+                        'PAT Date': DatePickerCanvas2.SelectedDate,
+                        'Due date': DatePickerCanvas2_1.SelectedDate
                     }
                 );
                 Reset('Asset_R&D_Gallery');
@@ -1732,7 +1732,7 @@
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =If(Or(IsBlank(TextInputCanvas4_2.Value),IsBlank(TextInputCanvas4_10.Value),IsEmpty('Customer Select_1'.SelectedItems),IsBlank(TextInputCanvas4_11.Value),IsBlank(DatePickerCanvas3_1.Value)), DisplayMode.Disabled, DisplayMode.Edit)
+                DisplayMode: =If(Or(IsBlank(TextInputCanvas4_2.Value),IsBlank(TextInputCanvas4_10.Value),IsEmpty('Customer Select_1'.SelectedItems),IsBlank(TextInputCanvas4_11.Value),IsBlank(DatePickerCanvas3_1.SelectedDate)), DisplayMode.Disabled, DisplayMode.Edit)
                 Fill: =RGBA(54, 176, 75, 1)
                 FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                 Font: =Font.'Segoe UI'
@@ -1775,7 +1775,7 @@
                                 "|||"
                             ),
                             'Alternate Contact': TextInputCanvas4_12.Value,
-                            'Proposed Return Date': DatePickerCanvas3_1.Value,
+                            'Proposed Return Date': DatePickerCanvas3_1.SelectedDate,
                             Returned: false
                         }
                     ).ID);
@@ -1794,7 +1794,7 @@
                                     )
                                 ).'Current owner',
                                 'Current owner': 'Customer Select_1'.Selected,
-                                'Due date': DatePickerCanvas3_1.Value,
+                                'Due date': DatePickerCanvas3_1.SelectedDate,
                                 'Loan ID':  varLoanID
                             }
                         )
@@ -2644,7 +2644,7 @@
                             "<br>"
                         ) & """</h2>
                 <p>The equipment that has been loaned to you remains the property of the MoD and Trade Group 14 RAF Visual Communicators and as such is to be available for re-call upon request without prior notice or warning.</p>
-                <p>As agreed you are to return the items listed by the proposed return date of : <b>""" & DatePickerCanvas3_1.Value & """</b></p>
+                <p>As agreed you are to return the items listed by the proposed return date of : <b>""" & DatePickerCanvas3_1.SelectedDate & """</b></p>
                 <p>Should you be unable to return the items by the proposed date then you are to contact the issuing section to arrange a suitable date and time in the immediate future as to when the items can be returned. In addition, if any items are damaged or lost outside of the proposed use case then the cost for repair and/or replacement will be charged against yourself or to your Unit/Squadron's UIN.</p>
                 </td>
                 </tr>
