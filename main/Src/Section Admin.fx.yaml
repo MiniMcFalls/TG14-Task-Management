@@ -7652,7 +7652,7 @@
             Font: =Font.'Segoe UI'
             Height: =41
             Size: =13
-            Text: =fx2023JanReturnsA
+            Text: =fx2023JanReturnsHrsA
             Visible: =var2023MonthlyReturnHours
             Width: =52
             X: =663

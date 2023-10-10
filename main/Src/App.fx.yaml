@@ -4,7 +4,7 @@ App As appinfo:
     ConfirmExitMessage: ="You have unsaved data, are you sure you want to exit?"
     Formulas: |
         =//Jan Assurances
-        fx2023JanReturnsA = With(
+        fx2023JanReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -35,7 +35,39 @@ App As appinfo:
                 'Total Hours' + 'Out Of Hours'
             ) + 0
         );
-        fx2023FebReturnsA = With(
+        fx2023JanReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
+        );
+        //Feb Assurances
+        fx2023FebReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -66,7 +98,39 @@ App As appinfo:
                 'Total Hours' + 'Out Of Hours'
             ) + 0
         );
-        fx2023MarReturnsA = With(
+        fx2023FebReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
+        );
+        //Mar Assurances
+        fx2023MarReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -97,7 +161,39 @@ App As appinfo:
                 'Total Hours' + 'Out Of Hours'
             ) + 0
         );
-        fx2023AprReturnsA = With(
+        fx2023MarReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
+        );
+        //Apr Assurances
+        fx2023AprReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -128,7 +224,39 @@ App As appinfo:
                 'Total Hours' + 'Out Of Hours'
             ) + 0
         );
-        fx2023MayReturnsA = With(
+        fx2023AprReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
+        );
+        //May Assurances
+        fx2023MayReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -159,7 +287,39 @@ App As appinfo:
                 'Total Hours' + 'Out Of Hours'
             ) + 0
         );
-        fx2023JunReturnsA = With(
+        fx2023MayReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
+        );
+        //June Assurances
+        fx2023JunReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -190,7 +350,39 @@ App As appinfo:
                 'Total Hours' + 'Out Of Hours'
             ) + 0
         );
-        fx2023JulReturnsA = With(
+        fx2023JunReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
+        );
+        //July Assurances
+        fx2023JulReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -221,7 +413,39 @@ App As appinfo:
                 'Total Hours' + 'Out Of Hours'
             ) + 0
         );
-        fx2023AugReturnsA = With(
+        fx2023JulReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
+        );
+        //Aug Assurances
+        fx2023AugReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -252,7 +476,39 @@ App As appinfo:
                 'Total Hours' + 'Out Of Hours'
             ) + 0
         );
-        fx2023SepReturnsA = With(
+        fx2023AugReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
+        );
+        //Sep Assurances
+        fx2023SepReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -283,7 +539,39 @@ App As appinfo:
                 'Total Hours' + 'Out Of Hours'
             ) + 0
         );
-        fx2023OctReturnsA = With(
+        fx2023SepReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
+        );
+        //Oct Assurances
+        fx2023OctReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -314,7 +602,39 @@ App As appinfo:
                 'Total Hours' + 'Out Of Hours'
             ) + 0
         );
-        fx2023NovReturnsA = With(
+        fx2023OctReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
+        );
+        //Nov Assurances
+        fx2023NovReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -345,7 +665,39 @@ App As appinfo:
                 'Total Hours' + 'Out Of Hours'
             ) + 0
         );
-        fx2023DecReturnsA = With(
+        fx2023NovReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
+        );
+        //Dec Assurances
+        fx2023DecReturnsHrsA = With(
             {
                 wData: Filter(
                     'TG14 Task Information',
@@ -375,6 +727,37 @@ App As appinfo:
                 wData,
                 'Total Hours' + 'Out Of Hours'
             ) + 0
+        );
+        fx2023DecReturnsTypA = With(
+            {
+                wData: Filter(
+                    'TG14 Task Information',
+                    'Project Category'.Value = "Admin" Or 
+                    'Project Category'.Value = "Air Safety" Or 
+                    'Project Category'.Value = "Digital Manipulation" Or 
+                    'Project Category'.Value = "Engineering" Or 
+                    'Project Category'.Value = "ID Photo" Or 
+                    'Project Category'.Value = "Medical Dental" Or
+                    'Project Category'.Value = "Portrait" Or 
+                    'Project Category'.Value = "Print/Reprint" Or 
+                    'Project Category'.Value = "Scanning" Or 
+                    'Project Category'.Value = "Trials" Or 
+                    'Project Category'.Value = "Other (Specify)",
+        
+                    Created > Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        01
+                    ),
+                    Created < Date(
+                        Text(Now(), "yyyy", "en-GB"),
+                        01,
+                        31
+                    ),
+                    Unit.Value = gblUserLocPerm
+                )
+            },
+            CountRows(wData)
         );
     OnError: |-
         =Notify(
