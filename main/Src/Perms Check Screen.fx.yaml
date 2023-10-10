@@ -89,6 +89,11 @@
                     gblUserLocPerm,
                     "Benson"
                 ),
+                "BEN-ELW-ESSC4I PHOTO" in gblCurrentUser.officeLocation,
+                Set(
+                    gblUserLocPerm,
+                    "Benson"
+                ),
                 "ASWC-JADTEU Photo" in gblCurrentUser.officeLocation,
                 Set(
                     gblUserLocPerm,
@@ -205,6 +210,11 @@
                 Set(
                     gblUserLocPerm,
                     "Leeming"
+                ),
+                gblCurrentUser.mail = "Emma-Louise.Wade101@mod.gov.uk",
+                Set(
+                    gblUserLocPerm,
+                    "Benson"
                 )
             );
             If(
