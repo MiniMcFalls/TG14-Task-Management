@@ -2619,9 +2619,9 @@
         BorderColor: =RGBA(105, 121, 126, 1)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =DisplayMode.View
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =varHeaderFill
+        DisplayMode: =DisplayMode.Disabled
         Duration: =1000
         Fill: =varHeaderFill
         Font: =Font.'Segoe UI'
