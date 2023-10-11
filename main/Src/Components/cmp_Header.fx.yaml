@@ -10,6 +10,7 @@ cmp_Header As CanvasComponent:
     ZIndex: =1
 
     Timer8 As timer:
+        AutoPause: =false
         AutoStart: =true
         BorderColor: =RGBA(105, 121, 126, 1)
         BorderStyle: =BorderStyle.None
@@ -17,7 +18,7 @@ cmp_Header As CanvasComponent:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.View
-        Duration: =10000
+        Duration: =1000
         Fill: =RGBA(105, 121, 126, 1)
         Font: =Font.'Segoe UI'
         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -155,7 +156,7 @@ cmp_Header As CanvasComponent:
 
     Icon16 As icon.GlobeNotConnected:
         BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =If(Connection.Connected = true, RGBA(0,150,0,1), RGBA(255,0,0,1))
+        Color: =If(GblConnectionTest = true, RGBA(0,150,0,1), RGBA(255,0,0,1))
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(220, 220, 220, 1)
         DisabledFill: =RGBA(0, 0, 0, 0)
@@ -171,7 +172,7 @@ cmp_Header As CanvasComponent:
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =45
         X: =1611
-        Y: =4
+        Y: =2
         ZIndex: =10
 
     Label9 As label:
@@ -179,7 +180,7 @@ cmp_Header As CanvasComponent:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
-        Color: =If(Connection.Connected = true, RGBA(0,150,0,1), RGBA(255,0,0,1))
+        Color: =If(GblConnectionTest = true, RGBA(0,150,0,1), RGBA(255,0,0,1))
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisplayMode: =DisplayMode.View
@@ -188,7 +189,7 @@ cmp_Header As CanvasComponent:
         FontWeight: =FontWeight.Bold
         Height: =19
         Size: =13
-        Text: =If(Connection.Connected, "Live", "OFFLINE")
+        Text: =If(GblConnectionTest = true, "Live", "OFFLINE")
         Width: =81
         X: =1593
         Y: =25

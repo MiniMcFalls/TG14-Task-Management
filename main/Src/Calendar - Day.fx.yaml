@@ -528,6 +528,36 @@
             Y: =555
             ZIndex: =41
 
+    Timer9 As timer:
+        AutoPause: =false
+        AutoStart: =true
+        BorderColor: =RGBA(105, 121, 126, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        Duration: =1000
+        Fill: =varHeaderFill
+        Font: =Font.'Segoe UI'
+        Height: =29
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        OnTimerEnd: =Set(CurrentTime, Now())
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Repeat: =true
+        Text: =Text(CurrentTime, DateTimeFormat.LongTime24)
+        X: =103
+        Y: =302
+        ZIndex: =44
+
     CompositePieChart1_1 As group:
         Height: =5
         Width: =5
@@ -1402,7 +1432,7 @@
             Text: ="Add Diversion"
             Width: =315
             X: =26
-            Y: =366
+            Y: =390
             ZIndex: =28
 
         Button5_1 As button:
@@ -1429,7 +1459,7 @@
             Text: ="Add Task"
             Width: =315
             X: =26
-            Y: =323
+            Y: =347
             ZIndex: =29
 
         Button5_6 As button:
@@ -1457,7 +1487,7 @@
             Text: ="View Outstanding Tasks"
             Width: =315
             X: =26
-            Y: =409
+            Y: =433
             ZIndex: =30
 
         Button5_13 As button:
@@ -1483,7 +1513,7 @@
             Text: ="Approvals"
             Width: =315
             X: =26
-            Y: =452
+            Y: =476
             ZIndex: =31
 
         Button10_4 As button:
@@ -1515,7 +1545,7 @@
             Text: =varApprovalNumber
             Width: =45
             X: =296
-            Y: =452
+            Y: =476
             ZIndex: =32
 
     "'Day - Date Picker' As group":
@@ -1972,7 +2002,7 @@
                 BorderColor: =Self.Color
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
-                Color: =If(ThisItem.'Project Category'.Value = "Diversion", Color.DarkOrange,RGBA(0, 0, 0, 1))
+                Color: =If(ThisItem.'Project Category'.Value = "Diversion", Color.Purple,RGBA(0, 0, 0, 1))
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
@@ -2032,7 +2062,7 @@
                 ZIndex: =8
 
             Body1 As label:
-                Color: =RGBA(221, 110, 66, 1)
+                Color: =RGBA(74, 85, 88, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =2
                 Font: =Font.'Segoe UI'
@@ -2150,7 +2180,7 @@
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                Icon: =Icon.NextArrow
+                Icon: =Icon.View
                 OnSelect: |-
                     =Switch(
                         ThisItem.'Project Category'.Value,
@@ -2273,24 +2303,28 @@
                 DisplayMode: =DisplayMode.View
                 Fill: |-
                     =If(
-                        ThisItem.'Status Value' = "PLANNED",
-                        Color.White,
+                        ThisItem.'Project Category'.Value = "Diversion",
+                        Color.Purple,
                         If(
-                            ThisItem.'Status Value' = "PROCESSING",
-                            Color.Orange,
+                            ThisItem.'Status Value' = "PLANNED",
+                            Color.White,
                             If(
-                                ThisItem.'Status Value' = "COMPLETED",
-                                Color.Green,
+                                ThisItem.'Status Value' = "PROCESSING",
+                                Color.Orange,
                                 If(
-                                    ThisItem.'Status Value' = "ON HOLD",
-                                    Color.Yellow,
+                                    ThisItem.'Status Value' = "COMPLETED",
+                                    Color.Green,
                                     If(
-                                        ThisItem.'Status Value' = "CANCELLED",
-                                        Color.Red,
+                                        ThisItem.'Status Value' = "ON HOLD",
+                                        Color.Yellow,
                                         If(
-                                            ThisItem.'Status Value' = "PPC",
-                                            Color.LightBlue,
-                                            Color.Gray
+                                            ThisItem.'Status Value' = "CANCELLED",
+                                            Color.Red,
+                                            If(
+                                                ThisItem.'Status Value' = "PPC",
+                                                Color.LightBlue,
+                                                Color.Gray
+                                            )
                                         )
                                     )
                                 )
@@ -2330,24 +2364,28 @@
                 DisplayMode: =DisplayMode.View
                 Fill: |-
                     =If(
-                        ThisItem.'Status Value' = "PLANNED",
-                        Color.White,
+                        ThisItem.'Project Category'.Value = "Diversion",
+                        Color.Purple,
                         If(
-                            ThisItem.'Status Value' = "PROCESSING",
-                            Color.Orange,
+                            ThisItem.'Status Value' = "PLANNED",
+                            Color.White,
                             If(
-                                ThisItem.'Status Value' = "COMPLETED",
-                                Color.Green,
+                                ThisItem.'Status Value' = "PROCESSING",
+                                Color.Orange,
                                 If(
-                                    ThisItem.'Status Value' = "ON HOLD",
-                                    Color.Yellow,
+                                    ThisItem.'Status Value' = "COMPLETED",
+                                    Color.Green,
                                     If(
-                                        ThisItem.'Status Value' = "CANCELLED",
-                                        Color.Red,
+                                        ThisItem.'Status Value' = "ON HOLD",
+                                        Color.Yellow,
                                         If(
-                                            ThisItem.'Status Value' = "PPC",
-                                            Color.LightBlue,
-                                            Color.Gray
+                                            ThisItem.'Status Value' = "CANCELLED",
+                                            Color.Red,
+                                            If(
+                                                ThisItem.'Status Value' = "PPC",
+                                                Color.LightBlue,
+                                                Color.Gray
+                                            )
                                         )
                                     )
                                 )
@@ -2564,7 +2602,7 @@
             Height: =iconCalendar1.Height
             PaddingLeft: =4
             Size: =11
-            Text: =DateDiff(Date(Year(Today()), Month(Today()), 1), Today(), TimeUnit.Days) + 1
+            Text: =Day(Today())
             Width: =39
             X: =1516
             Y: =86
