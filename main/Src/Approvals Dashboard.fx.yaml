@@ -90,7 +90,127 @@
         Set(varCurrentTasksCheck, false);
         Set(varNotifyWindow, false);
 
+    "'Further HTML Text' As htmlViewer":
+        DisplayMode: =DisplayMode.Disabled
+        Height: =53
+        HtmlText: |-
+            ="<table border=""0"" cellspacing="""" cellpadding=""0"" align=""center"">
+            <tbody>
+            <tr>
+            <td style=""width: 700px; max-width: 700px; font-family: Segoe UI,-apple-system,BlinkMacSystemFont,San Francisco,Roboto,Helvetica Neue,Arial; border: solid; border-width: 1px; border-color: #421631; border-radius: 1px; box-shadow: 0 0 50px rgba(0, 0 ,0 ,0.08);"">
+            <table style=""background-color: #ECECEC; width: 700px; max-width: 700px;"" border=""0"" width=""700"" cellspacing=""0"" cellpadding=""0"" align=""center"">
+            <tbody>
+            <tr>
+            <td style=""padding-left: 0px; padding-top: 0px; width: 516px;"">
+            <table style=""height: 11px; width: 100%; color: #000000; background-color: #4f6d7a; padding: 0px;"" border=""0"" cellpadding=""5"">
+            <tbody>
+            <tr style=""height: 11px;"">
+            <td style=""font-size: 8px; color: #f2f2f2; width: 100%; text-align: center; height: 11px;"">AUTOMATED EMAIL - PLEASE DO NOT REPLY</td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            <tr>
+            <td style=""padding-left: 130px; padding-top: 10px; padding-bottom: 10px; width: 516px; height: 160px;"">&nbsp; &nbsp; <img id=""logo"" style=""float: right;"" src= " & Switch(
+                    gblUserLocPerm,
+                    "77X Brigade",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/ff5b4600-f087-c5dd-403f-6cde1163516a.png",
+                    "83EAG Det",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/558d4ef0-c3e4-ffbe-1c10-4606980978d8.png",
+                    "ACSSU",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b4e2dfc5-28d1-544f-3726-8ba80c44630e.png",
+                    "ADW",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/1ca9447c-71ac-08b6-61db-29a09d067a87.png",
+                    "Akrotiri",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/78a985e5-fbab-c809-ff8d-cfb8df05ff55.png",
+                    "Aldergrove",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/cb34f7f8-f83e-b3db-5b65-353fbb649872.png",
+                    "Benson",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/28fb4575-61ed-0c54-5b59-3127eddeed3e.png",
+                    "Brize Photo",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/1ca9447c-71ac-08b6-61db-29a09d067a87.png",
+                    "Chicksands",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/07f0f7f1-8a69-8843-9e2e-fed810a9da10.png",
+                    "Coningsby",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/78a75c1f-13a4-0ebb-4f2e-b9976c1dce56.png",
+                    "Cosford",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/c0f9698f-5543-cbc1-9817-de2f7176974b.png",
+                    "Cranwell",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/75e3b5ab-ba64-125a-2b2d-7a501332b15a.png",
+                    "MOD Main Building",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/da61be41-40d6-38e9-ffe4-3a280733dbcc.png",
+                    "Halton",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b4e2dfc5-28d1-544f-3726-8ba80c44630e.png",
+                    "Honington",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/64c42426-d14b-195f-727c-ef70bebf5097.png",
+                    "JADTEU",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/c8765bc7-2b29-59b2-5204-d12d686bf501.png",
+                    "Leeming",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/57c5598b-4bbf-f0ab-8bc8-84bbc67e04d4.png",
+                    "Lossiemouth",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/c699d70a-44ef-7365-9e5b-021526566d83.png",
+                    "Marham",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e4c7e10d-e646-eedc-1576-48797e06ed3f.png",
+                    "Northolt",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/4d88f27b-67a3-0bcb-cdb5-5a89ddf22a59.png",
+                    "Odiham",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/bc1e9faa-ce37-1ce4-fea2-0298d36ef2cc.png",
+                    "RAFAT",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/988b837b-13ae-4f26-de12-3ad70e17e30d.png",
+                    "Shawbury",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/823d78b0-5fcd-bf09-904d-af9b6a15d58c.png",
+                    "St Athan",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/b6cc13e6-5385-8ad8-74f0-b362015922ef.png",
+                    "St Mawgan",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/6b421dcb-dac2-dace-3d32-ec700843ab32.png",
+                    "Valley",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/753f7339-032c-bea4-ef1b-be55a6f3b1bd.png",
+                    "Waddington",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/04e3ff56-0c58-2391-bb09-3a6bd3e78937.png",
+                    "Wittering",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/04bd972c-f29d-1d43-3e94-ad34232ee11d.png",
+                    "Wyton",
+                    "https://mcusercontent.com/3bcab3ef7ea1565b1eb034d66/images/e05e0853-96d1-319f-adab-ca0f3b06b2ee.png"
+                ) & " alt=""RAF Photographers at RAF Lossiemouth"" width=""391"" height=""125"" /></td>
+            </tr>
+            <tr id=""ribbon"" style=""background-color: #c0d6df;"">
+            <td style=""width: 100%;"">
+            <table id=""ribbonContent"" style=""height: 85px; width: 100%; color: #000000; background-color: #4f6d7a; padding: 0px 20px 0px 20px;"">
+            <tbody>
+            <tr style=""height: 85px;"">
+            <td id=""ribbonHeader"" style=""background-color: #4f6d7a; height: 85px;"">
+            <h2 style=""font-size: 20px; font-weight: normal; color: #f2f2f2; padding-left: 0px; padding-right: 0px; text-align: justify;""><strong>Your request for RAF VisCom Support Requires Further Information.</strong></h2>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            <tr>
+            <td style=""font-size: 12px; background-color: ##c0d6df; height: 40px; width: 100%; color: #60401f; padding: 30px 75px 30px 75px;"">
+            <p><strong>Your request for RAF VisCom support has been placed on hold pending the addition of further information as detaild below. Please follow the comments presented and ammend your request through the booking application.</strong></p>
+            <p align=""center""><i>
+            " & "'" & cmp_ApprovalsPopup_1.FurtherTextOut & "'" & "
+            </i></p>
+            <p>Should you have any follow up questions then please make contact with the relevant VisCom section as soon as possible</p>
+            </td>
+            </tr>
+            <tr id=""footer"">
+            <td style=""font-size: 8px; background-color: #4f6d7a; height: 11px; padding-top: 10px; padding-left: 0 px; padding-bottom: 10px; width: 100%; color: #f2f2f2; text-align: center;"">AUTOMATED EMAIL - PLEASE DO NOT REPLY</td>
+            </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+            </tbody>
+            </table>"
+        Visible: =false
+        Width: =82
+        ZIndex: =1
+
     cmp_Header_3 As cmp_Header:
+        ZIndex: =2
 
     Button20_3 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -119,7 +239,7 @@
         Width: =1478
         X: =363
         Y: =64
-        ZIndex: =2
+        ZIndex: =3
 
     Button22_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -146,7 +266,7 @@
         Width: =1428
         X: =388
         Y: =141
-        ZIndex: =5
+        ZIndex: =6
 
     Button22 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -173,7 +293,7 @@
         Width: =1429
         X: =388
         Y: =84
-        ZIndex: =6
+        ZIndex: =7
 
     "'Approvals Gallery' As gallery.'BrowseLayout_Flexible_NewsFeed_ver4.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -190,7 +310,7 @@
         Width: =1428
         X: =388
         Y: =141
-        ZIndex: =8
+        ZIndex: =9
 
         Separator2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -761,7 +881,7 @@
         Visible: =false
         X: =846
         Y: =6
-        ZIndex: =10
+        ZIndex: =11
 
     Button3_6 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -783,7 +903,7 @@
         Text: ="Refresh"
         X: =1641
         Y: =92
-        ZIndex: =11
+        ZIndex: =12
 
     "'Approvals Dashboard - Refresh Timer' As timer":
         AutoStart: =true
@@ -805,7 +925,7 @@
         Visible: =false
         X: =1273
         Y: =96
-        ZIndex: =12
+        ZIndex: =13
 
     "'Reject HTML Text' As htmlViewer":
         DisplayMode: =DisplayMode.Disabled
@@ -908,7 +1028,7 @@
             <td style=""font-size: 12px; background-color: ##c0d6df; height: 40px; width: 100%; color: #60401f; padding: 30px 75px 30px 75px;"">
             <p><strong>Your request for photographic services has been rejected at this time. This may by due to several limiting factors such as workforce strength or conflicting events. Please see below for comments, If available, from the section.</strong></p>
             <p align=""center""><i>
-            " & "'" & 'Reject Comments'.Text & "'" & "
+            " & "'" & cmp_ApprovalsPopup_1.RejectTextOut & "'" & "
             </i></p>
             <p>Should you have any questions in relation to your task then please contact the Photographic Section as soon as possible. We apologise for this inconvenience.</p>
             </td>
@@ -924,7 +1044,7 @@
             </table>"
         Visible: =false
         Width: =36
-        ZIndex: =13
+        ZIndex: =14
 
     "'Approve HTML Text' As htmlViewer":
         DisplayMode: =DisplayMode.Disabled
@@ -1016,7 +1136,7 @@
             <tbody>
             <tr style=""height: 85px;"">
             <td id=""ribbonHeader"" style=""background-color: #4f6d7a; height: 85px;"">
-            <h2 style=""font-size: 20px; font-weight: normal; color: #f2f2f2; padding-left: 0px; padding-right: 0px; text-align: justify;""><strong>Your request for TG14 Photographic Support has been Approved.</strong></h2>
+            <h2 style=""font-size: 20px; font-weight: normal; color: #f2f2f2; padding-left: 0px; padding-right: 0px; text-align: justify;""><strong>Your request for RAF VisCom Support has been Approved.</strong></h2>
             </td>
             </tr>
             </tbody>
@@ -1025,8 +1145,8 @@
             </tr>
             <tr>
             <td style=""font-size: 12px; background-color: ##c0d6df; height: 40px; width: 100%; color: #60401f; padding: 30px 75px 30px 75px;"">
-            <p><strong>Your request for photographic services has been approved and a photographer will be available at the requested time and date of " & 'Approvals Gallery'.Selected.'Task Date' & " @ " & 'Approvals Gallery'.Selected.'Start Time' & "</strong></p>
-            <p>Should changes need to be made to this booking, please contact the photographic section quoting your task number: <strong>" & 'Approvals Gallery'.Selected.Title & "</strong></p>
+            <p><strong>Your request for RAF VisCom services has been approved and a photographer will be available at the requested time and date of " & 'Approvals Gallery'.Selected.'Task Date' & " @ " & 'Approvals Gallery'.Selected.'Start Time' & "</strong></p>
+            <p>Should changes need to be made to this booking, please contact the RAF Visual Communications section quoting your task number: <strong>" & 'Approvals Gallery'.Selected.Title & "</strong></p>
             <p>If you have any questions in relation to your task then please get in contact with your requested stations photographic section as soon as possible.</p>
             </td>
             </tr>
@@ -1042,7 +1162,7 @@
         Visible: =false
         Width: =21
         X: =36
-        ZIndex: =14
+        ZIndex: =15
 
     Button18_12 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1067,7 +1187,7 @@
         Width: =338
         X: =14
         Y: =64
-        ZIndex: =15
+        ZIndex: =16
 
     Image8_3 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1086,7 +1206,7 @@
         Width: =338
         X: =14
         Y: =64
-        ZIndex: =16
+        ZIndex: =17
 
     Rectangle2_15 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1100,7 +1220,7 @@
         PressedFill: =varBackgroundFill
         Width: =5
         X: =73
-        ZIndex: =17
+        ZIndex: =18
 
     Rectangle2_16 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1114,7 +1234,7 @@
         PressedFill: =varBackgroundFill
         Width: =5
         X: =82
-        ZIndex: =18
+        ZIndex: =19
 
     Rectangle2_17 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1128,7 +1248,7 @@
         PressedFill: =varBackgroundFill
         Width: =5
         X: =91
-        ZIndex: =19
+        ZIndex: =20
 
     Button18_13 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1153,7 +1273,7 @@
         Width: =338
         X: =14
         Y: =286
-        ZIndex: =20
+        ZIndex: =21
 
     Button5_11 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1181,7 +1301,7 @@
         Width: =315
         X: =26
         Y: =Button5_12.Y + Self.Height + 3
-        ZIndex: =21
+        ZIndex: =22
 
     Button5_12 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1208,7 +1328,7 @@
         Width: =315
         X: =26
         Y: =300
-        ZIndex: =22
+        ZIndex: =23
 
     Button5_16 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1234,7 +1354,7 @@
         Width: =315
         X: =26
         Y: =Button5_11.Y + Self.Height + 3
-        ZIndex: =23
+        ZIndex: =24
 
     Button18_14 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1259,7 +1379,7 @@
         Width: =338
         X: =14
         Y: =454
-        ZIndex: =24
+        ZIndex: =25
 
     Button18_15 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1284,7 +1404,7 @@
         Width: =338
         X: =14
         Y: =529
-        ZIndex: =30
+        ZIndex: =31
 
     HtmlText3 As htmlViewer:
         Height: =6
@@ -1361,7 +1481,7 @@
             <b>Task Requirements: </b>" & 'Approvals Gallery'.Selected.'Task Requirements'
         Visible: =false
         Width: =590
-        ZIndex: =43
+        ZIndex: =44
 
     Button18 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1438,7 +1558,7 @@
         Text: ="Button"
         Visible: =false
         Y: =890
-        ZIndex: =44
+        ZIndex: =45
 
     Image9 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1455,283 +1575,11 @@
         PressedFill: =RGBA(0, 0, 0, 0)
         X: =142
         Y: =129
-        ZIndex: =50
+        ZIndex: =46
 
     cmp_ApprovalsPopup_1 As cmp_ApprovalsPopup:
         Visible: =PopupVis
-        ZIndex: =51
-
-    "'Reject Popup' As group":
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =58
-
-        Rectangle19 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(179, 179, 179, 0.8)
-            FocusedBorderThickness: =4
-            Height: =930
-            Visible: =If(RejectPopupVis, true,false)
-            Width: =1850
-            ZIndex: =45
-
-        Rectangle21 As rectangle:
-            BorderColor: =RGBA(255, 0, 0, 1)
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =459
-            Visible: =If(RejectPopupVis, true,false)
-            Width: =957
-            X: =438
-            Y: =214
-            ZIndex: =46
-
-        Label16 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Size: =20
-            Text: ="CONFIRMATION"
-            Underline: =true
-            Visible: =If(RejectPopupVis, true,false)
-            Width: =450
-            X: =692
-            Y: =229
-            ZIndex: =47
-
-        Label18 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Size: =13
-            Text: |-
-                ="You are about to reject the selected tasking: " 
-            Visible: =If(RejectPopupVis, true,false)
-            Width: =349
-            X: =717
-            Y: =280
-            ZIndex: =48
-
-        Label20 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(184, 0, 0, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Size: =13
-            Text: =Text(Value('Approvals Gallery'.Selected.Title), "0000")
-            Visible: =If(RejectPopupVis, true,false)
-            Width: =49
-            X: =1068
-            Y: =280
-            ZIndex: =49
-
-        Label21 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =55
-            Size: =13
-            Text: ="You now have the ability to add any comments below which will be forwarded onto the original requester."
-            Visible: =If(RejectPopupVis, true,false)
-            Width: =690
-            X: =572
-            Y: =316
-            ZIndex: =52
-
-        "'Reject Comments' As text":
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderThickness: =2
-            Clear: =true
-            Color: =RGBA(51, 51, 51, 1)
-            Default: =""
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            EnableSpellCheck: =true
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =155
-            HintText: ="Comments"
-            HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            Mode: =TextMode.MultiLine
-            PressedBorderColor: =RGBA(105, 121, 126, 1)
-            PressedColor: =RGBA(51, 51, 51, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =13
-            Visible: =If(RejectPopupVis, true,false)
-            Width: =838
-            X: =498
-            Y: =379
-            ZIndex: =53
-
-        Button16 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(184, 0, 0, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(Self.Fill, -10%)
-            OnSelect: |
-                =Patch(
-                    'TG14 Task Information',
-                    'Approvals Gallery'.Selected,
-                    {
-                        'Approval Status': {Value: "Rejected"},
-                        Comments: If(
-                            IsBlank('Reject Comments'),
-                            "Nil",
-                            'Reject Comments'.Text
-                        ),
-                        Status: {Value: "CANCELLED"}
-                    }
-                );
-                Set(
-                    PopupVis,
-                    false
-                );
-                Set(
-                    RejectPopupVis,
-                    false
-                );
-                Set(
-                    varEmailContent,
-                    'Reject HTML Text'.HtmlText
-                ) && Office365Outlook.SendEmailV2(
-                    'Approvals Gallery'.Selected.'Customer Email',
-                    Concatenate(
-                        Text(
-                            Today(),
-                            "yyyymmdd",
-                            "en-GB"
-                        ),
-                        "-",
-                        "Your Photographic Tasking ",
-                        Text(
-                            Value('Approvals Gallery'.Selected.Title),
-                            "0000",
-                            "en-GB"
-                        ),
-                        "-O"
-                    ),
-                    varEmailContent
-                );
-                If(
-                    "2022" in 'Add Task Date',
-                    Patch(
-                        '1177 Task Register 2022',
-                        First(
-                            Filter(
-                                '1177 Task Register 2022',
-                                'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
-                            )
-                        ),
-                        {Status: "CANCELLED"}
-                    ),
-                    If(
-                        "2023" in 'Add Task Date',
-                        Patch(
-                            '1177 Task Register 2023',
-                            First(
-                                Filter(
-                                    '1177 Task Register 2023',
-                                    'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
-                                )
-                            ),
-                            {Status: "CANCELLED"}
-                        ),
-                        If(
-                            "2024" in 'Add Task Date',
-                            Patch(
-                                '1177 Task Register 2024',
-                                First(
-                                    Filter(
-                                        '1177 Task Register 2024',
-                                        'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
-                                    )
-                                ),
-                                {Status: "CANCELLED"}
-                            )
-                        )
-                    )
-                );
-            PressedBorderColor: =ColorFade(Self.Fill, -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(Self.Fill, -30%)
-            RadiusBottomLeft: =15
-            RadiusBottomRight: =15
-            RadiusTopLeft: =15
-            RadiusTopRight: =15
-            Size: =15
-            Text: ="CONFIRM"
-            Visible: =If(RejectPopupVis, true,false)
-            X: =836
-            Y: =585
-            ZIndex: =54
-
-        Icon8_1 As icon.Cancel:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =33
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.CancelBadge
-            OnSelect: =Set(RejectPopupVis, false)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Tooltip: ="Close"
-            Visible: =If(RejectPopupVis, true, false)
-            Width: =33
-            X: =1357
-            Y: =219
-            ZIndex: =55
+        ZIndex: =47
 
     Group2_2 As group:
         Height: =5
@@ -1764,7 +1612,7 @@
             Width: =100
             X: =241
             Y: =466
-            ZIndex: =25
+            ZIndex: =26
 
         Button12_10 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1792,7 +1640,7 @@
             Width: =111
             X: =128
             Y: =466
-            ZIndex: =26
+            ZIndex: =27
 
         Button12_11 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1818,7 +1666,7 @@
             Width: =100
             X: =26
             Y: =466
-            ZIndex: =27
+            ZIndex: =28
 
         Rectangle11_10 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1830,7 +1678,7 @@
             Width: =2
             X: =126
             Y: =466
-            ZIndex: =28
+            ZIndex: =29
 
         Rectangle11_9 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1842,7 +1690,7 @@
             Width: =2
             X: =239
             Y: =466
-            ZIndex: =29
+            ZIndex: =30
 
     Placeholder_4 As group:
         Height: =5
@@ -1870,7 +1718,7 @@
             Width: =1025
             X: =590
             Y: =459
-            ZIndex: =3
+            ZIndex: =4
 
         Icon1_10 As icon.CameraApertureFocus:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -1892,7 +1740,7 @@
             Width: =104
             X: =1050
             Y: =380
-            ZIndex: =4
+            ZIndex: =5
 
         Rectangle2_22 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1905,7 +1753,7 @@
             Width: =768
             X: =721
             Y: =488
-            ZIndex: =7
+            ZIndex: =8
 
         Rectangle2_21 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1918,7 +1766,7 @@
             Width: =768
             X: =721
             Y: =590
-            ZIndex: =9
+            ZIndex: =10
 
     "'Edit Screen - Notify Window_1' As group":
         Height: =5
@@ -1939,7 +1787,7 @@
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =varNotifyWindow
             Width: =1850
-            ZIndex: =31
+            ZIndex: =32
 
         "'Cust Det - Background Pill_3' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1969,7 +1817,7 @@
             Width: =1301
             X: =275
             Y: =215
-            ZIndex: =32
+            ZIndex: =33
 
         "'Cust Det - Pill 3_3' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1998,7 +1846,7 @@
             Width: =1274
             X: =288
             Y: =227
-            ZIndex: =33
+            ZIndex: =34
 
         Image1_1 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2015,7 +1863,7 @@
             Visible: =varNotifyWindow
             X: =875
             Y: =350
-            ZIndex: =34
+            ZIndex: =35
 
         Label6_2 As label:
             Align: =Align.Center
@@ -2035,7 +1883,7 @@
             Width: =479
             X: =686
             Y: =278
-            ZIndex: =35
+            ZIndex: =36
 
         Checkbox1_3 As checkbox:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2062,7 +1910,7 @@
             Width: =224
             X: =655
             Y: =501
-            ZIndex: =36
+            ZIndex: =37
 
         Checkbox1_5 As checkbox:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2089,7 +1937,7 @@
             Width: =224
             X: =655
             Y: =551
-            ZIndex: =37
+            ZIndex: =38
 
         Label7_3 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2107,7 +1955,7 @@
             Width: =241
             X: =651
             Y: =461
-            ZIndex: =38
+            ZIndex: =39
 
         Icon12_3 As icon.CheckBadge:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2128,7 +1976,7 @@
             Width: =33
             X: =614
             Y: =461
-            ZIndex: =39
+            ZIndex: =40
 
         Checkbox1_6 As checkbox:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2155,7 +2003,7 @@
             Width: =224
             X: =990
             Y: =501
-            ZIndex: =40
+            ZIndex: =41
 
         Label7_4 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2173,7 +2021,7 @@
             Width: =272
             X: =989
             Y: =464
-            ZIndex: =41
+            ZIndex: =42
 
         Icon12_2 As icon.CheckBadge:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2194,5 +2042,5 @@
             Width: =33
             X: =952
             Y: =464
-            ZIndex: =42
+            ZIndex: =43
 

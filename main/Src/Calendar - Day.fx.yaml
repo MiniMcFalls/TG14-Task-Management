@@ -112,7 +112,7 @@
             Width: =1025
             X: =816
             Y: =484
-            ZIndex: =19
+            ZIndex: =18
 
         Icon1_6 As icon.CameraApertureFocus:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -134,7 +134,7 @@
             Width: =104
             X: =1276
             Y: =405
-            ZIndex: =20
+            ZIndex: =19
 
         Rectangle2_5 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -147,7 +147,7 @@
             Width: =768
             X: =947
             Y: =510
-            ZIndex: =21
+            ZIndex: =20
 
         Rectangle2_4 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -160,7 +160,7 @@
             Width: =768
             X: =947
             Y: =615
-            ZIndex: =22
+            ZIndex: =21
 
     "'Day - RAF Logo' As image":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -178,7 +178,7 @@
         Width: =338
         X: =14
         Y: =64
-        ZIndex: =34
+        ZIndex: =33
 
     "'Print Button' As button":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -203,10 +203,1036 @@
         Visible: =false
         X: =1149
         Y: =76
-        ZIndex: =37
+        ZIndex: =36
 
     cmp_Header_12 As cmp_Header:
-        ZIndex: =38
+        ZIndex: =37
+
+    CompositePieChart1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =43
+
+        Title4 As label:
+            Align: =Align.Center
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            Height: =22
+            Text: ="Weekly Distribution"
+            Width: =400
+            X: =10
+            Y: =558
+            ZIndex: =38
+
+        PieChart1 As pieChart:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Segoe UI'
+            Height: =375
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemBorderColor: =RGBA(0,0,0,0)
+            ItemColorSet: =[RGBA(0,0,0,0)]
+            Items: |-
+                =Table(
+                    {
+                        Phot: Phot1.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot1.Text Or 'Photog #2' = Phot1.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot2.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot2.Text Or 'Photog #2' = Phot2.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot3.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot3.Text Or 'Photog #2' = Phot3.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot4.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot4.Text Or 'Photog #2' = Phot4.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot5.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot5.Text Or 'Photog #2' = Phot5.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot6.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot6.Text Or 'Photog #2' = Phot6.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot7.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot7.Text Or 'Photog #2' = Phot7.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot8.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot8.Text Or 'Photog #2' = Phot8.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot9.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot9.Text Or 'Photog #2' = Phot9.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot10.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot10.Text Or 'Photog #2' = Phot10.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    }
+                )
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =8
+            Width: =420
+            Y: =545
+            ZIndex: =39
+
+        PieChart1_2 As pieChart:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            Height: =355
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: |-
+                =Table(
+                    {
+                        Phot: Phot1.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot1.Text Or 'Photog #2' = Phot1.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot2.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot2.Text Or 'Photog #2' = Phot2.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot3.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot3.Text Or 'Photog #2' = Phot3.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot4.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot4.Text Or 'Photog #2' = Phot4.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot5.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot5.Text Or 'Photog #2' = Phot5.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot6.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot6.Text Or 'Photog #2' = Phot6.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot7.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot7.Text Or 'Photog #2' = Phot7.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot8.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot8.Text Or 'Photog #2' = Phot8.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot9.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot9.Text Or 'Photog #2' = Phot9.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Phot: Phot10.Text,
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Photog #1' = Phot10.Text Or 'Photog #2' = Phot10.Text,
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today())))
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    }
+                )
+            LabelPosition: =LabelPosition.Inside
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =9
+            X: =10
+            Y: =555
+            ZIndex: =41
+
+    CompositePieChart1_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Title4_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            Height: =22
+            Text: ="Weekly Distribution by Type"
+            Width: =394
+            X: =399
+            Y: =554
+            ZIndex: =40
+
+        PieChart1_1 As pieChart:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Segoe UI'
+            Height: =375
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemBorderColor: =RGBA(0,0,0,0)
+            ItemColorSet: =[RGBA(0,0,0,0)]
+            Items: |-
+                =Table(
+                    {
+                        Cat: "Admin",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Admin",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Air Safety",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Air Safety",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Air Processing",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Air Processing",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Digital Manipulation",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Digital Manipulation",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Engineering",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Engineering",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Exercise",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Exercise",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Honours & Awards",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Honours & Awards",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "ID Photo",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "ID Photo",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Medical/Dental",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Medical/Dental",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Official Group",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Official Group",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Operations",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Operations",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Parade/Ceremonial",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Parade/Ceremonial",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Portrait",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Portrait",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "PR/Media",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "PR/Media",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "QRA",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "QRA",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "RAF Police",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "RAF Police",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Scanning",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Scanning",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Sports",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Sports",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Trade Training",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Trade Training",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Training Support",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Training Support",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Trials",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Trials",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Visit",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Visit",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Other (Specify)",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Other (Specify)",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    }
+                )
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =8
+            Width: =414
+            X: =389
+            Y: =545
+            ZIndex: =42
+
+        PieChart1_3 As pieChart:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            Height: =355
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: |-
+                =Table(
+                    {
+                        Cat: "Admin",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Admin",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Air Safety",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Air Safety",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Air Processing",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Air Processing",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Digital Manipulation",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Digital Manipulation",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Engineering",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Engineering",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Exercise",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Exercise",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Honours & Awards",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Honours & Awards",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "ID Photo",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "ID Photo",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Medical/Dental",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Medical/Dental",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Official Group",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Official Group",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Operations",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Operations",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Parade/Ceremonial",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Parade/Ceremonial",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Portrait",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Portrait",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "PR/Media",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "PR/Media",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "QRA",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "QRA",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "RAF Police",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "RAF Police",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Scanning",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Scanning",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Sports",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Sports",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Trade Training",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Trade Training",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Training Support",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Training Support",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Trials",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Trials",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Visit",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Visit",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    },
+                    {
+                        Cat: "Other (Specify)",
+                        Value: With(
+                            {
+                                wData: Filter(
+                                    'TG14 Task Information',
+                                    'Project Category'.Value = "Other (Specify)",
+                                    'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))),
+                                    Unit.Value = gblUserLocPerm
+                                )
+                            },
+                            CountRows(wData)
+                        )
+                    }
+                )
+            LabelPosition: =LabelPosition.Inside
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =9
+            Width: =394
+            X: =399
+            Y: =555
+            ZIndex: =43
 
     "'Day - Pills' As group":
         Height: =5
@@ -238,7 +1264,7 @@
             Width: =440
             X: =363
             Y: =64
-            ZIndex: =4
+            ZIndex: =3
 
         "'Day - Task List Pill' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -267,7 +1293,7 @@
             Width: =1025
             X: =816
             Y: =64
-            ZIndex: =5
+            ZIndex: =4
 
         "'Day - Nav Pill' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -292,7 +1318,7 @@
             Width: =338
             X: =14
             Y: =286
-            ZIndex: =6
+            ZIndex: =5
 
         "'Day - Logo Pill' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -317,7 +1343,7 @@
             Width: =338
             X: =14
             Y: =64
-            ZIndex: =7
+            ZIndex: =6
 
         "'Day - Lower Left Pill' As button":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -342,7 +1368,7 @@
             Width: =789
             X: =14
             Y: =540
-            ZIndex: =8
+            ZIndex: =7
 
     "'Day - Nav List' As group":
         Height: =5
@@ -377,7 +1403,7 @@
             Width: =315
             X: =26
             Y: =366
-            ZIndex: =29
+            ZIndex: =28
 
         Button5_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -404,7 +1430,7 @@
             Width: =315
             X: =26
             Y: =323
-            ZIndex: =30
+            ZIndex: =29
 
         Button5_6 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -432,7 +1458,7 @@
             Width: =315
             X: =26
             Y: =409
-            ZIndex: =31
+            ZIndex: =30
 
         Button5_13 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -458,7 +1484,7 @@
             Width: =315
             X: =26
             Y: =452
-            ZIndex: =32
+            ZIndex: =31
 
         Button10_4 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -490,7 +1516,7 @@
             Width: =45
             X: =296
             Y: =452
-            ZIndex: =33
+            ZIndex: =32
 
     "'Day - Date Picker' As group":
         Height: =5
@@ -512,7 +1538,7 @@
             Wrap: =false
             X: =374
             Y: =75
-            ZIndex: =10
+            ZIndex: =9
 
         iconPrevMonth1 As icon.ChevronLeft:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -545,7 +1571,7 @@
             Width: =59
             X: =373
             Y: =75
-            ZIndex: =11
+            ZIndex: =10
 
         iconNextMonth1 As icon.ChevronRight:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -578,7 +1604,7 @@
             Width: =59
             X: =733
             Y: =75
-            ZIndex: =12
+            ZIndex: =11
 
         WeekdayGallery1 As gallery.WeekdayGallery:
             AccessibleLabel: ="Days of the week"
@@ -592,7 +1618,7 @@
             Width: =420
             X: =374
             Y: =114
-            ZIndex: =13
+            ZIndex: =12
 
             Title1 As label:
                 Align: =Align.Center
@@ -616,6 +1642,8 @@
             Height: =361
             Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
             Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            LoadingSpinnerColor: =RGBA(1,1,1,1)
             ShowScrollbar: =false
             TemplatePadding: =0
             TemplateSize: =60
@@ -623,7 +1651,7 @@
             WrapCount: =7
             X: =374
             Y: =158
-            ZIndex: =14
+            ZIndex: =13
 
             Subcircle1 As circle:
                 BorderColor: =RGBA(166, 166, 166, 1)
@@ -782,7 +1810,7 @@
             Width: =420
             X: =374
             Y: =114
-            ZIndex: =28
+            ZIndex: =27
 
     "'Day - Task List' As group":
         Height: =5
@@ -817,7 +1845,7 @@
             Width: =40
             X: =1516
             Y: =86
-            ZIndex: =9
+            ZIndex: =8
 
         "'Day - Task List Border' As button":
             BorderColor: =RGBA(79, 109, 122, 1)
@@ -847,7 +1875,7 @@
             Width: =1003
             X: =827
             Y: =124
-            ZIndex: =15
+            ZIndex: =14
 
         CalendarEventsGallery1 As gallery.CalendarEventsGallery:
             AccessibleLabel: ="Calendar events for selected day"
@@ -858,14 +1886,15 @@
                 =/*Shows events only on selected date*/
                 SortByColumns(Filter('TG14 Task Information', 'Task Date' = _dateSelected, Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved"), "StartTime")
             Layout: =Layout.Vertical
-            LoadingSpinnerColor: =RGBA(0,0,0,1)
+            LoadingSpinner: =LoadingSpinner.Data
+            LoadingSpinnerColor: =RGBA(1,1,1,1)
             OnSelect: =
             TemplatePadding: =4
             TemplateSize: =55
             Width: =1004
             X: =827
             Y: =124
-            ZIndex: =16
+            ZIndex: =15
 
             Button3 As button:
                 BorderColor: =RGBA(0, 0, 0, 0)
@@ -1381,7 +2410,7 @@
             Width: =1005
             X: =826
             Y: =75
-            ZIndex: =17
+            ZIndex: =16
 
         LblDateSelected1 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -1400,7 +2429,7 @@
             Wrap: =false
             X: =827
             Y: =75
-            ZIndex: =18
+            ZIndex: =17
 
         Button12 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1433,7 +2462,7 @@
             Width: =88
             X: =1743
             Y: =75
-            ZIndex: =23
+            ZIndex: =22
 
         Button12_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1467,7 +2496,7 @@
             Width: =88
             X: =1655
             Y: =75
-            ZIndex: =24
+            ZIndex: =23
 
         Button12_2 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1500,7 +2529,7 @@
             Width: =88
             X: =1567
             Y: =75
-            ZIndex: =25
+            ZIndex: =24
 
         Rectangle11_3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1512,7 +2541,7 @@
             Width: =2
             X: =1655
             Y: =75
-            ZIndex: =26
+            ZIndex: =25
 
         Rectangle11_4 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1524,7 +2553,7 @@
             Width: =2
             X: =1741
             Y: =75
-            ZIndex: =27
+            ZIndex: =26
 
         LblResetToday1 As label:
             Align: =Align.Center
@@ -1539,7 +2568,7 @@
             Width: =39
             X: =1516
             Y: =86
-            ZIndex: =35
+            ZIndex: =34
 
         Icon10 As icon.CalendarBlank:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -1565,5 +2594,5 @@
             Width: =40
             X: =1516
             Y: =79
-            ZIndex: =36
+            ZIndex: =35
 

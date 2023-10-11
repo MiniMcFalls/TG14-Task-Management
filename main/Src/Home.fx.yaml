@@ -370,7 +370,7 @@
                                 "Max Workload",
                                 If(
                                     varMLoad >= 0 && varMLoad <= 45,
-                                    " Light Workload"
+                                    "Light Workload"
                                 )
                             )
                         )
@@ -391,7 +391,7 @@
                                 "Max Workload",
                                 If(
                                     varMLoad >= 0 && varMLoad <= 66,
-                                    " Light Workload"
+                                    "Light Workload"
                                 )
                             )
                         )
@@ -412,7 +412,7 @@
                                 "Max Workload",
                                 If(
                                     varMLoad >= 0 && varMLoad <= 43,
-                                    " Light Workload"
+                                    "Light Workload"
                                 )
                             )
                         )
@@ -433,7 +433,7 @@
                                 "Max Workload",
                                 If(
                                     varMLoad >= 0 && varMLoad <= 19,
-                                    " Light Workload"
+                                    "Light Workload"
                                 )
                             )
                         )
@@ -454,7 +454,7 @@
                                 "Max Workload",
                                 If(
                                     varMLoad >= 0 && varMLoad <= 57,
-                                    " Light Workload"
+                                    "Light Workload"
                                 )
                             )
                         )

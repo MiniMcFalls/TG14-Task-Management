@@ -759,29 +759,7 @@ App As appinfo:
             },
             CountRows(wData)
         );
-    OnError: |-
-        =Notify(
-            Concatenate(
-                FirstError.Message,
-                ", Observed: ",
-                FirstError.Observed,
-                ", Source: ",
-                FirstError.Source
-            ),
-            NotificationType.Error
-        );
-        Trace(
-            "Unhandled Error",
-            TraceSeverity.Error,
-            {
-                Kind: FirstError.Kind,
-                Message: FirstError.Message,
-                Observed: FirstError.Observed,
-                Screen: App.ActiveScreen.Name,
-                Source: FirstError.Source,
-                User: User().Email
-            }
-        );
+    OnError: =
     OnStart: |
         =// Set Current Version
         ClearCollect(

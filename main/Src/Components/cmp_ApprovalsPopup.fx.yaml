@@ -7,8 +7,10 @@ cmp_ApprovalsPopup As CanvasComponent:
             0,
             0
         )
+    FurtherTextOut: ='Further Comments'.Value
     Height: =930
     PillBackground: =varPillBackground
+    RejectTextOut: ='Reject Comments_1'.Value
     SelectedJob: |-
         ={
             Title: gblSelectedJob.Title,
@@ -659,7 +661,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                             "en-GB"
                         ),
                         "-",
-                        "Your Photographic Tasking ",
+                        "Your RAF VisCom Tasking ",
                         Text(
                             Value(cmp_ApprovalsPopup.SelectedJob.Title),
                             "0000",
@@ -914,7 +916,7 @@ cmp_ApprovalsPopup As CanvasComponent:
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =67
+        TemplateSize: =80
         Width: =209
         X: =1514
         Y: =139
@@ -928,7 +930,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =209
-            Y: =66
+            Y: =79
             ZIndex: =1
 
         Label24_4 As label:
@@ -958,12 +960,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =26
+            Height: =54
             OnSelect: =Select(Parent)
             Overflow: =Overflow.Scroll
             Size: =10
             Text: =ThisItem.TaskLocation
-            Width: =147
+            Width: =153
             X: =56
             Y: =25
             ZIndex: =3
@@ -1006,7 +1008,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =35
             X: =17
-            Y: =25
+            Y: =39
             ZIndex: =5
 
     Rectangle28 As rectangle:
@@ -1618,7 +1620,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
-            OnSelect: |
+            OnSelect: |-
                 =Patch(
                     'TG14 Task Information',
                     First(
@@ -1657,7 +1659,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                             "en-GB"
                         ),
                         "-",
-                        "Your Photographic Tasking ",
+                        "Your RAF VisCom Tasking ",
                         Text(
                             Value('Approvals Gallery'.Selected.Title),
                             "0000",
@@ -1666,45 +1668,6 @@ cmp_ApprovalsPopup As CanvasComponent:
                         "-O"
                     ),
                     varEmailContent
-                );
-                If(
-                    "2022" in 'Add Task Date',
-                    Patch(
-                        '1177 Task Register 2022',
-                        First(
-                            Filter(
-                                '1177 Task Register 2022',
-                                'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
-                            )
-                        ),
-                        {Status: "CANCELLED"}
-                    ),
-                    If(
-                        "2023" in 'Add Task Date',
-                        Patch(
-                            '1177 Task Register 2023',
-                            First(
-                                Filter(
-                                    '1177 Task Register 2023',
-                                    'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
-                                )
-                            ),
-                            {Status: "CANCELLED"}
-                        ),
-                        If(
-                            "2024" in 'Add Task Date',
-                            Patch(
-                                '1177 Task Register 2024',
-                                First(
-                                    Filter(
-                                        '1177 Task Register 2024',
-                                        'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
-                                    )
-                                ),
-                                {Status: "CANCELLED"}
-                            )
-                        )
-                    )
                 );
             PressedBorderColor: =ColorFade(Self.Fill, -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -1731,7 +1694,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CancelBadge
-            OnSelect: =Set(RejectPopupVis, false)
+            OnSelect: =Set(RejectPopupVis, false);Reset('Reject Comments_1')
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -2298,7 +2261,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Width: =Parent.TemplateWidth
                 ZIndex: =2
 
-    "'Reject Popup_2' As group":
+    "'Further Details Popup' As group":
         Height: =5
         Width: =5
         X: =40
@@ -2367,7 +2330,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Text: =Text(Value('Approvals Gallery'.Selected.Title), "0000")
             Visible: =If(varFurtherDetails, true, false)
             Width: =49
-            X: =1068
+            X: =1117
             Y: =280
             ZIndex: =44
 
@@ -2382,10 +2345,10 @@ cmp_ApprovalsPopup As CanvasComponent:
             Font: =Font.'Segoe UI'
             Size: =13
             Text: |-
-                ="You are about to reject the selected tasking: " 
+                ="You are requesting further details for the following task: " 
             Visible: =If(varFurtherDetails, true, false)
-            Width: =349
-            X: =717
+            Width: =435
+            X: =681
             Y: =280
             ZIndex: =45
 
@@ -2413,7 +2376,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(184, 0, 0, 1)
+            Fill: =RGBA(255, 165, 0, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
@@ -2430,26 +2393,16 @@ cmp_ApprovalsPopup As CanvasComponent:
                         )
                     ),
                     {
-                        'Approval Status': {Value: "Rejected"},
-                        Comments: If(
-                            IsBlank('Reject Comments_2'),
-                            "Nil",
-                            'Reject Comments_2'.Value
-                        ),
-                        Status: {Value: "CANCELLED"}
+                        'Further Details Requested?': true
                     }
                 );
                 Set(
-                    PopupVis,
-                    false
-                );
-                Set(
-                    RejectPopupVis,
+                    varFurtherDetails,
                     false
                 );
                 Set(
                     varEmailContent,
-                    'Reject HTML Text'.HtmlText
+                    'Further HTML Text'.HtmlText
                 ) && Office365Outlook.SendEmailV2(
                     'Approvals Gallery'.Selected.'Customer Email',
                     Concatenate(
@@ -2459,7 +2412,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                             "en-GB"
                         ),
                         "-",
-                        "Your Photographic Tasking ",
+                        "Your RAF VisCom Tasking ",
                         Text(
                             Value('Approvals Gallery'.Selected.Title),
                             "0000",
@@ -2468,45 +2421,6 @@ cmp_ApprovalsPopup As CanvasComponent:
                         "-O"
                     ),
                     varEmailContent
-                );
-                If(
-                    "2022" in 'Add Task Date',
-                    Patch(
-                        '1177 Task Register 2022',
-                        First(
-                            Filter(
-                                '1177 Task Register 2022',
-                                'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
-                            )
-                        ),
-                        {Status: "CANCELLED"}
-                    ),
-                    If(
-                        "2023" in 'Add Task Date',
-                        Patch(
-                            '1177 Task Register 2023',
-                            First(
-                                Filter(
-                                    '1177 Task Register 2023',
-                                    'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
-                                )
-                            ),
-                            {Status: "CANCELLED"}
-                        ),
-                        If(
-                            "2024" in 'Add Task Date',
-                            Patch(
-                                '1177 Task Register 2024',
-                                First(
-                                    Filter(
-                                        '1177 Task Register 2024',
-                                        'Response ID' = Text('Approvals Gallery'.Selected.'Response ID')
-                                    )
-                                ),
-                                {Status: "CANCELLED"}
-                            )
-                        )
-                    )
                 );
             PressedBorderColor: =ColorFade(Self.Fill, -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -2533,7 +2447,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CancelBadge
-            OnSelect: =Set(RejectPopupVis, false)
+            OnSelect: =Set(varFurtherDetails, false); Reset('Further Comments');
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -2544,7 +2458,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Y: =219
             ZIndex: =48
 
-        "'Reject Comments_2' As 'Text input'":
+        "'Further Comments' As 'Text input'":
             BasePaletteColor: =""
             DisplayMode: =DisplayMode.Edit
             Height: =155

@@ -534,7 +534,27 @@
         HoverFill: =RGBA(105, 121, 126, 1)
         InputFill: =RGBA(255, 255, 255, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =Sort(Filter('TG14 Task Information', Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Rejected" Or 'Approval Status'.Value = "Approved", Text('Task Date', "yyyy", "en-GB") = "2023", !(Title)),ID, SortOrder.Descending) 
+        Items: |-
+            =With(
+                {
+                    wData: Filter(
+                        'TG14 Task Information',
+                        'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Rejected" Or 'Approval Status'.Value = "Approved",
+                        Created > Date(
+                            2023,
+                            01,
+                            01
+                        ),
+                        Created < Date(
+                            2023,
+                            01,
+                            31
+                        ),
+                        Unit.Value = gblUserLocPerm
+                    )
+                },
+                wData
+            )
         LinkColor: =RGBA(0, 134, 208, 1)
         PrimaryColor1: =RGBA(105, 121, 126, 1)
         PrimaryColor2: =ColorFade(RGBA(105, 121, 126, 1), -30%)
