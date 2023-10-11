@@ -86,7 +86,7 @@
         Y: =6
         ZIndex: =2
 
-    Placeholder_2 As group:
+    "'Placeholder No Tasks' As group":
         Height: =5
         Width: =5
         X: =40
@@ -108,11 +108,11 @@
             Height: =147
             Size: =20
             Text: ="No tasks have been booked for " & Text(_dateSelected,DateTimeFormat.LongDate)
-            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems), true,false)
+            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems) && GblConnectionTest = true, true,false)
             Width: =1025
             X: =816
             Y: =484
-            ZIndex: =18
+            ZIndex: =17
 
         Icon1_6 As icon.CameraApertureFocus:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -130,11 +130,11 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems), true,false)
+            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems) && GblConnectionTest = true, true,false)
             Width: =104
             X: =1276
             Y: =405
-            ZIndex: =19
+            ZIndex: =18
 
         Rectangle2_5 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -143,11 +143,11 @@
             Fill: =RGBA(81, 98, 111, 1)
             FocusedBorderThickness: =4
             Height: =2
-            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems), true,false)
+            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems) && GblConnectionTest = true, true,false)
             Width: =768
             X: =947
             Y: =510
-            ZIndex: =20
+            ZIndex: =19
 
         Rectangle2_4 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -156,11 +156,11 @@
             Fill: =RGBA(81, 98, 111, 1)
             FocusedBorderThickness: =4
             Height: =2
-            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems), true,false)
+            Visible: =If(IsEmpty(CalendarEventsGallery1.AllItems) && GblConnectionTest = true, true,false)
             Width: =768
             X: =947
             Y: =615
-            ZIndex: =21
+            ZIndex: =24
 
     "'Day - RAF Logo' As image":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -178,7 +178,7 @@
         Width: =338
         X: =14
         Y: =64
-        ZIndex: =33
+        ZIndex: =37
 
     "'Print Button' As button":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -203,10 +203,10 @@
         Visible: =false
         X: =1149
         Y: =76
-        ZIndex: =36
+        ZIndex: =40
 
     cmp_Header_12 As cmp_Header:
-        ZIndex: =37
+        ZIndex: =41
 
     CompositePieChart1 As group:
         Height: =5
@@ -225,7 +225,7 @@
             Width: =400
             X: =10
             Y: =558
-            ZIndex: =38
+            ZIndex: =42
 
         PieChart1 As pieChart:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -376,7 +376,7 @@
             Size: =8
             Width: =420
             Y: =545
-            ZIndex: =39
+            ZIndex: =43
 
         PieChart1_2 As pieChart:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -526,37 +526,7 @@
             Size: =9
             X: =10
             Y: =555
-            ZIndex: =41
-
-    Timer9 As timer:
-        AutoPause: =false
-        AutoStart: =true
-        BorderColor: =RGBA(105, 121, 126, 1)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(244, 244, 244, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =DisplayMode.View
-        Duration: =1000
-        Fill: =varHeaderFill
-        Font: =Font.'Segoe UI'
-        Height: =29
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        OnTimerEnd: =Set(CurrentTime, Now())
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Repeat: =true
-        Text: =Text(CurrentTime, DateTimeFormat.LongTime24)
-        X: =103
-        Y: =302
-        ZIndex: =44
+            ZIndex: =45
 
     CompositePieChart1_1 As group:
         Height: =5
@@ -575,7 +545,7 @@
             Width: =394
             X: =399
             Y: =554
-            ZIndex: =40
+            ZIndex: =44
 
         PieChart1_1 As pieChart:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -919,7 +889,7 @@
             Width: =414
             X: =389
             Y: =545
-            ZIndex: =42
+            ZIndex: =46
 
         PieChart1_3 As pieChart:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1262,31 +1232,7 @@
             Width: =394
             X: =399
             Y: =555
-            ZIndex: =43
-
-    Timer10 As timer:
-        AutoPause: =false
-        AutoStart: =true
-        BorderColor: =RGBA(105, 121, 126, 1)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(244, 244, 244, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =DisplayMode.View
-        Duration: =300000
-        Fill: =RGBA(105, 121, 126, 1)
-        Font: =Font.'Segoe UI'
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        OnTimerEnd: =If(GblConnectionTest = false, SaveData(Filter('TG14 Task Information', 'Task Date' = _dateSelected, Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved"), "Task Info"))
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Repeat: =true
-        X: =947
-        Y: =6
-        ZIndex: =45
+            ZIndex: =47
 
     "'Day - Pills' As group":
         Height: =5
@@ -1457,7 +1403,7 @@
             Width: =315
             X: =26
             Y: =390
-            ZIndex: =28
+            ZIndex: =32
 
         Button5_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1484,7 +1430,7 @@
             Width: =315
             X: =26
             Y: =347
-            ZIndex: =29
+            ZIndex: =33
 
         Button5_6 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1512,7 +1458,7 @@
             Width: =315
             X: =26
             Y: =433
-            ZIndex: =30
+            ZIndex: =34
 
         Button5_13 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1538,7 +1484,7 @@
             Width: =315
             X: =26
             Y: =476
-            ZIndex: =31
+            ZIndex: =35
 
         Button10_4 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1570,7 +1516,7 @@
             Width: =45
             X: =296
             Y: =476
-            ZIndex: =32
+            ZIndex: =36
 
     "'Day - Date Picker' As group":
         Height: =5
@@ -1864,7 +1810,7 @@
             Width: =420
             X: =374
             Y: =114
-            ZIndex: =27
+            ZIndex: =31
 
     "'Day - Task List' As group":
         Height: =5
@@ -1947,7 +1893,7 @@
                         'Approval Status'.Value = "Approved"
                     ),
                     "StartTime"
-                ),LoadData('Task Info')
+                ),Blank())
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             LoadingSpinnerColor: =varHeaderFill
@@ -2500,7 +2446,7 @@
             Wrap: =false
             X: =827
             Y: =75
-            ZIndex: =17
+            ZIndex: =20
 
         Button12 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2533,7 +2479,7 @@
             Width: =88
             X: =1743
             Y: =75
-            ZIndex: =22
+            ZIndex: =26
 
         Button12_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2567,7 +2513,7 @@
             Width: =88
             X: =1655
             Y: =75
-            ZIndex: =23
+            ZIndex: =27
 
         Button12_2 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2600,7 +2546,7 @@
             Width: =88
             X: =1567
             Y: =75
-            ZIndex: =24
+            ZIndex: =28
 
         Rectangle11_3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2612,7 +2558,7 @@
             Width: =2
             X: =1655
             Y: =75
-            ZIndex: =25
+            ZIndex: =29
 
         Rectangle11_4 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2624,7 +2570,7 @@
             Width: =2
             X: =1741
             Y: =75
-            ZIndex: =26
+            ZIndex: =30
 
         LblResetToday1 As label:
             Align: =Align.Center
@@ -2639,7 +2585,7 @@
             Width: =39
             X: =1516
             Y: =86
-            ZIndex: =34
+            ZIndex: =38
 
         Icon10 As icon.CalendarBlank:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2665,30 +2611,111 @@
             Width: =40
             X: =1516
             Y: =79
-            ZIndex: =35
+            ZIndex: =39
 
-    Button16 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+    Timer9 As timer:
+        AutoPause: =false
+        AutoStart: =true
+        BorderColor: =RGBA(105, 121, 126, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(105, 121, 126, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        DisplayMode: =DisplayMode.View
+        Duration: =1000
+        Fill: =varHeaderFill
         Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        Height: =29
+        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        OnSelect: =SaveData(Filter('TG14 Task Information', 'Task Date' = _dateSelected, Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved"), "Task Info")
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+        OnTimerEnd: =Set(CurrentTime, Now())
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="Button"
-        X: =585
-        ZIndex: =46
+        Repeat: =true
+        Text: =Text(CurrentTime, DateTimeFormat.LongTime24)
+        X: =103
+        Y: =302
+        ZIndex: =48
+
+    "'Placeholder No Internet' As group":
+        Height: =5
+        Width: =5
+        X: =9
+        Y: =20
+        ZIndex: =49
+
+        Label8_10 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(81, 98, 111, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =Color.White
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =147
+            Size: =20
+            Text: ="You are currenty not connected to the internet, please check your Wi-Fi/LAN connection and try again."
+            Visible: =If(GblConnectionTest = false, true,false)
+            Width: =1025
+            X: =816
+            Y: =484
+            ZIndex: =21
+
+        Icon1_12 As icon.CameraApertureFocus:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(81, 98, 111, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Height: =96
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =Color.White
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CameraAperture
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(GblConnectionTest = false, true,false)
+            Width: =104
+            X: =1276
+            Y: =405
+            ZIndex: =22
+
+        Rectangle2_11 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(81, 98, 111, 1)
+            FocusedBorderThickness: =4
+            Height: =2
+            Visible: =If(GblConnectionTest = false, true,false)
+            Width: =768
+            X: =947
+            Y: =510
+            ZIndex: =23
+
+        Rectangle2_10 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(81, 98, 111, 1)
+            FocusedBorderThickness: =4
+            Height: =2
+            Visible: =If(GblConnectionTest = false, true,false)
+            Width: =768
+            X: =947
+            Y: =615
+            ZIndex: =25
 
