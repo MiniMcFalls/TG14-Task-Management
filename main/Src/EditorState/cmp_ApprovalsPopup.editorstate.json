@@ -568,7 +568,7 @@
         {
           "Category": "Data",
           "PropertyName": "Content",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
@@ -1398,7 +1398,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Content",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Content",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BasePaletteColor",
         "FontSize"
       ],
@@ -1428,7 +1435,7 @@
         {
           "Category": "Data",
           "PropertyName": "Content",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -2614,7 +2621,14 @@
         "VerticalAlign",
         "X",
         "Y",
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Height",
         "ZIndex",
         {

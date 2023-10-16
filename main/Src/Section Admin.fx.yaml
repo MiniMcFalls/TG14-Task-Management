@@ -87,7 +87,7 @@
                     {
                         wData: Filter(
                             'TG14 Task Information',
-                            'AHB.' = "Y",
+                            'AHB.' = "Y" Or 'AHB Override'= "Y",
                             'Task Date' > Date(
                                 Text(
                                     Now(),
@@ -97,7 +97,6 @@
                                 01,
                                 01
                             ),
-                            'Task Date' < Today(),
                             Unit.Value = gblUserLocPerm
                         )
                     },

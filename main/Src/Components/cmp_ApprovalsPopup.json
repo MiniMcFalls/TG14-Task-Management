@@ -6575,7 +6575,14 @@
                 "IsLockable": false,
                 "NameMapSourceSchema": "?"
               },
-              "Content",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Content",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "BasePaletteColor",
               "FontSize"
             ],
@@ -6608,9 +6615,9 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "",
+                "InvariantScript": "\" \"",
                 "Property": "Content",
-                "RuleProviderType": "User"
+                "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Data",
@@ -6733,7 +6740,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "126",
+                "InvariantScript": "110",
                 "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
@@ -8044,9 +8051,9 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "cmp_ApprovalsPopup.SelectedJob.'Customer Name'",
+                "InvariantScript": "Concatenate(cmp_ApprovalsPopup.SelectedJob.Rank,\" \", cmp_ApprovalsPopup.SelectedJob.'Customer Name')",
                 "Property": "Content",
-                "RuleProviderType": "Unknown"
+                "RuleProviderType": "User"
               },
               {
                 "Category": "Data",
@@ -10481,7 +10488,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "160",
+                "InvariantScript": "175",
                 "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
@@ -10654,7 +10661,14 @@
               "VerticalAlign",
               "X",
               "Y",
-              "Width",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Width",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "Height",
               "ZIndex",
               {
@@ -10849,7 +10863,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "208",
+                "InvariantScript": "211",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
               },
@@ -10861,7 +10875,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "178",
+                "InvariantScript": "175",
                 "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
@@ -28685,7 +28699,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Patch(\n    'TG14 Task Information',\n    First(\n        Filter(\n            'TG14 Task Information',\n            ID = cmp_ApprovalsPopup.SelectedJob.ID\n        )\n    ),\n    {\n        'Approval Status': {Value: \"Rejected\"},\n        Comments: If(\n            IsBlank('Reject Comments_1'),\n            \"Nil\",\n            'Reject Comments_1'.Value\n        ),\n        Status: {Value: \"CANCELLED\"},\n        TLB: DropdownCanvas4.Selected.Value\n    }\n);\nSet(\n    PopupVis,\n    false\n);\nSet(\n    RejectPopupVis,\n    false\n);\nSet(\n    varEmailContent,\n    'Reject HTML Text'.HtmlText\n) && Office365Outlook.SendEmailV2(\n    'Approvals Gallery'.Selected.'Customer Email',\n    Concatenate(\n        Text(\n            Today(),\n            \"yyyymmdd\",\n            \"en-GB\"\n        ),\n        \"-\",\n        \"Your RAF VisCom Tasking \",\n        Text(\n            Value('Approvals Gallery'.Selected.Title),\n            \"0000\",\n            \"en-GB\"\n        ),\n        \"-O\"\n    ),\n    varEmailContent\n);\n",
+            "InvariantScript": "Patch(\n    'TG14 Task Information',\n    First(\n        Filter(\n            'TG14 Task Information',\n            ID = cmp_ApprovalsPopup.SelectedJob.ID\n        )\n    ),\n    {\n        'Approval Status': {Value: \"Rejected\"},\n        Comments: If(\n            IsBlank('Reject Comments_1'),\n            \"Nil\",\n            'Reject Comments_1'.Value\n        ),\n        Status: {Value: \"CANCELLED\"},\n        TLB: DropdownCanvas4.Selected.Value,\n        'AHB Override': \"N\"\n    }\n);\nSet(\n    PopupVis,\n    false\n);\nSet(\n    RejectPopupVis,\n    false\n);\nSet(\n    varEmailContent,\n    'Reject HTML Text'.HtmlText\n) && Office365Outlook.SendEmailV2(\n    'Approvals Gallery'.Selected.'Customer Email',\n    Concatenate(\n        Text(\n            Today(),\n            \"yyyymmdd\",\n            \"en-GB\"\n        ),\n        \"-\",\n        \"Your RAF VisCom Tasking \",\n        Text(\n            Value('Approvals Gallery'.Selected.Title),\n            \"0000\",\n            \"en-GB\"\n        ),\n        \"-O\"\n    ),\n    varEmailContent\n);\n",
             "Property": "OnSelect",
             "RuleProviderType": "User"
           }
@@ -29514,7 +29528,7 @@
       "RejectTextOut",
       "FurtherTextOut"
     ],
-    "LastModifiedTimestamp": "638330629011019052",
+    "LastModifiedTimestamp": "638330685911813437",
     "Name": "cmp_ApprovalsPopup",
     "Rules": [
       {
@@ -29651,7 +29665,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638330629011019052",
+  "LastModifiedTimestamp": "638330685911813437",
   "Name": "9e0ddfb4b3ee492fbea501ea288a07cd",
   "OverridableProperties": {},
   "Version": "638210497666468763"

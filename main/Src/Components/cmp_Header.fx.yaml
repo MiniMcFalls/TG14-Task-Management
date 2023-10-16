@@ -210,14 +210,14 @@ cmp_Header As CanvasComponent:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =52
+        Height: =48
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: ='VisComCRM Logo-02'
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
         X: =8
-        Y: =40
+        Y: =3
         ZIndex: =10
 
     Label4 As label:
@@ -243,7 +243,7 @@ cmp_Header As CanvasComponent:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =50
+        Height: =48
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: =User().Image
@@ -253,8 +253,8 @@ cmp_Header As CanvasComponent:
         RadiusBottomRight: =Self.Width
         RadiusTopLeft: =Self.Width
         RadiusTopRight: =Self.Width
-        Width: =50
-        X: =1791
-        Y: =2
+        Width: =48
+        X: =1789
+        Y: =3
         ZIndex: =12
 

@@ -223,6 +223,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             RadiusTopRight: =15
             Size: =15
             Text: ="Reject"
+            Width: =175
             X: =30
             Y: =603
             ZIndex: =6
@@ -488,7 +489,7 @@ cmp_ApprovalsPopup As CanvasComponent:
         BadgeCanvas2_2 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
             BasePaletteColor: =
-            Content: =cmp_ApprovalsPopup.SelectedJob.'Customer Name'
+            Content: =Concatenate(cmp_ApprovalsPopup.SelectedJob.Rank," ", cmp_ApprovalsPopup.SelectedJob.'Customer Name')
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
             Height: =32
@@ -846,8 +847,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             RadiusTopRight: =15
             Size: =15
             Text: ="Approve"
-            Width: =178
-            X: =208
+            Width: =175
+            X: =211
             Y: =603
             ZIndex: =33
 
@@ -913,7 +914,7 @@ cmp_ApprovalsPopup As CanvasComponent:
 
         BadgeCanvas3_3 As Badge:
             BasePaletteColor: =
-            Content: =
+            Content: =" "
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
             Height: =32
@@ -928,7 +929,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Label: ="Override"
-            Width: =126
+            Width: =110
             X: =80
             Y: =239
             ZIndex: =38
@@ -1719,7 +1720,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                             'Reject Comments_1'.Value
                         ),
                         Status: {Value: "CANCELLED"},
-                        TLB: DropdownCanvas4.Selected.Value
+                        TLB: DropdownCanvas4.Selected.Value,
+                        'AHB Override': "N"
                     }
                 );
                 Set(

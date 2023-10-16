@@ -814,6 +814,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Section Admin'.CalendarEventsGallery1_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Section Admin'.CalendarEventsGallery1_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 171,
+                  "snippet": {
+                    "text": "Or"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Section Admin",
+                "type": "'Section Admin'.CalendarEventsGallery1_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "cmp_Header.Timer8.AutoStart"
                 }
               ],
