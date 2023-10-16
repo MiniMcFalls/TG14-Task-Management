@@ -949,6 +949,7 @@
         ZIndex: =43
 
     cmp_Header_1 As cmp_Header:
+        Height: =51
         ZIndex: =46
 
     Group12 As group:

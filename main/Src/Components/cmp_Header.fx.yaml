@@ -1,7 +1,7 @@
 cmp_Header As CanvasComponent:
     Fill: =RGBA(0,0,0,0)
     GlobePendingChanges: =RGBA(200,200,0,1)
-    Height: =55
+    Height: =53
     PendingChangesVis: =varPendingChangesVis
     RefreshInfoVis: =varInfoRefresh
     Width: =1850
@@ -33,18 +33,20 @@ cmp_Header As CanvasComponent:
         Y: =4
         ZIndex: =1
 
-    Header1 As Header:
-        BasePaletteColor: =varHeaderFill
-        DisplayMode: =DisplayMode.Edit
-        Height: =55
-        Logo: ='VisComCRM Logo-02'
-        Title: ="RAF Visual Communications CRM"
-        UserEmail: =User().Email
-        UserImage: =User().Image
-        UserName: =User().FullName
-        Width: =Parent.Width
-        X: =40
-        Y: =40
+    Label2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =varHeaderFill
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =53
+        Size: =13
+        Text: =""
+        Width: =1850
         ZIndex: =2
 
     Label9_14 As label:
@@ -64,7 +66,7 @@ cmp_Header As CanvasComponent:
         Text: =CurrentVer
         VerticalAlign: =VerticalAlign.Bottom
         X: =108
-        Y: =35
+        Y: =33
         ZIndex: =3
 
     Button6 As button:
@@ -201,4 +203,58 @@ cmp_Header As CanvasComponent:
         X: =1452
         Y: =25
         ZIndex: =9
+
+    Image2 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =52
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: ='VisComCRM Logo-02'
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        X: =8
+        Y: =40
+        ZIndex: =10
+
+    Label4 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =44
+        Size: =17
+        Text: ="RAF Visual Communications CRM"
+        Width: =442
+        X: =123
+        ZIndex: =11
+
+    Image5 As image:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =50
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =User().Image
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        RadiusBottomLeft: =Self.Width
+        RadiusBottomRight: =Self.Width
+        RadiusTopLeft: =Self.Width
+        RadiusTopRight: =Self.Width
+        Width: =50
+        X: =1791
+        Y: =2
+        ZIndex: =12
 

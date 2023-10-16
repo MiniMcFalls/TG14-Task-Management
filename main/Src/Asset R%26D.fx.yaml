@@ -90,6 +90,8 @@
         ZIndex: =2
 
     cmp_Header_10 As cmp_Header:
+        Height: =63
+        Visible: =true
         ZIndex: =3
 
     Container3 As groupContainer.manualLayoutContainer:
