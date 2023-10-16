@@ -1,7 +1,7 @@
 cmp_Header As CanvasComponent:
     Fill: =RGBA(0,0,0,0)
     GlobePendingChanges: =RGBA(200,200,0,1)
-    Height: =53
+    Height: =55
     PendingChangesVis: =varPendingChangesVis
     RefreshInfoVis: =varInfoRefresh
     Width: =1850
@@ -36,7 +36,7 @@ cmp_Header As CanvasComponent:
     Header1 As Header:
         BasePaletteColor: =varHeaderFill
         DisplayMode: =DisplayMode.Edit
-        Height: =75
+        Height: =55
         Logo: ='VisComCRM Logo-02'
         Title: ="RAF Visual Communications CRM"
         UserEmail: =User().Email
@@ -63,8 +63,8 @@ cmp_Header As CanvasComponent:
         Size: =12
         Text: =CurrentVer
         VerticalAlign: =VerticalAlign.Bottom
-        X: =109
-        Y: =33
+        X: =108
+        Y: =35
         ZIndex: =3
 
     Button6 As button:

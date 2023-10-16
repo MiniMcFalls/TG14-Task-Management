@@ -99,7 +99,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "75",
+            "InvariantScript": "55",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -2518,13 +2518,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "109",
+            "InvariantScript": "108",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "33",
+            "InvariantScript": "35",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
@@ -2668,7 +2668,7 @@
       "PendingChangesVis",
       "RefreshInfoVis"
     ],
-    "LastModifiedTimestamp": "638330630768806416",
+    "LastModifiedTimestamp": "638330636525212021",
     "Name": "cmp_Header",
     "Rules": [
       {
@@ -2715,9 +2715,9 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "53",
+        "InvariantScript": "55",
         "Property": "Height",
-        "RuleProviderType": "Unknown"
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
@@ -2773,7 +2773,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638330630768806416",
+  "LastModifiedTimestamp": "638330636525212021",
   "Name": "020e992b7d1040688e08ef3914eb2b29",
   "OverridableProperties": {},
   "TemplateOriginalName": "6d02e1dd2a764a52bf98ad786e4d1adc",

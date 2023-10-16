@@ -860,9 +860,6 @@
         Y: =415
         ZIndex: =37
 
-    cmp_Header_1 As cmp_Header:
-        ZIndex: =38
-
     Image3 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -950,6 +947,9 @@
         X: =1634
         Y: =108
         ZIndex: =43
+
+    cmp_Header_1 As cmp_Header:
+        ZIndex: =46
 
     Group12 As group:
         Height: =5
