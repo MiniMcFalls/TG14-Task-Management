@@ -643,7 +643,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                         Notes: cmp_ApprovalsPopup.SelectedJob.Notes,
                         'Tail Number': cmp_ApprovalsPopup.SelectedJob.'Tail Number',
                         Unit: {Value: gblUserLocPerm},
-                        'Approval Status': {Value: "Approved"}
+                        'Approval Status': {Value: "Approved"},
+                        'AHB Override': If(CheckboxCanvas2.Checked = true, Switch(First(Filter('TG14 Task Information', ID = cmp_ApprovalsPopup.SelectedJob.ID)).'AHB.', "Y","N","N","Y"), Blank())
                     }
                 );
                 Set(
@@ -809,14 +810,14 @@ cmp_ApprovalsPopup As CanvasComponent:
             FontWeight: =FontWeight.Semibold
             Size: =11
             Text: ="AHB"
-            Width: =113
+            Width: =182
             X: =24
             Y: =199
             ZIndex: =31
 
         BadgeCanvas3_2 As Badge:
             BasePaletteColor: =
-            Content: =First(Filter('TG14 Task Information', ID = cmp_ApprovalsPopup.SelectedJob.ID)).'AHB.'
+            Content: =If(CheckboxCanvas2.Checked = true, Switch(First(Filter('TG14 Task Information', ID = cmp_ApprovalsPopup.SelectedJob.ID)).'AHB.', "Y","N","N","Y"), First(Filter('TG14 Task Information', ID = cmp_ApprovalsPopup.SelectedJob.ID)).'AHB.')
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
             Height: =32
@@ -848,6 +849,71 @@ cmp_ApprovalsPopup As CanvasComponent:
             X: =80
             Y: =239
             ZIndex: =34
+
+        Label43_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =11
+            Text: ="TLB"
+            Width: =169
+            X: =217
+            Y: =199
+            ZIndex: =35
+
+        DropdownCanvas4 As Dropdown.pcfdataset:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Items: =[Blank(), "Air","Land","Sea","PJHQ","Defence"]
+            Width: =169
+            X: =217
+            Y: =239
+            ZIndex: =36
+
+            Value2 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Value"
+                FieldName: ="Value"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =37
+
+        Label43_3 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(215, 58, 60, 1)
+            BorderStyle: =BorderStyle.Dashed
+            BorderThickness: =1
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =76
+            Size: =11
+            Text: =""
+            Visible: =If(DropdownCanvas4.Selected.Value = Blank(), true, false)
+            Width: =169
+            X: =217
+            Y: =199
+            ZIndex: =37
+
+        "InfoButtonCanvas1 As 'Information button'":
+            Content: ="This is your Top Level Budget e.g. An Aviator would fall under ""Air"", An MOD Civil Servant would fall under ""Defence"" etc."
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            IconSize: ='InfoButtonCanvas.IconSize'.Medium
+            Width: =32
+            X: =354
+            Y: =203
+            ZIndex: =38
 
     Button33 As button:
         BorderColor: =RGBA(0, 0, 0, 0)

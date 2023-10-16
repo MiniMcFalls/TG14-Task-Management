@@ -13535,6 +13535,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "cmp_ApprovalsPopup.Container1.DropdownCanvas4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmp_ApprovalsPopup.Container1.DropdownCanvas4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "cmp_ApprovalsPopup",
+                "type": "cmp_ApprovalsPopup.Container1.DropdownCanvas4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmp_ApprovalsPopup.Container1.InfoButtonCanvas1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmp_ApprovalsPopup.Container1.InfoButtonCanvas1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "cmp_ApprovalsPopup",
+                "type": "cmp_ApprovalsPopup.Container1.InfoButtonCanvas1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varApprovalscheck"
                 }
               ],
@@ -13666,6 +13726,36 @@
               },
               "properties": {
                 "member": "ApprovalCustDetVis",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.ApprovalTaskDesVis"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.ApprovalTaskDesVis",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ApprovalTaskDesVis",
                 "module": "App",
                 "type": "App"
               }
