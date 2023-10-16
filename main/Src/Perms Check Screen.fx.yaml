@@ -12717,7 +12717,7 @@
     Spinner1 As Spinner:
         AccessibleLabel: =""
         Appearance: ='Spinner.Appearance'.Primary
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =149
         SpinnerSize: ='Spinner.SpinnerSize'.Huge

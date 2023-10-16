@@ -18,7 +18,7 @@
       "Name": "AnimatedGIF",
       "PropertyDataTypeKey": "Image",
       "Tooltip": "Animated GIF",
-      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.335\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -27,7 +27,7 @@
       "Name": "Text",
       "PropertyDataTypeKey": "String",
       "Tooltip": "Text",
-      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.335\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -36,7 +36,7 @@
       "Name": "IsLoading",
       "PropertyDataTypeKey": "Boolean",
       "Tooltip": "Is Loading",
-      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.335\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -45,7 +45,7 @@
       "Name": "Styles",
       "PropertyDataTypeKey": "Table",
       "Tooltip": "Styles",
-      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Type\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+      "Type": "{\"Version\":\"1.335\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Type\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
     },
     {
       "Category": 0,
@@ -54,7 +54,7 @@
       "Name": "Color",
       "PropertyDataTypeKey": "Color",
       "Tooltip": "Color",
-      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.335\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -65,7 +65,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638326262863317482",
+  "LastModifiedTimestamp": "638330613617912712",
   "Name": "f48d7f7ea7e74c538504a1a9cc96ad6c",
   "OverridableProperties": {},
   "TemplateOriginalName": "49faad554a7d4ff38aeade57f9dd7241",

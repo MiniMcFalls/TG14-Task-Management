@@ -940,7 +940,7 @@
         ZIndex: =42
 
     ButtonCanvas3 As Button:
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =40
         OnSelect: =Navigate('App Admin', ScreenTransition.Fade)

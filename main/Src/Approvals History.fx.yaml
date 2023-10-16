@@ -617,7 +617,7 @@
 
         BadgeCanvas4 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0

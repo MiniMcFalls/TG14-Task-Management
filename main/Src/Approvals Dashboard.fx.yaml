@@ -641,7 +641,7 @@
 
         BadgeCanvas4_1 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -820,7 +820,7 @@
             ZIndex: =29
 
         CheckboxCanvas1 As Checkbox:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Checked: =ThisItem.'Further Details Requested?'
             DisplayMode: =DisplayMode.Edit
             Height: =32
@@ -832,7 +832,7 @@
             ZIndex: =31
 
         CheckboxCanvas1_1 As Checkbox:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Checked: =If(ThisItem.'Viewed?' = true, true, false)
             DisplayMode: =DisplayMode.Edit
             Height: =32

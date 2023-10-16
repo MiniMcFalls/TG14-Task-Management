@@ -121,7 +121,7 @@ cmp_ApprovalsPopup As CanvasComponent:
         ZIndex: =3
 
         BadgeCanvas5 As Badge:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -159,7 +159,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Text: ="Reject"
             X: =30
             Y: =603
-            ZIndex: =3
+            ZIndex: =2
 
         Label41 As label:
             Align: =Align.Center
@@ -178,7 +178,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =56
             X: =24
             Y: =121
-            ZIndex: =4
+            ZIndex: =3
 
         Label41_1 As label:
             Align: =Align.Center
@@ -196,7 +196,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =126
             X: =80
             Y: =121
-            ZIndex: =5
+            ZIndex: =4
 
         Label42 As label:
             Align: =Align.Center
@@ -214,7 +214,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =65
             X: =208
             Y: =121
-            ZIndex: =6
+            ZIndex: =5
 
         Label43 As label:
             Align: =Align.Center
@@ -232,7 +232,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =113
             X: =273
             Y: =121
-            ZIndex: =7
+            ZIndex: =6
 
         Icon17_1 As icon.LogJournal:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -254,11 +254,11 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =68
             X: =171
             Y: =37
-            ZIndex: =8
+            ZIndex: =7
 
         BadgeCanvas2 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =cmp_ApprovalsPopup.SelectedJob.Title
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -268,11 +268,11 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =56
             X: =24
             Y: =161
-            ZIndex: =9
+            ZIndex: =8
 
         BadgeCanvas2_1 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =cmp_ApprovalsPopup.SelectedJob.'Project Category'.Value
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -282,10 +282,10 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =126
             X: =80
             Y: =161
-            ZIndex: =10
+            ZIndex: =9
 
         BadgeCanvas3 As Badge:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =cmp_ApprovalsPopup.SelectedJob.'Service Required'
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -295,10 +295,10 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =67
             X: =206
             Y: =161
-            ZIndex: =11
+            ZIndex: =10
 
         BadgeCanvas3_1 As Badge:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =cmp_ApprovalsPopup.SelectedJob.ID
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -308,9 +308,10 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =113
             X: =273
             Y: =161
-            ZIndex: =12
+            ZIndex: =11
 
         TextCanvas1 As Text:
+            Align: ='TextCanvas.Align'.Center
             AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
@@ -320,7 +321,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =96
             X: =157
             Y: =79
-            ZIndex: =13
+            ZIndex: =12
 
         Rectangle31 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -335,10 +336,10 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =250
             X: =80
             Y: =119
-            ZIndex: =14
+            ZIndex: =13
 
         BadgeCanvas5_1 As Badge:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -347,8 +348,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
             Width: =356
             X: =30
-            Y: =227
-            ZIndex: =23
+            Y: =277
+            ZIndex: =14
 
         Icon17_2 As icon.LogJournal:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -369,10 +370,11 @@ cmp_ApprovalsPopup As CanvasComponent:
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =68
             X: =171
-            Y: =239
-            ZIndex: =24
+            Y: =289
+            ZIndex: =15
 
         TextCanvas1_1 As Text:
+            Align: ='TextCanvas.Align'.Center
             AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
@@ -381,8 +383,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Weight: ='TextCanvas.Weight'.Bold
             Width: =130
             X: =140
-            Y: =281
-            ZIndex: =25
+            Y: =331
+            ZIndex: =16
 
         Rectangle31_1 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -396,8 +398,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             PressedFill: =RGBA(105, 121, 126, 1)
             Width: =250
             X: =80
-            Y: =321
-            ZIndex: =26
+            Y: =371
+            ZIndex: =17
 
         Label41_2 As label:
             Align: =Align.Right
@@ -414,12 +416,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             Text: ="Name"
             Width: =99
             X: =24
-            Y: =350
-            ZIndex: =27
+            Y: =380
+            ZIndex: =18
 
         BadgeCanvas2_2 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =cmp_ApprovalsPopup.SelectedJob.'Customer Name'
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -428,8 +430,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
             Width: =263
             X: =123
-            Y: =354
-            ZIndex: =28
+            Y: =384
+            ZIndex: =19
 
         Label41_3 As label:
             Align: =Align.Right
@@ -446,12 +448,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             Text: ="Section/Role"
             Width: =99
             X: =24
-            Y: =385
-            ZIndex: =29
+            Y: =415
+            ZIndex: =20
 
         BadgeCanvas2_3 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =cmp_ApprovalsPopup.SelectedJob.'Customer Section'
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -460,8 +462,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
             Width: =263
             X: =123
-            Y: =390
-            ZIndex: =30
+            Y: =420
+            ZIndex: =21
 
         Label41_4 As label:
             Align: =Align.Right
@@ -478,12 +480,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             Text: ="Email"
             Width: =99
             X: =24
-            Y: =425
-            ZIndex: =31
+            Y: =455
+            ZIndex: =22
 
         BadgeCanvas2_4 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =cmp_ApprovalsPopup.SelectedJob.'Customer Email'
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -492,8 +494,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
             Width: =263
             X: =123
-            Y: =430
-            ZIndex: =32
+            Y: =460
+            ZIndex: =23
 
         Label41_5 As label:
             Align: =Align.Right
@@ -509,12 +511,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             Size: =11
             Text: ="Contact Tel"
             Width: =123
-            Y: =465
-            ZIndex: =33
+            Y: =495
+            ZIndex: =24
 
         BadgeCanvas2_5 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =cmp_ApprovalsPopup.SelectedJob.'Customer Contact Number'
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -523,8 +525,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
             Width: =263
             X: =123
-            Y: =470
-            ZIndex: =34
+            Y: =500
+            ZIndex: =25
 
         Label41_6 As label:
             Align: =Align.Right
@@ -541,11 +543,11 @@ cmp_ApprovalsPopup As CanvasComponent:
             Text: ="Alt Contact"
             Width: =123
             Y: =551
-            ZIndex: =35
+            ZIndex: =26
 
         BadgeCanvas2_6 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Tint
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =If(IsBlankOrError(cmp_ApprovalsPopup.SelectedJob.'POC if Different'), "Nil", cmp_ApprovalsPopup.SelectedJob.'POC if Different')
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -555,7 +557,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =263
             X: =123
             Y: =556
-            ZIndex: =36
+            ZIndex: =27
 
         Rectangle31_2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -569,8 +571,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             PressedFill: =RGBA(105, 121, 126, 1)
             Width: =250
             X: =80
-            Y: =526
-            ZIndex: =37
+            Y: =546
+            ZIndex: =28
 
         Button14_10 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -763,7 +765,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =178
             X: =208
             Y: =603
-            ZIndex: =38
+            ZIndex: =29
 
         Button14_16 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -792,7 +794,60 @@ cmp_ApprovalsPopup As CanvasComponent:
             Width: =356
             X: =30
             Y: =651
-            ZIndex: =39
+            ZIndex: =30
+
+        Label43_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =11
+            Text: ="AHB"
+            Width: =113
+            X: =24
+            Y: =199
+            ZIndex: =31
+
+        BadgeCanvas3_2 As Badge:
+            BasePaletteColor: =
+            Content: =First(Filter('TG14 Task Information', ID = cmp_ApprovalsPopup.SelectedJob.ID)).'AHB.'
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =0
+            Height: =32
+            Shape: ='BadgeCanvas.Shape'.Rounded
+            ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
+            Width: =56
+            X: =24
+            Y: =239
+            ZIndex: =32
+
+        BadgeCanvas3_3 As Badge:
+            BasePaletteColor: =
+            Content: =
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =0
+            Height: =32
+            Shape: ='BadgeCanvas.Shape'.Rounded
+            ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
+            Width: =126
+            X: =80
+            Y: =239
+            ZIndex: =33
+
+        CheckboxCanvas2 As Checkbox:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Override"
+            Width: =126
+            X: =80
+            Y: =239
+            ZIndex: =34
 
     Button33 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1124,7 +1179,7 @@ cmp_ApprovalsPopup As CanvasComponent:
         ZIndex: =12
 
         BadgeCanvas5_2 As Badge:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -1159,6 +1214,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             ZIndex: =2
 
         TextCanvas1_2 As Text:
+            Align: ='TextCanvas.Align'.Center
             AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
@@ -1203,7 +1259,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             ZIndex: =16
 
         "TextInputCanvas2 As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =214
             MaxLength: =-1
@@ -1261,7 +1317,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             ZIndex: =18
 
         "TextInputCanvas1_1 As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =144
             MaxLength: =-1
@@ -1319,7 +1375,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 ZIndex: =6
 
             BadgeCanvas6 As Badge:
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 Content: =Blank()
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
@@ -1350,7 +1406,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 ZIndex: =8
 
             BadgeCanvas6_1 As Badge:
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 Content: =cmp_ApprovalsPopup.SelectedJob.'Task Location'
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
@@ -1381,7 +1437,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 ZIndex: =10
 
             BadgeCanvas6_2 As Badge:
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 Content: =If(IsBlank(cmp_ApprovalsPopup.SelectedJob.Deadline), "Not Provided", cmp_ApprovalsPopup.SelectedJob.Deadline)
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
@@ -1443,7 +1499,7 @@ cmp_ApprovalsPopup As CanvasComponent:
                 ZIndex: =14
 
             BadgeCanvas6_3 As Badge:
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 Content: =If(IsBlankOrError(cmp_ApprovalsPopup.SelectedJob.'Tail Number'), "Not Provided", cmp_ApprovalsPopup.SelectedJob.'Tail Number')
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
@@ -1520,7 +1576,7 @@ cmp_ApprovalsPopup As CanvasComponent:
 
         BadgeCanvas7 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Filled
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -1706,7 +1762,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             ZIndex: =23
 
         "'Reject Comments_1' As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =155
             MaxLength: =-1
@@ -2074,7 +2130,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             ZIndex: =37
 
         BadgeCanvas1 As Badge:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -2283,7 +2339,7 @@ cmp_ApprovalsPopup As CanvasComponent:
 
         BadgeCanvas7_1 As Badge:
             Appearance: ='BadgeCanvas.Appearance'.Filled
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -2459,7 +2515,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             ZIndex: =48
 
         "'Further Comments' As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =155
             MaxLength: =-1

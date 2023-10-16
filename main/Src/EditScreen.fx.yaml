@@ -202,7 +202,7 @@ EditScreen As screen:
         ZIndex: =5
 
     "'Main Form - Project Category' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DefaultSelectedItems: =CalendarEventsGallery1.Selected.'Project Category'
         DisplayMode: =DisplayMode.Edit
         FontSize: =0
@@ -223,7 +223,7 @@ EditScreen As screen:
             ZIndex: =7
 
     "'Main Form - Service Required' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DefaultSelectedItems: |-
             ={Value: CalendarEventsGallery1.Selected.'Service they Require'}
         DisplayMode: =DisplayMode.Edit
@@ -245,7 +245,7 @@ EditScreen As screen:
             ZIndex: =8
 
     "'Main Form - Response ID' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         MaxLength: =-1
@@ -259,7 +259,7 @@ EditScreen As screen:
         ZIndex: =10
 
     "'Main Form - Tail Number' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         MaxLength: =-1
@@ -863,7 +863,7 @@ EditScreen As screen:
         ZIndex: =25
 
     "'Main Form - Task Time' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         MaxLength: =-1
@@ -1033,7 +1033,7 @@ EditScreen As screen:
         ZIndex: =33
 
     "'Main Form - Photog #2' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DefaultSelectedItems: |-
             ={Value: CalendarEventsGallery1.Selected.'Photog #2'}
         DisplayMode: =DisplayMode.Edit
@@ -1258,7 +1258,7 @@ EditScreen As screen:
             ZIndex: =9
 
     "'Main Form - Photog #1' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DefaultSelectedItems: |-
             ={Value: CalendarEventsGallery1.Selected.'Photog #1'}
         DisplayMode: =DisplayMode.Edit
@@ -1864,7 +1864,7 @@ EditScreen As screen:
         ZIndex: =48
 
     "'Main Form - Additional Details' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DelayOutput: =true
         DisplayMode: =DisplayMode.Edit
         Height: =If(Self.Visible = true, 300, 112)
@@ -1919,7 +1919,7 @@ EditScreen As screen:
         ZIndex: =51
 
     "'Main Form - QA Check' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DefaultSelectedItems: =CalendarEventsGallery1.Selected.'QA Check'
         DisplayMode: =DisplayMode.Edit
         FontSize: =0
@@ -1940,7 +1940,7 @@ EditScreen As screen:
             ZIndex: =10
 
     "'Main Form - Working Hazards' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =60
         MaxLength: =-1
@@ -1955,7 +1955,7 @@ EditScreen As screen:
         ZIndex: =53
 
     "'Main Form - Notes' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =60
         MaxLength: =-1
@@ -1970,7 +1970,7 @@ EditScreen As screen:
         ZIndex: =54
 
     "'Main Form - Task Location' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =60
         MaxLength: =-1
@@ -1985,7 +1985,7 @@ EditScreen As screen:
         ZIndex: =55
 
     "'Main Form - Task Requirements' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DelayOutput: =true
         DisplayMode: =DisplayMode.Edit
         Height: =If('Main Form - Additional Details'.Visible = false, 440, 112)
@@ -2937,7 +2937,7 @@ EditScreen As screen:
             ZIndex: =113
 
     "'HO Popup - Status' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DefaultSelectedItems: =CalendarEventsGallery1.Selected.Status
         DisplayMode: =DisplayMode.Edit
         FontSize: =0
@@ -2994,7 +2994,7 @@ EditScreen As screen:
         ZIndex: =130
 
     "'HO Popup - SharePoint Link' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =82
         MaxLength: =-1
@@ -3038,7 +3038,7 @@ EditScreen As screen:
         ZIndex: =138
 
         "'Main Form - Status' As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             MaxLength: =-1
@@ -3722,7 +3722,7 @@ EditScreen As screen:
             ZIndex: =77
 
         "'Cust Det - Rank' As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             MaxLength: =-1
@@ -3738,7 +3738,7 @@ EditScreen As screen:
             ZIndex: =78
 
         "'Cust Det - Name' As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             MaxLength: =-1
@@ -3754,7 +3754,7 @@ EditScreen As screen:
             ZIndex: =79
 
         "'Cust Det - Section' As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             MaxLength: =-1
@@ -3770,7 +3770,7 @@ EditScreen As screen:
             ZIndex: =80
 
         "'Cust Det - Contact Number' As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             MaxLength: =-1
@@ -3786,7 +3786,7 @@ EditScreen As screen:
             ZIndex: =81
 
         "'Cust Det - LM Rank & Name' As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =34
             MaxLength: =-1
@@ -3802,7 +3802,7 @@ EditScreen As screen:
             ZIndex: =82
 
         "'Cust Det - LM Section' As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =34
             MaxLength: =-1
@@ -3818,7 +3818,7 @@ EditScreen As screen:
             ZIndex: =83
 
         "'Cust Det - LM Contact Number' As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =34
             MaxLength: =-1
@@ -3834,7 +3834,7 @@ EditScreen As screen:
             ZIndex: =84
 
         "'Cust Det - POC If Different' As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =34
             MaxLength: =-1

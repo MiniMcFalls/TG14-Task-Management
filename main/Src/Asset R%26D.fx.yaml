@@ -105,7 +105,7 @@
         ZIndex: =4
 
         BadgeCanvas12_1 As Badge:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -208,7 +208,7 @@
             ZIndex: =6
 
         "TextInputCanvas3 As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             MaxLength: =-1
@@ -224,7 +224,7 @@
             ZIndex: =7
 
         DropdownCanvas1 As Dropdown.pcfdataset:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Status
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -256,7 +256,7 @@
             ZIndex: =9
 
         DropdownCanvas1_1 As Dropdown.pcfdataset:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Location
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -288,7 +288,7 @@
             ZIndex: =11
 
         "TextInputCanvas3_1 As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             MaxLength: =-1
@@ -322,7 +322,7 @@
             ZIndex: =13
 
         DropdownCanvas1_2 As Dropdown.pcfdataset:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.'Asset type'
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -354,7 +354,7 @@
             ZIndex: =15
 
         DropdownCanvas1_3 As Dropdown.pcfdataset:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Color
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -386,7 +386,7 @@
             ZIndex: =17
 
         "DatePickerCanvas2 As 'Date picker'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             OnChange: =Set(varSubmitChanges, true)
@@ -415,7 +415,7 @@
             ZIndex: =19
 
         BadgeCanvas9 As Badge:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: ='Asset_R&D_Gallery'.Selected.'Current owner'.DisplayName
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -446,7 +446,7 @@
             ZIndex: =21
 
         BadgeCanvas9_1 As Badge:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: |-
                 =If(
                     IsBlank('Asset_R&D_Gallery'.Selected.'Previous owner'.DisplayName),
@@ -482,7 +482,7 @@
             ZIndex: =23
 
         "DatePickerCanvas2_1 As 'Date picker'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             OnChange: =Set(varSubmitChanges, true)
@@ -598,7 +598,7 @@
             ZIndex: =27
 
         DropdownCanvas1_4 As Dropdown.pcfdataset:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Manufacturer
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -677,7 +677,7 @@
         ZIndex: =5
 
         BadgeCanvas12 As Badge:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
@@ -1146,7 +1146,7 @@
             ZIndex: =6
 
         DropdownCanvas2 As Dropdown.pcfdataset:
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DefaultSelectedItems: |-
                 ={Value: "Available"}
             DisplayMode: =DisplayMode.Edit
@@ -1160,7 +1160,7 @@
             ZIndex: =7
 
         "TextInputCanvas1 As 'Text input'":
-            BasePaletteColor: =""
+            BasePaletteColor: =
             DelayOutput: =true
             DisplayMode: =DisplayMode.Edit
             Height: =32
@@ -1443,7 +1443,7 @@
             ZIndex: =8
 
             "TextInputCanvas4_12 As 'Text input'":
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
                 MaxLength: =-1
@@ -1456,7 +1456,7 @@
                 ZIndex: =1
 
             "TextInputCanvas4_2 As 'Text input'":
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
                 MaxLength: =-1
@@ -1469,7 +1469,7 @@
                 ZIndex: =2
 
             BadgeCanvas5_7 As Badge:
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 Content: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
@@ -1523,7 +1523,7 @@
 
             BadgeCanvas2_11 As Badge:
                 Appearance: ='BadgeCanvas.Appearance'.Tint
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 Content: =Text(Today(), "dd/mm/yyy")
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
@@ -1563,7 +1563,7 @@
                 ZIndex: =8
 
             BadgeCanvas5_8 As Badge:
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 Content: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
@@ -1884,7 +1884,7 @@
 
             BadgeCanvas2_12 As Badge:
                 Appearance: ='BadgeCanvas.Appearance'.Tint
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 Content: |-
                     =Text(Now(), "hh:mm")
                 DisplayMode: =DisplayMode.Edit
@@ -1898,7 +1898,7 @@
                 ZIndex: =22
 
             "TextInputCanvas4_10 As 'Text input'":
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
                 MaxLength: =-1
@@ -1911,7 +1911,7 @@
                 ZIndex: =23
 
             "TextInputCanvas4_11 As 'Text input'":
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
                 MaxLength: =-1
@@ -1978,7 +1978,7 @@
                 ZIndex: =27
 
             "DatePickerCanvas3_1 As 'Date picker'":
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 ValidationState: ="None"
@@ -3105,7 +3105,7 @@
 
             ButtonCanvas2 As Button:
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 OnSelect: |
@@ -3189,7 +3189,7 @@
             ZIndex: =20
 
             "TextInputCanvas4_15 As 'Text input'":
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
                 MaxLength: =-1
@@ -3203,7 +3203,7 @@
                 ZIndex: =1
 
             "TextInputCanvas4_3 As 'Text input'":
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
                 MaxLength: =-1
@@ -3217,7 +3217,7 @@
                 ZIndex: =2
 
             BadgeCanvas5_9 As Badge:
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 Content: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
@@ -3271,7 +3271,7 @@
 
             BadgeCanvas2_13 As Badge:
                 Appearance: ='BadgeCanvas.Appearance'.Tint
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 Content: =varSelectedLoanID
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
@@ -3311,7 +3311,7 @@
                 ZIndex: =8
 
             BadgeCanvas5_10 As Badge:
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 Content: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
@@ -3597,7 +3597,7 @@
                 ZIndex: =20
 
             "TextInputCanvas4_13 As 'Text input'":
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
                 MaxLength: =-1
@@ -3611,7 +3611,7 @@
                 ZIndex: =23
 
             "TextInputCanvas4_14 As 'Text input'":
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
                 MaxLength: =-1
@@ -3642,7 +3642,7 @@
                 ZIndex: =27
 
             "DatePickerCanvas3_2 As 'Date picker'":
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 ValidationState: ="None"
@@ -3652,7 +3652,7 @@
                 ZIndex: =28
 
             "TextInputCanvas4_16 As 'Text input'":
-                BasePaletteColor: =""
+                BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =31
                 MaxLength: =-1
@@ -4022,7 +4022,7 @@
                     ZIndex: =7
 
                 DropdownCanvas3 As Dropdown.pcfdataset:
-                    BasePaletteColor: =""
+                    BasePaletteColor: =
                     DefaultSelectedItems: =Blank()
                     DisplayMode: =DisplayMode.Edit
                     FontSize: =0
