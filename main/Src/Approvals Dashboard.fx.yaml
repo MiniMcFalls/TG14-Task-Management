@@ -209,9 +209,6 @@
         Width: =82
         ZIndex: =1
 
-    cmp_Header_3 As cmp_Header:
-        ZIndex: =2
-
     Button20_3 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderThickness: =0
@@ -1580,6 +1577,9 @@
     cmp_ApprovalsPopup_1 As cmp_ApprovalsPopup:
         Visible: =PopupVis
         ZIndex: =47
+
+    cmp_Header_3 As cmp_Header:
+        ZIndex: =48
 
     Group2_2 As group:
         Height: =5

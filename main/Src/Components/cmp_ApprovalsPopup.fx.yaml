@@ -698,7 +698,6 @@ cmp_ApprovalsPopup As CanvasComponent:
                         'Task Requirements': cmp_ApprovalsPopup.SelectedJob.'Task Requirements',
                         Deadline: cmp_ApprovalsPopup.SelectedJob.Deadline,
                         Hazards: cmp_ApprovalsPopup.SelectedJob.Hazards,
-                        TLB: cmp_ApprovalsPopup.SelectedJob.TLB,
                         'Media/PR Request Cont.': cmp_ApprovalsPopup.SelectedJob.'Media/PR Request Details',
                         'Visit Details': cmp_ApprovalsPopup.SelectedJob.'Visit Details',
                         'Official Groups': cmp_ApprovalsPopup.SelectedJob.'Official Groups',
@@ -711,7 +710,23 @@ cmp_ApprovalsPopup As CanvasComponent:
                         'Tail Number': cmp_ApprovalsPopup.SelectedJob.'Tail Number',
                         Unit: {Value: gblUserLocPerm},
                         'Approval Status': {Value: "Approved"},
-                        'AHB Override': If(CheckboxCanvas2.Checked = true, Switch(First(Filter('TG14 Task Information', ID = cmp_ApprovalsPopup.SelectedJob.ID)).'AHB.', "Y","N","N","Y"), Blank())
+                        'AHB Override': If(
+                            CheckboxCanvas2.Checked = true,
+                            Switch(
+                                First(
+                                    Filter(
+                                        'TG14 Task Information',
+                                        ID = cmp_ApprovalsPopup.SelectedJob.ID
+                                    )
+                                ).'AHB.',
+                                "Y",
+                                "N",
+                                "N",
+                                "Y"
+                            ),
+                            Blank()
+                        ),
+                        TLB: DropdownCanvas4.Selected.Value
                     }
                 );
                 Set(
@@ -766,7 +781,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                     Set(
                         varCustEmailSent,
                         false
-                ));
+                    )
+                );
                 If(
                     cmp_ApprovalsPopup.SelectedJob.Unit.Value = "Lossiemouth",
                     Office365Groups.CreateCalendarEvent(
@@ -1686,7 +1702,7 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
-            OnSelect: |-
+            OnSelect: |
                 =Patch(
                     'TG14 Task Information',
                     First(
@@ -1702,7 +1718,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                             "Nil",
                             'Reject Comments_1'.Value
                         ),
-                        Status: {Value: "CANCELLED"}
+                        Status: {Value: "CANCELLED"},
+                        TLB: DropdownCanvas4.Selected.Value
                     }
                 );
                 Set(

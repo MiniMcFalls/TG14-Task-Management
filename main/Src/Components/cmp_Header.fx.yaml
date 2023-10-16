@@ -33,30 +33,19 @@ cmp_Header As CanvasComponent:
         Y: =4
         ZIndex: =1
 
-    RectQuickActionBar1_29 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
-        Fill: =varHeaderFill
-        Height: =53
-        Width: =1850
+    Header1 As Header:
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.Edit
+        Height: =75
+        Logo: ='VisComCRM Logo-02'
+        Title: ="RAF Visual Communications CRM"
+        UserEmail: =User().Email
+        UserImage: =User().Image
+        UserName: =User().FullName
+        Width: =Parent.Width
+        X: =40
+        Y: =40
         ZIndex: =2
-
-    LblAppName1_8 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.View
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =44
-        PaddingLeft: =20
-        PaddingTop: =2
-        Size: =16
-        Text: ="RAF Visual Communications CRM"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =395
-        Wrap: =false
-        X: =96
-        ZIndex: =3
 
     Label9_14 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -71,62 +60,12 @@ cmp_Header As CanvasComponent:
         Height: =20
         PaddingBottom: =0
         PaddingLeft: =20
-        Size: =13
+        Size: =12
         Text: =CurrentVer
         VerticalAlign: =VerticalAlign.Bottom
-        X: =97
-        Y: =32
-        ZIndex: =4
-
-    Triangle1_9 As triangle.rightAngled:
-        BorderColor: =RGBA(0, 120, 212, 1)
-        BorderStyle: =BorderStyle.None
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =varBackgroundFill
-        FocusedBorderThickness: =4
-        Height: =53
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =52
-        ZIndex: =5
-
-    Rectangle2_23 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =varBackgroundFill
-        FocusedBorderThickness: =4
-        Height: =53
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =5
-        X: =73
-        ZIndex: =6
-
-    Rectangle2_24 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =varBackgroundFill
-        FocusedBorderThickness: =4
-        Height: =53
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =5
-        X: =82
-        ZIndex: =7
-
-    Rectangle2_25 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =varBackgroundFill
-        FocusedBorderThickness: =4
-        Height: =53
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =5
-        X: =91
-        ZIndex: =8
+        X: =109
+        Y: =33
+        ZIndex: =3
 
     Button6 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -151,8 +90,8 @@ cmp_Header As CanvasComponent:
         Size: =15
         Text: =""
         Width: =If(varInfoRefresh = true, 163, 75)
-        X: =If(varInfoRefresh = true, 1508, 1596)
-        ZIndex: =9
+        X: =1527
+        ZIndex: =4
 
     Icon16 As icon.GlobeNotConnected:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -171,9 +110,9 @@ cmp_Header As CanvasComponent:
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =45
-        X: =1611
+        X: =1542
         Y: =2
-        ZIndex: =10
+        ZIndex: =5
 
     Label9 As label:
         Align: =Align.Center
@@ -191,9 +130,9 @@ cmp_Header As CanvasComponent:
         Size: =13
         Text: =If(GblConnectionTest = true, "Live", "OFFLINE")
         Width: =81
-        X: =1593
+        X: =1524
         Y: =25
-        ZIndex: =11
+        ZIndex: =6
 
     Button34 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -217,8 +156,8 @@ cmp_Header As CanvasComponent:
         RadiusTopRight: =0
         Size: =15
         Text: ="Home"
-        X: =1681
-        ZIndex: =12
+        X: =1612
+        ZIndex: =7
 
     Icon16_2 As icon.GlobeNotConnected:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -238,9 +177,9 @@ cmp_Header As CanvasComponent:
         PressedFill: =RGBA(0, 0, 0, 0)
         Visible: =cmp_Header.RefreshInfoVis
         Width: =45
-        X: =1534
+        X: =1465
         Y: =4
-        ZIndex: =13
+        ZIndex: =8
 
     Label9_2 As label:
         Align: =Align.Center
@@ -259,7 +198,7 @@ cmp_Header As CanvasComponent:
         Text: ="Refresh"
         Visible: =cmp_Header.RefreshInfoVis
         Width: =72
-        X: =1521
+        X: =1452
         Y: =25
-        ZIndex: =14
+        ZIndex: =9
 

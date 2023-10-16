@@ -18,8 +18,6 @@
         );
         NewForm('DivForm (EDIT)');
 
-    cmp_Header_16 As cmp_Header:
-
     Label3 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -2209,4 +2207,7 @@
         X: =920
         Y: =275
         ZIndex: =9
+
+    cmp_Header_16 As cmp_Header:
+        ZIndex: =10
 

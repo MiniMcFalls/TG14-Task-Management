@@ -234,9 +234,6 @@
         Y: =529
         ZIndex: =6
 
-    cmp_Header_4 As cmp_Header:
-        ZIndex: =7
-
     Button22_2 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderThickness: =1
@@ -1058,6 +1055,9 @@
         X: =26
         Y: =Button5_19.Y + Self.Height + 3
         ZIndex: =27
+
+    cmp_Header_4 As cmp_Header:
+        ZIndex: =49
 
     Group2_3 As group:
         Height: =5

@@ -17,8 +17,6 @@ Feedback As screen:
             'Wrong Version'
         );
 
-    cmp_Header_7 As cmp_Header:
-
     Button28_7 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -449,4 +447,7 @@ Feedback As screen:
         X: =80
         Y: =370
         ZIndex: =64
+
+    cmp_Header_7 As cmp_Header:
+        ZIndex: =65
 

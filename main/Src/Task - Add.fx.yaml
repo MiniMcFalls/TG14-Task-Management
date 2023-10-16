@@ -45,9 +45,6 @@
         Y: =689
         ZIndex: =1
 
-    cmp_Header_6 As cmp_Header:
-        ZIndex: =2
-
     Button28 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -2391,6 +2388,9 @@
         X: =1297
         Y: =683
         ZIndex: =57
+
+    cmp_Header_6 As cmp_Header:
+        ZIndex: =61
 
     "'No Conflicts_1' As group":
         Height: =5

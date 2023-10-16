@@ -112,5 +112,5 @@
         ZIndex: =8
 
     cmp_Header_18 As cmp_Header:
-        ZIndex: =12
+        ZIndex: =9
 

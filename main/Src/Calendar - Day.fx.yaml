@@ -205,9 +205,6 @@
         Y: =76
         ZIndex: =40
 
-    cmp_Header_12 As cmp_Header:
-        ZIndex: =41
-
     CompositePieChart1 As group:
         Height: =5
         Width: =5
@@ -2642,6 +2639,9 @@
         X: =103
         Y: =302
         ZIndex: =48
+
+    cmp_Header_12 As cmp_Header:
+        ZIndex: =49
 
     "'Placeholder No Internet' As group":
         Height: =5

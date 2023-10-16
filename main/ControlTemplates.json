@@ -298,6 +298,21 @@
     "OverridableProperties": {},
     "Version": "1.3.0"
   },
+  "Header": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/Header",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "Header",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Header",
+    "Version": "0.0.21"
+  },
   "Host": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -582,20 +597,6 @@
     "Name": "toggleSwitch",
     "OverridableProperties": {},
     "Version": "2.1.0"
-  },
-  "triangle": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/shapes/triangle",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": false,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": true,
-    "LastModifiedTimestamp": "0",
-    "Name": "triangle",
-    "OverridableProperties": {},
-    "Version": "2.3.0"
   },
   "typedDataCard": {
     "CustomGroupControlTemplateName": "",

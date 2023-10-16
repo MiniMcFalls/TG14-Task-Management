@@ -6940,7 +6940,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "cmp_ApprovalsPopup_1",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7056,7 +7056,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "cmp_Header_3",
-      "ParentIndex": 1,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7473,7 +7473,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cust Det - Blocker Pill_3",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8171,7 +8171,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText3",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16980,7 +16980,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Reject HTML Text",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
