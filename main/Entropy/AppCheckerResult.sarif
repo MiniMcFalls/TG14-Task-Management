@@ -1325,36 +1325,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmp_ApprovalsPopup.Container2.TextInputCanvas2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "cmp_ApprovalsPopup.Container2.TextInputCanvas2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "cmp_ApprovalsPopup",
-                "type": "cmp_ApprovalsPopup.Container2.TextInputCanvas2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "cmp_ApprovalsPopup.Gallery8_2.AccessibleLabel"
                 }
               ],
