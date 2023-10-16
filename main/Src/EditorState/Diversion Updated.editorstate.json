@@ -208,7 +208,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneIconCheck.ID%",
       "Name": "iconCheck2",
-      "ParentIndex": 2,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -375,7 +375,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneIconCircle.ID%",
       "Name": "iconCircle2",
-      "ParentIndex": 1,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -487,7 +487,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle2_1",
-      "ParentIndex": 7,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -599,7 +599,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle2_2",
-      "ParentIndex": 6,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -711,7 +711,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle2_3",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -841,7 +841,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneSuccessMsg.ID%",
       "Name": "LblSuccessMsg2",
-      "ParentIndex": 4,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1084,7 +1084,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Timer1_1",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

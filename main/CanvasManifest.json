@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 4,
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -136,7 +136,6 @@
     "Home",
     "App Admin",
     "Section Admin",
-    "1177 View",
     "Asset R&D",
     "Approvals Dashboard",
     "Approvals History",

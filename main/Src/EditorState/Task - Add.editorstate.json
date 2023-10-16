@@ -3843,7 +3843,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "cmp_Header_6",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5354,7 +5354,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Edit Screen - Time Picker Blocker_1",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

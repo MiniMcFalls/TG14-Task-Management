@@ -41,7 +41,7 @@
         "Name": "Header1",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2061,
+        "PublishOrderIndex": 1966,
         "Rules": [
           {
             "Category": "Data",
@@ -222,7 +222,7 @@
         "Name": "Button6",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2062,
+        "PublishOrderIndex": 1967,
         "Rules": [
           {
             "Category": "Data",
@@ -534,7 +534,7 @@
         "Name": "Button34",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2063,
+        "PublishOrderIndex": 1968,
         "Rules": [
           {
             "Category": "Data",
@@ -844,7 +844,7 @@
         "Name": "Icon16",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2064,
+        "PublishOrderIndex": 1969,
         "Rules": [
           {
             "Category": "Design",
@@ -1087,7 +1087,7 @@
         "Name": "Timer8",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2065,
+        "PublishOrderIndex": 1970,
         "Rules": [
           {
             "Category": "Data",
@@ -1388,7 +1388,7 @@
         "Name": "Icon16_2",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2066,
+        "PublishOrderIndex": 1971,
         "Rules": [
           {
             "Category": "Design",
@@ -1644,7 +1644,7 @@
         "Name": "Label9_2",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2067,
+        "PublishOrderIndex": 1972,
         "Rules": [
           {
             "Category": "Data",
@@ -1988,7 +1988,7 @@
         "Name": "Label9",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2068,
+        "PublishOrderIndex": 1973,
         "Rules": [
           {
             "Category": "Data",
@@ -2382,7 +2382,7 @@
         "Name": "Label9_14",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2069,
+        "PublishOrderIndex": 1974,
         "Rules": [
           {
             "Category": "Data",
