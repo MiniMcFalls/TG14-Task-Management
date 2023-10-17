@@ -29,6 +29,7 @@
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
+      "Expanded1": "Expanded1",
       "field_1": "ProjectId",
       "field_10": "Duration",
       "field_11": "Expanded",
@@ -44,6 +45,7 @@
       "ID": "ID",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
+      "Show1": "Show1",
       "Title": "Id"
     },
     "DatasetName": "https://modgovuk.sharepoint.com/teams/13793",

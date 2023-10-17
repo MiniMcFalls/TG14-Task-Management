@@ -18,7 +18,7 @@ Screen1 As screen:
         BorderThickness: =1
         DisabledBorderColor: =galUnderlayGrid.BorderColor
         DisabledFill: =galUnderlayGrid.Fill
-        Height: =galGanttView.Height+35
+        Height: =690
         HoverBorderColor: =galUnderlayGrid.BorderColor
         HoverFill: =galUnderlayGrid.Fill
         Items: =Sequence(150,0)
@@ -31,7 +31,7 @@ Screen1 As screen:
             =Switch(lblGridDensity.Text, "4WEEKS", Value(lblPixPerDay.Text) * 28, "WEEKLY", Value(lblPixPerDay.Text) * 7, Value(lblPixPerDay.Text))
             //Value(lblPixPerDay.Text)
         Width: =galGanttView.Width - Value(lblStartPix.Text)
-        X: =460
+        X: =431
         Y: =40
         ZIndex: =1
 
@@ -197,7 +197,7 @@ Screen1 As screen:
                     galProjectList.AllItems,
                     chkPLIsSelected.Value = true
                 ).Result,
-                Show
+                Show1
             )
         Layout: =Layout.Vertical
         LoadingSpinnerColor: =galGanttView.BorderColor
@@ -206,7 +206,7 @@ Screen1 As screen:
         TemplatePadding: =1
         TemplateSize: =25
         Width: =Parent.Width - 20
-        X: =20
+        X: =11
         Y: =75
         ZIndex: =2
 
@@ -338,70 +338,11 @@ Screen1 As screen:
             PressedFill: =lblGVName.Fill
             Size: =8
             Text: =With(ThisItem, If(TaskType=0, Concatenate(ProjectId, " - ", ProjectName), Concatenate( Text(TaskNo +  SubTaskNo/10),"    ", TaskName)))
-            Width: =248
+            Width: =375
             X: |+
                 =36 + ThisItem.TaskLvl * 15
                 
             ZIndex: =7
-
-        lblGVTaksName As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderColor: =lblGVTaksName.BorderColor
-            Height: =25
-            HoverBorderColor: =lblGVTaksName.BorderColor
-            HoverColor: =lblGVTaksName.Color
-            HoverFill: =lblGVTaksName.Fill
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =lblGVTaksName.BorderColor
-            PressedColor: =lblGVTaksName.Color
-            PressedFill: =lblGVTaksName.Fill
-            Size: =8
-            Text: =Text(ThisItem.StartDate,DateTimeFormat.ShortDate)
-            Width: =75
-            X: =284
-            ZIndex: =8
-
-        lblGVDuration As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderColor: =lblGVDuration.BorderColor
-            Height: =25
-            HoverBorderColor: =lblGVDuration.BorderColor
-            HoverColor: =lblGVDuration.Color
-            HoverFill: =lblGVDuration.Fill
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =lblGVDuration.BorderColor
-            PressedColor: =lblGVDuration.Color
-            PressedFill: =lblGVDuration.Fill
-            Size: =8
-            Text: =ThisItem.Duration
-            Width: =31
-            X: =371
-            ZIndex: =9
-
-        lblGVd As label:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderColor: =lblGVd.BorderColor
-            Height: =25
-            HoverBorderColor: =lblGVd.BorderColor
-            HoverColor: =lblGVd.Color
-            HoverFill: =lblGVd.Fill
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =lblGVd.BorderColor
-            PressedColor: =lblGVd.Color
-            PressedFill: =lblGVd.Fill
-            Size: =8
-            Text: ="d"
-            Width: =12
-            X: =395
-            ZIndex: =10
 
         icoGVShowHideSubs As icon.ChevronRight:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -411,14 +352,14 @@ Screen1 As screen:
             Height: =25
             Icon: |-
                 =If(
-                    ThisItem.Expanded,
+                    ThisItem.Expanded1,
                     Icon.ChevronDown,
                     Icon.ChevronRight
                 )
             OnSelect: |
                 =Select(Parent);
                 If(
-                    ThisItem.Expanded,
+                    ThisItem.Expanded1,
                     UpdateIf(
                         colTasks,
                         // hide subtasks of current task
@@ -427,26 +368,26 @@ Screen1 As screen:
                             TaskNo = ThisItem.TaskNo,
                             SubTaskNo > 0
                         ),
-                        {Show: false},
+                        {Show1: false},
                         // change expanded field for this task
                         And(
                             ProjectId = ThisItem.ProjectId,
                             TaskNo = ThisItem.TaskNo,
                             SubTaskNo = 0
                         ),
-                        {Expanded: false},
+                        {Expanded1: false},
                         // hide all tasks for this project task (0)
                         If(
                             ThisItem.TaskNo = 0,
                             And(
                                 ProjectId = ThisItem.ProjectId,
                                 TaskNo > 0,
-                                Show
+                                Show1
                             )
                         ),
                         {
-                            Show: false,
-                            Expanded: false
+                            Show1: false,
+                            Expanded1: false
                         }
                     ),
                     UpdateIf(
@@ -457,14 +398,14 @@ Screen1 As screen:
                             TaskNo = ThisItem.TaskNo,
                             SubTaskNo > 0
                         ),
-                        {Show: true},
+                        {Show1: true},
                         // change expanded field for this task
                         And(
                             ProjectId = ThisItem.ProjectId,
                             TaskNo = ThisItem.TaskNo,
                             SubTaskNo = 0
                         ),
-                        {Expanded: true},
+                        {Expanded1: true},
                         // show all tasks for this project task (0)
                         If(
                             ThisItem.TaskNo = 0,
@@ -474,8 +415,8 @@ Screen1 As screen:
                             )
                         ),
                         {
-                            Show: true,
-                            Expanded: true
+                            Show1: true,
+                            Expanded1: true
                         }
                     )
                 );
@@ -492,7 +433,7 @@ Screen1 As screen:
         Fill: =RGBA(237, 237, 237, 1)
         Height: =190
         Width: =Parent.Width - 20
-        X: =20
+        X: =11
         Y: =Parent.Height-200
         ZIndex: =3
 
@@ -504,8 +445,8 @@ Screen1 As screen:
                 =ForAll(Distinct('Gantt Data Tester', ProjectId), {Result: ThisRecord.Value})
             Layout: =Layout.Vertical
             TemplatePadding: =2
-            TemplateSize: =22
-            Width: =295
+            TemplateSize: =32
+            Width: =399
             X: =15
             Y: =21
             ZIndex: =1
@@ -520,18 +461,19 @@ Screen1 As screen:
                 Text: =ThisItem.Result
                 Width: =99
                 X: =30
+                Y: =5
                 ZIndex: =1
 
             lblPLProjectDesc As label:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =20
+                Height: =32
                 OnSelect: =Select(Parent)
                 Size: =10
                 Text: =LookUp('Gantt Data Tester', ProjectId=ThisItem.Result).ProjectName
-                Width: =205
-                X: =86
+                Width: =265
+                X: =129
                 ZIndex: =2
 
             chkPLIsSelected As checkbox:
@@ -547,6 +489,7 @@ Screen1 As screen:
                 VerticalAlign: =VerticalAlign.Top
                 Width: =28
                 X: =2
+                Y: =5
                 ZIndex: =3
 
         dteStartDate As datepicker:
@@ -573,7 +516,7 @@ Screen1 As screen:
             SelectedDateFill: =RGBA(56, 96, 178, 1)
             Size: =10
             Width: =130
-            X: =527
+            X: =622
             Y: =20
             ZIndex: =13
 
@@ -600,7 +543,7 @@ Screen1 As screen:
             SelectedDateFill: =RGBA(56, 96, 178, 1)
             Size: =10
             Width: =130
-            X: =695
+            X: =790
             Y: =20
             ZIndex: =14
 
@@ -619,7 +562,7 @@ Screen1 As screen:
             Size: =8
             Text: ="From"
             Width: =133
-            X: =524
+            X: =619
             Y: =1
             ZIndex: =15
 
@@ -638,7 +581,7 @@ Screen1 As screen:
             Size: =8
             Text: ="To"
             Width: =133
-            X: =693
+            X: =788
             ZIndex: =16
 
         icoNavBack As icon.ChevronLeft:
@@ -666,7 +609,7 @@ Screen1 As screen:
             PressedFill: =icoNavBack.Fill
             Tooltip: ="Back 1 week"
             Width: =25
-            X: =861
+            X: =956
             Y: =20
             ZIndex: =17
 
@@ -695,7 +638,7 @@ Screen1 As screen:
             PressedFill: =icoNavForward.Fill
             Tooltip: ="Forward 1 week"
             Width: =25
-            X: =894
+            X: =989
             Y: =20
             ZIndex: =18
 
@@ -1027,7 +970,7 @@ Screen1 As screen:
             Text: ="Navigate"
             Visible: =gblShowDebug
             Width: =58
-            X: =861
+            X: =956
             ZIndex: =27
 
         lblZoomLabel As label:
@@ -1049,7 +992,7 @@ Screen1 As screen:
             Text: ="Zoom"
             Visible: =gblShowDebug
             Width: =68
-            X: =954
+            X: =1049
             ZIndex: =28
 
         galTaskTypes As gallery.galleryVertical:
@@ -1063,7 +1006,7 @@ Screen1 As screen:
             TemplatePadding: =0
             TemplateSize: =22
             Width: =196
-            X: =319
+            X: =419
             Y: =21
             ZIndex: =29
 
@@ -1096,7 +1039,7 @@ Screen1 As screen:
             Visible: |
                 =true
             Width: =165
-            X: =319
+            X: =414
             ZIndex: =30
 
         lblAppDataLabel As label:
@@ -1139,7 +1082,7 @@ Screen1 As screen:
             Size: =16
             Text: ="+"
             Width: =30
-            X: =992
+            X: =1087
             Y: =20
             ZIndex: =32
 
@@ -1164,31 +1107,9 @@ Screen1 As screen:
             Size: =16
             Text: ="-"
             Width: =30
-            X: =955
+            X: =1050
             Y: =20
             ZIndex: =33
-
-    lblStartDateLabel As label:
-        Align: =Align.Right
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderColor: =lblStartDateLabel.BorderColor
-        Height: =19
-        HoverBorderColor: =lblStartDateLabel.BorderColor
-        HoverColor: =lblStartDateLabel.Color
-        HoverFill: =lblStartDateLabel.Fill
-        PressedBorderColor: =lblStartDateLabel.BorderColor
-        PressedColor: =lblStartDateLabel.Color
-        PressedFill: =lblStartDateLabel.Fill
-        Size: =8
-        Text: ="Start Date"
-        Visible: |
-            =true
-        Width: =70
-        X: =325
-        Y: =56
-        ZIndex: =4
 
     lblProjectIDLabel As label:
         BorderColor: =RGBA(0, 18, 107, 1)
@@ -1207,31 +1128,9 @@ Screen1 As screen:
         Visible: |
             =true
         Width: =165
-        X: =81
+        X: =72
         Y: =56
         ZIndex: =5
-
-    lblDurationLabel As label:
-        Align: =Align.Right
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderColor: =lblDurationLabel.BorderColor
-        Height: =19
-        HoverBorderColor: =lblDurationLabel.BorderColor
-        HoverColor: =lblDurationLabel.Color
-        HoverFill: =lblDurationLabel.Fill
-        PressedBorderColor: =lblDurationLabel.BorderColor
-        PressedColor: =lblDurationLabel.Color
-        PressedFill: =lblDurationLabel.Fill
-        Size: =8
-        Text: ="Duration"
-        Visible: |
-            =true
-        Width: =70
-        X: =390
-        Y: =56
-        ZIndex: =6
 
     lblEmptyMessage As label:
         BorderColor: =RGBA(0, 18, 107, 1)
@@ -1243,7 +1142,7 @@ Screen1 As screen:
         Text: ="Please select a project to display from the list below"
         Visible: =CountRows(galGanttView.AllItems)=0
         Width: =341
-        X: =68
+        X: =59
         Y: =276
         ZIndex: =7
 
@@ -1254,7 +1153,7 @@ Screen1 As screen:
             =Set(gblShowDebug, true);
             ClearCollect(colTasks, 'Gantt Data Tester');
         Width: =96
-        X: =115
+        X: =106
         Y: =0
         ZIndex: =8
 

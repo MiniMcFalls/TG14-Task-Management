@@ -967,6 +967,14 @@ App As appinfo:
             Home,
             Denied
         );
+        Set(
+            gblShowDebug,
+            true
+        );
+        ClearCollect(
+            colTasks,
+            'Gantt Data Tester'
+        );
     StartScreen: ='Perms Check Screen'
     Theme: =PowerAppsTheme
 

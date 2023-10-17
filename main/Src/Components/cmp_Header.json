@@ -68,7 +68,7 @@
         "Name": "Label2",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2026,
+        "PublishOrderIndex": 2021,
         "Rules": [
           {
             "Category": "Data",
@@ -399,7 +399,7 @@
         "Name": "Label4",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2027,
+        "PublishOrderIndex": 2022,
         "Rules": [
           {
             "Category": "Data",
@@ -740,7 +740,7 @@
         "Name": "Button6",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2028,
+        "PublishOrderIndex": 2023,
         "Rules": [
           {
             "Category": "Data",
@@ -1052,7 +1052,7 @@
         "Name": "Button34",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2029,
+        "PublishOrderIndex": 2024,
         "Rules": [
           {
             "Category": "Data",
@@ -1362,7 +1362,7 @@
         "Name": "Icon16",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2030,
+        "PublishOrderIndex": 2025,
         "Rules": [
           {
             "Category": "Design",
@@ -1580,7 +1580,7 @@
         "Name": "Image2",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2031,
+        "PublishOrderIndex": 2026,
         "Rules": [
           {
             "Category": "Data",
@@ -1890,7 +1890,7 @@
         "Name": "Image5",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2032,
+        "PublishOrderIndex": 2027,
         "Rules": [
           {
             "Category": "Data",
@@ -2169,7 +2169,7 @@
         "Name": "Timer8",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2033,
+        "PublishOrderIndex": 2028,
         "Rules": [
           {
             "Category": "Data",
@@ -2470,7 +2470,7 @@
         "Name": "Icon16_2",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2034,
+        "PublishOrderIndex": 2029,
         "Rules": [
           {
             "Category": "Design",
@@ -2726,7 +2726,7 @@
         "Name": "Label9_2",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2035,
+        "PublishOrderIndex": 2030,
         "Rules": [
           {
             "Category": "Data",
@@ -3070,7 +3070,7 @@
         "Name": "Label9",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2036,
+        "PublishOrderIndex": 2031,
         "Rules": [
           {
             "Category": "Data",
@@ -3464,7 +3464,7 @@
         "Name": "Label9_14",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2037,
+        "PublishOrderIndex": 2032,
         "Rules": [
           {
             "Category": "Data",
