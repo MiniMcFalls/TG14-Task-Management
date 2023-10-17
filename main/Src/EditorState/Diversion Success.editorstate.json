@@ -49,7 +49,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "cmp_Header_18",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -90,7 +90,7 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -221,7 +221,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneIconCheck.ID%",
       "Name": "iconCheck1",
-      "ParentIndex": 6,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -395,7 +395,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneIconCircle.ID%",
       "Name": "iconCircle1",
-      "ParentIndex": 5,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -507,7 +507,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle2_4",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -619,7 +619,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle2_5",
-      "ParentIndex": 3,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -731,7 +731,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle2_6",
-      "ParentIndex": 4,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -861,7 +861,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplatePhoneSuccessMsg.ID%",
       "Name": "LblSuccessMsg1",
-      "ParentIndex": 7,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1111,7 +1111,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Timer1",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -37,6 +37,19 @@
           }
         }
       },
+      "https://modgovuk.sharepoint.com/teams/13793_new_shared_sharepointonline_d8762efebcb94a808a1d04e95d9b5b0a": {
+        "datasetOverride": {
+          "environmentVariableName": "new_shared_sharepointonline_d8762efebcb94a808a1d04e95d9b5b0a"
+        },
+        "dataSources": {
+          "Gantt Data Tester": {
+            "tableName": "31d83dd7-d8af-4525-a8bb-68ad93a8dd3c",
+            "tableNameOverride": {
+              "environmentVariableName": "new_shared_sharepointonline_9a146c2359f7412fb4a4cfd7a5f450e8"
+            }
+          }
+        }
+      },
       "https://modgovuk.sharepoint.com/teams/7452": {
         "dataSources": {
           "Asset Tracker_1": {
@@ -58,7 +71,8 @@
       "TG14 App Feedback Submissions",
       "Asset Tracker_1",
       "TG14 Combined Monthly Returns",
-      "TG14 Loan Register"
+      "TG14 Loan Register",
+      "Gantt Data Tester"
     ],
     "dependencies": {},
     "dependents": [

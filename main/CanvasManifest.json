@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 14,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -156,6 +156,7 @@
     "Wrong Version",
     "Maintenence Screen",
     "Print Info",
-    "Print Screen"
+    "Print Screen",
+    "Screen1"
   ]
 }

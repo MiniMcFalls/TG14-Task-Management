@@ -1,0 +1,1260 @@
+Screen1 As screen:
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
+    OnVisible: |+
+        =// Set up some global vars to manage the values
+        Set(gblGanttRangeStart, DateValue("10/1/2021"));
+        Set(gblGanttRangeEnd, DateValue("11/1/2021"));
+        Set(gblGanttIncrement, 3); //start with 3 days
+        
+
+    galUnderlayGrid As gallery.galleryHorizontal:
+        BorderColor: |-
+            =RGBA(
+                149,
+                149,
+                149,
+                1
+            )
+        BorderThickness: =1
+        DisabledBorderColor: =galUnderlayGrid.BorderColor
+        DisabledFill: =galUnderlayGrid.Fill
+        Height: =galGanttView.Height+35
+        HoverBorderColor: =galUnderlayGrid.BorderColor
+        HoverFill: =galUnderlayGrid.Fill
+        Items: =Sequence(150,0)
+        LoadingSpinnerColor: =galUnderlayGrid.BorderColor
+        PressedBorderColor: =galUnderlayGrid.BorderColor
+        PressedFill: =galUnderlayGrid.Fill
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: |
+            =Switch(lblGridDensity.Text, "4WEEKS", Value(lblPixPerDay.Text) * 28, "WEEKLY", Value(lblPixPerDay.Text) * 7, Value(lblPixPerDay.Text))
+            //Value(lblPixPerDay.Text)
+        Width: =galGanttView.Width - Value(lblStartPix.Text)
+        X: =460
+        Y: =40
+        ZIndex: =1
+
+        icoUGGridLine As rectangle:
+            BorderColor: =RGBA(186, 202, 226, .1)
+            DisabledFill: =icoUGGridLine.Fill
+            Fill: =RGBA(202, 202, 202, 1)
+            FocusedBorderColor: =icoUGGridLine.BorderColor
+            Height: =Parent.Height
+            HoverFill: =icoUGGridLine.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =icoUGGridLine.Fill
+            Width: =1
+            ZIndex: =1
+
+        lblUGDayNum As label:
+            Align: =If(lblGridDensity.Text= "DAILY",Align.Center, Align.Left)
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblUGDayNum.BorderColor
+            Height: =15
+            HoverBorderColor: =lblUGDayNum.BorderColor
+            HoverColor: =lblUGDayNum.Color
+            HoverFill: =lblUGDayNum.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =1
+            PaddingLeft: =3
+            PaddingRight: =1
+            PaddingTop: =1
+            PressedBorderColor: =lblUGDayNum.BorderColor
+            PressedColor: =lblUGDayNum.Color
+            PressedFill: =lblUGDayNum.Fill
+            Size: =8
+            Text: = If(!(lblGridDensity.Text= "DAILY"), Text(DateValue(lblUGGridSectionStartDate.Text,"en-GB"), "[$-en-GB]mmm") & " ") & Day(DateValue(lblUGGridSectionStartDate.Text,"en-GB"))
+            Width: =Parent.TemplateWidth
+            Wrap: =false
+            Y: =18
+            ZIndex: =2
+
+        lblUGDayName As label:
+            Align: =If(lblGridDensity.Text= "DAILY",Align.Center, Align.Left)
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblUGDayName.BorderColor
+            Height: =18
+            HoverBorderColor: =lblUGDayName.BorderColor
+            HoverColor: =lblUGDayName.Color
+            HoverFill: =lblUGDayName.Fill
+            LineHeight: =1
+            OnSelect: =Select(Parent)
+            PaddingBottom: =1
+            PaddingLeft: =3
+            PaddingRight: =1
+            PaddingTop: =1
+            PressedBorderColor: =lblUGDayName.BorderColor
+            PressedColor: =lblUGDayName.Color
+            PressedFill: =lblUGDayName.Fill
+            Size: =8
+            Text: |-
+                =Text(DateValue(lblUGGridSectionStartDate.Text,"en-GB"), "[$-en-GB]ddd")
+                
+                //If(chkWeeklyGrid.Value,Text(dteStartDate.SelectedDate+ThisItem.Value*7,"[$-en-US]ddd"),Text(dteStartDate.SelectedDate+ThisItem.Value,"[$-en-US]ddd"))
+            Width: =Parent.TemplateWidth
+            Wrap: =false
+            ZIndex: =3
+
+        rectUGWeekendGridFill As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledFill: =rectUGWeekendGridFill.Fill
+            Fill: |-
+                =If(
+                    lblGridDensity.Text = "DAILY",
+                    If(
+                        Text(
+                            DateValue(
+                                lblUGGridSectionStartDate.Text,
+                                "en-US"
+                            ),
+                            "[$-en-US]ddd"
+                        ) = "Sat" || Text(
+                            DateValue(
+                                lblUGGridSectionStartDate.Text,
+                                "en-US"
+                            ),
+                            "[$-en-US]ddd"
+                        ) = "Sun",
+                        RGBA(
+                            166,
+                            166,
+                            166,
+                            .2
+                        ),
+                        RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        )
+                    ),
+                    RGBA(
+                        0,
+                        0,
+                        0,
+                        0
+                    )
+                )
+            Height: =Parent.TemplateHeight
+            HoverFill: =rectUGWeekendGridFill.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =rectUGWeekendGridFill.Fill
+            Width: =Parent.TemplateWidth
+            ZIndex: =4
+
+        lblUGGridSectionStartDate As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblUGGridSectionStartDate.BorderColor
+            Height: =30
+            HoverBorderColor: =lblUGGridSectionStartDate.BorderColor
+            HoverColor: =lblUGGridSectionStartDate.Color
+            HoverFill: =lblUGGridSectionStartDate.Fill
+            LineHeight: =1
+            OnSelect: =Select(Parent)
+            PaddingBottom: =1
+            PaddingLeft: =1
+            PaddingRight: =1
+            PaddingTop: =1
+            PressedBorderColor: =lblUGGridSectionStartDate.BorderColor
+            PressedColor: =lblUGGridSectionStartDate.Color
+            PressedFill: =lblUGGridSectionStartDate.Fill
+            Size: =7
+            Text: |
+                =Switch(
+                    lblGridDensity.Text,
+                    "4WEEKS",
+                    dteStartDate.SelectedDate + ThisItem.Value * 28,
+                    "WEEKLY",
+                    dteStartDate.SelectedDate + ThisItem.Value * 7,
+                    dteStartDate.SelectedDate + ThisItem.Value
+                )
+            Visible: =false
+            Width: =Parent.TemplateWidth
+            Wrap: =false
+            Y: =60
+            ZIndex: =5
+
+    galGanttView As gallery.galleryVertical:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        BorderThickness: =1
+        DisabledBorderColor: =galGanttView.BorderColor
+        DisabledFill: =galGanttView.Fill
+        Height: =Parent.Height-260   
+        HoverBorderColor: =galGanttView.BorderColor
+        HoverFill: =galGanttView.Fill
+        Items: |-
+            =Filter(
+                colTasks,
+                ProjectId in Filter(
+                    galProjectList.AllItems,
+                    chkPLIsSelected.Value = true
+                ).Result,
+                Show.Value
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinnerColor: =galGanttView.BorderColor
+        PressedBorderColor: =galGanttView.BorderColor
+        PressedFill: =galGanttView.Fill
+        TemplatePadding: =1
+        TemplateSize: =25
+        Width: =Parent.Width - 20
+        X: =20
+        Y: =75
+        ZIndex: =2
+
+        icoGVMilestone As pentagon:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledFill: =icoGVMilestone.Fill
+            Fill: =RGBA(0, 134, 208, 1)
+            FocusedBorderColor: =icoGVMilestone.BorderColor
+            Height: =18
+            HoverFill: =icoGVMilestone.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =icoGVMilestone.Fill
+            Visible: |
+                =ThisItem.Duration=0
+            Width: =18
+            X: =lblStartPix.Text + (ThisItem.StartDate-dteStartDate.SelectedDate)*lblPixPerDay - icoGVMilestone.Width/2
+            Y: =3
+            ZIndex: =1
+
+        lblGVMilestoneName As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblGVMilestoneName.BorderColor
+            Height: =19
+            HoverBorderColor: =lblGVMilestoneName.BorderColor
+            HoverColor: =lblGVMilestoneName.Color
+            HoverFill: =lblGVMilestoneName.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =lblGVMilestoneName.BorderColor
+            PressedColor: =lblGVMilestoneName.Color
+            PressedFill: =lblGVMilestoneName.Fill
+            Size: =8
+            Text: =ThisItem.TaskName
+            Visible: =ThisItem.Duration=0
+            Width: =254
+            X: =lblStartPix.Text + (ThisItem.StartDate-dteStartDate.SelectedDate)*lblPixPerDay + icoGVMilestone.Width 
+            Y: =3
+            ZIndex: =2
+
+        lblGVOutsideTaskName As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblGVOutsideTaskName.BorderColor
+            Height: =25
+            HoverBorderColor: =lblGVOutsideTaskName.BorderColor
+            HoverColor: =lblGVOutsideTaskName.Color
+            HoverFill: =lblGVOutsideTaskName.Fill
+            Italic: =ThisItem.TaskLvl=3
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =lblGVOutsideTaskName.BorderColor
+            PressedColor: =lblGVOutsideTaskName.Color
+            PressedFill: =lblGVOutsideTaskName.Fill
+            Size: =8
+            Text: =ThisItem.TaskName
+            Visible: =With(ThisItem, And(Len(If(TaskNo=0, ProjectName, TaskName))>=btnGVGanttBar.Width/7,Duration>0))
+            Width: =254
+            X: = btnGVGanttBar.X + btnGVGanttBar.Width + 5
+            ZIndex: =3
+
+        btnGVGanttBar As button:
+            Align: =Align.Left
+            BorderColor: =ColorFade(btnGVGanttBar.Fill, -15%)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =ColorValue(LookUp(TaskType,Type=ThisItem.TaskType).Color)
+            FocusedBorderColor: =btnGVGanttBar.BorderColor
+            FontWeight: =FontWeight.Lighter
+            Height: =18
+            HoverBorderColor: =ColorFade(btnGVGanttBar.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =btnGVGanttBar.Fill
+            PressedColor: =btnGVGanttBar.Fill
+            PressedFill: =btnGVGanttBar.Color
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =8
+            Text: =With(ThisItem, If(Len(If(TaskNo=0, ProjectName, TaskName))<Self.Width/7, If(TaskNo=0, ProjectName, TaskName)))
+            Tooltip: |
+                =With(ThisItem,  "Start: " & Text(StartDate, DateTimeFormat.ShortDate) & "   End: "& Text(EndDate, DateTimeFormat.ShortDate) & "  -  "  & ProjectName & " - " &TaskName)
+            Visible: =!(ThisItem.Duration=0)
+            Width: =ThisItem.Duration * Value(lblPixPerDay.Text)
+            X: |
+                =Value(lblStartPix.Text) + DateDiff(dteStartDate.SelectedDate,ThisItem.StartDate,TimeUnit.Days) * Value(lblPixPerDay.Text)
+            Y: =3
+            ZIndex: =4
+
+        icoGVGanttCover As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(241, 241, 241, 1)
+            Height: =25
+            OnSelect: =Select(Parent)
+            Width: =419
+            ZIndex: =5
+
+        icoGVSeparator As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledFill: =icoGVSeparator.Fill
+            Fill: =RGBA(179, 179, 179, 1)
+            FocusedBorderColor: =icoGVSeparator.BorderColor
+            Height: =1
+            HoverFill: =icoGVSeparator.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =icoGVSeparator.Fill
+            Width: =1828
+            Y: =24
+            ZIndex: =6
+
+        lblGVName As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblGVName.BorderColor
+            FontWeight: =If(ThisItem.TaskNo=0,FontWeight.Bold,FontWeight.Normal)
+            Height: =25
+            HoverBorderColor: =lblGVName.BorderColor
+            HoverColor: =lblGVName.Color
+            HoverFill: =lblGVName.Fill
+            Italic: =ThisItem.TaskLvl=3
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =lblGVName.BorderColor
+            PressedColor: =lblGVName.Color
+            PressedFill: =lblGVName.Fill
+            Size: =8
+            Text: =With(ThisItem, If(TaskType=0, Concatenate(ProjectId, " - ", ProjectName), Concatenate( Text(TaskNo +  SubTaskNo/10),"    ", TaskName)))
+            Width: =248
+            X: |+
+                =36 + ThisItem.TaskLvl * 15
+                
+            ZIndex: =7
+
+        lblGVTaksName As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblGVTaksName.BorderColor
+            Height: =25
+            HoverBorderColor: =lblGVTaksName.BorderColor
+            HoverColor: =lblGVTaksName.Color
+            HoverFill: =lblGVTaksName.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =lblGVTaksName.BorderColor
+            PressedColor: =lblGVTaksName.Color
+            PressedFill: =lblGVTaksName.Fill
+            Size: =8
+            Text: =Text(ThisItem.StartDate,DateTimeFormat.ShortDate)
+            Width: =75
+            X: =284
+            ZIndex: =8
+
+        lblGVDuration As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblGVDuration.BorderColor
+            Height: =25
+            HoverBorderColor: =lblGVDuration.BorderColor
+            HoverColor: =lblGVDuration.Color
+            HoverFill: =lblGVDuration.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =lblGVDuration.BorderColor
+            PressedColor: =lblGVDuration.Color
+            PressedFill: =lblGVDuration.Fill
+            Size: =8
+            Text: =ThisItem.Duration
+            Width: =31
+            X: =371
+            ZIndex: =9
+
+        lblGVd As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblGVd.BorderColor
+            Height: =25
+            HoverBorderColor: =lblGVd.BorderColor
+            HoverColor: =lblGVd.Color
+            HoverFill: =lblGVd.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =lblGVd.BorderColor
+            PressedColor: =lblGVd.Color
+            PressedFill: =lblGVd.Fill
+            Size: =8
+            Text: ="d"
+            Width: =12
+            X: =395
+            ZIndex: =10
+
+        icoGVShowHideSubs As icon.ChevronRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =25
+            Icon: |-
+                =If(
+                    ThisItem.Expanded,
+                    Icon.ChevronDown,
+                    Icon.ChevronRight
+                )
+            OnSelect: |
+                =Select(Parent);
+                If(
+                    ThisItem.Expanded,
+                    UpdateIf(
+                        colTasks,
+                        // hide subtasks of current task
+                        And(
+                            ProjectId = ThisItem.ProjectId,
+                            TaskNo = ThisItem.TaskNo,
+                            SubTaskNo > 0
+                        ),
+                        {Show: false},
+                        // change expanded field for this task
+                        And(
+                            ProjectId = ThisItem.ProjectId,
+                            TaskNo = ThisItem.TaskNo,
+                            SubTaskNo = 0
+                        ),
+                        {Expanded: false},
+                        // hide all tasks for this project task (0)
+                        If(
+                            ThisItem.TaskNo = 0,
+                            And(
+                                ProjectId = ThisItem.ProjectId,
+                                TaskNo > 0,
+                                Show
+                            )
+                        ),
+                        {
+                            Show: false,
+                            Expanded: false
+                        }
+                    ),
+                    UpdateIf(
+                        colTasks,
+                        // show subtasks of current task
+                        And(
+                            ProjectId = ThisItem.ProjectId,
+                            TaskNo = ThisItem.TaskNo,
+                            SubTaskNo > 0
+                        ),
+                        {Show: true},
+                        // change expanded field for this task
+                        And(
+                            ProjectId = ThisItem.ProjectId,
+                            TaskNo = ThisItem.TaskNo,
+                            SubTaskNo = 0
+                        ),
+                        {Expanded: true},
+                        // show all tasks for this project task (0)
+                        If(
+                            ThisItem.TaskNo = 0,
+                            And(
+                                ProjectId = ThisItem.ProjectId,
+                                TaskNo > 0
+                            )
+                        ),
+                        {
+                            Show: true,
+                            Expanded: true
+                        }
+                    )
+                );
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingTop: =5
+            Visible: =ThisItem.SubTaskNo=0
+            Width: =20
+            X: =ThisItem.TaskLvl * 15
+            ZIndex: =11
+
+    cntPageFooterControls As groupContainer:
+        BorderThickness: =1
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =190
+        Width: =Parent.Width - 20
+        X: =20
+        Y: =Parent.Height-200
+        ZIndex: =3
+
+        galProjectList As gallery.galleryVertical:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =1
+            Height: =155
+            Items: |-
+                =ForAll(Distinct('Gantt Data Tester', ProjectId), {Result: ThisRecord.Value})
+            Layout: =Layout.Vertical
+            TemplatePadding: =2
+            TemplateSize: =22
+            Width: =295
+            X: =15
+            Y: =21
+            ZIndex: =1
+
+            lblPLProjectNum As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =20
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.Result
+                Width: =99
+                X: =30
+                ZIndex: =1
+
+            lblPLProjectDesc As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =20
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =LookUp('Gantt Data Tester', ProjectId=ThisItem.Result).ProjectName
+                Width: =205
+                X: =86
+                ZIndex: =2
+
+            chkPLIsSelected As checkbox:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+                CheckboxSize: =20
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =20
+                HoverColor: =RGBA(0, 18, 107, 1)
+                OnSelect: =Select(Parent)
+                Size: =13
+                Text: =
+                VerticalAlign: =VerticalAlign.Top
+                Width: =28
+                X: =2
+                ZIndex: =3
+
+        dteStartDate As datepicker:
+            BorderColor: =RGBA(219, 219, 219, 1)
+            CalendarHeaderFill: =RGBA(56, 96, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DefaultDate: |
+                =gblGanttRangeStart
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderColor: =dteStartDate.BorderColor
+            Height: =30
+            HoverBorderColor: =dteStartDate.BorderColor
+            HoverDateFill: =RGBA(186, 202, 226, 1)
+            HoverFill: =dteStartDate.Fill
+            IconBackground: =Color.White
+            IconFill: =Color.Gray
+            InputTextPlaceholder: =Text(Date(2001,12,31), dteStartDate.Format, dteStartDate.Language)
+            OnChange: =Set(gblGanttRangeStart, Self.SelectedDate);Set(gblGanttIncrement, Switch(lblGridDensity.Text, "4WEEKS", 14, "WEEKLY", 7, 3));
+            PaddingTop: =5
+            PressedBorderColor: =dteStartDate.BorderColor
+            PressedFill: =dteStartDate.Fill
+            SelectedDateFill: =RGBA(56, 96, 178, 1)
+            Size: =10
+            Width: =130
+            X: =527
+            Y: =20
+            ZIndex: =13
+
+        dteEndDate As datepicker:
+            BorderColor: =RGBA(219, 219, 219, 1)
+            CalendarHeaderFill: =RGBA(56, 96, 178, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DefaultDate: =gblGanttRangeEnd
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderColor: =dteEndDate.BorderColor
+            Height: =30
+            HoverBorderColor: =dteEndDate.BorderColor
+            HoverDateFill: =RGBA(186, 202, 226, 1)
+            HoverFill: =dteEndDate.Fill
+            IconBackground: =Color.White
+            IconFill: =Color.Gray
+            InputTextPlaceholder: =Text(Date(2001,12,31), dteEndDate.Format, dteEndDate.Language)
+            OnChange: =Set(gblGanttRangeEnd, Self.SelectedDate);Set(gblGanttIncrement, Switch(lblGridDensity.Text, "4WEEKS", 14, "WEEKLY", 7, 3));
+            PaddingTop: =5
+            PressedBorderColor: =dteEndDate.BorderColor
+            PressedFill: =dteEndDate.Fill
+            SelectedDateFill: =RGBA(56, 96, 178, 1)
+            Size: =10
+            Width: =130
+            X: =695
+            Y: =20
+            ZIndex: =14
+
+        lblStartDateLabel2 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblStartDateLabel2.BorderColor
+            Height: =20
+            HoverBorderColor: =lblStartDateLabel2.BorderColor
+            HoverColor: =lblStartDateLabel2.Color
+            HoverFill: =lblStartDateLabel2.Fill
+            PressedBorderColor: =lblStartDateLabel2.BorderColor
+            PressedColor: =lblStartDateLabel2.Color
+            PressedFill: =lblStartDateLabel2.Fill
+            Size: =8
+            Text: ="From"
+            Width: =133
+            X: =524
+            Y: =1
+            ZIndex: =15
+
+        lblEndDateLabel As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblEndDateLabel.BorderColor
+            Height: =20
+            HoverBorderColor: =lblEndDateLabel.BorderColor
+            HoverColor: =lblEndDateLabel.Color
+            HoverFill: =lblEndDateLabel.Fill
+            PressedBorderColor: =lblEndDateLabel.BorderColor
+            PressedColor: =lblEndDateLabel.Color
+            PressedFill: =lblEndDateLabel.Fill
+            Size: =8
+            Text: ="To"
+            Width: =133
+            X: =693
+            ZIndex: =16
+
+        icoNavBack As icon.ChevronLeft:
+            BorderColor: |-
+                =RGBA(
+                    149,
+                    149,
+                    149,
+                    1
+                )
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            DisabledFill: =icoNavBack.Fill
+            FocusedBorderColor: =icoNavBack.BorderColor
+            Height: =30
+            HoverBorderColor: =ColorFade(icoNavBack.BorderColor, 20%)
+            HoverColor: =ColorFade(icoNavBack.Color, 20%)
+            HoverFill: =icoNavBack.Fill
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(gblGanttRangeStart, DateAdd(gblGanttRangeStart,  -gblGanttIncrement, TimeUnit.Days));Set(gblGanttRangeEnd, DateAdd(gblGanttRangeEnd,  -gblGanttIncrement, TimeUnit.Days))
+            PressedBorderColor: =ColorFade(icoNavBack.BorderColor, -20%)
+            PressedColor: =ColorFade(icoNavBack.Color, -20%)
+            PressedFill: =icoNavBack.Fill
+            Tooltip: ="Back 1 week"
+            Width: =25
+            X: =861
+            Y: =20
+            ZIndex: =17
+
+        icoNavForward As icon.ChevronLeft:
+            BorderColor: |-
+                =RGBA(
+                    149,
+                    149,
+                    149,
+                    1
+                )
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            DisabledFill: =icoNavForward.Fill
+            FocusedBorderColor: =icoNavForward.BorderColor
+            Height: =30
+            HoverBorderColor: =ColorFade(icoNavForward.BorderColor, 20%)
+            HoverColor: =ColorFade(icoNavForward.Color, 20%)
+            HoverFill: =icoNavForward.Fill
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(gblGanttRangeStart, DateAdd(gblGanttRangeStart,   gblGanttIncrement, TimeUnit.Days));Set(gblGanttRangeEnd, DateAdd(gblGanttRangeEnd,  gblGanttIncrement, TimeUnit.Days))
+            PressedBorderColor: =ColorFade(icoNavForward.BorderColor, -20%)
+            PressedColor: =ColorFade(icoNavForward.Color, -20%)
+            PressedFill: =icoNavForward.Fill
+            Tooltip: ="Forward 1 week"
+            Width: =25
+            X: =894
+            Y: =20
+            ZIndex: =18
+
+        lblProjectListLabel As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblProjectListLabel.BorderColor
+            Height: =19
+            HoverBorderColor: =lblProjectListLabel.BorderColor
+            HoverColor: =lblProjectListLabel.Color
+            HoverFill: =lblProjectListLabel.Fill
+            PressedBorderColor: =lblProjectListLabel.BorderColor
+            PressedColor: =lblProjectListLabel.Color
+            PressedFill: =lblProjectListLabel.Fill
+            Size: =8
+            Text: ="Select Projects to display"
+            Visible: |
+                =true
+            Width: =165
+            X: =16
+            Y: =2
+            ZIndex: =21
+
+        cntAppData As groupContainer:
+            BorderThickness: =1
+            Height: =155
+            Width: =194
+            X: =1142
+            Y: =20
+            ZIndex: =26
+
+            lblStartPix As label:
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =1
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lblStartPix.BorderColor
+                Height: =20
+                HoverBorderColor: =lblStartPix.BorderColor
+                HoverColor: =lblStartPix.Color
+                HoverFill: =lblStartPix.Fill
+                PaddingRight: =0
+                PressedBorderColor: =lblStartPix.BorderColor
+                PressedColor: =lblStartPix.Color
+                PressedFill: =lblStartPix.Fill
+                Size: =8
+                Text: =420
+                Visible: |
+                    =true
+                Width: =90
+                X: =90
+                Y: =105
+                ZIndex: =1
+
+            lblEndPix As label:
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =1
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lblEndPix.BorderColor
+                Height: =20
+                HoverBorderColor: =lblEndPix.BorderColor
+                HoverColor: =lblEndPix.Color
+                HoverFill: =lblEndPix.Fill
+                PaddingRight: =0
+                PressedBorderColor: =lblEndPix.BorderColor
+                PressedColor: =lblEndPix.Color
+                PressedFill: =lblEndPix.Fill
+                Size: =8
+                Text: =galGanttView.Width + Value(lblStartPix.Text)
+                Visible: |
+                    =true
+                Width: =90
+                X: =90
+                Y: =130
+                ZIndex: =2
+
+            lblPixInRange As label:
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =1
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lblPixInRange.BorderColor
+                Height: =20
+                HoverBorderColor: =lblPixInRange.BorderColor
+                HoverColor: =lblPixInRange.Color
+                HoverFill: =lblPixInRange.Fill
+                PaddingRight: =0
+                PressedBorderColor: =lblPixInRange.BorderColor
+                PressedColor: =lblPixInRange.Color
+                PressedFill: =lblPixInRange.Fill
+                Size: =8
+                Text: =lblEndPix.Text - lblStartPix.Text
+                Visible: |
+                    =true
+                Width: =90
+                X: =90
+                Y: =30
+                ZIndex: =3
+
+            lblDaysInRange As label:
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =1
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lblDaysInRange.BorderColor
+                Height: =20
+                HoverBorderColor: =lblDaysInRange.BorderColor
+                HoverColor: =lblDaysInRange.Color
+                HoverFill: =lblDaysInRange.Fill
+                PaddingRight: =0
+                PressedBorderColor: =lblDaysInRange.BorderColor
+                PressedColor: =lblDaysInRange.Color
+                PressedFill: =lblDaysInRange.Fill
+                Size: =8
+                Text: =Round(dteEndDate.SelectedDate - dteStartDate.SelectedDate,0) 
+                Visible: |
+                    =true
+                Width: =90
+                Wrap: =false
+                X: =90
+                Y: =55
+                ZIndex: =4
+
+            lblPixPerDay As label:
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =1
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lblPixPerDay.BorderColor
+                Height: =20
+                HoverBorderColor: =lblPixPerDay.BorderColor
+                HoverColor: =lblPixPerDay.Color
+                HoverFill: =lblPixPerDay.Fill
+                PaddingRight: =0
+                PressedBorderColor: =lblPixPerDay.BorderColor
+                PressedColor: =lblPixPerDay.Color
+                PressedFill: =lblPixPerDay.Fill
+                Size: =8
+                Text: =Value(lblPixInRange.Text)/Value(lblDaysInRange.Text)
+                Visible: |
+                    =true
+                Width: =90
+                X: =90
+                Y: =80
+                ZIndex: =5
+
+            lbllblPixInRangeLabel As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lbllblPixInRangeLabel.BorderColor
+                Height: =20
+                HoverBorderColor: =lbllblPixInRangeLabel.BorderColor
+                HoverColor: =lbllblPixInRangeLabel.Color
+                HoverFill: =lbllblPixInRangeLabel.Fill
+                PaddingLeft: =0
+                PaddingRight: =0
+                PressedBorderColor: =lbllblPixInRangeLabel.BorderColor
+                PressedColor: =lbllblPixInRangeLabel.Color
+                PressedFill: =lbllblPixInRangeLabel.Fill
+                Size: =8
+                Text: |-
+                    ="grid width:"
+                Visible: |
+                    =true
+                Width: =70
+                X: =7
+                Y: =30
+                ZIndex: =6
+
+            lblDaysInRangeLabel As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lblDaysInRangeLabel.BorderColor
+                Height: =20
+                HoverBorderColor: =lblDaysInRangeLabel.BorderColor
+                HoverColor: =lblDaysInRangeLabel.Color
+                HoverFill: =lblDaysInRangeLabel.Fill
+                PaddingLeft: =0
+                PaddingRight: =0
+                PressedBorderColor: =lblDaysInRangeLabel.BorderColor
+                PressedColor: =lblDaysInRangeLabel.Color
+                PressedFill: =lblDaysInRangeLabel.Fill
+                Size: =8
+                Text: |-
+                    ="days in range:"
+                Visible: |
+                    =true
+                Width: =70
+                X: =7
+                Y: =55
+                ZIndex: =7
+
+            lblStartPixLabel As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lblStartPixLabel.BorderColor
+                Height: =20
+                HoverBorderColor: =lblStartPixLabel.BorderColor
+                HoverColor: =lblStartPixLabel.Color
+                HoverFill: =lblStartPixLabel.Fill
+                PaddingLeft: =0
+                PaddingRight: =0
+                PressedBorderColor: =lblStartPixLabel.BorderColor
+                PressedColor: =lblStartPixLabel.Color
+                PressedFill: =lblStartPixLabel.Fill
+                Size: =8
+                Text: |-
+                    ="start pixel:"
+                Visible: |
+                    =true
+                Width: =70
+                X: =7
+                Y: =105
+                ZIndex: =10
+
+            lblEndPixLabel As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lblEndPixLabel.BorderColor
+                Height: =20
+                HoverBorderColor: =lblEndPixLabel.BorderColor
+                HoverColor: =lblEndPixLabel.Color
+                HoverFill: =lblEndPixLabel.Fill
+                PaddingLeft: =0
+                PaddingRight: =0
+                PressedBorderColor: =lblEndPixLabel.BorderColor
+                PressedColor: =lblEndPixLabel.Color
+                PressedFill: =lblEndPixLabel.Fill
+                Size: =8
+                Text: |-
+                    ="end pixel:"
+                Visible: |
+                    =true
+                Width: =70
+                X: =7
+                Y: =130
+                ZIndex: =11
+
+            lblGridDensity As label:
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =1
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lblGridDensity.BorderColor
+                Height: =20
+                HoverBorderColor: =lblGridDensity.BorderColor
+                HoverColor: =lblGridDensity.Color
+                HoverFill: =lblGridDensity.Fill
+                PaddingRight: =0
+                PressedBorderColor: =lblGridDensity.BorderColor
+                PressedColor: =lblGridDensity.Color
+                PressedFill: =lblGridDensity.Fill
+                Size: =8
+                Text: =If(Value(lblPixPerDay.Text)<7, "4WEEKS", Value(lblPixPerDay.Text)<28, "WEEKLY", "DAILY")
+                Visible: =gblShowDebug
+                Width: =90
+                X: =90
+                Y: =5
+                ZIndex: =12
+
+            lbllblGridDensityLabel As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lbllblGridDensityLabel.BorderColor
+                Height: =20
+                HoverBorderColor: =lbllblGridDensityLabel.BorderColor
+                HoverColor: =lbllblGridDensityLabel.Color
+                HoverFill: =lbllblGridDensityLabel.Fill
+                PaddingLeft: =0
+                PaddingRight: =0
+                PressedBorderColor: =lbllblGridDensityLabel.BorderColor
+                PressedColor: =lbllblGridDensityLabel.Color
+                PressedFill: =lbllblGridDensityLabel.Fill
+                Size: =8
+                Text: |-
+                    ="grid density:"
+                Visible: =gblShowDebug
+                Width: =70
+                X: =7
+                Y: =5
+                ZIndex: =13
+
+            lblPixPerDayLabel As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderColor: =lblPixPerDayLabel.BorderColor
+                Height: =20
+                HoverBorderColor: =lblPixPerDayLabel.BorderColor
+                HoverColor: =lblPixPerDayLabel.Color
+                HoverFill: =lblPixPerDayLabel.Fill
+                PaddingLeft: =0
+                PaddingRight: =0
+                PressedBorderColor: =lblPixPerDayLabel.BorderColor
+                PressedColor: =lblPixPerDayLabel.Color
+                PressedFill: =lblPixPerDayLabel.Fill
+                Size: =8
+                Text: |-
+                    ="pixels/day:"
+                Visible: =gblShowDebug
+                Width: =70
+                X: =7
+                Y: =80
+                ZIndex: =14
+
+        lblNavigationLabel As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblNavigationLabel.BorderColor
+            Height: =20
+            HoverBorderColor: =lblNavigationLabel.BorderColor
+            HoverColor: =lblNavigationLabel.Color
+            HoverFill: =lblNavigationLabel.Fill
+            PaddingLeft: =0
+            PaddingRight: =0
+            PressedBorderColor: =lblNavigationLabel.BorderColor
+            PressedColor: =lblNavigationLabel.Color
+            PressedFill: =lblNavigationLabel.Fill
+            Size: =8
+            Text: ="Navigate"
+            Visible: =gblShowDebug
+            Width: =58
+            X: =861
+            ZIndex: =27
+
+        lblZoomLabel As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblZoomLabel.BorderColor
+            Height: =20
+            HoverBorderColor: =lblZoomLabel.BorderColor
+            HoverColor: =lblZoomLabel.Color
+            HoverFill: =lblZoomLabel.Fill
+            PaddingLeft: =0
+            PaddingRight: =0
+            PressedBorderColor: =lblZoomLabel.BorderColor
+            PressedColor: =lblZoomLabel.Color
+            PressedFill: =lblZoomLabel.Fill
+            Size: =8
+            Text: ="Zoom"
+            Visible: =gblShowDebug
+            Width: =68
+            X: =954
+            ZIndex: =28
+
+        galTaskTypes As gallery.galleryVertical:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =1
+            Height: =155
+            Items: =TaskType
+            Layout: =Layout.Vertical
+            ShowNavigation: =true
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =22
+            Width: =196
+            X: =319
+            Y: =21
+            ZIndex: =29
+
+            lblTTTaskTypeDesc As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =ColorValue(ThisItem.Color)
+                Height: =Parent.TemplateHeight
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.Description
+                Width: =Parent.TemplateWidth
+                ZIndex: =1
+
+        lblTaskTypeListLabel As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblTaskTypeListLabel.BorderColor
+            Height: =19
+            HoverBorderColor: =lblTaskTypeListLabel.BorderColor
+            HoverColor: =lblTaskTypeListLabel.Color
+            HoverFill: =lblTaskTypeListLabel.Fill
+            PressedBorderColor: =lblTaskTypeListLabel.BorderColor
+            PressedColor: =lblTaskTypeListLabel.Color
+            PressedFill: =lblTaskTypeListLabel.Fill
+            Size: =8
+            Text: ="Task Types Legend"
+            Visible: |
+                =true
+            Width: =165
+            X: =319
+            ZIndex: =30
+
+        lblAppDataLabel As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblAppDataLabel.BorderColor
+            Height: =19
+            HoverBorderColor: =lblAppDataLabel.BorderColor
+            HoverColor: =lblAppDataLabel.Color
+            HoverFill: =lblAppDataLabel.Fill
+            PressedBorderColor: =lblAppDataLabel.BorderColor
+            PressedColor: =lblAppDataLabel.Color
+            PressedFill: =lblAppDataLabel.Fill
+            Size: =8
+            Text: ="App Data"
+            Visible: |
+                =true
+            Width: =165
+            X: =1142
+            ZIndex: =31
+
+        btnZoomIn As button:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =Color.Gray
+            OnSelect: =Set(gblGanttRangeEnd, gblGanttRangeEnd - 7);Set(gblGanttIncrement, Switch(lblGridDensity.Text, "4WEEKS", 14, "WEEKLY", 7, 3));
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =16
+            Text: ="+"
+            Width: =30
+            X: =992
+            Y: =20
+            ZIndex: =32
+
+        btnZoomOut As button:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =Color.Gray
+            OnSelect: =Set(gblGanttRangeEnd, gblGanttRangeEnd + 7);Set(gblGanttIncrement, Switch(lblGridDensity.Text, "4WEEKS", 14, "WEEKLY", 7, 3));
+            PaddingTop: =4
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =16
+            Text: ="-"
+            Width: =30
+            X: =955
+            Y: =20
+            ZIndex: =33
+
+    lblStartDateLabel As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =lblStartDateLabel.BorderColor
+        Height: =19
+        HoverBorderColor: =lblStartDateLabel.BorderColor
+        HoverColor: =lblStartDateLabel.Color
+        HoverFill: =lblStartDateLabel.Fill
+        PressedBorderColor: =lblStartDateLabel.BorderColor
+        PressedColor: =lblStartDateLabel.Color
+        PressedFill: =lblStartDateLabel.Fill
+        Size: =8
+        Text: ="Start Date"
+        Visible: |
+            =true
+        Width: =70
+        X: =325
+        Y: =56
+        ZIndex: =4
+
+    lblProjectIDLabel As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =lblProjectIDLabel.BorderColor
+        Height: =19
+        HoverBorderColor: =lblProjectIDLabel.BorderColor
+        HoverColor: =lblProjectIDLabel.Color
+        HoverFill: =lblProjectIDLabel.Fill
+        PressedBorderColor: =lblProjectIDLabel.BorderColor
+        PressedColor: =lblProjectIDLabel.Color
+        PressedFill: =lblProjectIDLabel.Fill
+        Size: =8
+        Text: ="Project/Task"
+        Visible: |
+            =true
+        Width: =165
+        X: =81
+        Y: =56
+        ZIndex: =5
+
+    lblDurationLabel As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =lblDurationLabel.BorderColor
+        Height: =19
+        HoverBorderColor: =lblDurationLabel.BorderColor
+        HoverColor: =lblDurationLabel.Color
+        HoverFill: =lblDurationLabel.Fill
+        PressedBorderColor: =lblDurationLabel.BorderColor
+        PressedColor: =lblDurationLabel.Color
+        PressedFill: =lblDurationLabel.Fill
+        Size: =8
+        Text: ="Duration"
+        Visible: |
+            =true
+        Width: =70
+        X: =390
+        Y: =56
+        ZIndex: =6
+
+    lblEmptyMessage As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        Size: =13
+        Text: ="Please select a project to display from the list below"
+        Visible: =CountRows(galGanttView.AllItems)=0
+        Width: =341
+        X: =68
+        Y: =276
+        ZIndex: =7
+
+    ButtonCanvas4 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |
+            =Set(gblShowDebug, true);
+            ClearCollect(colTasks, 'Gantt Data Tester');
+        Width: =96
+        X: =115
+        Y: =0
+        ZIndex: =8
+

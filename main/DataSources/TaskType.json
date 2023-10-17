@@ -1,0 +1,18 @@
+[
+  {
+    "Data": "[{\"Color\":\"#000099\",\"Description\":\"Parent Project\",\"Type\":0},{\"Color\":\"#007200\",\"Description\":\"Design/Drafting\",\"Type\":1},{\"Color\":\"#C100FC\",\"Description\":\"Site Prep\",\"Type\":2},{\"Color\":\"#974C0E\",\"Description\":\"Construction\",\"Type\":3},{\"Color\":\"#FF2626\",\"Description\":\"Install\",\"Type\":4},{\"Color\":\"#999900\",\"Description\":\"Paint\",\"Type\":5},{\"Color\":\"#617C8A\",\"Description\":\"Inspect\",\"Type\":6},{\"Color\":\"#18ABE3\",\"Description\":\"Equipment\",\"Type\":7}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "TaskType",
+    "OrderedColumnNames": [
+      "Type",
+      "Description",
+      "Color"
+    ],
+    "OriginalName": "TaskType",
+    "OriginalSchema": "*[Color:s, Description:s, Type:n]",
+    "Schema": "*[Color:s, Description:s, Type:n]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]
