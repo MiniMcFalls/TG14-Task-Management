@@ -197,7 +197,7 @@ Screen1 As screen:
                     galProjectList.AllItems,
                     chkPLIsSelected.Value = true
                 ).Result,
-                Show.Value
+                Show
             )
         Layout: =Layout.Vertical
         LoadingSpinnerColor: =galGanttView.BorderColor
@@ -240,7 +240,7 @@ Screen1 As screen:
             PressedColor: =lblGVMilestoneName.Color
             PressedFill: =lblGVMilestoneName.Fill
             Size: =8
-            Text: =ThisItem.TaskName
+            Text: =ThisItem.'Compliance Asset Id'
             Visible: =ThisItem.Duration=0
             Width: =254
             X: =lblStartPix.Text + (ThisItem.StartDate-dteStartDate.SelectedDate)*lblPixPerDay + icoGVMilestone.Width 
@@ -262,7 +262,7 @@ Screen1 As screen:
             PressedColor: =lblGVOutsideTaskName.Color
             PressedFill: =lblGVOutsideTaskName.Fill
             Size: =8
-            Text: =ThisItem.TaskName
+            Text: =ThisItem.'Color Tag'
             Visible: =With(ThisItem, And(Len(If(TaskNo=0, ProjectName, TaskName))>=btnGVGanttBar.Width/7,Duration>0))
             Width: =254
             X: = btnGVGanttBar.X + btnGVGanttBar.Width + 5
