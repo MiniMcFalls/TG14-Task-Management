@@ -2,8 +2,8 @@ Screen1 As screen:
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
     OnVisible: |+
         =// Set up some global vars to manage the values
-        Set(gblGanttRangeStart, DateValue("10/1/2021"));
-        Set(gblGanttRangeEnd, DateValue("11/1/2021"));
+        Set(gblGanttRangeStart, Today());
+        Set(gblGanttRangeEnd, Today() + 7);
         Set(gblGanttIncrement, 3); //start with 3 days
         
 
