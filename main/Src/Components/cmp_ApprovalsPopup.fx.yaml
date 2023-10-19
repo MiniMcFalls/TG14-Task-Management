@@ -80,7 +80,8 @@ cmp_ApprovalsPopup As CanvasComponent:
         Height: =930
         HoverFill: =RGBA(105, 121, 126, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =1850
+        Width: =1229.00
+        X: =0.00
         ZIndex: =1
 
     Button27 As button:
@@ -99,6 +100,8 @@ cmp_ApprovalsPopup As CanvasComponent:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -106,17 +109,19 @@ cmp_ApprovalsPopup As CanvasComponent:
         RadiusBottomRight: =25
         RadiusTopLeft: =25
         RadiusTopRight: =25
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =1595
-        X: =128
+        Width: =1059.59
+        X: =85.03
         Y: =90
         ZIndex: =2
 
     Container1 As groupContainer.manualLayoutContainer:
         Height: =701
-        Width: =409
-        X: =128
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =271.71
+        X: =85.03
         Y: =139
         ZIndex: =3
 
@@ -131,10 +136,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: ="TLB"
-            Width: =169
-            X: =217
+            Width: =112.27
+            X: =144.16
             Y: =199
             ZIndex: =1
 
@@ -150,11 +157,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =76
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: =""
             Visible: =If(DropdownCanvas4.Selected.Value = Blank(), true, false)
-            Width: =169
-            X: =217
+            Width: =112.27
+            X: =144.16
             Y: =199
             ZIndex: =2
 
@@ -162,8 +171,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Items: =[Blank(), "Air","Land","Sea","PJHQ","Defence"]
-            Width: =166
-            X: =218
+            Width: =110.28
+            X: =144.83
             Y: =239
             ZIndex: =3
 
@@ -173,6 +182,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                 FieldType: ="s"
                 FieldVariantName: ="textualColumn"
                 Order: =1
+                Width: =66.43
+                X: =0.00
                 ZIndex: =37
 
         "InfoButtonCanvas1 As 'Information button'":
@@ -180,8 +191,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             DisplayMode: =DisplayMode.Edit
             Height: =32
             IconSize: ='InfoButtonCanvas.IconSize'.Medium
-            Width: =32
-            X: =354
+            Width: =21.26
+            X: =235.17
             Y: =203
             ZIndex: =4
 
@@ -193,8 +204,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =85
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =356
-            X: =30
+            Width: =236.50
+            X: =19.93
             Y: =25
             ZIndex: =5
 
@@ -214,6 +225,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
             OnSelect: =Set(RejectPopupVis, true)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(Self.Fill,-50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(Self.Fill, -30%)
@@ -221,10 +234,10 @@ cmp_ApprovalsPopup As CanvasComponent:
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Size: =15
+            Size: =9.97
             Text: ="Reject"
-            Width: =175
-            X: =30
+            Width: =116.26
+            X: =19.93
             Y: =603
             ZIndex: =6
 
@@ -239,11 +252,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: |-
                 ="Job #"
-            Width: =56
-            X: =24
+            Width: =37.20
+            X: =15.94
             Y: =121
             ZIndex: =7
 
@@ -258,10 +273,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: ="Task Category"
-            Width: =126
-            X: =80
+            Width: =83.71
+            X: =53.15
             Y: =121
             ZIndex: =8
 
@@ -276,10 +293,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: ="Type"
-            Width: =65
-            X: =208
+            Width: =43.18
+            X: =138.18
             Y: =121
             ZIndex: =9
 
@@ -294,10 +313,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: ="Response ID"
-            Width: =113
-            X: =273
+            Width: =75.07
+            X: =181.36
             Y: =121
             ZIndex: =10
 
@@ -315,11 +336,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Folder
             OnSelect: =
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =68
-            X: =171
+            Width: =45.17
+            X: =113.60
             Y: =37
             ZIndex: =11
 
@@ -332,8 +355,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =56
-            X: =24
+            Width: =37.20
+            X: =15.94
             Y: =161
             ZIndex: =12
 
@@ -346,8 +369,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =126
-            X: =80
+            Width: =83.71
+            X: =53.15
             Y: =161
             ZIndex: =13
 
@@ -359,8 +382,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =67
-            X: =206
+            Width: =44.51
+            X: =136.85
             Y: =161
             ZIndex: =14
 
@@ -372,8 +395,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =113
-            X: =273
+            Width: =75.07
+            X: =181.36
             Y: =161
             ZIndex: =15
 
@@ -382,11 +405,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            Size: =9.30
             Text: ="Core Info"
             VerticalAlign: ="Middle"
             Weight: ='TextCanvas.Weight'.Bold
-            Width: =96
-            X: =157
+            Width: =63.77
+            X: =104.30
             Y: =79
             ZIndex: =16
 
@@ -400,8 +424,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =1
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =250
-            X: =80
+            Width: =166.08
+            X: =53.15
             Y: =119
             ZIndex: =17
 
@@ -413,8 +437,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =85
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =356
-            X: =30
+            Width: =236.50
+            X: =19.93
             Y: =277
             ZIndex: =18
 
@@ -432,11 +456,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Person
             OnSelect: =
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =68
-            X: =171
+            Width: =45.17
+            X: =113.60
             Y: =289
             ZIndex: =19
 
@@ -445,11 +471,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            Size: =9.30
             Text: ="Customer Details"
             VerticalAlign: ="Middle"
             Weight: ='TextCanvas.Weight'.Bold
-            Width: =130
-            X: =140
+            Width: =86.36
+            X: =93.00
             Y: =331
             ZIndex: =20
 
@@ -463,8 +490,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =1
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =250
-            X: =80
+            Width: =166.08
+            X: =53.15
             Y: =371
             ZIndex: =21
 
@@ -479,10 +506,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: ="Name"
-            Width: =99
-            X: =24
+            Width: =65.77
+            X: =15.94
             Y: =380
             ZIndex: =22
 
@@ -495,8 +524,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =263
-            X: =123
+            Width: =174.71
+            X: =81.71
             Y: =384
             ZIndex: =23
 
@@ -511,10 +540,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: ="Section/Role"
-            Width: =99
-            X: =24
+            Width: =65.77
+            X: =15.94
             Y: =415
             ZIndex: =24
 
@@ -527,8 +558,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =263
-            X: =123
+            Width: =174.71
+            X: =81.71
             Y: =420
             ZIndex: =25
 
@@ -543,10 +574,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: ="Email"
-            Width: =99
-            X: =24
+            Width: =65.77
+            X: =15.94
             Y: =455
             ZIndex: =26
 
@@ -559,8 +592,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =263
-            X: =123
+            Width: =174.71
+            X: =81.71
             Y: =460
             ZIndex: =27
 
@@ -575,9 +608,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: ="Contact Tel"
-            Width: =123
+            Width: =81.71
+            X: =0.00
             Y: =495
             ZIndex: =28
 
@@ -590,8 +626,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =263
-            X: =123
+            Width: =174.71
+            X: =81.71
             Y: =500
             ZIndex: =29
 
@@ -606,9 +642,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: ="Alt Contact"
-            Width: =123
+            Width: =81.71
+            X: =0.00
             Y: =551
             ZIndex: =30
 
@@ -621,8 +660,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =263
-            X: =123
+            Width: =174.71
+            X: =81.71
             Y: =556
             ZIndex: =31
 
@@ -636,8 +675,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =1
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =250
-            X: =80
+            Width: =166.08
+            X: =53.15
             Y: =546
             ZIndex: =32
 
@@ -838,6 +877,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                         }
                     )
                 )
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(Self.Fill, -50%)
             PressedColor: =Color.White
             PressedFill: =ColorFade(Self.Fill,-30%)
@@ -845,10 +886,10 @@ cmp_ApprovalsPopup As CanvasComponent:
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Size: =15
+            Size: =9.97
             Text: ="Approve"
-            Width: =175
-            X: =211
+            Width: =116.26
+            X: =140.17
             Y: =603
             ZIndex: =33
 
@@ -867,6 +908,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
             OnSelect: =Set(varFurtherDetails, true)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(Self.Fill,-50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(Self.Fill, -30%)
@@ -874,10 +917,10 @@ cmp_ApprovalsPopup As CanvasComponent:
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Size: =15
+            Size: =9.97
             Text: ="Request Further Details"
-            Width: =356
-            X: =30
+            Width: =236.50
+            X: =19.93
             Y: =651
             ZIndex: =34
 
@@ -892,10 +935,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: ="AHB"
-            Width: =182
-            X: =24
+            Width: =120.90
+            X: =15.94
             Y: =199
             ZIndex: =35
 
@@ -907,8 +952,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =56
-            X: =24
+            Width: =37.20
+            X: =15.94
             Y: =239
             ZIndex: =36
 
@@ -920,8 +965,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =32
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =126
-            X: =80
+            Width: =83.71
+            X: =53.15
             Y: =239
             ZIndex: =37
 
@@ -929,8 +974,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Label: ="Override"
-            Width: =110
-            X: =80
+            Width: =73.07
+            X: =53.15
             Y: =239
             ZIndex: =38
 
@@ -956,6 +1001,8 @@ cmp_ApprovalsPopup As CanvasComponent:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -963,10 +1010,10 @@ cmp_ApprovalsPopup As CanvasComponent:
         RadiusBottomRight: =0
         RadiusTopLeft: =25
         RadiusTopRight: =0
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =1386
-        X: =128
+        Width: =920.75
+        X: =85.03
         Y: =90
         ZIndex: =4
 
@@ -992,11 +1039,13 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Blank()
             );
             Refresh('TG14 Task Information')
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =37
-        X: =143
+        Width: =24.58
+        X: =95.00
         Y: =96
         ZIndex: =5
 
@@ -1011,10 +1060,12 @@ cmp_ApprovalsPopup As CanvasComponent:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =Button33.Height
-        Size: =20
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =13.29
         Text: =cmp_ApprovalsPopup.SelectedJob.'Approval Status'
-        Width: =405
-        X: =Button33.X + (Button33.Width/2) - (Self.Width/2)
+        Width: =269.05
+        X: =410.89
         Y: =Button33.Y
         ZIndex: =6
 
@@ -1034,6 +1085,8 @@ cmp_ApprovalsPopup As CanvasComponent:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1041,10 +1094,10 @@ cmp_ApprovalsPopup As CanvasComponent:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =25
-        Size: =15
+        Size: =9.97
         Text: =Text(cmp_ApprovalsPopup.SelectedJob.'Task Date', DateTimeFormat.ShortDate)
-        Width: =209
-        X: =1514
+        Width: =138.84
+        X: =1005.78
         Y: =90
         ZIndex: =7
 
@@ -1057,8 +1110,8 @@ cmp_ApprovalsPopup As CanvasComponent:
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =80
-        Width: =209
-        X: =1514
+        Width: =138.84
+        X: =1005.78
         Y: =139
         ZIndex: =8
 
@@ -1069,7 +1122,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Height: =1
             OnSelect: =Select(Parent)
-            Width: =209
+            Width: =138.84
+            X: =0.00
             Y: =79
             ZIndex: =1
 
@@ -1085,10 +1139,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FontWeight: =FontWeight.Semibold
             Height: =25
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: =ThisItem.StartTime
-            Width: =54
-            X: =17
+            Width: =35.87
+            X: =11.29
             ZIndex: =2
 
         Label26_5 As label:
@@ -1103,10 +1159,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =54
             OnSelect: =Select(Parent)
             Overflow: =Overflow.Scroll
-            Size: =10
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =6.64
             Text: =ThisItem.TaskLocation
-            Width: =153
-            X: =56
+            Width: =101.64
+            X: =37.20
             Y: =25
             ZIndex: =3
 
@@ -1122,11 +1180,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             FontWeight: =FontWeight.Semibold
             Height: =25
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: |-
                 ="Task: " & ThisItem.Title
-            Width: =132
-            X: =71
+            Width: =87.69
+            X: =47.16
             ZIndex: =4
 
         Icon6_2 As icon.Waypoint:
@@ -1143,11 +1203,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Waypoint
             OnSelect: =Select(Parent)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =35
-            X: =17
+            Width: =23.25
+            X: =11.29
             Y: =39
             ZIndex: =5
 
@@ -1160,8 +1222,8 @@ cmp_ApprovalsPopup As CanvasComponent:
         Height: =750
         HoverFill: =RGBA(105, 121, 126, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =1
-        X: =1513
+        Width: =0.67
+        X: =1005.13
         Y: =90
         ZIndex: =9
 
@@ -1238,8 +1300,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             "
             <br>
             <b>Task Requirements: </b>" & cmp_ApprovalsPopup.SelectedJob.'Task Requirements'
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =7.31
         Visible: =false
-        Width: =590
+        Width: =391.95
+        X: =0.00
         ZIndex: =10
 
     Rectangle30 As rectangle:
@@ -1251,15 +1317,17 @@ cmp_ApprovalsPopup As CanvasComponent:
         Height: =701
         HoverFill: =RGBA(105, 121, 126, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =2
-        X: =537
+        Width: =1.33
+        X: =356.74
         Y: =139
         ZIndex: =11
 
     Container2 As groupContainer.manualLayoutContainer:
         Height: =701
-        Width: =974
-        X: =539
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =647.05
+        X: =358.07
         Y: =139
         ZIndex: =12
 
@@ -1271,8 +1339,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =85
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =887
-            X: =40
+            Width: =589.25
+            X: =26.58
             Y: =25
             ZIndex: =1
 
@@ -1290,11 +1358,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Journal
             OnSelect: =
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =169
-            X: =399
+            Width: =112.27
+            X: =265.06
             Y: =37
             ZIndex: =2
 
@@ -1303,11 +1373,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            Size: =9.30
             Text: ="Detailed Info"
             VerticalAlign: ="Middle"
             Weight: ='TextCanvas.Weight'.Bold
-            Width: =239
-            X: =364
+            Width: =158.77
+            X: =241.81
             Y: =79
             ZIndex: =3
 
@@ -1321,8 +1392,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =1
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =622
-            X: =173
+            Width: =413.21
+            X: =114.93
             Y: =119
             ZIndex: =4
 
@@ -1336,10 +1407,12 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =11
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =7.31
             Text: ="Task Requirements"
-            Width: =137
-            X: =52
+            Width: =91.01
+            X: =34.55
             Y: =208
             ZIndex: =16
 
@@ -1353,8 +1426,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Type: ="Text"
             ValidationState: ="None"
             Value: =cmp_ApprovalsPopup.SelectedJob.'Task Requirements'
-            Width: =874
-            X: =53
+            Width: =580.62
+            X: =35.21
             Y: =248
             ZIndex: =19
 
@@ -1376,10 +1449,12 @@ cmp_ApprovalsPopup As CanvasComponent:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Size: =11
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =7.31
                 Text: ="Task Date"
-                Width: =137
-                X: =52
+                Width: =91.01
+                X: =34.55
                 Y: =121
                 ZIndex: =5
 
@@ -1394,10 +1469,12 @@ cmp_ApprovalsPopup As CanvasComponent:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Size: =11
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =7.31
                 Text: ="Task Time"
-                Width: =137
-                X: =189
+                Width: =91.01
+                X: =125.55
                 Y: =121
                 ZIndex: =6
 
@@ -1409,8 +1486,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Height: =32
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Subtle
-                Width: =128
-                X: =194
+                Width: =85.03
+                X: =128.88
                 Y: =161
                 ZIndex: =7
 
@@ -1425,10 +1502,12 @@ cmp_ApprovalsPopup As CanvasComponent:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Size: =11
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =7.31
                 Text: ="Task Location"
-                Width: =334
-                X: =593
+                Width: =221.89
+                X: =393.95
                 Y: =121
                 ZIndex: =8
 
@@ -1440,8 +1519,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Height: =32
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Subtle
-                Width: =335
-                X: =592
+                Width: =222.55
+                X: =393.28
                 Y: =161
                 ZIndex: =9
 
@@ -1456,10 +1535,12 @@ cmp_ApprovalsPopup As CanvasComponent:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Size: =11
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =7.31
                 Text: ="Deadline"
-                Width: =137
-                X: =322
+                Width: =91.01
+                X: =213.91
                 Y: =121
                 ZIndex: =10
 
@@ -1471,8 +1552,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Height: =32
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Subtle
-                Width: =130
-                X: =325
+                Width: =86.36
+                X: =215.90
                 Y: =161
                 ZIndex: =11
 
@@ -1487,8 +1568,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Height: =26
                 HoverFill: =RGBA(105, 121, 126, 1)
                 PressedFill: =RGBA(105, 121, 126, 1)
-                Width: =83
-                X: =214
+                Width: =55.14
+                X: =142.16
                 Y: =164
                 ZIndex: =12
 
@@ -1497,13 +1578,14 @@ cmp_ApprovalsPopup As CanvasComponent:
                 AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
                 Height: =22
+                Size: =9.30
                 Text: =If(IsBlank(varTimeValue),cmp_ApprovalsPopup.SelectedJob.'Start Time',Text(varTimeValue,DateTimeFormat.ShortTime24,"en-GB"))
                 Underline: =false
                 VerticalAlign: ="Middle"
                 Weight: ='TextCanvas.Weight'.Semibold
-                Width: =100
+                Width: =66.43
                 Wrap: =false
-                X: =207
+                X: =137.51
                 Y: =166
                 ZIndex: =13
 
@@ -1518,10 +1600,12 @@ cmp_ApprovalsPopup As CanvasComponent:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Size: =11
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =7.31
                 Text: ="Tail Number"
-                Width: =137
-                X: =455
+                Width: =91.01
+                X: =302.27
                 Y: =121
                 ZIndex: =14
 
@@ -1533,8 +1617,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Height: =32
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Subtle
-                Width: =130
-                X: =458
+                Width: =86.36
+                X: =304.26
                 Y: =161
                 ZIndex: =15
 
@@ -1551,11 +1635,13 @@ cmp_ApprovalsPopup As CanvasComponent:
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Clock
                 OnSelect: =Set(varShowTimePicker, true)
+                PaddingRight: =0.00
+                PaddingTop: =0.00
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =38
-                X: =284
+                Width: =25.25
+                X: =188.67
                 Y: =166
                 ZIndex: =20
 
@@ -1572,12 +1658,13 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Height: =30
                 HoverDateFill: =RGBA(200, 200, 200, 1)
                 IconBackground: =RGBA(105, 121, 126, 1)
-                PaddingTop: =5
+                PaddingRight: =3.32
+                PaddingTop: =3.32
                 SelectedDateFill: =RGBA(105, 121, 126, 1)
-                Size: =13
+                Size: =8.64
                 StartOfWeek: =StartOfWeek.Monday
-                Width: =139
-                X: =52
+                Width: =92.34
+                X: =34.55
                 Y: =162
                 ZIndex: =21
 
@@ -1598,7 +1685,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Height: =930
             Visible: =If(RejectPopupVis, true, false)
-            Width: =1850
+            Width: =1229.00
+            X: =0.00
             ZIndex: =16
 
         BadgeCanvas7 As Badge:
@@ -1611,8 +1699,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
             Visible: =If(RejectPopupVis, true, false)
-            Width: =974
-            X: =438
+            Width: =647.05
+            X: =290.97
             Y: =201
             ZIndex: =17
 
@@ -1627,12 +1715,14 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =20
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =13.29
             Text: ="CONFIRMATION"
             Underline: =true
             Visible: =If(RejectPopupVis, true, false)
-            Width: =450
-            X: =692
+            Width: =298.95
+            X: =459.71
             Y: =229
             ZIndex: =18
 
@@ -1646,11 +1736,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: =Text(Value('Approvals Gallery'.Selected.Title), "0000")
             Visible: =If(RejectPopupVis, true, false)
-            Width: =49
-            X: =1068
+            Width: =32.55
+            X: =709.50
             Y: =280
             ZIndex: =19
 
@@ -1663,12 +1755,14 @@ cmp_ApprovalsPopup As CanvasComponent:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: |-
                 ="You are about to reject the selected tasking: " 
             Visible: =If(RejectPopupVis, true, false)
-            Width: =349
-            X: =717
+            Width: =231.85
+            X: =476.32
             Y: =280
             ZIndex: =20
 
@@ -1683,11 +1777,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =55
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="You now have the ability to add any comments below which will be forwarded onto the original requester."
             Visible: =If(RejectPopupVis, true, false)
-            Width: =690
-            X: =572
+            Width: =458.38
+            X: =379.99
             Y: =316
             ZIndex: =21
 
@@ -1754,6 +1850,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                     ),
                     varEmailContent
                 );
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(Self.Fill, -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(Self.Fill, -30%)
@@ -1761,10 +1859,11 @@ cmp_ApprovalsPopup As CanvasComponent:
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Size: =15
+            Size: =9.97
             Text: ="CONFIRM"
             Visible: =If(RejectPopupVis, true, false)
-            X: =837
+            Width: =106.29
+            X: =556.04
             Y: =585
             ZIndex: =22
 
@@ -1780,13 +1879,15 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CancelBadge
             OnSelect: =Set(RejectPopupVis, false);Reset('Reject Comments_1')
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Tooltip: ="Close"
             Visible: =If(RejectPopupVis, true, false)
-            Width: =33
-            X: =1357
+            Width: =21.93
+            X: =901.49
             Y: =219
             ZIndex: =23
 
@@ -1801,8 +1902,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             ValidationState: ="None"
             Value: =""
             Visible: =If(RejectPopupVis, true, false)
-            Width: =838
-            X: =498
+            Width: =556.70
+            X: =330.83
             Y: =379
             ZIndex: =24
 
@@ -1817,12 +1918,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            Size: =9.30
             Text: ="No Conflicts Present"
             VerticalAlign: ="Middle"
             Visible: =If(Gallery8_2.AllItemsCount = 0, true, false)
             Weight: ='TextCanvas.Weight'.Semibold
-            Width: =133
-            X: =1552
+            Width: =88.35
+            X: =1031.03
             Y: =234
             ZIndex: =13
 
@@ -1838,12 +1940,14 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CheckBadge
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(Gallery8_2.AllItemsCount = 0, true, false)
-            Width: =44
-            X: =1596
+            Width: =29.23
+            X: =1060.26
             Y: =181
             ZIndex: =14
 
@@ -1858,8 +1962,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(Gallery8_2.AllItemsCount = 0, true, false)
-            Width: =75
-            X: =1581
+            Width: =49.83
+            X: =1050.30
             Y: =230
             ZIndex: =15
 
@@ -1881,7 +1985,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =varNotifyWindow
-            Width: =1850
+            Width: =1229.00
+            X: =0.00
             ZIndex: =25
 
         "'Cust Det - Background Pill_7' As button":
@@ -1899,6 +2004,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1906,11 +2013,11 @@ cmp_ApprovalsPopup As CanvasComponent:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =varNotifyWindow
-            Width: =1301
-            X: =275
+            Width: =864.29
+            X: =182.69
             Y: =215
             ZIndex: =26
 
@@ -1928,6 +2035,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1935,11 +2044,11 @@ cmp_ApprovalsPopup As CanvasComponent:
             RadiusBottomRight: =30
             RadiusTopLeft: =30
             RadiusTopRight: =30
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =varNotifyWindow
-            Width: =1274
-            X: =288
+            Width: =846.35
+            X: =191.32
             Y: =227
             ZIndex: =27
 
@@ -1953,10 +2062,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
             Image: ='Pulse-1.4s-284px'
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =varNotifyWindow
-            X: =875
+            Width: =66.43
+            X: =581.28
             Y: =350
             ZIndex: =28
 
@@ -1972,11 +2084,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =69
-            Size: =18
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =11.96
             Text: ="Approving, Standby..."
             Visible: =varNotifyWindow
-            Width: =479
-            X: =686
+            Width: =318.21
+            X: =455.73
             Y: =278
             ZIndex: =29
 
@@ -1996,14 +2110,16 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Size: =13
+            Size: =8.64
             Text: ="Current Tasks"
             Visible: =varNotifyWindow
-            Width: =224
-            X: =652
+            Width: =148.81
+            X: =433.14
             Y: =501
             ZIndex: =30
 
@@ -2023,14 +2139,16 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Size: =13
+            Size: =8.64
             Text: ="1177 List"
             Visible: =varNotifyWindow
-            Width: =224
-            X: =652
+            Width: =148.81
+            X: =433.14
             Y: =551
             ZIndex: =31
 
@@ -2044,11 +2162,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =18
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =11.96
             Text: ="Information Patched"
             Visible: =varNotifyWindow
-            Width: =241
-            X: =651
+            Width: =160.10
+            X: =432.47
             Y: =463
             ZIndex: =32
 
@@ -2064,12 +2184,14 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CheckBadge
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(Checkbox1_10.Value && Checkbox1_11.Value = true, true, false)
-            Width: =33
-            X: =614
+            Width: =21.93
+            X: =407.89
             Y: =464
             ZIndex: =33
 
@@ -2089,14 +2211,16 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Size: =13
+            Size: =8.64
             Text: ="Email Sent"
             Visible: =varNotifyWindow
-            Width: =224
-            X: =990
+            Width: =148.81
+            X: =657.68
             Y: =501
             ZIndex: =34
 
@@ -2110,11 +2234,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =18
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =11.96
             Text: ="Customer Notification"
             Visible: =varNotifyWindow
-            Width: =272
-            X: =989
+            Width: =180.70
+            X: =657.02
             Y: =463
             ZIndex: =35
 
@@ -2130,12 +2256,14 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CheckBadge
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(Checkbox1_12.Value = true, true, false)
-            Width: =33
-            X: =952
+            Width: =21.93
+            X: =632.44
             Y: =464
             ZIndex: =36
 
@@ -2155,7 +2283,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Height: =930
             OnSelect: =Set(varShowTimePicker, false)
             Visible: =varShowTimePicker
-            Width: =1850
+            Width: =1229.00
+            X: =0.00
             ZIndex: =37
 
         BadgeCanvas1 As Badge:
@@ -2167,8 +2296,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Subtle
             Visible: =varShowTimePicker
-            Width: =100
-            X: =861
+            Width: =66.43
+            X: =571.98
             Y: =298
             ZIndex: =38
 
@@ -2197,8 +2326,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             TemplatePadding: =2
             TemplateSize: =60
             Visible: =varShowTimePicker
-            Width: =50
-            X: =861
+            Width: =33.22
+            X: =571.98
             Y: =300
             ZIndex: =39
 
@@ -2223,6 +2352,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
                 OnSelect: =Select(Parent)
+                PaddingRight: =3.32
+                PaddingTop: =3.32
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -2230,10 +2361,10 @@ cmp_ApprovalsPopup As CanvasComponent:
                 RadiusBottomRight: =5
                 RadiusTopLeft: =5
                 RadiusTopRight: =5
-                Size: =15
+                Size: =9.97
                 Text: =""
-                Width: =40
-                X: =3
+                Width: =26.58
+                X: =2.00
                 ZIndex: =1
 
             Label17_2 As label:
@@ -2256,10 +2387,13 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Height: =Parent.TemplateHeight
                 HoverFill: =If(!ThisItem.IsSelected, ColorFade(Self.Fill, 70%))
                 OnSelect: =Select(Parent)
+                PaddingRight: =3.32
+                PaddingTop: =3.32
                 PressedFill: =Self.HoverFill
-                Size: =13
+                Size: =8.64
                 Text: =ThisItem.Value
-                Width: =46
+                Width: =30.56
+                X: =0.00
                 ZIndex: =2
 
         gal_TimePicker_Minutes_1 As gallery.galleryVertical:
@@ -2287,8 +2421,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             TemplatePadding: =1
             TemplateSize: =60
             Visible: =varShowTimePicker
-            Width: =50
-            X: =911
+            Width: =33.22
+            X: =605.20
             Y: =300
             ZIndex: =40
 
@@ -2313,6 +2447,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
                 OnSelect: =Select(Parent)
+                PaddingRight: =3.32
+                PaddingTop: =3.32
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -2320,10 +2456,10 @@ cmp_ApprovalsPopup As CanvasComponent:
                 RadiusBottomRight: =5
                 RadiusTopLeft: =5
                 RadiusTopRight: =5
-                Size: =15
+                Size: =9.97
                 Text: =""
-                Width: =40
-                X: =4
+                Width: =26.58
+                X: =2.65
                 ZIndex: =1
 
             Label17_3 As label:
@@ -2340,10 +2476,13 @@ cmp_ApprovalsPopup As CanvasComponent:
                 Height: =Parent.TemplateHeight
                 HoverFill: =If(!ThisItem.IsSelected, ColorFade(Self.Fill, 70%))
                 OnSelect: =Select(Parent)
+                PaddingRight: =3.32
+                PaddingTop: =3.32
                 PressedFill: =Self.HoverFill
-                Size: =13
+                Size: =8.64
                 Text: =ThisItem.Value
-                Width: =Parent.TemplateWidth
+                Width: =31.89
+                X: =0.00
                 ZIndex: =2
 
     "'Further Details Popup' As group":
@@ -2363,7 +2502,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Height: =930
             Visible: =If(varFurtherDetails, true, false)
-            Width: =1850
+            Width: =1229.00
+            X: =0.00
             ZIndex: =41
 
         BadgeCanvas7_1 As Badge:
@@ -2376,8 +2516,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
             Visible: =If(varFurtherDetails, true, false)
-            Width: =974
-            X: =438
+            Width: =647.05
+            X: =290.97
             Y: =201
             ZIndex: =42
 
@@ -2392,12 +2532,14 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =20
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =13.29
             Text: ="CONFIRMATION"
             Underline: =true
             Visible: =If(varFurtherDetails, true, false)
-            Width: =450
-            X: =692
+            Width: =298.95
+            X: =459.71
             Y: =229
             ZIndex: =43
 
@@ -2411,11 +2553,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: =Text(Value('Approvals Gallery'.Selected.Title), "0000")
             Visible: =If(varFurtherDetails, true, false)
-            Width: =49
-            X: =1117
+            Width: =32.55
+            X: =742.05
             Y: =280
             ZIndex: =44
 
@@ -2428,12 +2572,14 @@ cmp_ApprovalsPopup As CanvasComponent:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: |-
                 ="You are requesting further details for the following task: " 
             Visible: =If(varFurtherDetails, true, false)
-            Width: =435
-            X: =681
+            Width: =288.98
+            X: =452.41
             Y: =280
             ZIndex: =45
 
@@ -2448,11 +2594,13 @@ cmp_ApprovalsPopup As CanvasComponent:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =55
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="You now have the ability to add any comments below which will be forwarded onto the original requester."
             Visible: =If(varFurtherDetails, true, false)
-            Width: =690
-            X: =572
+            Width: =458.38
+            X: =379.99
             Y: =316
             ZIndex: =46
 
@@ -2507,6 +2655,8 @@ cmp_ApprovalsPopup As CanvasComponent:
                     ),
                     varEmailContent
                 );
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(Self.Fill, -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(Self.Fill, -30%)
@@ -2514,10 +2664,11 @@ cmp_ApprovalsPopup As CanvasComponent:
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Size: =15
+            Size: =9.97
             Text: ="CONFIRM"
             Visible: =If(varFurtherDetails, true, false)
-            X: =837
+            Width: =106.29
+            X: =556.04
             Y: =585
             ZIndex: =47
 
@@ -2533,13 +2684,15 @@ cmp_ApprovalsPopup As CanvasComponent:
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CancelBadge
             OnSelect: =Set(varFurtherDetails, false); Reset('Further Comments');
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Tooltip: ="Close"
             Visible: =If(varFurtherDetails, true, false)
-            Width: =33
-            X: =1357
+            Width: =21.93
+            X: =901.49
             Y: =219
             ZIndex: =48
 
@@ -2554,8 +2707,8 @@ cmp_ApprovalsPopup As CanvasComponent:
             ValidationState: ="None"
             Value: =""
             Visible: =If(varFurtherDetails, true, false)
-            Width: =838
-            X: =498
+            Width: =556.70
+            X: =330.83
             Y: =379
             ZIndex: =49
 

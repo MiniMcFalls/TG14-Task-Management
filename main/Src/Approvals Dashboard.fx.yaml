@@ -205,8 +205,12 @@
             </tr>
             </tbody>
             </table>"
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =7.31
         Visible: =false
-        Width: =82
+        Width: =54.48
+        X: =0.00
         ZIndex: =1
 
     Button20_3 As button:
@@ -220,22 +224,21 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =858
+        Height: =768
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         PaddingBottom: =0
         PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =1478
-        X: =363
-        Y: =64
+        Width: =981.87
+        X: =241.15
         ZIndex: =3
 
     Button22_1 As button:
@@ -253,16 +256,18 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =24
+        Size: =15.94
         Text: =""
-        Width: =1428
-        X: =388
-        Y: =141
+        Width: =948.65
+        X: =257.76
+        Y: =14
         ZIndex: =6
 
     Button22 As button:
@@ -280,15 +285,17 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
-        Size: =24
+        Size: =15.94
         Text: ="Approvals Dashboard"
-        Width: =1429
-        X: =388
+        Width: =949.32
+        X: =257.76
         Y: =84
         ZIndex: =7
 
@@ -304,9 +311,9 @@
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =185
-        Width: =1428
-        X: =388
-        Y: =141
+        Width: =948.65
+        X: =257.76
+        Y: =14
         ZIndex: =9
 
         Separator2 As rectangle:
@@ -314,7 +321,8 @@
             Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             Height: =1
             OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
+            Width: =948.65
+            X: =0.00
             Y: =Max(Parent.TemplateHeight - 1,10)
             ZIndex: =4
 
@@ -327,14 +335,14 @@
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =20
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Size: =13.29
             Text: |-
                 ="Task: " & ThisItem.Title & " - " & "Date: " & Text(ThisItem.'Task Date', "dd/mm/yyyy", "en-GB") & " - " & "Time: " & ThisItem.'Start Time'
             VerticalAlign: =VerticalAlign.Top
-            Width: =598
-            X: =155
+            Width: =397.27
+            X: =102.97
             Y: =8
             ZIndex: =5
 
@@ -350,11 +358,13 @@
             FontWeight: =FontWeight.Semibold
             Height: =30
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: |-
                 ="Project Cat: "
-            Width: =142
-            X: =155
+            Width: =94.33
+            X: =102.97
             Y: =47
             ZIndex: =6
 
@@ -370,11 +380,13 @@
             FontWeight: =FontWeight.Semibold
             Height: =30
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: |-
                 ="Location: "
-            Width: =142
-            X: =155
+            Width: =94.33
+            X: =102.97
             Y: =Label13.Y + Label13.Height + 5
             ZIndex: =7
 
@@ -389,10 +401,12 @@
             Font: =Font.'Segoe UI'
             Height: =30
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: =ThisItem.'Project Category'.Value
-            Width: =221
-            X: =297
+            Width: =146.81
+            X: =197.31
             Y: =47
             ZIndex: =8
 
@@ -408,10 +422,12 @@
             Font: =Font.'Segoe UI'
             Height: =30
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: =ThisItem.'Task Location'
-            Width: =304
-            X: =297
+            Width: =201.96
+            X: =197.31
             Y: =83
             ZIndex: =9
 
@@ -427,11 +443,13 @@
             FontWeight: =FontWeight.Semibold
             Height: =27
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: |-
                 ="Date Submitted: "
-            Width: =142
-            X: =155
+            Width: =94.33
+            X: =102.97
             Y: =Label13_3.Y + Label13_3.Height + 5
             ZIndex: =10
 
@@ -446,10 +464,12 @@
             Font: =Font.'Segoe UI'
             Height: =27
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: =ThisItem.'Date Submitted'
-            Width: =221
-            X: =297
+            Width: =146.81
+            X: =197.31
             Y: =Label13_4.Y
             ZIndex: =11
 
@@ -468,6 +488,8 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
             OnSelect: =
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(Self.Fill, -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(Self.Fill, -30%)
@@ -475,10 +497,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =15
             RadiusTopRight: =0
-            Size: =12
+            Size: =7.97
             Text: =
-            Width: =50
-            X: =1378
+            Width: =33.22
+            X: =915.44
             Y: =1
             ZIndex: =12
 
@@ -495,11 +517,13 @@
             FontWeight: =FontWeight.Semibold
             Height: =31
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: |-
                 ="Task Description:"
-            Width: =153
-            X: =601
+            Width: =101.64
+            X: =399.26
             Y: =Label13_10.Y + Label13_10.Height
             ZIndex: =13
 
@@ -515,11 +539,13 @@
             Height: =75
             OnSelect: =Select(Parent)
             Overflow: =Overflow.Scroll
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: =ThisItem.'Task Requirements'
             VerticalAlign: =VerticalAlign.Top
-            Width: =620
-            X: =Label13_9.X
+            Width: =411.88
+            X: =503.56
             Y: =Label13_6.Y
             ZIndex: =14
 
@@ -536,11 +562,13 @@
             FontWeight: =FontWeight.Semibold
             Height: =31
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: |-
                 ="POC:"
-            Width: =153
-            X: =Label13.X + Label13.X + 295
+            Width: =101.64
+            X: =401.92
             Y: =Label13.Y
             ZIndex: =15
 
@@ -556,11 +584,13 @@
             Height: =31
             OnSelect: =Select(Parent)
             Overflow: =Overflow.Scroll
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: =Concatenate(ThisItem.Rank & " " & ThisItem.'Customer Name')
             VerticalAlign: =VerticalAlign.Top
-            Width: =283
-            X: =Label13_8.X + Label13_8.Width
+            Width: =188.00
+            X: =503.56
             Y: =47
             ZIndex: =16
 
@@ -577,11 +607,13 @@
             FontWeight: =FontWeight.Semibold
             Height: =31
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: |-
                 ="Contact  Number:"
-            Width: =153
-            X: =601
+            Width: =101.64
+            X: =399.26
             Y: =Label13_8.Y + Label13_8.Height
             ZIndex: =17
 
@@ -597,11 +629,13 @@
             Height: =31
             OnSelect: =Select(Parent)
             Overflow: =Overflow.Scroll
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: =ThisItem.'Customer Contact Number'
             VerticalAlign: =VerticalAlign.Top
-            Width: =283
-            X: =Label13_9.X
+            Width: =188.00
+            X: =503.56
             Y: =Label13_10.Y
             ZIndex: =18
 
@@ -617,7 +651,8 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =1428
+            Width: =948.65
+            X: =0.00
             ZIndex: =19
 
         Rectangle3 As rectangle:
@@ -631,8 +666,8 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =1
-            X: =601
+            Width: =0.67
+            X: =399.26
             Y: =45
             ZIndex: =20
 
@@ -645,8 +680,8 @@
             Height: =149
             Shape: ="Circular"
             ThemeColor: ="Brand"
-            Width: =90
-            X: =44
+            Width: =59.79
+            X: =29.23
             Y: =18
             ZIndex: =21
 
@@ -662,10 +697,13 @@
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Person
             OnSelect: =Select(Parent)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            X: =57
+            Width: =42.52
+            X: =37.87
             Y: =57
             ZIndex: =22
 
@@ -680,8 +718,8 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =1
-            X: =297
+            Width: =0.67
+            X: =197.31
             Y: =47
             ZIndex: =23
 
@@ -696,8 +734,8 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =285
-            X: =298
+            Width: =189.33
+            X: =197.97
             Y: =Label13_2.Y + Label13_2.Height
             ZIndex: =24
 
@@ -712,8 +750,8 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =285
-            X: =298
+            Width: =189.33
+            X: =197.97
             Y: =Label13_3.Y + Label13_3.Height + 5
             ZIndex: =25
 
@@ -728,8 +766,8 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =1
-            X: =Label13_8.X + Label13_8.Width
+            Width: =0.67
+            X: =503.56
             Y: =Label13_8.Y
             ZIndex: =26
 
@@ -744,8 +782,8 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =285
-            X: =Rectangle26_3.X
+            Width: =189.33
+            X: =503.56
             Y: =76
             ZIndex: =27
 
@@ -760,8 +798,8 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =285
-            X: =Rectangle26_3.X
+            Width: =189.33
+            X: =503.56
             Y: =109
             ZIndex: =28
 
@@ -808,11 +846,13 @@
                         Unit.Value = gblUserLocPerm
                     )
                 )
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =39
-            X: =1384
+            Width: =25.91
+            X: =919.43
             Y: =Button15.Y + (Button15.Height/2) - (Self.Height/2)
             ZIndex: =29
 
@@ -823,8 +863,8 @@
             Height: =32
             Label: ="Further Details Requested"
             OnSelect: =Select(Parent)
-            Width: =207
-            X: =1171
+            Width: =137.51
+            X: =777.92
             Y: =26
             ZIndex: =31
 
@@ -835,8 +875,8 @@
             Height: =32
             Label: =If(ThisItem.'Viewed?' = false Or IsBlank(ThisItem.'Viewed?'), "Unread", ThisItem.'Viewed By?')
             OnSelect: =Select(Parent)
-            Width: =207
-            X: =1171
+            Width: =137.51
+            X: =777.92
             Y: =0
             ZIndex: =32
 
@@ -851,8 +891,8 @@
             HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Select(Parent)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =207
-            X: =1171
+            Width: =137.51
+            X: =777.92
             Y: =47
             ZIndex: =33
 
@@ -871,12 +911,16 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         OnTimerEnd: =Refresh('TG14 Task Information');
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Repeat: =true
+        Size: =8.64
         Visible: =false
-        X: =846
+        Width: =106.29
+        X: =562.02
         Y: =6
         ZIndex: =11
 
@@ -893,12 +937,15 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
         OnSelect: =Refresh('TG14 Task Information')
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
-        Size: =15
+        Size: =9.97
         Text: ="Refresh"
-        X: =1641
+        Width: =106.29
+        X: =1090.16
         Y: =92
         ZIndex: =12
 
@@ -915,12 +962,16 @@
         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Repeat: =true
+        Size: =8.64
         Visible: =false
-        X: =1273
+        Width: =106.29
+        X: =845.69
         Y: =96
         ZIndex: =13
 
@@ -1039,8 +1090,12 @@
             </tr>
             </tbody>
             </table>"
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =7.31
         Visible: =false
-        Width: =36
+        Width: =23.91
+        X: =0.00
         ZIndex: =14
 
     "'Approve HTML Text' As htmlViewer":
@@ -1156,9 +1211,12 @@
             </tr>
             </tbody>
             </table>"
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =7.31
         Visible: =false
-        Width: =21
-        X: =36
+        Width: =13.95
+        X: =23.91
         ZIndex: =15
 
     Button18_12 As button:
@@ -1176,13 +1234,15 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =338
-        X: =14
+        Width: =224.54
+        X: =9.30
         Y: =64
         ZIndex: =16
 
@@ -1198,10 +1258,12 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: =varUnitCrest
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =338
-        X: =14
+        Width: =224.54
+        X: =9.30
         Y: =64
         ZIndex: =17
 
@@ -1215,8 +1277,8 @@
         Height: =53
         HoverFill: =varBackgroundFill
         PressedFill: =varBackgroundFill
-        Width: =5
-        X: =73
+        Width: =3.32
+        X: =48.49
         ZIndex: =18
 
     Rectangle2_16 As rectangle:
@@ -1229,8 +1291,8 @@
         Height: =53
         HoverFill: =varBackgroundFill
         PressedFill: =varBackgroundFill
-        Width: =5
-        X: =82
+        Width: =3.32
+        X: =54.48
         ZIndex: =19
 
     Rectangle2_17 As rectangle:
@@ -1243,8 +1305,8 @@
         Height: =53
         HoverFill: =varBackgroundFill
         PressedFill: =varBackgroundFill
-        Width: =5
-        X: =91
+        Width: =3.32
+        X: =60.45
         ZIndex: =20
 
     Button18_13 As button:
@@ -1262,13 +1324,15 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =338
-        X: =14
+        Width: =224.54
+        X: =9.30
         Y: =286
         ZIndex: =21
 
@@ -1286,6 +1350,8 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
         OnSelect: =Navigate('Diversion - Add'); NewForm('DivForm (EDIT)');
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
@@ -1293,10 +1359,10 @@
         RadiusBottomRight: =
         RadiusTopLeft: =
         RadiusTopRight: =
-        Size: =15
+        Size: =9.97
         Text: ="Add Diversion"
-        Width: =315
-        X: =26
+        Width: =209.26
+        X: =17.27
         Y: =Button5_12.Y + Self.Height + 3
         ZIndex: =22
 
@@ -1314,16 +1380,18 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
         OnSelect: =Navigate('Task - Add'); NewForm('DivForm (EDIT)');
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
         RadiusBottomLeft: =
         RadiusBottomRight: =
         RadiusTopLeft: =10 
-        Size: =15
+        Size: =9.97
         Text: ="Add Task"
-        Width: =315
-        X: =26
+        Width: =209.26
+        X: =17.27
         Y: =300
         ZIndex: =23
 
@@ -1341,15 +1409,17 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
         OnSelect: =Navigate('Calendar - Outstanding', ScreenTransition.Fade)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
         RadiusTopLeft: =
         RadiusTopRight: =
-        Size: =15
+        Size: =9.97
         Text: ="View Outstanding Tasks"
-        Width: =315
-        X: =26
+        Width: =209.26
+        X: =17.27
         Y: =Button5_11.Y + Self.Height + 3
         ZIndex: =24
 
@@ -1368,13 +1438,15 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =338
-        X: =14
+        Width: =224.54
+        X: =9.30
         Y: =454
         ZIndex: =25
 
@@ -1393,14 +1465,16 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =338
-        X: =14
-        Y: =529
+        Width: =224.54
+        X: =9.30
+        Y: =375
         ZIndex: =31
 
     HtmlText3 As htmlViewer:
@@ -1476,8 +1550,12 @@
             "
             <br>
             <b>Task Requirements: </b>" & 'Approvals Gallery'.Selected.'Task Requirements'
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =7.31
         Visible: =false
-        Width: =590
+        Width: =391.95
+        X: =0.00
         ZIndex: =44
 
     Button18 As button:
@@ -1544,6 +1622,8 @@
                         responseRequested: false
                     }
                 )
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1551,10 +1631,12 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =15
+        Size: =9.97
         Text: ="Button"
         Visible: =false
-        Y: =890
+        Width: =106.29
+        X: =0.00
+        Y: =728
         ZIndex: =45
 
     Image9 As image:
@@ -1568,17 +1650,25 @@
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: |-
             =Office365Users.UserPhotoV2(First(Office365Users.SearchUser({searchTerm:"", top:1})).Id)
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        X: =142
+        Width: =66.43
+        X: =94.33
         Y: =129
         ZIndex: =46
 
     cmp_ApprovalsPopup_1 As cmp_ApprovalsPopup:
+        Height: =768
         Visible: =PopupVis
+        Width: =1229.00
+        X: =0.00
         ZIndex: =47
 
     cmp_Header_3 As cmp_Header:
+        Width: =1229.00
+        X: =0.00
         ZIndex: =48
 
     Group2_2 As group:
@@ -1602,15 +1692,17 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =varButtonHover
             OnSelect: =Navigate('Calendar - Month', ScreenTransition.Fade)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
             RadiusBottomLeft: =0
             RadiusTopLeft: =0
-            Size: =15
+            Size: =9.97
             Text: ="Month"
-            Width: =100
-            X: =241
+            Width: =66.43
+            X: =160.10
             Y: =466
             ZIndex: =26
 
@@ -1628,6 +1720,8 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =varButtonHover
             OnSelect: =Navigate('Calendar - Week', ScreenTransition.Fade)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
@@ -1635,10 +1729,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =15
+            Size: =9.97
             Text: ="Week"
-            Width: =111
-            X: =128
+            Width: =73.74
+            X: =85.03
             Y: =466
             ZIndex: =27
 
@@ -1656,15 +1750,17 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =varButtonHover
             OnSelect: =Navigate('Calendar - Day', ScreenTransition.Fade)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
             RadiusBottomRight: =0
             RadiusTopRight: =0
-            Size: =15
+            Size: =9.97
             Text: ="Day"
-            Width: =100
-            X: =26
+            Width: =66.43
+            X: =17.27
             Y: =466
             ZIndex: =28
 
@@ -1675,8 +1771,8 @@
             Fill: =varButtonSeperatorFill
             FocusedBorderThickness: =4
             Height: =40
-            Width: =2
-            X: =126
+            Width: =1.33
+            X: =83.71
             Y: =466
             ZIndex: =29
 
@@ -1687,8 +1783,8 @@
             Fill: =varButtonSeperatorFill
             FocusedBorderThickness: =4
             Height: =40
-            Width: =2
-            X: =239
+            Width: =1.33
+            X: =158.77
             Y: =466
             ZIndex: =30
 
@@ -1712,11 +1808,13 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =147
-            Size: =20
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =13.29
             Text: ="No tasks are currently awaiting approval."
             Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
-            Width: =1025
-            X: =590
+            Width: =680.93
+            X: =306.80
             Y: =459
             ZIndex: =4
 
@@ -1733,12 +1831,14 @@
             HoverColor: =Color.White
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CameraAperture
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
-            Width: =104
-            X: =1050
+            Width: =69.09
+            X: =306.80
             Y: =380
             ZIndex: =5
 
@@ -1750,8 +1850,8 @@
             FocusedBorderThickness: =4
             Height: =2
             Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
-            Width: =768
-            X: =721
+            Width: =510.20
+            X: =306.80
             Y: =488
             ZIndex: =8
 
@@ -1763,8 +1863,8 @@
             FocusedBorderThickness: =4
             Height: =2
             Visible: =If(IsEmpty('Approvals Gallery'.AllItems), true,false)
-            Width: =768
-            X: =721
+            Width: =510.20
+            X: =306.80
             Y: =590
             ZIndex: =10
 
@@ -1782,11 +1882,12 @@
             DisplayMode: =DisplayMode.Disabled
             Fill: =RGBA(230, 230, 230, 1)
             FocusedBorderThickness: =4
-            Height: =930
+            Height: =768
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =varNotifyWindow
-            Width: =1850
+            Width: =1229.00
+            X: =0.00
             ZIndex: =32
 
         "'Cust Det - Background Pill_3' As button":
@@ -1800,10 +1901,12 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =511
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1811,11 +1914,11 @@
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =varNotifyWindow
-            Width: =1301
-            X: =275
+            Width: =1229.00
+            X: =182.69
             Y: =215
             ZIndex: =33
 
@@ -1829,10 +1932,12 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =488
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1840,11 +1945,11 @@
             RadiusBottomRight: =30
             RadiusTopLeft: =30
             RadiusTopRight: =30
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =varNotifyWindow
-            Width: =1274
-            X: =288
+            Width: =1229.00
+            X: =191.32
             Y: =227
             ZIndex: =34
 
@@ -1855,13 +1960,17 @@
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
             Image: ='Pulse-1.4s-284px'
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =varNotifyWindow
-            X: =875
+            Width: =1229.00
+            X: =581.28
             Y: =350
             ZIndex: =35
 
@@ -1876,12 +1985,14 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =69
-            Size: =18
+            Height: =768
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =11.96
             Text: ="Submiting, Please Wait..."
             Visible: =varNotifyWindow
-            Width: =479
-            X: =686
+            Width: =1229.00
+            X: =455.73
             Y: =278
             ZIndex: =36
 
@@ -1898,17 +2009,20 @@
             DisplayMode: =DisplayMode.Disabled
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Size: =13
+            Size: =8.64
             Text: ="Current Tasks"
             Visible: =If(varNotifyWindow, true, false)
-            Width: =224
-            X: =655
+            Width: =1229.00
+            X: =435.13
             Y: =501
             ZIndex: =37
 
@@ -1925,17 +2039,20 @@
             DisplayMode: =DisplayMode.Disabled
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Size: =13
+            Size: =8.64
             Text: ="1177 List"
             Visible: =If(varNotifyWindow, true, false)
-            Width: =224
-            X: =655
+            Width: =1229.00
+            X: =435.13
             Y: =551
             ZIndex: =38
 
@@ -1949,11 +2066,14 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =18
+            Height: =768
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =11.96
             Text: ="Information Patched"
             Visible: =varNotifyWindow
-            Width: =241
-            X: =651
+            Width: =1229.00
+            X: =432.47
             Y: =461
             ZIndex: =39
 
@@ -1964,17 +2084,19 @@
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =37
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CheckBadge
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =varNotifyWindow
-            Width: =33
-            X: =614
+            Width: =1229.00
+            X: =407.89
             Y: =461
             ZIndex: =40
 
@@ -1991,17 +2113,20 @@
             DisplayMode: =DisplayMode.Disabled
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Size: =13
+            Size: =8.64
             Text: ="Email Sent"
             Visible: =If(varNotifyWindow, true, false)
-            Width: =224
-            X: =990
+            Width: =1229.00
+            X: =657.68
             Y: =501
             ZIndex: =41
 
@@ -2015,11 +2140,14 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =18
+            Height: =768
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =11.96
             Text: ="Customer Notification"
             Visible: =varNotifyWindow
-            Width: =272
-            X: =989
+            Width: =1229.00
+            X: =657.02
             Y: =464
             ZIndex: =42
 
@@ -2030,17 +2158,19 @@
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =37
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CheckBadge
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =varNotifyWindow
-            Width: =33
-            X: =952
+            Width: =1229.00
+            X: =632.44
             Y: =464
             ZIndex: =43
 

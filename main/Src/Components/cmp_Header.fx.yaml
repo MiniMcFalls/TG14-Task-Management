@@ -25,11 +25,15 @@ cmp_Header As CanvasComponent:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         OnTimerEnd: =If(Connection.Connected = true, Set(GblConnectionTest, true), Set(GblConnectionTest, false));
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Repeat: =true
-        X: =1335
+        Size: =8.64
+        Width: =106.29
+        X: =886.88
         Y: =4
         ZIndex: =1
 
@@ -44,9 +48,12 @@ cmp_Header As CanvasComponent:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =53
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =""
-        Width: =1850
+        Width: =1229.00
+        X: =0.00
         ZIndex: =2
 
     Label9_14 As label:
@@ -62,10 +69,13 @@ cmp_Header As CanvasComponent:
         Height: =20
         PaddingBottom: =0
         PaddingLeft: =20
-        Size: =12
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =7.97
         Text: =CurrentVer
         VerticalAlign: =VerticalAlign.Bottom
-        X: =108
+        Width: =99.65
+        X: =71.74
         Y: =33
         ZIndex: =3
 
@@ -84,15 +94,17 @@ cmp_Header As CanvasComponent:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =If(varInfoRefresh = true, 163, 75)
-        X: =1527
+        Width: =49.83
+        X: =1014.42
         ZIndex: =4
 
     Icon16 As icon.GlobeNotConnected:
@@ -108,11 +120,13 @@ cmp_Header As CanvasComponent:
         HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =If(Connection.Connected, Icon.Globe, Icon.GlobeNotConnected)
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =45
-        X: =1542
+        Width: =29.90
+        X: =1024.39
         Y: =2
         ZIndex: =5
 
@@ -129,10 +143,12 @@ cmp_Header As CanvasComponent:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =19
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =If(GblConnectionTest = true, "Live", "OFFLINE")
-        Width: =81
-        X: =1524
+        Width: =53.81
+        X: =1012.43
         Y: =25
         ZIndex: =6
 
@@ -151,14 +167,17 @@ cmp_Header As CanvasComponent:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
         OnSelect: =Navigate(Home, ScreenTransition.Fade)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =15
+        Size: =9.97
         Text: ="Home"
-        X: =1612
+        Width: =106.29
+        X: =1070.89
         ZIndex: =7
 
     Icon16_2 As icon.GlobeNotConnected:
@@ -174,12 +193,14 @@ cmp_Header As CanvasComponent:
         HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.GlobeRefresh
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Visible: =cmp_Header.RefreshInfoVis
-        Width: =45
-        X: =1465
+        Width: =29.90
+        X: =973.23
         Y: =4
         ZIndex: =8
 
@@ -196,11 +217,13 @@ cmp_Header As CanvasComponent:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =19
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Refresh"
         Visible: =cmp_Header.RefreshInfoVis
-        Width: =72
-        X: =1452
+        Width: =47.83
+        X: =964.60
         Y: =25
         ZIndex: =9
 
@@ -214,9 +237,12 @@ cmp_Header As CanvasComponent:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: ='VisComCRM Logo-02'
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        X: =8
+        Width: =66.43
+        X: =5.32
         Y: =3
         ZIndex: =10
 
@@ -231,10 +257,12 @@ cmp_Header As CanvasComponent:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =44
-        Size: =17
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =11.29
         Text: ="RAF Visual Communications CRM"
-        Width: =442
-        X: =123
+        Width: =293.63
+        X: =81.71
         ZIndex: =11
 
     Image5 As image:
@@ -247,14 +275,16 @@ cmp_Header As CanvasComponent:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: =User().Image
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
         RadiusBottomLeft: =Self.Width
         RadiusBottomRight: =Self.Width
         RadiusTopLeft: =Self.Width
         RadiusTopRight: =Self.Width
-        Width: =48
-        X: =1789
+        Width: =31.89
+        X: =1188.48
         Y: =3
         ZIndex: =12
 

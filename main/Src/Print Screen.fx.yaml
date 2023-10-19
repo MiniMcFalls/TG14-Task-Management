@@ -5,7 +5,10 @@
 
     PdfViewer2 As pdfViewer:
         Document: =locPDFView
-        Height: =930
-        Width: =1850
+        Height: =768
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =1229.00
+        X: =0.00
         ZIndex: =1
 

@@ -101,12 +101,12 @@
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
-    "DocumentLayoutHeight": 930,
+    "DocumentLayoutHeight": 768,
     "DocumentLayoutLockOrientation": false,
     "DocumentLayoutMaintainAspectRatio": true,
     "DocumentLayoutOrientation": "landscape",
     "DocumentLayoutScaleToFit": true,
-    "DocumentLayoutWidth": 1850,
+    "DocumentLayoutWidth": 1229,
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "4898e49c-859c-42ce-8cc6-38398c961004",
@@ -117,7 +117,7 @@
     "Name": "RAF Visual Communications CRM",
     "OriginatingVersion": "1.321",
     "ParserErrorCount": 1,
-    "ShowStatusBar": false
+    "ShowStatusBar": true
   },
   "PublishInfo": {
     "AppName": "RAF Visual Communications CRM",

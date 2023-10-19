@@ -25,7 +25,8 @@ Preloader As CanvasComponent:
         FocusedBorderColor: =Self.Fill
         FocusedBorderThickness: =4
         Height: =Preloader.Height
-        Width: =Preloader.Width
+        Width: =425.17
+        X: =0.00
         ZIndex: =1
 
     imgLoader As image:
@@ -37,10 +38,12 @@ Preloader As CanvasComponent:
         HoverBorderColor: =ColorFade(imgLoader.BorderColor, 20%)
         HoverFill: =ColorFade(imgLoader.Fill, 20%)
         Image: =Preloader.AnimatedGIF
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =ColorFade(imgLoader.BorderColor, -20%)
         PressedFill: =ColorFade(imgLoader.Fill, -20%)
-        Width: =If(!IsBlank(LookUp(Preloader.Styles, Key = "PreloaderWidth").Value),LookUp(Preloader.Styles, Key = "PreloaderWidth").Value, 82)
-        X: =Preloader.Width / 2 - imgLoader.Width / 2
+        Width: =54.48
+        X: =185.35
         Y: =Preloader.Height /2 - imgLoader.Height / 2
         ZIndex: =2
 
@@ -55,12 +58,15 @@ Preloader As CanvasComponent:
         HoverBorderColor: =lblLoaderText.BorderColor
         HoverColor: =lblLoaderText.Color
         HoverFill: =lblLoaderText.Fill
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =lblLoaderText.BorderColor
         PressedColor: =lblLoaderText.Color
         PressedFill: =lblLoaderText.Fill
-        Size: =16
+        Size: =10.63
         Text: =Preloader.Text
-        Width: =Preloader.Width
+        Width: =425.17
+        X: =0.00
         Y: =imgLoader.Y + imgLoader.Height
         ZIndex: =3
 
@@ -76,14 +82,16 @@ Preloader As CanvasComponent:
         HoverBorderColor: =ColorFade(DefaultStyle.BorderColor, 20%)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =DefaultStyle.Fill
         PressedColor: =DefaultStyle.Fill
         PressedFill: =DefaultStyle.Color
-        Size: =24
+        Size: =15.94
         Text: ="Button"
         Visible: =false
-        Width: =280
-        X: =60
+        Width: =186.01
+        X: =39.86
         Y: =282
         ZIndex: =4
 

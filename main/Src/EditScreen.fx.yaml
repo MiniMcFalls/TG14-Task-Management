@@ -31,6 +31,8 @@ EditScreen As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -38,10 +40,10 @@ EditScreen As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =355
-        X: =1475
+        Width: =235.83
+        X: =979.88
         Y: =279
         ZIndex: =1
 
@@ -59,13 +61,15 @@ EditScreen As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
         OnSelect: =Set(AttachmentsVis, true)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
-        Size: =12
+        Size: =7.97
         Text: ="Attachments"
-        Width: =305
-        X: =1500
+        Width: =202.62
+        X: =996.49
         Y: =348
         ZIndex: =2
 
@@ -141,13 +145,15 @@ EditScreen As screen:
                 true
             );
             Set(varAuditLogLink, Concatenate("https://modgovuk.sharepoint.com/teams/13793/_layouts/15/Versions.aspx?FileName=%2Fteams%2F13793%2FLists%2FTG14%20Task%20Information%2F",First(Filter(colHistory, ID)).ID, "_%2E000&IsDlg=1&list=%7BF60EB741-46EB-47BE-804B-6992BAA2673A%7D"))
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
-        Size: =12
+        Size: =7.97
         Text: ="Audit History"
-        Width: =305
-        X: =1500
+        Width: =202.62
+        X: =996.49
         Y: =316
         ZIndex: =3
 
@@ -164,12 +170,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =36
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Logs & Attachments"
         Underline: =true
-        Width: =333
+        Width: =221.22
         Wrap: =false
-        X: =1486
+        X: =987.19
         Y: =279
         ZIndex: =4
 
@@ -187,6 +195,8 @@ EditScreen As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -194,10 +204,10 @@ EditScreen As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =1816
-        X: =19
+        Width: =1206.42
+        X: =12.62
         Y: =61
         ZIndex: =5
 
@@ -209,8 +219,8 @@ EditScreen As screen:
         Height: =32
         Items: =Choices([@'TG14 Task Information'].'Project Category')
         ValidationState: ="None"
-        Width: =169
-        X: =530
+        Width: =112.27
+        X: =352.09
         Y: =101
         ZIndex: =6
 
@@ -220,6 +230,8 @@ EditScreen As screen:
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Order: =1
+            Width: =66.43
+            X: =0.00
             ZIndex: =7
 
     "'Main Form - Service Required' As Dropdown.pcfdataset":
@@ -231,8 +243,8 @@ EditScreen As screen:
         Height: =32
         Items: =["Stills", "Video", "Both"]
         ValidationState: ="None"
-        Width: =225
-        X: =914
+        Width: =149.48
+        X: =607.19
         Y: =101
         ZIndex: =9
 
@@ -242,6 +254,8 @@ EditScreen As screen:
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Order: =1
+            Width: =66.43
+            X: =0.00
             ZIndex: =8
 
     "'Main Form - Response ID' As 'Text input'":
@@ -253,8 +267,8 @@ EditScreen As screen:
         Type: ="Text"
         ValidationState: ="None"
         Value: =CalendarEventsGallery1.Selected.ID
-        Width: =149
-        X: =1150
+        Width: =98.99
+        X: =763.98
         Y: =101
         ZIndex: =10
 
@@ -267,8 +281,8 @@ EditScreen As screen:
         Type: ="Text"
         ValidationState: ="None"
         Value: =If(IsBlank(CalendarEventsGallery1.Selected.'Tail Number'), "N/A", CalendarEventsGallery1.Selected.'Tail Number')
-        Width: =179
-        X: =1307
+        Width: =118.91
+        X: =868.27
         Y: =101
         ZIndex: =11
 
@@ -288,15 +302,17 @@ EditScreen As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         OnSelect: =Set(HODetVis, true);
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =15
+        Size: =9.97
         Text: ="Hours & Outputs"
-        Width: =273
-        X: =18
+        Width: =181.36
+        X: =11.96
         Y: =100
         ZIndex: =12
 
@@ -316,15 +332,17 @@ EditScreen As screen:
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         OnSelect: |
             =Set(CustDetVis, true)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
-        Size: =15
+        Size: =9.97
         Text: ="Customer Details"
-        Width: =273
-        X: =18
+        Width: =181.36
+        X: =11.96
         Y: =60
         ZIndex: =13
 
@@ -338,8 +356,8 @@ EditScreen As screen:
         Height: =1
         HoverFill: =RGBA(105, 121, 126, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =273
-        X: =18
+        Width: =181.36
+        X: =11.96
         Y: =99
         ZIndex: =14
 
@@ -629,15 +647,17 @@ EditScreen As screen:
             UpdateContext({varCloseTimer: true});
             Set(varPendingChangesVis, false);
             Back();
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(Self.Fill, -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(Self.Fill, -30%)
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =15
+        Size: =9.97
         Text: ="Submit Changes"
-        Width: =273
-        X: =1563
+        Width: =181.36
+        X: =1038.34
         Y: =100
         ZIndex: =15
 
@@ -677,15 +697,17 @@ EditScreen As screen:
             Reset('HO Popup - Status');
             Reset('HO Popup - Out Of Hours');
             Reset('HO Popup - Total Hours');
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
-        Size: =15
+        Size: =9.97
         Text: ="CLOSE"
-        Width: =273
-        X: =1563
+        Width: =181.36
+        X: =1038.34
         Y: =60
         ZIndex: =18
 
@@ -701,10 +723,13 @@ EditScreen As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =38
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Task Number"
         Underline: =true
-        X: =380
+        Width: =99.65
+        X: =252.44
         Y: =63
         ZIndex: =19
 
@@ -732,6 +757,8 @@ EditScreen As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         PaddingLeft: =5
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =RGBA(105, 121, 126, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
@@ -739,10 +766,10 @@ EditScreen As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =13
+        Size: =8.64
         Tooltip: =
-        Width: =82
-        X: =414
+        Width: =54.48
+        X: =275.03
         Y: =101
         ZIndex: =20
 
@@ -759,12 +786,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =36
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Project Category"
         Underline: =true
-        Width: =169
+        Width: =112.27
         Wrap: =false
-        X: =530
+        X: =352.09
         Y: =63
         ZIndex: =21
 
@@ -781,12 +810,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =36
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Status"
         Underline: =true
-        Width: =182
+        Width: =120.90
         Wrap: =false
-        X: =714
+        X: =474.33
         Y: =63
         ZIndex: =22
 
@@ -803,12 +834,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =36
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Service They Require"
         Underline: =true
-        Width: =224
+        Width: =148.81
         Wrap: =false
-        X: =914
+        X: =607.19
         Y: =63
         ZIndex: =23
 
@@ -825,12 +858,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =36
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Response ID"
         Underline: =true
-        Width: =148
+        Width: =98.32
         Wrap: =false
-        X: =1150
+        X: =763.98
         Y: =63
         ZIndex: =24
 
@@ -848,6 +883,8 @@ EditScreen As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -855,10 +892,10 @@ EditScreen As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =482
-        X: =19
+        Width: =320.21
+        X: =12.62
         Y: =153
         ZIndex: =25
 
@@ -872,8 +909,8 @@ EditScreen As screen:
         Type: ="Text"
         ValidationState: ="None"
         Value: =If(IsBlank('Edit Screen - Time Picker Cmp'.value),CalendarEventsGallery1.Selected.'Start Time',Text('Edit Screen - Time Picker Cmp'.value,DateTimeFormat.ShortTime24,"en-GB"))
-        Width: =90
-        X: =199
+        Width: =59.79
+        X: =132.20
         Y: =200
         ZIndex: =26
 
@@ -889,11 +926,12 @@ EditScreen As screen:
         Height: =31
         HoverDateFill: =RGBA(200, 200, 200, 1)
         IconBackground: =RGBA(105, 121, 126, 1)
-        PaddingTop: =5
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         SelectedDateFill: =RGBA(105, 121, 126, 1)
-        Size: =11
-        Width: =135
-        X: =43
+        Size: =7.31
+        Width: =89.68
+        X: =28.57
         Y: =201
         ZIndex: =27
 
@@ -909,11 +947,12 @@ EditScreen As screen:
         Height: =32
         HoverDateFill: =RGBA(200, 200, 200, 1)
         IconBackground: =RGBA(105, 121, 126, 1)
-        PaddingTop: =5
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         SelectedDateFill: =RGBA(105, 121, 126, 1)
-        Size: =11
-        Width: =150
-        X: =325
+        Size: =7.31
+        Width: =99.65
+        X: =215.90
         Y: =200
         ZIndex: =28
 
@@ -930,12 +969,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =44
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Task Date"
         Underline: =true
-        Width: =135
+        Width: =89.68
         Wrap: =false
-        X: =43
+        X: =28.57
         Y: =156
         ZIndex: =29
 
@@ -952,12 +993,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =44
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Task Time"
         Underline: =true
-        Width: =90
+        Width: =59.79
         Wrap: =false
-        X: =198
+        X: =131.54
         Y: =156
         ZIndex: =30
 
@@ -974,11 +1017,13 @@ EditScreen As screen:
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Clock
         OnSelect: =Set(varShowTimePicker, true)
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =18
-        X: =264
+        Width: =11.96
+        X: =175.38
         Y: =201
         ZIndex: =31
 
@@ -995,12 +1040,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =44
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Deadline"
         Underline: =true
-        Width: =175
+        Width: =116.26
         Wrap: =false
-        X: =312
+        X: =207.27
         Y: =156
         ZIndex: =32
 
@@ -1018,6 +1065,8 @@ EditScreen As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1025,10 +1074,10 @@ EditScreen As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =677
-        X: =520
+        Width: =449.75
+        X: =345.45
         Y: =153
         ZIndex: =33
 
@@ -1244,8 +1293,8 @@ EditScreen As screen:
                 ]
             )
         ValidationState: ="None"
-        Width: =295
-        X: =657
+        Width: =195.97
+        X: =436.46
         Y: =210
         ZIndex: =34
 
@@ -1255,6 +1304,8 @@ EditScreen As screen:
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Order: =1
+            Width: =66.43
+            X: =0.00
             ZIndex: =9
 
     "'Main Form - Photog #1' As Dropdown.pcfdataset":
@@ -1469,8 +1520,8 @@ EditScreen As screen:
                 ]
             )
         ValidationState: ="None"
-        Width: =295
-        X: =657
+        Width: =195.97
+        X: =436.46
         Y: =168
         ZIndex: =35
 
@@ -1480,6 +1531,8 @@ EditScreen As screen:
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Order: =1
+            Width: =66.43
+            X: =0.00
             ZIndex: =9
 
     "'Main Form - Tail Number Title' As label":
@@ -1495,12 +1548,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =38
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Tail Number"
         Underline: =true
-        Width: =179
+        Width: =118.91
         Wrap: =false
-        X: =1307
+        X: =868.27
         Y: =61
         ZIndex: =36
 
@@ -1517,12 +1572,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =44
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Task Lead"
         Underline: =true
-        Width: =113
+        Width: =75.07
         Wrap: =false
-        X: =542
+        X: =360.06
         Y: =161
         ZIndex: =37
 
@@ -1569,7 +1626,8 @@ EditScreen As screen:
                     CalendarEventsGallery1.Selected.Status.Value = "CANCELLED", Color.Red,
                     CalendarEventsGallery1.Selected.Status.Value = "PPC", Color.LightBlue,
                     Color.Gray)
-            Width: =1850
+            Width: =1229
+            X: =0.00
             ZIndex: =16
 
         "'Status Header - Status' As label":
@@ -1583,10 +1641,11 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =47
-            Size: =20
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =13.29
             Text: =Text(CalendarEventsGallery1.Selected.Status.Value)
-            Width: =541
-            X: =655
+            Width: =1229
             Y: =1
             ZIndex: =17
 
@@ -1603,13 +1662,15 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =44
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: |-
             ="Phot #2"
         Underline: =true
-        Width: =113
+        Width: =75.07
         Wrap: =false
-        X: =542
+        X: =360.06
         Y: =201
         ZIndex: =38
 
@@ -1626,12 +1687,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =44
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="QA Check"
         Underline: =true
-        Width: =202
+        Width: =134.19
         Wrap: =false
-        X: =973
+        X: =646.39
         Y: =161
         ZIndex: =39
 
@@ -1649,6 +1712,8 @@ EditScreen As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1656,10 +1721,10 @@ EditScreen As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =615
-        X: =1216
+        Width: =408.56
+        X: =807.82
         Y: =153
         ZIndex: =40
 
@@ -1676,12 +1741,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =36
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Task Location"
         Underline: =true
-        Width: =589
+        Width: =391.28
         Wrap: =false
-        X: =1229
+        X: =816.46
         Y: =153
         ZIndex: =41
 
@@ -1699,6 +1766,8 @@ EditScreen As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1706,10 +1775,10 @@ EditScreen As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =902
-        X: =19
+        Width: =599.22
+        X: =12.62
         Y: =279
         ZIndex: =42
 
@@ -1727,6 +1796,8 @@ EditScreen As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1734,10 +1805,10 @@ EditScreen As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =519
-        X: =939
+        Width: =344.79
+        X: =623.80
         Y: =279
         ZIndex: =43
 
@@ -1754,12 +1825,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =36
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Working Hazards"
         Underline: =true
-        Width: =850
+        Width: =564.67
         Wrap: =false
-        X: =43
+        X: =28.57
         Y: =279
         ZIndex: =44
 
@@ -1776,12 +1849,14 @@ EditScreen As screen:
         FontWeight: =FontWeight.Bold
         Height: =36
         PaddingLeft: =0
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Notes"
         Underline: =true
-        Width: =488
+        Width: =324.19
         Wrap: =false
-        X: =962
+        X: =639.08
         Y: =279
         ZIndex: =45
 
@@ -1799,6 +1874,8 @@ EditScreen As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1806,11 +1883,11 @@ EditScreen As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =1816
-        X: =15
-        Y: =397
+        Width: =1206.42
+        X: =9.97
+        Y: =268
         ZIndex: =46
 
     "'Main Form - Task Requirements Title' As label":
@@ -1825,12 +1902,14 @@ EditScreen As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =34
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Task Requirements"
         Underline: =true
-        Width: =300
+        Width: =199.29
         Wrap: =false
-        X: =43
+        X: =28.57
         Y: =394
         ZIndex: =47
 
@@ -1848,6 +1927,8 @@ EditScreen As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -1855,11 +1936,11 @@ EditScreen As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =15
+        Size: =9.97
         Text: =""
         Visible: =If('Main Form - Additional Details'.Visible = false, false, true)
-        Width: =1816
-        X: =15
+        Width: =1206.42
+        X: =9.97
         Y: =567
         ZIndex: =48
 
@@ -1875,8 +1956,8 @@ EditScreen As screen:
         ValidationState: ="None"
         Value: =Switch(CalendarEventsGallery1.Selected.'Project Category'.Value, "PR/Media", CalendarEventsGallery1.Selected.'Media/PR Request Cont.', "Visit", CalendarEventsGallery1.Selected.'Visit Details', "Official Group", CalendarEventsGallery1.Selected.'Official Groups', "Portrait", CalendarEventsGallery1.Selected.'Portrait Request', "N/A")
         Visible: =If(Self.Value = "N/A", false, true)
-        Width: =1753
-        X: =43
+        Width: =1164.56
+        X: =28.57
         Y: =597
         ZIndex: =49
 
@@ -1892,13 +1973,15 @@ EditScreen As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =34
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =Switch(CalendarEventsGallery1.Selected.'Project Category'.Value, "PR/Media", "PR/Media Additional Details", "Visit", "Visit Additional Details", "Official Group", "Group Photo Additional Details", "Portrait", "Additional Portrait Details", "N/A")
         Underline: =true
         Visible: =If(Self.Text = "N/A", false, true)
-        Width: =300
+        Width: =199.29
         Wrap: =false
-        X: =43
+        X: =28.57
         Y: =564
         ZIndex: =50
 
@@ -1913,8 +1996,8 @@ EditScreen As screen:
         Height: =32
         HoverFill: =RGBA(105, 121, 126, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =149
-        X: =1150
+        Width: =98.99
+        X: =763.98
         Y: =101
         ZIndex: =51
 
@@ -1926,8 +2009,8 @@ EditScreen As screen:
         Height: =32
         Items: =Choices([@'TG14 Task Information'].'QA Check')
         ValidationState: ="None"
-        Width: =190
-        X: =981
+        Width: =126.22
+        X: =651.70
         Y: =210
         ZIndex: =52
 
@@ -1937,6 +2020,8 @@ EditScreen As screen:
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Order: =1
+            Width: =66.43
+            X: =0.00
             ZIndex: =10
 
     "'Main Form - Working Hazards' As 'Text input'":
@@ -1949,8 +2034,8 @@ EditScreen As screen:
         Type: ="Text"
         ValidationState: ="None"
         Value: =If(IsBlank(CalendarEventsGallery1.Selected.Hazards), "*No Hazards Indicated By Requester*", CalendarEventsGallery1.Selected.Hazards)
-        Width: =849
-        X: =43
+        Width: =564.01
+        X: =28.57
         Y: =316
         ZIndex: =53
 
@@ -1964,8 +2049,8 @@ EditScreen As screen:
         Type: ="Text"
         ValidationState: ="None"
         Value: =If(IsBlank(CalendarEventsGallery1.Selected.Notes), "*No Notes*", CalendarEventsGallery1.Selected.Hazards)
-        Width: =488
-        X: =954
+        Width: =324.19
+        X: =633.76
         Y: =316
         ZIndex: =54
 
@@ -1979,8 +2064,8 @@ EditScreen As screen:
         Type: ="Text"
         ValidationState: ="None"
         Value: =CalendarEventsGallery1.Selected.'Task Location'
-        Width: =559
-        X: =1244
+        Width: =371.35
+        X: =826.42
         Y: =189
         ZIndex: =55
 
@@ -1995,9 +2080,9 @@ EditScreen As screen:
         Type: ="Text"
         ValidationState: ="None"
         Value: =CalendarEventsGallery1.Selected.'Task Requirements'
-        Width: =1757
-        X: =39
-        Y: =433
+        Width: =1167.22
+        X: =25.91
+        Y: =328
         ZIndex: =56
 
     HtmlText2 As htmlViewer:
@@ -2113,9 +2198,12 @@ EditScreen As screen:
             </tr>
             </tbody>
             </table>"
-        Width: =1245
-        X: =605
-        Y: =930
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =7.31
+        Width: =827.08
+        X: =401.91999999999996
+        Y: =728
         ZIndex: =57
 
     Timer3 As timer:
@@ -2149,12 +2237,17 @@ EditScreen As screen:
             Set(var1177Check, false);
             Set(varCurrentTasksCheck, false);
             Set(varNotifyWindow, false);
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Reset: =true
+        Size: =8.64
         Start: =If(varCloseTimer = true, true)
         Visible: =false
+        Width: =106.29
+        X: =0.00
         ZIndex: =58
 
     "'Edit Screen - Time Picker Blocker' As label":
@@ -2167,17 +2260,21 @@ EditScreen As screen:
         Fill: =RGBA(204, 204, 204, 0.6)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =930
+        Height: =768
         OnSelect: =Set(varShowTimePicker, false)
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =
         Visible: =varShowTimePicker
-        Width: =1850
+        Width: =1229.00
+        X: =0.00
         ZIndex: =59
 
     "'Edit Screen - Time Picker Cmp' As cmp_TimePicker":
         Visible: =varShowTimePicker
-        X: =295
+        Width: =66.43
+        X: =195.97
         Y: =200
         ZIndex: =60
 
@@ -2195,11 +2292,12 @@ EditScreen As screen:
             DisplayMode: =DisplayMode.Disabled
             Fill: =RGBA(230, 230, 230, 1)
             FocusedBorderThickness: =4
-            Height: =930
+            Height: =768
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(HODetVis, true, false)
-            Width: =1850
+            Width: =1229
+            X: =0.00
             ZIndex: =85
 
         "'HO Popup - Background Pill' As button":
@@ -2213,10 +2311,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =394
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -2224,12 +2324,10 @@ EditScreen As screen:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(HODetVis, true, false)
-            Width: =1301
-            X: =275
-            Y: =215
+            Width: =1229
             ZIndex: =86
 
         "'HO Popup - Pill 1' As button":
@@ -2242,10 +2340,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =187
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -2253,12 +2353,10 @@ EditScreen As screen:
             RadiusBottomRight: =30
             RadiusTopLeft: =30
             RadiusTopRight: =30
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(HODetVis, true, false)
-            Width: =436
-            X: =288
-            Y: =226
+            Width: =1229
             ZIndex: =88
 
         "'HO Popup - Total Hours Title' As label":
@@ -2272,16 +2370,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Total Hours"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =197
+            Width: =1229
             Wrap: =false
-            X: =311
-            Y: =279
             ZIndex: =89
 
         "'HO Popup - Pill 4' As button":
@@ -2294,10 +2392,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =165
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -2305,12 +2405,10 @@ EditScreen As screen:
             RadiusBottomRight: =30
             RadiusTopLeft: =30
             RadiusTopRight: =30
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(HODetVis, true, false)
-            Width: =1274
-            X: =288
-            Y: =427
+            Width: =1229
             ZIndex: =90
 
         "'HO Popup - Task Output Title' As label":
@@ -2324,14 +2422,14 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =70
-            Size: =20
+            Height: =768
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =13.29
             Text: ="Task Output"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =1237
-            X: =303
-            Y: =434
+            Width: =1229
             ZIndex: =91
 
         "'HO Popup - Close' As button":
@@ -2344,21 +2442,22 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =26
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
             OnSelect: =Set(HODetVis, false)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(Self.Fill, -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(Self.Fill, -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
-            Size: =15
+            Size: =9.97
             Text: ="CLOSE"
             Visible: =If(HODetVis, true, false)
-            X: =1380
-            Y: =190
+            Width: =1229
             ZIndex: =92
 
         "'HO Popup - Task Hours Title' As label":
@@ -2372,15 +2471,15 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
-            Size: =20
+            Height: =768
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =13.29
             Text: ="Task Hours"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =197
+            Width: =1229
             Wrap: =false
-            X: =408
-            Y: =238
             ZIndex: =93
 
         "'HO Popup - Out Of Hours Title' As label":
@@ -2394,16 +2493,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Out Of Hours"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =197
+            Width: =1229
             Wrap: =false
-            X: =513
-            Y: =279
             ZIndex: =94
 
         "'HO Popup - Out Of Hours' As text":
@@ -2419,13 +2518,15 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Format: =TextFormat.Number
-            Height: =34
+            Height: =768
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
                 =UpdateContext({SubmitDM: DisplayMode.Edit})
             PaddingLeft: =5
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =RGBA(105, 121, 126, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
@@ -2433,12 +2534,10 @@ EditScreen As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =13
+            Size: =8.64
             Tooltip: =
             Visible: =If(HODetVis, true, false)
-            Width: =198
-            X: =513
-            Y: =315
+            Width: =1229
             ZIndex: =95
 
         "'HO Popup - Pill 2' As button":
@@ -2451,10 +2550,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =187
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -2462,12 +2563,10 @@ EditScreen As screen:
             RadiusBottomRight: =30
             RadiusTopLeft: =30
             RadiusTopRight: =30
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(HODetVis, true, false)
-            Width: =369
-            X: =735
-            Y: =226
+            Width: =1229
             ZIndex: =96
 
         "'HO Popup - Task Status Subtitle' As label":
@@ -2481,15 +2580,15 @@ EditScreen As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =34
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Select Below"
             Visible: =If(HODetVis, true, false)
-            Width: =320
+            Width: =1229
             Wrap: =false
-            X: =760
-            Y: =281
             ZIndex: =97
 
         "'HO Popup - Task Status Title' As label":
@@ -2503,15 +2602,15 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
-            Size: =20
+            Height: =768
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =13.29
             Text: ="Task Status"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =197
+            Width: =1229
             Wrap: =false
-            X: =821
-            Y: =243
             ZIndex: =98
 
         "'HO Popup - Pill 3' As button":
@@ -2524,10 +2623,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =187
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -2535,12 +2636,10 @@ EditScreen As screen:
             RadiusBottomRight: =30
             RadiusTopLeft: =30
             RadiusTopRight: =30
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(HODetVis, true, false)
-            Width: =445
-            X: =1117
-            Y: =227
+            Width: =1229
             ZIndex: =99
 
         "'HO Popup - SharePoint Title' As label":
@@ -2554,15 +2653,15 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
-            Size: =20
+            Height: =768
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =13.29
             Text: ="Links"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =237
+            Width: =1229
             Wrap: =false
-            X: =1221
-            Y: =244
             ZIndex: =100
 
         "'HO Popup - SharePoint Subtitle' As label":
@@ -2576,16 +2675,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="SharePoint Link to Imagery"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =402
+            Width: =1229
             Wrap: =false
-            X: =1139
-            Y: =279
             ZIndex: =101
 
         "'HO Popup - Soft Copy Title' As label":
@@ -2599,16 +2698,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Soft Copy"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =197
+            Width: =1229
             Wrap: =false
-            X: =316
-            Y: =497
             ZIndex: =102
 
         "'HO Popup - Soft Copy' As text":
@@ -2624,13 +2723,15 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Format: =TextFormat.Number
-            Height: =34
+            Height: =768
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
                 =UpdateContext({SubmitDM: DisplayMode.Edit})
             PaddingLeft: =5
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =RGBA(105, 121, 126, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
@@ -2638,12 +2739,10 @@ EditScreen As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =13
+            Size: =8.64
             Tooltip: =
             Visible: =If(HODetVis, true, false)
-            Width: =198
-            X: =316
-            Y: =533
+            Width: =1229
             ZIndex: =103
 
         "'HO Popup - Prints Title' As label":
@@ -2657,16 +2756,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Prints"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =197
+            Width: =1229
             Wrap: =false
-            X: =520
-            Y: =497
             ZIndex: =104
 
         "'HO Popup - Prints' As text":
@@ -2682,13 +2781,15 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Format: =TextFormat.Number
-            Height: =34
+            Height: =768
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
                 =UpdateContext({SubmitDM: DisplayMode.Edit})
             PaddingLeft: =5
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =RGBA(105, 121, 126, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
@@ -2696,12 +2797,10 @@ EditScreen As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =13
+            Size: =8.64
             Tooltip: =
             Visible: =If(HODetVis, true, false)
-            Width: =198
-            X: =520
-            Y: =533
+            Width: =1229
             ZIndex: =105
 
         "'HO Popup - PPC Prints Title' As label":
@@ -2715,16 +2814,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="PPC Prints"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =197
+            Width: =1229
             Wrap: =false
-            X: =724
-            Y: =497
             ZIndex: =106
 
         "'HO Popup - PPC Prints' As text":
@@ -2740,13 +2839,15 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Format: =TextFormat.Number
-            Height: =34
+            Height: =768
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
                 =UpdateContext({SubmitDM: DisplayMode.Edit})
             PaddingLeft: =5
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =RGBA(105, 121, 126, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
@@ -2754,12 +2855,10 @@ EditScreen As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =13
+            Size: =8.64
             Tooltip: =
             Visible: =If(HODetVis, true, false)
-            Width: =198
-            X: =724
-            Y: =533
+            Width: =1229
             ZIndex: =107
 
         "'HO Popup - Video Title' As label":
@@ -2773,16 +2872,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Video"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =197
+            Width: =1229
             Wrap: =false
-            X: =928
-            Y: =497
             ZIndex: =108
 
         "'HO Popup - Video' As text":
@@ -2798,13 +2897,15 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Format: =TextFormat.Number
-            Height: =34
+            Height: =768
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
                 =UpdateContext({SubmitDM: DisplayMode.Edit})
             PaddingLeft: =5
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =RGBA(105, 121, 126, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
@@ -2812,12 +2913,10 @@ EditScreen As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =13
+            Size: =8.64
             Tooltip: =
             Visible: =If(HODetVis, true, false)
-            Width: =198
-            X: =928
-            Y: =533
+            Width: =1229
             ZIndex: =109
 
         "'HO Popup -  CD - Title' As label":
@@ -2831,16 +2930,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="CD"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =197
+            Width: =1229
             Wrap: =false
-            X: =1132
-            Y: =497
             ZIndex: =110
 
         "'HO Popup - CD' As text":
@@ -2856,13 +2955,15 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Format: =TextFormat.Number
-            Height: =34
+            Height: =768
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
                 =UpdateContext({SubmitDM: DisplayMode.Edit})
             PaddingLeft: =5
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =RGBA(105, 121, 126, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
@@ -2870,12 +2971,10 @@ EditScreen As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =13
+            Size: =8.64
             Tooltip: =
             Visible: =If(HODetVis, true, false)
-            Width: =198
-            X: =1132
-            Y: =533
+            Width: =1229
             ZIndex: =111
 
         "'HO Popup - DVD Title' As label":
@@ -2889,16 +2988,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="DVD"
             Underline: =true
             Visible: =If(HODetVis, true, false)
-            Width: =197
+            Width: =1229
             Wrap: =false
-            X: =1337
-            Y: =497
             ZIndex: =112
 
         "'HO Popup - DVD' As text":
@@ -2914,13 +3013,15 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Format: =TextFormat.Number
-            Height: =34
+            Height: =768
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
                 =UpdateContext({SubmitDM: DisplayMode.Edit})
             PaddingLeft: =5
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =RGBA(105, 121, 126, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
@@ -2928,12 +3029,10 @@ EditScreen As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =13
+            Size: =8.64
             Tooltip: =
             Visible: =If(HODetVis, true, false)
-            Width: =198
-            X: =1337
-            Y: =533
+            Width: =1229
             ZIndex: =113
 
     "'HO Popup - Status' As Dropdown.pcfdataset":
@@ -2945,8 +3044,8 @@ EditScreen As screen:
         Items: =Choices([@'TG14 Task Information'].Status)
         ValidationState: ="None"
         Visible: =If(HODetVis, true, false)
-        Width: =320
-        X: =759
+        Width: =212.58
+        X: =504.22
         Y: =316
         ZIndex: =129
 
@@ -2956,6 +3055,8 @@ EditScreen As screen:
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Order: =1
+            Width: =66.43
+            X: =0.00
             ZIndex: =11
 
     "'HO Popup - Total Hours' As text":
@@ -2978,6 +3079,8 @@ EditScreen As screen:
         OnChange: |-
             =UpdateContext({SubmitDM: DisplayMode.Edit})
         PaddingLeft: =5
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =RGBA(105, 121, 126, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
@@ -2985,11 +3088,11 @@ EditScreen As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =13
+        Size: =8.64
         Tooltip: =
         Visible: =If(HODetVis, true, false)
-        Width: =198
-        X: =310
+        Width: =131.54
+        X: =205.94
         Y: =315
         ZIndex: =130
 
@@ -3004,8 +3107,8 @@ EditScreen As screen:
         ValidationState: ="None"
         Value: =CalendarEventsGallery1.Selected.'Link to Photos'
         Visible: =If(HODetVis, true, false)
-        Width: =400
-        X: =1141
+        Width: =265.73
+        X: =757.99
         Y: =316
         ZIndex: =133
 
@@ -3021,12 +3124,14 @@ EditScreen As screen:
         HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.LogJournal
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Visible: =If(CustDetVis, true, false)
-        Width: =122
-        X: =339
+        Width: =81.05
+        X: =225.21
         Y: =259
         ZIndex: =135
 
@@ -3046,8 +3151,8 @@ EditScreen As screen:
             Type: ="Text"
             ValidationState: ="None"
             Value: ='HO Popup - Status'.Selected.Value
-            Width: =182
-            X: =714
+            Width: =120.90
+            X: =474.33
             Y: =101
             ZIndex: =7
 
@@ -3062,8 +3167,8 @@ EditScreen As screen:
             Height: =32
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =182
-            X: =714
+            Width: =120.90
+            X: =474.33
             Y: =101
             ZIndex: =8
 
@@ -3081,11 +3186,12 @@ EditScreen As screen:
             DisplayMode: =DisplayMode.Disabled
             Fill: =RGBA(230, 230, 230, 1)
             FocusedBorderThickness: =4
-            Height: =930
+            Height: =768
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(AuditLogVis, true,false)
-            Width: =1850
+            Width: =1229
+            X: =0.00
             ZIndex: =126
 
         "'Cust Det -  Close_2' As button":
@@ -3099,21 +3205,22 @@ EditScreen As screen:
             FocusedBorderThickness: =0
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =26
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =varButtonHover
             OnSelect: =Launch(varAuditLogLink)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
-            Size: =15
+            Size: =9.97
             Text: ="VIEW DETAILS"
             Visible: =If(AuditLogVis, true,false)
-            X: =990
-            Y: =190
+            Width: =1229
             ZIndex: =127
 
         "'Cust Det - Background Pill_1' As button":
@@ -3127,10 +3234,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =511
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -3138,12 +3247,10 @@ EditScreen As screen:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(AuditLogVis, true,false)
-            Width: =842
-            X: =504
-            Y: =216
+            Width: =1229
             ZIndex: =128
 
         "'Cust Det - Pill 3_1' As button":
@@ -3156,10 +3263,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =489
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -3167,12 +3276,10 @@ EditScreen As screen:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(AuditLogVis, true,false)
-            Width: =824
-            X: =513
-            Y: =227
+            Width: =1229
             ZIndex: =131
 
         "'Cust Det -  Close_1' As button":
@@ -3186,7 +3293,7 @@ EditScreen As screen:
             FocusedBorderThickness: =0
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =26
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
@@ -3197,29 +3304,28 @@ EditScreen As screen:
                 );
                 Clear(colHistory);
                 Clear(colHistoryTemp);
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(Self.Fill, -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(Self.Fill, -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
-            Size: =15
+            Size: =9.97
             Text: ="CLOSE"
             Visible: =If(AuditLogVis, true,false)
-            X: =1150
-            Y: =190
+            Width: =1229
             ZIndex: =132
 
         "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
-            Height: =453
+            Height: =768
             Items: =Sort(colHistory,Date,SortOrder.Descending)
             Layout: =Layout.Vertical
             TemplatePadding: =0
             TemplateSize: =Min(160, Self.Height - 60)
             Visible: =If(AuditLogVis, true,false)
-            Width: =817
-            X: =513
-            Y: =242
+            Width: =1229
             ZIndex: =134
 
             Title5 As label:
@@ -3231,13 +3337,13 @@ EditScreen As screen:
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =20
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =13.29
                 Text: =ThisItem.Date
                 VerticalAlign: =VerticalAlign.Top
-                Width: =Parent.Width - 20
-                X: =20
+                Width: =529.47
+                X: =13.29
                 Y: =10
                 ZIndex: =2
 
@@ -3249,13 +3355,13 @@ EditScreen As screen:
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =18
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =11.96
                 Text: =ThisItem.Editor
                 VerticalAlign: =VerticalAlign.Top
-                Width: =Title5.Width
-                X: =Title5.X
+                Width: =529.47
+                X: =13.29
                 Y: =Title5.Y + Title5.Height + 4
                 ZIndex: =3
 
@@ -3264,7 +3370,8 @@ EditScreen As screen:
                 Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 Height: =1
                 OnSelect: =Select(Parent)
-                Width: =Parent.TemplateWidth
+                Width: =542.76
+                X: =0.00
                 Y: =Parent.TemplateHeight - 1
                 ZIndex: =5
 
@@ -3277,14 +3384,14 @@ EditScreen As screen:
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =18
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =11.96
                 Text: |-
                     ="Version: " & ThisItem.Version
                 VerticalAlign: =VerticalAlign.Top
-                Width: =Title5.Width
-                X: =Title5.X
+                Width: =529.47
+                X: =13.29
                 Y: =Subtitle3.Y + Subtitle3.Height + 4
                 ZIndex: =6
 
@@ -3302,11 +3409,12 @@ EditScreen As screen:
             DisplayMode: =DisplayMode.Disabled
             Fill: =RGBA(230, 230, 230, 1)
             FocusedBorderThickness: =4
-            Height: =930
+            Height: =768
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(CustDetVis, true, false)
-            Width: =1850
+            Width: =1229
+            X: =0.00
             ZIndex: =61
 
         "'Cust Det - Background Pill' As button":
@@ -3320,10 +3428,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =511
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -3331,12 +3441,10 @@ EditScreen As screen:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(CustDetVis, true, false)
-            Width: =1301
-            X: =275
-            Y: =215
+            Width: =1229
             ZIndex: =62
 
         "'Cust Det - Pill 2' As button":
@@ -3349,10 +3457,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =187
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -3360,12 +3470,10 @@ EditScreen As screen:
             RadiusBottomRight: =30
             RadiusTopLeft: =30
             RadiusTopRight: =30
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(CustDetVis, true, false)
-            Width: =1044
-            X: =518
-            Y: =226
+            Width: =1229
             ZIndex: =63
 
         "'Cust Det - Rank Title' As label":
@@ -3379,16 +3487,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Rank"
             Underline: =true
             Visible: =If(CustDetVis, true, false)
-            Width: =197
+            Width: =1229
             Wrap: =false
-            X: =571
-            Y: =242
             ZIndex: =64
 
         "'Cust Det - Name Title' As label":
@@ -3402,16 +3510,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Name"
             Underline: =true
             Visible: =If(CustDetVis, true, false)
-            Width: =227
+            Width: =1229
             Wrap: =false
-            X: =781
-            Y: =242
             ZIndex: =65
 
         "'Cust Det - Section Title' As label":
@@ -3425,16 +3533,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Section"
             Underline: =true
             Visible: =If(CustDetVis, true, false)
-            Width: =238
+            Width: =1229
             Wrap: =false
-            X: =1024
-            Y: =242
             ZIndex: =66
 
         "'Cust Det - Contact Number Title' As label":
@@ -3448,16 +3556,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Contact Number"
             Underline: =true
             Visible: =If(CustDetVis, true, false)
-            Width: =232
+            Width: =1229
             Wrap: =false
-            X: =1277
-            Y: =242
             ZIndex: =67
 
         "'Cust Det - Cust O365 Title' As label":
@@ -3471,16 +3579,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =33
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Customer Email"
             Underline: =true
             Visible: =If(CustDetVis, true, false)
-            Width: =693
+            Width: =1229
             Wrap: =false
-            X: =571
-            Y: =328
             ZIndex: =68
 
         "'Cust Det - Cust O365' As combobox":
@@ -3501,13 +3609,15 @@ EditScreen As screen:
             DisplayFields: =["DisplayName","Email","Picture"]
             DisplayMode: =
             Font: =Font.'Segoe UI'
-            Height: =32
+            Height: =768
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
             Items: =Choices([@'TG14 Task Information'].'O365 Data')
             OnChange: |-
                 =UpdateContext({SubmitDM: DisplayMode.Edit})
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
@@ -3515,13 +3625,11 @@ EditScreen As screen:
             SearchItems: =Choices('TG14 Task Information'.'O365 Data','Cust Det - Cust O365'.SearchText)
             SelectionFill: =RGBA(105, 121, 126, 1)
             SelectMultiple: =false
-            Size: =13
+            Size: =8.64
             Template: =ListItemTemplate.Person
             Tooltip: =
             Visible: =If(CustDetVis, true, false)
-            Width: =939
-            X: =571
-            Y: =366
+            Width: =1229
             ZIndex: =69
 
         "'Cust Det - Pill 1' As button":
@@ -3534,10 +3642,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =187
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -3545,12 +3655,10 @@ EditScreen As screen:
             RadiusBottomRight: =30
             RadiusTopLeft: =30
             RadiusTopRight: =30
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(CustDetVis, true, false)
-            Width: =217
-            X: =289
-            Y: =226
+            Width: =1229
             ZIndex: =70
 
         "'Cust Det - Pill 3' As button":
@@ -3563,10 +3671,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =288
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -3574,12 +3684,10 @@ EditScreen As screen:
             RadiusBottomRight: =30
             RadiusTopLeft: =30
             RadiusTopRight: =30
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(CustDetVis, true, false)
-            Width: =1274
-            X: =288
-            Y: =427
+            Width: =1229
             ZIndex: =71
 
         "'Cust Det - Line Managers Details Header' As label":
@@ -3592,14 +3700,14 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =70
-            Size: =16
+            Height: =768
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =10.63
             Text: ="Line Managers Details (If Applicable)"
             Underline: =true
             Visible: =If(CustDetVis, true, false)
-            Width: =572
-            X: =303
-            Y: =434
+            Width: =1229
             ZIndex: =72
 
         "'Cust Det - LM Rank & Name Title' As label":
@@ -3613,16 +3721,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Rank & Name"
             Underline: =true
             Visible: =If(CustDetVis, true, false)
-            Width: =603
+            Width: =1229
             Wrap: =false
-            X: =302
-            Y: =506
             ZIndex: =73
 
         "'Cust Det - LM Section Title' As label":
@@ -3636,16 +3744,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Section"
             Underline: =true
             Visible: =If(CustDetVis, true, false)
-            Width: =603
+            Width: =1229
             Wrap: =false
-            X: =937
-            Y: =506
             ZIndex: =74
 
         "'Cust Det - LM Contact Number Title' As label":
@@ -3659,16 +3767,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="Contact Number"
             Underline: =true
             Visible: =If(CustDetVis, true, false)
-            Width: =603
+            Width: =1229
             Wrap: =false
-            X: =303
-            Y: =592
             ZIndex: =75
 
         "'Cust Det - POC If Different Title' As label":
@@ -3682,16 +3790,16 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
+            Height: =768
             PaddingLeft: =0
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: ="POC If Different"
             Underline: =true
             Visible: =If(CustDetVis, true, false)
-            Width: =603
+            Width: =1229
             Wrap: =false
-            X: =937
-            Y: =592
             ZIndex: =76
 
         "'Cust Det -  Close' As button":
@@ -3704,27 +3812,28 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =26
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
             OnSelect: =Set(CustDetVis, false)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(Self.Fill, -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(Self.Fill, -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
-            Size: =15
+            Size: =9.97
             Text: ="CLOSE"
             Visible: =If(CustDetVis, true, false)
-            X: =1380
-            Y: =190
+            Width: =1229
             ZIndex: =77
 
         "'Cust Det - Rank' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
-            Height: =32
+            Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
             Placeholder: =""
@@ -3732,15 +3841,15 @@ EditScreen As screen:
             ValidationState: ="None"
             Value: =CalendarEventsGallery1.Selected.Rank
             Visible: =If(CustDetVis, true, false)
-            Width: =201
-            X: =571
-            Y: =279
+            Width: =1229
+            X: =0
+            Y: =0
             ZIndex: =78
 
         "'Cust Det - Name' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
-            Height: =32
+            Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
             Placeholder: =""
@@ -3748,15 +3857,15 @@ EditScreen As screen:
             ValidationState: ="None"
             Value: =CalendarEventsGallery1.Selected.'Customer Name'
             Visible: =If(CustDetVis, true, false)
-            Width: =229
-            X: =789
-            Y: =279
+            Width: =1229
+            X: =0
+            Y: =0
             ZIndex: =79
 
         "'Cust Det - Section' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
-            Height: =32
+            Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
             Placeholder: =""
@@ -3764,15 +3873,15 @@ EditScreen As screen:
             ValidationState: ="None"
             Value: =CalendarEventsGallery1.Selected.'Customer Section'
             Visible: =If(CustDetVis, true, false)
-            Width: =240
-            X: =1024
-            Y: =279
+            Width: =1229
+            X: =0
+            Y: =0
             ZIndex: =80
 
         "'Cust Det - Contact Number' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
-            Height: =32
+            Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
             Placeholder: =""
@@ -3780,15 +3889,15 @@ EditScreen As screen:
             ValidationState: ="None"
             Value: =CalendarEventsGallery1.Selected.'Customer Contact Number'
             Visible: =If(CustDetVis, true, false)
-            Width: =232
-            X: =1277
-            Y: =279
+            Width: =1229
+            X: =0
+            Y: =0
             ZIndex: =81
 
         "'Cust Det - LM Rank & Name' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
-            Height: =34
+            Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
             Placeholder: =""
@@ -3796,15 +3905,15 @@ EditScreen As screen:
             ValidationState: ="None"
             Value: =If(IsBlank(CalendarEventsGallery1.Selected.'LM Rank Name'), "-", CalendarEventsGallery1.Selected.'LM Rank Name')
             Visible: =If(CustDetVis, true, false)
-            Width: =603
-            X: =299
-            Y: =542
+            Width: =1229
+            X: =0
+            Y: =0
             ZIndex: =82
 
         "'Cust Det - LM Section' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
-            Height: =34
+            Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
             Placeholder: =""
@@ -3812,15 +3921,15 @@ EditScreen As screen:
             ValidationState: ="None"
             Value: =If(IsBlank(CalendarEventsGallery1.Selected.'LM Section'), "-", CalendarEventsGallery1.Selected.'LM Section')
             Visible: =If(CustDetVis, true, false)
-            Width: =603
-            X: =935
-            Y: =542
+            Width: =1229
+            X: =0
+            Y: =0
             ZIndex: =83
 
         "'Cust Det - LM Contact Number' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
-            Height: =34
+            Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
             Placeholder: =""
@@ -3828,15 +3937,15 @@ EditScreen As screen:
             ValidationState: ="None"
             Value: =If(IsBlank(CalendarEventsGallery1.Selected.'LM Contact Number'), "-", CalendarEventsGallery1.Selected.'LM Contact Number')
             Visible: =If(CustDetVis, true, false)
-            Width: =603
-            X: =299
-            Y: =628
+            Width: =1229
+            X: =0
+            Y: =0
             ZIndex: =84
 
         "'Cust Det - POC If Different' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
-            Height: =34
+            Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
             Placeholder: =""
@@ -3844,9 +3953,9 @@ EditScreen As screen:
             ValidationState: ="None"
             Value: =CalendarEventsGallery1.Selected.'POC if Different'
             Visible: =If(CustDetVis, true, false)
-            Width: =603
-            X: =935
-            Y: =628
+            Width: =1229
+            X: =0
+            Y: =0
             ZIndex: =87
 
     "'Edit Screen - Notify Window' As group":
@@ -3863,11 +3972,12 @@ EditScreen As screen:
             DisplayMode: =DisplayMode.Disabled
             Fill: =RGBA(230, 230, 230, 1)
             FocusedBorderThickness: =4
-            Height: =930
+            Height: =768
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(varNotifyWindow, true, false)
-            Width: =1850
+            Width: =1229
+            X: =0.00
             ZIndex: =114
 
         "'Cust Det - Background Pill_2' As button":
@@ -3881,10 +3991,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =511
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -3892,12 +4004,10 @@ EditScreen As screen:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(varNotifyWindow, true, false)
-            Width: =1301
-            X: =275
-            Y: =215
+            Width: =1229
             ZIndex: =115
 
         "'Cust Det - Pill 3_2' As button":
@@ -3910,10 +4020,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =488
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -3921,12 +4033,10 @@ EditScreen As screen:
             RadiusBottomRight: =30
             RadiusTopLeft: =30
             RadiusTopRight: =30
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(varNotifyWindow, true, false)
-            Width: =1274
-            X: =288
-            Y: =227
+            Width: =1229
             ZIndex: =116
 
         Image1 As image:
@@ -3936,14 +4046,16 @@ EditScreen As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
             Image: ='Pulse-1.4s-284px'
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(varNotifyWindow, true, false)
-            X: =875
-            Y: =350
+            Width: =1229
             ZIndex: =117
 
         Label6 As label:
@@ -3957,13 +4069,13 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =69
-            Size: =18
+            Height: =768
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =11.96
             Text: ="Submiting, Please Wait..."
             Visible: =If(varNotifyWindow, true, false)
-            Width: =479
-            X: =686
-            Y: =278
+            Width: =1229
             ZIndex: =118
 
         Checkbox1_1 As checkbox:
@@ -3979,18 +4091,19 @@ EditScreen As screen:
             DisplayMode: =DisplayMode.Disabled
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Size: =13
+            Size: =8.64
             Text: ="Current Tasks"
             Visible: =If(varNotifyWindow, true, false)
-            Width: =224
-            X: =655
-            Y: =501
+            Width: =1229
             ZIndex: =119
 
         Checkbox1_2 As checkbox:
@@ -4006,18 +4119,19 @@ EditScreen As screen:
             DisplayMode: =DisplayMode.Disabled
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Size: =13
+            Size: =8.64
             Text: ="1177 List"
             Visible: =If(varNotifyWindow, true, false)
-            Width: =224
-            X: =655
-            Y: =551
+            Width: =1229
             ZIndex: =120
 
         Label7 As label:
@@ -4030,12 +4144,13 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =18
+            Height: =768
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =11.96
             Text: ="Information Patched"
             Visible: =If(varNotifyWindow, true, false)
-            Width: =241
-            X: =651
-            Y: =461
+            Width: =1229
             ZIndex: =121
 
         Icon12 As icon.CheckBadge:
@@ -4045,18 +4160,18 @@ EditScreen As screen:
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =37
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CheckBadge
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(Checkbox1_1.Value && Checkbox1_2.Value && varNotifyWindow = true , true, false)
-            Width: =33
-            X: =614
-            Y: =461
+            Width: =1229
             ZIndex: =122
 
         Checkbox1_4 As checkbox:
@@ -4072,18 +4187,19 @@ EditScreen As screen:
             DisplayMode: =DisplayMode.Disabled
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Size: =13
+            Size: =8.64
             Text: ="Email Sent"
             Visible: =If(varNotifyWindow, true, false)
-            Width: =224
-            X: =990
-            Y: =501
+            Width: =1229
             ZIndex: =123
 
         Label7_2 As label:
@@ -4096,12 +4212,13 @@ EditScreen As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Size: =18
+            Height: =768
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =11.96
             Text: ="Customer Notification"
             Visible: =If(varNotifyWindow, true, false)
-            Width: =272
-            X: =989
-            Y: =464
+            Width: =1229
             ZIndex: =124
 
         Icon12_1 As icon.CheckBadge:
@@ -4111,18 +4228,18 @@ EditScreen As screen:
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =37
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CheckBadge
+            PaddingRight: =0.00
+            PaddingTop: =0.00
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(Checkbox1_4.Value = true, true, false)
-            Width: =33
-            X: =952
-            Y: =464
+            Width: =1229
             ZIndex: =125
 
     "'Edit Screen - Attachments' As group":
@@ -4139,11 +4256,12 @@ EditScreen As screen:
             DisplayMode: =DisplayMode.Disabled
             Fill: =RGBA(230, 230, 230, 1)
             FocusedBorderThickness: =4
-            Height: =930
+            Height: =768
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(AttachmentsVis, true,false)
-            Width: =1850
+            Width: =1229
+            X: =0.00
             ZIndex: =136
 
         "'Cust Det - Background Pill_8' As button":
@@ -4157,10 +4275,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =511
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -4168,12 +4288,10 @@ EditScreen As screen:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(AttachmentsVis, true,false)
-            Width: =842
-            X: =504
-            Y: =216
+            Width: =1229
             ZIndex: =137
 
         "'Cust Det - Pill 3_8' As button":
@@ -4186,10 +4304,12 @@ EditScreen As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =489
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -4197,12 +4317,10 @@ EditScreen As screen:
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
-            Size: =15
+            Size: =9.97
             Text: =""
             Visible: =If(AttachmentsVis, true,false)
-            Width: =824
-            X: =513
-            Y: =227
+            Width: =1229
             ZIndex: =138
 
         "'Cust Det -  Close_7' As button":
@@ -4216,7 +4334,7 @@ EditScreen As screen:
             FocusedBorderThickness: =0
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =26
+            Height: =768
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Self.Fill, -10%)
@@ -4225,15 +4343,16 @@ EditScreen As screen:
                     AttachmentsVis,
                     false
                 );
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(Self.Fill, -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(Self.Fill, -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
-            Size: =15
+            Size: =9.97
             Text: ="CLOSE"
             Visible: =If(AttachmentsVis, true,false)
-            X: =1150
-            Y: =190
+            Width: =1229
             ZIndex: =139
 

@@ -105,11 +105,15 @@
                     ).ID
                 )
             );
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Repeat: =true
-        X: =1477
+        Size: =8.64
+        Width: =106.29
+        X: =981.20
         Y: =11
         ZIndex: =1
 
@@ -124,22 +128,21 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =858
+        Height: =768
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         PaddingBottom: =0
         PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =1478
-        X: =363
-        Y: =64
+        Width: =981.87
+        X: =241.15
         ZIndex: =2
 
     Button23 As button:
@@ -157,15 +160,17 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
-        Size: =24
+        Size: =15.94
         Text: =Text(_firstDayOfMonth, "mmmm yyyy")
-        Width: =1442
-        X: =383
+        Width: =957.95
+        X: =254.44
         Y: =84
         ZIndex: =3
 
@@ -184,11 +189,15 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         OnTimerEnd: =Refresh('TG14 Task Information');
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Repeat: =true
-        X: =846
+        Size: =8.64
+        Width: =106.29
+        X: =562.02
         Y: =6
         ZIndex: =4
 
@@ -209,11 +218,13 @@
             Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
             Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
             If(_lastDayOfMonth > _maxDate, Set(_maxDate, _lastDayOfMonth))
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =50
-        X: =1756
+        Width: =33.22
+        X: =1166.55
         Y: =87
         ZIndex: =5
 
@@ -234,11 +245,13 @@
             Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
             Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
             If(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth))
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =50
-        X: =398
+        Width: =33.22
+        X: =264.40
         Y: =87
         ZIndex: =6
 
@@ -249,9 +262,9 @@
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =32
-        Width: =1442
+        Width: =957.95
         WrapCount: =7
-        X: =383
+        X: =254.44
         Y: =140
         ZIndex: =7
 
@@ -267,9 +280,12 @@
             FontWeight: =FontWeight.Bold
             Height: =29
             OnSelect: =Select(Parent)
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: =ThisItem.Value
-            Width: =206
+            Width: =136.85
+            X: =0.00
             Y: =2
             ZIndex: =1
 
@@ -281,10 +297,10 @@
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =120
-        Width: =1442
+        Width: =957.95
         WrapCount: =7
-        X: =383
-        Y: =172
+        X: =254.44
+        Y: =18
         ZIndex: =8
 
         Rectangle15 As rectangle:
@@ -295,7 +311,8 @@
             FocusedBorderThickness: =4
             Height: =119
             OnSelect: =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days))
-            Width: =206
+            Width: =136.85
+            X: =0.00
             ZIndex: =1
 
         Circle4 As circle:
@@ -304,13 +321,13 @@
             BorderThickness: =2
             DisabledFill: =RGBA(105, 121, 126, 1)
             Fill: =RGBA(0, 120, 212, 1)
-            Height: =31
+            Height: =20.59
             HoverFill: =RGBA(105, 121, 126, 1)
             OnSelect: =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days))
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(DateAdd(_firstDayInView, ThisItem.Value) = _CurrentDate, true, false)
-            Width: =31
-            X: =5
+            Width: =20.59
+            X: =3.32
             Y: =5
             ZIndex: =2
 
@@ -325,10 +342,12 @@
             FontWeight: =FontWeight.Bold
             Height: =31
             OnSelect: =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days))
-            Size: =13
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =8.64
             Text: =Day(DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days))
-            Width: =31
-            X: =5
+            Width: =20.59
+            X: =3.32
             Y: =5
             ZIndex: =3
 
@@ -339,7 +358,8 @@
             Layout: =Layout.Vertical
             TemplatePadding: =0
             TemplateSize: =25
-            Width: =206
+            Width: =136.85
+            X: =0.00
             Y: =36
             ZIndex: =4
 
@@ -353,9 +373,12 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =25
                 OnSelect: =Select(Parent)
-                Size: =10
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =6.64
                 Text: =ThisItem.'Start Time'
-                Width: =50
+                Width: =33.22
+                X: =0.00
                 ZIndex: =1
 
             Label25_1 As label:
@@ -367,11 +390,13 @@
                 Font: =Font.'Segoe UI'
                 Height: =24
                 OnSelect: =Select(Parent)
-                Size: =10
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =6.64
                 Text: |-
                     =If(ThisItem.'Project Category'.Value = "Diversion", ThisItem.'Task Location', "Task: " & ThisItem.Title)
-                Width: =166
-                X: =40
+                Width: =110.28
+                X: =26.58
                 Y: =1
                 ZIndex: =2
 
@@ -386,7 +411,8 @@
                 HoverFill: =RGBA(105, 121, 126, 1)
                 OnSelect: =Select(Parent)
                 PressedFill: =RGBA(105, 121, 126, 1)
-                Width: =206
+                Width: =136.85
+                X: =0.00
                 ZIndex: =4
 
             Rectangle17 As rectangle:
@@ -399,7 +425,8 @@
                 HoverFill: =RGBA(0, 0, 0, 0)
                 OnSelect: =
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =204
+                Width: =135.52
+                X: =0.00
                 ZIndex: =5
 
         Button13 As button:
@@ -417,16 +444,18 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
             OnSelect: =Select(Parent); Navigate('Calendar - Day', ScreenTransition.Fade); Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days))
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =10
+            Size: =6.64
             Text: ="OPEN"
-            Width: =56
-            X: =150
+            Width: =37.20
+            X: =99.65
             ZIndex: =5
 
     "'Calendar Month  - Approval Refresh Timer' As timer":
@@ -454,11 +483,15 @@
                     ).ID
                 )
             );
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         Repeat: =true
-        X: =507
+        Size: =8.64
+        Width: =106.29
+        X: =336.81
         Y: =4
         ZIndex: =9
 
@@ -477,13 +510,15 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =338
-        X: =14
+        Width: =224.54
+        X: =9.30
         Y: =64
         ZIndex: =10
 
@@ -498,10 +533,12 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: =varUnitCrest
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =338
-        X: =14
+        Width: =224.54
+        X: =9.30
         Y: =64
         ZIndex: =11
 
@@ -520,13 +557,15 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =338
-        X: =14
+        Width: =224.54
+        X: =9.30
         Y: =497
         ZIndex: =12
 
@@ -545,13 +584,15 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =338
-        X: =14
+        Width: =224.54
+        X: =9.30
         Y: =286
         ZIndex: =18
 
@@ -569,6 +610,8 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
         OnSelect: =Navigate('Diversion - Add'); NewForm('DivForm (EDIT)');
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
@@ -576,10 +619,10 @@
         RadiusBottomRight: =
         RadiusTopLeft: =
         RadiusTopRight: =
-        Size: =15
+        Size: =9.97
         Text: ="Add Diversion"
-        Width: =315
-        X: =26
+        Width: =209.26
+        X: =17.27
         Y: =Button5_8.Y + Self.Height + 3
         ZIndex: =19
 
@@ -597,16 +640,18 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
         OnSelect: =Navigate('Task - Add'); NewForm('DivForm (EDIT)');
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
         RadiusBottomLeft: =
         RadiusBottomRight: =
         RadiusTopLeft: =10 
-        Size: =15
+        Size: =9.97
         Text: ="Add Task"
-        Width: =315
-        X: =26
+        Width: =209.26
+        X: =17.27
         Y: =300
         ZIndex: =20
 
@@ -624,6 +669,8 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
         OnSelect: =Navigate('Calendar - Outstanding', ScreenTransition.Fade)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
@@ -631,10 +678,10 @@
         RadiusBottomRight: =
         RadiusTopLeft: =
         RadiusTopRight: =
-        Size: =15
+        Size: =9.97
         Text: ="View Outstanding Tasks"
-        Width: =315
-        X: =26
+        Width: =209.26
+        X: =17.27
         Y: =Button5_7.Y + Self.Height + 3
         ZIndex: =21
 
@@ -652,15 +699,17 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
         OnSelect: =Navigate('Approvals Dashboard', ScreenTransition.Fade)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
         RadiusTopLeft: =
         RadiusTopRight: =
-        Size: =15
+        Size: =9.97
         Text: ="Approvals"
-        Width: =315
-        X: =26
+        Width: =209.26
+        X: =17.27
         Y: =Button5_10.Y + Self.Height + 3
         ZIndex: =22
 
@@ -681,18 +730,18 @@
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         PaddingBottom: =
         PaddingLeft: =
-        PaddingRight: =
-        PaddingTop: =
+        PaddingRight: =0.00
+        PaddingTop: =0.00
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =Self.Height
         RadiusTopLeft: =Self.Height
         RadiusTopRight: =0
-        Size: =11
+        Size: =7.31
         Text: =varApprovalNumber
-        Width: =45
-        X: =Button5_15.X + Button5_15.Width -Self.Width
+        Width: =29.90
+        X: =196.64
         Y: =Button5_15.Y
         ZIndex: =23
 
@@ -711,17 +760,21 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =338
-        X: =14
-        Y: =572
+        Width: =224.54
+        X: =9.30
+        Y: =418
         ZIndex: =24
 
     cmp_Header_15 As cmp_Header:
+        Width: =1229.00
+        X: =0.00
         ZIndex: =25
 
     Group2_1 As group:
@@ -745,15 +798,17 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =varButtonHover
             OnSelect: =Navigate('Calendar - Month', ScreenTransition.Fade)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
             RadiusBottomLeft: =0
             RadiusTopLeft: =0
-            Size: =15
+            Size: =9.97
             Text: ="Month"
-            Width: =88
-            X: =229
+            Width: =58.46
+            X: =152.13
             Y: =509
             ZIndex: =13
 
@@ -771,6 +826,8 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =varButtonHover
             OnSelect: =Navigate('Calendar - Week', ScreenTransition.Fade)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
@@ -778,10 +835,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =15
+            Size: =9.97
             Text: ="Week"
-            Width: =88
-            X: =139
+            Width: =58.46
+            X: =92.34
             Y: =509
             ZIndex: =14
 
@@ -799,15 +856,17 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =varButtonHover
             OnSelect: =Navigate('Calendar - Day', ScreenTransition.Fade)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
             RadiusBottomRight: =0
             RadiusTopRight: =0
-            Size: =15
+            Size: =9.97
             Text: ="Day"
-            Width: =88
-            X: =49
+            Width: =58.46
+            X: =32.55
             Y: =509
             ZIndex: =15
 
@@ -818,8 +877,8 @@
             Fill: =varButtonSeperatorFill
             FocusedBorderThickness: =4
             Height: =40
-            Width: =2
-            X: =137
+            Width: =1.33
+            X: =91.01
             Y: =509
             ZIndex: =16
 
@@ -830,8 +889,8 @@
             Fill: =varButtonSeperatorFill
             FocusedBorderThickness: =4
             Height: =40
-            Width: =2
-            X: =227
+            Width: =1.33
+            X: =150.80
             Y: =509
             ZIndex: =17
 

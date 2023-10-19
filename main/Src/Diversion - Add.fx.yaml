@@ -30,10 +30,12 @@
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =84
-        Size: =25
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =16.61
         Text: ="Diversion Details"
-        Width: =546
-        X: =657
+        Width: =362.72
+        X: =436.46
         Y: =115
         ZIndex: =2
 
@@ -48,11 +50,13 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =47
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Enter the details of your diversion below to add it to the calendar"
         VerticalAlign: =VerticalAlign.Top
-        Width: =641
-        X: =610
+        Width: =425.83
+        X: =405.24
         Y: =186
         ZIndex: =3
 
@@ -66,8 +70,8 @@
         Height: =2
         HoverFill: =RGBA(105, 121, 126, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =500
-        X: =680
+        Width: =332.16
+        X: =451.74
         Y: =224
         ZIndex: =4
 
@@ -79,9 +83,9 @@
         NumberOfColumns: =6
         OnSuccess: =Navigate('Diversion Success', ScreenTransition.Fade)
         SnapToColumns: =false
-        Width: =1120
-        X: =370
-        Y: =245
+        Width: =1007.67
+        X: =109
+        Y: =229
         ZIndex: =5
 
         "'Project Category_DataCard3' As typedDataCard.comboBoxEditCard":
@@ -95,8 +99,8 @@
             Height: =50
             Required: =false
             Update: =DataCardValue16.Selected
-            Width: =191
-            X: =0
+            Width: =126.89
+            X: =0.00
             Y: =0
             ZIndex: =1
 
@@ -113,12 +117,14 @@
                 FontWeight: =FontWeight.Bold
                 Height: =33
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: =Parent.DisplayName
                 Underline: =true
-                Width: =166
+                Width: =110.28
                 Wrap: =false
-                X: =30
+                X: =19.93
                 Y: =10
                 ZIndex: =1
 
@@ -144,6 +150,8 @@
                 HoverFill: =RGBA(212, 212, 212, 1)
                 Items: =Choices([@'TG14 Task Information'].'Project Category')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =3.32
+                PaddingTop: =3.32
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(105, 121, 126, 1)
@@ -151,10 +159,10 @@
                 SearchItems: =Choices('TG14 Task Information'.'Project Category',DataCardValue16.SearchText)
                 SelectionFill: =RGBA(105, 121, 126, 1)
                 SelectMultiple: =false
-                Size: =13
+                Size: =8.64
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
+                Width: =87.03
+                X: =19.93
                 Y: =DataCardKey16.Y + DataCardKey16.Height + 5
                 ZIndex: =2
 
@@ -173,13 +181,13 @@
                 Live: =Live.Assertive
                 PaddingBottom: =0
                 PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =13
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =8.64
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
+                Width: =87.03
+                X: =19.93
                 Y: =DataCardValue16.Y + DataCardValue16.Height
                 ZIndex: =3
 
@@ -196,11 +204,14 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =DataCardKey16.Height
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
+                Width: =19.93
                 Wrap: =false
+                X: =0.00
                 Y: =DataCardKey16.Y
                 ZIndex: =4
 
@@ -216,8 +227,8 @@
             MaxLength: =DataSourceInfo([@'TG14 Task Information'], DataSourceInfo.MaxLength, "StartTime")
             Required: =false
             Update: =DataCardValue21.Text
-            Width: =186
-            X: =2
+            Width: =123.57
+            X: =1.33
             Y: =0
             ZIndex: =1
 
@@ -235,12 +246,14 @@
                 FontWeight: =FontWeight.Bold
                 Height: =34
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: =Parent.DisplayName
                 Underline: =true
-                Width: =Parent.Width - 60
+                Width: =83.71
                 Wrap: =false
-                X: =30
+                X: =19.93
                 Y: =10
                 ZIndex: =1
 
@@ -262,6 +275,8 @@
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
+                PaddingRight: =3.32
+                PaddingTop: =3.32
                 PressedBorderColor: =RGBA(105, 121, 126, 1)
                 PressedColor: =RGBA(51, 51, 51, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -269,10 +284,10 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                Size: =13
+                Size: =8.64
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
+                Width: =83.71
+                X: =19.93
                 Y: =DataCardKey21.Y + DataCardKey21.Height + 5
                 ZIndex: =2
 
@@ -291,13 +306,13 @@
                 Live: =Live.Assertive
                 PaddingBottom: =0
                 PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =13
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =8.64
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
+                Width: =83.71
+                X: =19.93
                 Y: =DataCardValue21.Y + DataCardValue21.Height
                 ZIndex: =3
 
@@ -314,11 +329,14 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =DataCardKey21.Height
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
+                Width: =19.93
                 Wrap: =false
+                X: =0.00
                 Y: =DataCardKey21.Y
                 ZIndex: =4
 
@@ -335,11 +353,13 @@
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Icon: =Icon.Clock
                 OnSelect: =Set(varShowTimePicker, true)
+                PaddingRight: =0.00
+                PaddingTop: =0.00
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =18
-                X: =133
+                Width: =11.96
+                X: =88.35
                 Y: =48
                 ZIndex: =5
 
@@ -349,8 +369,8 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =141
-            Width: =186
-            X: =1
+            Width: =123.57
+            X: =0.67
             Y: =192
             ZIndex: =1
 
@@ -367,12 +387,14 @@
                 FontWeight: =FontWeight.Bold
                 Height: =33
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: ="Recurring?"
                 Underline: =true
-                Width: =166
+                Width: =110.28
                 Wrap: =false
-                X: =40
+                X: =26.58
                 Y: =40
                 ZIndex: =1
 
@@ -389,11 +411,12 @@
                 HandleFill: =RGBA(255, 255, 255, 1)
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
-                Size: =13
+                Size: =8.64
                 TrueFill: =RGBA(105, 121, 126, 1)
                 TrueHoverFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 TrueText: ="Yes"
-                X: =40
+                Width: =61.12
+                X: =26.58
                 Y: =91
                 ZIndex: =2
 
@@ -404,8 +427,8 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =141
             Visible: =If(Toggle1.Value = true, true, false)
-            Width: =372
-            X: =2
+            Width: =247.13
+            X: =1.33
             Y: =192
             ZIndex: =1
 
@@ -422,12 +445,14 @@
                 FontWeight: =FontWeight.Bold
                 Height: =33
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: ="Reccurance Length"
                 Underline: =true
-                Width: =166
+                Width: =110.28
                 Wrap: =false
-                X: =40
+                X: =26.58
                 Y: =40
                 ZIndex: =1
 
@@ -450,14 +475,15 @@
                 Items: =[Blank(),"2 Weeks","3 Weeks","4 Weeks","5 Weeks","6 Weeks","7 weeks","8 Weeks","9 Weeks","10 Weeks"]
                 PaddingBottom: =5
                 PaddingLeft: =12
-                PaddingRight: =5
-                PaddingTop: =5
+                PaddingRight: =3.32
+                PaddingTop: =3.32
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(105, 121, 126, 1)
                 SelectionFill: =RGBA(105, 121, 126, 1)
-                Size: =13
-                X: =40
+                Size: =8.64
+                Width: =217.90
+                X: =26.58
                 Y: =86
                 ZIndex: =2
 
@@ -472,8 +498,8 @@
             Height: =50
             Required: =false
             Update: =DataCardValue27.SelectedDate
-            Width: =200
-            X: =1
+            Width: =132.87
+            X: =0.67
             Y: =0
             ZIndex: =34
 
@@ -491,12 +517,14 @@
                 FontWeight: =FontWeight.Bold
                 Height: =34
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: =Text("Date")
                 Underline: =true
-                Width: =Parent.Width - 60
+                Width: =93.00
                 Wrap: =false
-                X: =32
+                X: =21.26
                 Y: =10
                 ZIndex: =1
 
@@ -516,12 +544,14 @@
                 IsEditable: =true
                 PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =3.32
+                PaddingTop: =0.00
                 SelectedDateFill: =RGBA(105, 121, 126, 1)
-                Size: =13
+                Size: =8.64
                 StartYear: =2012
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =32
+                Width: =93.00
+                X: =21.26
                 Y: =DataCardKey27.Y + DataCardKey27.Height + 5
                 ZIndex: =2
 
@@ -540,13 +570,13 @@
                 Live: =Live.Assertive
                 PaddingBottom: =0
                 PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =13
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =8.64
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =32
+                Width: =93.00
+                X: =21.26
                 Y: =DataCardValue27.Y + DataCardValue27.Height
                 ZIndex: =3
 
@@ -563,12 +593,14 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =DataCardKey27.Height
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
+                Width: =19.93
                 Wrap: =false
-                X: =2
+                X: =1.33
                 Y: =DataCardKey27.Y
                 ZIndex: =4
 
@@ -584,8 +616,8 @@
             MaxLength: =DataSourceInfo([@'TG14 Task Information'], DataSourceInfo.MaxLength, "TaskLocation")
             Required: =false
             Update: =DataCardValue30.Text
-            Width: =176
-            X: =3
+            Width: =116.92
+            X: =2.00
             Y: =0
             ZIndex: =34
 
@@ -603,12 +635,14 @@
                 FontWeight: =FontWeight.Bold
                 Height: =34
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: =Text("Location")
                 Underline: =true
-                Width: =Parent.Width - 60
+                Width: =77.06
                 Wrap: =false
-                X: =32
+                X: =21.26
                 Y: =10
                 ZIndex: =1
 
@@ -631,6 +665,8 @@
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
+                PaddingRight: =3.32
+                PaddingTop: =3.32
                 PressedBorderColor: =RGBA(105, 121, 126, 1)
                 PressedColor: =RGBA(51, 51, 51, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -638,10 +674,10 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                Size: =13
+                Size: =8.64
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =32
+                Width: =77.06
+                X: =21.26
                 Y: =DataCardKey30.Y + DataCardKey30.Height + 5
                 ZIndex: =2
 
@@ -660,13 +696,13 @@
                 Live: =Live.Assertive
                 PaddingBottom: =0
                 PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =13
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =8.64
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =32
+                Width: =77.06
+                X: =21.26
                 Y: =DataCardValue30.Y + DataCardValue30.Height
                 ZIndex: =3
 
@@ -683,12 +719,14 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =DataCardKey30.Height
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
+                Width: =19.93
                 Wrap: =false
-                X: =2
+                X: =1.33
                 Y: =DataCardKey30.Y
                 ZIndex: =4
 
@@ -704,8 +742,8 @@
             Height: =50
             Required: =false
             Update: =DataCardValue72.Selected
-            Width: =279
-            X: =4
+            Width: =185.35
+            X: =2.65
             Y: =0
             ZIndex: =34
 
@@ -723,12 +761,14 @@
                 FontWeight: =FontWeight.Bold
                 Height: =34
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: =Text("Photog")
                 Underline: =true
-                Width: =Parent.Width - 60
+                Width: =145.48
                 Wrap: =false
-                X: =32
+                X: =21.26
                 Y: =10
                 ZIndex: =1
 
@@ -958,6 +998,8 @@
                         ]
                     )
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =3.32
+                PaddingTop: =3.32
                 PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(105, 121, 126, 1)
@@ -965,10 +1007,10 @@
                 SearchItems: =[]
                 SelectionFill: =RGBA(105, 121, 126, 1)
                 SelectMultiple: =false
-                Size: =13
+                Size: =8.64
                 Tooltip: =Parent.DisplayName
-                Width: =224
-                X: =27
+                Width: =148.81
+                X: =17.94
                 Y: =48
                 ZIndex: =2
 
@@ -987,13 +1029,13 @@
                 Live: =Live.Assertive
                 PaddingBottom: =0
                 PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =13
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =8.64
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =32
+                Width: =145.48
+                X: =21.26
                 Y: =DataCardValue72.Y + DataCardValue72.Height
                 ZIndex: =3
 
@@ -1010,12 +1052,14 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =DataCardKey72.Height
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
+                Width: =19.93
                 Wrap: =false
-                X: =2
+                X: =1.33
                 Y: =DataCardKey72.Y
                 ZIndex: =4
 
@@ -1031,8 +1075,8 @@
             MaxLength: =DataSourceInfo([@'TG14 Task Information'], DataSourceInfo.MaxLength, "Notes")
             Required: =false
             Update: =DataCardValue83.Text
-            Width: =1116
-            X: =0
+            Width: =741.39
+            X: =0.00
             Y: =193
             ZIndex: =34
 
@@ -1049,12 +1093,14 @@
                 FontWeight: =FontWeight.Bold
                 Height: =34
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: =Parent.DisplayName
                 Underline: =true
-                Width: =Parent.Width - 60
+                Width: =701.53
                 Wrap: =false
-                X: =45
+                X: =29.90
                 Y: =20
                 ZIndex: =1
 
@@ -1078,6 +1124,8 @@
                 MaxLength: =Parent.MaxLength
                 Mode: =TextMode.MultiLine
                 PaddingLeft: =5
+                PaddingRight: =3.32
+                PaddingTop: =3.32
                 PressedBorderColor: =RGBA(105, 121, 126, 1)
                 PressedColor: =RGBA(51, 51, 51, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -1085,10 +1133,10 @@
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                Size: =13
+                Size: =8.64
                 Tooltip: =Parent.DisplayName
-                Width: =969
-                X: =32
+                Width: =643.73
+                X: =21.26
                 Y: =57
                 ZIndex: =2
 
@@ -1107,13 +1155,13 @@
                 Live: =Live.Assertive
                 PaddingBottom: =0
                 PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =13
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =8.64
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =32
+                Width: =701.53
+                X: =21.26
                 Y: =DataCardValue83.Y + DataCardValue83.Height
                 ZIndex: =3
 
@@ -1130,12 +1178,14 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =DataCardKey83.Height
                 PaddingLeft: =0
-                Size: =13
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
+                Width: =19.93
                 Wrap: =false
-                X: =2
+                X: =1.33
                 Y: =DataCardKey83.Y
                 ZIndex: =4
 
@@ -2170,6 +2220,8 @@
             NewForm('DivForm (EDIT)');
             Reset(cmp_TimePicker_2);
             Back();
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -2177,11 +2229,11 @@
         RadiusBottomRight: =Button4.Height
         RadiusTopLeft: =Button4.Height
         RadiusTopRight: =Button4.Height
-        Size: =15
+        Size: =9.97
         Text: ="Submit Diversion"
-        Width: =217
-        X: =822
-        Y: =747
+        Width: =144.16
+        X: =546.08
+        Y: =731
         ZIndex: =6
 
     Label14_1 As label:
@@ -2194,20 +2246,26 @@
         Fill: =RGBA(204, 204, 204, 0.6)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =930
+        Height: =768
         OnSelect: =Set(varShowTimePicker, false)
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =
         Visible: =varShowTimePicker
-        Width: =1850
+        Width: =1229.00
+        X: =0.00
         ZIndex: =8
 
     cmp_TimePicker_2 As cmp_TimePicker:
         Visible: =varShowTimePicker
-        X: =920
+        Width: =66.43
+        X: =611.18
         Y: =275
         ZIndex: =9
 
     cmp_Header_16 As cmp_Header:
+        Width: =1229.00
+        X: =0.00
         ZIndex: =10
 

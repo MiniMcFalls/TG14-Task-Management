@@ -204,7 +204,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "0.00",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -216,7 +216,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "1850",
+            "InvariantScript": "1229.00",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -258,7 +258,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "13",
+            "InvariantScript": "8.64",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -282,13 +282,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "5",
+            "InvariantScript": "3.32",
             "Property": "PaddingTop",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "5",
+            "InvariantScript": "3.32",
             "Property": "PaddingRight",
             "RuleProviderType": "Unknown"
           },
@@ -535,7 +535,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "123",
+            "InvariantScript": "81.71",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -547,7 +547,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "442",
+            "InvariantScript": "293.63",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -589,7 +589,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "17",
+            "InvariantScript": "11.29",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -613,13 +613,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "5",
+            "InvariantScript": "3.32",
             "Property": "PaddingTop",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "5",
+            "InvariantScript": "3.32",
             "Property": "PaddingRight",
             "RuleProviderType": "Unknown"
           },
@@ -725,7 +725,9 @@
           "Size",
           "Italic",
           "Underline",
-          "Strikethrough"
+          "Strikethrough",
+          "PaddingTop",
+          "PaddingRight"
         ],
         "ControlUniqueId": "7",
         "HasDynamicProperties": false,
@@ -864,7 +866,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "1527",
+            "InvariantScript": "1014.42",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -876,9 +878,9 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(varInfoRefresh = true, 163, 75)",
+            "InvariantScript": "49.83",
             "Property": "Width",
-            "RuleProviderType": "User"
+            "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
@@ -930,7 +932,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "15",
+            "InvariantScript": "9.97",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -950,6 +952,18 @@
             "Category": "Design",
             "InvariantScript": "false",
             "Property": "Strikethrough",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "3.32",
+            "Property": "PaddingTop",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "3.32",
+            "Property": "PaddingRight",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -1037,7 +1051,9 @@
           "Underline",
           "Strikethrough",
           "OnSelect",
-          "Visible"
+          "Visible",
+          "PaddingTop",
+          "PaddingRight"
         ],
         "ControlUniqueId": "8",
         "HasDynamicProperties": false,
@@ -1176,7 +1192,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "1612",
+            "InvariantScript": "1070.89",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -1188,7 +1204,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "160",
+            "InvariantScript": "106.29",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -1242,7 +1258,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "15",
+            "InvariantScript": "9.97",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -1269,6 +1285,18 @@
             "InvariantScript": "true",
             "Property": "Visible",
             "RuleProviderType": "User"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "3.32",
+            "Property": "PaddingTop",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "3.32",
+            "Property": "PaddingRight",
+            "RuleProviderType": "Unknown"
           },
           {
             "Category": "Behavior",
@@ -1347,7 +1375,9 @@
           "FocusedBorderColor",
           "ZIndex",
           "BorderThickness",
-          "FocusedBorderThickness"
+          "FocusedBorderThickness",
+          "PaddingTop",
+          "PaddingRight"
         ],
         "ControlUniqueId": "9",
         "HasDynamicProperties": false,
@@ -1426,7 +1456,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "1542",
+            "InvariantScript": "1024.39",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -1438,7 +1468,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "45",
+            "InvariantScript": "29.90",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -1500,6 +1530,18 @@
             "Category": "Design",
             "InvariantScript": "4",
             "Property": "FocusedBorderThickness",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "0.00",
+            "Property": "PaddingTop",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "0.00",
+            "Property": "PaddingRight",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -1602,7 +1644,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "8",
+            "InvariantScript": "5.32",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -1614,7 +1656,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "100",
+            "InvariantScript": "66.43",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -1734,13 +1776,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "0.00",
             "Property": "PaddingTop",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "0.00",
             "Property": "PaddingRight",
             "RuleProviderType": "Unknown"
           },
@@ -1912,7 +1954,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "1789",
+            "InvariantScript": "1188.48",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -1924,7 +1966,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "48",
+            "InvariantScript": "31.89",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -2044,13 +2086,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "0.00",
             "Property": "PaddingTop",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "0.00",
             "Property": "PaddingRight",
             "RuleProviderType": "Unknown"
           },
@@ -2154,7 +2196,9 @@
             "InvariantPropertyName": "AutoPause",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
-          }
+          },
+          "PaddingTop",
+          "PaddingRight"
         ],
         "ControlUniqueId": "12",
         "HasDynamicProperties": false,
@@ -2317,7 +2361,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "1335",
+            "InvariantScript": "886.88",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -2329,7 +2373,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "160",
+            "InvariantScript": "106.29",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -2359,8 +2403,20 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "13",
+            "InvariantScript": "8.64",
             "Property": "Size",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "3.32",
+            "Property": "PaddingTop",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "3.32",
+            "Property": "PaddingRight",
             "RuleProviderType": "Unknown"
           },
           {
@@ -2455,7 +2511,9 @@
           "ZIndex",
           "BorderThickness",
           "FocusedBorderThickness",
-          "Visible"
+          "Visible",
+          "PaddingTop",
+          "PaddingRight"
         ],
         "ControlUniqueId": "13",
         "HasDynamicProperties": false,
@@ -2534,7 +2592,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "1465",
+            "InvariantScript": "973.23",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -2546,7 +2604,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "45",
+            "InvariantScript": "29.90",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -2615,6 +2673,18 @@
             "InvariantScript": "cmp_Header.RefreshInfoVis",
             "Property": "Visible",
             "RuleProviderType": "User"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "0.00",
+            "Property": "PaddingTop",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "0.00",
+            "Property": "PaddingRight",
+            "RuleProviderType": "Unknown"
           }
         ],
         "StyleName": "defaultIconStyle",
@@ -2862,7 +2932,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "1452",
+            "InvariantScript": "964.60",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -2874,7 +2944,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "72",
+            "InvariantScript": "47.83",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -2916,7 +2986,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "13",
+            "InvariantScript": "8.64",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -2940,13 +3010,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "5",
+            "InvariantScript": "3.32",
             "Property": "PaddingTop",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "5",
+            "InvariantScript": "3.32",
             "Property": "PaddingRight",
             "RuleProviderType": "Unknown"
           },
@@ -3206,7 +3276,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "1524",
+            "InvariantScript": "1012.43",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -3218,7 +3288,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "81",
+            "InvariantScript": "53.81",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -3260,7 +3330,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "13",
+            "InvariantScript": "8.64",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -3284,13 +3354,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "5",
+            "InvariantScript": "3.32",
             "Property": "PaddingTop",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "5",
+            "InvariantScript": "3.32",
             "Property": "PaddingRight",
             "RuleProviderType": "Unknown"
           },
@@ -3600,7 +3670,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "108",
+            "InvariantScript": "71.74",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -3612,7 +3682,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "150",
+            "InvariantScript": "99.65",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -3654,7 +3724,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "12",
+            "InvariantScript": "7.97",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -3678,13 +3748,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "5",
+            "InvariantScript": "3.32",
             "Property": "PaddingTop",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "5",
+            "InvariantScript": "3.32",
             "Property": "PaddingRight",
             "RuleProviderType": "Unknown"
           },
@@ -3750,7 +3820,7 @@
       "PendingChangesVis",
       "RefreshInfoVis"
     ],
-    "LastModifiedTimestamp": "638333141749616243",
+    "LastModifiedTimestamp": "638333229613383633",
     "Name": "cmp_Header",
     "Rules": [
       {
@@ -3855,7 +3925,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638333141749616243",
+  "LastModifiedTimestamp": "638333229613383633",
   "Name": "020e992b7d1040688e08ef3914eb2b29",
   "OverridableProperties": {},
   "TemplateOriginalName": "6d02e1dd2a764a52bf98ad786e4d1adc",

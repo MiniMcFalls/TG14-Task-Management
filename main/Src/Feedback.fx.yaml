@@ -31,6 +31,8 @@ Feedback As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -38,10 +40,10 @@ Feedback As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =1793
-        X: =38
+        Width: =1191.13
+        X: =25.25
         Y: =143
         ZIndex: =2
 
@@ -91,15 +93,17 @@ Feedback As screen:
                 "New Submission from above"
             );
             Back();
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(54, 176, 75, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(54, 176, 75, 1), -30%)
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =15
+        Size: =9.97
         Text: ="Submit Feedback"
-        Width: =334
-        X: =1507
+        Width: =221.89
+        X: =1001.14
         Y: =53
         ZIndex: =6
 
@@ -117,6 +121,8 @@ Feedback As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
@@ -124,11 +130,11 @@ Feedback As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =15
+        Size: =9.97
         Text: =""
-        Width: =1789
-        X: =38
-        Y: =292
+        Width: =1188.48
+        X: =25.25
+        Y: =157
         ZIndex: =38
 
     Label14_4 As label:
@@ -143,11 +149,13 @@ Feedback As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =49
-        Size: =20
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =13.29
         Text: ="Task Details"
         Underline: =true
-        Width: =361
-        X: =751
+        Width: =239.82
+        X: =498.91
         Y: =55
         ZIndex: =48
 
@@ -162,10 +170,12 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =49
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: ="Input your task details in the boxes below"
-        Width: =663
-        X: =601
+        Width: =440.44
+        X: =399.26
         Y: =95
         ZIndex: =49
 
@@ -179,12 +189,15 @@ Feedback As screen:
         Fill: =RGBA(204, 204, 204, 0.6)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =930
+        Height: =768
         OnSelect: =Set(varShowTimePicker, false)
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =
         Visible: =varShowTimePicker
-        Width: =1850
+        Width: =1229.00
+        X: =0.00
         ZIndex: =51
 
     Label1 As label:
@@ -197,10 +210,13 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Size: =16
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =10.63
         Text: ="Your Details"
         Underline: =true
-        X: =80
+        Width: =99.65
+        X: =53.15
         Y: =157
         ZIndex: =52
 
@@ -215,12 +231,14 @@ Feedback As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =42
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: |-
             ="Rank:"
         Underline: =true
-        Width: =78
-        X: =80
+        Width: =51.81
+        X: =53.15
         Y: =198
         ZIndex: =53
 
@@ -234,10 +252,12 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =42
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =gblCurrentUser.jobTitle
-        Width: =78
-        X: =152
+        Width: =51.81
+        X: =100.97
         Y: =198
         ZIndex: =54
 
@@ -252,12 +272,14 @@ Feedback As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =42
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: |-
             ="Name:"
         Underline: =true
-        Width: =78
-        X: =230
+        Width: =51.81
+        X: =152.80
         Y: =198
         ZIndex: =55
 
@@ -271,10 +293,12 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =42
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =gblCurrentUser.givenName & " " & gblCurrentUser.surname
-        Width: =194
-        X: =302
+        Width: =128.88
+        X: =200.63
         Y: =198
         ZIndex: =56
 
@@ -289,11 +313,14 @@ Feedback As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =42
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: |-
             ="Current Location:"
         Underline: =true
-        X: =496
+        Width: =99.65
+        X: =329.51
         Y: =198
         ZIndex: =57
 
@@ -307,10 +334,12 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =42
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =gblUserLocPerm
-        Width: =194
-        X: =646
+        Width: =128.88
+        X: =429.15
         Y: =198
         ZIndex: =58
 
@@ -325,12 +354,14 @@ Feedback As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =43
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: |-
             ="Contact:"
         Underline: =true
-        Width: =79
-        X: =840
+        Width: =52.48
+        X: =558.03
         Y: =197
         ZIndex: =59
 
@@ -344,10 +375,12 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =42
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =gblCurrentUser.mail
-        Width: =332
-        X: =932
+        Width: =220.55
+        X: =619.15
         Y: =198
         ZIndex: =60
 
@@ -361,10 +394,13 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Size: =16
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =10.63
         Text: ="Description"
         Underline: =true
-        X: =80
+        Width: =99.65
+        X: =53.15
         Y: =309
         ZIndex: =61
 
@@ -389,14 +425,15 @@ Feedback As screen:
         Items: =[Blank(),"Fault", "Feedback", "Feature Request"]
         PaddingBottom: =5
         PaddingLeft: =12
-        PaddingRight: =5
-        PaddingTop: =5
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
         SelectionFill: =RGBA(105, 121, 126, 1)
-        Size: =13
-        X: =1329
+        Size: =8.64
+        Width: =217.90
+        X: =882.88
         Y: =198
         ZIndex: =62
 
@@ -411,12 +448,14 @@ Feedback As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =43
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: |-
             ="Type:"
         Underline: =true
-        Width: =79
-        X: =1241
+        Width: =52.48
+        X: =824.43
         Y: =197
         ZIndex: =63
 
@@ -435,6 +474,8 @@ Feedback As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Mode: =TextMode.MultiLine
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =RGBA(105, 121, 126, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
@@ -442,12 +483,14 @@ Feedback As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =13
-        Width: =1698
-        X: =80
-        Y: =370
+        Size: =8.64
+        Width: =1128.03
+        X: =53.15
+        Y: =265
         ZIndex: =64
 
     cmp_Header_7 As cmp_Header:
+        Width: =1229.00
+        X: =0.00
         ZIndex: =65
 

@@ -12675,10 +12675,15 @@
                     }
                 )
             );
+        PaddingRight: =3.32
+        PaddingTop: =3.32
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        Size: =8.64
         Underline: =true
+        Width: =106.29
+        X: =0.00
         ZIndex: =1
 
     LblSuccessMsg3_2 As label:
@@ -12687,16 +12692,18 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         Height: =210
-        Size: =20
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =13.29
         Text: |-
             =If(Hour(Now()) <= 12 , "Good Morning", "Good Afternoon") &
             ",
             Please standby as we check your access permissions.
             
             This shouldn't take long"
-        Width: =765
-        X: =1009
-        Y: =380
+        Width: =508.21
+        X: =669.38
+        Y: =345
         ZIndex: =3
 
     Label1_1 As label:
@@ -12708,22 +12715,25 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =CurrentVer
-        X: =8
-        Y: =890
+        Width: =99.65
+        X: =5.32
+        Y: =728
         ZIndex: =9
 
     Spinner1 As Spinner:
         AccessibleLabel: =""
         Appearance: ='Spinner.Appearance'.Primary
-        BasePaletteColor: =
+        BasePaletteColor: =varHeaderFill
         DisplayMode: =DisplayMode.Edit
         Height: =149
         SpinnerSize: ='Spinner.SpinnerSize'.Huge
-        Width: =200
-        X: =1291
-        Y: =560
+        Width: =132.87
+        X: =856.52
+        Y: =474
         ZIndex: =10
 
     Group2 As group:
@@ -12739,12 +12749,12 @@
             BorderThickness: =2
             DisabledFill: =RGBA(105, 121, 126, 1)
             Fill: =RGBA(60, 110, 113, 10%)
-            Height: =130
+            Height: =86.36
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =130
-            X: =1327
-            Y: =250
+            Width: =86.36
+            X: =879.01
+            Y: =278
             ZIndex: =4
 
         iconCircle3_9 As circle.Circle:
@@ -12753,12 +12763,12 @@
             BorderThickness: =2
             DisabledFill: =RGBA(105, 121, 126, 1)
             Fill: =RGBA(60, 110, 113, 30%)
-            Height: =120
+            Height: =79.72
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =120
-            X: =1332
-            Y: =255
+            Width: =79.72
+            X: =882.61
+            Y: =282
             ZIndex: =5
 
         iconCircle3_10 As circle.Circle:
@@ -12767,12 +12777,12 @@
             BorderThickness: =2
             DisabledFill: =RGBA(105, 121, 126, 1)
             Fill: =RGBA(60, 110, 113, 60%)
-            Height: =110
+            Height: =73.07
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =110
-            X: =1337
-            Y: =260
+            Width: =73.07
+            X: =885.31
+            Y: =285
             ZIndex: =6
 
         iconCircle3_11 As circle.Circle:
@@ -12781,10 +12791,12 @@
             BorderThickness: =2
             DisabledFill: =RGBA(105, 121, 126, 1)
             Fill: =RGBA(60, 110, 113, 80%)
+            Height: =66.43
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            X: =1342
-            Y: =265
+            Width: =66.43
+            X: =888.91
+            Y: =289
             ZIndex: =7
 
         iconCheck3_2 As icon.Check:
@@ -12796,11 +12808,11 @@
             Icon: =Icon.Lock
             PaddingBottom: =Self.PaddingTop
             PaddingLeft: =Self.PaddingTop
-            PaddingRight: =Self.PaddingTop
-            PaddingTop: =24
+            PaddingRight: =15.94
+            PaddingTop: =15.94
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =iconCircle3_11.Width
-            X: =1342
-            Y: =265
+            Width: =66.43
+            X: =888.91
+            Y: =289
             ZIndex: =8
 

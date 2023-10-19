@@ -29,9 +29,12 @@ cmp_TimePicker As CanvasComponent:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =Parent.Height
-        Size: =13
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
         Text: =
-        Width: =100
+        Width: =66.43
+        X: =0.00
         ZIndex: =1
 
     gal_TimePicker_Hours As gallery.galleryVertical:
@@ -76,7 +79,8 @@ cmp_TimePicker As CanvasComponent:
             )
         ShowScrollbar: =false
         TemplateSize: =60
-        Width: =Parent.Width/2
+        Width: =33.22
+        X: =0.00
         ZIndex: =2
 
         Label17 As label:
@@ -93,10 +97,13 @@ cmp_TimePicker As CanvasComponent:
             Height: =Parent.TemplateHeight
             HoverFill: =If(!ThisItem.IsSelected, ColorFade(cmp_TimePicker.SelectedFill, 70%))
             OnSelect: =Select(Parent)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedFill: =Self.HoverFill
-            Size: =13
+            Size: =8.64
             Text: =ThisItem.Value
-            Width: =Parent.TemplateWidth
+            Width: =26.58
+            X: =0.00
             ZIndex: =1
 
     gal_TimePicker_Minutes As gallery.galleryVertical:
@@ -132,8 +139,8 @@ cmp_TimePicker As CanvasComponent:
             )
         ShowScrollbar: =false
         TemplateSize: =60
-        Width: =Parent.Width/2
-        X: =50
+        Width: =33.22
+        X: =33.22
         ZIndex: =3
 
         Label17_1 As label:
@@ -150,9 +157,12 @@ cmp_TimePicker As CanvasComponent:
             Height: =Parent.TemplateHeight
             HoverFill: =If(!ThisItem.IsSelected, ColorFade(cmp_TimePicker.SelectedFill, 70%))
             OnSelect: =Select(Parent)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
             PressedFill: =Self.HoverFill
-            Size: =13
+            Size: =8.64
             Text: =ThisItem.Value
-            Width: =Parent.TemplateWidth
+            Width: =26.58
+            X: =0.00
             ZIndex: =1
 
