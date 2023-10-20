@@ -1,10 +1,12 @@
 cmp_Header As CanvasComponent:
+    AppHeight: =App.ActiveScreen.Height * 0.06
+    AppWidth: =App.ActiveScreen.Width
     Fill: =RGBA(0,0,0,0)
     GlobePendingChanges: =RGBA(200,200,0,1)
     Height: =53
     PendingChangesVis: =varPendingChangesVis
     RefreshInfoVis: =varInfoRefresh
-    Width: =1850
+    Width: =App.ActiveScreen.Width
     X: =0
     Y: =0
     ZIndex: =1
@@ -21,6 +23,7 @@ cmp_Header As CanvasComponent:
         Duration: =1000
         Fill: =RGBA(105, 121, 126, 1)
         Font: =Font.'Segoe UI'
+        Height: =20
         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -10%)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -37,7 +40,7 @@ cmp_Header As CanvasComponent:
         Y: =4
         ZIndex: =1
 
-    Label2 As label:
+    Header_Background As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -47,16 +50,16 @@ cmp_Header As CanvasComponent:
         Fill: =varHeaderFill
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =53
+        Height: =cmp_Header.Height
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: =""
-        Width: =1229.00
+        Width: =cmp_Header.Width
         X: =0.00
         ZIndex: =2
 
-    Label9_14 As label:
+    Header_VersNum As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -66,93 +69,19 @@ cmp_Header As CanvasComponent:
         DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =20
-        PaddingBottom: =0
-        PaddingLeft: =20
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        Size: =7.97
+        Height: =cmp_Header.Height
+        PaddingBottom: =cmp_Header.Height /6
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =cmp_Header.Height / 7
         Text: =CurrentVer
         VerticalAlign: =VerticalAlign.Bottom
         Width: =99.65
-        X: =71.74
-        Y: =33
+        X: =Label4.X
+        Y: =Label4.Y
         ZIndex: =3
 
-    Button6 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(230, 230, 230, 1)
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(230, 230, 230, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =44
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =9.97
-        Text: =""
-        Width: =49.83
-        X: =1014.42
-        ZIndex: =4
-
-    Icon16 As icon.GlobeNotConnected:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =If(GblConnectionTest = true, RGBA(0,150,0,1), RGBA(255,0,0,1))
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
-        FocusedBorderThickness: =4
-        Height: =22
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =If(Connection.Connected, Icon.Globe, Icon.GlobeNotConnected)
-        PaddingRight: =0.00
-        PaddingTop: =0.00
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =29.90
-        X: =1024.39
-        Y: =2
-        ZIndex: =5
-
-    Label9 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =If(GblConnectionTest = true, RGBA(0,150,0,1), RGBA(255,0,0,1))
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.View
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =19
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        Size: =8.64
-        Text: =If(GblConnectionTest = true, "Live", "OFFLINE")
-        Width: =53.81
-        X: =1012.43
-        Y: =25
-        ZIndex: =6
-
-    Button34 As button:
+    Header_Home As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderThickness: =0
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -162,7 +91,7 @@ cmp_Header As CanvasComponent:
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =44
+        Height: =cmp_Header.Height * 0.8
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
@@ -174,76 +103,30 @@ cmp_Header As CanvasComponent:
         PressedFill: =varButtonPressedFill
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =Self.Width / 11
         Text: ="Home"
-        Width: =106.29
-        X: =1070.89
+        Width: =cmp_Header.Width / 12
+        X: =Header_Profile.X - Self.Width - 5
+        Y: =App.ActiveScreen.Height - App.ActiveScreen.Height
         ZIndex: =7
 
-    Icon16_2 As icon.GlobeNotConnected:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 94, 146, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
-        FocusedBorderThickness: =4
-        Height: =22
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.GlobeRefresh
-        PaddingRight: =0.00
-        PaddingTop: =0.00
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Visible: =cmp_Header.RefreshInfoVis
-        Width: =29.90
-        X: =973.23
-        Y: =4
-        ZIndex: =8
-
-    Label9_2 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 94, 146, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.View
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =19
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        Size: =8.64
-        Text: ="Refresh"
-        Visible: =cmp_Header.RefreshInfoVis
-        Width: =47.83
-        X: =964.60
-        Y: =25
-        ZIndex: =9
-
-    Image2 As image:
+    Header_VisComLogo As image:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =48
+        Height: =cmp_Header.Height
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: ='VisComCRM Logo-02'
+        PaddingLeft: =5
         PaddingRight: =0.00
         PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =66.43
-        X: =5.32
-        Y: =3
+        Width: =cmp_Header.Width * 0.07
+        Y: =App.ActiveScreen.Height * 0.004
         ZIndex: =10
 
     Label4 As label:
@@ -256,22 +139,22 @@ cmp_Header As CanvasComponent:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =44
+        Height: =cmp_Header.Height
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =11.29
+        Size: =cmp_Header.Height / 4.5
         Text: ="RAF Visual Communications CRM"
-        Width: =293.63
-        X: =81.71
+        Width: =cmp_Header.Width * 0.7
+        X: =Header_VisComLogo.X + Header_VisComLogo.Width
         ZIndex: =11
 
-    Image5 As image:
+    Header_Profile As image:
         BorderColor: =RGBA(255, 255, 255, 1)
         BorderThickness: =1
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =48
+        Height: =cmp_Header.Height * 0.9
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: =User().Image
@@ -283,8 +166,175 @@ cmp_Header As CanvasComponent:
         RadiusBottomRight: =Self.Width
         RadiusTopLeft: =Self.Width
         RadiusTopRight: =Self.Width
-        Width: =31.89
-        X: =1188.48
-        Y: =3
+        Width: =Self.Height
+        X: =cmp_Header.Width - Self.Width - 3
+        Y: =cmp_Header.Height - Self.Height - 3
         ZIndex: =12
+
+    "'Connection Status' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Button6 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(230, 230, 230, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =cmp_Header.Height * 0.8
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =9.97
+            Text: =""
+            Width: =cmp_Header.Width * 0.038
+            X: =Header_Home.X - Self.Width - 5
+            Y: =App.ActiveScreen.Height - App.ActiveScreen.Height
+            ZIndex: =4
+
+        Icon16 As icon.GlobeNotConnected:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =If(GblConnectionTest = true, RGBA(0,150,0,1), RGBA(255,0,0,1))
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Height: =Button6.Height * 0.4
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =If(Connection.Connected, Icon.Globe, Icon.GlobeNotConnected)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =Button6.Width
+            X: =Button6.X
+            Y: =cmp_Header.Height - cmp_Header.Height + 2
+            ZIndex: =5
+
+        Label9 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =If(GblConnectionTest = true, RGBA(0,150,0,1), RGBA(255,0,0,1))
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =Button6.Height * 0.55
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =Button6.Width * 0.2
+            Text: =If(GblConnectionTest = true, "Live", "OFFLINE")
+            Width: =Button6.Width
+            X: =Icon16.X
+            Y: =Icon16.Y + Icon16.Height
+            ZIndex: =6
+
+    "'Refresh Status' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =14
+
+        Icon16_2 As icon.GlobeNotConnected:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(0, 94, 146, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Height: =Button6_1.Height * 0.4
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.GlobeRefresh
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =cmp_Header.RefreshInfoVis
+            Width: =Button6_1.Width
+            X: =Button6_1.X
+            Y: =cmp_Header.Height - cmp_Header.Height + 2
+            ZIndex: =8
+
+        Label9_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(0, 94, 146, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =Button6.Height * 0.55
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =Button6.Width * 0.2
+            Text: ="Refresh"
+            Visible: =cmp_Header.RefreshInfoVis
+            Width: =Button6_1.Width
+            X: =Icon16_2.X
+            Y: =Icon16_2.Y + Icon16_2.Height
+            ZIndex: =9
+
+        Button6_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(230, 230, 230, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =cmp_Header.Height * 0.8
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =9.97
+            Text: =""
+            Visible: =cmp_Header.RefreshInfoVis
+            Width: =cmp_Header.Width * 0.038
+            X: =Button6.X - Self.Width - 5
+            Y: =App.ActiveScreen.Height - App.ActiveScreen.Height
+            ZIndex: =13
 

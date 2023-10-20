@@ -12691,19 +12691,19 @@
         Color: =RGBA(51, 51, 51, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
-        Height: =210
+        Height: =App.ActiveScreen.Width / 5.8
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =13.29
+        Size: =App.ActiveScreen.Width / 92
         Text: |-
             =If(Hour(Now()) <= 12 , "Good Morning", "Good Afternoon") &
             ",
             Please standby as we check your access permissions.
             
             This shouldn't take long"
-        Width: =508.21
-        X: =669.38
-        Y: =345
+        Width: =App.ActiveScreen.Width / 2.4
+        X: =(App.ActiveScreen.Width * 76%) - (Self.Width/2)
+        Y: =(App.ActiveScreen.Height * 72%) - (Self.Width/2)
         ZIndex: =3
 
     Label1_1 As label:
@@ -12715,13 +12715,14 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =App.ActiveScreen.Height / 19
+        PaddingLeft: =10
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =App.MinScreenWidth / 37
         Text: =CurrentVer
-        Width: =99.65
-        X: =5.32
-        Y: =728
+        Width: =App.ActiveScreen.Width
+        Y: =App.ActiveScreen.Height - Self.Height
         ZIndex: =9
 
     Spinner1 As Spinner:
@@ -12729,11 +12730,11 @@
         Appearance: ='Spinner.Appearance'.Primary
         BasePaletteColor: =varHeaderFill
         DisplayMode: =DisplayMode.Edit
-        Height: =149
+        Height: =App.MinScreenWidth /2.15
         SpinnerSize: ='Spinner.SpinnerSize'.Huge
-        Width: =132.87
-        X: =856.52
-        Y: =474
+        Width: =App.MinScreenWidth/2.4
+        X: =(App.ActiveScreen.Width * 76%) - (Self.Width/2)
+        Y: =(App.ActiveScreen.Height * 66%) - (Self.Width/2)
         ZIndex: =10
 
     Group2 As group:
@@ -12749,12 +12750,12 @@
             BorderThickness: =2
             DisabledFill: =RGBA(105, 121, 126, 1)
             Fill: =RGBA(60, 110, 113, 10%)
-            Height: =86.36
+            Height: =iconCircle3_9.Height + 6.41
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =86.36
-            X: =879.01
-            Y: =278
+            Width: =iconCircle3_9.Width + 6.41
+            X: =iconCircle3_9.X - ((iconCircle3_8.Width - iconCircle3_9.Width)/2)
+            Y: =iconCircle3_9.Y - ((iconCircle3_8.Width - iconCircle3_9.Width)/2)
             ZIndex: =4
 
         iconCircle3_9 As circle.Circle:
@@ -12763,12 +12764,12 @@
             BorderThickness: =2
             DisabledFill: =RGBA(105, 121, 126, 1)
             Fill: =RGBA(60, 110, 113, 30%)
-            Height: =79.72
+            Height: =iconCircle3_10.Height + 6.41
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =79.72
-            X: =882.61
-            Y: =282
+            Width: =iconCircle3_10.Width + 6.41
+            X: =iconCircle3_10.X - ((iconCircle3_9.Width - iconCircle3_10.Width)/2)
+            Y: =iconCircle3_10.Y - ((iconCircle3_9.Width - iconCircle3_10.Width)/2)
             ZIndex: =5
 
         iconCircle3_10 As circle.Circle:
@@ -12777,12 +12778,12 @@
             BorderThickness: =2
             DisabledFill: =RGBA(105, 121, 126, 1)
             Fill: =RGBA(60, 110, 113, 60%)
-            Height: =73.07
+            Height: =iconCircle3_11.Height + 6.41
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =73.07
-            X: =885.31
-            Y: =285
+            Width: =iconCircle3_11.Width + 6.41
+            X: =iconCircle3_11.X - ((iconCircle3_10.Width - iconCircle3_11.Width)/2)
+            Y: =iconCircle3_11.Y - ((iconCircle3_10.Width - iconCircle3_11.Width)/2)
             ZIndex: =6
 
         iconCircle3_11 As circle.Circle:
@@ -12791,12 +12792,12 @@
             BorderThickness: =2
             DisabledFill: =RGBA(105, 121, 126, 1)
             Fill: =RGBA(60, 110, 113, 80%)
-            Height: =66.43
+            Height: =iconCheck3_2.Width
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =66.43
-            X: =888.91
-            Y: =289
+            Width: =iconCheck3_2.Width
+            X: =iconCheck3_2.X
+            Y: =iconCheck3_2.Y
             ZIndex: =7
 
         iconCheck3_2 As icon.Check:
@@ -12804,15 +12805,15 @@
             Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
-            Height: =iconCircle3_11.Height
+            Height: =App.ActiveScreen.Width / 18.5
             Icon: =Icon.Lock
             PaddingBottom: =Self.PaddingTop
             PaddingLeft: =Self.PaddingTop
             PaddingRight: =15.94
             PaddingTop: =15.94
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =66.43
-            X: =888.91
-            Y: =289
+            Width: =Self.Height
+            X: =App.ActiveScreen.Width * 76% - (Self.Width/2)
+            Y: =(App.ActiveScreen.Height * 37%) - (Self.Width/2)
             ZIndex: =8
 
