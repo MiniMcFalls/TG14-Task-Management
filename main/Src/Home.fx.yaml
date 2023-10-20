@@ -176,18 +176,19 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =226
+        Height: =Image4.Height
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =10.63
+        Size: =Self.Height / 12
         Text: |-
             =If(Hour(Now()) <= 12 , "Good Morning ", "Good Afternoon ") & gblCurrentUser.givenName &
             ", you can see a breakdown of the weekly and monthly volume below.
             
             You currently have, " & varApprovalNumber & ", tasks awaiting approval and " & Count(Filter('TG14 Task Information', 'Task Date' = Today(), Unit.Value = gblUserLocPerm).ID) & ", tasks for today in total."
+        VerticalAlign: =VerticalAlign.Top
         Width: =249.12
         X: =289.64
-        Y: =Image4.Y - (Image4.Height/2) + (Self.Height /2)
+        Y: =Image4.Y
         ZIndex: =11
 
     "'User Image' As group":
@@ -204,11 +205,11 @@
             DisabledFill: =RGBA(105, 121, 126, 1)
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(204, 221, 234, 1)
-            Height: =139.51
+            Height: =Image4.Width * 1.2
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =139.51
-            X: =126.89
-            Y: =354
+            Width: =Image4.Width * 1.2
+            X: =Circle2_2.X - ((Circle2_3.Width - Circle2_2.Width)/2)
+            Y: =Circle2_2.Y - ((Circle2_3.Width - Circle2_2.Width)/2)
             ZIndex: =6
 
         Circle2_2 As circle:
@@ -218,11 +219,11 @@
             DisabledFill: =RGBA(105, 121, 126, 1)
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(153, 187, 212, 1)
-            Height: =136.19
+            Height: =Image4.Width * 1.15
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =136.19
-            X: =128.88
-            Y: =357
+            Width: =Image4.Width * 1.15
+            X: =Circle2_1.X - ((Circle2_2.Width - Circle2_1.Width)/2)
+            Y: =Circle2_1.Y - ((Circle2_2.Width - Circle2_1.Width)/2)
             ZIndex: =7
 
         Circle2_1 As circle:
@@ -232,11 +233,11 @@
             DisabledFill: =RGBA(105, 121, 126, 1)
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(102, 152, 191, 1)
-            Height: =132.87
+            Height: =Image4.Width * 1.1
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =132.87
-            X: =130.21
-            Y: =359
+            Width: =Image4.Width * 1.1
+            X: =Circle2.X - ((Circle2_1.Width - Circle2.Width)/2)
+            Y: =Circle2.Y - ((Circle2_1.Width - Circle2.Width)/2)
             ZIndex: =8
 
         Circle2 As circle:
@@ -246,11 +247,11 @@
             DisabledFill: =RGBA(105, 121, 126, 1)
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(0, 76, 133, 1)
-            Height: =129.54
+            Height: =Image4.Width * 1.05
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =129.54
-            X: =132.20
-            Y: =362
+            Width: =Image4.Width * 1.05
+            X: =Image4.X - ((Circle2.Width - Image4.Width)/2)
+            Y: =Image4.Y - ((Circle2.Width - Image4.Width)/2)
             ZIndex: =9
 
         Image4 As image:
@@ -260,7 +261,7 @@
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =126.22
+            Height: =Self.Width
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
             Image: =User().Image
@@ -272,7 +273,7 @@
             RadiusBottomRight: =Self.Width
             RadiusTopLeft: =Self.Width
             RadiusTopRight: =Self.Width
-            Width: =126.22
+            Width: =Button10.Width / 4.5
             X: =Button10.X + (Button10.Width * 0.18)
             Y: =Button10.Y + (Button10.Height * 0.38)
             ZIndex: =10
@@ -286,6 +287,8 @@
 
         Button7 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -294,7 +297,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =87
+            Height: =Button10.Height * 0.11
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -312,13 +315,14 @@
                 Count(Filter('TG14 Task Information', 'Task Date' >= _firstDayOfMonth && 'Task Date' <= _lastDayOfMonth, Unit.Value = gblUserLocPerm).ID)
                 &
                 " Tasks"
-            Width: =207.93
-            X: =93.00
-            Y: =650
+            Width: =Button10.Width * 0.36
+            X: =Button10.X * 3.9
+            Y: =Button10.Y * 8.45
             ZIndex: =12
 
         Button8 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
             BorderThickness: =0
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -328,7 +332,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =87
+            Height: =Button7.Height
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -348,9 +352,9 @@
                         'Task Date' >= DateValue(Today() + (2 - Weekday(Today()))) && 'Task Date' <= DateValue(Today() + (8 - Weekday(Today()))) && Unit.Value = gblUserLocPerm
                     ).ID
                 ) & " Tasks"
-            Width: =207.27
-            X: =300.94
-            Y: =650
+            Width: =Button10.Width * 0.36
+            X: =Rectangle10.X + Rectangle10.Width
+            Y: =Rectangle10.Y
             ZIndex: =13
 
         Button9 As button:
@@ -483,8 +487,8 @@
                     )
                 ))
             Width: =166.08
-            X: =113.60
-            Y: =650
+            X: =Button7.X + (Button7.Width/2) - (Self.Width/2)
+            Y: =Button7.Y + Button7.Height
             ZIndex: =14
 
         Button9_1 As button:
@@ -617,8 +621,8 @@
                     )
                 ))
             Width: =166.08
-            X: =321.54
-            Y: =650
+            X: =Button8.X + (Button8.Width/2) - (Self.Width/2)
+            Y: =Button8.Y + Button8.Height
             ZIndex: =15
 
         Rectangle10 As rectangle:
@@ -628,270 +632,40 @@
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(254, 203, 0, 1)
             FocusedBorderThickness: =4
-            Height: =87
+            Height: =Button7.Height
             PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =1.33
-            X: =300.94
-            Y: =650
+            Width: =1
+            X: =Button7.X + Button7.Width
+            Y: =Button7.Y
             ZIndex: =16
-
-    "'Vert Divider' As rectangle":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.View
-        Fill: =varButtonSeperatorFill
-        FocusedBorderThickness: =4
-        Height: =768
-        PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =2.00
-        X: =610.51
-        ZIndex: =25
 
     "'Vert Divider_1' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
-        BorderThickness: =2
         DisabledFill: =RGBA(166, 166, 166, 1)
         DisplayMode: =DisplayMode.View
         Fill: =varButtonSeperatorFill
         FocusedBorderThickness: =4
-        Height: =3
+        Height: =2
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =166.08
-        X: =845.02
-        Y: =351
-        ZIndex: =28
-
-    "'Calendar Views' As group":
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =28
-
-        Title As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
-            Color: =RGBA(255,255,255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =varHeaderFill
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            PaddingRight: =3.32
-            PaddingTop: =3.32
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            Size: =9.97
-            Text: ="Calendar Views"
-            Underline: =true
-            Width: =332.16
-            X: =779.15
-            Y: =173
-            ZIndex: =17
-
-        Day As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =If(varGuestUser = true, DisplayMode.Disabled, DisplayMode.Edit)
-            Fill: =varButtonFill
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =38
-            HoverBorderColor: =varButtonHover
-            HoverColor: =RGBA(255,255,255,1)
-            HoverFill: =varButtonHover
-            OnSelect: =Navigate('Calendar - Day', ScreenTransition.Fade)
-            PaddingRight: =3.32
-            PaddingTop: =3.32
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =varButtonPressedFill
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =9.97
-            Text: ="Day"
-            Width: =166.08
-            X: =779.15
-            Y: =213
-            ZIndex: =18
-
-        Week As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =varButtonFill
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =varButtonHover
-            HoverColor: =RGBA(255,255,255,1)
-            HoverFill: =varButtonHover
-            OnSelect: =If(varGuestUser, Navigate('Calendar - Week - Guest View', ScreenTransition.Fade), Navigate('Calendar - Week', ScreenTransition.Fade))
-            PaddingRight: =3.32
-            PaddingTop: =3.32
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =varButtonPressedFill
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =9.97
-            Text: ="Week"
-            Width: =164.75
-            X: =946
-            Y: =213
-            ZIndex: =19
-
-        Month As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =If(varGuestUser = true, DisplayMode.Disabled, DisplayMode.Edit)
-            Fill: =varButtonFill
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =varButtonHover
-            HoverColor: =RGBA(255,255,255,1)
-            HoverFill: =varButtonHover
-            OnSelect: =Navigate('Calendar - Month', ScreenTransition.Fade)
-            PaddingRight: =3.32
-            PaddingTop: =3.32
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =varButtonPressedFill
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =9.97
-            Text: ="Month"
-            Width: =332.16
-            X: =779.15
-            Y: =253
-            ZIndex: =20
-
-        Outstanding As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =If(varGuestUser = true, DisplayMode.Disabled, DisplayMode.Edit)
-            Fill: =varButtonFill
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =varButtonHover
-            HoverColor: =RGBA(255,255,255,1)
-            HoverFill: =varButtonHover
-            OnSelect: =Navigate('Calendar - Outstanding', ScreenTransition.Fade)
-            PaddingRight: =3.32
-            PaddingTop: =3.32
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =varButtonPressedFill
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =9.97
-            Text: ="Outstanding"
-            Width: =332.16
-            X: =779.15
-            Y: =293
-            ZIndex: =21
-
-        Border3 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisplayMode: =DisplayMode.View
-            Fill: =varButtonSeperatorFill
-            FocusedBorderThickness: =4
-            Height: =2
-            Width: =332.16
-            X: =779.15
-            Y: =251
-            ZIndex: =22
-
-        Border2 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisplayMode: =DisplayMode.View
-            Fill: =varButtonSeperatorFill
-            FocusedBorderThickness: =4
-            Height: =38
-            Width: =1.33
-            X: =779.15
-            Y: =213
-            ZIndex: =23
-
-        Border1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisplayMode: =DisplayMode.View
-            Fill: =varButtonSeperatorFill
-            FocusedBorderThickness: =4
-            Height: =2
-            Width: =332.16
-            X: =779.15
-            Y: =291
-            ZIndex: =24
+        Width: =Button10_1.Width * 0.4
+        X: =Day.X + Day.Width - (Self.Width/2)
+        Y: =((Title_1.Y - (Outstanding.Y + Outstanding.Height)) + Outstanding.Y) - (Self.Height/2)
+        ZIndex: =26
 
     "'Vert Divider_2' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
-        BorderThickness: =2
         DisabledFill: =RGBA(166, 166, 166, 1)
         DisplayMode: =DisplayMode.View
         Fill: =varButtonSeperatorFill
         FocusedBorderThickness: =4
-        Height: =3
+        Height: =2
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =166.08
-        X: =845.02
-        Y: =538
-        ZIndex: =33
-
-    Border3_3 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisplayMode: =DisplayMode.View
-        Fill: =varButtonSeperatorFill
-        FocusedBorderThickness: =4
-        Height: =3
-        Width: =332.16
-        X: =761.98
-        Y: =415
-        ZIndex: =37
+        Width: =Button10_1.Width * 0.4
+        X: =Day.X + Day.Width - (Self.Width/2)
+        Y: =((Title_2.Y - (Month_3.Y + Month_3.Height)) + Month_3.Y) - (Self.Height/2)
+        ZIndex: =30
 
     Image3 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -911,7 +685,7 @@
         Width: =Button10.Width
         X: =Button10.X
         Y: =Button10.Y + (Button10.Height * 0.04)
-        ZIndex: =39
+        ZIndex: =33
 
     "'Vert Divider_4' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -926,7 +700,7 @@
         Width: =Button10.Width * 0.7
         X: =Button10.X + (Button10.Width/2) - (Self.Width/2)
         Y: =Button10.Y + (Button10.Height * 0.25)
-        ZIndex: =40
+        ZIndex: =34
 
     Label27 As label:
         Align: =Align.Center
@@ -948,10 +722,12 @@
         Width: =326.18
         X: =451.74
         Y: =4
-        ZIndex: =41
+        ZIndex: =35
 
     Button25 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -959,6 +735,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Title.Height
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =varButtonHover
@@ -968,27 +745,247 @@
         PressedBorderColor: =varButtonBorderFill
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =varButtonPressedFill
-        Size: =9.97
+        Size: =Self.Width/27
         Text: ="FEEDBACK/FAULT REPORT"
-        Width: =332.16
-        X: =761.98
-        Y: =728
-        ZIndex: =42
+        Width: =Title.Width /1.3
+        X: =Month_5.X + (Month_5.Width/2) - (Self.Width/2)
+        Y: =Button10_1.Y * 10.7
+        ZIndex: =36
 
     ButtonCanvas3 As Button:
-        BasePaletteColor: =
+        BasePaletteColor: =varHeaderFill
         DisplayMode: =DisplayMode.Edit
-        Height: =40
+        Height: =Button10_1.Height * 0.05
         OnSelect: =Navigate('App Admin', ScreenTransition.Fade)
         Text: ="Admin"
         Visible: =If(Lower(gblCurrentUser.mail) = "ciaran.mcfalls100@mod.gov.uk", true, false)
-        Width: =106.29
-        X: =1085.51
-        Y: =108
-        ZIndex: =43
+        Width: =Button10_1.Width * 0.15
+        X: =(((Button10_1.X + Button10_1.Width) - Self.Width) -5)
+        Y: =(Button10_1.Y) + 5
+        ZIndex: =37
 
     cmp_Header_1 As cmp_Header:
-        ZIndex: =46
+        ZIndex: =40
+
+    "'Vert Divider' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =varButtonSeperatorFill
+        FocusedBorderThickness: =4
+        Height: =App.Height * 0.75
+        PressedFill: =RGBA(105, 121, 126, 1)
+        Width: =2.00
+        X: =App.Width/2
+        Y: =(App.Height/2) - (Self.Height/2)
+        ZIndex: =41
+
+    "'Calendar Views' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =45
+
+        Title As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(255,255,255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =varHeaderFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =Button10_1.Height * 0.05
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            Size: =Self.Width / 35
+            Text: ="Calendar Views"
+            Underline: =true
+            Width: =Button10_1.Width* 0.65
+            X: =Button10_1.X + ((Button10_1.Width/2) - (Self.Width/2))
+            Y: =Button10_1.Y + (Button10_1.Height * 0.1)
+            ZIndex: =17
+
+        Day As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(varGuestUser = true, DisplayMode.Disabled, DisplayMode.Edit)
+            Fill: =varButtonFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Title.Height
+            HoverBorderColor: =varButtonHover
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =varButtonHover
+            OnSelect: =Navigate('Calendar - Day', ScreenTransition.Fade)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =varButtonPressedFill
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =Self.Width / 17.5
+            Text: ="Day"
+            Width: =Title.Width/2
+            X: =Title.X
+            Y: =Title.Y + Title.Height
+            ZIndex: =18
+
+        Week As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =varButtonFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Title.Height
+            HoverBorderColor: =varButtonHover
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =varButtonHover
+            OnSelect: =If(varGuestUser, Navigate('Calendar - Week - Guest View', ScreenTransition.Fade), Navigate('Calendar - Week', ScreenTransition.Fade))
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =varButtonPressedFill
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =Self.Width / 17.5
+            Text: ="Week"
+            Width: =Title.Width/2
+            X: =Title.X + Self.Width
+            Y: =Title.Y + Title.Height
+            ZIndex: =19
+
+        Month As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(varGuestUser = true, DisplayMode.Disabled, DisplayMode.Edit)
+            Fill: =varButtonFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Title.Height
+            HoverBorderColor: =varButtonHover
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =varButtonHover
+            OnSelect: =Navigate('Calendar - Month', ScreenTransition.Fade)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =varButtonPressedFill
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =Self.Width / 35
+            Text: ="Month"
+            Width: =Title.Width
+            X: =Border3.X
+            Y: =Border3.Y
+            ZIndex: =20
+
+        Outstanding As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(varGuestUser = true, DisplayMode.Disabled, DisplayMode.Edit)
+            Fill: =varButtonFill
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Title.Height
+            HoverBorderColor: =varButtonHover
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =varButtonHover
+            OnSelect: =Navigate('Calendar - Outstanding', ScreenTransition.Fade)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =varButtonPressedFill
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =Self.Width / 35
+            Text: ="Outstanding"
+            Width: =Title.Width
+            X: =Month.X
+            Y: =Month.Y + Month.Height
+            ZIndex: =21
+
+        Border3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =varButtonSeperatorFill
+            FocusedBorderThickness: =4
+            Height: =2
+            Width: =Title.Width
+            X: =Day.X
+            Y: =Day.Y + Day.Height
+            ZIndex: =22
+
+        Border1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =varButtonSeperatorFill
+            FocusedBorderThickness: =4
+            Height: =2
+            Width: =Title.Width
+            X: =Month.X
+            Y: =Month.Y + Month.Height
+            ZIndex: =23
+
+        Border3_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =varButtonSeperatorFill
+            FocusedBorderThickness: =4
+            Height: =Title.Height
+            Width: =2
+            X: =Day.X + Day.Width - (Self.Width/2)
+            Y: =Day.Y
+            ZIndex: =42
 
     Group12 As group:
         Height: =5
@@ -1009,6 +1006,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
+            Height: =Title.Height
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -1019,13 +1017,13 @@
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
-            Size: =9.97
+            Size: =Self.Width / 35
             Text: ="Section Administration"
             Underline: =true
-            Width: =332.16
-            X: =779.15
-            Y: =571
-            ZIndex: =30
+            Width: =Title.Width
+            X: =Button10_1.X + ((Button10_1.Width/2) - (Self.Width/2))
+            Y: =Button10_1.Y * 8.5
+            ZIndex: =28
 
         Month_2 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -1038,6 +1036,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =Title.Height
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =varButtonHover
@@ -1051,24 +1050,12 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =9.97
+            Size: =Self.Width / 35
             Text: ="Admin"
-            Width: =332.16
-            X: =779.15
-            Y: =609
-            ZIndex: =31
-
-        Border3_4 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisplayMode: =DisplayMode.View
-            Fill: =varButtonSeperatorFill
-            FocusedBorderThickness: =4
-            Height: =2
-            Width: =332.16
-            X: =779.15
-            Y: =649
-            ZIndex: =44
+            Width: =Title.Width
+            X: =Title_2.X
+            Y: =Title_2.Y + Title_2.Height
+            ZIndex: =29
 
         Month_5 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -1081,6 +1068,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =Title.Height
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =varButtonHover
@@ -1095,18 +1083,28 @@
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =9.97
+            Size: =Self.Width / 35
             Text: |-
                 ="Asset R&D (LOS Only)
                 "
-            Width: =332.16
-            X: =779.15
-            Y: =651
-            ZIndex: =45
+            Width: =Title.Width
+            X: =Month_2.X
+            Y: =Month_2.Y + Month_2.Height
+            ZIndex: =38
+
+        Border3_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisplayMode: =DisplayMode.View
+            Fill: =varButtonSeperatorFill
+            FocusedBorderThickness: =4
+            Height: =2
+            Width: =Title.Width
+            X: =Month_2.X
+            Y: =Month_2.Y + Month_2.Height
+            ZIndex: =39
 
     Group3 As group:
         Height: =5
@@ -1127,6 +1125,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
+            Height: =Title.Height
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =
@@ -1137,13 +1136,13 @@
             PressedFill: =
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
-            Size: =9.97
+            Size: =Self.Width / 35
             Text: ="Approvals Dashboard"
             Underline: =true
-            Width: =332.16
-            X: =779.15
-            Y: =375
-            ZIndex: =26
+            Width: =Title.Width
+            X: =Button10_1.X + ((Button10_1.Width/2) - (Self.Width/2))
+            Y: =Button10_1.Y * 5.5
+            ZIndex: =24
 
         Month_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1157,6 +1156,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =Title.Height 
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =varButtonHover
@@ -1170,15 +1170,17 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =9.97
+            Size: =Self.Width / 35
             Text: ="Awaiting Approval"
-            Width: =332.16
-            X: =779.15
-            Y: =418
-            ZIndex: =27
+            Width: =Title.Width
+            X: =Title.X
+            Y: =Title_1.Y + Title_1.Height
+            ZIndex: =25
 
         Button10_3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1187,6 +1189,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =Month_1.Height
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -1201,13 +1204,13 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =Self.Height
             RadiusTopRight: =0
-            Size: =7.31
+            Size: =Self.Width / 3
             Text: =varApprovalNumber
             Visible: =If(varGuestUser, false, true)
-            Width: =26.58
-            X: =779.15
-            Y: =418
-            ZIndex: =29
+            Width: =Month_1.Width * 0.08
+            X: =Month_1.X + Month_1.Width - Self.Width
+            Y: =Month_1.Y
+            ZIndex: =27
 
         Month_3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1221,6 +1224,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =Title.Height
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =varButtonHover
@@ -1230,16 +1234,14 @@
             PressedBorderColor: =varButtonBorderFill
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =varButtonPressedFill
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =9.97
+            Size: =Self.Width / 35
             Text: ="Approvals History"
-            Width: =332.16
-            X: =779.15
-            Y: =461
-            ZIndex: =34
+            Width: =Title.Width
+            X: =Month_1.X
+            Y: =Month_1.Y + Month_1.Height
+            ZIndex: =31
 
         Border3_1 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1247,9 +1249,9 @@
             DisplayMode: =DisplayMode.View
             Fill: =varButtonSeperatorFill
             FocusedBorderThickness: =4
-            Height: =3
-            Width: =332.16
-            X: =779.15
-            Y: =458
-            ZIndex: =36
+            Height: =2
+            Width: =Month_1.Width
+            X: =Month_1.X
+            Y: =Month_1.Y + Month_1.Height
+            ZIndex: =32
 
