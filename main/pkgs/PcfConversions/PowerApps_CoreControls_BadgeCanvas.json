@@ -28,7 +28,25 @@
       ],
       "From": "0.0.7",
       "To": "0.0.8"
+    },
+    {
+      "Action": [
+        {
+          "Name": "OnSelect",
+          "Type": "add"
+        },
+        {
+          "Name": "AccessibleLabel",
+          "Type": "add"
+        },
+        {
+          "Name": "OnChange",
+          "Type": "remove"
+        }
+      ],
+      "From": "0.0.10",
+      "To": "0.0.11"
     }
   ],
-  "Version": "0.0.9"
+  "Version": "0.0.11"
 }

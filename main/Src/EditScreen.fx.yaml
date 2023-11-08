@@ -261,6 +261,7 @@ EditScreen As screen:
     "'Main Form - Response ID' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         Placeholder: =""
@@ -275,6 +276,7 @@ EditScreen As screen:
     "'Main Form - Tail Number' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         Placeholder: =""
@@ -902,6 +904,7 @@ EditScreen As screen:
     "'Main Form - Task Time' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         Placeholder: =""
@@ -1948,6 +1951,7 @@ EditScreen As screen:
         BasePaletteColor: =
         DelayOutput: =true
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =If(Self.Visible = true, 300, 112)
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
@@ -2027,6 +2031,7 @@ EditScreen As screen:
     "'Main Form - Working Hazards' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =60
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
@@ -2042,6 +2047,7 @@ EditScreen As screen:
     "'Main Form - Notes' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =60
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
@@ -2057,6 +2063,7 @@ EditScreen As screen:
     "'Main Form - Task Location' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =60
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
@@ -2073,6 +2080,7 @@ EditScreen As screen:
         BasePaletteColor: =
         DelayOutput: =true
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =If('Main Form - Additional Details'.Visible = false, 440, 112)
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
@@ -3099,6 +3107,7 @@ EditScreen As screen:
     "'HO Popup - SharePoint Link' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =82
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
@@ -3145,6 +3154,7 @@ EditScreen As screen:
         "'Main Form - Status' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             MaxLength: =-1
             Placeholder: =""
@@ -3833,6 +3843,7 @@ EditScreen As screen:
         "'Cust Det - Rank' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
@@ -3849,6 +3860,7 @@ EditScreen As screen:
         "'Cust Det - Name' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
@@ -3865,6 +3877,7 @@ EditScreen As screen:
         "'Cust Det - Section' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
@@ -3881,6 +3894,7 @@ EditScreen As screen:
         "'Cust Det - Contact Number' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
@@ -3897,6 +3911,7 @@ EditScreen As screen:
         "'Cust Det - LM Rank & Name' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
@@ -3913,6 +3928,7 @@ EditScreen As screen:
         "'Cust Det - LM Section' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
@@ -3929,6 +3945,7 @@ EditScreen As screen:
         "'Cust Det - LM Contact Number' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
@@ -3945,6 +3962,7 @@ EditScreen As screen:
         "'Cust Det - POC If Different' As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =768
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine

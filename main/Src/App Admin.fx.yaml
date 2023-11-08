@@ -10,16 +10,17 @@
 
     HtmlText1_5 As htmlViewer:
         AutoHeight: =true
-        Height: =768
+        Height: =Button10_7.Height + 40
         HtmlText: |
-            ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 20px; width: 1784px; height: 794px; border-radius: 30px'></div>"
+            ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 20px; width: " & Button10_7.Width & "px; height: " & Button10_7.Height & "px; border-radius: 30px'></div>"
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0.00
         PaddingTop: =0.00
         Size: =7.31
-        Width: =1211.73
-        X: =7.97
+        Width: =Button10_7.Width + 40
+        X: =Button10_7.X - 20
+        Y: =Button10_7.Y - 20
         ZIndex: =2
 
     Button10_7 As button:
@@ -33,7 +34,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =768
+        Height: =App.Height * 90%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -48,8 +49,9 @@
         RadiusTopRight: =30
         Size: =9.97
         Text: =""
-        Width: =1185.16
-        X: =21.26
+        Width: =App.Width * 97%
+        X: =App.Width - Self.Width - ((App.Width - Self.Width)/2)
+        Y: =(((App.Height - cmp_Header_9.Height)/2)+cmp_Header_9.Height) -(Self.Height/2)
         ZIndex: =4
 
     cmp_Header_9 As cmp_Header:
@@ -89,15 +91,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: |-
             ="Current Location:"
         Underline: =true
-        Width: =99.65
-        X: =45.17
-        Y: =172
+        Width: =Button10_7.Width * 10%
+        X: =Button21.X
+        Y: =Button21.Y + Button21.Height + 5
         ZIndex: =43
 
     Label29 As label:
@@ -110,14 +113,15 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button10_7.Height * 5%
         Italic: =true
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: =gblUserLocPerm
-        Width: =99.65
-        X: =152.80
-        Y: =172
+        Width: =Button10_7.Width * 10%
+        X: =Label28.X + Label28.Width
+        Y: =Label28.Y
         ZIndex: =44
 
     Button21 As button:
@@ -129,6 +133,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -434,11 +439,11 @@
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Set Init Perms"
-        Width: =199.29
-        X: =45.17
-        Y: =111
+        Width: =Button10_7.Width * 20%
+        X: =Button10_7.X + (Button10_7.Width * 1%)
+        Y: =Button10_7.Y + (Button10_7.Height * 1%)
         ZIndex: =45
 
     Label28_1 As label:
@@ -451,15 +456,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: |-
             ="Current Logo:"
         Underline: =true
-        Width: =99.65
-        X: =45.17
-        Y: =212
+        Width: =Label28.Width + Label29.Width
+        X: =Label28.X
+        Y: =Label28.Y + Label28.Height + 5
         ZIndex: =46
 
     Image7 As image:
@@ -469,6 +475,7 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
+        Height: =Button10_7.Height * 20%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: =varUnitCrest
@@ -476,9 +483,9 @@
         PaddingTop: =0.00
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =169.41
-        X: =45.17
-        Y: =252
+        Width: =Label28.Width + Label29.Width
+        X: =Label28_1.X
+        Y: =Label28_1.Y + Label28_1.Height + 5
         ZIndex: =47
 
     Label28_2 As label:
@@ -493,7 +500,7 @@
         FontWeight: =FontWeight.Semibold
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: |-
             ="Current Version:"
         Underline: =true
@@ -515,7 +522,7 @@
         Italic: =true
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: =CurrentVer
         Width: =99.65
         X: =152.80
@@ -534,7 +541,7 @@
         FontWeight: =FontWeight.Semibold
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: |-
             ="Current Phot List:"
         Underline: =true
@@ -650,7 +657,7 @@
         FontWeight: =FontWeight.Semibold
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: |-
             ="Awaiting Approval:"
         Underline: =true
@@ -672,7 +679,7 @@
         Italic: =true
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: =Count(Filter('TG14 Task Information', 'Approval Status'.Value = "Awaiting Approval", Unit.Value = gblUserLocPerm).ID)
         Width: =99.65
         X: =152.80
@@ -691,7 +698,7 @@
         FontWeight: =FontWeight.Semibold
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: |-
             ="Total Tasks: "
         Underline: =true
@@ -713,7 +720,7 @@
         Italic: =true
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: =Count(Filter('TG14 Task Information', 'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", ('Project Category'.Value = "Diversion") = false, Unit.Value = gblUserLocPerm, Text(Now(), "yyyy", "en-GB") in 'Task Date').ID)
         Width: =99.65
         X: =152.80
@@ -792,6 +799,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -873,9 +881,9 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Change Location"
-        Width: =126.22
+        Width: =Button10_7.Width * 10%
         X: =511.53
         Y: =172
         ZIndex: =57
@@ -889,6 +897,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -912,11 +921,11 @@
         PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Change Version Number"
-        Width: =199.29
-        X: =993.17
-        Y: =111
+        Width: =Button10_7.Width * 20%
+        X: =Button10_7.X + (Button10_7.Width * 79%)
+        Y: =Button10_7.Y + (Button10_7.Height * 1%)
         ZIndex: =59
 
     JobSearch As text:
@@ -957,6 +966,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -970,9 +980,9 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Search"
-        Width: =126.22
+        Width: =Button10_7.Width * 10%
         X: =511.53
         Y: =252
         ZIndex: =61
@@ -981,11 +991,11 @@
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =1
         DataSource: ='TG14 Task Information'
-        Height: =570
+        Height: =427
         Item: =First(Filter('TG14 Task Information', 'Response ID' = varJobSearch))
         Width: =542.76
         X: =279.68
-        Y: =198
+        Y: =341
         ZIndex: =62
 
         Title_DataCard1 As typedDataCard.textualViewCard:
@@ -5036,7 +5046,7 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Change Unit"
         Underline: =true
         Width: =126.22
@@ -5053,6 +5063,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -5067,10 +5078,10 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Change Unit"
         Underline: =true
-        Width: =126.22
+        Width: =Button10_7.Width * 20%
         X: =909.46
         Y: =540
         ZIndex: =65
@@ -5079,6 +5090,7 @@
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
         Height: =36
         OnSelect: |
             =Set(varLoadSpinner, true);
@@ -5970,7 +5982,9 @@
         ZIndex: =68
 
     Spinner2 As Spinner:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =200
         Visible: =varLoadSpinner
         Width: =132.87

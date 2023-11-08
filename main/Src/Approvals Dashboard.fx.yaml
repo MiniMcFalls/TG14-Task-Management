@@ -672,12 +672,14 @@
             ZIndex: =20
 
         BadgeCanvas4_1 As Badge:
+            AccessibleLabel: =""
             Appearance: ='BadgeCanvas.Appearance'.Tint
             BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
             Height: =149
+            OnSelect: =false
             Shape: ="Circular"
             ThemeColor: ="Brand"
             Width: =59.79
@@ -860,6 +862,7 @@
             BasePaletteColor: =
             Checked: =ThisItem.'Further Details Requested?'
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             Label: ="Further Details Requested"
             OnSelect: =Select(Parent)
@@ -872,6 +875,7 @@
             BasePaletteColor: =
             Checked: =If(ThisItem.'Viewed?' = true, true, false)
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             Label: =If(ThisItem.'Viewed?' = false Or IsBlank(ThisItem.'Viewed?'), "Unread", ThisItem.'Viewed By?')
             OnSelect: =Select(Parent)

@@ -12694,7 +12694,7 @@
         Height: =App.ActiveScreen.Width / 5.8
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =App.ActiveScreen.Width / 92
+        Size: =gblFontSize
         Text: |-
             =If(Hour(Now()) <= 12 , "Good Morning", "Good Afternoon") &
             ",
@@ -12730,6 +12730,7 @@
         Appearance: ='Spinner.Appearance'.Primary
         BasePaletteColor: =varHeaderFill
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =App.MinScreenWidth /2.15
         SpinnerSize: ='Spinner.SpinnerSize'.Huge
         Width: =App.MinScreenWidth/2.4

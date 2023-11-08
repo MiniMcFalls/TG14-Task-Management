@@ -111,11 +111,13 @@
         ZIndex: =4
 
         BadgeCanvas12_1 As Badge:
+            AccessibleLabel: =""
             BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
             Height: =80
+            OnSelect: =false
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
             Width: =405.24
@@ -224,6 +226,7 @@
         "TextInputCanvas3 As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
@@ -308,6 +311,7 @@
         "TextInputCanvas3_1 As 'Text input'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
@@ -412,6 +416,7 @@
         "DatePickerCanvas2 As 'Date picker'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             OnChange: =Set(varSubmitChanges, true)
             ValidationState: ="None"
@@ -441,11 +446,13 @@
             ZIndex: =19
 
         BadgeCanvas9 As Badge:
+            AccessibleLabel: =""
             BasePaletteColor: =
             Content: ='Asset_R&D_Gallery'.Selected.'Current owner'.DisplayName
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
             Height: =32
+            OnSelect: =false
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
             Width: =405.24
@@ -474,6 +481,7 @@
             ZIndex: =21
 
         BadgeCanvas9_1 As Badge:
+            AccessibleLabel: =""
             BasePaletteColor: =
             Content: |-
                 =If(
@@ -484,6 +492,7 @@
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
             Height: =32
+            OnSelect: =false
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
             Width: =405.24
@@ -514,6 +523,7 @@
         "DatePickerCanvas2_1 As 'Date picker'":
             BasePaletteColor: =
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             OnChange: =Set(varSubmitChanges, true)
             ValidationState: ="None"
@@ -718,11 +728,13 @@
         ZIndex: =5
 
         BadgeCanvas12 As Badge:
+            AccessibleLabel: =""
             BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
             Height: =80
+            OnSelect: =false
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
             Width: =620.48
@@ -1167,6 +1179,7 @@
             BasePaletteColor: =
             DelayOutput: =true
             DisplayMode: =DisplayMode.Edit
+            FontSize: =0
             Height: =32
             MaxLength: =-1
             OnChange: =Set(gblSearchTerm, Blank())
@@ -1467,6 +1480,7 @@
             "TextInputCanvas4_12 As 'Text input'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =31
                 MaxLength: =-1
                 Placeholder: =""
@@ -1480,6 +1494,7 @@
             "TextInputCanvas4_2 As 'Text input'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =31
                 MaxLength: =-1
                 Placeholder: =""
@@ -1491,11 +1506,13 @@
                 ZIndex: =2
 
             BadgeCanvas5_7 As Badge:
+                AccessibleLabel: =""
                 BasePaletteColor: =
                 Content: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
                 Height: =85
+                OnSelect: =false
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
                 Width: =236.50
@@ -1548,12 +1565,14 @@
                 ZIndex: =5
 
             BadgeCanvas2_11 As Badge:
+                AccessibleLabel: =""
                 Appearance: ='BadgeCanvas.Appearance'.Tint
                 BasePaletteColor: =
                 Content: =Text(Today(), "dd/mm/yyy")
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
                 Height: =32
+                OnSelect: =false
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
                 Width: =65.77
@@ -1590,11 +1609,13 @@
                 ZIndex: =8
 
             BadgeCanvas5_8 As Badge:
+                AccessibleLabel: =""
                 BasePaletteColor: =
                 Content: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
                 Height: =85
+                OnSelect: =false
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
                 Width: =236.50
@@ -1929,6 +1950,7 @@
                 ZIndex: =21
 
             BadgeCanvas2_12 As Badge:
+                AccessibleLabel: =""
                 Appearance: ='BadgeCanvas.Appearance'.Tint
                 BasePaletteColor: =
                 Content: |-
@@ -1936,6 +1958,7 @@
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
                 Height: =32
+                OnSelect: =false
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
                 Width: =65.77
@@ -1946,6 +1969,7 @@
             "TextInputCanvas4_10 As 'Text input'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =31
                 MaxLength: =-1
                 Placeholder: =""
@@ -1959,6 +1983,7 @@
             "TextInputCanvas4_11 As 'Text input'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =31
                 MaxLength: =-1
                 Placeholder: =""
@@ -2031,6 +2056,7 @@
             "DatePickerCanvas3_1 As 'Date picker'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =32
                 ValidationState: ="None"
                 Width: =174.71
@@ -3122,6 +3148,7 @@
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =32
                 OnSelect: |
                     =Set(
@@ -3211,6 +3238,7 @@
             "TextInputCanvas4_15 As 'Text input'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =31
                 MaxLength: =-1
                 Placeholder: =""
@@ -3225,6 +3253,7 @@
             "TextInputCanvas4_3 As 'Text input'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =31
                 MaxLength: =-1
                 Placeholder: =""
@@ -3237,11 +3266,13 @@
                 ZIndex: =2
 
             BadgeCanvas5_9 As Badge:
+                AccessibleLabel: =""
                 BasePaletteColor: =
                 Content: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
                 Height: =85
+                OnSelect: =false
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
                 Width: =236.50
@@ -3294,12 +3325,14 @@
                 ZIndex: =5
 
             BadgeCanvas2_13 As Badge:
+                AccessibleLabel: =""
                 Appearance: ='BadgeCanvas.Appearance'.Tint
                 BasePaletteColor: =
                 Content: =varSelectedLoanID
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
                 Height: =32
+                OnSelect: =false
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
                 Width: =65.77
@@ -3336,11 +3369,13 @@
                 ZIndex: =8
 
             BadgeCanvas5_10 As Badge:
+                AccessibleLabel: =""
                 BasePaletteColor: =
                 Content: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
                 Height: =85
+                OnSelect: =false
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
                 Width: =236.50
@@ -3641,6 +3676,7 @@
             "TextInputCanvas4_13 As 'Text input'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =31
                 MaxLength: =-1
                 Placeholder: =""
@@ -3655,6 +3691,7 @@
             "TextInputCanvas4_14 As 'Text input'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =31
                 MaxLength: =-1
                 Placeholder: =""
@@ -3689,6 +3726,7 @@
             "DatePickerCanvas3_2 As 'Date picker'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =32
                 ValidationState: ="None"
                 Width: =174.71
@@ -3699,6 +3737,7 @@
             "TextInputCanvas4_16 As 'Text input'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
+                FontSize: =0
                 Height: =31
                 MaxLength: =-1
                 Placeholder: =""

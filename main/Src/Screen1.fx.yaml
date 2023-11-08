@@ -1208,7 +1208,9 @@ Screen1 As screen:
         ZIndex: =7
 
     ButtonCanvas4 As Button:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         OnSelect: |
             =Set(gblShowDebug, true);

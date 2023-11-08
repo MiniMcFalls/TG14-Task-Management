@@ -653,12 +653,14 @@
             ZIndex: =20
 
         BadgeCanvas4 As Badge:
+            AccessibleLabel: =""
             Appearance: ='BadgeCanvas.Appearance'.Tint
             BasePaletteColor: =
             Content: =""
             DisplayMode: =DisplayMode.Edit
             FontSize: =0
             Height: =149
+            OnSelect: =false
             Shape: ="Circular"
             ThemeColor: ="Brand"
             Width: =59.79

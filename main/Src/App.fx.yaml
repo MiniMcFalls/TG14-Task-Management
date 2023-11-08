@@ -792,6 +792,20 @@ App As appinfo:
                 )
             )
         );
+        // Set Font Size
+        Set(
+            gblFontSize,
+            If(
+                ScreenSize.Small,
+                9,
+                ScreenSize.Medium,
+                11,
+                ScreenSize.Large,
+                13,
+                ScreenSize.ExtraLarge,
+                15
+            )
+        );
         // Set Colour Variables
         Set(
             varButtonFill,
