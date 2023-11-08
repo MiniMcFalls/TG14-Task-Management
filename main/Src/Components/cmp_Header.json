@@ -68,7 +68,7 @@
         "Name": "Header_Background",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2018,
+        "PublishOrderIndex": 2017,
         "Rules": [
           {
             "Category": "Data",
@@ -469,7 +469,7 @@
         "Name": "Header_VersNum",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2019,
+        "PublishOrderIndex": 2018,
         "Rules": [
           {
             "Category": "Data",
@@ -800,7 +800,7 @@
         "Name": "Label4",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2020,
+        "PublishOrderIndex": 2019,
         "Rules": [
           {
             "Category": "Data",
@@ -1144,7 +1144,7 @@
         "Name": "Button6_1",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2021,
+        "PublishOrderIndex": 2020,
         "Rules": [
           {
             "Category": "Data",
@@ -1807,7 +1807,7 @@
         "Name": "Header_Home",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2023,
+        "PublishOrderIndex": 2024,
         "Rules": [
           {
             "Category": "Data",
@@ -2146,7 +2146,7 @@
         "Name": "Icon16_2",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2024,
+        "PublishOrderIndex": 2025,
         "Rules": [
           {
             "Category": "Design",
@@ -2392,7 +2392,7 @@
         "Name": "Icon16",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2025,
+        "PublishOrderIndex": 2026,
         "Rules": [
           {
             "Category": "Design",
@@ -2678,7 +2678,7 @@
         "Name": "Header_Profile",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2026,
+        "PublishOrderIndex": 2027,
         "Rules": [
           {
             "Category": "Data",
@@ -2946,7 +2946,7 @@
         "Name": "Header_VisComLogo",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2027,
+        "PublishOrderIndex": 2028,
         "Rules": [
           {
             "Category": "Data",
@@ -3227,7 +3227,7 @@
         "Name": "Timer8",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2028,
+        "PublishOrderIndex": 2029,
         "Rules": [
           {
             "Category": "Data",
@@ -3549,7 +3549,7 @@
         "Name": "Label9_2",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2029,
+        "PublishOrderIndex": 2030,
         "Rules": [
           {
             "Category": "Data",
@@ -3921,7 +3921,7 @@
         "Name": "Label9",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2030,
+        "PublishOrderIndex": 2031,
         "Rules": [
           {
             "Category": "Data",
@@ -4111,7 +4111,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Button6.Width * 0.2",
+            "InvariantScript": "gblFontSize - 1.5",
             "Property": "Size",
             "RuleProviderType": "User"
           },
@@ -4202,7 +4202,7 @@
         "Name": "Connection Status",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2032,
+        "PublishOrderIndex": 2023,
         "Rules": [
           {
             "Category": "Design",
@@ -4279,7 +4279,7 @@
         "Name": "Refresh Status",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2031,
+        "PublishOrderIndex": 2021,
         "Rules": [
           {
             "Category": "Design",
@@ -4363,7 +4363,7 @@
       "AppWidth",
       "AppHeight"
     ],
-    "LastModifiedTimestamp": "638350278521365308",
+    "LastModifiedTimestamp": "638350524667275073",
     "Name": "cmp_Header",
     "Rules": [
       {
@@ -4416,7 +4416,7 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "App.ActiveScreen.Width",
+        "InvariantScript": "App.Width",
         "Property": "Width",
         "RuleProviderType": "System"
       },
@@ -4498,7 +4498,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638350278521365308",
+  "LastModifiedTimestamp": "638350524667275073",
   "Name": "020e992b7d1040688e08ef3914eb2b29",
   "OverridableProperties": {},
   "TemplateOriginalName": "6d02e1dd2a764a52bf98ad786e4d1adc",

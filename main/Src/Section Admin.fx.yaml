@@ -19,30 +19,32 @@
 
     HtmlText1_2 As htmlViewer:
         AutoHeight: =true
-        Height: =768
+        Height: =App.ActiveScreen.Height * 0.9
         HtmlText: |
-            ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 20px; width: 842px; height: 794px; border-radius: 30px'></div>"
+            ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 20px; width: " & Button10_2.Width & "px; height:" & Button10_2.Height & "px; border-radius: 30px'></div>"
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0.00
         PaddingTop: =0.00
         Size: =7.31
-        Width: =585.93
-        X: =635.09
+        Width: =Button10_2.Width + 40
+        X: =Button10_2.X - 20
+        Y: =cmp_Header_1.Height + (((App.Height - cmp_Header_1.Height)/2) - Self.Height/2)
         ZIndex: =1
 
     HtmlText1_3 As htmlViewer:
         AutoHeight: =true
-        Height: =768
+        Height: =Button10_5.Height + 40
         HtmlText: |
-            ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 20px; width: 842px; height: 794px; border-radius: 30px'></div>"
+            ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 20px; width: " & Button10_5.Width & "px; height:" & Button10_5.Height & "px; border-radius: 30px'></div>"
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0.00
         PaddingTop: =0.00
         Size: =7.31
-        Width: =585.93
-        X: =7.97
+        Width: =Button10_5.Width + 40
+        X: =Button10_5.X - 20
+        Y: =Button10_5.Y - 20
         ZIndex: =2
 
     Button10_2 As button:
@@ -56,7 +58,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =768
+        Height: =App.Height * 0.9
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -71,16 +73,50 @@
         RadiusTopRight: =20
         Size: =9.97
         Text: =""
-        Width: =559.36
-        X: =648.38
+        Width: =App.Width * 0.46
+        X: =(App.Width / 2) + (App.Width * 0.02)
+        Y: =cmp_Header_2.Height + (((App.Height - cmp_Header_2.Height)/2) - Self.Height/2)
         ZIndex: =3
+
+    Button10_5 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =varPillBackground
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(230, 230, 230, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =App.Height * 0.9
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =9.97
+        Text: =""
+        Width: =App.Width * 0.46
+        X: =(App.Width / 2) - Self.Width - (App.Width * 0.02)
+        Y: =cmp_Header_2.Height + (((App.Height - cmp_Header_2.Height)/2) - Self.Height/2)
+        ZIndex: =4
 
     CalendarEventsGallery1_3 As gallery.CalendarEventsGallery:
         AccessibleLabel: ="Calendar events for selected day"
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         DisplayMode: =DisplayMode.View
-        Height: =447
+        Height: =Button10_2.Height *59%
         Items: |-
             =/*Shows events only on selected date*/
             SortByColumns(
@@ -88,7 +124,7 @@
                     {
                         wData: Filter(
                             'TG14 Task Information',
-                            'AHB.' = "Y" Or 'AHB Override'= "Y",
+                            'AHB.' = "Y" Or 'AHB Override' = "Y",
                             'Task Date' > Date(
                                 Text(
                                     Now(),
@@ -109,12 +145,12 @@
         Layout: =Layout.Vertical
         LoadingSpinnerColor: =RGBA(0,0,0,1)
         OnSelect: =
-        TemplatePadding: =4
+        TemplatePadding: =0
         TemplateSize: =34
-        Width: =559.36
-        X: =648.38
-        Y: =321
-        ZIndex: =4
+        Width: =Button38.Width
+        X: =Button10_2.X + (Button10_2.Width/2) - (Self.Width/2)
+        Y: =Button38.Y + Button38.Height
+        ZIndex: =5
 
         Button3_3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -210,36 +246,6 @@
             X: =0.00
             ZIndex: =14
 
-    Button10_5 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =varPillBackground
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(230, 230, 230, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =768
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
-        Size: =9.97
-        Text: =""
-        Width: =559.36
-        X: =21.26
-        ZIndex: =5
-
     "'Vert Divider_3' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -295,14 +301,15 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =9.97
         Text: ="Photographers"
         Underline: =true
-        Width: =99.65
-        X: =45.17
-        Y: =124
+        Width: =Button10_7.Width * 10%
+        X: =Phot1.X
+        Y: =Button10_5.Y + (Button10_5.Height * 2%)
         ZIndex: =21
 
     Button20 As button:
@@ -314,7 +321,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =28
+        Height: =Button10_5.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(Self.Fill, -10%)
@@ -349,11 +356,11 @@
         PressedFill: =ColorFade(Self.Fill, -30%)
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Submit Changes"
-        Width: =268.38
-        X: =45.17
-        Y: =405
+        Width: =Button10_5.Width * 90%
+        X: =Button10_5.X + (Button10_5.Width/2) - (Self.Width/2)
+        Y: =Phot6.Y + Phot6.Height + 4
         ZIndex: =22
 
     Button31 As button:
@@ -365,6 +372,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_2.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -380,9 +388,9 @@
         RadiusTopRight: =0
         Size: =9.97
         Text: ="Hours"
-        Width: =134.19
-        X: =716.81
-        Y: =228
+        Width: =Button10_2.Width * 25%
+        X: =Button31_2.X - Self.Width - (Button10_2.Width * 2%)
+        Y: =Button31_2.Y
         ZIndex: =23
 
     Button31_1 As button:
@@ -394,6 +402,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_2.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -409,9 +418,9 @@
         RadiusTopRight: =0
         Size: =9.97
         Text: ="Hours"
-        Width: =134.19
-        X: =716.81
-        Y: =313
+        Width: =Button10_2.Width * 25%
+        X: =Button31_3.X - Self.Width - (Button10_2.Width * 2%)
+        Y: =Button31_3.Y
         ZIndex: =24
 
     Label10_1 As label:
@@ -425,14 +434,15 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =9.97
         Text: ="Monthly Returns"
         Underline: =true
-        Width: =142.83
-        X: =856.31
-        Y: =134
+        Width: =Button10_2.Width
+        X: =Button10_2.X + (Button10_2.Width/2) - (Self.Width/2)
+        Y: =Button10_2.Y + (Button10_2.Height * 2%)
         ZIndex: =25
 
     Button31_2 As button:
@@ -444,6 +454,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_2.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -459,9 +470,9 @@
         RadiusTopRight: =0
         Size: =9.97
         Text: ="Tasks per Type"
-        Width: =134.19
-        X: =857.65
-        Y: =228
+        Width: =Button10_2.Width * 25%
+        X: =Button10_2.X + (Button10_2.Width/2) - (Self.Width/2)
+        Y: =Label34.Y + Label34.Height + 5
         ZIndex: =26
 
     Button31_3 As button:
@@ -473,6 +484,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_2.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -488,9 +500,9 @@
         RadiusTopRight: =0
         Size: =9.97
         Text: ="Tasks per Type"
-        Width: =134.19
-        X: =857.65
-        Y: =313
+        Width: =Button10_2.Width * 25%
+        X: =Button10_2.X + (Button10_2.Width/2) - (Self.Width/2)
+        Y: =Label34_1.Y + Label34_1.Height + 5
         ZIndex: =27
 
     Button31_4 As button:
@@ -502,6 +514,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_2.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -519,9 +532,9 @@
         Text: |-
             ="Consumables
             "
-        Width: =134.19
-        X: =999.14
-        Y: =228
+        Width: =Button10_2.Width * 25%
+        X: =Button31_2.X + Button31_2.Width + (Button10_2.Width * 2%)
+        Y: =Button31_2.Y
         ZIndex: =28
 
     Button31_5 As button:
@@ -533,6 +546,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_2.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -548,9 +562,9 @@
         RadiusTopRight: =0
         Size: =9.97
         Text: ="Consumables"
-        Width: =134.19
-        X: =999.14
-        Y: =312
+        Width: =Button10_2.Width * 25%
+        X: =Button31_3.X + Button31_3.Width + (Button10_2.Width * 2%)
+        Y: =Button31_3.Y
         ZIndex: =29
 
     Label34 As label:
@@ -564,13 +578,15 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: =Text(Now(), "yyyy", "en-GB") - 1
-        Width: =99.65
-        X: =877.57
-        Y: =179
+        Underline: =true
+        Width: =Button10_2.Width
+        X: =Label10_1.X
+        Y: =Label10_1.Y + Label10_1.Height + 10
         ZIndex: =125
 
     Label34_1 As label:
@@ -584,40 +600,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: =Text(Now(), "yyyy", "en-GB")
-        Width: =99.65
-        X: =877.57
-        Y: =272
+        Underline: =true
+        Width: =Button10_2.Width
+        X: =Label10_1.X
+        Y: =Button31_2.Y + Button31_2.Height + 15
         ZIndex: =126
-
-    Button40 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(255, 191, 0, 1)
-        DisabledFill: =RGBA(105, 121, 126, 1)
-        DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(105, 121, 126, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =35
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Size: =9.97
-        Text: ="Currently WIP"
-        Width: =229.86
-        X: =499.57
-        Y: =61
-        ZIndex: =127
 
     "'2022 Monthly Returns - Totals' As group":
         Height: =5
@@ -3253,6 +3245,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_7.Height * 5%
             HintText: ="Phot1"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3268,10 +3261,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =45.17
-            Y: =164
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =Button20.X
+            Y: =Label10.Y + Label10.Height + 10
             ZIndex: =9
 
         Phot2 As text:
@@ -3284,6 +3277,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_5.Height * 5%
             HintText: ="Phot2"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3299,10 +3293,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =45.17
-            Y: =204
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =Phot1.X
+            Y: =Phot1.Y + Phot1.Height
             ZIndex: =10
 
         Phot3 As text:
@@ -3315,6 +3309,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_5.Height * 5%
             HintText: ="Phot3"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3330,10 +3325,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =45.17
-            Y: =244
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =Phot2.X
+            Y: =Phot2.Y + Phot2.Height
             ZIndex: =11
 
         Phot4 As text:
@@ -3346,6 +3341,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_5.Height * 5%
             HintText: ="Phot4"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3361,10 +3357,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =45.17
-            Y: =284
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =Phot3.X
+            Y: =Phot3.Y + Phot3.Height  
             ZIndex: =12
 
         Phot5 As text:
@@ -3377,6 +3373,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_5.Height * 5%
             HintText: ="Phot5"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3392,10 +3389,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =45.17
-            Y: =324
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =Phot4.X
+            Y: =Phot4.Y + Phot4.Height
             ZIndex: =13
 
         Phot6 As text:
@@ -3408,6 +3405,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_5.Height * 5%
             HintText: ="Phot6"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3423,10 +3421,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =45.17
-            Y: =364
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =Phot5.X
+            Y: =Phot5.Y + Phot5.Height
             ZIndex: =14
 
         Phot7 As text:
@@ -3439,6 +3437,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_5.Height * 5%
             HintText: ="Phot7"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3454,10 +3453,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =183.35
-            Y: =164
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =(Button20.X + Button20.Width) - Self.Width
+            Y: =Phot1.Y
             ZIndex: =15
 
         Phot8 As text:
@@ -3470,6 +3469,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_5.Height * 5%
             HintText: ="Phot8"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3485,10 +3485,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =183.35
-            Y: =204
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =(Button20.X + Button20.Width) - Self.Width
+            Y: =Phot2.Y
             ZIndex: =16
 
         Phot9 As text:
@@ -3501,6 +3501,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_5.Height * 5%
             HintText: ="Phot9"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3516,10 +3517,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =183.35
-            Y: =244
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =(Button20.X + Button20.Width) - Self.Width
+            Y: =Phot3.Y
             ZIndex: =17
 
         Phot10 As text:
@@ -3532,6 +3533,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_5.Height * 5%
             HintText: ="Phot10"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3547,10 +3549,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =183.35
-            Y: =285
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =(Button20.X + Button20.Width) - Self.Width
+            Y: =Phot4.Y
             ZIndex: =18
 
         Phot11 As text:
@@ -3563,6 +3565,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_5.Height * 5%
             HintText: ="Phot11"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3578,10 +3581,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =183.35
-            Y: =325
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =(Button20.X + Button20.Width) - Self.Width
+            Y: =Phot5.Y
             ZIndex: =19
 
         Phot12 As text:
@@ -3594,6 +3597,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =Button10_5.Height * 5%
             HintText: ="Phot12"
             HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3609,10 +3613,10 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =8.64
-            Width: =130.21
-            X: =183.35
-            Y: =365
+            Size: =gblFontSize
+            Width: =Button10_5.Width * 44%
+            X: =(Button20.X + Button20.Width) - Self.Width  
+            Y: =Phot6.Y
             ZIndex: =20
 
     "'Blocker Group' As group":
@@ -13556,6 +13560,8 @@
 
     Button38 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(105, 121, 126, 1)
@@ -13564,6 +13570,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_2.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -13576,9 +13583,9 @@
         RadiusBottomRight: =0
         Size: =9.97
         Text: ="AHB to Archive"
-        Width: =559.36
-        X: =648.38
-        Y: =400
+        Width: =Button10_2.Width * 96%
+        X: =Button10_2.X + (Button10_2.Width/2) - (Self.Width/2)
+        Y: =(Button31_3.Y+ Button31_3.Height) + (Button10_2.Height * 3%)
         ZIndex: =423
 
     "'2022 Monthly Returns - Consumables_1' As group":

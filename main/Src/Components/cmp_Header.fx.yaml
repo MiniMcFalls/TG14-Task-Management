@@ -6,7 +6,7 @@ cmp_Header As CanvasComponent:
     Height: =53
     PendingChangesVis: =varPendingChangesVis
     RefreshInfoVis: =varInfoRefresh
-    Width: =App.ActiveScreen.Width
+    Width: =App.Width
     X: =0
     Y: =0
     ZIndex: =1
@@ -247,7 +247,7 @@ cmp_Header As CanvasComponent:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Size: =Button6.Width * 0.2
+            Size: =gblFontSize - 1.5
             Text: =If(GblConnectionTest = true, "Live", "OFFLINE")
             Width: =Button6.Width
             X: =Icon16.X

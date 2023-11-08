@@ -113,7 +113,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =App.ActiveScreen.Height * 0.9
+        Height: =App.Height * 0.9
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -128,7 +128,7 @@
         RadiusTopRight: =20
         Size: =9.97
         Text: =""
-        Width: =App.ActiveScreen.Width * 0.46
+        Width: =App.Width * 0.46
         X: =(App.Width / 2) + (App.Width * 0.02)
         Y: =cmp_Header_1.Height + (((App.Height - cmp_Header_1.Height)/2) - Self.Height/2)
         ZIndex: =4
@@ -144,7 +144,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =App.ActiveScreen.Height * 0.9
+        Height: =App.Height * 0.9
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -161,7 +161,7 @@
         RadiusTopRight: =30
         Size: =9.97
         Text: =""
-        Width: =App.ActiveScreen.Width * 0.46
+        Width: =App.Width * 0.46
         X: =(App.Width / 2) - Self.Width - (App.Width * 0.02)
         Y: =cmp_Header_1.Height + (((App.Height - cmp_Header_1.Height)/2) - Self.Height/2)
         ZIndex: =5
@@ -186,7 +186,7 @@
             ", you can see a breakdown of the weekly and monthly volume below.
             
             You currently have, " & varApprovalNumber & ", tasks awaiting approval and " & Count(Filter('TG14 Task Information', 'Task Date' = Today(), Unit.Value = gblUserLocPerm).ID) & ", tasks for today in total."
-        Width: =249.12
+        Width: =Button10.Width * 50%
         X: =289.64
         Y: =Image4.Y
         ZIndex: =11

@@ -51,7 +51,7 @@
         Text: =""
         Width: =App.Width * 97%
         X: =App.Width - Self.Width - ((App.Width - Self.Width)/2)
-        Y: =(((App.Height - cmp_Header_9.Height)/2)+cmp_Header_9.Height) -(Self.Height/2)
+        Y: =cmp_Header_9.Height + (((App.Height - cmp_Header_9.Height)/2) - Self.Height/2)
         ZIndex: =4
 
     cmp_Header_9 As cmp_Header:
