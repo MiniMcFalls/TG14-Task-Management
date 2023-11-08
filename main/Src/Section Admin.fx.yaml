@@ -116,7 +116,7 @@
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         DisplayMode: =DisplayMode.View
-        Height: =Button10_2.Height *59%
+        Height: =408.62799999999993
         Items: |-
             =/*Shows events only on selected date*/
             SortByColumns(
@@ -146,10 +146,10 @@
         LoadingSpinnerColor: =RGBA(0,0,0,1)
         OnSelect: =
         TemplatePadding: =0
-        TemplateSize: =34
-        Width: =Button38.Width
-        X: =Button10_2.X + (Button10_2.Width/2) - (Self.Width/2)
-        Y: =Button38.Y + Button38.Height
+        TemplateSize: =24
+        Width: =542
+        X: =650
+        Y: =341
         ZIndex: =5
 
         Button3_3 As button:
@@ -164,7 +164,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =35
+            Height: =23
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -192,7 +192,7 @@
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(0,0,0,0)
             FocusedBorderThickness: =0
-            Height: =34
+            Height: =22
             HoverFill: =RGBA(0,0,0,0)
             OnSelect: =Select(Title3_5)
             PressedFill: =RGBA(105, 121, 126, 1)
@@ -205,25 +205,24 @@
         Title3_5 As label:
             BorderColor: =Self.Color
             BorderStyle: =BorderStyle.None
-            BorderThickness: =2
             Color: =If(ThisItem.'Project Category'.Value = "Diversion", Color.DarkOrange,RGBA(0, 0, 0, 1))
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisplayMode: =DisplayMode.View
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =22
+            Height: =24
+            LineHeight: =2.5
             OnSelect: =Set(_selectedCalendarEvent, ThisItem)
             PaddingRight: =3.32
             PaddingTop: =3.32
-            Size: =5.98
+            Size: =gblFontSize - 3
             TabIndex: =0
             Text: |-
                 ="Job: " & ThisItem.Title & " - Date: " & Text(ThisItem.'Task Date', "mmm", "en-GB") & " - Originator: " & Concatenate(ThisItem.Rank & " " & ThisItem.'Customer Name') & " - Detail: " & ThisItem.'Task Requirements'
             Tooltip: =ThisItem.Title & Text("- ") & ThisItem.Rank & Text(" ") & ThisItem.'Customer Name'
             VerticalAlign: =VerticalAlign.Top
-            Width: =554.05
-            Wrap: =false
+            Width: =542
             X: =0.00
             ZIndex: =7
 
@@ -234,7 +233,7 @@
             OnSelect: =
             Width: =554.05
             X: =0.00
-            Y: =34
+            Y: =23
             ZIndex: =10
 
         Separator1_12 As rectangle:
@@ -292,6 +291,7 @@
         ZIndex: =8
 
     Label10 As label:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -304,11 +304,11 @@
         Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =9.97
+        Size: =gblFontSize + 2
         Text: ="Photographers"
         Underline: =true
-        Width: =Button10_7.Width * 10%
-        X: =Phot1.X
+        Width: =Button10_5.Width
+        X: =Button10_5.X
         Y: =Button10_5.Y + (Button10_5.Height * 2%)
         ZIndex: =21
 
@@ -386,7 +386,7 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Hours"
         Width: =Button10_2.Width * 25%
         X: =Button31_2.X - Self.Width - (Button10_2.Width * 2%)
@@ -416,7 +416,7 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Hours"
         Width: =Button10_2.Width * 25%
         X: =Button31_3.X - Self.Width - (Button10_2.Width * 2%)
@@ -437,7 +437,7 @@
         Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =9.97
+        Size: =gblFontSize + 2
         Text: ="Monthly Returns"
         Underline: =true
         Width: =Button10_2.Width
@@ -468,7 +468,7 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Tasks per Type"
         Width: =Button10_2.Width * 25%
         X: =Button10_2.X + (Button10_2.Width/2) - (Self.Width/2)
@@ -498,7 +498,7 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Tasks per Type"
         Width: =Button10_2.Width * 25%
         X: =Button10_2.X + (Button10_2.Width/2) - (Self.Width/2)
@@ -528,7 +528,7 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: |-
             ="Consumables
             "
@@ -560,7 +560,7 @@
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Consumables"
         Width: =Button10_2.Width * 25%
         X: =Button31_3.X + Button31_3.Width + (Button10_2.Width * 2%)
@@ -581,7 +581,7 @@
         Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: =Text(Now(), "yyyy", "en-GB") - 1
         Underline: =true
         Width: =Button10_2.Width
@@ -603,7 +603,7 @@
         Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: =Text(Now(), "yyyy", "en-GB")
         Underline: =true
         Width: =Button10_2.Width
@@ -13581,7 +13581,7 @@
         PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="AHB to Archive"
         Width: =Button10_2.Width * 96%
         X: =Button10_2.X + (Button10_2.Width/2) - (Self.Width/2)

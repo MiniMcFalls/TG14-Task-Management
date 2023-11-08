@@ -19399,36 +19399,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Section Admin'.Label10.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Section Admin'.Label10.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "Section Admin",
-                "type": "'Section Admin'.Label10"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Section Admin'.Label10.Height"
                 }
               ],
