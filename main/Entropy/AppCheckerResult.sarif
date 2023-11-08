@@ -494,86 +494,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'App Admin'.Label36.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'App Admin'.Label36.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 55,
-                  "charOffset": 100,
-                  "snippet": {
-                    "text": "Right(\n            'Task Date',\n            4\n        )"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "App Admin",
-                "type": "'App Admin'.Label36"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Right"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'App Admin'.Label36.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'App Admin'.Label36.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 156,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "App Admin",
-                "type": "'App Admin'.Label36"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'App Admin'.Label31_1.Text"
                 }
               ],
@@ -15324,6 +15244,36 @@
               },
               "properties": {
                 "member": "colCharsWidth",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varChangeUnit"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varChangeUnit",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varChangeUnit",
                 "module": "App",
                 "type": "App"
               }

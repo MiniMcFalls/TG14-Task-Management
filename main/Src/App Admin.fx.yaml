@@ -498,15 +498,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: |-
             ="Current Version:"
         Underline: =true
-        Width: =99.65
-        X: =45.17
-        Y: =374
+        Width: =Button10_7.Width * 10%
+        X: =Image7.X
+        Y: =Image7.Y + Image7.Height + 5
         ZIndex: =48
 
     Label29_1 As label:
@@ -519,14 +520,15 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button10_7.Height * 5%
         Italic: =true
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: =CurrentVer
-        Width: =99.65
-        X: =152.80
-        Y: =374
+        Width: =Button10_7.Width * 10%
+        X: =Label28_2.X + Label28_2.Width
+        Y: =Label28_2.Y
         ZIndex: =49
 
     Label28_3 As label:
@@ -539,15 +541,17 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: |-
             ="Current Phot List:"
         Underline: =true
-        Width: =99.65
-        X: =45.17
-        Y: =414
+        VerticalAlign: =VerticalAlign.Top
+        Width: =Button10_7.Width * 10%
+        X: =Label28_2.X
+        Y: =Label28_2.Y + Label28_2.Height + 5
         ZIndex: =50
 
     Label29_2 As label:
@@ -640,9 +644,9 @@
                 )
             ).Phot12
         VerticalAlign: =VerticalAlign.Top
-        Width: =247.13
-        X: =152.80
-        Y: =414
+        Width: =Button10_7.Width * 15%
+        X: =Label28_3.X + Label28_3.Width
+        Y: =Label28_3.Y
         ZIndex: =51
 
     Label30 As label:
@@ -655,15 +659,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: |-
             ="Awaiting Approval:"
         Underline: =true
-        Width: =107.62
-        X: =45.17
-        Y: =688
+        Width: =Button10_7.Width * 10%
+        X: =Label28_2.X
+        Y: =Label29_2.Y + Label29_2.Height + 5
         ZIndex: =52
 
     Label31 As label:
@@ -676,14 +681,15 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button10_7.Height * 5%
         Italic: =true
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: =Count(Filter('TG14 Task Information', 'Approval Status'.Value = "Awaiting Approval", Unit.Value = gblUserLocPerm).ID)
-        Width: =99.65
-        X: =152.80
-        Y: =688
+        Width: =Button10_7.Width * 10%
+        X: =Label30.X + Label30.Width
+        Y: =Label30.Y
         ZIndex: =53
 
     Label30_1 As label:
@@ -696,15 +702,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =Button10_7.Height * 5%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: |-
             ="Total Tasks: "
         Underline: =true
-        Width: =107.62
-        X: =45.17
-        Y: =728
+        Width: =Button10_7.Width * 10%
+        X: =Label30.X
+        Y: =Label30.Y + Label30.Height + 5
         ZIndex: =54
 
     Label31_1 As label:
@@ -717,14 +724,15 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button10_7.Height * 5%
         Italic: =true
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: =Count(Filter('TG14 Task Information', 'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", ('Project Category'.Value = "Diversion") = false, Unit.Value = gblUserLocPerm, Text(Now(), "yyyy", "en-GB") in 'Task Date').ID)
-        Width: =99.65
-        X: =152.80
-        Y: =728
+        Width: =Button10_7.Width * 10%
+        X: =Label30_1.X + Label30_1.Width
+        Y: =Label30_1.Y
         ZIndex: =55
 
     Dropdown2 As dropdown:
@@ -741,6 +749,7 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Font: =Font.'Segoe UI'
+        Height: =Button10_7.Height * 5%
         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
@@ -785,9 +794,9 @@
         PressedFill: =RGBA(105, 121, 126, 1)
         SelectionFill: =RGBA(105, 121, 126, 1)
         Size: =8.64
-        Width: =217.90
-        X: =281.01
-        Y: =172
+        Width: =Button10_7.Width * 20%
+        X: =Label28.X + (Button10_7.Width * 25%)
+        Y: =Label28.Y
         ZIndex: =56
 
     Button26 As button:
@@ -884,8 +893,8 @@
         Size: =gblFontSize
         Text: ="Change Location"
         Width: =Button10_7.Width * 10%
-        X: =511.53
-        Y: =172
+        X: =Dropdown2.X + Dropdown2.Width
+        Y: =Dropdown2.Y
         ZIndex: =57
 
     Button21_1 As button:
@@ -938,6 +947,7 @@
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =Button10_7.Height * 5%
         HintText: ="Response ID"
         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
@@ -952,9 +962,9 @@
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =8.64
-        Width: =217.90
-        X: =281.01
-        Y: =252
+        Width: =Button10_7.Width * 20%
+        X: =Dropdown2.X
+        Y: =Dropdown2.Y + Dropdown2.Height + 5
         ZIndex: =60
 
     Button32 As button:
@@ -983,19 +993,19 @@
         Size: =gblFontSize
         Text: ="Search"
         Width: =Button10_7.Width * 10%
-        X: =511.53
-        Y: =252
+        X: =JobSearch.X + JobSearch.Width
+        Y: =JobSearch.Y
         ZIndex: =61
 
     FormViewer1 As formViewer:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =1
         DataSource: ='TG14 Task Information'
-        Height: =427
+        Height: =Button10_7.Height * 80%
         Item: =First(Filter('TG14 Task Information', 'Response ID' = varJobSearch))
-        Width: =542.76
-        X: =279.68
-        Y: =341
+        Width: =Button10_7.Width * 47%
+        X: =JobSearch.X
+        Y: =JobSearch.Y + JobSearch.Height + 5
         ZIndex: =62
 
         Title_DataCard1 As typedDataCard.textualViewCard:
@@ -4886,6 +4896,7 @@
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayFields: =["Value"]
         Font: =Font.'Segoe UI'
+        Height: =Button10_7.Height * 5%
         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
@@ -4907,152 +4918,10 @@
         SelectionFill: =RGBA(105, 121, 126, 1)
         SelectMultiple: =false
         Size: =8.64
-        Width: =217.90
-        X: =841.04
-        Y: =303
+        Width: =Button10_7.Width * 20%
+        X: =FormViewer1.X + FormViewer1.Width + 10
+        Y: =FormViewer1.Y
         ZIndex: =63
-
-    Button32_1 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(ChangeUnit.Selected.Value = Blank(), DisplayMode.Disabled, DisplayMode.Edit)
-        Fill: =RGBA(105, 121, 126, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-        OnSelect: |
-            =Patch(
-                'TG14 Task Information',
-                First(
-                    Filter(
-                        'TG14 Task Information',
-                        'Response ID' = varJobSearch
-                    )
-                ),
-                {
-                    Unit: {Value: varChangeUnit},
-                    Title: If(
-                        "2022" in DataCardValue29.Text,
-                        First(
-                            SortByColumns(
-                                Filter(
-                                    '1177 Task Register 2022',
-                                    Unit.Value = varChangeUnit
-                                ),
-                                "Job_x0020_Number",
-                                SortOrder.Descending
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in DataCardValue29.Text,
-                            First(
-                                SortByColumns(
-                                    Filter(
-                                        '1177 Task Register 2023',
-                                        Unit.Value = varChangeUnit
-                                    ),
-                                    "Job_x0020_Number",
-                                    SortOrder.Descending
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in DataCardValue29.Text,
-                                First(
-                                    SortByColumns(
-                                        Filter(
-                                            '1177 Task Register 2024',
-                                            Unit.Value = varChangeUnit
-                                        ),
-                                        "Job_x0020_Number",
-                                        SortOrder.Descending
-                                    )
-                                ).Job + 1
-                            )
-                        )
-                    )
-                }
-            );
-            If(
-                "2022" in DataCardValue29.Text,
-                Patch(
-                    First(
-                        Filter(
-                            '1177 Task Register 2022',
-                            'Response ID' = Text(varJobSearch)
-                        )
-                    ),
-                    {
-                        Unit: {Value: varChangeUnit},
-                        Title: First(
-                            Filter(
-                                'TG14 Task Information',
-                                Status.Value = Text(varJobSearch)
-                            )
-                        ).Title
-                    }
-                ),
-                If(
-                    "2023" in DataCardValue29.Text,
-                    Patch(
-                        First(
-                            Filter(
-                                '1177 Task Register 2023',
-                                'Response ID' = Text(varJobSearch)
-                            )
-                        ),
-                        {
-                            Unit: {Value: varChangeUnit},
-                            Title: First(
-                                Filter(
-                                    'TG14 Task Information',
-                                    'Response ID' = varJobSearch
-                                )
-                            ).Title
-                        }
-                    ),
-                    If(
-                        "2024" in DataCardValue29.Text,
-                        Patch(
-                            First(
-                                Filter(
-                                    '1177 Task Register 2024',
-                                    'Response ID' = Text(varJobSearch)
-                                )
-                            ),
-                            {
-                                Unit: {Value: varChangeUnit},
-                                Title: First(
-                                    Filter(
-                                        'TG14 Task Information',
-                                        'Response ID' = varJobSearch
-                                    )
-                                ).Title
-                            }
-                        )
-                    )
-                )
-            );
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =gblFontSize
-        Text: ="Change Unit"
-        Underline: =true
-        Width: =126.22
-        X: =841.04
-        Y: =352
-        ZIndex: =64
 
     Button32_2 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -5082,8 +4951,8 @@
         Text: ="Change Unit"
         Underline: =true
         Width: =Button10_7.Width * 20%
-        X: =909.46
-        Y: =540
+        X: =ChangeUnit.X
+        Y: =ChangeUnit.Y + ChangeUnit.Height + 5
         ZIndex: =65
 
     ButtonCanvas1 As Button:
@@ -5091,7 +4960,7 @@
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =gblFontSize
-        Height: =36
+        Height: =Button10_7.Height * 5%
         OnSelect: |
             =Set(varLoadSpinner, true);
             //---------------------------------------------------------------------- Assurance hours Jan
@@ -5926,60 +5795,10 @@
                 }
             );
         Text: ="Populate Monthly Returns"
-        Width: =150.13
-        X: =1042.33
-        Y: =163
+        Width: =Button10_7.Width * 20%
+        X: =Button21_1.X
+        Y: =Button21_1.Y + Button21_1.Height + 5
         ZIndex: =67
-
-    Label36 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        Size: =8.64
-        Text: |-
-            =CountRows(
-                Filter(
-                    'TG14 Task Information',
-                    Unit.Value = "Lossiemouth",
-                    Right(
-                        'Task Date',
-                        4
-                    ) = Text(
-                        Today(),
-                        "yyyy",
-                        "en-GB"
-                    ),
-                    Mid(
-                        'Task Date',
-                        4,
-                        2
-                    ) = "02",
-                    Or(
-                        'Project Category'.Value = "Admin",
-                        'Project Category'.Value = "Air Safety",
-                        'Project Category'.Value = "Digital Manipulation",
-                        'Project Category'.Value = "Engineering",
-                        'Project Category'.Value = "ID Photo",
-                        'Project Category'.Value = "Medical Dental",
-                        'Project Category'.Value = "Portrait",
-                        'Project Category'.Value = "Print/Reprint",
-                        'Project Category'.Value = "Scanning",
-                        'Project Category'.Value = "Trials",
-                        'Project Category'.Value = "Other (Specify)"
-                    )
-                )
-            )
-        Width: =99.65
-        X: =1067.57
-        Y: =242
-        ZIndex: =68
 
     Spinner2 As Spinner:
         BasePaletteColor: =
