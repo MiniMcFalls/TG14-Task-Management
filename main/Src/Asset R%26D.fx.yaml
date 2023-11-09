@@ -3071,19 +3071,6 @@
                 Y: =10
                 ZIndex: =12
 
-    ButtonCanvas5 As Button:
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        OnSelect: |-
-            =Set(
-                varLoanNotifyWindow,
-                true
-            )
-        Width: =96
-        X: =0
-        Y: =0
-        ZIndex: =38
-
     Checkbox1_14 As Checkbox:
         BasePaletteColor: =varHeaderFill
         Checked: =varLoanRegisterCheck
@@ -3104,6 +3091,7 @@
         FontSize: =gblFontSize
         Height: =Label7_11.Height
         Label: ="Email Sent"
+        Visible: =varLoanNotifyWindow
         Width: =Label7_11.Width
         X: =Label7_11.X
         Y: =Label7_11.Y + Label7_11.Height + ('Cust Det - Pill 3_9'.Height * 3%)
