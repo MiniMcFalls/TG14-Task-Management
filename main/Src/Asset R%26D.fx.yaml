@@ -172,9 +172,9 @@
             ZIndex: =6
 
         "TextInputCanvas3 As 'Text input'":
-            BasePaletteColor: =
+            BasePaletteColor: =varHeaderFill
             DisplayMode: =DisplayMode.Edit
-            FontSize: =0
+            FontSize: =gblFontSize
             Height: =Label41_15.Height
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
@@ -189,10 +189,10 @@
             ZIndex: =7
 
         DropdownCanvas1 As Dropdown.pcfdataset:
-            BasePaletteColor: =
+            BasePaletteColor: =varHeaderFill
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Status
             DisplayMode: =DisplayMode.Edit
-            FontSize: =0
+            FontSize: =gblFontSize
             Height: =Label41_18.Height
             Items: =If(IsBlank('Asset_R&D_Gallery'.Selected), [""], Choices('Asset Tracker_1'.Status))
             OnChange: =Set(varSubmitChanges, true)
@@ -224,10 +224,10 @@
             ZIndex: =9
 
         DropdownCanvas1_1 As Dropdown.pcfdataset:
-            BasePaletteColor: =
+            BasePaletteColor: =varHeaderFill
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Location
             DisplayMode: =DisplayMode.Edit
-            FontSize: =0
+            FontSize: =gblFontSize
             Height: =Label41_18.Height
             Items: =If(IsBlank('Asset_R&D_Gallery'.Selected), [""], Choices('Asset Tracker_1'.Location))
             OnChange: =Set(varSubmitChanges, true)
@@ -248,20 +248,21 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =Container3.Width * 5%
             PaddingRight: =3.32
             PaddingTop: =3.32
             Size: =gblFontSize
             Text: ="Model"
-            Width: =405.24
+            Width: =Container3.Width
             X: =Container3.Width - Self.Width - ((Container3.Width - Self.Width)/2)
-            Y: =281
+            Y: =DropdownCanvas1_3.Y + DropdownCanvas1_3.Height + (Container3.Height * 1%)
             ZIndex: =11
 
         "TextInputCanvas3_1 As 'Text input'":
-            BasePaletteColor: =
+            BasePaletteColor: =varHeaderFill
             DisplayMode: =DisplayMode.Edit
-            FontSize: =0
-            Height: =32
+            FontSize: =gblFontSize
+            Height: =Container3.Height * 5%
             MaxLength: =-1
             Mode: ='TextInputCanvas.Mode'.SingleLine
             OnChange: =Set(varSubmitChanges, true)
@@ -269,9 +270,9 @@
             Type: ="Text"
             ValidationState: ="None"
             Value: ='Asset_R&D_Gallery'.Selected.Model
-            Width: =405.24
+            Width: =(DropdownCanvas1_4.X + DropdownCanvas1_4.Width) - DropdownCanvas1_2.X
             X: =Container3.Width - Self.Width - ((Container3.Width - Self.Width)/2)
-            Y: =321
+            Y: =Label41_20.Y + Label41_20.Height + (Container3.Height * 1%)
             ZIndex: =12
 
         Label41_21 As label:
@@ -296,10 +297,10 @@
             ZIndex: =13
 
         DropdownCanvas1_2 As Dropdown.pcfdataset:
-            BasePaletteColor: =
+            BasePaletteColor: =varHeaderFill
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.'Asset type'
             DisplayMode: =DisplayMode.Edit
-            FontSize: =0
+            FontSize: =gblFontSize
             Height: =Label41_21.Height
             Items: =If(IsBlank('Asset_R&D_Gallery'.Selected), [""], Choices('Asset Tracker_1'.'Asset type'))
             OnChange: =Set(varSubmitChanges, true)
@@ -331,10 +332,10 @@
             ZIndex: =15
 
         DropdownCanvas1_3 As Dropdown.pcfdataset:
-            BasePaletteColor: =
+            BasePaletteColor: =varHeaderFill
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Color
             DisplayMode: =DisplayMode.Edit
-            FontSize: =0
+            FontSize: =gblFontSize
             Height: =Label41_22.Height
             Items: =If(IsBlank('Asset_R&D_Gallery'.Selected), [""], Choices('Asset Tracker_1'.Color))
             OnChange: =Set(varSubmitChanges, true)
@@ -355,25 +356,26 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =Container3.Height * 5%
             PaddingRight: =3.32
             PaddingTop: =3.32
             Size: =gblFontSize
             Text: ="PAT Date"
-            Width: =201.29
-            X: =42.52
-            Y: =533
+            Width: =BadgeCanvas9_1.Width/2
+            X: =BadgeCanvas9_1.X
+            Y: =BadgeCanvas9_1.Y + BadgeCanvas9_1.Height + (Container3.Height * 1%)
             ZIndex: =17
 
         "DatePickerCanvas2 As 'Date picker'":
-            BasePaletteColor: =
+            BasePaletteColor: =varHeaderFill
             DisplayMode: =DisplayMode.Edit
-            FontSize: =0
-            Height: =32
+            FontSize: =gblFontSize
+            Height: =Container3.Height * 5%
             OnChange: =Set(varSubmitChanges, true)
             ValidationState: ="None"
-            Width: =201.29
-            X: =42.52
-            Y: =573
+            Width: =Label41_23.Width - 5
+            X: =Label41_23.X
+            Y: =Label41_23.Y + Label41_23.Height + (Container3.Height * 1%)
             ZIndex: =18
 
         Label41_24 As label:
@@ -387,28 +389,29 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =Container3.Height * 5%
             PaddingRight: =3.32
             PaddingTop: =3.32
             Size: =gblFontSize
             Text: ="Current Owner"
-            Width: =405.24
+            Width: =TextInputCanvas3_1.Width
             X: =Container3.Width - Self.Width - ((Container3.Width - Self.Width)/2)
-            Y: =368
+            Y: =TextInputCanvas3_1.Y + TextInputCanvas3_1.Height + (Container3.Height * 1%)
             ZIndex: =19
 
         BadgeCanvas9 As Badge:
             AccessibleLabel: =""
-            BasePaletteColor: =
+            BasePaletteColor: =varHeaderFill
             Content: ='Asset_R&D_Gallery'.Selected.'Current owner'.DisplayName
             DisplayMode: =DisplayMode.Edit
-            FontSize: =0
-            Height: =32
+            FontSize: =gblFontSize
+            Height: =Container3.Height * 5%
             OnSelect: =false
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =405.24
+            Width: =(DropdownCanvas1_4.X + DropdownCanvas1_4.Width) - DropdownCanvas1_2.X
             X: =Container3.Width - Self.Width - ((Container3.Width - Self.Width)/2)
-            Y: =408
+            Y: =Label41_24.Y + Label41_24.Height + (Container3.Height * 1%)
             ZIndex: =20
 
         Label41_25 As label:
@@ -422,18 +425,19 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =Container3.Height * 5%
             PaddingRight: =3.32
             PaddingTop: =3.32
             Size: =gblFontSize
             Text: ="Previous Owner"
-            Width: =405.24
+            Width: =BadgeCanvas9.Width
             X: =Container3.Width - Self.Width - ((Container3.Width - Self.Width)/2)
-            Y: =446
+            Y: =BadgeCanvas9.Y + BadgeCanvas9.Height + (Container3.Height *1%)
             ZIndex: =21
 
         BadgeCanvas9_1 As Badge:
             AccessibleLabel: =""
-            BasePaletteColor: =
+            BasePaletteColor: =varHeaderFill
             Content: |-
                 =If(
                     IsBlank('Asset_R&D_Gallery'.Selected.'Previous owner'.DisplayName),
@@ -441,14 +445,14 @@
                     'Asset_R&D_Gallery'.Selected.'Previous owner'.DisplayName
                 )
             DisplayMode: =DisplayMode.Edit
-            FontSize: =0
-            Height: =32
+            FontSize: =gblFontSize
+            Height: =Container3.Height * 5%
             OnSelect: =false
             Shape: ='BadgeCanvas.Shape'.Rounded
             ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-            Width: =405.24
+            Width: =(DropdownCanvas1_4.X + DropdownCanvas1_4.Width) - DropdownCanvas1_2.X
             X: =Container3.Width - Self.Width - ((Container3.Width - Self.Width)/2)
-            Y: =486
+            Y: =Label41_25.Y + Label41_25.Height + (Container3.Height *1%)
             ZIndex: =22
 
         Label41_26 As label:
@@ -462,25 +466,26 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =Label41_23.Height
             PaddingRight: =3.32
             PaddingTop: =3.32
             Size: =gblFontSize
             Text: ="Proposed Return Date"
-            Width: =200.63
-            X: =247.13
-            Y: =533
+            Width: =Label41_23.Width
+            X: =Label41_23.X + Label41_23.Width
+            Y: =Label41_23.Y
             ZIndex: =23
 
         "DatePickerCanvas2_1 As 'Date picker'":
-            BasePaletteColor: =
+            BasePaletteColor: =varHeaderFill
             DisplayMode: =DisplayMode.Edit
-            FontSize: =0
-            Height: =32
+            FontSize: =gblFontSize
+            Height: =Container3.Height * 5%
             OnChange: =Set(varSubmitChanges, true)
             ValidationState: ="None"
-            Width: =201.29
-            X: =247.13
-            Y: =573
+            Width: =Label41_26.Width - 5 
+            X: =Label41_26.X + 5
+            Y: =Label41_26.Y + Label41_26.Height + (Container3.Height * 1%)
             ZIndex: =24
 
         Button36 As button:
@@ -495,7 +500,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =29
+            Height: =Container3.Height * 5%
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -528,11 +533,11 @@
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Size: =9.97
+            Size: =gblFontSize
             Text: ="Submit Changes"
-            Width: =201.29
-            X: =42.52
-            Y: =627
+            Width: =DatePickerCanvas2.Width
+            X: =DatePickerCanvas2.X
+            Y: =DatePickerCanvas2.Y + DatePickerCanvas2.Height + (Container3.Height *1%)
             ZIndex: =25
 
         Button36_1 As button:
@@ -547,7 +552,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =29
+            Height: =Container3.Height * 5%
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -567,11 +572,11 @@
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Size: =9.97
+            Size: =gblFontSize
             Text: =If(CountRows(Search(LoanCard, 'Asset_R&D_Gallery'.Selected.'Serial number', "LC Serial Number")) = 1,"IN CHECKOUT", 'Asset_R&D_Gallery'.Selected.Status.Value = "Loan", "Already on Loan", "Add to Loan")
-            Width: =201.29
-            X: =247.13
-            Y: =627
+            Width: =DatePickerCanvas2_1.Width
+            X: =DatePickerCanvas2_1.X
+            Y: =DatePickerCanvas2_1.Y + DatePickerCanvas2_1.Height + (Container3.Height * 1%)
             ZIndex: =26
 
         Label41_27 As label:
@@ -596,10 +601,10 @@
             ZIndex: =27
 
         DropdownCanvas1_4 As Dropdown.pcfdataset:
-            BasePaletteColor: =
+            BasePaletteColor: =varHeaderFill
             DefaultSelectedItems: ='Asset_R&D_Gallery'.Selected.Manufacturer
             DisplayMode: =DisplayMode.Edit
-            FontSize: =0
+            FontSize: =gblFontSize
             Height: =Label41_27.Height
             Items: =If(IsBlank('Asset_R&D_Gallery'.Selected), [""], Choices('Asset Tracker_1'.Manufacturer))
             OnChange: =Set(varSubmitChanges, true)
@@ -621,6 +626,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =Container3.Height * 5%
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -630,11 +636,11 @@
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Size: =9.97
+            Size: =gblFontSize
             Text: ="View Loan Card"
-            Width: =405.24
-            X: =Container3.Width - Self.Width - ((Container3.Width - Self.Width)/2)
-            Y: =679
+            Width: =(DropdownCanvas1_4.X + DropdownCanvas1_4.Width) - DropdownCanvas1_2.X
+            X: =Button36.X
+            Y: =Button36.Y + Button36.Height + (Container3.Height * 1%)
             ZIndex: =29
 
         Button37_1 As button:
@@ -649,7 +655,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =23
+            Height: =Button37.Height/2
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -659,11 +665,11 @@
             PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Size: =9.97
+            Size: =gblFontSize
             Text: ="Clear Loan Card"
-            Width: =405.24
-            X: =43.18
-            Y: =727
+            Width: =Button37.Width
+            X: =Button37.X
+            Y: =Button37.Y + Button37.Height + (Container3.Height * 1%)
             ZIndex: =30
 
         Group7_2 As group:
@@ -760,6 +766,7 @@
             BorderColor: =RGBA(166, 166, 166, 1)
             Default: ={}
             DelayItemLoading: =true
+            Fill: =RGBA(0,0,0,0)
             Height: =Container4.Height * 68.7%
             Items: |-
                 =SortByColumns(
@@ -772,7 +779,7 @@
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
-            LoadingSpinnerColor: =RGBA(0,0,0,1)
+            LoadingSpinnerColor: =varHeaderFill
             OnSelect: =
             TemplatePadding: =4
             TemplateSize: =55
@@ -1441,11 +1448,11 @@
             DisplayMode: =DisplayMode.Disabled
             Fill: =RGBA(179, 179, 179, 0.6)
             FocusedBorderThickness: =4
-            Height: =768
+            Height: =App.Height
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =varViewLoanCard
-            Width: =1229.00
+            Width: =App.Width
             X: =0.00
             ZIndex: =6
 
@@ -1461,7 +1468,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =750
+            Height: =App.Height * 90%
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -1477,23 +1484,23 @@
             Size: =9.97
             Text: =""
             Visible: =varViewLoanCard
-            Width: =1143.97
-            X: =85.03
-            Y: =18
+            Width: =App.Width * 95%
+            X: =(App.Width/2) - (Self.Width/2)
+            Y: =(App.Height/2) - (Self.Height/2)
             ZIndex: =7
 
         Container1_3 As groupContainer.manualLayoutContainer:
-            Height: =701
+            Height: =649
             PaddingRight: =0.00
             PaddingTop: =0.00
             Visible: =varViewLoanCard
-            Width: =1143.97
-            X: =85.03
-            Y: =67
+            Width: =341
+            X: =Button27_3.X
+            Y: =80
             ZIndex: =8
 
             "TextInputCanvas4_12 As 'Text input'":
-                BasePaletteColor: =
+                BasePaletteColor: =varHeaderFill
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
                 Height: =31
@@ -1502,37 +1509,37 @@
                 Type: ="Text"
                 ValidationState: ="None"
                 Width: =174.71
-                X: =81.71
-                Y: =589
+                X: =114
+                Y: =503
                 ZIndex: =1
 
             "TextInputCanvas4_2 As 'Text input'":
-                BasePaletteColor: =
+                BasePaletteColor: =varHeaderFill
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
-                Height: =31
+                Height: =Label41_44.Height
                 MaxLength: =-1
                 Placeholder: =""
                 Type: ="Text"
                 ValidationState: ="None"
-                Width: =174.71
-                X: =81.71
-                Y: =355
+                Width: =BadgeCanvas5_8.Width * 74%
+                X: =Label41_44.X+Label41_44.Width
+                Y: =Label41_44.Y
                 ZIndex: =2
 
             BadgeCanvas5_7 As Badge:
                 AccessibleLabel: =""
-                BasePaletteColor: =
+                BasePaletteColor: =varHeaderFill
                 Content: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
-                Height: =85
+                Height: =Container1_3.Height * 10%
                 OnSelect: =false
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-                Width: =236.50
-                X: =19.93
-                Y: =25
+                Width: =Container1_3.Width * 90%
+                X: =(Container1_3.Width/2) - (Self.Width/2)
+                Y: =Container1_3.Height * 2%
                 ZIndex: =3
 
             Label41_42 As label:
@@ -1546,13 +1553,15 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
+                Height: =Container1_3.Height *3%
                 PaddingRight: =3.32
                 PaddingTop: =3.32
                 Size: =7.31
                 Text: ="Date"
-                Width: =65.77
-                X: =70.42
-                Y: =123
+                VerticalAlign: =VerticalAlign.Bottom
+                Width: =Container1_3.Width * 20%
+                X: =Container1_3.Width/2 - Self.Width
+                Y: =Container1_3.Height * 15%
                 ZIndex: =4
 
             Icon17_9 As icon.LogJournal:
@@ -1563,7 +1572,7 @@
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 DisplayMode: =DisplayMode.View
                 FocusedBorderThickness: =4
-                Height: =42
+                Height: =BadgeCanvas5_7.Height/2
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
@@ -1574,38 +1583,39 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =45.17
-                X: =115.59
-                Y: =37
+                Width: =BadgeCanvas5_7.Width
+                X: =(Container1_3.Width/2) - (Self.Width/2)
+                Y: =BadgeCanvas5_7.Y + (BadgeCanvas5_7.Height * 5%)
                 ZIndex: =5
 
             BadgeCanvas2_11 As Badge:
                 AccessibleLabel: =""
                 Appearance: ='BadgeCanvas.Appearance'.Tint
-                BasePaletteColor: =
+                BasePaletteColor: =varHeaderFill
                 Content: =Text(Today(), "dd/mm/yyy")
                 DisplayMode: =DisplayMode.Edit
-                FontSize: =0
-                Height: =32
+                FontSize: =gblFontSize
+                Height: =Container1_3.Height * 4%
                 OnSelect: =false
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-                Width: =65.77
-                X: =70.42
-                Y: =163
+                Width: =Label41_42.Width
+                X: =Label41_42.X
+                Y: =Label41_42.Y + Label41_42.Height + (Container1_3.Height * 1%)
                 ZIndex: =6
 
             TextCanvas1_7 As Text:
+                Align: ='TextCanvas.Align'.Center
                 AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
-                Height: =32
-                Size: =9.30
+                Height: =BadgeCanvas5_7.Height - Icon17_9.Height - (BadgeCanvas5_7.Height * 5%)
+                Size: =gblFontSize
                 Text: ="Core Loan Info"
-                VerticalAlign: ="Middle"
+                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                 Weight: ='TextCanvas.Weight'.Bold
-                Width: =75.07
-                X: =100.97
-                Y: =79
+                Width: =BadgeCanvas5_7.Width
+                X: =Icon17_9.X
+                Y: =Icon17_9.Y + Icon17_9.Height
                 ZIndex: =7
 
             Rectangle31_10 As rectangle:
@@ -1618,24 +1628,24 @@
                 Height: =1
                 HoverFill: =RGBA(105, 121, 126, 1)
                 PressedFill: =RGBA(105, 121, 126, 1)
-                Width: =166.08
-                X: =53.15
-                Y: =119
+                Width: =Container1_3.Width * 60%
+                X: =(Container1_3.Width/2) - (Self.Width/2)
+                Y: =Container1_3.Height * 13%
                 ZIndex: =8
 
             BadgeCanvas5_8 As Badge:
                 AccessibleLabel: =""
-                BasePaletteColor: =
+                BasePaletteColor: =varHeaderFill
                 Content: =""
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
-                Height: =85
+                Height: =Container1_3.Height * 10%
                 OnSelect: =false
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-                Width: =236.50
-                X: =19.93
-                Y: =227
+                Width: =Container1_3.Width *90%
+                X: =(Container1_3.Width/2) - (Self.Width/2)
+                Y: =Container1_3.Height * 26%
                 ZIndex: =9
 
             Icon17_10 As icon.LogJournal:
@@ -1646,7 +1656,7 @@
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 DisplayMode: =DisplayMode.View
                 FocusedBorderThickness: =4
-                Height: =42
+                Height: =BadgeCanvas5_8.Height/2
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 HoverFill: =RGBA(0, 0, 0, 0)
@@ -1657,22 +1667,23 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =45.17
-                X: =113.60
-                Y: =239
+                Width: =BadgeCanvas5_8.Width
+                X: =(Container1_3.Width/2) - (Self.Width/2)
+                Y: =BadgeCanvas5_8.Y + (BadgeCanvas5_8.Height * 5%)
                 ZIndex: =10
 
             TextCanvas1_8 As Text:
+                Align: ='TextCanvas.Align'.Center
                 AutoHeight: =false
                 DisplayMode: =DisplayMode.Edit
-                Height: =32
+                Height: =BadgeCanvas5_8.Height - Icon17_10.Height - (BadgeCanvas5_8.Height * 5%)
                 Size: =9.30
                 Text: ="Customer Details"
                 VerticalAlign: ="Middle"
                 Weight: ='TextCanvas.Weight'.Bold
-                Width: =86.36
-                X: =93.00
-                Y: =281
+                Width: =BadgeCanvas5_8.Width
+                X: =BadgeCanvas5_8.X
+                Y: =Icon17_10.Y + Icon17_10.Height
                 ZIndex: =11
 
             Rectangle31_11 As rectangle:
@@ -1685,9 +1696,9 @@
                 Height: =1
                 HoverFill: =RGBA(105, 121, 126, 1)
                 PressedFill: =RGBA(105, 121, 126, 1)
-                Width: =166.08
-                X: =53.15
-                Y: =321
+                Width: =Container1_3.Width * 60%
+                X: =(Container1_3.Width/2) - (Self.Width/2)
+                Y: =Container1_3.Height * 37%
                 ZIndex: =12
 
             Label41_44 As label:
@@ -1701,13 +1712,14 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
+                Height: =Container1_3.Height * 5%
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =7.31
+                Size: =gblFontSize
                 Text: ="Name"
-                Width: =65.77
-                X: =15.94
-                Y: =350
+                Width: =BadgeCanvas5_8.Width * 26%
+                X: =BadgeCanvas5_8.X
+                Y: =BadgeCanvas5_8.Y + (Container1_3.Height * 15%)
                 ZIndex: =13
 
             Label41_45 As label:
@@ -1723,11 +1735,11 @@
                 FontWeight: =FontWeight.Semibold
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =7.31
+                Size: =gblFontSize
                 Text: ="Section/Role"
-                Width: =65.77
-                X: =15.94
-                Y: =385
+                Width: =BadgeCanvas5_8.Width * 26%
+                X: =Label41_44.X
+                Y: =Label41_44.Y + Label41_44.Height
                 ZIndex: =14
 
             Label41_46 As label:
@@ -1743,11 +1755,11 @@
                 FontWeight: =FontWeight.Semibold
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =7.31
+                Size: =gblFontSize
                 Text: ="Email"
                 Width: =65.77
-                X: =15.94
-                Y: =425
+                X: =48
+                Y: =339
                 ZIndex: =15
 
             Label41_47 As label:
@@ -1763,11 +1775,11 @@
                 FontWeight: =FontWeight.Semibold
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =7.31
+                Size: =gblFontSize
                 Text: ="Contact Tel"
                 Width: =81.71
-                X: =0.00
-                Y: =465
+                X: =33
+                Y: =379
                 ZIndex: =16
 
             Label41_49 As label:
@@ -1783,11 +1795,11 @@
                 FontWeight: =FontWeight.Semibold
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =7.31
+                Size: =gblFontSize
                 Text: ="Alt Contact"
                 Width: =81.71
-                X: =0.00
-                Y: =584
+                X: =33
+                Y: =498
                 ZIndex: =17
 
             Rectangle31_12 As rectangle:
@@ -1801,8 +1813,8 @@
                 HoverFill: =RGBA(105, 121, 126, 1)
                 PressedFill: =RGBA(105, 121, 126, 1)
                 Width: =166.08
-                X: =53.15
-                Y: =559
+                X: =86
+                Y: =473
                 ZIndex: =19
 
             Button14_13 As button:
@@ -1940,49 +1952,49 @@
                 Size: =9.97
                 Text: ="Submit Loan"
                 Width: =236.50
-                X: =19.93
-                Y: =640
+                X: =52
+                Y: =554
                 ZIndex: =20
 
             Label41_43 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
-                BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
+                Height: =Container1_3.Height * 3%
                 PaddingRight: =3.32
                 PaddingTop: =3.32
                 Size: =7.31
                 Text: ="Time"
-                Width: =65.77
-                X: =136.19
-                Y: =123
+                Width: =Container1_3.Width * 20%
+                X: =Container1_3.Width/2
+                Y: =Container1_3.Height * 15%
                 ZIndex: =21
 
             BadgeCanvas2_12 As Badge:
                 AccessibleLabel: =""
                 Appearance: ='BadgeCanvas.Appearance'.Tint
-                BasePaletteColor: =
+                BasePaletteColor: =varHeaderFill
                 Content: |-
                     =Text(Now(), "hh:mm")
                 DisplayMode: =DisplayMode.Edit
-                FontSize: =0
-                Height: =32
+                FontSize: =gblFontSize
+                Height: =Container1_3.Height * 4%
                 OnSelect: =false
                 Shape: ='BadgeCanvas.Shape'.Rounded
                 ThemeColor: ='BadgeCanvas.ThemeColor'.Informative
-                Width: =65.77
-                X: =136.19
-                Y: =163
+                Width: =Label41_43.Width
+                X: =Label41_43.X
+                Y: =Label41_43.Y + Label41_43.Height + (Container1_3.Height * 1%)
                 ZIndex: =22
 
             "TextInputCanvas4_10 As 'Text input'":
-                BasePaletteColor: =
+                BasePaletteColor: =varHeaderFill
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
                 Height: =31
@@ -1991,12 +2003,12 @@
                 Type: ="Text"
                 ValidationState: ="None"
                 Width: =174.71
-                X: =81.71
-                Y: =390
+                X: =114
+                Y: =304
                 ZIndex: =23
 
             "TextInputCanvas4_11 As 'Text input'":
-                BasePaletteColor: =
+                BasePaletteColor: =varHeaderFill
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
                 Height: =31
@@ -2005,8 +2017,8 @@
                 Type: ="Text"
                 ValidationState: ="None"
                 Width: =174.71
-                X: =81.71
-                Y: =470
+                X: =114
+                Y: =384
                 ZIndex: =25
 
             "'Customer Select_1' As combobox":
@@ -2044,8 +2056,8 @@
                 Template: =ListItemTemplate.Person
                 Tooltip: =Blank()
                 Width: =174.71
-                X: =81.71
-                Y: =429
+                X: =114
+                Y: =343
                 ZIndex: =26
 
             Label41_48 As label:
@@ -2061,22 +2073,22 @@
                 FontWeight: =FontWeight.Semibold
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =7.31
+                Size: =gblFontSize
                 Text: ="Return Date"
                 Width: =81.71
-                X: =0.00
-                Y: =510
+                X: =33
+                Y: =424
                 ZIndex: =27
 
             "DatePickerCanvas3_1 As 'Date picker'":
-                BasePaletteColor: =
+                BasePaletteColor: =varHeaderFill
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =0
                 Height: =32
                 ValidationState: ="None"
                 Width: =174.71
-                X: =81.71
-                Y: =514
+                X: =114
+                Y: =428
                 ZIndex: =28
 
         Button33_3 As button:
@@ -2091,7 +2103,7 @@
             FocusedBorderColor: =
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =768
+            Height: =Button27_3.Height * 6%
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -2104,12 +2116,12 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =25
             RadiusTopRight: =25
-            Size: =9.97
+            Size: =gblFontSize
             Text: ="To Loan"
             Visible: =varViewLoanCard
-            Width: =1229.00
-            X: =85.03
-            Y: =90
+            Width: =Button27_3.Width
+            X: =Button27_3.X
+            Y: =Button27_3.Y
             ZIndex: =9
 
         Icon20_3 As icon.CancelBadge:
@@ -2119,7 +2131,7 @@
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =768
+            Height: =43
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -2143,9 +2155,9 @@
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =varViewLoanCard
-            Width: =1229.00
-            X: =95.00
-            Y: =96
+            Width: =34
+            X: =48
+            Y: =37
             ZIndex: =10
 
         Rectangle30_3 As rectangle:
@@ -2154,23 +2166,23 @@
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(105, 121, 126, 1)
             FocusedBorderThickness: =4
-            Height: =701
+            Height: =Container1_3.Height
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =varViewLoanCard
-            Width: =872.26
-            X: =356.74
-            Y: =67
+            Width: =1
+            X: =Container1_3.X + Container1_3.Width
+            Y: =Container1_3.Y
             ZIndex: =11
 
         Container2_3 As groupContainer.manualLayoutContainer:
-            Height: =701
+            Height: =571
             PaddingRight: =0.00
             PaddingTop: =0.00
             Visible: =varViewLoanCard
-            Width: =870.93
-            X: =358.07
-            Y: =67
+            Width: =819
+            X: =372
+            Y: =141
             ZIndex: =12
 
             Label46_15 As label:
@@ -2270,7 +2282,7 @@
 
             "Gallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 BorderColor: =RGBA(166, 166, 166, 1)
-                Height: =661
+                Height: =531
                 Items: =LoanCard
                 Layout: =Layout.Vertical
                 TemplatePadding: =0
@@ -2419,11 +2431,11 @@
             DisplayMode: =DisplayMode.Disabled
             Fill: =RGBA(230, 230, 230, 1)
             FocusedBorderThickness: =4
-            Height: =67
+            Height: =37
             HoverFill: =RGBA(105, 121, 126, 1)
             PressedFill: =RGBA(105, 121, 126, 1)
             Visible: =If(varLoanNotifyWindow, true, false)
-            Width: =119
+            Width: =29
             X: =0.00
             ZIndex: =26
 
@@ -2438,7 +2450,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =67
+            Height: =37
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -2454,9 +2466,9 @@
             Size: =9.97
             Text: =""
             Visible: =If(varLoanNotifyWindow, true, false)
-            Width: =119
-            X: =18
-            Y: =19
+            Width: =29
+            X: =4
+            Y: =10
             ZIndex: =27
 
         "'Cust Det - Pill 3_9' As button":
@@ -2469,7 +2481,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =67
+            Height: =37
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -2485,9 +2497,9 @@
             Size: =9.97
             Text: =""
             Visible: =If(varLoanNotifyWindow, true, false)
-            Width: =119
-            X: =18
-            Y: =20
+            Width: =29
+            X: =4
+            Y: =11
             ZIndex: =28
 
         Image1_5 As image:
@@ -2497,7 +2509,7 @@
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =67
+            Height: =37
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
             Image: ='Pulse-1.4s-284px'
@@ -2506,9 +2518,9 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(varLoanNotifyWindow, true, false)
-            Width: =119
-            X: =56
-            Y: =30
+            Width: =29
+            X: =14
+            Y: =16
             ZIndex: =29
 
         Label6_5 As label:
@@ -2522,15 +2534,15 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =67
+            Height: =37
             PaddingRight: =3.32
             PaddingTop: =3.32
             Size: =11.96
             Text: ="Submiting, Please Wait..."
             Visible: =If(varLoanNotifyWindow, true, false)
-            Width: =119
-            X: =44
-            Y: =24
+            Width: =29
+            X: =11
+            Y: =14
             ZIndex: =30
 
         Checkbox1_14 As checkbox:
@@ -2546,7 +2558,7 @@
             DisplayMode: =DisplayMode.Disabled
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =67
+            Height: =37
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -2558,9 +2570,9 @@
             Size: =8.64
             Text: ="Loan Register"
             Visible: =If(varLoanNotifyWindow, true, false)
-            Width: =119
-            X: =42
-            Y: =43
+            Width: =29
+            X: =10
+            Y: =24
             ZIndex: =31
 
         Label7_10 As label:
@@ -2573,15 +2585,15 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =67
+            Height: =37
             PaddingRight: =3.32
             PaddingTop: =3.32
             Size: =11.96
             Text: ="Loan Submission"
             Visible: =If(varLoanNotifyWindow, true, false)
-            Width: =119
-            X: =42
-            Y: =40
+            Width: =29
+            X: =10
+            Y: =22
             ZIndex: =32
 
         Icon12_11 As icon.CheckBadge:
@@ -2591,7 +2603,7 @@
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =67
+            Height: =37
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -2602,9 +2614,9 @@
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(Checkbox1_14.Value && varLoanNotifyWindow = true , true, false)
-            Width: =119
-            X: =39
-            Y: =40
+            Width: =29
+            X: =9
+            Y: =22
             ZIndex: =33
 
         Checkbox1_16 As checkbox:
@@ -2620,7 +2632,7 @@
             DisplayMode: =DisplayMode.Disabled
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =67
+            Height: =37
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -2632,9 +2644,9 @@
             Size: =8.64
             Text: ="Email Sent"
             Visible: =If(varLoanNotifyWindow, true, false)
-            Width: =119
-            X: =63
-            Y: =43
+            Width: =29
+            X: =15
+            Y: =24
             ZIndex: =34
 
         Label7_11 As label:
@@ -2647,15 +2659,15 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =67
+            Height: =37
             PaddingRight: =3.32
             PaddingTop: =3.32
             Size: =11.96
             Text: ="Customer Notification"
             Visible: =If(varLoanNotifyWindow, true, false)
-            Width: =119
-            X: =63
-            Y: =40
+            Width: =29
+            X: =15
+            Y: =22
             ZIndex: =35
 
         Icon12_10 As icon.CheckBadge:
@@ -2665,7 +2677,7 @@
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =67
+            Height: =37
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -2676,13 +2688,13 @@
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(Checkbox1_16.Value&& varLoanNotifyWindow = true, true, false)
-            Width: =119
-            X: =61
-            Y: =40
+            Width: =29
+            X: =15
+            Y: =22
             ZIndex: =36
 
         "'Loan Notify Email' As htmlViewer":
-            Height: =67
+            Height: =37
             HtmlText: |-
                 ="<table border=""0"" cellspacing="""" cellpadding=""0"" align=""center"">
                 <tbody>
@@ -2813,8 +2825,8 @@
             PaddingTop: =3.32
             Size: =7.31
             Visible: =false
-            Width: =46
-            X: =73
+            Width: =11
+            X: =18
             ZIndex: =37
 
     "'Existing Loans Popup' As group":
@@ -4216,7 +4228,7 @@
                 ZIndex: =7
 
         "'Loan Notify Return Email' As htmlViewer":
-            Height: =448
+            Height: =43
             HtmlText: |-
                 ="<table border=""0"" cellspacing="""" cellpadding=""0"" align=""center"">
                 <tbody>
@@ -4345,8 +4357,6 @@
             PaddingTop: =3.32
             Size: =7.31
             Visible: =false
-            Width: =229
-            X: =1000
-            Y: =320
+            Width: =66
             ZIndex: =25
 
