@@ -2,86 +2,86 @@
     Fill: =varBackgroundFill
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
 
-    iconCircle3_5 As circle.Circle:
+    iconCircle3_16 As circle.Circle:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         DisabledFill: =RGBA(105, 121, 126, 1)
-        Fill: =RGBA(220, 153, 153, 1)
-        Height: =104.30
+        Fill: =ColorFade(iconCircle3_19.Fill, 75%)
+        Height: =App.Width * 13%
         HoverFill: =RGBA(105, 121, 126, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =104.30
-        X: =562.02
-        Y: =262
-        ZIndex: =1
+        Width: =App.Width * 13%
+        X: =(App.Width/2) - (Self.Width/2)
+        Y: =iconCircle3_17.Y - (App.Width*0.5%)
+        ZIndex: =6
 
-    iconCircle3_6 As circle.Circle:
+    iconCircle3_17 As circle.Circle:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         DisabledFill: =RGBA(105, 121, 126, 1)
-        Fill: =RGBA(203, 102, 102, 1)
-        Height: =95.00
+        Fill: =ColorFade(iconCircle3_19.Fill, 50%)
+        Height: =App.Width * 12%
         HoverFill: =RGBA(105, 121, 126, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =95.00
-        X: =566.67
-        Y: =269
-        ZIndex: =2
+        Width: =App.Width * 12%
+        X: =(App.Width/2) - (Self.Width/2)
+        Y: =iconCircle3_18.Y - (App.Width*0.5%)
+        ZIndex: =7
 
-    iconCircle3_7 As circle.Circle:
+    iconCircle3_18 As circle.Circle:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         DisabledFill: =RGBA(105, 121, 126, 1)
-        Fill: =RGBA(151, 0, 0, 1)
-        Height: =79.06
+        Fill: =ColorFade(iconCircle3_19.Fill, 25%)
+        Height: =App.Width * 11%
         HoverFill: =RGBA(105, 121, 126, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =79.06
-        X: =574.64
-        Y: =281
-        ZIndex: =3
+        Width: =App.Width * 11%
+        X: =(App.Width/2) - (Self.Width/2)
+        Y: =iconCircle3_19.Y - (App.Width*0.5%)
+        ZIndex: =8
 
-    iconCircle3_4 As circle.Circle:
+    iconCircle3_19 As circle.Circle:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         DisabledFill: =RGBA(105, 121, 126, 1)
-        Fill: =RGBA(118, 0, 0, 1)
-        Height: =66.43
+        Fill: =RGBA(168, 0, 0, 1)
+        Height: =App.Width * 10%
         HoverFill: =RGBA(105, 121, 126, 1)
         PressedFill: =RGBA(105, 121, 126, 1)
-        Width: =66.43
-        X: =0.00
-        Y: =(Parent.Height/2 - Self.Height/2) * .7
-        ZIndex: =4
+        Width: =App.Width * 10%
+        X: =(App.Width/2) - (Self.Width/2)
+        Y: =(App.Height/2) - (App.Height *25%)
+        ZIndex: =9
 
-    iconCheck3_1 As icon.Check:
+    iconCheck3_4 As icon.Check:
         BorderColor: =RGBA(0, 0, 0, 0)
         Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(220, 220, 220, 1)
-        Height: =iconCircle3_4.Height
-        Icon: =Icon.Lock
+        Height: =App.Width * 10%
+        Icon: =Icon.Blocked
         PaddingBottom: =Self.PaddingTop
         PaddingLeft: =Self.PaddingTop
         PaddingRight: =15.94
         PaddingTop: =15.94
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =66.43
-        X: =0.00
-        Y: =(Parent.Height/2 - Self.Height/2) * .7
-        ZIndex: =5
+        Width: =App.Width * 10%
+        X: =(App.Width/2) - (Self.Width/2)
+        Y: =(App.Height/2) - (App.Height *25%)
+        ZIndex: =10
 
-    LblSuccessMsg3_1 As label:
+    LblSuccessMsg3_4 As label:
         Align: =Align.Center
         AutoHeight: =true
         Color: =RGBA(51, 51, 51, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
-        Height: =iconCircle3_4.Height
+        Height: =iconCircle3_19.Height
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =13.29
@@ -93,10 +93,10 @@
             Please refresh this app using the button in the top right corner until this message no longer appears.
             
             The Current Version is v" & First(Filter('TG14 App Versions', Title = "Digital Diary")).'Vers Num'
-        Width: =99.65
-        X: =153.46
-        Y: =iconCheck3_1.Y + iconCheck3_1.Height + 100
-        ZIndex: =6
+        Width: =App.Width * 50%
+        X: =(App.Width/2) - (Self.Width/2)
+        Y: =iconCircle3_16.Y + iconCircle3_16.Height + (App.Height * 5%)
+        ZIndex: =11
 
     Label12_1 As label:
         BorderColor: =RGBA(168, 0, 0, 1)
@@ -106,12 +106,12 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =930
+        Height: =App.Height
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: =""
-        Width: =1229.00
+        Width: =App.Width
         X: =0.00
-        ZIndex: =7
+        ZIndex: =12
 
