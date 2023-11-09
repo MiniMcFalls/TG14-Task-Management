@@ -1494,7 +1494,7 @@
             PaddingRight: =0.00
             PaddingTop: =0.00
             Visible: =varViewLoanCard
-            Width: =341
+            Width: =Button27_3.Width * 29%
             X: =Button27_3.X
             Y: =80
             ZIndex: =8
@@ -1502,28 +1502,28 @@
             "TextInputCanvas4_12 As 'Text input'":
                 BasePaletteColor: =varHeaderFill
                 DisplayMode: =DisplayMode.Edit
-                FontSize: =0
-                Height: =31
+                FontSize: =gblFontSize
+                Height: =Container1_3.Height * 5%
                 MaxLength: =-1
                 Placeholder: =""
                 Type: ="Text"
-                ValidationState: ="None"
-                Width: =174.71
-                X: =114
-                Y: =503
+                ValidationState: =If(IsBlank(Self.Value) Or Self.Value = Blank(), "Error", "None")
+                Width: =BadgeCanvas5_8.Width * 74%
+                X: =Label41_44.X+Label41_44.Width  
+                Y: =Label41_49.Y
                 ZIndex: =1
 
             "TextInputCanvas4_2 As 'Text input'":
                 BasePaletteColor: =varHeaderFill
                 DisplayMode: =DisplayMode.Edit
-                FontSize: =0
+                FontSize: =gblFontSize
                 Height: =Label41_44.Height
                 MaxLength: =-1
                 Placeholder: =""
                 Type: ="Text"
-                ValidationState: ="None"
+                ValidationState: =If(IsBlank(Self.Value) Or Self.Value = Blank(), "Error", "None")
                 Width: =BadgeCanvas5_8.Width * 74%
-                X: =Label41_44.X+Label41_44.Width
+                X: =Label41_44.X+Label41_44.Width  
                 Y: =Label41_44.Y
                 ZIndex: =2
 
@@ -1733,13 +1733,14 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
+                Height: =Container1_3.Height * 5%
                 PaddingRight: =3.32
                 PaddingTop: =3.32
                 Size: =gblFontSize
                 Text: ="Section/Role"
                 Width: =BadgeCanvas5_8.Width * 26%
-                X: =Label41_44.X
-                Y: =Label41_44.Y + Label41_44.Height
+                X: =BadgeCanvas5_8.X
+                Y: =Label41_44.Y + Label41_44.Height + (Container1_3.Height * 1%)
                 ZIndex: =14
 
             Label41_46 As label:
@@ -1753,13 +1754,14 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
+                Height: =Container1_3.Height * 5%
                 PaddingRight: =3.32
                 PaddingTop: =3.32
                 Size: =gblFontSize
                 Text: ="Email"
-                Width: =65.77
-                X: =48
-                Y: =339
+                Width: =BadgeCanvas5_8.Width * 26%
+                X: =BadgeCanvas5_8.X
+                Y: =Label41_45.Y + Label41_45.Height + (Container1_3.Height * 1%)
                 ZIndex: =15
 
             Label41_47 As label:
@@ -1773,13 +1775,14 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
+                Height: =Container1_3.Height * 5%
                 PaddingRight: =3.32
                 PaddingTop: =3.32
                 Size: =gblFontSize
                 Text: ="Contact Tel"
-                Width: =81.71
-                X: =33
-                Y: =379
+                Width: =BadgeCanvas5_8.Width * 26%
+                X: =BadgeCanvas5_8.X
+                Y: =Label41_46.Y + Label41_46.Height + (Container1_3.Height * 1%)
                 ZIndex: =16
 
             Label41_49 As label:
@@ -1793,13 +1796,14 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
+                Height: =Container1_3.Height * 5%
                 PaddingRight: =3.32
                 PaddingTop: =3.32
                 Size: =gblFontSize
                 Text: ="Alt Contact"
-                Width: =81.71
-                X: =33
-                Y: =498
+                Width: =BadgeCanvas5_8.Width * 26%
+                X: =BadgeCanvas5_8.X
+                Y: =Rectangle31_12.Y + (Container1_3.Height * 4%)
                 ZIndex: =17
 
             Rectangle31_12 As rectangle:
@@ -1812,9 +1816,9 @@
                 Height: =1
                 HoverFill: =RGBA(105, 121, 126, 1)
                 PressedFill: =RGBA(105, 121, 126, 1)
-                Width: =166.08
-                X: =86
-                Y: =473
+                Width: =Container1_3.Width * 60%
+                X: =(Container1_3.Width/2) - (Self.Width/2)
+                Y: =DatePickerCanvas3_1.Y + DatePickerCanvas3_1.Height + (Container1_3.Height * 4%)
                 ZIndex: =19
 
             Button14_13 As button:
@@ -1827,7 +1831,7 @@
                 FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                Height: =43
+                Height: =Container1_3.Height * 5%
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =ColorFade(Self.Fill, -10%)
@@ -1951,9 +1955,9 @@
                 RadiusTopRight: =15
                 Size: =9.97
                 Text: ="Submit Loan"
-                Width: =236.50
-                X: =52
-                Y: =554
+                Width: =Container1_3.Width * 90%
+                X: =(Container1_3.Width/2) - (Self.Width/2)
+                Y: =Label41_49.Y + Label41_49.Height + (Container1_3.Height * 5%)
                 ZIndex: =20
 
             Label41_43 As label:
@@ -1996,69 +2000,30 @@
             "TextInputCanvas4_10 As 'Text input'":
                 BasePaletteColor: =varHeaderFill
                 DisplayMode: =DisplayMode.Edit
-                FontSize: =0
-                Height: =31
+                FontSize: =gblFontSize
+                Height: =Container1_3.Height * 5%
                 MaxLength: =-1
                 Placeholder: =""
                 Type: ="Text"
-                ValidationState: ="None"
-                Width: =174.71
-                X: =114
-                Y: =304
+                ValidationState: =If(IsBlank(Self.Value) Or Self.Value = Blank(), "Error", "None")
+                Width: =BadgeCanvas5_8.Width * 74%
+                X: =Label41_44.X+Label41_44.Width  
+                Y: =Label41_44.Y + Label41_44.Height + (Container1_3.Height * 1%)
                 ZIndex: =23
 
             "TextInputCanvas4_11 As 'Text input'":
                 BasePaletteColor: =varHeaderFill
                 DisplayMode: =DisplayMode.Edit
-                FontSize: =0
-                Height: =31
+                FontSize: =gblFontSize
+                Height: =Container1_3.Height * 5%
                 MaxLength: =-1
                 Placeholder: =""
                 Type: ="Text"
-                ValidationState: ="None"
-                Width: =174.71
-                X: =114
-                Y: =384
+                ValidationState: =If(IsBlank(Self.Value) Or Self.Value = Blank(), "Error", "None")
+                Width: =BadgeCanvas5_8.Width * 74%
+                X: =Label41_44.X+Label41_44.Width  
+                Y: =Label41_46.Y + Label41_46.Height + (Container1_3.Height * 1%)
                 ZIndex: =25
-
-            "'Customer Select_1' As combobox":
-                BorderColor: =If(IsBlank(Self.SelectedItems), Color.Red, RGBA(166, 166, 166, 1))
-                ChevronBackground: =RGBA(255, 255, 255, 1)
-                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-                ChevronFill: =RGBA(33, 33, 33, 1)
-                ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-                ChevronHoverFill: =RGBA(33, 33, 33, 1)
-                Color: =RGBA(51, 51, 51, 1)
-                Default: =Blank()
-                DefaultSelectedItems: =Blank()
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayFields: =["DisplayName","Email","Picture"]
-                Font: =Font.'Segoe UI'
-                Height: =31
-                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                HoverColor: =RGBA(51, 51, 51, 1)
-                HoverFill: =RGBA(212, 212, 212, 1)
-                Items: =Choices([@'TG14 Task Information'].'O365 Data')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PaddingRight: =3.32
-                PaddingTop: =3.32
-                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(105, 121, 126, 1)
-                SearchFields: =["DisplayName"]
-                SearchItems: =Choices('TG14 Task Information'.'O365 Data','Customer Select_1'.SearchText)
-                SelectionFill: =RGBA(105, 121, 126, 1)
-                SelectMultiple: =false
-                Size: =6.64
-                Template: =ListItemTemplate.Person
-                Tooltip: =Blank()
-                Width: =174.71
-                X: =114
-                Y: =343
-                ZIndex: =26
 
             Label41_48 As label:
                 Align: =Align.Right
@@ -2071,25 +2036,38 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
+                Height: =Container1_3.Height * 5%
                 PaddingRight: =3.32
                 PaddingTop: =3.32
                 Size: =gblFontSize
                 Text: ="Return Date"
-                Width: =81.71
-                X: =33
-                Y: =424
+                Width: =BadgeCanvas5_8.Width * 26%
+                X: =BadgeCanvas5_8.X
+                Y: =Label41_47.Y + Label41_47.Height + (Container1_3.Height * 1%)
                 ZIndex: =27
 
             "DatePickerCanvas3_1 As 'Date picker'":
                 BasePaletteColor: =varHeaderFill
                 DisplayMode: =DisplayMode.Edit
-                FontSize: =0
-                Height: =32
-                ValidationState: ="None"
-                Width: =174.71
-                X: =114
-                Y: =428
+                FontSize: =gblFontSize
+                Height: =Container1_3.Height * 5%
+                ValidationState: =If(IsBlank(Self.SelectedDate), "Error", "None")
+                Width: =BadgeCanvas5_8.Width * 74%
+                X: =Label41_44.X+Label41_44.Width  
+                Y: =Label41_47.Y + Label41_47.Height + (Container1_3.Height * 1%)
                 ZIndex: =28
+
+            "'Customer Select_1' As Combobox.pcfdataset":
+                BasePaletteColor: =varHeaderFill
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =gblFontSize
+                Height: =Container1_3.Height * 5%
+                Items: =Choices([@'TG14 Task Information'].'O365 Data')
+                ValidationState: =If(IsBlank(Self.Selected), "Error", "None")
+                Width: =BadgeCanvas5_8.Width * 74%
+                X: =Label41_45.X+Label41_45.Width  
+                Y: =Label41_45.Y + Label41_45.Height + (Container1_3.Height * 1%)
+                ZIndex: =29
 
         Button33_3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2176,13 +2154,13 @@
             ZIndex: =11
 
         Container2_3 As groupContainer.manualLayoutContainer:
-            Height: =571
+            Height: =Button27_3.Height - Button33_3.Height
             PaddingRight: =0.00
             PaddingTop: =0.00
             Visible: =varViewLoanCard
-            Width: =819
-            X: =372
-            Y: =141
+            Width: =Button27_3.Width * 71%
+            X: =Rectangle30_3.X
+            Y: =Rectangle30_3.Y
             ZIndex: =12
 
             Label46_15 As label:
@@ -2198,9 +2176,9 @@
                 OnSelect: =
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =8.64
+                Size: =gblFontSize
                 Text: ="Asset Tag"
-                Width: =233.84
+                Width: =Container2_3.Width * 23%
                 X: =0.00
                 ZIndex: =1
 
@@ -2217,10 +2195,10 @@
                 OnSelect: =
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =8.64
+                Size: =gblFontSize
                 Text: ="Type"
-                Width: =99.65
-                X: =233.84
+                Width: =Container2_3.Width * 10%
+                X: =Label46_15.X + Label46_15.Width
                 ZIndex: =2
 
             Label46_17 As label:
@@ -2236,10 +2214,10 @@
                 OnSelect: =
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =8.64
+                Size: =gblFontSize
                 Text: ="Manufacturer"
-                Width: =99.65
-                X: =333.49
+                Width: =Container2_3.Width * 15%
+                X: =Label46_16.X + Label46_16.Width
                 ZIndex: =3
 
             Label46_18 As label:
@@ -2255,10 +2233,10 @@
                 OnSelect: =
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =8.64
+                Size: =gblFontSize
                 Text: ="Model"
-                Width: =169.41
-                X: =433.14
+                Width: =Container2_3.Width * 27.5%
+                X: =Label46_17.X + Label46_17.Width
                 ZIndex: =4
 
             Label46_19 As label:
@@ -2274,20 +2252,20 @@
                 OnSelect: =
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =8.64
+                Size: =gblFontSize
                 Text: ="Serial Number"
-                Width: =184.02
-                X: =602.54
+                Width: =Container2_3.Width * 24.5%
+                X: =Label46_18.X + Label46_18.Width
                 ZIndex: =5
 
             "Gallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 BorderColor: =RGBA(166, 166, 166, 1)
-                Height: =531
+                Height: =Container2_3.Height-Label46_15.Height
                 Items: =LoanCard
                 Layout: =Layout.Vertical
                 TemplatePadding: =0
                 TemplateSize: =75
-                Width: =786.56
+                Width: =Container2_3.Width
                 X: =0.00
                 Y: =40
                 ZIndex: =6
@@ -2301,16 +2279,16 @@
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    Height: =75
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
                     Overflow: =Overflow.Scroll
                     PaddingLeft: =10
                     PaddingRight: =6.64
                     PaddingTop: =3.32
-                    Size: =8.64
+                    Size: =gblFontSize
                     Text: =ThisItem.'LC Asset Tag'
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =233.84
+                    Width: =Label46_15.Width
                     X: =0.00
                     ZIndex: =1
 
@@ -2325,7 +2303,7 @@
                     HoverFill: =RGBA(105, 121, 126, 1)
                     OnSelect: =Select(Parent)
                     PressedFill: =RGBA(105, 121, 126, 1)
-                    Width: =786.56
+                    Width: =Gallery1_2.Width
                     X: =0.00
                     Y: =74
                     ZIndex: =2
@@ -2340,16 +2318,16 @@
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    Height: =75
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
                     Overflow: =Overflow.Scroll
                     PaddingRight: =3.32
                     PaddingTop: =3.32
-                    Size: =8.64
+                    Size: =gblFontSize
                     Text: =ThisItem.'LC Asset type'
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =99.65
-                    X: =233.84
+                    Width: =Label46_16.Width
+                    X: =Label37_2.X + Label37_2.Width
                     ZIndex: =3
 
                 Label39_2 As label:
@@ -2361,16 +2339,16 @@
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    Height: =75
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
                     Overflow: =Overflow.Scroll
                     PaddingRight: =3.32
                     PaddingTop: =3.32
-                    Size: =8.64
+                    Size: =gblFontSize
                     Text: =ThisItem.'LC Model'
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =169.41
-                    X: =433.14
+                    Width: =Label46_18.Width
+                    X: =Label45_2.X + Label45_2.Width
                     ZIndex: =4
 
                 Label44_2 As label:
@@ -2388,11 +2366,11 @@
                     Overflow: =Overflow.Scroll
                     PaddingRight: =3.32
                     PaddingTop: =3.32
-                    Size: =8.64
+                    Size: =gblFontSize
                     Text: =ThisItem.'LC Serial Number'
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =184.02
-                    X: =602.54
+                    Width: =Label46_19.Width
+                    X: =Label39_2.X + Label39_2.Width
                     ZIndex: =6
 
                 Label45_2 As label:
@@ -2405,16 +2383,16 @@
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    Height: =74
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
                     Overflow: =Overflow.Scroll
                     PaddingRight: =3.32
                     PaddingTop: =3.32
-                    Size: =8.64
+                    Size: =gblFontSize
                     Text: =ThisItem.'LC Manufacturer'.Value
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =99.65
-                    X: =333.49
+                    Width: =Label46_17.Width
+                    X: =Label38_2.X + Label38_2.Width
                     ZIndex: =7
 
     "'LoanCard Notify' As group":

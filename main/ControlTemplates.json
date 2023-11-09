@@ -128,6 +128,21 @@
     "OverridableProperties": {},
     "Version": "2.4.0"
   },
+  "Combobox": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_ComboboxCanvas",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "PowerApps_CoreControls_ComboboxCanvas",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Combobox",
+    "Version": "0.0.19"
+  },
   "Date picker": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
