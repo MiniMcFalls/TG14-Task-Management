@@ -1,5 +1,5 @@
 "'Maintenence Screen' As screen.'tabletLayout_Success_ver3.0'":
-    Fill: =RGBA(255,255,255,1)
+    Fill: =varBackgroundFill
     LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
 
     iconCircle3_13 As circle.Circle:
@@ -84,7 +84,7 @@
         Height: =iconCircle3_12.Height
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =13.29
+        Size: =gblFontSize + 3
         Text: |-
             ="The TG14 Digital Diary Application is currently under maintenence.
             

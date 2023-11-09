@@ -84,7 +84,7 @@
         Height: =iconCircle3_19.Height
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =13.29
+        Size: =gblFontSize + 3
         Text: |-
             ="You are not using the current version for this application.
             

@@ -27,7 +27,7 @@ Feedback As screen:
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =124
+        Height: =App.Height * 15%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -42,9 +42,9 @@ Feedback As screen:
         RadiusTopRight: =30
         Size: =9.97
         Text: =""
-        Width: =1191.13
-        X: =25.25
-        Y: =143
+        Width: =App.Width * 95%
+        X: =(App.Width/2) - (Self.Width/2)
+        Y: =Label14_5.Y + Label14_5.Height
         ZIndex: =2
 
     Button2_1 As button:
@@ -58,7 +58,7 @@ Feedback As screen:
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =47
+        Height: =App.Height * 5%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(54, 176, 75, 1), -10%)
@@ -100,11 +100,11 @@ Feedback As screen:
         PressedFill: =ColorFade(RGBA(54, 176, 75, 1), -30%)
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =9.97
+        Size: =gblFontSize
         Text: ="Submit Feedback"
-        Width: =221.89
-        X: =1001.14
-        Y: =53
+        Width: =App.Width * 17%
+        X: =App.Width - Self.Width
+        Y: =cmp_Header_9.Y + cmp_Header_9.Height
         ZIndex: =6
 
     Button28_12 As button:
@@ -117,7 +117,7 @@ Feedback As screen:
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =611
+        Height: =App.Height * 60%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -132,9 +132,9 @@ Feedback As screen:
         RadiusTopRight: =30
         Size: =9.97
         Text: =""
-        Width: =1188.48
-        X: =25.25
-        Y: =157
+        Width: =App.Width * 95%
+        X: =(App.Width/2) - (Self.Width/2)
+        Y: =Button28_7.Y + Button28_7.Height + (App.Height * 4%)
         ZIndex: =38
 
     Label14_4 As label:
@@ -148,15 +148,15 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =49
+        Height: =App.Height  *5%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =13.29
         Text: ="Task Details"
         Underline: =true
-        Width: =239.82
-        X: =498.91
-        Y: =55
+        Width: =App.Width * 25%
+        X: =(App.Width/2) - (Self.Width/2)
+        Y: =cmp_Header_7.Y + cmp_Header_9.Height + (App.Height * 1%)
         ZIndex: =48
 
     Label14_5 As label:
@@ -169,14 +169,14 @@ Feedback As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =49
+        Height: =Label14_4.Height
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: ="Input your task details in the boxes below"
-        Width: =440.44
-        X: =399.26
-        Y: =95
+        Width: =Label14_4.Width
+        X: =Label14_4.X
+        Y: =Label14_4.Y + Label14_4.Height
         ZIndex: =49
 
     "'Edit Screen - Time Picker Blocker_2' As label":
@@ -210,14 +210,15 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_7.Height * 30%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =10.63
+        Size: =gblFontSize + 1
         Text: ="Your Details"
         Underline: =true
-        Width: =99.65
-        X: =53.15
-        Y: =157
+        Width: =Button28_7.Width * 10%
+        X: =Button28_7.X + (Button28_7.Width * 2%)
+        Y: =Button28_7.Y + (Button28_7.Height * 10%)
         ZIndex: =52
 
     Label15 As label:
@@ -230,16 +231,16 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =42
+        Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: |-
             ="Rank:"
         Underline: =true
-        Width: =51.81
-        X: =53.15
-        Y: =198
+        Width: =Button28_7.Width * 5%
+        X: =Button28_7.X + (Button28_7.Width * 2%)
+        Y: =Button28_7.Y + (Button28_7.Height * 50%)
         ZIndex: =53
 
     Label15_1 As label:
@@ -251,14 +252,14 @@ Feedback As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =42
+        Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: =gblCurrentUser.jobTitle
-        Width: =51.81
-        X: =100.97
-        Y: =198
+        Width: =Button28_7.Width * 5%
+        X: =Label15.X + Label15.Width
+        Y: =Button28_7.Y + (Button28_7.Height * 50%)
         ZIndex: =54
 
     Label15_2 As label:
@@ -271,16 +272,16 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =42
+        Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: |-
             ="Name:"
         Underline: =true
-        Width: =51.81
-        X: =152.80
-        Y: =198
+        Width: =Button28_7.Width * 5%
+        X: =Label15_1.X + Label15_1.Width
+        Y: =Button28_7.Y + (Button28_7.Height * 50%)
         ZIndex: =55
 
     Label15_3 As label:
@@ -292,14 +293,14 @@ Feedback As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =42
+        Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: =gblCurrentUser.givenName & " " & gblCurrentUser.surname
-        Width: =128.88
-        X: =200.63
-        Y: =198
+        Width: =Button28_7.Width * 11%
+        X: =Label15_2.X + Label15_2.Width
+        Y: =Button28_7.Y + (Button28_7.Height * 50%)
         ZIndex: =56
 
     Label15_4 As label:
@@ -312,16 +313,16 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =42
+        Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: |-
             ="Current Location:"
         Underline: =true
-        Width: =99.65
-        X: =329.51
-        Y: =198
+        Width: =Button28_7.Width * 10%
+        X: =Label15_3.X + Label15_3.Width
+        Y: =Button28_7.Y + (Button28_7.Height * 50%)
         ZIndex: =57
 
     Label15_5 As label:
@@ -333,14 +334,14 @@ Feedback As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =42
+        Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: =gblUserLocPerm
-        Width: =128.88
-        X: =429.15
-        Y: =198
+        Width: =Button28_7.Width * 11%
+        X: =Label15_4.X + Label15_4.Width
+        Y: =Button28_7.Y + (Button28_7.Height * 50%)
         ZIndex: =58
 
     Label15_6 As label:
@@ -353,16 +354,16 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =43
+        Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: |-
             ="Contact:"
         Underline: =true
-        Width: =52.48
-        X: =558.03
-        Y: =197
+        Width: =Button28_7.Width * 5%
+        X: =Label15_5.X + Label15_5.Width
+        Y: =Button28_7.Y + (Button28_7.Height * 50%)
         ZIndex: =59
 
     Label15_7 As label:
@@ -374,14 +375,14 @@ Feedback As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =42
+        Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: =gblCurrentUser.mail
-        Width: =220.55
-        X: =619.15
-        Y: =198
+        Width: =Button28_7.Width * 17%
+        X: =Label15_6.X + Label15_6.Width
+        Y: =Button28_7.Y + (Button28_7.Height * 50%)
         ZIndex: =60
 
     Label1_2 As label:
@@ -394,14 +395,15 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_7.Height * 30%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =10.63
+        Size: =gblFontSize + 1
         Text: ="Description"
         Underline: =true
-        Width: =99.65
-        X: =53.15
-        Y: =309
+        Width: =Button28_12.Width * 10%
+        X: =Button28_12.X + (Button28_12.Width * 2%)
+        Y: =Button28_12.Y + (Button28_12.Height * 0%)
         ZIndex: =61
 
     Dropdown1 As dropdown:
@@ -418,7 +420,7 @@ Feedback As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Font: =Font.'Segoe UI'
-        Height: =42
+        Height: =Button28_7.Height * 40%
         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
@@ -432,9 +434,9 @@ Feedback As screen:
         PressedFill: =RGBA(105, 121, 126, 1)
         SelectionFill: =RGBA(105, 121, 126, 1)
         Size: =8.64
-        Width: =217.90
-        X: =882.88
-        Y: =198
+        Width: =Button28_7.Width * 21%
+        X: =Label15_8.X + Label15_8.Width
+        Y: =Button28_7.Y + (Button28_7.Height * 50%)
         ZIndex: =62
 
     Label15_8 As label:
@@ -447,16 +449,16 @@ Feedback As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =43
+        Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =8.64
         Text: |-
             ="Type:"
         Underline: =true
-        Width: =52.48
-        X: =824.43
-        Y: =197
+        Width: =Button28_7.Width * 5%
+        X: =Label15_7.X + Label15_7.Width
+        Y: =Button28_7.Y + (Button28_7.Height * 50%)
         ZIndex: =63
 
     TextInput1 As text:
@@ -469,7 +471,7 @@ Feedback As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =503
+        Height: =App.Height * 53%
         HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -483,10 +485,10 @@ Feedback As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =8.64
-        Width: =1128.03
-        X: =53.15
-        Y: =265
+        Size: =gblFontSize
+        Width: =App.Width * 93%
+        X: =(App.Width/2) - (Self.Width/2)
+        Y: =Button28_12.Y + (App.Height * 5%)
         ZIndex: =64
 
     cmp_Header_7 As cmp_Header:
