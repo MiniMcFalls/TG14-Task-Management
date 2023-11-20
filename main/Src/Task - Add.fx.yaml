@@ -57,7 +57,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =App.Height * 11%
+        Height: =App.Height * 10%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -87,7 +87,7 @@
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =App.Height * 11%
+        Height: =App.Height * 10%
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
@@ -162,8 +162,8 @@
         RadiusTopRight: =30
         Size: =9.97
         Text: =""
-        Width: =App.Width * 49%
-        X: =Button28_2.X + Button28_2.Width + (App.Width * 1%)
+        Width: =App.Width * 48%
+        X: =Button28_2.X + Button28_2.Width + (App.Width * 2%)
         Y: =Button28.Y + Button28.Height + (App.Height * 2%)
         ZIndex: =5
 
@@ -268,7 +268,7 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =Button28.Height * 35%
+        Height: =Button28.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
@@ -290,7 +290,7 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =Button28.Height * 35%
+        Height: =Button28.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
@@ -299,7 +299,7 @@
         Width: =Button28.Width * 13%
         X: =Button28.X + (Button28.Width * 20%)
         Y: =Button28.Y
-        ZIndex: =11
+        ZIndex: =10
 
     Label11_2 As label:
         Align: =Align.Center
@@ -312,7 +312,7 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =Button28.Height * 35%
+        Height: =Button28.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
@@ -321,7 +321,7 @@
         Width: =Button28.Width * 21%
         X: =Button28.X + (Button28.Width * 35%)
         Y: =Button28.Y
-        ZIndex: =13
+        ZIndex: =11
 
     Label11_3 As label:
         Align: =Align.Center
@@ -334,7 +334,7 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =Button28.Height * 35%
+        Height: =Button28.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
@@ -343,7 +343,7 @@
         Width: =Button28.Width * 18%
         X: =Button28.X + (Button28.Width * 58%)
         Y: =Button28.Y
-        ZIndex: =16
+        ZIndex: =12
 
     Label11_4 As label:
         Align: =Align.Center
@@ -356,47 +356,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =Button28.Height * 35%
+        Height: =Button28.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="Tail/Serial Number"
         Underline: =true
-        Width: =Button28.Width * 18%
-        X: =Button28.X + (Button28.Width * 80%)
+        Width: =Button28.Width * 19%
+        X: =Button28.X + (Button28.Width * 78%)
         Y: =Button28.Y
-        ZIndex: =18
-
-    "'Task Time' As text":
-        Align: =Align.Center
-        BorderColor: =If(IsBlank(Self.Text), Color.Red, RGBA(166, 166, 166, 1))
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Text(cmp_TimePicker_1.value,DateTimeFormat.ShortTime24,"en-GB")
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =DisplayMode.View
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =42
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =RGBA(105, 121, 126, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =8.64
-        Width: =108.95
-        X: =923
-        Y: =183
-        ZIndex: =19
+        ZIndex: =13
 
     Label11_5 As label:
         Align: =Align.Center
@@ -409,62 +378,18 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =43
+        Height: =Button28_1.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="Task Time"
         Underline: =true
-        Width: =108.95
-        X: =923
-        Y: =140
-        ZIndex: =20
+        Width: =Button28_1.Width * 38%
+        X: =Button28_1.X + Button28_1.Width - (Button28_1.Width/2) - Self.Width - (Button28_1.Width * 5%)
+        Y: =Button28_1.Y
+        ZIndex: =14
 
-    Icon3_1 As icon.Clock:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(105, 121, 126, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =31
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Clock
-        OnSelect: =Set(varShowTimePicker, true)
-        PaddingRight: =0.00
-        PaddingTop: =0.00
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =11.96
-        X: =1015.09
-        Y: =202
-        ZIndex: =21
-
-    "'Add Task Date' As datepicker":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        CalendarHeaderFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        Color: =RGBA(51, 51, 51, 1)
-        DefaultDate: =If(IsBlank(_dateSelected), Today(), _dateSelected)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        Height: =42
-        HoverDateFill: =RGBA(200, 200, 200, 1)
-        IconBackground: =RGBA(105, 121, 126, 1)
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        SelectedDateFill: =RGBA(105, 121, 126, 1)
-        Size: =8.64
-        Width: =142.16
-        X: =1051
-        Y: =181
-        ZIndex: =22
-
-    Label11_6 As label:
+    Label11_7 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -475,98 +400,19 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =43
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        Size: =gblFontSize
-        Text: ="Task Date"
-        Underline: =true
-        Width: =108.95
-        X: =1068
-        Y: =138
-        ZIndex: =23
-
-    "'Task Location' As text":
-        BorderColor: =If(IsBlank(Self.Text), Color.Red, RGBA(166, 166, 166, 1))
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =""
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =71
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Mode: =TextMode.MultiLine
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =RGBA(105, 121, 126, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =8.64
-        Width: =543.41
-        X: =45
-        Y: =279
-        ZIndex: =24
-
-    Label11_7 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
+        Height: =Button28_2.Height * 30%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="Task location"
         Underline: =true
-        Width: =99.65
-        X: =45
-        Y: =239
-        ZIndex: =25
-
-    Notes As text:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =""
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =71
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Mode: =TextMode.MultiLine
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =RGBA(105, 121, 126, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =8.64
-        Width: =560.02
-        X: =633
-        Y: =279
-        ZIndex: =26
+        Width: =Button28_2.Width
+        X: =Button28_2.X
+        Y: =Button28_2.Y
+        ZIndex: =18
 
     Label11_8 As label:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -576,15 +422,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_3.Height * 30%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="Notes"
         Underline: =true
-        Width: =124.90
-        X: =633
-        Y: =239
-        ZIndex: =27
+        Width: =Button28_3.Width
+        X: =Button28_3.X
+        Y: =Button28_3.Y
+        ZIndex: =20
 
     Label11_9 As label:
         Align: =Align.Center
@@ -597,168 +444,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_4.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="Rank"
         Underline: =true
-        Width: =120.90
-        X: =130
-        Y: =364
-        ZIndex: =28
-
-    "'Rank DD' As dropdown":
-        BorderColor: =If(Self.Selected.Value = Blank(), Color.Red, RGBA(166, 166, 166, 1))
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Blank()
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(IsBlank('Service DD'.Selected.Value), DisplayMode.Disabled, DisplayMode.Edit)
-        Font: =Font.'Segoe UI'
-        Height: =43
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: |-
-            =Switch(
-                'Service DD'.Selected.Value,
-                "RAF",
-                [
-                    "AR",
-                    "AS2",
-                    "AS1",
-                    "AS1(T)",
-                    "L/Cpl",
-                    "Cpl",
-                    "Sgt",
-                    "FS",
-                    "CT",
-                    "WO",
-                    "MAcr",
-                    "Plt Off",
-                    "Fg Off",
-                    "Flt Lt",
-                    "Sqn Ldr",
-                    "Wg Cdr",
-                    "Gp Capt",
-                ],
-                "RN",
-                [
-                    "AB",
-                    "LH",
-                    "PO",
-                    "CPO",
-                    "WO2",
-                    "WO1",
-                    "Sub Lt",
-                    "Lt",
-                    "Lt Cdr",
-                    "Cdr",
-                    "Capt"
-                ],
-                "RM",
-                [
-                    "Marine",
-                    "L/Cpl",
-                    "Cpl",
-                    "Sgt",
-                    "SSgt",
-                    "CSgt",
-                    "WO2",
-                    "WO1",
-                    "2Lt",
-                    "Lt",
-                    "Capt",
-                    "Maj",
-                    "Lt Col",
-                    "Col"
-                ],
-                "Army",
-                [
-                    "Pvt",
-                    "L/Cpl",
-                    "Cpl",
-                    "Sgt",
-                    "SSgt",
-                    "CSgt",
-                    "WO2",
-                    "WO1",
-                    "2Lt",
-                    "Lt",
-                    "Capt",
-                    "Maj",
-                    "Lt Col",
-                    "Col"
-                ],
-                "CS",
-                [
-                    "E2",
-                    "E1",
-                    "D",
-                    "C2",
-                    "C1",
-                    "B2",
-                    "B1"
-                ],
-                "Civ",
-                [
-                    "Mr",
-                    "Mrs",
-                    "Miss",
-                    "Ms",
-                    "Mx"
-                ]
-            )
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(105, 121, 126, 1)
-        SelectionFill: =RGBA(105, 121, 126, 1)
-        Size: =8.64
-        Width: =120.25
-        X: =131
-        Y: =404
-        ZIndex: =29
-
-    "'Customer Name' As text":
-        Align: =Align.Center
-        BorderColor: =If(IsBlank(Self.Text), Color.Red, RGBA(166, 166, 166, 1))
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Blank()
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =43
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =RGBA(105, 121, 126, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =8.64
-        Width: =267.06
-        X: =265
-        Y: =403
-        ZIndex: =30
+        Width: =Button28_4.Width * 10%
+        X: =Button28_4.X + (Button28_4.Width * 9%)
+        Y: =Button28_4.Y
+        ZIndex: =21
 
     Label11_10 As label:
         Align: =Align.Center
@@ -771,15 +466,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_4.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="Name"
         Underline: =true
-        Width: =267.06
-        X: =265
-        Y: =364
-        ZIndex: =31
+        Width: =Button28_4.Width * 22%
+        X: =Button28_4.X + (Button28_4.Width * 19.5%)
+        Y: =Button28_4.Y
+        ZIndex: =24
 
     Label11_11 As label:
         Align: =Align.Center
@@ -792,84 +488,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_4.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="Email"
         Underline: =true
-        Width: =267.06
-        X: =550
-        Y: =363
-        ZIndex: =32
-
-    "'Customer Email' As combobox":
-        BorderColor: =If(IsBlank(Self.SelectedItems), Color.Red, RGBA(166, 166, 166, 1))
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Blank()
-        DefaultSelectedItems: =Blank()
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayFields: =["DisplayName","Email","Picture"]
-        Font: =Font.'Segoe UI'
-        Height: =42
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Choices([@'TG14 Task Information'].'O365 Data')
-        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(105, 121, 126, 1)
-        SearchFields: =["DisplayName"]
-        SearchItems: =Choices('TG14 Task Information'.'O365 Data','Customer Email'.SearchText)
-        SelectionFill: =RGBA(105, 121, 126, 1)
-        SelectMultiple: =false
-        Size: =8.64
-        Template: =ListItemTemplate.Person
-        Tooltip: =Blank()
-        Width: =267.06
-        X: =550
-        Y: =404
-        ZIndex: =33
-
-    "'Customer Section' As text":
-        Align: =Align.Center
-        BorderColor: =If(IsBlank(Self.Text), Color.Red, RGBA(166, 166, 166, 1))
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Blank()
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =44
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =RGBA(105, 121, 126, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =8.64
-        Width: =182.69
-        X: =833
-        Y: =401
-        ZIndex: =34
+        Width: =Button28_4.Width * 25%
+        X: =Button28_4.X + (Button28_4.Width * 42.2%)
+        Y: =Button28_4.Y
+        ZIndex: =25
 
     Label11_12 As label:
         Align: =Align.Center
@@ -882,45 +510,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_4.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="Section"
         Underline: =true
-        Width: =182.69
-        X: =833
-        Y: =362
-        ZIndex: =35
-
-    "'Customer Contact' As text":
-        Align: =Align.Center
-        BorderColor: =If(IsBlank(Self.Text), Color.Red, RGBA(166, 166, 166, 1))
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Blank()
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =44
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =RGBA(105, 121, 126, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =8.64
-        Width: =144.83
-        X: =1031
-        Y: =401
-        ZIndex: =36
+        Width: =Button28_4.Width * 17%
+        X: =Button28_4.X + (Button28_4.Width * 67.8%)
+        Y: =Button28_4.Y
+        ZIndex: =28
 
     Label11_13 As label:
         Align: =Align.Center
@@ -933,47 +532,19 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_4.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="Contact Number"
         Underline: =true
-        Width: =144.83
-        X: =1031
-        Y: =362
-        ZIndex: =37
-
-    "'Task Requirements' As text":
-        BorderColor: =If(IsBlank(Self.Text), Color.Red, RGBA(166, 166, 166, 1))
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =""
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =206
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Mode: =TextMode.MultiLine
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =RGBA(105, 121, 126, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =8.64
-        Width: =543.41
-        X: =35
-        Y: =520
-        ZIndex: =38
+        Width: =Button28_4.Width *13%
+        X: =Button28_4.X + (Button28_4.Width * 85.3%)
+        Y: =Button28_4.Y
+        ZIndex: =30
 
     Label11_14 As label:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -983,15 +554,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_5.Height * 15%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="Task Requirements"
         Underline: =true
-        Width: =124.90
-        X: =45
-        Y: =479
-        ZIndex: =39
+        Width: =Button28_5.Width
+        X: =Button28_5.X
+        Y: =Button28_5.Y
+        ZIndex: =32
 
     Label11_15 As label:
         Align: =Align.Center
@@ -1004,269 +576,17 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_4.Height * 35%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: |-
             ="Photog #1"
         Underline: =true
-        Width: =120.90
-        X: =706
-        Y: =469
-        ZIndex: =40
-
-    "'Photog #1 DD' As dropdown":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Blank()
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        Height: =43
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: |-
-            =If(
-                And(
-                    IsBlank(Phot1.Text),
-                    IsBlank(Phot2.Text),
-                    IsBlank(Phot3.Text),
-                    IsBlank(Phot4.Text),
-                    IsBlank(Phot5.Text),
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    "Section",
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot2.Text),
-                    IsBlank(Phot3.Text),
-                    IsBlank(Phot4.Text),
-                    IsBlank(Phot5.Text),
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot3.Text),
-                    IsBlank(Phot4.Text),
-                    IsBlank(Phot5.Text),
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot4.Text),
-                    IsBlank(Phot5.Text),
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot5.Text),
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Phot8.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    (IsBlank(Phot12.Text))
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Phot8.Text,
-                    Phot9.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Phot8.Text,
-                    Phot9.Text,
-                    Phot10.Text,
-                    Blank()
-                ],
-                IsBlank(Phot12.Text) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Phot8.Text,
-                    Phot9.Text,
-                    Phot10.Text,
-                    Phot11.Text,
-                    Blank()
-                ],
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Phot8.Text,
-                    Phot9.Text,
-                    Phot10.Text,
-                    Phot11.Text,
-                    Phot12.Text,
-                    Blank()
-                ]
-            )
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(105, 121, 126, 1)
-        SelectionFill: =RGBA(105, 121, 126, 1)
-        Size: =8.64
-        Width: =120.25
-        X: =706
-        Y: =493
-        ZIndex: =41
+        Width: =Button28_4.Width *10%
+        X: =Button28_6.X + Button28_6.Width - (Button28_6.Width/2) - Self.Width - (Button28_6.Width * 20%)
+        Y: =Button28_6.Y
+        ZIndex: =33
 
     Label11_16 As label:
         Align: =Align.Center
@@ -1279,269 +599,17 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_4.Height * 35%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: |-
             ="Photog #2"
         Underline: =true
-        Width: =120.90
-        X: =869
-        Y: =469
-        ZIndex: =42
-
-    "'Photog #2 DD' As dropdown":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Blank()
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        Height: =43
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: |-
-            =If(
-                And(
-                    IsBlank(Phot1.Text),
-                    IsBlank(Phot2.Text),
-                    IsBlank(Phot3.Text),
-                    IsBlank(Phot4.Text),
-                    IsBlank(Phot5.Text),
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    "Section",
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot2.Text),
-                    IsBlank(Phot3.Text),
-                    IsBlank(Phot4.Text),
-                    IsBlank(Phot5.Text),
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot3.Text),
-                    IsBlank(Phot4.Text),
-                    IsBlank(Phot5.Text),
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot4.Text),
-                    IsBlank(Phot5.Text),
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot5.Text),
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot6.Text),
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot7.Text),
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot8.Text),
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot9.Text),
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Phot8.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot10.Text),
-                    IsBlank(Phot11.Text),
-                    (IsBlank(Phot12.Text))
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Phot8.Text,
-                    Phot9.Text,
-                    Blank()
-                ],
-                And(
-                    IsBlank(Phot11.Text),
-                    IsBlank(Phot12.Text)
-                ) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Phot8.Text,
-                    Phot9.Text,
-                    Phot10.Text,
-                    Blank()
-                ],
-                IsBlank(Phot12.Text) = true,
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Phot8.Text,
-                    Phot9.Text,
-                    Phot10.Text,
-                    Phot11.Text,
-                    Blank()
-                ],
-                [
-                    Phot1.Text,
-                    Phot2.Text,
-                    Phot3.Text,
-                    Phot4.Text,
-                    Phot5.Text,
-                    Phot6.Text,
-                    Phot7.Text,
-                    Phot8.Text,
-                    Phot9.Text,
-                    Phot10.Text,
-                    Phot11.Text,
-                    Phot12.Text,
-                    Blank()
-                ]
-            )
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(105, 121, 126, 1)
-        SelectionFill: =RGBA(105, 121, 126, 1)
-        Size: =8.64
-        Width: =120.25
-        X: =869
-        Y: =492
-        ZIndex: =43
+        Width: =Button28_4.Width *10%
+        X: =Button28_6.X + Button28_6.Width - (Button28_6.Width/2) - (Self.Width/2)
+        Y: =460
+        ZIndex: =35
 
     Label11_17 As label:
         Align: =Align.Center
@@ -1554,48 +622,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_4.Height * 35%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="QA Check"
         Underline: =true
-        Width: =120.90
-        X: =1034
-        Y: =469
-        ZIndex: =44
-
-    "'QA Check DD' As dropdown":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Blank()
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        Height: =43
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =[Blank(), "SNCO", "JNCO", "Supervisor", "Peer"]
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(105, 121, 126, 1)
-        SelectionFill: =RGBA(105, 121, 126, 1)
-        Size: =8.64
-        Width: =120.25
-        X: =1034
-        Y: =496
-        ZIndex: =45
+        Width: =Button28_4.Width *10%
+        X: =Button28_6.X + Button28_6.Width - (Button28_6.Width/2) + (Button28_6.Width * 20%)
+        Y: =463
+        ZIndex: =37
 
     Unit As text:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1625,68 +661,7 @@
         Width: =212.58
         X: =25.25
         Y: =79
-        ZIndex: =46
-
-    "'Service DD' As dropdown":
-        BorderColor: =If(Self.Selected.Value = Blank(), Color.Red, RGBA(166, 166, 166, 1))
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Blank()
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        Height: =43
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =[Blank(),"RAF", "RN", "RM", "Army","CS", "Civ"]
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(105, 121, 126, 1)
-        SelectionFill: =RGBA(105, 121, 126, 1)
-        Size: =8.64
-        Width: =85.70
-        X: =29
-        Y: =404
-        ZIndex: =47
-
-    "'Edit Screen - Time Picker Blocker_1' As label":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(204, 204, 204, 0.6)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =768
-        OnSelect: =Set(varShowTimePicker, false)
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        Size: =8.64
-        Text: =
-        Visible: =varShowTimePicker
-        Width: =1229.00
-        X: =0.00
-        ZIndex: =48
-
-    cmp_TimePicker_1 As cmp_TimePicker:
-        Visible: =varShowTimePicker
-        Width: =66.43
-        X: =1037.68
-        Y: =196
-        ZIndex: =49
+        ZIndex: =39
 
     Label11_18 As label:
         Align: =Align.Center
@@ -1699,306 +674,16 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        Height: =Button28_4.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
         Size: =gblFontSize
         Text: ="Service"
         Underline: =true
-        Width: =85.70
-        X: =28
-        Y: =364
-        ZIndex: =50
-
-    CalendarEventsGallery1_1 As gallery.CalendarEventsGallery:
-        AccessibleLabel: ="Calendar events for selected day"
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        Height: =183
-        Items: |-
-            =/*Shows events only on selected date*/
-            SortByColumns(Filter('TG14 Task Information', 'Task Date' = 'Add Task Date'.SelectedDate, Unit.Value = gblUserLocPerm, 'Approval Status'.Value = "Approved"), "StartTime")
-        Layout: =Layout.Vertical
-        LoadingSpinnerColor: =RGBA(0,0,0,1)
-        OnSelect: =
-        TemplatePadding: =4
-        TemplateSize: =55
-        Width: =583.28
-        X: =629
-        Y: =576
-        ZIndex: =51
-
-        Button3_1 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(242, 242, 242, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =55
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0.00
-            PaddingTop: =0.00
-            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =9.97
-            Text: =""
-            Width: =535.44
-            X: =21.26
-            ZIndex: =2
-
-        Rectangle1_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(0,0,0,0)
-            FocusedBorderThickness: =0
-            Height: =54
-            HoverFill: =RGBA(0,0,0,0)
-            OnSelect: =Select(Title3_4)
-            PressedFill: =RGBA(105, 121, 126, 1)
-            TabIndex: =0
-            Width: =535.44
-            X: =21.26
-            Y: =1
-            ZIndex: =5
-
-        iconLocation1_4 As icon.Waypoint:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(79, 109, 122, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            DisplayMode: =DisplayMode.View
-            Height: =Subtitle1_13.Height -5
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Waypoint
-            OnSelect: =Select(Title3_4)
-            PaddingRight: =0.00
-            PaddingTop: =0.00
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            TabIndex: =0
-            Width: =14.61
-            X: =54.48
-            Y: =30
-            ZIndex: =6
-
-        Title3_4 As label:
-            BorderColor: =Self.Color
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =If(ThisItem.'Project Category'.Value = "Diversion", Color.DarkOrange,RGBA(0, 0, 0, 1))
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =27
-            OnSelect: =Set(_selectedCalendarEvent, ThisItem)
-            PaddingRight: =3.32
-            PaddingTop: =3.32
-            Size: =6.61
-            TabIndex: =0
-            Text: |-
-                =If(
-                    ThisItem.'Project Category'.Value = "Diversion",
-                    Text("DIVERSION") & Text(" - ") & ThisItem.'Photog #1' & Text(" - ") & ThisItem.'Task Location',
-                    Text("Task: ") & Text(Value(ThisItem.Title), "0000", "en-GB") & Text(" - ") & ThisItem.Rank & Text(" ") & ThisItem.'Customer Name' & Text(" - ") & Text("Tel: ") & ThisItem.'Customer Contact Number'
-                )
-            Tooltip: =ThisItem.Title & Text("- ") & ThisItem.Rank & Text(" ") & ThisItem.'Customer Name'
-            Width: =506.21
-            Wrap: =false
-            X: =50.49
-            ZIndex: =7
-
-        Subtitle1_13 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Lighter
-            Height: =27
-            OnSelect: =Select(Title3_4)
-            PaddingBottom: =0
-            PaddingRight: =0.00
-            PaddingTop: =0.00
-            Size: =6.61
-            Text: =ThisItem.'Task Location'
-            Tooltip: =ThisItem.'Task Location'
-            Width: =99.65
-            Wrap: =false
-            X: =72.41
-            Y: =28
-            ZIndex: =8
-
-        Body1_1 As label:
-            Color: =RGBA(221, 110, 66, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =2
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =Title3_4.Height
-            OnSelect: =Select(Title3_4)
-            PaddingRight: =3.32
-            PaddingTop: =3.32
-            Size: =5.92
-            Text: =Text(ThisItem.'Start Time', DateTimeFormat.ShortTime)
-            Width: =44.51
-            Wrap: =false
-            X: =21.26
-            ZIndex: =9
-
-        Separator1_5 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Height: =1
-            OnSelect: =
-            Width: =535.44
-            X: =21.26
-            Y: =54
-            ZIndex: =10
-
-        Subtitle1_14 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Lighter
-            Height: =24
-            OnSelect: =Select(Title3_4)
-            PaddingBottom: =0
-            PaddingRight: =3.32
-            PaddingTop: =0.00
-            Size: =6.61
-            Text: =ThisItem.'Project Category'.Value
-            Tooltip: =ThisItem.'Task Location'
-            Width: =99.65
-            Wrap: =false
-            X: =203.28
-            Y: =iconLocation1_4.Y -1
-            ZIndex: =11
-
-        Icon2_3 As icon.Tag:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(79, 109, 122, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            DisplayMode: =DisplayMode.View
-            FocusedBorderThickness: =4
-            Height: =Subtitle1_13.Height -5
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Tag
-            OnSelect: =
-            PaddingRight: =0.00
-            PaddingTop: =0.00
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =14.61
-            X: =185.35
-            Y: =iconLocation1_4.Y
-            ZIndex: =12
-
-        Rectangle7_2 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(105, 121, 126, 1)
-            FocusedBorderThickness: =4
-            Height: =2
-            HoverFill: =RGBA(105, 121, 126, 1)
-            OnSelect: =
-            PressedFill: =RGBA(105, 121, 126, 1)
-            Width: =502.23
-            X: =54.48
-            Y: =27
-            ZIndex: =13
-
-        Separator1_4 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =535.44
-            X: =21.26
-            ZIndex: =14
-
-        Subtitle1_15 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Lighter
-            Height: =27
-            OnSelect: =
-            PaddingBottom: =0
-            PaddingRight: =3.32
-            PaddingTop: =0.00
-            Size: =6.61
-            Text: |-
-                =If(IsBlank(ThisItem.'Photog #1'), "Not Assigned", ThisItem.'Photog #1')
-            Tooltip: =Text(ThisItem.'Task Date', "mmmm")
-            Width: =99.65
-            Wrap: =false
-            X: =334.15
-            Y: =28
-            ZIndex: =17
-
-        Icon2_11 As icon.Tag:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(79, 109, 122, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            DisplayMode: =DisplayMode.View
-            FocusedBorderThickness: =4
-            Height: =Subtitle1_13.Height -5
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Person
-            OnSelect: =
-            PaddingRight: =0.00
-            PaddingTop: =0.00
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =14.61
-            X: =316.22
-            Y: =iconLocation1_4.Y
-            ZIndex: =18
+        Width: =Button28_4.Width * 7%
+        X: =Button28_4.X + (Button28_4.Width * 1.3%)
+        Y: =Button28_4.Y
+        ZIndex: =41
 
     Label11_19 As label:
         Align: =Align.Center
@@ -2011,21 +696,21 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =24
+        Height: =Button28_8.Height * 15%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: ="Conflicts"
         Underline: =true
-        Width: =120.90
-        X: =870
-        Y: =552
-        ZIndex: =52
+        Width: =Button28_8.Width
+        X: =Button28_8.X
+        Y: =Button28_8.Y
+        ZIndex: =43
 
     cmp_Header_6 As cmp_Header:
         Width: =1229.00
         X: =0.00
-        ZIndex: =56
+        ZIndex: =47
 
     Label14_6 As label:
         Align: =Align.Center
@@ -2047,7 +732,7 @@
         Width: =App.Width * 25%
         X: =(App.Width/2) - (Self.Width/2)
         Y: =cmp_Header_7.Y + cmp_Header_9.Height + (App.Height * 1%)
-        ZIndex: =57
+        ZIndex: =48
 
     Label14_7 As label:
         Align: =Align.Center
@@ -2067,7 +752,7 @@
         Width: =Label14_6.Width
         X: =Label14_6.X
         Y: =Label14_6.Y + Label14_6.Height
-        ZIndex: =58
+        ZIndex: =49
 
     ButtonCanvas8 As Button:
         BasePaletteColor: =Color.Green
@@ -2289,19 +974,20 @@
         Width: =App.Width * 10%
         X: =App.Width - Self.Width - (App.Width * 0.5%)
         Y: =cmp_Header_6.Y + cmp_Header_6.Height + (App.Height * 1%)
-        ZIndex: =59
+        ZIndex: =50
 
     DropdownCanvas8 As Dropdown.pcfdataset:
         BasePaletteColor: =varHeaderFill
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =gblFontSize
-        Height: =Button28.Height * 50%
+        Height: =Button28.Height * 45%
         Items: =Choices([@'TG14 Task Information'].'Project Category')
+        ValidationState: =If(IsBlank(Self.Selected), "Error", "None")
         Width: =Label11.Width
         X: =Label11.X
         Y: =Label11.Y + Label11.Height + (Button28.Height * 2%)
-        ZIndex: =60
+        ZIndex: =51
 
         Value10 As pcfDataField.textualColumn:
             FieldDisplayName: ="Value"
@@ -2316,12 +1002,13 @@
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =gblFontSize
-        Height: =Button28.Height * 50%
+        Height: =Button28.Height * 45%
         Items: =Choices([@'TG14 Task Information'].Status)
+        ValidationState: =If(IsBlank(Self.Selected), "Error", "None")
         Width: =Label11_1.Width
         X: =Label11_1.X
         Y: =Label11_1.Y + Label11_1.Height + (Button28.Height * 2%)
-        ZIndex: =61
+        ZIndex: =52
 
         Value10_1 As pcfDataField.textualColumn:
             FieldDisplayName: ="Value"
@@ -2330,6 +1017,151 @@
             FieldVariantName: ="textualColumn"
             Order: =1
             ZIndex: =19
+
+    DropdownCanvas8_2 As Dropdown.pcfdataset:
+        BasePaletteColor: =varHeaderFill
+        DefaultSelectedItems: =
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28.Height * 45%
+        Items: =["Stills", "Video", "Both", "Admin"]
+        ValidationState: =If(IsBlank(Self.Selected), "Error", "None")
+        Width: =Label11_2.Width
+        X: =Label11_2.X
+        Y: =Label11_2.Y + Label11_2.Height + (Button28.Height * 2%)
+        ZIndex: =53
+
+        Value10_2 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =19
+
+    "TextInputCanvas7 As 'Text input'":
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.View
+        FontSize: =gblFontSize
+        Height: =Button28.Height * 45%
+        Mode: ='TextInputCanvas.Mode'.SingleLine
+        Type: ='TextInputCanvas.Type'.Text
+        Value: =First(SortByColumns('TG14 Task Information', "ID", SortOrder.Descending)).ID + 1
+        Width: =Label11_3.Width
+        X: =Label11_3.X
+        Y: =Label11_3.Y + Label11_3.Height + (Button28.Height * 2%)
+        ZIndex: =54
+
+    "TextInputCanvas7_1 As 'Text input'":
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28.Height * 45%
+        Mode: ='TextInputCanvas.Mode'.SingleLine
+        Type: ='TextInputCanvas.Type'.Text
+        ValidationState: =If((IsBlank(Self.Value) Or Self.Value = Blank()) And DropdownCanvas8.Selected.Value = "Engineering", "Error", "None")
+        Value: =Blank()
+        Width: =Label11_4.Width
+        X: =Label11_4.X
+        Y: =Label11_4.Y + Label11_4.Height + (Button28.Height * 2%)
+        ZIndex: =55
+
+    "TextInputCanvas7_2 As 'Text input'":
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_1.Height * 45%
+        Mode: ='TextInputCanvas.Mode'.SingleLine
+        Type: ='TextInputCanvas.Type'.Text
+        Value: =Text(cmp_TimePicker_1.value,DateTimeFormat.ShortTime24,"en-GB")
+        Width: =Label11_5.Width
+        X: =Label11_5.X
+        Y: =Label11_5.Y + Label11_5.Height + (Button28_1.Height * 2%)
+        ZIndex: =56
+
+    Icon3_1 As icon.Clock:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(105, 121, 126, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =TextInputCanvas7_2.Height
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Clock
+        OnSelect: =Set(varShowTimePicker, true)
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =TextInputCanvas7_2.Width * 15%
+        X: =TextInputCanvas7_2.X + TextInputCanvas7_2.Width - Self.Width - (TextInputCanvas7_2.Width * 1%)
+        Y: =TextInputCanvas7_2.Y
+        ZIndex: =57
+
+    "'Edit Screen - Time Picker Blocker_1' As label":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(204, 204, 204, 0.6)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =768
+        OnSelect: =Set(varShowTimePicker, false)
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =8.64
+        Text: =
+        Visible: =varShowTimePicker
+        Width: =1229.00
+        X: =0.00
+        ZIndex: =58
+
+    cmp_TimePicker_1 As cmp_TimePicker:
+        Visible: =varShowTimePicker
+        Width: =66.43
+        X: =1037.68
+        Y: =196
+        ZIndex: =59
+
+    "DatePickerCanvas4 As 'Date picker'":
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_1.Height * 45%
+        SelectedDate: =If(IsBlank(_dateSelected), Today(), _dateSelected)
+        Width: =Label11_20.Width
+        X: =Label11_20.X
+        Y: =Label11_20.Y + Label11_20.Height + (Button28_1.Height * 2%)
+        ZIndex: =60
+
+    Label11_20 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =Button28_1.Height * 40%
+        PaddingRight: =3.32
+        PaddingTop: =3.32
+        Size: =gblFontSize
+        Text: ="Task Time"
+        Underline: =true
+        Width: =Button28_1.Width * 38%
+        X: =Button28_1.X + Button28_1.Width - (Button28_1.Width/2) + (Button28_1.Width * 5%)
+        Y: =Button28_1.Y
+        ZIndex: =61
 
     "'No Conflicts_1' As group":
         Height: =5
@@ -2350,7 +1182,7 @@
             Width: =88.35
             X: =877.57
             Y: =736
-            ZIndex: =53
+            ZIndex: =44
 
         Icon19_1 As icon.CheckBadge:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -2373,7 +1205,7 @@
             Width: =29.23
             X: =906.81
             Y: =724
-            ZIndex: =54
+            ZIndex: =45
 
         Rectangle29_1 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2389,21 +1221,43 @@
             Width: =49.83
             X: =896.84
             Y: =767
-            ZIndex: =55
+            ZIndex: =46
 
-    DropdownCanvas8_2 As Dropdown.pcfdataset:
+    "TextInputCanvas8 As 'Text input'":
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_2.Height * 60%
+        ValidationState: =If(IsBlank(Self.Value) Or Self.Value = Blank(), "Error", "None")
+        Width: =Button28_2.Width * 95%
+        X: =Button28_2.X + Button28_2.Width - (Button28_2.Width/2) - (Self.Width/2)
+        Y: =Label11_7.Y + Label11_7.Height + (Button28_2.Height * 2%)
+        ZIndex: =62
+
+    "TextInputCanvas9 As 'Text input'":
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_3.Height * 60%
+        Width: =Button28_3.Width * 95%
+        X: =Button28_3.X + Button28_3.Width - (Button28_3.Width/2) - (Self.Width/2)
+        Y: =Label11_8.Y + Label11_8.Height + (Button28_3.Height * 2%)
+        ZIndex: =63
+
+    DropdownCanvas8_3 As Dropdown.pcfdataset:
         BasePaletteColor: =varHeaderFill
         DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =gblFontSize
-        Height: =Button28.Height * 50%
-        Items: =["Stills", "Video", "Both", "Admin"]
-        Width: =Label11_2.Width
-        X: =Label11_2.X
-        Y: =Label11_2.Y + Label11_2.Height + (Button28.Height * 2%)
-        ZIndex: =62
+        Height: =Button28_4.Height * 45%
+        Items: =[Blank(),"RAF", "RN", "RM", "Army","CS", "Civ"]
+        ValidationState: =If(IsBlank(Self.Selected), "Error", "None")
+        Width: =Label11_18.Width
+        X: =Label11_18.X
+        Y: =Label11_18.Y + Label11_18.Height + (Button28_4.Height * 2%)
+        ZIndex: =64
 
-        Value10_2 As pcfDataField.textualColumn:
+        Value10_3 As pcfDataField.textualColumn:
             FieldDisplayName: ="Value"
             FieldName: ="Value"
             FieldType: ="s"
@@ -2411,29 +1265,1075 @@
             Order: =1
             ZIndex: =19
 
-    "TextInputCanvas7 As 'Text input'":
+    DropdownCanvas8_4 As Dropdown.pcfdataset:
         BasePaletteColor: =varHeaderFill
-        DisplayMode: =DisplayMode.Edit
+        DefaultSelectedItems: =Blank()
+        DisplayMode: =If(IsBlank(DropdownCanvas8_3.Selected.Value), DisplayMode.Disabled, DisplayMode.Edit)
         FontSize: =gblFontSize
-        Height: =Button28.Height * 50%
-        Mode: ='TextInputCanvas.Mode'.SingleLine
-        Type: ='TextInputCanvas.Type'.Text
-        Value: =First(SortByColumns('TG14 Task Information', "ID", SortOrder.Descending)).ID + 1
-        Width: =Label11_3.Width
-        X: =Label11_3.X
-        Y: =Label11_3.Y + Label11_3.Height + (Button28.Height * 2%)
-        ZIndex: =63
+        Height: =Button28_4.Height * 45%
+        Items: |-
+            =Switch(
+                DropdownCanvas8_3.Selected.Value,
+                "RAF",
+                [
+                    "AR",
+                    "AS2",
+                    "AS1",
+                    "AS1(T)",
+                    "L/Cpl",
+                    "Cpl",
+                    "Sgt",
+                    "FS",
+                    "CT",
+                    "WO",
+                    "MAcr",
+                    "Plt Off",
+                    "Fg Off",
+                    "Flt Lt",
+                    "Sqn Ldr",
+                    "Wg Cdr",
+                    "Gp Capt",
+                ],
+                "RN",
+                [
+                    "AB",
+                    "LH",
+                    "PO",
+                    "CPO",
+                    "WO2",
+                    "WO1",
+                    "Sub Lt",
+                    "Lt",
+                    "Lt Cdr",
+                    "Cdr",
+                    "Capt"
+                ],
+                "RM",
+                [
+                    "Marine",
+                    "L/Cpl",
+                    "Cpl",
+                    "Sgt",
+                    "SSgt",
+                    "CSgt",
+                    "WO2",
+                    "WO1",
+                    "2Lt",
+                    "Lt",
+                    "Capt",
+                    "Maj",
+                    "Lt Col",
+                    "Col"
+                ],
+                "Army",
+                [
+                    "Pvt",
+                    "L/Cpl",
+                    "Cpl",
+                    "Sgt",
+                    "SSgt",
+                    "CSgt",
+                    "WO2",
+                    "WO1",
+                    "2Lt",
+                    "Lt",
+                    "Capt",
+                    "Maj",
+                    "Lt Col",
+                    "Col"
+                ],
+                "CS",
+                [
+                    "E2",
+                    "E1",
+                    "D",
+                    "C2",
+                    "C1",
+                    "B2",
+                    "B1"
+                ],
+                "Civ",
+                [
+                    "Mr",
+                    "Mrs",
+                    "Miss",
+                    "Ms",
+                    "Mx"
+                ]
+            )
+        ValidationState: =If(IsBlank(Self.Selected), "Error", "None")
+        Width: =Label11_9.Width
+        X: =Label11_9.X
+        Y: =Label11_9.Y + Label11_9.Height + (Button28_4.Height * 2%)
+        ZIndex: =65
 
-    "TextInputCanvas7_1 As 'Text input'":
+        Value10_4 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =19
+
+    "TextInputCanvas7_3 As 'Text input'":
         BasePaletteColor: =varHeaderFill
         DisplayMode: =DisplayMode.Edit
         FontSize: =gblFontSize
-        Height: =Button28.Height * 50%
+        Height: =Button28_4.Height * 45%
         Mode: ='TextInputCanvas.Mode'.SingleLine
         Type: ='TextInputCanvas.Type'.Text
+        ValidationState: =If(IsBlank(Self.Value) Or Self.Value = Blank(), "Error", "None")
         Value: =Blank()
-        Width: =Label11_4.Width
-        X: =Label11_4.X
-        Y: =Label11_4.Y + Label11_4.Height + (Button28.Height * 2%)
-        ZIndex: =64
+        Width: =Label11_10.Width
+        X: =Label11_10.X
+        Y: =Label11_10.Y + Label11_10.Height + (Button28_4.Height * 2%)
+        ZIndex: =66
+
+    ComboboxCanvas3 As Combobox.pcfdataset:
+        BasePaletteColor: =varHeaderFill
+        DefaultSelectedItems: =Blank()
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_4.Height * 45%
+        InputTextPlaceholder: ="Search"
+        Items: =Choices([@'TG14 Task Information'].'O365 Data')
+        ValidationState: =If(IsBlank(Self.Selected), "Error", "None")
+        Width: =Label11_11.Width
+        X: =Label11_11.X
+        Y: =Label11_11.Y + Label11_11.Height + (Button28_4.Height * 2%)
+        ZIndex: =67
+
+        JobTitle1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="JobTitle"
+            FieldName: ="JobTitle"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =4
+            ZIndex: =20
+
+        Email1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Email"
+            FieldName: ="Email"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =2
+            ZIndex: =21
+
+        DisplayName1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="DisplayName"
+            FieldName: ="DisplayName"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =22
+
+        Department1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Department"
+            FieldName: ="Department"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =3
+            ZIndex: =23
+
+    "TextInputCanvas7_4 As 'Text input'":
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_4.Height * 45%
+        Mode: ='TextInputCanvas.Mode'.SingleLine
+        Type: ='TextInputCanvas.Type'.Text
+        ValidationState: =If(IsBlank(Self.Value) Or Self.Value = Blank(), "Error", "None")
+        Value: =Blank()
+        Width: =Label11_12.Width
+        X: =Label11_12.X
+        Y: =Label11_12.Y + Label11_12.Height + (Button28_4.Height * 2%)
+        ZIndex: =68
+
+    "TextInputCanvas7_5 As 'Text input'":
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_4.Height * 45%
+        Mode: ='TextInputCanvas.Mode'.SingleLine
+        Type: ='TextInputCanvas.Type'.Text
+        ValidationState: =If(IsBlank(Self.Value) Or Self.Value = Blank(), "Error", "None")
+        Value: =Blank()
+        Width: =Label11_13.Width
+        X: =Label11_13.X
+        Y: =Label11_13.Y + Label11_13.Height + (Button28_4.Height * 2%)
+        ZIndex: =69
+
+    "TextInputCanvas8_1 As 'Text input'":
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_5.Height * 80%
+        ValidationState: =If(IsBlank(Self.Value) Or Self.Value = Blank(), "Error", "None")
+        Width: =Button28_5.Width * 95%
+        X: =Button28_5.X + Button28_5.Width - (Button28_5.Width/2) - (Self.Width/2)
+        Y: =Label11_14.Y + Label11_14.Height + (Button28_5.Height * 2%)
+        ZIndex: =70
+
+    DropdownCanvas9 As Dropdown.pcfdataset:
+        BasePaletteColor: =varHeaderFill
+        DefaultSelectedItems: =Blank()
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_6.Height * 45%
+        Items: |-
+            =If(
+                And(
+                    IsBlank(Phot1.Text),
+                    IsBlank(Phot2.Text),
+                    IsBlank(Phot3.Text),
+                    IsBlank(Phot4.Text),
+                    IsBlank(Phot5.Text),
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    "Section",
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot2.Text),
+                    IsBlank(Phot3.Text),
+                    IsBlank(Phot4.Text),
+                    IsBlank(Phot5.Text),
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot3.Text),
+                    IsBlank(Phot4.Text),
+                    IsBlank(Phot5.Text),
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot4.Text),
+                    IsBlank(Phot5.Text),
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot5.Text),
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Phot8.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    (IsBlank(Phot12.Text))
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Phot8.Text,
+                    Phot9.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Phot8.Text,
+                    Phot9.Text,
+                    Phot10.Text,
+                    Blank()
+                ],
+                IsBlank(Phot12.Text) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Phot8.Text,
+                    Phot9.Text,
+                    Phot10.Text,
+                    Phot11.Text,
+                    Blank()
+                ],
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Phot8.Text,
+                    Phot9.Text,
+                    Phot10.Text,
+                    Phot11.Text,
+                    Phot12.Text,
+                    Blank()
+                ]
+            )
+        Required: =false
+        ValidationState: ="None"
+        Width: =Label11_15.Width
+        X: =Label11_15.X
+        Y: =Label11_15.Y + Label11_15.Height + (Button28_6.Height * 2%)
+        ZIndex: =71
+
+        Value11 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =24
+
+    DropdownCanvas9_1 As Dropdown.pcfdataset:
+        BasePaletteColor: =varHeaderFill
+        DefaultSelectedItems: =Blank()
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_6.Height * 45%
+        Items: |-
+            =If(
+                And(
+                    IsBlank(Phot1.Text),
+                    IsBlank(Phot2.Text),
+                    IsBlank(Phot3.Text),
+                    IsBlank(Phot4.Text),
+                    IsBlank(Phot5.Text),
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    "Section",
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot2.Text),
+                    IsBlank(Phot3.Text),
+                    IsBlank(Phot4.Text),
+                    IsBlank(Phot5.Text),
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot3.Text),
+                    IsBlank(Phot4.Text),
+                    IsBlank(Phot5.Text),
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot4.Text),
+                    IsBlank(Phot5.Text),
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot5.Text),
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot6.Text),
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot7.Text),
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot8.Text),
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot9.Text),
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Phot8.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot10.Text),
+                    IsBlank(Phot11.Text),
+                    (IsBlank(Phot12.Text))
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Phot8.Text,
+                    Phot9.Text,
+                    Blank()
+                ],
+                And(
+                    IsBlank(Phot11.Text),
+                    IsBlank(Phot12.Text)
+                ) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Phot8.Text,
+                    Phot9.Text,
+                    Phot10.Text,
+                    Blank()
+                ],
+                IsBlank(Phot12.Text) = true,
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Phot8.Text,
+                    Phot9.Text,
+                    Phot10.Text,
+                    Phot11.Text,
+                    Blank()
+                ],
+                [
+                    Phot1.Text,
+                    Phot2.Text,
+                    Phot3.Text,
+                    Phot4.Text,
+                    Phot5.Text,
+                    Phot6.Text,
+                    Phot7.Text,
+                    Phot8.Text,
+                    Phot9.Text,
+                    Phot10.Text,
+                    Phot11.Text,
+                    Phot12.Text,
+                    Blank()
+                ]
+            )
+        Required: =false
+        ValidationState: ="None"
+        Width: =Label11_16.Width
+        X: =Label11_16.X
+        Y: =Label11_16.Y + Label11_16.Height + (Button28_6.Height * 2%)
+        ZIndex: =72
+
+        Value11_1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =24
+
+    DropdownCanvas9_2 As Dropdown.pcfdataset:
+        BasePaletteColor: =varHeaderFill
+        DefaultSelectedItems: =Blank()
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_6.Height * 45%
+        Items: =[Blank(), "SNCO", "JNCO", "Supervisor", "Peer"]
+        Required: =false
+        ValidationState: ="None"
+        Width: =Label11_17.Width
+        X: =Label11_17.X
+        Y: =Label11_17.Y + Label11_17.Height + (Button28_6.Height * 2%)
+        ZIndex: =73
+
+        Value11_2 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =24
+
+    CalendarEventsGallery1_1 As gallery.CalendarEventsGallery:
+        AccessibleLabel: ="Calendar events for selected day"
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =Button28_8.Height * 77%
+        Items: |-
+            =/*Shows events only on selected date*/
+            If(GblConnectionTest = true,
+            SortByColumns(
+                Filter(
+                    'TG14 Task Information',
+                    'Task Date' = _dateSelected,
+                    Unit.Value = gblUserLocPerm,
+                    'Approval Status'.Value = "Approved"
+                ),
+                "StartTime"
+            ),Blank())
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        LoadingSpinnerColor: =varHeaderFill
+        OnSelect: =
+        TemplatePadding: =4
+        TemplateSize: =55
+        Width: =Button28_8.Width
+        X: =Label11_19.X
+        Y: =Label11_19.Y + Label11_19.Height
+        ZIndex: =76
+
+        Button3_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(242, 242, 242, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =55
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =9.97
+            Text: =""
+            Width: =619.15
+            ZIndex: =2
+
+        Rectangle1_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0,0,0,0)
+            FocusedBorderThickness: =0
+            Height: =54
+            HoverFill: =RGBA(0,0,0,0)
+            OnSelect: =Select(Title3_4)
+            PressedFill: =RGBA(105, 121, 126, 1)
+            TabIndex: =0
+            Width: =606
+            Y: =1
+            ZIndex: =5
+
+        iconLocation1_4 As icon.Waypoint:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(79, 109, 122, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            Height: =Subtitle1_13.Height -5
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Waypoint
+            OnSelect: =Select(Title3_4)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
+            Width: =14.61
+            X: =329
+            Y: =30
+            ZIndex: =6
+
+        Title3_4 As label:
+            BorderColor: =Self.Color
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =If(ThisItem.'Project Category'.Value = "Diversion", Color.Purple,RGBA(0, 0, 0, 1))
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Set(_selectedCalendarEvent, ThisItem)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =gblFontSize -3
+            TabIndex: =0
+            Text: |-
+                =If(
+                    ThisItem.'Project Category'.Value = "Diversion",
+                    Text("DIVERSION") & Text(" - ") & ThisItem.'Photog #1' & Text(" - ") & ThisItem.'Task Location',
+                    Text("Task: ") & Text(Value(ThisItem.Title), "0000", "en-GB") & Text(" - ") & ThisItem.Rank & Text(" ") & ThisItem.'Customer Name' & Text(" - ") & Text("Tel: ") & ThisItem.'Customer Contact Number'
+                )
+            Tooltip: =ThisItem.Title & Text("- ") & ThisItem.Rank & Text(" ") & ThisItem.'Customer Name'
+            Width: =512.19
+            Wrap: =false
+            X: =Body1_1.X + Body1_1.Width
+            ZIndex: =7
+
+        Subtitle1_13 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =27
+            OnSelect: =Select(Title3_4)
+            PaddingBottom: =0
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Size: =6.61
+            Text: =ThisItem.'Task Location'
+            Tooltip: =ThisItem.'Task Location'
+            Width: =99.65
+            Wrap: =false
+            X: =242
+            Y: =24
+            ZIndex: =8
+
+        Body1_1 As label:
+            Color: =RGBA(74, 85, 88, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Title3_4.Height
+            OnSelect: =Select(Title3_4)
+            PaddingRight: =3.32
+            PaddingTop: =3.32
+            Size: =gblFontSize - 3
+            Text: =Text(ThisItem.'Start Time', DateTimeFormat.ShortTime)
+            Width: =Parent.Width * 6%
+            Wrap: =false
+            ZIndex: =9
+
+        Separator1_5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            Height: =1
+            OnSelect: =
+            Width: =619.15
+            Y: =54
+            ZIndex: =10
+
+        Subtitle1_14 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =24
+            OnSelect: =Select(Title3_4)
+            PaddingBottom: =0
+            PaddingRight: =3.32
+            PaddingTop: =0.00
+            Size: =6.61
+            Text: =ThisItem.'Project Category'.Value
+            Tooltip: =ThisItem.'Task Location'
+            Width: =99.65
+            Wrap: =false
+            X: =130
+            Y: =31
+            ZIndex: =11
+
+        Icon2_3 As icon.Tag:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(79, 109, 122, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Height: =Subtitle1_13.Height -5
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Tag
+            OnSelect: =
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =Parent.Width * 2.5%
+            X: =1
+            Y: =29
+            ZIndex: =12
+
+        Rectangle7_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(105, 121, 126, 1)
+            FocusedBorderThickness: =4
+            Height: =1
+            HoverFill: =RGBA(105, 121, 126, 1)
+            OnSelect: =
+            PressedFill: =RGBA(105, 121, 126, 1)
+            Width: =Parent.Width
+            Y: =27
+            ZIndex: =13
+
+        Separator1_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =619.15
+            ZIndex: =14
+
+        Subtitle1_15 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =27
+            OnSelect: =
+            PaddingBottom: =0
+            PaddingRight: =3.32
+            PaddingTop: =0.00
+            Size: =6.61
+            Text: |-
+                =If(IsBlank(ThisItem.'Photog #1'), "Not Assigned", ThisItem.'Photog #1')
+            Tooltip: =Text(ThisItem.'Task Date', "mmmm")
+            Width: =99.65
+            Wrap: =false
+            X: =216
+            Y: =27
+            ZIndex: =17
+
+        Icon2_11 As icon.Tag:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(79, 109, 122, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =4
+            Height: =Subtitle1_13.Height -5
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Person
+            OnSelect: =
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14.61
+            X: =216
+            Y: =27
+            ZIndex: =18
+
+        Button17_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: |-
+                =If(
+                    ThisItem.'Project Category'.Value = "Diversion",
+                    Color.Purple,
+                    If(
+                        ThisItem.'Status Value' = "PLANNED",
+                        Color.White,
+                        If(
+                            ThisItem.'Status Value' = "PROCESSING",
+                            Color.Orange,
+                            If(
+                                ThisItem.'Status Value' = "COMPLETED",
+                                Color.Green,
+                                If(
+                                    ThisItem.'Status Value' = "ON HOLD",
+                                    Color.Yellow,
+                                    If(
+                                        ThisItem.'Status Value' = "CANCELLED",
+                                        Color.Red,
+                                        If(
+                                            ThisItem.'Status Value' = "PPC",
+                                            Color.LightBlue,
+                                            Color.Gray
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =55
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(105, 121, 126, 1), -10%)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =20
+            RadiusTopLeft: =0
+            RadiusTopRight: =20
+            Size: =9.97
+            Text: =""
+            Width: =21.26
+            X: =637.72
+            ZIndex: =20
 
