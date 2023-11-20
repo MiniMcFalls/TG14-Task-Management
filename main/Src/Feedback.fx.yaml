@@ -151,8 +151,8 @@ Feedback As screen:
         Height: =App.Height  *5%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =13.29
-        Text: ="Task Details"
+        Size: =gblFontSize + 3
+        Text: ="Feedback"
         Underline: =true
         Width: =App.Width * 25%
         X: =(App.Width/2) - (Self.Width/2)
@@ -172,8 +172,8 @@ Feedback As screen:
         Height: =Label14_4.Height
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
-        Text: ="Input your task details in the boxes below"
+        Size: =gblFontSize
+        Text: ="Enter your feedback below."
         Width: =Label14_4.Width
         X: =Label14_4.X
         Y: =Label14_4.Y + Label14_4.Height
@@ -234,7 +234,7 @@ Feedback As screen:
         Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: |-
             ="Rank:"
         Underline: =true
@@ -255,7 +255,7 @@ Feedback As screen:
         Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: =gblCurrentUser.jobTitle
         Width: =Button28_7.Width * 5%
         X: =Label15.X + Label15.Width
@@ -275,7 +275,7 @@ Feedback As screen:
         Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: |-
             ="Name:"
         Underline: =true
@@ -296,7 +296,7 @@ Feedback As screen:
         Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: =gblCurrentUser.givenName & " " & gblCurrentUser.surname
         Width: =Button28_7.Width * 11%
         X: =Label15_2.X + Label15_2.Width
@@ -316,7 +316,7 @@ Feedback As screen:
         Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: |-
             ="Current Location:"
         Underline: =true
@@ -337,7 +337,7 @@ Feedback As screen:
         Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: =gblUserLocPerm
         Width: =Button28_7.Width * 11%
         X: =Label15_4.X + Label15_4.Width
@@ -357,7 +357,7 @@ Feedback As screen:
         Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: |-
             ="Contact:"
         Underline: =true
@@ -378,7 +378,7 @@ Feedback As screen:
         Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: =gblCurrentUser.mail
         Width: =Button28_7.Width * 17%
         X: =Label15_6.X + Label15_6.Width
@@ -419,7 +419,7 @@ Feedback As screen:
         Height: =Button28_7.Height * 40%
         PaddingRight: =3.32
         PaddingTop: =3.32
-        Size: =8.64
+        Size: =gblFontSize
         Text: |-
             ="Type:"
         Underline: =true
