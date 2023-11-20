@@ -2075,7 +2075,7 @@
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             TabIndex: =0
-            Width: =14.61
+            Width: =Parent.Width * 2.5%
             X: =Subtitle1_14.X + Subtitle1_14.Width + (Parent.Width * 2%)
             Y: =Parent.TemplateHeight/2
             ZIndex: =6
@@ -2128,7 +2128,7 @@
             Tooltip: =ThisItem.'Task Location'
             Width: =99.65
             Wrap: =false
-            X: =216
+            X: =iconLocation1_4.X + iconLocation1_4.Width + (Parent.Width * 2%)
             Y: =27
             ZIndex: =8
 
@@ -2146,6 +2146,8 @@
             Text: =Text(ThisItem.'Start Time', DateTimeFormat.ShortTime)
             Width: =Parent.Width * 6%
             Wrap: =false
+            X: =!Parent.TemplateWidth
+            Y: =!Parent.TemplateHeight
             ZIndex: =9
 
         Separator1_5 As rectangle:
@@ -2177,7 +2179,7 @@
             Tooltip: =ThisItem.'Task Location'
             Width: =99.65
             Wrap: =false
-            X: =22
+            X: =Icon2_3.X + Icon2_3.Width + (Parent.Width * 2%)
             Y: =Parent.TemplateHeight/2
             ZIndex: =11
 
@@ -2201,7 +2203,7 @@
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =Parent.Width * 2.5%
-            X: =1
+            X: =!Parent.TemplateWidth
             Y: =Parent.TemplateHeight/2
             ZIndex: =12
 
@@ -2237,7 +2239,7 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Lighter
-            Height: =27
+            Height: =Parent.TemplateHeight/2
             OnSelect: =
             PaddingBottom: =0
             PaddingRight: =3.32
@@ -2248,8 +2250,8 @@
             Tooltip: =Text(ThisItem.'Task Date', "mmmm")
             Width: =99.65
             Wrap: =false
-            X: =173
-            Y: =28
+            X: =Icon2_11.X + Icon2_11.Width + (Parent.Width * 2%)
+            Y: =Parent.TemplateHeight/2
             ZIndex: =17
 
         Icon2_11 As icon.Tag:
@@ -2260,7 +2262,7 @@
             DisabledFill: =RGBA(0, 0, 0, 0)
             DisplayMode: =DisplayMode.View
             FocusedBorderThickness: =4
-            Height: =Subtitle1_13.Height -5
+            Height: =Parent.TemplateHeight/2
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -2271,9 +2273,9 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =14.61
-            X: =216
-            Y: =27
+            Width: =Parent.Width * 2.5%
+            X: =Subtitle1_13.X + Subtitle1_13.Width + (Parent.TemplateWidth * 2%)
+            Y: =Parent.TemplateHeight/2
             ZIndex: =18
 
         Button17_3 As button:

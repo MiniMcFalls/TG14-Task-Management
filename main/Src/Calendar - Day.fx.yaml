@@ -1921,7 +1921,7 @@
             AccessibleLabel: ="Calendar events for selected day"
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =768
+            Height: =704
             Items: |-
                 =/*Shows events only on selected date*/
                 If(GblConnectionTest = true,
@@ -1942,6 +1942,7 @@
             TemplateSize: =55
             Width: =666.98
             X: =324.79
+            Y: =64
             ZIndex: =15
 
             Button3 As button:
