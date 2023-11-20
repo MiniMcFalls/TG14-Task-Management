@@ -53,7 +53,7 @@ Feedback As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(IsBlank(Dropdown1.Selected.Value) = true Or IsBlank(TextInput1.Text) = true, DisplayMode.Disabled, DisplayMode.Edit)
+        DisplayMode: =If(IsBlank(DropdownCanvas7.Selected.Value) = true Or IsBlank(TextInputCanvas6.Value) = true, DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(54, 176, 75, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
@@ -67,7 +67,7 @@ Feedback As screen:
                 'TG14 App Feedback Submissions',
                 Defaults('TG14 App Feedback Submissions'),
                 {
-                    'Feedback Type': Dropdown1.Selected,
+                    'Feedback Type': DropdownCanvas7.Selected,
                     Submitter: Concatenate(
                         gblCurrentUser.jobTitle,
                         " ",
@@ -76,7 +76,7 @@ Feedback As screen:
                         gblCurrentUser.surname
                     ),
                     Station: gblUserLocPerm,
-                    Description: TextInput1.Text
+                    Description: TextInputCanvas6.Value
                 }
             );
             Office365Outlook.SendEmail(
@@ -406,39 +406,6 @@ Feedback As screen:
         Y: =Button28_12.Y + (Button28_12.Height * 0%)
         ZIndex: =61
 
-    Dropdown1 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Blank()
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        Height: =Button28_7.Height * 40%
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =[Blank(),"Fault", "Feedback", "Feature Request"]
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(105, 121, 126, 1)
-        SelectionFill: =RGBA(105, 121, 126, 1)
-        Size: =8.64
-        Width: =Button28_7.Width * 21%
-        X: =Label15_8.X + Label15_8.Width
-        Y: =Button28_7.Y + (Button28_7.Height * 50%)
-        ZIndex: =62
-
     Label15_8 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -461,38 +428,39 @@ Feedback As screen:
         Y: =Button28_7.Y + (Button28_7.Height * 50%)
         ZIndex: =63
 
-    TextInput1 As text:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Blank()
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =App.Height * 53%
-        HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Mode: =TextMode.MultiLine
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =RGBA(105, 121, 126, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =gblFontSize
-        Width: =App.Width * 93%
-        X: =(App.Width/2) - (Self.Width/2)
-        Y: =Button28_12.Y + (App.Height * 5%)
-        ZIndex: =64
-
     cmp_Header_7 As cmp_Header:
         Width: =1229.00
         X: =0.00
         ZIndex: =65
+
+    DropdownCanvas7 As Dropdown.pcfdataset:
+        BasePaletteColor: =varHeaderFill
+        DefaultSelectedItems: =Blank()
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =Button28_7.Height * 40%
+        Items: =[Blank(),"Fault", "Feedback", "Feature Request"]
+        Width: =Button28_7.Width * 21%
+        X: =Label15_8.X + Label15_8.Width
+        Y: =Button28_7.Y + (Button28_7.Height * 50%)
+        ZIndex: =66
+
+        Value9 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =1
+
+    "TextInputCanvas6 As 'Text input'":
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =App.Height * 53%
+        Value: =Blank()
+        Width: =App.Width * 93%
+        X: =(App.Width/2) - (Self.Width/2)
+        Y: =Button28_12.Y + (App.Height * 5%)
+        ZIndex: =67
 

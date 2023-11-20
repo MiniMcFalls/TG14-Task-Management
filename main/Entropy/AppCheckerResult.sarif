@@ -14693,49 +14693,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Feedback.Dropdown1.AccessibleLabel"
+                  "fullyQualifiedName": "Feedback.TextInputCanvas6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Feedback.Dropdown1.AccessibleLabel",
+                  "fullyQualifiedName": "Feedback.TextInputCanvas6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Feedback",
-                "type": "Feedback.Dropdown1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Feedback.TextInput1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Feedback.TextInput1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Feedback",
-                "type": "Feedback.TextInput1"
+                "type": "Feedback.TextInputCanvas6"
               }
             }
           ],
@@ -15006,6 +14976,36 @@
                 "member": "AccessibleLabel",
                 "module": "DiversionDetails",
                 "type": "DiversionDetails.ButtonCanvas7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Feedback.DropdownCanvas7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Feedback.DropdownCanvas7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Feedback",
+                "type": "Feedback.DropdownCanvas7"
               }
             }
           ],
