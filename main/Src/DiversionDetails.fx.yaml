@@ -85,10 +85,10 @@ DiversionDetails As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"TaskType")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =98
+            Height: =Parent.Height * 30%
             Required: =false
             Update: =DropdownCanvas5.Selected
-            Width: =132.87
+            Width: =Parent.Width/5
             X: =0.00
             Y: =0
             ZIndex: =1
@@ -105,11 +105,11 @@ DiversionDetails As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                Height: =33
+                Height: =Parent.Height * 15%
                 PaddingLeft: =0
                 PaddingRight: =3.32
                 PaddingTop: =3.32
-                Size: =8.64
+                Size: =gblFontSize
                 Text: =Parent.DisplayName
                 Underline: =true
                 Width: =Parent.Width
@@ -135,11 +135,11 @@ DiversionDetails As screen:
                 PaddingLeft: =0
                 PaddingRight: =0.00
                 PaddingTop: =0.00
-                Size: =8.64
+                Size: =gblFontSize
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =93.00
-                X: =19.93
+                X: =(Parent.Width/2) - (Self.Width/2)
                 Y: =DropdownCanvas5.Y + DropdownCanvas5.Height
                 ZIndex: =3
 
@@ -171,6 +171,7 @@ DiversionDetails As screen:
                 BasePaletteColor: =varHeaderFill
                 DefaultSelectedItems: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
+                FontSize: =gblFontSize
                 Height: =Parent.Height * 30%
                 Items: =Choices([@'TG14 Task Information'].'Project Category')
                 Width: =Parent.Width * 90%
@@ -194,10 +195,10 @@ DiversionDetails As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"TaskDate")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =Parent.Height * 30%
             Required: =false
             Update: =DatePickerCanvas1.SelectedDate
-            Width: =142
+            Width: =Parent.Width/5
             X: =0.67
             Y: =0
             ZIndex: =34
@@ -214,7 +215,7 @@ DiversionDetails As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                Height: =34
+                Height: =Parent.Height * 15%
                 PaddingLeft: =0
                 PaddingRight: =3.32
                 PaddingTop: =3.32
@@ -248,7 +249,7 @@ DiversionDetails As screen:
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =83.71
-                X: =21.26
+                X: =(Parent.Width/2) - (Self.Width/2)
                 Y: =DatePickerCanvas1.Y + DatePickerCanvas1.Height
                 ZIndex: =3
 
@@ -279,8 +280,9 @@ DiversionDetails As screen:
             "DatePickerCanvas1 As 'Date picker'":
                 BasePaletteColor: =varHeaderFill
                 DisplayMode: =Parent.DisplayMode
+                FontSize: =gblFontSize
                 Format: ='DatePickerCanvas.Format'.LongAbbreviated
-                Height: =parenbt
+                Height: =Parent.Height * 30%
                 SelectedDate: =_dateSelected
                 Width: =Parent.Width * 90%
                 X: =(Parent.Width/2) - (Self.Width/2)
@@ -295,11 +297,11 @@ DiversionDetails As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"StartTime")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =Parent.Height * 30%
             MaxLength: =DataSourceInfo([@'TG14 Task Information'], DataSourceInfo.MaxLength, "StartTime")
             Required: =false
-            Update: =DataCardValue28_1.Text
-            Width: =123.57
+            Update: =TextInputCanvas2.Value
+            Width: =Parent.Width/5
             X: =1.33
             Y: =0
             ZIndex: =34
@@ -316,7 +318,7 @@ DiversionDetails As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                Height: =34
+                Height: =Parent.Height * 15%
                 PaddingLeft: =0
                 PaddingRight: =3.32
                 PaddingTop: =3.32
@@ -328,43 +330,6 @@ DiversionDetails As screen:
                 X: =(Parent.Width/2) - (Self.Width/2)
                 Y: =(Parent.Height/2) - (Parent.Height * 45%)
                 ZIndex: =1
-
-            DataCardValue28_1 As text:
-                Align: =Align.Center
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                HintText: |-
-                    ="HH : MM"
-                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                HoverColor: =RGBA(51, 51, 51, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                MaxLength: =Parent.MaxLength
-                OnChange: =
-                PaddingLeft: =5
-                PaddingRight: =3.32
-                PaddingTop: =3.32
-                PressedBorderColor: =RGBA(105, 121, 126, 1)
-                PressedColor: =RGBA(51, 51, 51, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =8.64
-                Tooltip: =Parent.DisplayName
-                Width: =110.28
-                X: =6.64
-                Y: =DataCardKey28_1.Y + DataCardKey28_1.Height + 5
-                ZIndex: =2
 
             ErrorMessage28_1 As label:
                 AutoHeight: =true
@@ -387,8 +352,8 @@ DiversionDetails As screen:
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =83.71
-                X: =21.26
-                Y: =DataCardValue28_1.Y + DataCardValue28_1.Height
+                X: =(Parent.Width/2) - (Self.Width/2)
+                Y: =TextInputCanvas2.Y + TextInputCanvas2.Height
                 ZIndex: =3
 
             StarVisible28_1 As label:
@@ -419,12 +384,12 @@ DiversionDetails As screen:
                 BasePaletteColor: =varHeaderFill
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =gblFontSize
-                Height: =32
+                Height: =Parent.Height * 30%
                 Type: ='TextInputCanvas.Type'.Text
                 Value: =Parent.Default
-                Width: =110
-                X: =6
-                Y: =29
+                Width: =Parent.Width * 90%
+                X: =(Parent.Width/2) - (Self.Width/2)
+                Y: =DataCardKey28_1.Y + DataCardKey28_1.Height + (Parent.Height * 10%)
                 ZIndex: =5
 
         "'Task Location_DataCard2_1' As typedDataCard.textualEditCard":
@@ -435,11 +400,11 @@ DiversionDetails As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"TaskLocation")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =Parent.Height * 30%
             MaxLength: =DataSourceInfo([@'TG14 Task Information'], DataSourceInfo.MaxLength, "TaskLocation")
             Required: =false
-            Update: =DataCardValue30_1.Text
-            Width: =177.38
+            Update: =TextInputCanvas4.Value
+            Width: =Parent.Width/5
             X: =2.00
             Y: =0
             ZIndex: =34
@@ -456,7 +421,7 @@ DiversionDetails As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                Height: =34
+                Height: =Parent.Height * 15%
                 PaddingLeft: =0
                 PaddingRight: =3.32
                 PaddingTop: =3.32
@@ -468,41 +433,6 @@ DiversionDetails As screen:
                 X: =(Parent.Width/2) - (Self.Width/2)
                 Y: =(Parent.Height/2) - (Parent.Height * 45%)
                 ZIndex: =1
-
-            DataCardValue30_1 As text:
-                Align: =Align.Center
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                HoverColor: =RGBA(51, 51, 51, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                MaxLength: =Parent.MaxLength
-                OnChange: =
-                PaddingLeft: =5
-                PaddingRight: =3.32
-                PaddingTop: =3.32
-                PressedBorderColor: =RGBA(105, 121, 126, 1)
-                PressedColor: =RGBA(51, 51, 51, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =8.64
-                Tooltip: =Parent.DisplayName
-                Width: =164.09
-                X: =6.64
-                Y: =DataCardKey30_1.Y + DataCardKey30_1.Height + 5
-                ZIndex: =2
 
             ErrorMessage30_1 As label:
                 AutoHeight: =true
@@ -525,8 +455,8 @@ DiversionDetails As screen:
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =137.51
-                X: =21.26
-                Y: =DataCardValue30_1.Y + DataCardValue30_1.Height
+                X: =(Parent.Width/2) - (Self.Width/2)
+                Y: =TextInputCanvas4.Y + TextInputCanvas4.Height
                 ZIndex: =3
 
             StarVisible30_1 As label:
@@ -553,6 +483,17 @@ DiversionDetails As screen:
                 Y: =DataCardKey30_1.Y
                 ZIndex: =4
 
+            "TextInputCanvas4 As 'Text input'":
+                BasePaletteColor: =varHeaderFill
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =gblFontSize
+                Height: =Parent.Height * 30%
+                Value: =Parent.Default
+                Width: =Parent.Width * 90%
+                X: =(Parent.Width/2) - (Self.Width/2)
+                Y: =DataCardKey30_1.Y + DataCardKey30_1.Height + (Parent.Height * 10%)
+                ZIndex: =5
+
         "'Photog #1_DataCard2_1' As typedDataCard.comboBoxEditCard":
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
@@ -562,11 +503,11 @@ DiversionDetails As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"Photog_x0020__x0023_1")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =Parent.Height * 30%
             Required: =false
-            Update: =DataCardValue72_1.Selected
-            Width: =182.69
-            X: =2.65
+            Update: =DropdownCanvas6.Selected
+            Width: =Parent.Width/5
+            X: =3
             Y: =0
             ZIndex: =34
 
@@ -582,7 +523,7 @@ DiversionDetails As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                Height: =34
+                Height: =Parent.Height * 15%
                 PaddingLeft: =0
                 PaddingRight: =3.32
                 PaddingTop: =3.32
@@ -595,28 +536,61 @@ DiversionDetails As screen:
                 Y: =(Parent.Height/2) - (Parent.Height * 45%)
                 ZIndex: =1
 
-            DataCardValue72_1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                ChevronBackground: =RGBA(255, 255, 255, 1)
-                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-                ChevronFill: =RGBA(33, 33, 33, 1)
-                ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-                ChevronHoverFill: =RGBA(33, 33, 33, 1)
+            ErrorMessage75_1 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =8.64
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =142.83
+                X: =(Parent.Width/2) - (Self.Width/2)
+                Y: =DropdownCanvas6.Y + DropdownCanvas6.Height
+                ZIndex: =3
+
+            StarVisible75_1 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
-                Default: |-
-                    ={Value: ThisItem.'Photog #1'}
-                DefaultSelectedItems: =Parent.Default
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                HoverColor: =RGBA(51, 51, 51, 1)
-                HoverFill: =RGBA(212, 212, 212, 1)
-                IsSearchable: =false
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey72_1.Height
+                PaddingLeft: =0
+                PaddingRight: =3.32
+                PaddingTop: =3.32
+                Size: =8.64
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =19.93
+                Wrap: =false
+                X: =1.33
+                Y: =DataCardKey72_1.Y
+                ZIndex: =4
+
+            DropdownCanvas6 As Dropdown.pcfdataset:
+                BasePaletteColor: =varHeaderFill
+                DefaultSelectedItems: =Parent.Default
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =gblFontSize
+                Height: =Parent.Height * 30%
                 Items: |-
                     =If(
                         And(
@@ -821,72 +795,18 @@ DiversionDetails As screen:
                             Phot12.Text
                         ]
                     )
-                OnChange: =
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PaddingRight: =3.32
-                PaddingTop: =3.32
-                PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(105, 121, 126, 1)
-                SearchFields: =["Value"]
-                SearchItems: =[]
-                SelectionFill: =RGBA(105, 121, 126, 1)
-                SelectMultiple: =false
-                Size: =8.64
-                Tooltip: =Parent.DisplayName
-                Width: =169.41
-                X: =6.64
-                Y: =48
-                ZIndex: =2
+                Width: =Parent.Width * 90%
+                X: =(Parent.Width/2) - (Self.Width/2)
+                Y: =DataCardKey72_1.Y + DataCardKey72_1.Height + (Parent.Height * 10%)
+                ZIndex: =5
 
-            ErrorMessage75_1 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0.00
-                PaddingTop: =0.00
-                Size: =8.64
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =142.83
-                X: =21.26
-                Y: =DataCardValue72_1.Y + DataCardValue72_1.Height
-                ZIndex: =3
-
-            StarVisible75_1 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey72_1.Height
-                PaddingLeft: =0
-                PaddingRight: =3.32
-                PaddingTop: =3.32
-                Size: =8.64
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =19.93
-                Wrap: =false
-                X: =1.33
-                Y: =DataCardKey72_1.Y
-                ZIndex: =4
+                Value8 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="Value"
+                    FieldName: ="Value"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =36
 
         Notes_DataCard2_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -896,11 +816,11 @@ DiversionDetails As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"Notes")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =170
+            Height: =Parent.Height * 70%
             MaxLength: =DataSourceInfo([@'TG14 Task Information'], DataSourceInfo.MaxLength, "Notes")
             Required: =false
-            Update: =DataCardValue83_1.Text
-            Width: =741.39
+            Update: =TextInputCanvas5.Value
+            Width: =Parent.Width
             X: =0.67
             Y: =2
             ZIndex: =34
@@ -915,54 +835,18 @@ DiversionDetails As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                Height: =33
-                PaddingLeft: =0
+                Height: =Parent.Height * 15%
+                PaddingLeft: =10
                 PaddingRight: =3.32
                 PaddingTop: =3.32
                 Size: =8.64
                 Text: =Parent.DisplayName
                 Underline: =true
-                Width: =717.47
+                Width: =Parent.Width
                 Wrap: =false
-                X: =6.64
-                Y: =10
+                X: =(Parent.Width/2) - (Self.Width/2)
+                Y: =(Parent.Height/2) - (Parent.Height * 45%)
                 ZIndex: =1
-
-            DataCardValue83_1 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                EnableSpellCheck: =true
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =110
-                HoverBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
-                HoverColor: =RGBA(51, 51, 51, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                MaxLength: =Parent.MaxLength
-                Mode: =TextMode.MultiLine
-                PaddingLeft: =5
-                PaddingRight: =3.32
-                PaddingTop: =3.32
-                PressedBorderColor: =RGBA(105, 121, 126, 1)
-                PressedColor: =RGBA(51, 51, 51, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =8.64
-                Tooltip: =Parent.DisplayName
-                Width: =726.77
-                X: =6.64
-                Y: =DataCardKey83_1.Y + DataCardKey83_1.Height + 5
-                ZIndex: =2
 
             ErrorMessage88_1 As label:
                 AutoHeight: =true
@@ -985,8 +869,8 @@ DiversionDetails As screen:
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =701.53
-                X: =21.26
-                Y: =DataCardValue83_1.Y + DataCardValue83_1.Height
+                X: =(Parent.Width/2) - (Self.Width/2)
+                Y: =TextInputCanvas5.Y + TextInputCanvas5.Height
                 ZIndex: =3
 
             StarVisible88_1 As label:
@@ -1012,6 +896,18 @@ DiversionDetails As screen:
                 X: =1.33
                 Y: =DataCardKey83_1.Y
                 ZIndex: =4
+
+            "TextInputCanvas5 As 'Text input'":
+                BasePaletteColor: =varHeaderFill
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =gblFontSize
+                Height: =Parent.Height * 70%
+                Mode: ='TextInputCanvas.Mode'.Multiline
+                Value: =Parent.Default
+                Width: =Parent.Width * 97%
+                X: =(Parent.Width/2) - (Self.Width/2)
+                Y: =DataCardKey83_1.Y + DataCardKey83_1.Height + 5
+                ZIndex: =5
 
     Label3_1 As label:
         Align: =Align.Center
@@ -1069,68 +965,46 @@ DiversionDetails As screen:
         Y: =Label3_1.Y + Label3_1.Height
         ZIndex: =6
 
-    Button4_2 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 0, 0, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =37
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(255, 0, 0, 1), -10%)
-        OnSelect: =Remove([@'TG14 Task Information'], CalendarEventsGallery1.Selected); If (IsEmpty(Errors([@'TG14 Task Information'], CalendarEventsGallery1.Selected)), Back())
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(RGBA(105, 121, 126, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(255, 0, 0, 1), -30%)
-        RadiusBottomLeft: =Button4_2.Height
-        RadiusBottomRight: =Button4_2.Height
-        RadiusTopLeft: =Button4_2.Height
-        RadiusTopRight: =Button4_2.Height
-        Size: =9.97
-        Text: ="Cancel Diversion"
-        Width: =144.16
-        X: =631.77
-        Y: =576
-        ZIndex: =7
-
-    Button4_3 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(54, 176, 75, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =37
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(Self.Fill, -10%)
-        OnSelect: =SubmitForm('DivForm (EDIT)_1')
-        PaddingRight: =3.32
-        PaddingTop: =3.32
-        PressedBorderColor: =ColorFade(Self.Fill, -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(Self.Fill, -30%)
-        RadiusBottomLeft: =Button4_3.Height
-        RadiusBottomRight: =Button4_3.Height
-        RadiusTopLeft: =Button4_3.Height
-        RadiusTopRight: =Button4_3.Height
-        Size: =9.97
-        Text: ="Update Diversion"
-        Width: =144.16
-        X: =476.99
-        Y: =576
-        ZIndex: =8
-
     cmp_Header_17 As cmp_Header:
         Width: =1229.00
         X: =0.00
         ZIndex: =9
+
+    ButtonCanvas6 As Button:
+        Appearance: ='ButtonCanvas.Appearance'.Primary
+        BasePaletteColor: =Color.Green
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =App.Height * 5%
+        OnSelect: =SubmitForm('DivForm (EDIT)_1')
+        Text: ="Update"
+        Width: =App.Width * 13%
+        X: =(App.Width/2) - (Self.Width) -5
+        Y: ='DivForm (EDIT)_1'.Y + 'DivForm (EDIT)_1'.Height + (App.Height * 1%)
+        ZIndex: =10
+
+    ButtonCanvas7 As Button:
+        BasePaletteColor: =Color.Red
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =gblFontSize
+        Height: =App.Height * 5%
+        OnSelect: |-
+            =Remove(
+                [@'TG14 Task Information'],
+                CalendarEventsGallery1.Selected
+            );
+            If (
+                IsEmpty(
+                    Errors(
+                        [@'TG14 Task Information'],
+                        CalendarEventsGallery1.Selected
+                    )
+                ),
+                Back()
+            )
+        Text: ="Delete"
+        Width: =App.Width * 13%
+        X: =(App.Width/2) + 5
+        Y: ='DivForm (EDIT)_1'.Y + 'DivForm (EDIT)_1'.Height + (App.Height * 1%)
+        ZIndex: =11
 
