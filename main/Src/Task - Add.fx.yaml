@@ -2063,7 +2063,7 @@
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             DisplayMode: =DisplayMode.View
-            Height: =Subtitle1_13.Height -5
+            Height: =Parent.TemplateHeight/2
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -2076,8 +2076,8 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             TabIndex: =0
             Width: =14.61
-            X: =329
-            Y: =30
+            X: =Subtitle1_14.X + Subtitle1_14.Width + (Parent.Width * 2%)
+            Y: =Parent.TemplateHeight/2
             ZIndex: =6
 
         Title3_4 As label:
@@ -2105,6 +2105,7 @@
             Width: =512.19
             Wrap: =false
             X: =Body1_1.X + Body1_1.Width
+            Y: =!Parent.TemplateHeight
             ZIndex: =7
 
         Subtitle1_13 As label:
@@ -2122,13 +2123,13 @@
             PaddingBottom: =0
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Size: =6.61
+            Size: =gblFontSize -3
             Text: =ThisItem.'Task Location'
             Tooltip: =ThisItem.'Task Location'
             Width: =99.65
             Wrap: =false
-            X: =242
-            Y: =24
+            X: =216
+            Y: =27
             ZIndex: =8
 
         Body1_1 As label:
@@ -2166,18 +2167,18 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Lighter
-            Height: =24
+            Height: =Parent.TemplateHeight/2
             OnSelect: =Select(Title3_4)
             PaddingBottom: =0
             PaddingRight: =3.32
             PaddingTop: =0.00
-            Size: =6.61
+            Size: =gblFontSize -3
             Text: =ThisItem.'Project Category'.Value
             Tooltip: =ThisItem.'Task Location'
             Width: =99.65
             Wrap: =false
-            X: =130
-            Y: =31
+            X: =22
+            Y: =Parent.TemplateHeight/2
             ZIndex: =11
 
         Icon2_3 As icon.Tag:
@@ -2188,7 +2189,7 @@
             DisabledFill: =RGBA(0, 0, 0, 0)
             DisplayMode: =DisplayMode.View
             FocusedBorderThickness: =4
-            Height: =Subtitle1_13.Height -5
+            Height: =Parent.TemplateHeight/2
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(105, 121, 126, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -2201,7 +2202,7 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =Parent.Width * 2.5%
             X: =1
-            Y: =29
+            Y: =Parent.TemplateHeight/2
             ZIndex: =12
 
         Rectangle7_2 As rectangle:
@@ -2215,7 +2216,7 @@
             OnSelect: =
             PressedFill: =RGBA(105, 121, 126, 1)
             Width: =Parent.Width
-            Y: =27
+            Y: =Parent.TemplateHeight/2
             ZIndex: =13
 
         Separator1_4 As rectangle:
@@ -2241,14 +2242,14 @@
             PaddingBottom: =0
             PaddingRight: =3.32
             PaddingTop: =0.00
-            Size: =6.61
+            Size: =gblFontSize -3
             Text: |-
                 =If(IsBlank(ThisItem.'Photog #1'), "Not Assigned", ThisItem.'Photog #1')
             Tooltip: =Text(ThisItem.'Task Date', "mmmm")
             Width: =99.65
             Wrap: =false
-            X: =216
-            Y: =27
+            X: =173
+            Y: =28
             ZIndex: =17
 
         Icon2_11 As icon.Tag:
