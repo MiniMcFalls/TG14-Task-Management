@@ -234,7 +234,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCheck3_6",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -401,7 +401,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle3_24",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -513,7 +513,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle3_25",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -625,7 +625,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle3_26",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -737,7 +737,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconCircle3_27",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -867,7 +867,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblSuccessMsg3_6",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1110,7 +1110,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Timer1_1",
-      "ParentIndex": 1,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
