@@ -2341,6 +2341,7 @@
             ZIndex: =20
 
     ButtonCanvas9 As Button:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         OnSelect: |-
